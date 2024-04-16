@@ -1,11 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import navigationReducer from "../features/navigationSlice";
-import searchReducer from "../features/searchSlice";
+import weatherReducer from "../features/weatherSlice";
 
-export const store = configureStore({
+export default configureStore({
   reducer: {
-    navigation: navigationReducer,
-    search: searchReducer,
+    weather: weatherReducer,
   },
 });
