@@ -14,9 +14,9 @@ const App = () => {
           <Routes>
             <Route>
               <Route path="/" element={<Content />} />
-              <Route path="/site1" element={<Content page="site1" />} />
-              <Route path="/site2" element={<Content page="site2" />} />
-              <Route path="/site3" element={<Content page="site3" />} />
+              <Route path="/link1" element={<Content page="link1" />} />
+              <Route path="/link2" element={<Content page="link2" />} />
+              <Route path="/link3" element={<Content page="link3" />} />
             </Route>
           </Routes>
         </nav>

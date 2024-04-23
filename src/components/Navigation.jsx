@@ -1,44 +1,112 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "../styles/Navigation.module.css";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { FaSearch } from "react-icons/fa";
+import { FiMenu, FiSearch, FiX } from "react-icons/fi";
 
 const Navigation = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav>
-      <div className={styles.navContainer}>
+      <div
+        className={`${styles.navContainer} ${
+          isMenuOpen ? styles.menuOpen : ""
+        }`}
+      >
         <div className={styles.navItems}>
-          <ul className={styles.navList}>
+          <ul
+            className={`${styles.navList} ${isMenuOpen ? styles.menuOpen : ""}`}
+          >
             <li>
-              <NavLink to="/" activeClassName={styles.active}>
+              <NavLink
+                to="/"
+                activeClassName={styles.active}
+                className={`${styles.navLink} ${
+                  isMenuOpen ? styles.menuOpen : ""
+                }`}
+              >
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/site1" activeClassName={styles.active}>
-                Site 1
+              <NavLink
+                to="/link1"
+                activeClassName={styles.active}
+                className={`${styles.navLink} ${
+                  isMenuOpen ? styles.menuOpen : ""
+                }`}
+              >
+                Link 1
               </NavLink>
             </li>
             <li>
-              <NavLink to="/site2" activeClassName={styles.active}>
-                Site 2
+              <NavLink
+                to="/link2"
+                activeClassName={styles.active}
+                className={`${styles.navLink} ${
+                  isMenuOpen ? styles.menuOpen : ""
+                }`}
+              >
+                Link 2
               </NavLink>
             </li>
             <li>
-              <NavLink to="/site3" activeClassName={styles.active}>
-                Site 3
+              <NavLink
+                to="/link3"
+                activeClassName={styles.active}
+                className={`${styles.navLink} ${
+                  isMenuOpen ? styles.menuOpen : ""
+                }`}
+              >
+                Link 3
+              </NavLink>
+            </li>
+          </ul>
+          <div
+            className={`${styles.navIcons} ${
+              isMenuOpen ? styles.menuOpen : ""
+            }`}
+          >
+            <div className={styles.search}>
+              <FiSearch />
+            </div>
+            <FiMenu onClick={toggleMenu} />
+          </div>
+        </div>
+      </div>
+      {isMenuOpen && (
+        <div className={styles.menuWrapper} onClick={toggleMenu}>
+          <div className={styles.closeIcon}>
+            <FiX />
+          </div>
+          <ul className={styles.openMenu}>
+            <li>
+              <NavLink to="/" activeclassname={styles.active}>
+                Home
               </NavLink>
             </li>
             <li>
-              <FaSearch />
+              <NavLink to="/link1" activeclassname={styles.active}>
+                Link 1
+              </NavLink>
             </li>
             <li>
-              <GiHamburgerMenu />
+              <NavLink to="/link2" activeclassname={styles.active}>
+                Link 2
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/link3" activeclassname={styles.active}>
+                Link 3
+              </NavLink>
             </li>
           </ul>
         </div>
-      </div>
+      )}
     </nav>
   );
 };
