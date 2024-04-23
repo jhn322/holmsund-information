@@ -14,8 +14,18 @@ const Navigation = () => {
     setIsMenuOpen(false);
   };
 
+  const handleBlurBackgroundClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav>
+      {isMenuOpen && (
+        <div
+          className={styles.blurBackground}
+          onClick={handleBlurBackgroundClick}
+        ></div>
+      )}
       <div
         className={`${styles.navContainer} ${
           isMenuOpen ? styles.menuOpen : ""

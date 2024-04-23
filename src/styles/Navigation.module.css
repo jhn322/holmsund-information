@@ -102,13 +102,17 @@ li {
   }
 }
 
-@keyframes slideOut {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(100%);
-  }
+/* Blurs the background when wrapper menu is open */
+.blurBackground {
+  backdrop-filter: blur(5px);
+  filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  cursor: pointer;
 }
 
 .menuWrapper {
@@ -180,7 +184,7 @@ li {
 }
 
 /* Desktop */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
   /* Main nav */
   .navContainer {
     height: 10vh;
@@ -207,12 +211,8 @@ li {
     top: 34px;
     right: 21px;
   }
-}
 
-/* Tablet size */
-@media only screen and (min-width: 901px) and (max-width: 1199px) {
-}
-
-/* Smaller tablet size */
-@media only screen and (min-width: 801px) and (max-width: 900px) {
+  .menuWrapper {
+    width: 50%;
+  }
 }
