@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "../styles/Navigation.module.css";
 import { FiMenu, FiSearch, FiX } from "react-icons/fi";
@@ -24,7 +24,7 @@ const Navigation = () => {
             <li>
               <NavLink
                 to="/"
-                activeClassName={styles.active}
+                activeclassname={styles.active}
                 className={`${styles.navLink} ${
                   isMenuOpen ? styles.menuOpen : ""
                 }`}
@@ -35,7 +35,7 @@ const Navigation = () => {
             <li>
               <NavLink
                 to="/link1"
-                activeClassName={styles.active}
+                activeclassname={styles.active}
                 className={`${styles.navLink} ${
                   isMenuOpen ? styles.menuOpen : ""
                 }`}
@@ -46,7 +46,7 @@ const Navigation = () => {
             <li>
               <NavLink
                 to="/link2"
-                activeClassName={styles.active}
+                activeclassname={styles.active}
                 className={`${styles.navLink} ${
                   isMenuOpen ? styles.menuOpen : ""
                 }`}
@@ -57,7 +57,7 @@ const Navigation = () => {
             <li>
               <NavLink
                 to="/link3"
-                activeClassName={styles.active}
+                activeclassname={styles.active}
                 className={`${styles.navLink} ${
                   isMenuOpen ? styles.menuOpen : ""
                 }`}
@@ -72,16 +72,16 @@ const Navigation = () => {
             }`}
           >
             <div className={styles.search}>
-              <FiSearch />
+              <FiSearch className={styles.searchIcon} />
             </div>
-            <FiMenu onClick={toggleMenu} />
+            <FiMenu className={styles.menuIcon} onClick={toggleMenu} />
           </div>
         </div>
       </div>
       {isMenuOpen && (
         <div className={styles.menuWrapper} onClick={toggleMenu}>
           <div className={styles.closeIcon}>
-            <FiX />
+            <FiX className={styles.close} />
           </div>
           <ul className={styles.openMenu}>
             <li>
