@@ -132,8 +132,8 @@ li {
 
 .closeIcon {
   position: absolute;
-  top: 33px;
-  right: 15px;
+  top: 13px;
+  right: 12px;
   font-size: 50px;
   cursor: pointer;
 }
@@ -166,6 +166,11 @@ li {
 
   .navIcons {
     font-size: 40px;
+  }
+
+  .closeIcon {
+    top: 33px;
+    right: 15px;
   }
 }
 
