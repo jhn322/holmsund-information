@@ -10,6 +10,10 @@ const Navigation = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav>
       <div
@@ -79,8 +83,8 @@ const Navigation = () => {
         </div>
       </div>
       {isMenuOpen && (
-        <div className={styles.menuWrapper} onClick={toggleMenu}>
-          <div className={styles.closeIcon}>
+        <div className={styles.menuWrapper}>
+          <div className={styles.closeIcon} onClick={closeMenu}>
             <FiX className={styles.close} />
           </div>
           <ul className={styles.openMenu}>
