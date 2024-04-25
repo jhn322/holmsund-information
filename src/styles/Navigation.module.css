@@ -18,7 +18,7 @@ li {
   align-items: flex-end;
   justify-content: center;
   width: 100%;
-  height: 10vh;
+  height: 6.5em;
   position: fixed;
   top: 0;
   background-color: rgba(191, 54, 12, 0.8);
@@ -93,12 +93,21 @@ li {
 }
 
 /* ------------- Burger menu ------------- */
-@keyframes slideIn {
+@keyframes slideOut {
   from {
     transform: translateX(100%);
   }
   to {
     transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
   }
 }
 
@@ -123,7 +132,11 @@ li {
   height: 100%;
   background-color: rgba(191, 54, 12, 0.8);
   z-index: 100;
-  animation: slideIn 0.3s forwards;
+  animation: slideOut 0.3s forwards;
+}
+
+.menuWrapper.menuClosing {
+  animation: slideIn 0.2s forwards;
 }
 
 .openMenu {
@@ -159,7 +172,7 @@ li {
 
 .closeIcon {
   position: absolute;
-  top: 18px;
+  top: 31px;
   right: 17px;
   width: 40px;
   height: 40px;
@@ -187,7 +200,7 @@ li {
 @media only screen and (min-width: 1024px) {
   /* Main nav */
   .navContainer {
-    height: 14vh;
+    height: 9.5em;
   }
 
   .navList li {
@@ -208,7 +221,7 @@ li {
   }
 
   .closeIcon {
-    top: 34px;
+    top: 55px;
     right: 21px;
   }
 

@@ -5,13 +5,18 @@ import { FiMenu, FiSearch, FiX } from "react-icons/fi";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuClosing, setIsMenuClosing] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    setIsMenuClosing(false);
   };
 
   const closeMenu = () => {
-    setIsMenuOpen(false);
+    setIsMenuClosing(true);
+    setTimeout(() => {
+      setIsMenuOpen(false);
+    }, 100);
   };
 
   const handleBlurBackgroundClick = () => {
@@ -93,7 +98,11 @@ const Navigation = () => {
         </div>
       </div>
       {isMenuOpen && (
-        <div className={styles.menuWrapper}>
+        <div
+          className={`${styles.menuWrapper} ${
+            isMenuClosing ? styles.menuClosing : ""
+          }`}
+        >
           <div className={styles.closeIcon} onClick={closeMenu}>
             <FiX className={styles.close} />
           </div>
