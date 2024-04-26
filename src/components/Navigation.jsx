@@ -16,7 +16,7 @@ const Navigation = () => {
     setIsMenuClosing(true);
     setTimeout(() => {
       setIsMenuOpen(false);
-    }, 100);
+    }, 150);
   };
 
   const handleBlurBackgroundClick = () => {
