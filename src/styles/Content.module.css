@@ -40,7 +40,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  border: 1px solid red;
+  padding: 5em 0;
 }
 
 .textContent {
@@ -49,18 +50,21 @@ p {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  border: 1px solid red;
 }
 
 .paragraphContent {
   padding: 0 20px;
 }
 
+.undertitleContent {
+  color: #bf360c;
+}
+
 .imgContainer {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   background-color: rgb(218, 218, 218);
 }
 

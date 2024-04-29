@@ -8,7 +8,9 @@ const Content = () => {
         <div className={styles.content}>
           <article className={styles.textContent}>
             <h2>Holmsund, Umeå</h2>
-            <h3>DET HÄR ÄR EN LÅNG UNDERRUBRIK. COOLT.</h3>
+            <h3 className={styles.undertitleContent}>
+              DET HÄR ÄR EN LÅNG UNDERRUBRIK. COOLT.
+            </h3>
             <p className={styles.paragraphContent}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Temporibus non nesciunt dolor aut, veniam mollitia quaerat
