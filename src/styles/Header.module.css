@@ -12,6 +12,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("../assets/bg.jpg");
+  background-size: cover;
   width: 100vw;
   height: 100vh;
 }
@@ -28,7 +30,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 4rem;
+  font-size: 4.5rem;
+  font-weight: 600;
   flex-wrap: wrap;
   line-height: 1;
 }
@@ -37,8 +40,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
   width: 90vw;
-  border: 1px solid red;
 }
 
 .headerBtn {
@@ -46,6 +49,7 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  padding: 18px;
   border-radius: 50px;
   background-color: #bf360ccc;
   width: 80%;

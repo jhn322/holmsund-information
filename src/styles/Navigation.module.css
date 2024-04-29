@@ -21,7 +21,7 @@ li {
   height: 6.5em;
   position: fixed;
   top: 0;
-  background-color: #bf360ccc;
+  background-color: rgba(191, 54, 12, 0.6);
 }
 
 /* Items in the nav */

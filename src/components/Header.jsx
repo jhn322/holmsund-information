@@ -6,7 +6,7 @@ const Header = () => {
     <main className={styles.headerContainer}>
       <div className={styles.innerHeader}>
         <div className={styles.header}>
-          Holmsund <br /> information
+          Holmsund <br /> Information
           <div className={styles.btnContainer}>
             <button className={styles.headerBtn}>
               Klicka här för mer information om detta innehåll!
