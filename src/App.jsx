@@ -13,15 +13,15 @@ const App = () => {
           <Navigation />
           <Routes>
             <Route>
-              <Route path="/" element={<Content />} />
-              <Route path="/link1" element={<Content page="link1" />} />
+              <Route path="/" element={<Header />} />
+              <Route path="/link1" element={<Header page="link1" />} />
               <Route path="/link2" element={<Content page="link2" />} />
-              <Route path="/link3" element={<Content page="link3" />} />
+              <Route path="/link3" element={<Weather page="link3" />} />
             </Route>
           </Routes>
         </nav>
         <main>
-          <Header />
+          <Content />
           <Weather />
         </main>
         <footer>
