@@ -1,0 +1,94 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+h2 {
+  font-size: 3rem;
+  margin: 3.5rem 0;
+}
+
+h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #bf360c;
+}
+
+p {
+  font-size: 1.35rem;
+  word-spacing: 1px;
+  line-height: 2rem;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #fff;
+  border: 1px solid red;
+}
+
+.innerContent {
+  height: 90vh;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+  padding: 0 20px;
+  max-width: 600px;
+  /* margin-bottom: 3rem; */
+  border: 1px solid red;
+}
+
+.imgContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid red;
+  height: 100vh;
+  background-color: rgb(218, 218, 218);
+}
+
+.imgBackground {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+
+.imgBackCircle {
+  background-image: url("../assets/bg3.png");
+  background-position: 400px center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgFrontCircle {
+  background-image: url("../assets/bg2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  width: 70%;
+  height: 85%;
+}
