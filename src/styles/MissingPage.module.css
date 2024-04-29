@@ -1,0 +1,45 @@
+.MissingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  background-image: url("../assets/404.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-x: center;
+  background-position-y: 50px;
+}
+
+.MissingText {
+  font-size: 2rem;
+  margin-top: 14rem;
+  padding-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.MissingBtn {
+  padding: 12px 20px;
+  background-color: #5756b9;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.MissingBtn:hover {
+  background-color: #7876ff;
+}
+
+@media only screen and (max-width: 800px) {
+  .MissingContainer {
+    background-size: 400px;
+  }
+  .MissingText {
+    font-size: 1.4rem;
+    margin-top: 0;
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+  }
+}

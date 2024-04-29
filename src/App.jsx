@@ -1,8 +1,16 @@
+// Components
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Content from "./components/Content";
-import Weather from "./components/Weather";
 import Footer from "./components/Footer";
+
+// Pages
+import Weather from "./pages/Weather";
+import SpotlightPage from "./pages/SpotlightPage";
+import GalleryPage from "./pages/GalleryPage";
+import MissingPage from "./pages/MissingPage";
+
+// Router
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -14,9 +22,16 @@ const App = () => {
           <Routes>
             <Route>
               <Route path="/" element={<Header />} />
-              <Route path="/link1" element={<Header page="link1" />} />
-              <Route path="/link2" element={<Content page="link2" />} />
-              <Route path="/link3" element={<Weather page="link3" />} />
+              <Route path="/weather" element={<Weather page="weather" />} />
+              <Route
+                path="/spotlightpage"
+                element={<SpotlightPage page="spotlightpage" />}
+              />
+              <Route
+                path="/gallerypage"
+                element={<GalleryPage page="gallerypage" />}
+              />
+              <Route path="*" element={<MissingPage />} />
             </Route>
           </Routes>
         </nav>
