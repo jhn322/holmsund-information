@@ -37,6 +37,9 @@ p {
 }
 
 .innerContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 90vh;
 }
 
@@ -45,10 +48,12 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   padding: 0 20px;
-  max-width: 600px;
   border: 1px solid red;
+}
+
+.paragraphContent {
+  padding: 0 20px;
 }
 
 .imgContainer {
@@ -86,6 +91,6 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
-  width: 32rem;
+  width: 36em;
   height: 85%;
 }

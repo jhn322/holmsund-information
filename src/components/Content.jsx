@@ -9,7 +9,7 @@ const Content = () => {
           <article className={styles.textContent}>
             <h2>Holmsund, Umeå</h2>
             <h3>DET HÄR ÄR EN LÅNG UNDERRUBRIK. COOLT.</h3>
-            <p>
+            <p className={styles.paragraphContent}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Temporibus non nesciunt dolor aut, veniam mollitia quaerat
               aperiam, obcaecati sit optio architecto itaque repellendus
