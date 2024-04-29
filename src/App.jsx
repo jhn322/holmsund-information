@@ -2,6 +2,8 @@
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Content from "./components/Content";
+import Spotlight from "./components/Spotlight";
+import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
 
 // Pages
@@ -37,7 +39,8 @@ const App = () => {
         </nav>
         <main>
           <Content />
-          <Weather />
+          <Spotlight />
+          <Gallery />
         </main>
         <footer>
           <Footer />
