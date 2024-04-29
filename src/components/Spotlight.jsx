@@ -1,4 +1,4 @@
-import React from "react";
+import { useRef, useEffect, useState } from "react";
 import styles from "../styles/Spotlight.module.css";
 
 // Images
@@ -12,10 +12,34 @@ import cardImage7 from "../assets/image7.jpg";
 import cardImage8 from "../assets/image8.jpg";
 
 const Spotlight = () => {
+  const spotlightContainerRef = useRef(null);
+  const [totalCardsHeight, setTotalCardsHeight] = useState(0);
+
+  useEffect(() => {
+    const calculateTotalHeight = () => {
+      if (spotlightContainerRef.current) {
+        const totalHeight = Array.from(
+          spotlightContainerRef.current.querySelectorAll(
+            `.${styles.spotlightCard}`
+          )
+        ).reduce((acc, card) => acc + card.offsetHeight, 0);
+        setTotalCardsHeight(totalHeight);
+      }
+    };
+
+    calculateTotalHeight();
+
+    window.addEventListener("resize", calculateTotalHeight);
+
+    return () => {
+      window.removeEventListener("resize", calculateTotalHeight);
+    };
+  }, [totalCardsHeight]);
+
   return (
     <section>
       {/* Image 1 */}
-      <div className={styles.spotlightContainer}>
+      <div ref={spotlightContainerRef} className={styles.spotlightContainer}>
         <div className={styles.spotlightInner}>
           <div className={styles.spotlightTitle}>
             <h2>Upptäck Holmsund</h2>
