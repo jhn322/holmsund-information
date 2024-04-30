@@ -53,35 +53,35 @@ const Navigation = () => {
             </li>
             <li>
               <NavLink
-                to="/link1"
+                to="/weather"
                 activeclassname={styles.active}
                 className={`${styles.navLink} ${
                   isMenuOpen ? styles.menuOpen : ""
                 }`}
               >
-                Link 1
+                Väder
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/link2"
+                to="/spotlightpage"
                 activeclassname={styles.active}
                 className={`${styles.navLink} ${
                   isMenuOpen ? styles.menuOpen : ""
                 }`}
               >
-                Link 2
+                Upptäck
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/link3"
+                to="/gallerypage"
                 activeclassname={styles.active}
                 className={`${styles.navLink} ${
                   isMenuOpen ? styles.menuOpen : ""
                 }`}
               >
-                Link 3
+                Galleri
               </NavLink>
             </li>
           </ul>
@@ -113,18 +113,18 @@ const Navigation = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/link1" activeclassname={styles.active}>
-                Link 1
+              <NavLink to="/weather" activeclassname={styles.active}>
+                Väder
               </NavLink>
             </li>
             <li>
-              <NavLink to="/link2" activeclassname={styles.active}>
-                Link 2
+              <NavLink to="/spotlightpage" activeclassname={styles.active}>
+                Upptäck
               </NavLink>
             </li>
             <li>
-              <NavLink to="/link3" activeclassname={styles.active}>
-                Link 3
+              <NavLink to="/gallerypage" activeclassname={styles.active}>
+                Galleri
               </NavLink>
             </li>
           </ul>

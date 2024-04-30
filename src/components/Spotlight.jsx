@@ -52,7 +52,7 @@ const Spotlight = () => {
               >
                 {/* Image 2 */}
                 <div className={styles.cardOverlay}>
-                  <h3>Text here</h3>
+                  <h3>En längre titel</h3>
                 </div>
               </div>
             </div>
@@ -63,7 +63,7 @@ const Spotlight = () => {
               >
                 {/* Image 3 */}
                 <div className={styles.cardOverlay}>
-                  <h3>Text here</h3>
+                  <h3>Saker man kan göra</h3>
                 </div>
               </div>
             </div>
@@ -74,7 +74,7 @@ const Spotlight = () => {
               >
                 {/* Image 4 */}
                 <div className={styles.cardOverlay}>
-                  <h3>Text here</h3>
+                  <h3>Badhuset</h3>
                 </div>
               </div>
             </div>
@@ -85,7 +85,7 @@ const Spotlight = () => {
               >
                 {/* Image 5 */}
                 <div className={styles.cardOverlay}>
-                  <h3>Text here</h3>
+                  <h3>Golfbana</h3>
                 </div>
               </div>
             </div>
@@ -96,7 +96,7 @@ const Spotlight = () => {
               >
                 {/* Image 6 */}
                 <div className={styles.cardOverlay}>
-                  <h3>Text here</h3>
+                  <h3>Ett till ställe</h3>
                 </div>
               </div>
             </div>
@@ -107,7 +107,7 @@ const Spotlight = () => {
               >
                 {/* Image 7 */}
                 <div className={styles.cardOverlay}>
-                  <h3>Text here</h3>
+                  <h3>Därborta nånstans</h3>
                 </div>
               </div>
             </div>
@@ -118,7 +118,7 @@ const Spotlight = () => {
               >
                 {/* Image 8 */}
                 <div className={styles.cardOverlay}>
-                  <h3>Text here</h3>
+                  <h3>Ett spännande ställe</h3>
                 </div>
               </div>
             </div>
@@ -128,7 +128,7 @@ const Spotlight = () => {
                 style={{ backgroundImage: `url(${cardImage8})` }}
               >
                 <div className={styles.cardOverlay}>
-                  <h3>Text here</h3>
+                  <h3>Sista stället</h3>
                 </div>
               </div>
             </div>
