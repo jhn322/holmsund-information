@@ -7,6 +7,12 @@
   font-family: "Outfit", sans-serif;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
 li {
   list-style: none;
 }
@@ -18,10 +24,10 @@ li {
   align-items: flex-end;
   justify-content: center;
   background-image: url("../assets/HolmsundLogo.png");
-  background-position: 80px center;
+  background-position: 30px center;
   background-repeat: no-repeat;
-  background-size: 200px auto;
-  width: 100%;
+  background-size: 150px auto;
+  width: 100vw;
   height: 6.5em;
   position: fixed;
   top: 0;
@@ -34,7 +40,6 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  width: 100%;
   margin-right: 1.5rem;
 }
 

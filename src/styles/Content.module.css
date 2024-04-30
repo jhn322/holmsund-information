@@ -7,24 +7,10 @@
   font-family: "Outfit", sans-serif;
 }
 
-h2 {
-  font-size: 3rem;
-  margin: 3.5rem 0;
-  color: #0b0b0b;
-}
-
-h3 {
-  font-size: 1.7rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #bf360c;
-}
-
-p {
-  font-size: 1.4rem;
-  word-spacing: 1px;
-  line-height: 2rem;
-  color: #0b0b0b;
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
 }
 
 .contentContainer {
@@ -32,7 +18,6 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 70em;
   background-color: #fff;
 }
 
@@ -48,26 +33,38 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 0 20px;
 }
 
-.paragraphContent {
-  padding: 0 20px;
+.titleContent {
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  margin-top: 1rem;
+  color: #0b0b0b;
 }
 
 .undertitleContent {
-  padding: 0 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
   color: #bf360c;
+}
+
+.paragraphContent {
+  font-size: 1.3rem;
+  word-spacing: 1px;
+  line-height: 2rem;
+  color: #0b0b0b;
 }
 
 .imgContainer {
   display: flex;
   flex-direction: column;
-  width: 100%;
   height: 30em;
-  border: 1px solid red;
+  width: 100%;
   padding: 20px 0;
-  background-color: rgb(218, 218, 218);
+  background-color: #f1f2f2;
 }
 
 .imgBackground {
@@ -80,11 +77,11 @@ p {
 
 .imgBackCircle {
   background-image: url("../assets/bg3.png");
-  background-position: 400px center;
+  background-position: 200px center;
   background-repeat: no-repeat;
-  background-size: 70%;
-  width: 100%;
+  background-size: 90%;
   height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,6 +93,6 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
-  width: 36em;
+  width: 25em;
   height: 85%;
 }
