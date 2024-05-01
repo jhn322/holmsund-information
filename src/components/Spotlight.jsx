@@ -29,12 +29,38 @@ const Spotlight = () => {
 
     calculateTotalHeight();
 
-    window.addEventListener("resize", calculateTotalHeight);
+    const handleScroll = () => {
+      if (!spotlightContainerRef.current) return;
+
+      const cards = spotlightContainerRef.current.querySelectorAll(
+        `.${styles.spotlightCard}`
+      );
+
+      cards.forEach((card) => {
+        const cardTop = card.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (
+          cardTop < windowHeight * 0.75 &&
+          !card.classList.contains("slideIn")
+        ) {
+          card.classList.add(styles.slideInUp, "slideIn");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    const handleResize = () => {
+      calculateTotalHeight();
+    };
+
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("resize", calculateTotalHeight);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
-  }, [totalCardsHeight]);
+  }, []);
 
   return (
     <section>
@@ -122,7 +148,9 @@ const Spotlight = () => {
                 </div>
               </div>
             </div>
-            <div className={styles.spotlightCard}>
+            <div
+              className={`${styles.spotlightCard} ${styles.lastSpotlightCard}`}
+            >
               <div
                 className={styles.cardImage}
                 style={{ backgroundImage: `url(${cardImage8})` }}

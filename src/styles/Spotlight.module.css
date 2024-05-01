@@ -34,8 +34,9 @@ h2 {
 }
 
 .spotlightTitle h2 {
-  margin-top: 6rem;
-  margin-bottom: 1.5rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding: 20px 0;
 }
 
 .spotlightCardContainer {
@@ -50,6 +51,21 @@ h2 {
   z-index: 1;
 }
 
+.lastSpotlightCard {
+  margin-bottom: 0;
+}
+
+.slideInUp {
+  opacity: 1;
+  transform: translateY(-38px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.slideInUp.slideIn {
+  opacity: 0;
+  transform: translateY(0);
+}
+
 .cardImage {
   height: 100%;
   background-size: cover;
@@ -62,7 +78,25 @@ h2 {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  color: white;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+}
+
+.cardOverlay h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.cardOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 30px;
   color: white;
   text-align: center;
