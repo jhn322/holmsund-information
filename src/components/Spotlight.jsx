@@ -39,10 +39,7 @@ const Spotlight = () => {
       cards.forEach((card) => {
         const cardTop = card.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-        if (
-          cardTop < windowHeight * 0.75 &&
-          !card.classList.contains("slideIn")
-        ) {
+        if (cardTop < windowHeight * 1 && !card.classList.contains("slideIn")) {
           card.classList.add(styles.slideInUp, "slideIn");
         }
       });
