@@ -9,11 +9,13 @@ const Navigation = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [visible, setVisible] = useState(true);
 
+  // Toggles the menu open/close
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     setIsMenuClosing(false);
   };
 
+  // Argument to close the menu on a timeout
   const closeMenu = () => {
     setIsMenuClosing(true);
     setTimeout(() => {
@@ -21,16 +23,19 @@ const Navigation = () => {
     }, 150);
   };
 
+  // Sets background blur when menu is open
+  const handleBlurBackgroundClick = () => {
+    setIsMenuOpen(false);
+  };
+
+  // Handles the scroll on page for nav vertically
   const handleScroll = () => {
     const currentScrollPos = window.scrollY;
     setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
     setPrevScrollPos(currentScrollPos);
   };
 
-  const handleBlurBackgroundClick = () => {
-    setIsMenuOpen(false);
-  };
-
+  // EventListener on window for scroll
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -39,7 +44,13 @@ const Navigation = () => {
   }, [prevScrollPos, visible]);
 
   return (
-    <nav className={`${styles.navContainer} ${!visible && styles.hideNav}`}>
+    // Nav container, hide nav class and transparent class
+    <nav
+      className={`${styles.navContainer} ${!visible && styles.hideNav} ${
+        prevScrollPos <= 0.89 * window.innerHeight && styles.transparent
+      }`}
+    >
+      {/* Conditional render nav with links */}
       {isMenuOpen && (
         <div
           className={styles.blurBackground}
@@ -51,7 +62,7 @@ const Navigation = () => {
           <li>
             <NavLink
               to="/"
-              activeClassName={styles.active}
+              activeclassname={styles.active}
               className={styles.navLink}
             >
               Home
@@ -60,7 +71,7 @@ const Navigation = () => {
           <li>
             <NavLink
               to="/weather"
-              activeClassName={styles.active}
+              activeclassname={styles.active}
               className={styles.navLink}
             >
               Väder
@@ -69,7 +80,7 @@ const Navigation = () => {
           <li>
             <NavLink
               to="/spotlightpage"
-              activeClassName={styles.active}
+              activeclassname={styles.active}
               className={styles.navLink}
             >
               Upptäck
@@ -78,13 +89,14 @@ const Navigation = () => {
           <li>
             <NavLink
               to="/gallerypage"
-              activeClassName={styles.active}
+              activeclassname={styles.active}
               className={styles.navLink}
             >
               Galleri
             </NavLink>
           </li>
         </ul>
+        {/* Nav icons */}
         <div className={styles.navIcons}>
           <div className={styles.search}>
             <FiSearch className={styles.searchIcon} />
@@ -92,6 +104,7 @@ const Navigation = () => {
           <FiMenu className={styles.menuIcon} onClick={toggleMenu} />
         </div>
       </div>
+      {/* Inside the nav menu */}
       {isMenuOpen && (
         <div
           className={`${styles.menuWrapper} ${
@@ -103,22 +116,22 @@ const Navigation = () => {
           </div>
           <ul className={styles.openMenu}>
             <li>
-              <NavLink to="/" activeClassName={styles.active}>
+              <NavLink to="/" activeclassname={styles.active}>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/weather" activeClassName={styles.active}>
+              <NavLink to="/weather" activeclassname={styles.active}>
                 Väder
               </NavLink>
             </li>
             <li>
-              <NavLink to="/spotlightpage" activeClassName={styles.active}>
+              <NavLink to="/spotlightpage" activeclassname={styles.active}>
                 Upptäck
               </NavLink>
             </li>
             <li>
-              <NavLink to="/gallerypage" activeClassName={styles.active}>
+              <NavLink to="/gallerypage" activeclassname={styles.active}>
                 Galleri
               </NavLink>
             </li>

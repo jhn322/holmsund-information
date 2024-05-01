@@ -33,9 +33,15 @@ li {
   top: 0;
   z-index: 98;
   background-color: rgba(191, 54, 12, 0.8);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
+/* Transparent nav */
+.transparent {
+  background-color: transparent;
+}
+
+/* Hide nav on scroll */
 .hideNav {
   transform: translateY(-100%);
 }
