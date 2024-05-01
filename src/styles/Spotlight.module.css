@@ -35,7 +35,7 @@ h2 {
 
 .spotlightTitle h2 {
   margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 7rem;
   padding: 20px 0;
 }
 
@@ -57,7 +57,7 @@ h2 {
 
 .slideInUp {
   opacity: 1;
-  transform: translateY(-38px);
+  transform: translateY(-68px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
