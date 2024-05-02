@@ -1,45 +1,48 @@
+/* Missing page structure with bg */
 .MissingContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 80vh;
+  min-height: 100vh;
   text-align: center;
   background-image: url("../assets/404.png");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 400px;
   background-position-x: center;
-  background-position-y: 50px;
+  background-position-y: 180px;
 }
 
+/* Text with position */
 .MissingText {
-  font-size: 2rem;
-  margin-top: 14rem;
-  padding-top: 4rem;
-  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  margin-top: 22rem;
 }
 
+/* Button styling */
 .MissingBtn {
-  padding: 12px 20px;
-  background-color: #5756b9;
+  padding: 14px 24px;
+  background-color: rgba(191, 54, 12, 0.8);
   color: #fff;
-  border-radius: 10px;
+  border-radius: 35px;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }
 
 .MissingBtn:hover {
-  background-color: #7876ff;
+  background-color: #ff641d;
 }
 
-@media only screen and (max-width: 800px) {
+/* Desktop */
+@media only screen and (min-width: 1024px) {
   .MissingContainer {
-    background-size: 400px;
+    background-size: 50em;
+    background-position-y: 0;
   }
+
   .MissingText {
-    font-size: 1.4rem;
-    margin-top: 0;
-    padding-top: 2rem;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-top: 30rem;
   }
 }
