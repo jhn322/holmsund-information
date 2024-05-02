@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "../styles/Navigation.module.css";
 import { FiMenu, FiSearch, FiX } from "react-icons/fi";
-import Logo from "../assets/holmsundLogo.png";
+import holmsundLogo from "../assets/holmsundLogo.png";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -62,7 +62,7 @@ const Navigation = () => {
         <ul className={styles.navList}>
           <li>
             <NavLink to="/" className={styles.logoContainer}>
-              <img src={Logo} alt="Logo" className={styles.logo} />
+              <img src={holmsundLogo} alt="Logo" className={styles.logo} />
             </NavLink>
           </li>
           <li>
