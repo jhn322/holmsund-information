@@ -97,7 +97,7 @@ body {
 }
 
 .imgBackCircle {
-  background-image: url("../assets/bg3.png");
+  background-image: url("../assets/contentCircle.png");
   background-position: 200px center;
   background-repeat: no-repeat;
   background-size: 90%;
@@ -109,7 +109,7 @@ body {
 }
 
 .imgFrontCircle {
-  background-image: url("../assets/bg2.jpg");
+  background-image: url("../assets/content1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

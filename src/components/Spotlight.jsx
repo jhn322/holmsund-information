@@ -2,14 +2,14 @@ import { useRef, useEffect, useState } from "react";
 import styles from "../styles/Spotlight.module.css";
 
 // Images
-import cardImage1 from "../assets/image1.jpg";
-import cardImage2 from "../assets/image2.jpg";
-import cardImage3 from "../assets/image3.jpg";
-import cardImage4 from "../assets/image4.jpg";
-import cardImage5 from "../assets/image5.jpg";
-import cardImage6 from "../assets/image6.jpg";
-import cardImage7 from "../assets/image7.jpg";
-import cardImage8 from "../assets/image8.jpg";
+import cardImage1 from "../assets/spotlight1.jpg";
+import cardImage2 from "../assets/spotlight2.jpg";
+import cardImage3 from "../assets/spotlight3.jpg";
+import cardImage4 from "../assets/spotlight4.jpg";
+import cardImage5 from "../assets/spotlight5.jpg";
+import cardImage6 from "../assets/spotlight6.jpg";
+import cardImage7 from "../assets/spotlight7.jpg";
+import cardImage8 from "../assets/spotlight8.jpg";
 
 const Spotlight = () => {
   const spotlightContainerRef = useRef(null);
