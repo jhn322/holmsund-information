@@ -23,10 +23,6 @@ li {
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  background-image: url("../assets/holmsundLogo.png");
-  background-position: 30px center;
-  background-repeat: no-repeat;
-  background-size: 150px auto;
   width: 100vw;
   height: 6.5em;
   position: fixed;
@@ -61,6 +57,15 @@ li {
   justify-content: center;
   margin: 0;
   padding: 0;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin-left: 100px;
+  position: relative;
+  left: 40px;
+  top: 5px;
 }
 
 /* Nav icons */
@@ -245,6 +250,12 @@ li {
   /* Nav icons */
   .navList li svg {
     font-size: 40px;
+  }
+
+  .logo {
+    width: 150px;
+    height: auto;
+    margin-right: 8.75em;
   }
 
   .navLink {

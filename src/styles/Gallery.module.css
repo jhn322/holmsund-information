@@ -1,0 +1,73 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  display: block;
+}
+
+.galleryContainer {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  background-color: #853275;
+}
+
+.imageContainer {
+  position: relative;
+  padding: 2rem;
+}
+
+.galleryImageInner {
+  position: relative;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  margin-top: 6rem;
+}
+
+.galleryImage {
+  width: 22em;
+  height: 22rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  z-index: 0;
+  position: relative; /* Add this */
+}
+
+.galleryTitle {
+  position: absolute; /* Change to absolute */
+  top: -40px;
+  left: 40px;
+  line-height: 2.5rem;
+  z-index: 2; /* Add z-index */
+}
+
+.galleryCircle {
+  position: absolute;
+  top: -60px;
+  left: -25px;
+  height: 8rem;
+  width: 8em;
+  background-image: url("../assets/galleryCircle.png");
+  background-size: cover;
+  z-index: 1;
+}
