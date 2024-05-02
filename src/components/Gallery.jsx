@@ -9,18 +9,20 @@ const Gallery = () => {
       <div className={styles.galleryContainer}>
         <div className={styles.imageContainer}>
           <div className={styles.galleryImageInner}>
-            <div
+            <article
               className={styles.galleryImage}
               style={{ backgroundImage: `url(${galleryImage1})` }}
             >
+              {/* galleryCircle is being handled in css additionally */}
               <div
                 className={styles.galleryCircle}
                 style={{ backgroundImage: `url(${galleryCircle})` }}
               ></div>
+              {/* Main title */}
               <h2 className={styles.galleryTitle}>
                 Första & <br /> Andra
               </h2>
-            </div>
+            </article>
           </div>
         </div>
       </div>
