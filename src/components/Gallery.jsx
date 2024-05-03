@@ -11,7 +11,28 @@ import galleryImage5 from "../assets/gallery5.jpg";
 import galleryCircle from "../assets/galleryCircle.png";
 
 const Gallery = () => {
-  const images = [galleryImage2, galleryImage3, galleryImage4, galleryImage5];
+  const images = [
+    {
+      url: galleryImage2,
+      title: "Badställe",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    },
+    {
+      url: galleryImage3,
+      title: "Skog",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    },
+    {
+      url: galleryImage4,
+      title: "Vattentorn",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
+    },
+    {
+      url: galleryImage5,
+      title: "Storsjöskolan",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
+    },
+  ];
 
   return (
     <section>
@@ -35,7 +56,7 @@ const Gallery = () => {
           </div>
         </div>
         <div>
-          <Carousel images={images} title="Your Title" text="Your text" />
+          <Carousel images={images} />
         </div>
       </div>
     </section>

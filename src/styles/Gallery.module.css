@@ -19,6 +19,12 @@ h2 {
   display: block;
 }
 
+p {
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
 .galleryContainer {
   display: flex;
   text-align: center;
@@ -129,8 +135,16 @@ h2 {
 }
 
 .carouselText {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
   margin-top: 2rem;
+  height: 200px;
+}
+
+.carouselText h2 {
+  text-transform: uppercase;
 }
 
 .dotPagination {
@@ -143,7 +157,7 @@ h2 {
   height: 15px;
   border-radius: 50%;
   background-color: #fff;
-  margin: 10rem 0.65rem;
+  margin: 2.5rem 0.65rem;
   cursor: pointer;
 }
 

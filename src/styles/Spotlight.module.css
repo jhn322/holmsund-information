@@ -42,6 +42,10 @@ body {
   z-index: 1;
 }
 
+.spotlightCardContainer h3 {
+  text-transform: uppercase;
+}
+
 .spotlightCard {
   margin: 40px 0;
   height: 25rem;
