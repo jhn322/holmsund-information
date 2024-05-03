@@ -13,11 +13,6 @@ body {
   width: 100vw;
 }
 
-h2 {
-  font-size: 2.5rem;
-  color: #0b0b0b;
-}
-
 .spotlightContainer {
   display: flex;
   flex-direction: column;
@@ -36,6 +31,8 @@ h2 {
 .spotlightTitle h2 {
   margin-top: 4.2rem;
   margin-bottom: 6.2rem;
+  font-size: 2.5rem;
+  color: #0b0b0b;
   padding: 20px 0;
 }
 
@@ -86,25 +83,7 @@ h2 {
 }
 
 .cardOverlay h3 {
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #fff;
-}
-
-.cardOverlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 30px;
-  color: white;
-  text-align: center;
-  border-radius: 0 0 10px 10px;
-}
-
-.cardOverlay h3 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #fff;
 }

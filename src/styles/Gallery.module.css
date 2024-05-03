@@ -24,7 +24,7 @@ h2 {
   text-align: center;
   flex-direction: column;
   justify-content: flex-start;
-  height: 100vh;
+  height: 135vh;
   background-color: #853275;
 }
 
@@ -70,4 +70,83 @@ h2 {
   background-image: url("../assets/galleryCircle.png");
   background-size: cover;
   z-index: 1;
+}
+
+/* Carousel of images */
+
+.carouselContainer {
+  position: relative;
+  padding: 2rem;
+  margin-top: 1rem;
+  margin-left: 0.8rem;
+}
+
+.carouselInner {
+  position: relative;
+}
+
+.slide {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.carouselInner img {
+  width: 22rem;
+  height: 22rem;
+  border-radius: 10px;
+}
+
+.prevBtn,
+.nextBtn {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  top: 0%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 70px;
+  height: 100%;
+  width: 50px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+  color: #ff641d;
+}
+
+.prevBtn {
+  right: 60px;
+}
+
+.nextBtn {
+  right: 0px;
+}
+
+.carouselText {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.dotPagination {
+  margin-top: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 10rem 0.65rem;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #ff641d;
 }
