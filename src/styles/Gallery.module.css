@@ -42,7 +42,7 @@ p {
 .galleryImageInner {
   position: relative;
   top: 20px;
-  left: 50%;
+  left: 48%;
   transform: translateX(-50%);
   z-index: 1;
   margin-top: 6rem;
@@ -70,7 +70,7 @@ p {
 .galleryCircle {
   position: absolute;
   top: -60px;
-  left: -25px;
+  left: -18px;
   height: 8rem;
   width: 8em;
   background-image: url("../assets/galleryCircle.png");
@@ -84,7 +84,7 @@ p {
   position: relative;
   padding: 2rem;
   margin-top: 1rem;
-  margin-left: 0.8rem;
+  margin-left: 0.6rem;
 }
 
 .carouselInner {
@@ -131,7 +131,7 @@ p {
 }
 
 .nextBtn {
-  right: 0px;
+  right: 5px;
 }
 
 .carouselText {

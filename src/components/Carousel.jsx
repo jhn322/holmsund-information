@@ -1,4 +1,3 @@
-// Carousel.js
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Gallery.module.css";
 
@@ -44,15 +43,11 @@ const Carousel = ({ images }) => {
         {images.map((image, index) => (
           <div
             key={index}
-            className={
-              index === currentIndex
-                ? `${styles.slide} ${styles.active}`
-                : styles.slide
-            }
+            className={`${styles.slide} ${
+              index === currentIndex ? styles.active : ""
+            }`}
           >
-            {index === currentIndex && (
-              <img src={image.url} alt={`Slide ${index}`} />
-            )}
+            <img src={image.url} alt={`Slide ${index}`} />
           </div>
         ))}
         <button className={styles.prevBtn} onClick={goToPrevSlide}>
