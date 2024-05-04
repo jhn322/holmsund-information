@@ -41,13 +41,6 @@ const Content = () => {
           </article>
         </div>
       </div>
-      <aside className={styles.imgContainer}>
-        <div className={styles.imgBackground}>
-          <div className={styles.imgBackCircle}>
-            <div className={styles.imgFrontCircle}></div>
-          </div>
-        </div>
-      </aside>
     </section>
   );
 };

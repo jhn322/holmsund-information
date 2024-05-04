@@ -79,45 +79,6 @@ body {
   opacity: 0;
 }
 
-.imgContainer {
-  display: flex;
-  flex-direction: column;
-  height: 30em;
-  width: 100%;
-  padding: 20px 0;
-  background-color: #f1f2f2;
-}
-
-.imgBackground {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.imgBackCircle {
-  background-image: url("../assets/contentCircle.png");
-  background-position: 200px center;
-  background-repeat: no-repeat;
-  background-size: 90%;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.imgFrontCircle {
-  background-image: url("../assets/content1.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 50%;
-  width: 25em;
-  height: 85%;
-}
-
 /* Mini phones */
 @media only screen and (max-width: 400px) {
   .titleContent {
@@ -130,5 +91,19 @@ body {
 
   .paragraphContent {
     font-size: 1.1rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 769px) {
+  .titleContent {
+    font-size: 3rem;
+  }
+
+  .undertitleContent {
+    font-size: 1.8rem;
+  }
+
+  .paragraphContent {
+    font-size: 1.5rem;
   }
 }

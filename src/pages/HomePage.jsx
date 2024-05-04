@@ -4,6 +4,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import Header from "../components/Header";
 import Content from "../components/Content";
+import Circle from "../components/Circle";
 import Spotlight from "../components/Spotlight";
 import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
@@ -15,6 +16,9 @@ const HomePage = () => {
       <Navigation />
       <Header />
       <Content />
+      <section>
+        <Circle />
+      </section>
       <Spotlight />
       <Gallery />
       <Footer />

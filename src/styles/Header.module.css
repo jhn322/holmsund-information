@@ -73,3 +73,15 @@ body {
     width: 16em;
   }
 }
+
+/* Small Tablet */
+@media only screen and (min-width: 600px) and (max-width: 769px) {
+  .headerTitle {
+    font-size: 5rem;
+  }
+
+  .headerBtn {
+    font-size: 1.3rem;
+    width: 20.5em;
+  }
+}
