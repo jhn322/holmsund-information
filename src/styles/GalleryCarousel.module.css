@@ -114,7 +114,7 @@ p {
   background-color: transparent;
   border: none;
   color: white;
-  font-size: 70px;
+  font-size: 60px;
   height: 100%;
   width: 50px;
   cursor: pointer;
@@ -127,11 +127,11 @@ p {
 }
 
 .prevBtn {
-  right: 60px;
+  right: 35px;
 }
 
 .nextBtn {
-  right: 5px;
+  right: -10px;
 }
 
 .carouselText {
