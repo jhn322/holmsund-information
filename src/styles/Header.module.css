@@ -61,3 +61,15 @@ body {
   color: #fff;
   background-color: #bf360c;
 }
+
+/* Mini phones */
+@media only screen and (max-width: 400px) {
+  .headerTitle {
+    font-size: 3rem;
+  }
+
+  .headerBtn {
+    font-size: 1.1rem;
+    width: 16em;
+  }
+}

@@ -91,3 +91,14 @@ body {
   font-weight: 500;
   color: #fff;
 }
+
+/* Mini phones */
+@media only screen and (max-width: 400px) {
+  .spotlightTitle h2 {
+    font-size: 2rem;
+  }
+
+  .cardOverlay h3 {
+    font-size: 1.3rem;
+  }
+}

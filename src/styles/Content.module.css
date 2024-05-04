@@ -117,3 +117,18 @@ body {
   width: 25em;
   height: 85%;
 }
+
+/* Mini phones */
+@media only screen and (max-width: 400px) {
+  .titleContent {
+    font-size: 2rem;
+  }
+
+  .undertitleContent {
+    font-size: 1.3rem;
+  }
+
+  .paragraphContent {
+    font-size: 1.1rem;
+  }
+}

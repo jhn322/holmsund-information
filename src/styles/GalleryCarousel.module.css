@@ -30,7 +30,7 @@ p {
   text-align: center;
   flex-direction: column;
   justify-content: flex-start;
-  height: 135vh;
+  height: 80em;
   background-color: #853275;
 }
 
@@ -49,22 +49,22 @@ p {
 }
 
 .galleryImage {
-  width: 22em;
+  width: 22rem;
   height: 22rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10px;
   z-index: 0;
-  position: relative; /* Add this */
+  position: relative;
 }
 
 .galleryTitle {
-  position: absolute; /* Change to absolute */
+  position: absolute;
   top: -40px;
   left: 40px;
   line-height: 2.5rem;
-  z-index: 2; /* Add z-index */
+  z-index: 2;
 }
 
 .galleryCircle {
@@ -163,4 +163,33 @@ p {
 
 .dot.active {
   background-color: #bf360c;
+}
+
+/* Mini phones */
+@media only screen and (max-width: 400px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  .galleryImageInner {
+    left: 46%;
+  }
+
+  .galleryImage {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .carouselContainer {
+    margin-left: 0.2rem;
+  }
+
+  .carouselInner img {
+    width: 20rem;
+    height: 20rem;
+  }
 }
