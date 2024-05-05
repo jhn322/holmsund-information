@@ -30,6 +30,7 @@ p {
   text-align: center;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
   height: 80em;
   background-color: #853275;
 }
@@ -80,9 +81,10 @@ p {
 
 /* Carousel of images */
 .carouselContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  padding: 2rem;
-  margin-top: 1rem;
   margin-left: 0.6rem;
 }
 
@@ -138,6 +140,7 @@ p {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+  max-width: 366px;
   margin-top: 2rem;
   height: 200px;
 }
@@ -198,6 +201,31 @@ p {
     width: 20rem;
     height: 20rem;
   }
+
+  .carouselText {
+    max-width: 326px;
+  }
+}
+
+/* Uncommon phone size */
+@media only screen and (min-width: 500px) and (max-width: 599px) {
+  .galleryContainer {
+    height: 90em;
+  }
+
+  .galleryImage {
+    width: 27em;
+    height: 27em;
+  }
+
+  .carouselInner img {
+    width: 27rem;
+    height: 27rem;
+  }
+
+  .carouselText {
+    max-width: 442px;
+  }
 }
 
 /* Small Tablet */
@@ -216,13 +244,13 @@ p {
 
   .galleryCircle {
     top: -55px;
-    left: -35px;
+    left: -15px;
     height: 11rem;
     width: 11em;
   }
 
   .galleryImageInner {
-    left: 52%;
+    left: 47%;
   }
 
   .galleryImage {
@@ -237,5 +265,9 @@ p {
   .carouselInner img {
     width: 34rem;
     height: 34rem;
+  }
+
+  .carouselText {
+    max-width: 550px;
   }
 }
