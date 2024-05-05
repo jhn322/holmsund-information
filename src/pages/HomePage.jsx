@@ -16,9 +16,7 @@ const HomePage = () => {
       <Navigation />
       <Header />
       <Content />
-      <section>
-        <Circle />
-      </section>
+      <Circle />
       <Spotlight />
       <Gallery />
       <Footer />

@@ -49,8 +49,8 @@ p {
 }
 
 .galleryImage {
-  width: 22rem;
-  height: 22rem;
+  width: 22em;
+  height: 22em;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -175,6 +175,13 @@ p {
     font-size: 1.1rem;
   }
 
+  .galleryCircle {
+    top: -40px;
+    left: -8px;
+    height: 7rem;
+    width: 7em;
+  }
+
   .galleryImageInner {
     left: 46%;
   }
@@ -191,5 +198,45 @@ p {
   .carouselInner img {
     width: 20rem;
     height: 20rem;
+  }
+}
+
+/* Small Tablet */
+@media only screen and (min-width: 600px) and (max-width: 769px) {
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .galleryContainer {
+    height: 110em;
+  }
+
+  .galleryCircle {
+    top: -55px;
+    left: -35px;
+    height: 11rem;
+    width: 11em;
+  }
+
+  .galleryImageInner {
+    left: 52%;
+  }
+
+  .galleryImage {
+    width: 34rem;
+    height: 34rem;
+  }
+
+  .carouselContainer {
+    margin-left: 0.2rem;
+  }
+
+  .carouselInner img {
+    width: 34rem;
+    height: 34rem;
   }
 }

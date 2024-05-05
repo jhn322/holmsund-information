@@ -55,7 +55,7 @@ const Gallery = () => {
             </article>
           </div>
         </div>
-        <div>
+        <div className={styles.carouselText}>
           <Carousel images={images} />
         </div>
       </div>
