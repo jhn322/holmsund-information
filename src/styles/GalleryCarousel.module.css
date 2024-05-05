@@ -34,7 +34,7 @@ p {
   background-color: #853275;
 }
 
-.imageContainer {
+.galleryImageContainer {
   position: relative;
   padding: 2rem;
 }
@@ -59,14 +59,6 @@ p {
   position: relative;
 }
 
-.galleryTitle {
-  position: absolute;
-  top: -40px;
-  left: 40px;
-  line-height: 2.5rem;
-  z-index: 2;
-}
-
 .galleryCircle {
   position: absolute;
   top: -60px;
@@ -78,8 +70,15 @@ p {
   z-index: 1;
 }
 
-/* Carousel of images */
+.galleryTitle {
+  position: absolute;
+  top: -40px;
+  left: 40px;
+  line-height: 2.5rem;
+  z-index: 2;
+}
 
+/* Carousel of images */
 .carouselContainer {
   position: relative;
   padding: 2rem;
@@ -91,18 +90,18 @@ p {
   position: relative;
 }
 
+.carouselInner img {
+  width: 22rem;
+  height: 22rem;
+  border-radius: 10px;
+}
+
 .slide {
   display: none;
 }
 
 .active {
   display: block;
-}
-
-.carouselInner img {
-  width: 22rem;
-  height: 22rem;
-  border-radius: 10px;
 }
 
 .prevBtn,
@@ -121,17 +120,17 @@ p {
   padding: 0;
 }
 
-.prevBtn:hover,
-.nextBtn:hover {
-  color: #ff641d;
-}
-
 .prevBtn {
   right: 35px;
 }
 
 .nextBtn {
   right: -10px;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+  color: #ff641d;
 }
 
 .carouselText {

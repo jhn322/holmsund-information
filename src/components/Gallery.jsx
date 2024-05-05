@@ -37,7 +37,7 @@ const Gallery = () => {
   return (
     <section>
       <div className={styles.galleryContainer}>
-        <div className={styles.imageContainer}>
+        <div className={styles.galleryImageContainer}>
           <div className={styles.galleryImageInner}>
             <article
               className={styles.galleryImage}
