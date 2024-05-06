@@ -3,8 +3,7 @@ import React from "react";
 // Components
 import Navigation from "../components/Navigation";
 import Header from "../components/Header";
-import Content from "../components/Content";
-import Circle from "../components/Circle";
+import ContentCircle from "../components/ContentCircle";
 import Separator from "../components/Separator";
 import Spotlight from "../components/Spotlight";
 import Gallery from "../components/Gallery";
@@ -16,8 +15,7 @@ const HomePage = () => {
     <main>
       <Navigation />
       <Header />
-      <Content />
-      <Circle />
+      <ContentCircle />
       <Separator />
       <Spotlight />
       <Gallery />

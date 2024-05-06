@@ -77,7 +77,7 @@ body {
 .customShapeDividerBottom1714970187 svg {
   position: relative;
   display: block;
-  width: calc(300% + 1.3px);
+  width: calc(270% + 1.3px);
   height: 180px;
 }
 
@@ -96,7 +96,6 @@ body {
   }
 
   .customShapeDividerBottom1714970187 svg {
-    width: calc(300% + 1.3px);
     height: 170px;
   }
 }
@@ -112,7 +111,6 @@ body {
   }
 
   .customShapeDividerBottom1714970187 svg {
-    width: calc(300% + 1.3px);
     height: 220px;
   }
 }
@@ -129,13 +127,16 @@ body {
   }
 
   .customShapeDividerBottom1714970187 svg {
-    width: calc(300% + 1.3px);
     height: 240px;
   }
 }
 
 /* Desktop */
 @media only screen and (min-width: 770px) {
+  .headerContainer {
+    height: 115vh;
+  }
+
   .headerTitle {
     font-size: 7rem;
   }
@@ -146,8 +147,11 @@ body {
     width: 30em;
   }
 
+  .customShapeDividerBottom1714970187 {
+    bottom: -100px;
+  }
+
   .customShapeDividerBottom1714970187 svg {
-    width: calc(300% + 1.3px);
     height: 300px;
   }
 }

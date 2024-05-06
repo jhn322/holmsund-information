@@ -85,7 +85,7 @@ body {
 /* Desktop */
 @media only screen and (min-width: 770px) {
   .separatorContainer {
-    height: 18vh;
+    height: 20vh;
   }
 
   .customShapeDividerBottom1715022695 svg {

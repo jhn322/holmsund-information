@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from "react";
-import styles from "../styles/Content.module.css";
+import styles from "../styles/ContentCircle.module.css";
+import circle1Image from "../assets/circle1.png";
+import circle2Image from "../assets/circle2.png";
 
-const Content = () => {
+const ContentCircle = () => {
   const contentRef = useRef(null);
 
   useEffect(() => {
@@ -41,8 +43,23 @@ const Content = () => {
           </article>
         </div>
       </div>
+      <article className={styles.circleContainer}>
+        <div className={styles.circleBackground}>
+          <h2>double circle</h2>
+          <img
+            src={circle2Image}
+            className={styles.circleBack}
+            alt="Circle 2"
+          />
+          <img
+            src={circle1Image}
+            className={styles.circleFront}
+            alt="Circle 1"
+          />
+        </div>
+      </article>
     </section>
   );
 };
 
-export default Content;
+export default ContentCircle;
