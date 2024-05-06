@@ -14,12 +14,14 @@ body {
 }
 
 .headerContainer {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: url("../assets/header1.jpg");
   background-size: cover;
   height: 100vh;
+  overflow: hidden;
 }
 
 .innerHeader {
@@ -54,12 +56,33 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 18px;
   border-radius: 35px;
-  width: 18em;
+  width: 22em;
   color: #fff;
   background-color: #bf360c;
+}
+
+/* Header half moonshape svg */
+.customShapeDividerBottom1714970187 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.customShapeDividerBottom1714970187 svg {
+  position: relative;
+  display: block;
+  width: calc(300% + 1.3px);
+  height: 180px;
+}
+
+.customShapeDividerBottom1714970187 .shapeFill {
+  fill: #ffffff;
 }
 
 /* Small phones */
@@ -69,8 +92,12 @@ body {
   }
 
   .headerBtn {
-    font-size: 1.1rem;
-    width: 16em;
+    width: 18em;
+  }
+
+  .customShapeDividerBottom1714970187 svg {
+    width: calc(300% + 1.3px);
+    height: 170px;
   }
 }
 
@@ -81,8 +108,12 @@ body {
   }
 
   .headerBtn {
-    font-size: 1.3rem;
-    width: 19em;
+    width: 24em;
+  }
+
+  .customShapeDividerBottom1714970187 svg {
+    width: calc(300% + 1.3px);
+    height: 220px;
   }
 }
 
@@ -93,11 +124,30 @@ body {
   }
 
   .headerBtn {
-    font-size: 1.4rem;
-    width: 20.5em;
+    font-size: 1.1rem;
+    width: 26em;
+  }
+
+  .customShapeDividerBottom1714970187 svg {
+    width: calc(300% + 1.3px);
+    height: 240px;
   }
 }
 
 /* Desktop */
 @media only screen and (min-width: 770px) {
+  .headerTitle {
+    font-size: 7rem;
+  }
+
+  .headerBtn {
+    font-size: 1.3rem;
+    padding: 1rem;
+    width: 30em;
+  }
+
+  .customShapeDividerBottom1714970187 svg {
+    width: calc(300% + 1.3px);
+    height: 300px;
+  }
 }

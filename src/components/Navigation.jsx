@@ -48,7 +48,7 @@ const Navigation = () => {
     // Nav container, hide nav class and transparent class
     <nav
       className={`${styles.navContainer} ${!visible && styles.hideNav} ${
-        prevScrollPos <= 0.89 * window.innerHeight && styles.transparent // Nav bar is transparent on first 89vh of the page
+        prevScrollPos <= 0.75 * window.innerHeight && styles.transparent // Nav bar is transparent on first 89vh of the page
       }`}
     >
       {/* Conditional render nav with links */}
