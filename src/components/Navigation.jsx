@@ -76,7 +76,7 @@ const Navigation = () => {
           </li>
           <li>
             <NavLink
-              to="/weather"
+              to="/väder"
               activeclassname={styles.active}
               className={styles.navLink}
             >
@@ -85,7 +85,7 @@ const Navigation = () => {
           </li>
           <li>
             <NavLink
-              to="/spotlightpage"
+              to="/upptäck"
               activeclassname={styles.active}
               className={styles.navLink}
             >
@@ -94,7 +94,7 @@ const Navigation = () => {
           </li>
           <li>
             <NavLink
-              to="/gallerypage"
+              to="/galleri"
               activeclassname={styles.active}
               className={styles.navLink}
             >
@@ -127,17 +127,17 @@ const Navigation = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/weather" activeclassname={styles.active}>
+              <NavLink to="/väder" activeclassname={styles.active}>
                 Väder
               </NavLink>
             </li>
             <li>
-              <NavLink to="/spotlightpage" activeclassname={styles.active}>
+              <NavLink to="/upptäck" activeclassname={styles.active}>
                 Upptäck
               </NavLink>
             </li>
             <li>
-              <NavLink to="/gallerypage" activeclassname={styles.active}>
+              <NavLink to="/galleri" activeclassname={styles.active}>
                 Galleri
               </NavLink>
             </li>

@@ -8,9 +8,9 @@
   text-align: center;
   background-image: url("../assets/404.png");
   background-repeat: no-repeat;
-  background-size: 400px;
+  background-size: 25rem;
   background-position-x: center;
-  background-position-y: 180px;
+  background-position-y: 11.25rem;
 }
 
 /* Text with position */
@@ -34,6 +34,58 @@
   background-color: #ff641d;
 }
 
+/* Small phones */
+@media only screen and (max-width: 400px) {
+  .MissingContainer {
+    background-size: 22rem;
+  }
+
+  .MissingText {
+    font-size: 1.1rem;
+    max-width: 340px;
+  }
+
+  .MissingBtn {
+    padding: 12px 22px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Uncommon phone size */
+@media only screen and (min-width: 500px) and (max-width: 599px) {
+  .MissingContainer {
+    background-size: 28rem;
+  }
+
+  .MissingText {
+    margin-top: 30rem;
+    font-size: 1.3rem;
+    max-width: 540px;
+  }
+
+  .MissingBtn {
+    padding: 16px 26px;
+    font-size: 1.3rem;
+  }
+}
+
+/* Small Tablet */
+@media only screen and (min-width: 600px) and (max-width: 769px) {
+  .MissingContainer {
+    background-size: 31rem;
+  }
+
+  .MissingText {
+    margin-top: 36rem;
+    font-size: 1.4rem;
+  }
+
+  .MissingBtn {
+    padding: 18px 28px;
+    font-size: 1.4rem;
+  }
+}
+
 /* Desktop */
 @media only screen and (min-width: 1024px) {
   .MissingContainer {
@@ -42,7 +94,12 @@
   }
 
   .MissingText {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-top: 30rem;
+  }
+
+  .MissingBtn {
+    padding: 18px 28px;
+    font-size: 1.5rem;
   }
 }

@@ -167,10 +167,10 @@ p {
   background-color: #bf360c;
 }
 
-/* Mini phones */
+/* Small phones */
 @media only screen and (max-width: 400px) {
   h2 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 
   p {

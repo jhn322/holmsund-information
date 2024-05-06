@@ -49,7 +49,7 @@ body {
   border-radius: 50%;
 }
 
-/* Mini phones */
+/* Small phones */
 @media only screen and (max-width: 400px) {
   .circleBack,
   .circleFront {

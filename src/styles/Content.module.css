@@ -79,10 +79,10 @@ body {
   opacity: 0;
 }
 
-/* Mini phones */
+/* Small phones */
 @media only screen and (max-width: 400px) {
   .titleContent {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 
   .undertitleContent {
