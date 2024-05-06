@@ -5,6 +5,7 @@ import Navigation from "../components/Navigation";
 import Header from "../components/Header";
 import Content from "../components/Content";
 import Circle from "../components/Circle";
+import Separator from "../components/Separator";
 import Spotlight from "../components/Spotlight";
 import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
@@ -17,6 +18,7 @@ const HomePage = () => {
       <Header />
       <Content />
       <Circle />
+      <Separator />
       <Spotlight />
       <Gallery />
       <Footer />

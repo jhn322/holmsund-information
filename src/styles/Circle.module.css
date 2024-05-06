@@ -18,7 +18,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 70vh;
   background-color: #f1f2f2;
   overflow: hidden;
 }
@@ -49,6 +49,12 @@ body {
   border-radius: 50%;
 }
 
+.separatorContainer {
+  height: 15vh;
+  width: 100%;
+  background-color: rgb(108, 108, 255);
+}
+
 /* Small phones */
 @media only screen and (max-width: 400px) {
   .circleBack,
@@ -56,22 +62,46 @@ body {
     height: 21em;
     width: 21em;
   }
+
+  .separatorContainer {
+    height: 12vh;
+  }
+}
+
+/* Uncommon phone size */
+@media only screen and (min-width: 500px) and (max-width: 599px) {
+  .circleBack,
+  .circleFront {
+    height: 28em;
+    width: 28em;
+  }
+  .separatorContainer {
+    height: 17vh;
+  }
 }
 
 /* Small Tablet */
 @media only screen and (min-width: 600px) and (max-width: 769px) {
   .circleBack,
   .circleFront {
-    height: 31em;
-    width: 31em;
+    height: 32em;
+    width: 32em;
+  }
+
+  .separatorContainer {
+    height: 18vh;
   }
 }
 
 /* Desktop */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 770px) {
   .circleBack,
   .circleFront {
-    height: 32em;
-    width: 32em;
+    height: 33em;
+    width: 33em;
+  }
+
+  .separatorContainer {
+    height: 20vh;
   }
 }

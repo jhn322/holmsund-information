@@ -71,7 +71,7 @@ const Navigation = () => {
               activeclassname={styles.active}
               className={styles.navLink}
             >
-              Home
+              Hem
             </NavLink>
           </li>
           <li>
@@ -123,7 +123,7 @@ const Navigation = () => {
           <ul className={styles.openMenu}>
             <li>
               <NavLink to="/" activeclassname={styles.active}>
-                Home
+                Hem
               </NavLink>
             </li>
             <li>

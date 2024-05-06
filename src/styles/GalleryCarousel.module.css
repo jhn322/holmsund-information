@@ -271,3 +271,7 @@ p {
     max-width: 550px;
   }
 }
+
+/* Desktop */
+@media only screen and (min-width: 770px) {
+}

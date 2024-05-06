@@ -94,6 +94,21 @@ body {
   }
 }
 
+/* Uncommon phone size */
+@media only screen and (min-width: 500px) and (max-width: 599px) {
+  .titleContent {
+    font-size: 2.75rem;
+  }
+
+  .undertitleContent {
+    font-size: 1.7rem;
+  }
+
+  .paragraphContent {
+    font-size: 1.5rem;
+  }
+}
+
 /* Small Tablet */
 @media only screen and (min-width: 600px) and (max-width: 769px) {
   .titleContent {
@@ -107,4 +122,8 @@ body {
   .paragraphContent {
     font-size: 1.5rem;
   }
+}
+
+/* Desktop */
+@media only screen and (min-width: 770px) {
 }
