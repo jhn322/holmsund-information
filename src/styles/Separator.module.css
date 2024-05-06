@@ -1,0 +1,97 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.separatorContainer {
+  position: relative;
+  height: 18vh;
+  width: 100%;
+  background-color: #fff86c;
+}
+
+.customShapeDividerBottom1715022695 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.customShapeDividerBottom1715022695 svg {
+  position: relative;
+  display: block;
+  width: calc(115% + 1.3px);
+  height: 200px;
+}
+
+.customShapeDividerBottom1715022695 .shapeFill {
+  fill: #6c6cff;
+}
+
+/* Small phones */
+@media only screen and (max-width: 400px) {
+  .separatorContainer {
+    height: 15vh;
+  }
+
+  .customShapeDividerBottom1715022695 svg {
+    position: relative;
+    display: block;
+    width: calc(115% + 1.3px);
+    height: 160px;
+  }
+}
+
+/* Uncommon phone size */
+@media only screen and (min-width: 500px) and (max-width: 599px) {
+  .separatorContainer {
+    height: 18vh;
+  }
+
+  .customShapeDividerBottom1715022695 svg {
+    position: relative;
+    display: block;
+    width: calc(115% + 1.3px);
+    height: 170px;
+  }
+}
+
+/* Small Tablet */
+@media only screen and (min-width: 600px) and (max-width: 769px) {
+  .separatorContainer {
+    height: 18vh;
+  }
+
+  .customShapeDividerBottom1715022695 svg {
+    position: relative;
+    display: block;
+    width: calc(115% + 1.3px);
+    height: 180px;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 770px) {
+  .separatorContainer {
+    height: 18vh;
+  }
+
+  .customShapeDividerBottom1715022695 svg {
+    position: relative;
+    display: block;
+    width: calc(115% + 1.3px);
+    height: 220px;
+  }
+}
