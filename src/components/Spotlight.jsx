@@ -61,91 +61,109 @@ const Spotlight = () => {
 
   return (
     <section>
-      {/* Image 1 */}
       <div ref={spotlightContainerRef} className={styles.spotlightContainer}>
         <div className={styles.spotlightInner}>
           <div className={styles.spotlightTitle}>
             <h2>Upptäck Holmsund</h2>
           </div>
           <div className={styles.spotlightCardContainer}>
+            {/* Image 1 */}
             <div className={styles.spotlightCard}>
               <div
                 className={styles.cardImage}
                 style={{ backgroundImage: `url(${cardImage1})` }}
               >
-                {/* Image 2 */}
                 <div className={styles.cardOverlay}>
                   <h3>En längre titel</h3>
                 </div>
               </div>
             </div>
-            <div className={styles.spotlightCard}>
+
+            <div className={styles.stackedImagesContainer}>
+              {/* Image 2 */}
+              <div className={styles.spotlightCard}>
+                <div
+                  className={styles.cardImage}
+                  style={{ backgroundImage: `url(${cardImage2})` }}
+                >
+                  <div className={styles.cardOverlay}>
+                    <h3>Saker man kan göra</h3>
+                  </div>
+                </div>
+              </div>
+              {/* Image 3 */}
               <div
-                className={styles.cardImage}
-                style={{ backgroundImage: `url(${cardImage2})` }}
+                className={`${styles.spotlightCard} ${styles.thirdSpotlightCard}`}
               >
-                {/* Image 3 */}
-                <div className={styles.cardOverlay}>
-                  <h3>Saker man kan göra</h3>
+                <div
+                  className={styles.cardImage}
+                  style={{ backgroundImage: `url(${cardImage3})` }}
+                >
+                  <div className={styles.cardOverlay}>
+                    <h3>Aqua Arena</h3>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className={styles.spotlightCard}>
-              <div
-                className={styles.cardImage}
-                style={{ backgroundImage: `url(${cardImage3})` }}
-              >
-                {/* Image 4 */}
-                <div className={styles.cardOverlay}>
-                  <h3>Aqua Arena</h3>
-                </div>
-              </div>
-            </div>
-            <div className={styles.spotlightCard}>
+
+            {/* Image 4 */}
+            <div
+              className={`${styles.spotlightCard} ${styles.fourthSpotlightCard}`}
+            >
               <div
                 className={styles.cardImage}
                 style={{ backgroundImage: `url(${cardImage4})` }}
               >
-                {/* Image 5 */}
                 <div className={styles.cardOverlay}>
                   <h3>Golfbana</h3>
                 </div>
               </div>
             </div>
+
+            <div className={styles.spotlightSecondTitle}>
+              <h2>Upptäck Mer</h2>
+            </div>
+
+            {/* Image 5 */}
             <div className={styles.spotlightCard}>
               <div
                 className={styles.cardImage}
                 style={{ backgroundImage: `url(${cardImage5})` }}
               >
-                {/* Image 6 */}
                 <div className={styles.cardOverlay}>
                   <h3>Nästa ställe</h3>
                 </div>
               </div>
             </div>
-            <div className={styles.spotlightCard}>
-              <div
-                className={styles.cardImage}
-                style={{ backgroundImage: `url(${cardImage6})` }}
-              >
-                {/* Image 7 */}
-                <div className={styles.cardOverlay}>
-                  <h3>Någonstans där</h3>
+
+            <div className={styles.stackedImagesContainer}>
+              {/* Image 6 */}
+              <div className={styles.spotlightCard}>
+                <div
+                  className={styles.cardImage}
+                  style={{ backgroundImage: `url(${cardImage6})` }}
+                >
+                  <div className={styles.cardOverlay}>
+                    <h3>Någonstans där</h3>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className={styles.spotlightCard}>
+              {/* Image 7 */}
               <div
-                className={styles.cardImage}
-                style={{ backgroundImage: `url(${cardImage7})` }}
+                className={`${styles.spotlightCard} ${styles.seventhSpotlightCard}`}
               >
-                {/* Image 8 */}
-                <div className={styles.cardOverlay}>
-                  <h3>Ett spännande ställe</h3>
+                <div
+                  className={styles.cardImage}
+                  style={{ backgroundImage: `url(${cardImage7})` }}
+                >
+                  <div className={styles.cardOverlay}>
+                    <h3>Ett spännande ställe</h3>
+                  </div>
                 </div>
               </div>
             </div>
             <div
+              /* Image 8 */
               className={`${styles.spotlightCard} ${styles.lastSpotlightCard}`}
             >
               <div

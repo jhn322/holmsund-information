@@ -14,9 +14,9 @@ body {
 
 .separatorContainer {
   position: relative;
-  height: 18vh;
+  height: 14vh;
   width: 100%;
-  background-color: #fff86c;
+  background-color: #5f5fe1;
 }
 
 .customShapeDividerBottom1715022695 {
@@ -33,7 +33,7 @@ body {
   position: relative;
   display: block;
   width: calc(115% + 1.3px);
-  height: 200px;
+  height: 150px;
 }
 
 .customShapeDividerBottom1715022695 .shapeFill {
@@ -42,6 +42,20 @@ body {
 
 /* Small phones */
 @media only screen and (max-width: 400px) {
+  .separatorContainer {
+    height: 12vh;
+  }
+
+  .customShapeDividerBottom1715022695 svg {
+    position: relative;
+    display: block;
+    width: calc(115% + 1.3px);
+    height: 130px;
+  }
+}
+
+/* Uncommon phone size */
+@media only screen and (min-width: 500px) and (max-width: 599px) {
   .separatorContainer {
     height: 15vh;
   }
@@ -54,24 +68,24 @@ body {
   }
 }
 
-/* Uncommon phone size */
-@media only screen and (min-width: 500px) and (max-width: 599px) {
+/* Small Tablet */
+@media only screen and (min-width: 600px) and (max-width: 769px) {
   .separatorContainer {
-    height: 18vh;
+    height: 15vh;
   }
 
   .customShapeDividerBottom1715022695 svg {
     position: relative;
     display: block;
     width: calc(115% + 1.3px);
-    height: 170px;
+    height: 160px;
   }
 }
 
-/* Small Tablet */
-@media only screen and (min-width: 600px) and (max-width: 769px) {
+/* Desktop */
+@media only screen and (min-width: 770px) {
   .separatorContainer {
-    height: 18vh;
+    height: 16vh;
   }
 
   .customShapeDividerBottom1715022695 svg {
@@ -79,19 +93,5 @@ body {
     display: block;
     width: calc(115% + 1.3px);
     height: 180px;
-  }
-}
-
-/* Desktop */
-@media only screen and (min-width: 770px) {
-  .separatorContainer {
-    height: 20vh;
-  }
-
-  .customShapeDividerBottom1715022695 svg {
-    position: relative;
-    display: block;
-    width: calc(115% + 1.3px);
-    height: 220px;
   }
 }

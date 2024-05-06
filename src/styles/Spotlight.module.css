@@ -22,18 +22,25 @@ body {
   background-color: #fff;
 }
 
-.spotlightTitle {
+.spotlightTitle,
+.spotlightSecondTitle {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.spotlightTitle h2 {
+.spotlightTitle h2,
+.spotlightSecondTitle h2 {
   margin-top: 4.2rem;
   margin-bottom: 6.2rem;
   font-size: 2.5rem;
   color: #0b0b0b;
   padding: 20px 0;
+}
+
+.spotlightSecondTitle h2 {
+  margin-top: -2rem;
+  margin-bottom: 6.8rem;
 }
 
 .spotlightCardContainer {
@@ -125,6 +132,163 @@ body {
   }
 }
 
-/* Desktop */
-@media only screen and (min-width: 770px) {
+/* Small Desktop */
+@media only screen and (min-width: 770px) and (max-width: 849px) {
+  .spotlightCardContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 40px;
+  }
+
+  .spotlightCardContainer .spotlightCard {
+    width: calc(50% - 20px);
+  }
+
+  .spotlightSecondTitle {
+    grid-column: span 2;
+    text-align: center;
+    margin-top: -4rem;
+    margin-bottom: -4rem;
+  }
+
+  .cardImage {
+    height: 26rem;
+    width: 21rem;
+  }
+
+  .thirdSpotlightCard,
+  .seventhSpotlightCard {
+    margin-top: 3.3rem;
+  }
+
+  .fourthSpotlightCard {
+    margin-top: -30rem;
+  }
+
+  .lastSpotlightCard {
+    margin-top: -30rem;
+    margin-bottom: 8rem;
+  }
+}
+
+/* Medium Desktop */
+@media only screen and (min-width: 850px) and (max-width: 999px) {
+  .spotlightCardContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 40px;
+  }
+
+  .spotlightCardContainer .spotlightCard {
+    width: calc(50% - 20px);
+  }
+
+  .spotlightSecondTitle {
+    grid-column: span 2;
+    text-align: center;
+    margin-top: -2rem;
+    margin-bottom: -4rem;
+  }
+
+  .cardImage {
+    height: 28rem;
+    width: 24rem;
+  }
+
+  .thirdSpotlightCard,
+  .seventhSpotlightCard {
+    margin-top: 5.6rem;
+  }
+
+  .fourthSpotlightCard {
+    margin-top: -30rem;
+  }
+
+  .lastSpotlightCard {
+    margin-top: -30rem;
+  }
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1000px) and (max-width: 1199px) {
+  .spotlightCardContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 40px;
+  }
+
+  .spotlightCardContainer .spotlightCard {
+    width: calc(50% - 20px);
+  }
+
+  .spotlightSecondTitle {
+    grid-column: span 2;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: -4rem;
+  }
+
+  .cardImage {
+    height: 32rem;
+    width: 29rem;
+  }
+
+  .thirdSpotlightCard,
+  .seventhSpotlightCard {
+    margin-top: 9.5rem;
+  }
+
+  .fourthSpotlightCard {
+    margin-top: -30rem;
+  }
+
+  .lastSpotlightCard {
+    margin-top: -30rem;
+    margin-bottom: 8rem;
+  }
+}
+
+/* Full Desktop */
+@media only screen and (min-width: 1200px) {
+  .spotlightCardContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 35px;
+  }
+
+  .stackedImagesContainer {
+    grid-column: 2 / 3;
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .spotlightCard {
+    margin: 0;
+  }
+
+  .spotlightSecondTitle {
+    grid-column: span 3;
+    text-align: center;
+    margin-top: -1rem;
+    margin-bottom: -2rem;
+  }
+
+  .cardImage {
+    height: 44rem;
+    width: calc(6rem + 20vw);
+  }
+
+  .stackedImagesContainer .cardImage {
+    height: 21rem;
+  }
+
+  .stackedImagesContainer .spotlightCard {
+    margin-bottom: -3.2rem;
+  }
 }
