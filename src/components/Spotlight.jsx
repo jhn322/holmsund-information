@@ -27,8 +27,6 @@ const Spotlight = () => {
       }
     };
 
-    calculateTotalHeight();
-
     const handleScroll = () => {
       if (!spotlightContainerRef.current) return;
 
@@ -39,16 +37,23 @@ const Spotlight = () => {
       cards.forEach((card) => {
         const cardTop = card.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
-        if (cardTop < windowHeight * 1 && !card.classList.contains("slideIn")) {
-          card.classList.add(styles.slideInUp, "slideIn");
+        if (
+          cardTop < windowHeight * 0.75 &&
+          !card.classList.contains(styles.fadeInSlideIn)
+        ) {
+          card.classList.add(styles.fadeInSlideIn);
         }
       });
     };
+
+    calculateTotalHeight();
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
 
     const handleResize = () => {
       calculateTotalHeight();
+      handleScroll();
     };
 
     window.addEventListener("resize", handleResize);

@@ -32,15 +32,14 @@ body {
 .spotlightTitle h2,
 .spotlightSecondTitle h2 {
   margin-top: 4.2rem;
-  margin-bottom: 6.2rem;
+  margin-bottom: 0;
   font-size: 2.5rem;
   color: #0b0b0b;
   padding: 20px 0;
 }
 
 .spotlightSecondTitle h2 {
-  margin-top: -2rem;
-  margin-bottom: 6.8rem;
+  margin-top: 2rem;
 }
 
 .spotlightCardContainer {
@@ -57,21 +56,29 @@ body {
   margin: 40px 0;
   height: 25rem;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 .lastSpotlightCard {
-  margin-bottom: 0;
+  margin-bottom: 6rem;
 }
 
-.slideInUp {
-  opacity: 1;
-  transform: translateY(-68px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.slideInUp.slideIn {
+.fadeInSlideIn {
   opacity: 0;
-  transform: translateY(0);
+  transform: translateY(60px);
+  animation: fadeInSlideIn 1s forwards;
+}
+
+@keyframes fadeInSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .cardImage {
@@ -189,7 +196,7 @@ body {
     grid-column: span 2;
     text-align: center;
     margin-top: -2rem;
-    margin-bottom: -4rem;
+    margin-bottom: -2rem;
   }
 
   .cardImage {
@@ -208,6 +215,7 @@ body {
 
   .lastSpotlightCard {
     margin-top: -30rem;
+    margin-bottom: 10rem;
   }
 }
 
@@ -228,7 +236,7 @@ body {
     grid-column: span 2;
     text-align: center;
     margin-top: 3rem;
-    margin-bottom: -4rem;
+    margin-bottom: -2rem;
   }
 
   .cardImage {
@@ -247,7 +255,7 @@ body {
 
   .lastSpotlightCard {
     margin-top: -30rem;
-    margin-bottom: 8rem;
+    margin-bottom: 14rem;
   }
 }
 
@@ -258,6 +266,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     gap: 35px;
+    margin-bottom: 6rem;
   }
 
   .stackedImagesContainer {
@@ -271,12 +280,16 @@ body {
   .spotlightCard {
     margin: 0;
   }
+  .spotlightTitle {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
 
   .spotlightSecondTitle {
     grid-column: span 3;
     text-align: center;
-    margin-top: -1rem;
-    margin-bottom: -2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   .cardImage {
