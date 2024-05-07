@@ -60,5 +60,13 @@ li:hover {
   justify-content: space-around;
   font-size: 1.1rem;
   margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footerYear {
   margin-bottom: 2rem;
+}
+
+.footerYear p {
+  font-size: 0.8rem;
 }

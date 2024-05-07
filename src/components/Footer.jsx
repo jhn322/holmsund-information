@@ -5,6 +5,8 @@ import styles from "../styles/Footer.module.css";
 import { FaGithub, FaGoogle, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <section className={styles.footerContainer}>
       <div className={styles.footerInner}>
@@ -19,6 +21,11 @@ const Footer = () => {
             <li>Om oss</li>
             <li>Användarvillkor</li>
           </ul>
+          <div className={styles.footerYear}>
+            <p>
+              &copy; {currentYear} Holmsund Information. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </section>
