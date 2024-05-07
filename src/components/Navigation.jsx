@@ -14,6 +14,12 @@ const Navigation = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     setIsMenuClosing(false);
+    // Apply overflow hidden to the body to prevent scrolling when menu is open
+    if (!isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
   };
 
   // Argument to close the menu on a timeout
@@ -21,12 +27,16 @@ const Navigation = () => {
     setIsMenuClosing(true);
     setTimeout(() => {
       setIsMenuOpen(false);
+      // Remove overflow hidden when menu is closed
+      document.body.style.overflow = "auto";
     }, 150);
   };
 
   // Sets background blur when menu is open
   const handleBlurBackgroundClick = () => {
     setIsMenuOpen(false);
+    // Remove overflow hidden when clicking on the background blur
+    document.body.style.overflow = "auto";
   };
 
   // Handles the scroll on page for nav vertically
