@@ -152,10 +152,6 @@ body {
     font-size: 1.7rem;
   }
 
-  .paragraphContent {
-    font-size: 1.5rem;
-  }
-
   .circleBack,
   .circleFront {
     height: 28em;
@@ -171,10 +167,6 @@ body {
 
   .undertitleContent {
     font-size: 1.8rem;
-  }
-
-  .paragraphContent {
-    font-size: 1.5rem;
   }
 
   .circleBack,
@@ -212,6 +204,14 @@ body {
     padding: 0;
   }
 
+  .titleContent {
+    font-size: 3rem;
+  }
+
+  .undertitleContent {
+    font-size: 1.8rem;
+  }
+
   .circleContainer {
     display: flex;
     justify-content: center;
@@ -231,6 +231,17 @@ body {
   .circleFront {
     width: 33em;
     height: 33em;
+  }
+}
+
+/* Fonts */
+@media only screen and (min-width: 1200px) {
+  .titleContent {
+    font-size: 3.5rem;
+  }
+
+  .undertitleContent {
+    font-size: 2rem;
   }
 }
 

@@ -234,10 +234,6 @@ p {
     font-size: 3rem;
   }
 
-  p {
-    font-size: 1.5rem;
-  }
-
   .galleryContainer {
     height: 110em;
   }
@@ -274,4 +270,12 @@ p {
 
 /* Desktop */
 @media only screen and (min-width: 770px) {
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  .galleryTitle {
+    top: -56px;
+    line-height: 3.5rem;
+  }
 }

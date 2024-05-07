@@ -106,21 +106,21 @@ body {
   color: #fff;
 }
 
-/* Uncommon phone size */
-@media only screen and (min-width: 500px) and (max-width: 599px) {
-  .spotlightTitle h2 {
-    font-size: 2.75rem;
-  }
-
-  .cardOverlay h3 {
-    font-size: 1.5rem;
-  }
-}
-
 /* Small phones */
 @media only screen and (max-width: 400px) {
   .spotlightTitle h2 {
     font-size: 2.25rem;
+  }
+
+  .cardOverlay h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Uncommon phone size */
+@media only screen and (min-width: 500px) and (max-width: 599px) {
+  .spotlightTitle h2 {
+    font-size: 2.75rem;
   }
 
   .cardOverlay h3 {
@@ -135,7 +135,7 @@ body {
   }
 
   .cardOverlay h3 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -150,6 +150,15 @@ body {
 
   .spotlightCardContainer .spotlightCard {
     width: calc(50% - 20px);
+  }
+
+  .spotlightTitle h2,
+  .spotlightSecondTitle h2 {
+    font-size: 3rem;
+  }
+
+  .cardOverlay h3 {
+    font-size: 1.5rem;
   }
 
   .spotlightSecondTitle {
@@ -192,11 +201,20 @@ body {
     width: calc(50% - 20px);
   }
 
+  .spotlightTitle h2,
+  .spotlightSecondTitle h2 {
+    font-size: 3rem;
+  }
+
   .spotlightSecondTitle {
     grid-column: span 2;
     text-align: center;
     margin-top: -2rem;
     margin-bottom: -2rem;
+  }
+
+  .cardOverlay h3 {
+    font-size: 1.7rem;
   }
 
   .cardImage {
@@ -232,11 +250,20 @@ body {
     width: calc(50% - 20px);
   }
 
+  .spotlightTitle h2,
+  .spotlightSecondTitle h2 {
+    font-size: 3rem;
+  }
+
   .spotlightSecondTitle {
     grid-column: span 2;
     text-align: center;
     margin-top: 3rem;
     margin-bottom: -2rem;
+  }
+
+  .cardOverlay h3 {
+    font-size: 1.7rem;
   }
 
   .cardImage {
@@ -269,6 +296,11 @@ body {
     margin-bottom: 6rem;
   }
 
+  .spotlightTitle h2,
+  .spotlightSecondTitle h2 {
+    font-size: 3.5rem;
+  }
+
   .stackedImagesContainer {
     grid-column: 2 / 3;
     grid-row: span 2;
@@ -290,6 +322,10 @@ body {
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+
+  .cardOverlay h3 {
+    font-size: 1.7rem;
   }
 
   .cardImage {
