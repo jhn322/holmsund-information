@@ -14,7 +14,7 @@ body {
 
 .separatorContainer {
   position: relative;
-  height: 14vh;
+  height: 9em;
   width: 100%;
   background-color: #5f5fe1;
 }
@@ -43,7 +43,7 @@ body {
 /* Small phones */
 @media only screen and (max-width: 400px) {
   .separatorContainer {
-    height: 12vh;
+    height: 8em;
   }
 
   .customShapeDividerBottom1715022695 svg {
@@ -57,7 +57,7 @@ body {
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 599px) {
   .separatorContainer {
-    height: 15vh;
+    height: 10em;
   }
 
   .customShapeDividerBottom1715022695 svg {
@@ -71,7 +71,7 @@ body {
 /* Small Tablet */
 @media only screen and (min-width: 600px) and (max-width: 769px) {
   .separatorContainer {
-    height: 15vh;
+    height: 10em;
   }
 
   .customShapeDividerBottom1715022695 svg {
@@ -85,7 +85,7 @@ body {
 /* Desktop */
 @media only screen and (min-width: 770px) {
   .separatorContainer {
-    height: 16vh;
+    height: 12em;
   }
 
   .customShapeDividerBottom1715022695 svg {
