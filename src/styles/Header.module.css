@@ -134,10 +134,6 @@ body {
 
 /* Desktop */
 @media only screen and (min-width: 770px) {
-  .headerContainer {
-    height: 115vh;
-  }
-
   .headerTitle {
     font-size: 7rem;
   }
