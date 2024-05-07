@@ -14,7 +14,7 @@ body {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #fff;
   display: block;
 }
@@ -50,8 +50,8 @@ p {
 }
 
 .galleryImage {
-  width: 22em;
-  height: 22em;
+  width: calc(17rem + 20vw);
+  height: calc(17rem + 20vw);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -63,7 +63,7 @@ p {
 .galleryCircle {
   position: absolute;
   top: -60px;
-  left: -18px;
+  left: -14px;
   height: 8rem;
   width: 8em;
   background-image: url("../assets/galleryCircle.png");
@@ -73,9 +73,9 @@ p {
 
 .galleryTitle {
   position: absolute;
-  top: -40px;
+  top: -32px;
   left: 40px;
-  line-height: 2.5rem;
+  line-height: 2rem;
   z-index: 2;
 }
 
@@ -93,8 +93,8 @@ p {
 }
 
 .carouselInner img {
-  width: 22rem;
-  height: 22rem;
+  width: calc(17rem + 20vw);
+  height: calc(17rem + 20vw);
   border-radius: 10px;
 }
 
@@ -170,7 +170,7 @@ p {
 /* Small phones */
 @media only screen and (max-width: 400px) {
   h2 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   p {
@@ -189,8 +189,8 @@ p {
   }
 
   .galleryImage {
-    width: 20rem;
-    height: 20rem;
+    width: calc(15rem + 20vw);
+    height: calc(15rem + 20vw);
   }
 
   .carouselContainer {
@@ -198,8 +198,8 @@ p {
   }
 
   .carouselInner img {
-    width: 20rem;
-    height: 20rem;
+    width: calc(15rem + 20vw);
+    height: calc(15rem + 20vw);
   }
 
   .carouselText {
@@ -209,18 +209,22 @@ p {
 
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 599px) {
+  h2 {
+    font-size: 2.25rem;
+  }
+
   .galleryContainer {
     height: 90em;
   }
 
   .galleryImage {
-    width: 27em;
-    height: 27em;
+    width: calc(21rem + 20vw);
+    height: calc(21rem + 20vw);
   }
 
   .carouselInner img {
-    width: 27rem;
-    height: 27rem;
+    width: calc(21rem + 20vw);
+    height: calc(21rem + 20vw);
   }
 
   .carouselText {
@@ -231,16 +235,21 @@ p {
 /* Small Tablet */
 @media only screen and (min-width: 600px) and (max-width: 769px) {
   h2 {
-    font-size: 3rem;
+    font-size: 2.75rem;
   }
 
   .galleryContainer {
     height: 110em;
   }
 
+  .galleryTitle {
+    top: -40px;
+    line-height: 2.5rem;
+  }
+
   .galleryCircle {
     top: -55px;
-    left: -15px;
+    left: -22px;
     height: 11rem;
     width: 11em;
   }
@@ -250,8 +259,8 @@ p {
   }
 
   .galleryImage {
-    width: 34rem;
-    height: 34rem;
+    width: calc(24rem + 26vw);
+    height: calc(24rem + 26vw);
   }
 
   .carouselContainer {
@@ -259,8 +268,8 @@ p {
   }
 
   .carouselInner img {
-    width: 34rem;
-    height: 34rem;
+    width: calc(24rem + 26vw);
+    height: calc(24rem + 26vw);
   }
 
   .carouselText {
@@ -269,13 +278,207 @@ p {
 }
 
 /* Desktop */
-@media only screen and (min-width: 770px) {
+@media only screen and (min-width: 770px) and (max-width: 1199px) {
   h2 {
-    font-size: 3.5rem;
+    font-size: 2rem;
+  }
+
+  .galleryContainer {
+    flex-direction: row;
+    justify-content: center;
+    height: 75vh;
+    padding-bottom: 4rem;
+  }
+
+  .galleryImageInner {
+    top: 0;
+    left: 48%;
   }
 
   .galleryTitle {
-    top: -56px;
-    line-height: 3.5rem;
+    top: -60px;
+    line-height: 3.75rem;
+    font-size: 4rem;
+  }
+
+  .galleryImage {
+    width: calc(12rem + 20vw);
+    height: calc(12rem + 20vw);
+  }
+
+  .galleryCircle {
+    top: -60px;
+    left: -22px;
+    height: 50%;
+    width: 50%;
+  }
+
+  .carouselContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: -14rem;
+    margin-left: -0.8rem;
+  }
+
+  .carouselInner {
+    position: relative;
+    margin-left: -1rem;
+  }
+
+  .carouselInner img {
+    width: calc(12rem + 20vw);
+    height: calc(12rem + 20vw);
+  }
+}
+
+/* Medium Desktop */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .galleryContainer {
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    padding-bottom: 1rem;
+  }
+
+  .galleryImageInner {
+    top: 0;
+    left: 4rem;
+  }
+
+  .galleryTitle {
+    top: -60px;
+    line-height: 3.75rem;
+    font-size: 4rem;
+  }
+
+  .galleryImage {
+    width: 33rem;
+    height: 33rem;
+  }
+
+  .galleryCircle {
+    top: -80px;
+    left: -50px;
+    height: 45%;
+    width: 45%;
+  }
+
+  .carouselContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: -20rem;
+    margin-left: 0.3rem;
+  }
+
+  .carouselInner {
+    position: relative;
+  }
+
+  .carouselInner img {
+    width: 33rem;
+    height: 33rem;
+  }
+
+  .carouselText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 366px;
+    margin-top: 2rem;
+    margin-left: -10rem;
+    height: 200px;
+  }
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1400px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .galleryContainer {
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    padding-bottom: 1rem;
+  }
+
+  .galleryImageInner {
+    top: 0;
+    left: 1.5rem;
+  }
+
+  .galleryTitle {
+    top: -60px;
+    line-height: 3.75rem;
+    font-size: 4rem;
+  }
+
+  .galleryImage {
+    width: 40rem;
+    height: 40rem;
+  }
+
+  .galleryCircle {
+    top: -120px;
+    left: -80px;
+    height: 45%;
+    width: 45%;
+  }
+
+  .carouselContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: -20rem;
+    margin-left: -1rem;
+  }
+
+  .carouselInner {
+    position: relative;
+  }
+
+  .carouselInner img {
+    width: 40rem;
+    height: 40rem;
+  }
+
+  .carouselText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 366px;
+    margin-top: 2rem;
+    margin-left: -17rem;
+    height: 200px;
+  }
+
+  .prevBtn,
+  .nextBtn {
+    font-size: 80px;
+  }
+
+  .prevBtn {
+    right: 70px;
+  }
+
+  .nextBtn {
+    right: 10px;
+  }
+
+  .dotPagination {
+    margin-top: -20.53rem;
+    z-index: 10;
   }
 }
