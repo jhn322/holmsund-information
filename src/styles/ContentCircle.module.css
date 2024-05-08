@@ -107,6 +107,7 @@ body {
 .circleBack {
   z-index: 1;
   left: 140%;
+  opacity: 0.8;
   width: calc(18rem + 20vw);
   height: calc(18rem + 20vw);
 }
