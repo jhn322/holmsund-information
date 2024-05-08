@@ -28,7 +28,7 @@ li {
   position: fixed;
   top: 0;
   z-index: 98;
-  background-color: #bf360c;
+  background-color: var(--accent-color);
   transition: transform 0.2s ease-in-out;
 }
 
@@ -84,14 +84,14 @@ li {
 }
 
 .navList li a {
-  color: #fff;
+  color: var(--black-text-color);
   transition: color 0.3s;
   font-weight: 300;
 }
 
 .navList li:hover a,
 .navList li:hover svg {
-  color: #ff641d;
+  color: var(--hover-color);
 }
 
 .navLink {

@@ -2,6 +2,14 @@
   font-family: "Outfit", sans-serif;
   font-weight: 400;
 
+  /* Colors */
+  --primary-color: #fff;
+  --accent-color: #ffff54;
+  --hover-color: #ffffa2;
+  --black-text-color: #0b0b0b;
+  --white-text-color: #f7f7f7;
+  --secondary-color: #853275;
+  --third-color: #5f5fe1;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -29,7 +37,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--accent-color);
   cursor: pointer;
   transition: background-color 0.3s;
 }
