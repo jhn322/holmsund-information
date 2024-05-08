@@ -41,7 +41,6 @@ body {
   font-size: 2.5rem;
   margin-bottom: 5rem;
   margin-top: 0.5rem;
-  color: var(--black-text-color);
 }
 
 .undertitleContent {
@@ -56,7 +55,6 @@ body {
   font-size: 1.3rem;
   word-spacing: 1px;
   line-height: 2rem;
-  color: var(--black-text-color);
 }
 
 .fadeInSlideIn {
@@ -80,15 +78,13 @@ body {
   opacity: 0;
 }
 
-/* Circle.module.css */
-
 .circleContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70vh;
   width: 100%;
-  background-color: #f1f2f2;
+  background-color: rgba(193, 200, 228, 0.2);
   overflow: hidden;
 }
 
@@ -221,7 +217,6 @@ body {
     align-items: center;
     height: 70vh;
     width: 50%;
-    background-color: #f1f2f2;
     overflow: hidden;
     padding: 2rem 0;
   }

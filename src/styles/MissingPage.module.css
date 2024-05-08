@@ -22,16 +22,14 @@
 /* Button styling */
 .MissingBtn {
   padding: 14px 24px;
-  background-color: rgba(191, 54, 12, 0.8);
-  color: #fff;
   border-radius: 35px;
   text-decoration: none;
   font-size: 1.2rem;
   margin-top: 1rem;
 }
 
-.MissingBtn:hover {
-  background-color: #ff641d;
+.LinkHome {
+  color: var(--white-text-color);
 }
 
 /* Small phones */

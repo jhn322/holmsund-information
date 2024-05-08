@@ -59,13 +59,24 @@ li {
   padding: 0;
 }
 
+.logoContainer {
+  display: flex;
+  border-radius: 0 0 10px 10px;
+  height: 100px;
+  width: 180px;
+  position: absolute;
+  left: 36px;
+  top: 0;
+  background-color: rgba(242, 199, 110, 0.85);
+}
+
 .logo {
   width: 150px;
   height: auto;
-  margin-left: 100px;
-  position: absolute;
-  left: -80px;
-  top: -25px;
+  position: relative;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* Nav icons */
@@ -84,14 +95,8 @@ li {
 }
 
 .navList li a {
-  color: var(--black-text-color);
   transition: color 0.3s;
-  font-weight: 300;
-}
-
-.navList li:hover a,
-.navList li:hover svg {
-  color: var(--hover-color);
+  font-weight: 500;
 }
 
 .navLink {
@@ -102,7 +107,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 20px;
+  margin: 0 14px;
   font-size: 34px;
   cursor: pointer;
 }
@@ -165,7 +170,7 @@ li {
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(191, 54, 12, 0.9);
+  background-color: rgba(242, 199, 110, 0.9);
   z-index: 100;
   animation: slideOut 0.3s forwards;
 }
@@ -189,21 +194,13 @@ li {
 }
 
 .openMenu li a {
-  color: white;
   text-decoration: none;
   font-size: 50px;
   transition: color 0.3s;
 }
 
-.openMenu li a:hover,
-.searchIcon:hover,
-.menuIcon:hover {
-  color: rgb(255, 100, 29);
-}
-
 .closeIcon:hover {
-  color: rgb(255, 100, 29);
-  border-color: rgb(255, 100, 29);
+  border-color: var(--hover-color);
 }
 
 .closeIcon {
@@ -212,8 +209,9 @@ li {
   right: 45px;
   width: 40px;
   height: 40px;
-  border: 2.8px solid #fff;
+  border: 2.8px solid var(--primary-color);
   border-radius: 50%;
+  border-width: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -232,11 +230,24 @@ li {
   display: none;
 }
 
+/* Small phones */
+@media only screen and (max-width: 400px) {
+  .navIcons {
+    margin: 0 -4px;
+  }
+
+  .logoContainer {
+    height: 100px;
+    width: 160px;
+    left: 18px;
+  }
+}
+
 /* Desktop */
 @media only screen and (min-width: 1024px) {
   /* Main nav */
   .navContainer {
-    height: 9.5em;
+    height: 10em;
   }
 
   .navItems {
@@ -256,19 +267,19 @@ li {
     font-size: 40px;
   }
 
-  .logo {
-    width: 150px;
-    height: auto;
-    margin-top: 1.7rem;
-    margin-right: 8.75em;
-  }
-
   .navLink {
     display: flex;
   }
 
   .navIcons {
     font-size: 40px;
+    margin: 0 20px;
+  }
+
+  .logoContainer {
+    height: 160px;
+    width: 230px;
+    left: 46px;
   }
 
   .closeIcon {
@@ -278,5 +289,13 @@ li {
 
   .menuWrapper {
     width: 50%;
+  }
+
+  .searchIcon {
+    font-size: 36px;
+  }
+
+  .menuIcon {
+    font-size: 44px;
   }
 }

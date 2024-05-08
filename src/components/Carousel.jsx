@@ -50,12 +50,12 @@ const Carousel = ({ images }) => {
             <img src={image.url} alt={`Slide ${index}`} />
           </div>
         ))}
-        <button className={styles.prevBtn} onClick={goToPrevSlide}>
+        <span className={styles.prev} onClick={goToPrevSlide}>
           &#10094;
-        </button>
-        <button className={styles.nextBtn} onClick={goToNextSlide}>
+        </span>
+        <span className={styles.next} onClick={goToNextSlide}>
           &#10095;
-        </button>
+        </span>
       </div>
       <div className={styles.carouselText}>
         <h2>{images[currentIndex].title}</h2>

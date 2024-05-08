@@ -5,7 +5,7 @@ const Separator = () => {
   return (
     <aside>
       <div className={styles.separatorContainer}>
-        <div className={styles.customShapeDividerBottom1715022695}>
+        <div className={styles.customShapeDividerBottom1715194381}>
           <svg
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"

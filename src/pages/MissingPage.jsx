@@ -10,9 +10,11 @@ const MissingPage = () => {
         Oops. Vi kunde inte hitta sidan du letade efter :(
       </p>
       {/* Go Home */}
-      <Link to="/" className={styles.MissingBtn}>
-        Gå tillbaka hem
-      </Link>
+      <button className={styles.MissingBtn}>
+        <Link to="/" className={styles.LinkHome}>
+          Gå tillbaka hem
+        </Link>
+      </button>
     </main>
   );
 };

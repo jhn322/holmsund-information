@@ -58,7 +58,7 @@ const Navigation = () => {
     // Nav container, hide nav class and transparent class
     <nav
       className={`${styles.navContainer} ${!visible && styles.hideNav} ${
-        prevScrollPos <= 0.75 * window.innerHeight && styles.transparent // Nav bar is transparent on first 89vh of the page
+        prevScrollPos <= 0.28 * window.innerHeight && styles.transparent // Nav bar is transparent on first 89vh of the page
       }`}
     >
       {/* Conditional render nav with links */}
@@ -115,9 +115,13 @@ const Navigation = () => {
         {/* Nav icons */}
         <div className={styles.navIcons}>
           <div className={styles.search}>
-            <FiSearch className={styles.searchIcon} />
+            <FiSearch strokeWidth={3} className={styles.searchIcon} />
           </div>
-          <FiMenu className={styles.menuIcon} onClick={toggleMenu} />
+          <FiMenu
+            strokeWidth={2.5}
+            className={styles.menuIcon}
+            onClick={toggleMenu}
+          />
         </div>
       </div>
       {/* Inside the nav menu */}
@@ -128,7 +132,7 @@ const Navigation = () => {
           }`}
         >
           <div className={styles.closeIcon} onClick={closeMenu}>
-            <FiX className={styles.close} />
+            <FiX strokeWidth={3} className={styles.close} />
           </div>
           <ul className={styles.openMenu}>
             <li>
