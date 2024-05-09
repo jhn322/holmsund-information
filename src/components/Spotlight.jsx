@@ -14,6 +14,9 @@ import cardImage8 from "../assets/spotlight8.jpg";
 const Spotlight = () => {
   const spotlightContainerRef = useRef(null);
   const [totalCardsHeight, setTotalCardsHeight] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [overlayHeight, setOverlayHeight] = useState("0");
 
   useEffect(() => {
     const calculateTotalHeight = () => {
@@ -42,6 +45,7 @@ const Spotlight = () => {
           !card.classList.contains(styles.fadeInSlideIn)
         ) {
           card.classList.add(styles.fadeInSlideIn);
+          setIsVisible(true);
         }
       });
     };
@@ -64,6 +68,11 @@ const Spotlight = () => {
     };
   }, []);
 
+  const handleHover = (hovered) => {
+    setIsHovered(hovered);
+    setOverlayHeight(hovered ? "100%" : "18%");
+  };
+
   return (
     <section>
       <div ref={spotlightContainerRef} className={styles.spotlightContainer}>
@@ -73,39 +82,110 @@ const Spotlight = () => {
           </div>
           <div className={styles.spotlightCardContainer}>
             {/* Image 1 */}
-            <div className={styles.spotlightCard}>
+            <div
+              className={`${styles.spotlightCard} ${
+                isHovered ? styles.expanded : ""
+              } ${isVisible ? styles.fadeInSlideIn : ""}`}
+              visible
+              onMouseEnter={() => handleHover(true)}
+              onMouseLeave={() => handleHover(false)}
+            >
               <div
                 className={styles.cardImage}
                 style={{ backgroundImage: `url(${cardImage1})` }}
               >
-                <div className={styles.cardOverlay}>
-                  <h3>En längre titel</h3>
+                <div
+                  className={`${styles.cardOverlay} ${
+                    isHovered ? styles.expandedOverlay : ""
+                  }`}
+                  style={{}}
+                >
+                  <h3 className={styles.cardOverlayTitle}>En längre titel</h3>
+                  {isHovered && (
+                    <div>
+                      <p className={styles.expandedText}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Id, nostrum asperiores eos tempora sunt magnam natus
+                        sapiente sed atque nesciunt assumenda! Eum labore, a
+                        nesciunt animi culpa eveniet aperiam fuga.
+                      </p>
+                      <button>Läs mer</button>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
 
             <div className={styles.stackedImagesContainer}>
               {/* Image 2 */}
-              <div className={styles.spotlightCard}>
+              <div
+                className={`${styles.spotlightCard} ${
+                  isHovered ? styles.expanded : ""
+                } ${isVisible ? styles.fadeInSlideIn : ""}`}
+                visible
+                onMouseEnter={() => handleHover(true)}
+                onMouseLeave={() => handleHover(false)}
+              >
                 <div
                   className={styles.cardImage}
                   style={{ backgroundImage: `url(${cardImage2})` }}
                 >
-                  <div className={styles.cardOverlay}>
-                    <h3>Saker man kan göra</h3>
+                  <div
+                    className={`${styles.cardOverlay} ${
+                      isHovered ? styles.expandedOverlay : ""
+                    }`}
+                    style={{}}
+                  >
+                    <h3 className={styles.cardOverlayTitle}>
+                      Saker man kan göra
+                    </h3>
+                    {isHovered && (
+                      <div>
+                        <p className={styles.expandedText}>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Id, nostrum asperiores eos tempora sunt magnam
+                          natus sapiente sed atque nesciunt assumenda! Eum
+                          labore, a nesciunt animi culpa eveniet aperiam fuga.
+                        </p>
+                        <button>Läs mer</button>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
               {/* Image 3 */}
               <div
-                className={`${styles.spotlightCard} ${styles.thirdSpotlightCard}`}
+                className={`${styles.spotlightCard} ${
+                  styles.thirdSpotlightCard
+                } ${isHovered ? styles.expanded : ""} ${
+                  isVisible ? styles.fadeInSlideIn : ""
+                }`}
+                visible
+                onMouseEnter={() => handleHover(true)}
+                onMouseLeave={() => handleHover(false)}
               >
                 <div
                   className={styles.cardImage}
                   style={{ backgroundImage: `url(${cardImage3})` }}
                 >
-                  <div className={styles.cardOverlay}>
-                    <h3>Aqua Arena</h3>
+                  <div
+                    className={`${styles.cardOverlay} ${
+                      isHovered ? styles.expandedOverlay : ""
+                    }`}
+                    style={{}}
+                  >
+                    <h3 className={styles.cardOverlayTitle}>Aqua Arena</h3>
+                    {isHovered && (
+                      <div>
+                        <p className={styles.expandedText}>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Id, nostrum asperiores eos tempora sunt magnam
+                          natus sapiente sed atque nesciunt assumenda! Eum
+                          labore, a nesciunt animi culpa eveniet aperiam fuga.
+                        </p>
+                        <button>Läs mer</button>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -113,14 +193,37 @@ const Spotlight = () => {
 
             {/* Image 4 */}
             <div
-              className={`${styles.spotlightCard} ${styles.fourthSpotlightCard}`}
+              className={`${styles.spotlightCard} ${
+                styles.fourthSpotlightCard
+              } ${isHovered ? styles.expanded : ""} ${
+                isVisible ? styles.fadeInSlideIn : ""
+              }`}
+              visible
+              onMouseEnter={() => handleHover(true)}
+              onMouseLeave={() => handleHover(false)}
             >
               <div
                 className={styles.cardImage}
                 style={{ backgroundImage: `url(${cardImage4})` }}
               >
-                <div className={styles.cardOverlay}>
-                  <h3>Golfbana</h3>
+                <div
+                  className={`${styles.cardOverlay} ${
+                    isHovered ? styles.expandedOverlay : ""
+                  }`}
+                  style={{}}
+                >
+                  <h3 className={styles.cardOverlayTitle}>Golfbana</h3>
+                  {isHovered && (
+                    <div>
+                      <p className={styles.expandedText}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Id, nostrum asperiores eos tempora sunt magnam natus
+                        sapiente sed atque nesciunt assumenda! Eum labore, a
+                        nesciunt animi culpa eveniet aperiam fuga.
+                      </p>
+                      <button>Läs mer</button>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -130,53 +233,147 @@ const Spotlight = () => {
             </div>
 
             {/* Image 5 */}
-            <div className={styles.spotlightCard}>
+            <div
+              className={`${styles.spotlightCard} ${
+                isHovered ? styles.expanded : ""
+              } ${isVisible ? styles.fadeInSlideIn : ""}`}
+              visible
+              onMouseEnter={() => handleHover(true)}
+              onMouseLeave={() => handleHover(false)}
+            >
               <div
                 className={styles.cardImage}
                 style={{ backgroundImage: `url(${cardImage5})` }}
               >
-                <div className={styles.cardOverlay}>
-                  <h3>Nästa ställe</h3>
+                <div
+                  className={`${styles.cardOverlay} ${
+                    isHovered ? styles.expandedOverlay : ""
+                  }`}
+                  style={{}}
+                >
+                  <h3 className={styles.cardOverlayTitle}>Nästa ställe</h3>
+                  {isHovered && (
+                    <div>
+                      <p className={styles.expandedText}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Id, nostrum asperiores eos tempora sunt magnam natus
+                        sapiente sed atque nesciunt assumenda! Eum labore, a
+                        nesciunt animi culpa eveniet aperiam fuga.
+                      </p>
+                      <button>Läs mer</button>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
 
             <div className={styles.stackedImagesContainer}>
               {/* Image 6 */}
-              <div className={styles.spotlightCard}>
+              <div
+                className={`${styles.spotlightCard} ${
+                  isHovered ? styles.expanded : ""
+                } ${isVisible ? styles.fadeInSlideIn : ""}`}
+                visible
+                onMouseEnter={() => handleHover(true)}
+                onMouseLeave={() => handleHover(false)}
+              >
                 <div
                   className={styles.cardImage}
                   style={{ backgroundImage: `url(${cardImage6})` }}
                 >
-                  <div className={styles.cardOverlay}>
-                    <h3>Någonstans där</h3>
+                  <div
+                    className={`${styles.cardOverlay} ${
+                      isHovered ? styles.expandedOverlay : ""
+                    }`}
+                    style={{}}
+                  >
+                    <h3 className={styles.cardOverlayTitle}>
+                      Någon annanstans
+                    </h3>
+                    {isHovered && (
+                      <div>
+                        <p className={styles.expandedText}>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Id, nostrum asperiores eos tempora sunt magnam
+                          natus sapiente sed atque nesciunt assumenda! Eum
+                          labore, a nesciunt animi culpa eveniet aperiam fuga.
+                        </p>
+                        <button>Läs mer</button>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
               {/* Image 7 */}
               <div
-                className={`${styles.spotlightCard} ${styles.seventhSpotlightCard}`}
+                className={`${styles.spotlightCard} ${
+                  styles.seventhSpotlightCard
+                } ${isHovered ? styles.expanded : ""} ${
+                  isVisible ? styles.fadeInSlideIn : ""
+                }`}
+                visible
+                onMouseEnter={() => handleHover(true)}
+                onMouseLeave={() => handleHover(false)}
               >
                 <div
                   className={styles.cardImage}
                   style={{ backgroundImage: `url(${cardImage7})` }}
                 >
-                  <div className={styles.cardOverlay}>
-                    <h3>Ett spännande ställe</h3>
+                  <div
+                    className={`${styles.cardOverlay} ${
+                      isHovered ? styles.expandedOverlay : ""
+                    }`}
+                    style={{}}
+                  >
+                    <h3 className={styles.cardOverlayTitle}>
+                      Ett spännande ställe
+                    </h3>
+                    {isHovered && (
+                      <div>
+                        <p className={styles.expandedText}>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Id, nostrum asperiores eos tempora sunt magnam
+                          natus sapiente sed atque nesciunt assumenda! Eum
+                          labore, a nesciunt animi culpa eveniet aperiam fuga.
+                        </p>
+                        <button>Läs mer</button>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
             </div>
             <div
-              /* Image 8 */
-              className={`${styles.spotlightCard} ${styles.lastSpotlightCard}`}
+              // Image 8
+              className={`${styles.spotlightCard} ${styles.lastSpotlightCard} ${
+                isHovered ? styles.expanded : ""
+              } ${isVisible ? styles.fadeInSlideIn : ""}`}
+              visible
+              onMouseEnter={() => handleHover(true)}
+              onMouseLeave={() => handleHover(false)}
             >
               <div
                 className={styles.cardImage}
                 style={{ backgroundImage: `url(${cardImage8})` }}
               >
-                <div className={styles.cardOverlay}>
-                  <h3>SISTA STÄLLET</h3>
+                <div
+                  className={`${styles.cardOverlay} ${
+                    isHovered ? styles.expandedOverlay : ""
+                  }`}
+                  style={{}}
+                >
+                  <h3 className={styles.cardOverlayTitle}>Sista stället</h3>
+                  {isHovered && (
+                    <div>
+                      <p className={styles.expandedText}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Id, nostrum asperiores eos tempora sunt magnam natus
+                        sapiente sed atque nesciunt assumenda! Eum labore, a
+                        nesciunt animi culpa eveniet aperiam fuga.
+                      </p>
+                      <button>Läs mer</button>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

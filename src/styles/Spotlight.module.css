@@ -55,12 +55,9 @@ body {
   margin: 40px 0;
   height: 25rem;
   z-index: 1;
+  cursor: pointer;
   opacity: 0;
   transition: opacity 0.5s ease;
-}
-
-.lastSpotlightCard {
-  margin-bottom: 6rem;
 }
 
 .fadeInSlideIn {
@@ -80,6 +77,10 @@ body {
   }
 }
 
+.lastSpotlightCard {
+  margin-bottom: 6rem;
+}
+
 .cardImage {
   height: 25rem;
   background-size: cover;
@@ -92,16 +93,62 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 30px;
+  height: 18%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
   color: var(--primary-color);
   text-align: center;
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px;
+  transition: height 0.4s ease;
 }
 
 .cardOverlay h3 {
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+.cardOverlayTitle {
+  margin-top: 0;
+}
+
+.expandedOverlay {
+  height: 100%;
+  opacity: 1;
+  transition: height 0.8s ease, opacity 0.8s ease;
+}
+
+.expandedOverlay h3 {
+  margin-bottom: 0.5rem;
+}
+
+.expandedOverlay > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.expandedOverlay > div p {
+  margin-bottom: 0.5rem;
+}
+
+.expandedOverlay > div button {
+  padding: 0.5rem 1rem;
+  background-color: var(--third-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.expandedOverlay > div button:hover {
+  background-color: var(--secondary-color);
+}
+
+.expandedText {
+  color: var(--white-text-color);
 }
 
 /* Small phones */
