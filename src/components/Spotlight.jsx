@@ -63,16 +63,6 @@ const Spotlight = () => {
   const [overlayStates, setOverlayStates] = useState(
     Array(cardData.length).fill(false)
   );
-  const [currentCardIndex, setCurrentCardIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      // Increment index to move to the next card
-      setCurrentCardIndex((prevIndex) => (prevIndex + 1) % cardData.length);
-    }, 5000); // Change card every 5 seconds
-
-    return () => clearInterval(interval);
-  }, []);
 
   useEffect(() => {
     const calculateTotalHeight = () => {
