@@ -1,0 +1,164 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.highlightContainer {
+  display: flex;
+  width: 100%;
+  height: 60em;
+  margin: auto;
+  padding: 20px 0;
+  overflow: hidden;
+  background-color: var(--primary-color);
+  position: relative;
+}
+
+.highlightInner {
+  margin: auto;
+  padding: 0 20px;
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.highlightTitle {
+  text-align: center;
+}
+
+.highlightTitle h2 {
+  font-size: 3rem;
+  color: var(--black-text-color);
+}
+
+.highlightCardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: -10rem;
+}
+
+.highlightCard {
+  width: 50em;
+  height: 30em;
+  margin: -70px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out,
+    height 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.highlightCard.expanded {
+  width: 60em;
+  height: 40em;
+}
+
+.highlightCard:not(.expanded) {
+  filter: brightness(0.5) blur(2px);
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.cardOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 18%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  color: var(--primary-color);
+  text-align: center;
+  border-radius: 10px;
+  transition: height 0.4s ease;
+}
+
+.cardOverlay h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.cardOverlayTitle {
+  margin-top: 0;
+}
+
+.expandedOverlay {
+  height: 100%;
+  opacity: 1;
+  transition: height 0.8s ease, opacity 0.8s ease;
+}
+
+.expandedOverlay h3 {
+  margin-bottom: 0.5rem;
+}
+
+.expandedOverlay > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.expandedOverlay > div p {
+  margin-bottom: 0.5rem;
+}
+
+.expandedOverlay > div button {
+  padding: 0.5rem 1rem;
+  background-color: var(--third-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.expandedOverlay > div button:hover {
+  background-color: var(--secondary-color);
+}
+
+.expandedText {
+  color: var(--white-text-color);
+}
+
+.nextPrevBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+}
+
+.highlightBtn {
+  color: var(--white-text-color);
+  border: none;
+  padding: 20px 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 2rem 1rem;
+  font-size: 1.3rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.highlightBtn:hover {
+  background-color: var(--hover-color);
+}

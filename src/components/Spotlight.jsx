@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
 import styles from "../styles/Spotlight.module.css";
-import Separator from "./Separator";
 
 // Images
 import cardImage5 from "../assets/spotlight5.jpg";
@@ -145,7 +144,6 @@ const Spotlight = () => {
           </div>
         </div>
       </div>
-      <Separator />
     </section>
   );
 };
