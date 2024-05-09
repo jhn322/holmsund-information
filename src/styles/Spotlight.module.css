@@ -335,8 +335,8 @@ body {
 @media only screen and (min-width: 1200px) {
   .spotlightCardContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
     gap: 35px;
     margin-bottom: 6rem;
   }
@@ -346,24 +346,17 @@ body {
     font-size: 3.5rem;
   }
 
-  .stackedImagesContainer {
-    grid-column: 2 / 3;
-    grid-row: span 2;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
   .spotlightCard {
     margin: 0;
   }
+
   .spotlightTitle {
     margin-top: 2rem;
     margin-bottom: 3rem;
   }
 
   .spotlightSecondTitle {
-    grid-column: span 3;
+    grid-column: span 4;
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -374,15 +367,21 @@ body {
   }
 
   .cardImage {
-    height: 44rem;
+    height: 30rem;
     width: calc(6rem + 20vw);
   }
 
-  .stackedImagesContainer .cardImage {
-    height: 21rem;
+  .thirdSpotlightCard,
+  .seventhSpotlightCard {
+    margin-top: 9.5rem;
   }
 
-  .stackedImagesContainer .spotlightCard {
-    margin-bottom: -3.2rem;
+  .fourthSpotlightCard {
+    margin-top: -30rem;
+  }
+
+  .lastSpotlightCard {
+    margin-top: -30rem;
+    margin-bottom: 14rem;
   }
 }
