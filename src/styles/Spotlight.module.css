@@ -22,23 +22,17 @@ body {
   background-color: var(--primary-color);
 }
 
-.spotlightTitle,
-.spotlightSecondTitle {
+.spotlightTitle {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.spotlightTitle h2,
-.spotlightSecondTitle h2 {
+.spotlightTitle h2 {
   margin-top: 4.2rem;
   margin-bottom: 0;
   font-size: 2.5rem;
   padding: 20px 0;
-}
-
-.spotlightSecondTitle h2 {
-  margin-top: 2rem;
 }
 
 .spotlightCardContainer {
@@ -52,7 +46,7 @@ body {
 }
 
 .spotlightCard {
-  margin: 40px 0;
+  margin: 3rem 0;
   height: 25rem;
   z-index: 1;
   cursor: pointer;
@@ -75,10 +69,6 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.lastSpotlightCard {
-  margin-bottom: 6rem;
 }
 
 .cardImage {
@@ -190,15 +180,23 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
-    gap: 40px;
+    gap: 34px;
   }
 
   .spotlightCardContainer .spotlightCard {
     width: calc(50% - 20px);
   }
 
-  .spotlightTitle h2,
-  .spotlightSecondTitle h2 {
+  .spotlightCard {
+    margin-bottom: 7rem;
+  }
+
+  /* Margin from first row to second */
+  .spotlightCardContainer .spotlightCard:nth-child(n + 1):nth-child(-n + 2) {
+    margin-bottom: -2rem;
+  }
+
+  .spotlightTitle h2 {
     font-size: 3rem;
   }
 
@@ -206,30 +204,9 @@ body {
     font-size: 1.5rem;
   }
 
-  .spotlightSecondTitle {
-    grid-column: span 2;
-    text-align: center;
-    margin-top: -4rem;
-    margin-bottom: -4rem;
-  }
-
   .cardImage {
     height: 26rem;
     width: 21rem;
-  }
-
-  .thirdSpotlightCard,
-  .seventhSpotlightCard {
-    margin-top: 3.3rem;
-  }
-
-  .fourthSpotlightCard {
-    margin-top: -30rem;
-  }
-
-  .lastSpotlightCard {
-    margin-top: -30rem;
-    margin-bottom: 8rem;
   }
 }
 
@@ -246,16 +223,17 @@ body {
     width: calc(50% - 20px);
   }
 
-  .spotlightTitle h2,
-  .spotlightSecondTitle h2 {
-    font-size: 3rem;
+  .spotlightCard {
+    margin-bottom: 8.5rem;
   }
 
-  .spotlightSecondTitle {
-    grid-column: span 2;
-    text-align: center;
-    margin-top: -2rem;
-    margin-bottom: -2rem;
+  /* Margin from first row to second */
+  .spotlightCardContainer .spotlightCard:nth-child(n + 1):nth-child(-n + 2) {
+    margin-bottom: 0;
+  }
+
+  .spotlightTitle h2 {
+    font-size: 3rem;
   }
 
   .cardOverlay h3 {
@@ -266,24 +244,10 @@ body {
     height: 28rem;
     width: 24rem;
   }
-
-  .thirdSpotlightCard,
-  .seventhSpotlightCard {
-    margin-top: 5.6rem;
-  }
-
-  .fourthSpotlightCard {
-    margin-top: -30rem;
-  }
-
-  .lastSpotlightCard {
-    margin-top: -30rem;
-    margin-bottom: 10rem;
-  }
 }
 
 /* Large Desktop */
-@media only screen and (min-width: 1000px) and (max-width: 1199px) {
+@media only screen and (min-width: 1000px) and (max-width: 2199px) {
   .spotlightCardContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -295,16 +259,17 @@ body {
     width: calc(50% - 20px);
   }
 
-  .spotlightTitle h2,
-  .spotlightSecondTitle h2 {
-    font-size: 3rem;
+  .spotlightCard {
+    margin-bottom: 13rem;
   }
 
-  .spotlightSecondTitle {
-    grid-column: span 2;
-    text-align: center;
-    margin-top: 3rem;
-    margin-bottom: -2rem;
+  /* Margin from first row to second */
+  .spotlightCardContainer .spotlightCard:nth-child(n + 1):nth-child(-n + 2) {
+    margin-bottom: 4rem;
+  }
+
+  .spotlightTitle h2 {
+    font-size: 3rem;
   }
 
   .cardOverlay h3 {
@@ -313,53 +278,34 @@ body {
 
   .cardImage {
     height: 32rem;
-    width: 29rem;
-  }
-
-  .thirdSpotlightCard,
-  .seventhSpotlightCard {
-    margin-top: 9.5rem;
-  }
-
-  .fourthSpotlightCard {
-    margin-top: -30rem;
-  }
-
-  .lastSpotlightCard {
-    margin-top: -30rem;
-    margin-bottom: 14rem;
+    width: calc(15rem + 20vw);
   }
 }
 
-/* Full Desktop */
-@media only screen and (min-width: 1200px) {
+/* Full desktop */
+@media only screen and (min-width: 2200px) {
   .spotlightCardContainer {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
-    gap: 35px;
-    margin-bottom: 6rem;
+    gap: 40px;
   }
 
-  .spotlightTitle h2,
-  .spotlightSecondTitle h2 {
-    font-size: 3.5rem;
+  .spotlightCardContainer .spotlightCard {
+    width: calc(50% - 20px);
   }
 
   .spotlightCard {
-    margin: 0;
+    margin-bottom: 15rem;
   }
 
-  .spotlightTitle {
-    margin-top: 2rem;
-    margin-bottom: 3rem;
+  /* Margin from first row to second */
+  .spotlightCardContainer .spotlightCard:nth-child(n + 1):nth-child(-n + 2) {
+    margin-bottom: 6rem;
   }
 
-  .spotlightSecondTitle {
-    grid-column: span 4;
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  .spotlightTitle h2 {
+    font-size: 3rem;
   }
 
   .cardOverlay h3 {
@@ -367,21 +313,7 @@ body {
   }
 
   .cardImage {
-    height: 30rem;
-    width: calc(6rem + 20vw);
-  }
-
-  .thirdSpotlightCard,
-  .seventhSpotlightCard {
-    margin-top: 9.5rem;
-  }
-
-  .fourthSpotlightCard {
-    margin-top: -30rem;
-  }
-
-  .lastSpotlightCard {
-    margin-top: -30rem;
-    margin-bottom: 14rem;
+    height: 34rem;
+    width: 50rem;
   }
 }

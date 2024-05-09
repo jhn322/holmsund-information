@@ -1,11 +1,8 @@
-import React, { useRef, useEffect, useState, Fragment } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import styles from "../styles/Spotlight.module.css";
+import Separator from "./Separator";
 
 // Images
-import cardImage1 from "../assets/spotlight1.jpg";
-import cardImage2 from "../assets/spotlight2.jpg";
-import cardImage3 from "../assets/spotlight3.jpg";
-import cardImage4 from "../assets/spotlight4.jpg";
 import cardImage5 from "../assets/spotlight5.jpg";
 import cardImage6 from "../assets/spotlight6.jpg";
 import cardImage7 from "../assets/spotlight7.jpg";
@@ -13,26 +10,6 @@ import cardImage8 from "../assets/spotlight8.jpg";
 
 // Card Array
 const cardData = [
-  {
-    image: cardImage1,
-    title: "En längre titel",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas, molestias incidunt minima quod, illo possimus hic.",
-  },
-  {
-    image: cardImage2,
-    title: "Saker man kan göra",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas, molestias incidunt minima quod, illo possimus hic.",
-  },
-  {
-    image: cardImage3,
-    title: "Aqua Arena",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas, molestias incidunt minima quod, illo possimus hic.",
-  },
-  {
-    image: cardImage4,
-    title: "Golfbana",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas, molestias incidunt minima quod, illo possimus hic.",
-  },
   {
     image: cardImage5,
     title: "Nästa ställe",
@@ -135,45 +112,40 @@ const Spotlight = () => {
           </div>
           <div className={styles.spotlightCardContainer}>
             {cardData.map((card, index) => (
-              <Fragment key={index}>
-                {index === 4 && (
-                  <div className={styles.spotlightSecondTitle}>
-                    <h2>Upptäck Mer</h2>
-                  </div>
-                )}
+              <div
+                key={index} // Add unique key prop here
+                className={`${styles.spotlightCard} ${
+                  overlayStates[index] ? styles.expanded : ""
+                } ${isVisible ? styles.fadeInSlideIn : ""}`}
+                onMouseEnter={() => handleHover(index, true)}
+                onMouseLeave={() => handleHover(index, false)}
+              >
                 <div
-                  className={`${styles.spotlightCard} ${
-                    overlayStates[index] ? styles.expanded : ""
-                  } ${isVisible ? styles.fadeInSlideIn : ""}`}
-                  onMouseEnter={() => handleHover(index, true)}
-                  onMouseLeave={() => handleHover(index, false)}
+                  className={styles.cardImage}
+                  style={{ backgroundImage: `url(${card.image})` }}
                 >
                   <div
-                    className={styles.cardImage}
-                    style={{ backgroundImage: `url(${card.image})` }}
+                    className={`${styles.cardOverlay} ${
+                      overlayStates[index] && isHovered
+                        ? styles.expandedOverlay
+                        : ""
+                    }`}
                   >
-                    <div
-                      className={`${styles.cardOverlay} ${
-                        overlayStates[index] && isHovered
-                          ? styles.expandedOverlay
-                          : ""
-                      }`}
-                    >
-                      <h3 className={styles.cardOverlayTitle}>{card.title}</h3>
-                      {overlayStates[index] && (
-                        <div>
-                          <p className={styles.expandedText}>{card.text}</p>
-                          <button>Läs mer</button>
-                        </div>
-                      )}
-                    </div>
+                    <h3 className={styles.cardOverlayTitle}>{card.title}</h3>
+                    {overlayStates[index] && (
+                      <div>
+                        <p className={styles.expandedText}>{card.text}</p>
+                        <button>Läs mer</button>
+                      </div>
+                    )}
                   </div>
                 </div>
-              </Fragment>
+              </div>
             ))}
           </div>
         </div>
       </div>
+      <Separator />
     </section>
   );
 };
