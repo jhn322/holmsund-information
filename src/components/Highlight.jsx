@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
 import styles from "../styles/Highlight.module.css";
 import Separator from "./Separator";
 
@@ -7,6 +7,10 @@ import cardImage1 from "../assets/highlight1.jpg";
 import cardImage2 from "../assets/highlight2.jpg";
 import cardImage3 from "../assets/highlight3.jpg";
 import cardImage4 from "../assets/highlight4.jpg";
+import cardImage5 from "../assets/spotlight5.jpg";
+import cardImage6 from "../assets/spotlight6.jpg";
+import cardImage7 from "../assets/spotlight7.jpg";
+import cardImage8 from "../assets/spotlight8.jpg";
 
 // Card Array
 const cardData = [
@@ -30,136 +34,111 @@ const cardData = [
     title: "Storsjöhallen",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas, molestias incidunt minima quod, illo possimus hic.",
   },
+  {
+    image: cardImage5,
+    title: "Storsjöhallen",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas, molestias incidunt minima quod, illo possimus hic.",
+  },
+  {
+    image: cardImage6,
+    title: "Storsjöhallen",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas, molestias incidunt minima quod, illo possimus hic.",
+  },
+  {
+    image: cardImage7,
+    title: "Storsjöhallen",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas, molestias incidunt minima quod, illo possimus hic.",
+  },
+  {
+    image: cardImage8,
+    title: "Storsjöhallen",
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas, molestias incidunt minima quod, illo possimus hic.",
+  },
 ];
+
+const duplicatedCardData = [...cardData, ...cardData];
 
 const Highlight = () => {
   const highlightContainerRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [currentOffset, setCurrentOffset] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const [overlayStates, setOverlayStates] = useState(
-    Array(cardData.length).fill(false)
-  );
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!highlightContainerRef.current) return;
+  const scalingFactor = 2;
 
-      const cards = highlightContainerRef.current.querySelectorAll(
-        `.${styles.highlightCard}`
-      );
-
-      cards.forEach((card, i) => {
-        const cardTop = card.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (
-          cardTop < windowHeight * 0.75 &&
-          !card.classList.contains(styles.fadeInSlideIn)
-        ) {
-          card.classList.add(styles.fadeInSlideIn);
-          setIsVisible(true);
-
-          const newOverlayStates = [...overlayStates];
-          newOverlayStates[i] = true;
-          setOverlayStates(newOverlayStates);
-        }
-      });
-    };
-
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-
-    const handleResize = () => {
-      handleScroll();
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const handleHover = (index, hovered) => {
-    setIsHovered(hovered);
-    const newOverlayStates = overlayStates.map((state, i) =>
-      i === index ? hovered : false
-    );
-    setOverlayStates(newOverlayStates);
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX);
   };
 
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === cardData.length - 1 ? 0 : prevIndex + 1
-    );
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+
+    const offsetX = e.pageX - startX;
+    setCurrentOffset(offsetX * scalingFactor);
   };
 
-  const prevImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? cardData.length - 1 : prevIndex - 1
-    );
+  const handleMouseUp = () => {
+    setIsDragging(false);
+
+    const indexChange = Math.round(currentOffset / 300);
+    setCurrentOffset(0);
+
+    let newIndex = currentImageIndex - indexChange;
+
+    newIndex =
+      (newIndex + duplicatedCardData.length) % duplicatedCardData.length;
+
+    setCurrentImageIndex(newIndex);
   };
 
   return (
     <section>
       <Separator />
       <div className={styles.highlightContainer}>
-        <div className={styles.highlightInner}>
-          <div className={styles.highlightTitle}>
-            <h2>Höjdpunkter</h2>
-          </div>
-        </div>
         <div
           ref={highlightContainerRef}
           className={styles.highlightCardContainer}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
         >
-          {cardData.map((card, index) => (
-            <div
-              key={index}
-              className={`${styles.highlightCard} ${
-                index === currentImageIndex ? styles.expanded : ""
-              } ${isVisible ? styles.fadeInSlideIn : ""}`}
-              onMouseEnter={() => handleHover(index, true)}
-              onMouseLeave={() => handleHover(index, false)}
-              style={{
-                transform: `translateX(${(index - currentImageIndex) * 8}vw)`,
-              }}
-            >
+          {duplicatedCardData.map((card, index) => {
+            let adjustedIndex = (index + currentImageIndex) % cardData.length;
+            if (adjustedIndex < 0) adjustedIndex += cardData.length;
+            return (
               <div
-                className={styles.cardImage}
+                key={index}
+                className={`${styles.highlightCard} ${
+                  index === currentImageIndex ? styles.expanded : ""
+                }`}
                 style={{
-                  backgroundImage: `url(${card.image})`,
+                  transform: `translateX(${
+                    (index - currentImageIndex) * 40 + currentOffset
+                  }%)`,
+                  zIndex:
+                    duplicatedCardData.length -
+                    Math.abs(index - currentImageIndex),
                 }}
               >
                 <div
-                  className={`${styles.cardOverlay} ${
-                    overlayStates[index] && isHovered
-                      ? styles.expandedOverlay
-                      : ""
-                  }`}
+                  className={styles.cardImage}
+                  style={{
+                    backgroundImage: `url(${card.image})`,
+                  }}
                 >
-                  <h3 className={styles.cardOverlayTitle}>{card.title}</h3>
-                  {overlayStates[index] && (
-                    <div>
-                      <p className={styles.expandedText}>{card.text}</p>
-                      <button className={styles.expandedBtn}>Läs mer</button>
-                    </div>
-                  )}
+                  <div className={`${styles.cardOverlay}`}>
+                    <h3 className={styles.cardOverlayTitle}>{card.title}</h3>
+                    <p className={styles.expandedText}>{card.text}</p>
+                    <button className={styles.expandedBtn}>Läs mer</button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
-      </div>
-      <div className={styles.nextPrevBtn}>
-        <button className={styles.highlightBtn} onClick={prevImage}>
-          Bakåt
-        </button>
-        <button className={styles.highlightBtn} onClick={nextImage}>
-          Nästa
-        </button>
       </div>
       <Separator />
     </section>
