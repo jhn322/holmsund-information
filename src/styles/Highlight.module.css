@@ -85,12 +85,13 @@ body {
   width: 100%;
   height: 18%;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.25);
   padding: 20px;
   color: var(--primary-color);
   text-align: center;
   border-radius: 10px;
-  transition: height 0.4s ease;
+  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cardOverlay h3 {
@@ -105,7 +106,8 @@ body {
 .expandedOverlay {
   height: 100%;
   opacity: 1;
-  transition: height 0.8s ease, opacity 0.8s ease;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: height 0.8s ease, background-color 0.8s ease;
 }
 
 .expandedOverlay h3 {
@@ -123,22 +125,25 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.expandedOverlay > div button {
+.expandedText {
+  margin-top: 12rem;
+  color: var(--white-text-color);
+}
+
+.expandedBtn {
   padding: 0.5rem 1rem;
-  background-color: var(--third-color);
+  background-color: transparent;
   color: var(--primary-color);
-  border: none;
+  border: 2px solid #fff;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.expandedOverlay > div button:hover {
-  background-color: var(--secondary-color);
-}
-
-.expandedText {
-  color: var(--white-text-color);
+.expandedBtn:hover {
+  background-color: var(--hover-color);
+  padding: 0.6rem 1.1rem;
+  border: none;
 }
 
 .nextPrevBtn {

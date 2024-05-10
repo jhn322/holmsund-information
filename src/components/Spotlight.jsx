@@ -134,7 +134,7 @@ const Spotlight = () => {
                     {overlayStates[index] && (
                       <div>
                         <p className={styles.expandedText}>{card.text}</p>
-                        <button>Läs mer</button>
+                        <button className={styles.expandedBtn}>Läs mer</button>
                       </div>
                     )}
                   </div>
