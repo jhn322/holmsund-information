@@ -85,13 +85,13 @@ body {
 /* Desktop */
 @media only screen and (min-width: 770px) {
   .separatorContainer {
-    height: 12em;
+    height: 18em;
   }
 
   .customShapeDividerBottom1715194381 svg {
     position: relative;
     display: block;
     width: calc(115% + 1.3px);
-    height: 180px;
+    height: 280px;
   }
 }

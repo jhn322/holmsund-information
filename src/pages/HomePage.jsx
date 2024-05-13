@@ -103,7 +103,6 @@ const HomePage = () => {
           />
         ))}
       </Highlight>
-      <Separator />
       <Spotlight />
       <Gallery />
       <Footer />
