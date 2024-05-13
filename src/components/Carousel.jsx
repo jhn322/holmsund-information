@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import styles from "../styles/GalleryCarousel.module.css";
 
 const Carousel = ({ images }) => {
@@ -51,10 +52,10 @@ const Carousel = ({ images }) => {
           </div>
         ))}
         <span className={styles.prev} onClick={goToPrevSlide}>
-          &#10094;
+          <FiChevronLeft />
         </span>
         <span className={styles.next} onClick={goToNextSlide}>
-          &#10095;
+          <FiChevronRight />
         </span>
       </div>
       <div className={styles.carouselText}>

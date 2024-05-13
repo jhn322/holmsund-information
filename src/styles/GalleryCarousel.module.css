@@ -30,7 +30,7 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 80em;
+  height: 85em;
   background-color: var(--secondary-color);
 }
 
@@ -115,9 +115,8 @@ p {
   background-color: transparent;
   border: none;
   color: var(--primary-color);
-  font-size: 60px;
+  font-size: 70px;
   height: 100%;
-  width: 50px;
   cursor: pointer;
   padding: 0;
 }
@@ -219,7 +218,7 @@ p {
   }
 
   .galleryContainer {
-    height: 90em;
+    height: 95em;
   }
 
   .galleryImage {
@@ -230,6 +229,11 @@ p {
   .carouselInner img {
     width: calc(21rem + 20vw);
     height: calc(21rem + 20vw);
+  }
+
+  .prev,
+  .next {
+    font-size: 80px;
   }
 
   .carouselText {
@@ -244,7 +248,7 @@ p {
   }
 
   .galleryContainer {
-    height: 110em;
+    height: 112em;
   }
 
   .galleryTitle {
@@ -277,6 +281,15 @@ p {
     height: calc(24rem + 26vw);
   }
 
+  .prev,
+  .next {
+    font-size: 90px;
+  }
+
+  .prev {
+    right: 40px;
+  }
+
   .carouselText {
     max-width: 550px;
   }
@@ -291,7 +304,7 @@ p {
   .galleryContainer {
     flex-direction: row;
     justify-content: center;
-    height: 75vh;
+    height: 110vh;
     padding-bottom: 4rem;
   }
 
@@ -347,7 +360,7 @@ p {
   .galleryContainer {
     flex-direction: row;
     justify-content: center;
-    height: 100vh;
+    height: 115vh;
     padding-bottom: 1rem;
   }
 
@@ -392,6 +405,15 @@ p {
     height: 33rem;
   }
 
+  .prev,
+  .next {
+    font-size: 80px;
+  }
+
+  .prev {
+    right: 35px;
+  }
+
   .carouselText {
     display: flex;
     flex-direction: column;
@@ -413,7 +435,7 @@ p {
   .galleryContainer {
     flex-direction: row;
     justify-content: center;
-    height: 100vh;
+    height: 130vh;
     padding-bottom: 1rem;
   }
 
@@ -458,6 +480,15 @@ p {
     height: 40rem;
   }
 
+  .prev,
+  .next {
+    font-size: 90px;
+  }
+
+  .prev {
+    right: 40px;
+  }
+
   .carouselText {
     display: flex;
     flex-direction: column;
@@ -467,19 +498,6 @@ p {
     margin-top: 2rem;
     margin-left: -17rem;
     height: 200px;
-  }
-
-  .prevBtn,
-  .nextBtn {
-    font-size: 80px;
-  }
-
-  .prevBtn {
-    right: 70px;
-  }
-
-  .nextBtn {
-    right: 10px;
   }
 
   .dotPagination {

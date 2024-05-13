@@ -84,7 +84,7 @@ body {
   align-items: center;
   height: 70vh;
   width: 100%;
-  background-color: rgba(193, 200, 228, 0.2);
+  background-color: var(--background-color);
   overflow: hidden;
 }
 

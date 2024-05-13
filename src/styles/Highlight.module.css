@@ -1,0 +1,312 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+.highlightContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--primary-color);
+}
+
+.carousel {
+  position: relative;
+  width: 35rem;
+  height: 40rem;
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+
+.cardContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%) rotateY(calc(var(--offset) * 50deg))
+    scaleY(calc(1 + var(--abs-offset) * -0.4))
+    translateZ(calc(var(--abs-offset) * -20rem))
+    translateX(calc(var(--direction) * -5rem));
+  filter: blur(calc(var(--abs-offset) * 0.5rem));
+  transition: all 0.3s ease-out;
+}
+
+.card {
+  width: 100%;
+  max-width: 22rem;
+  height: 40em;
+  padding: 2rem;
+  background-color: hsl(38deg, 66%, calc(100% - var(--abs-offset) * 50%));
+  border-radius: 10px;
+  text-align: justify;
+  transition: all 0.3s ease-out;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0 0.7em;
+  color: var(--black-text-color);
+  transition: all 0.3s ease-out;
+}
+
+.card img {
+  width: 100%;
+  height: 60%;
+  border-radius: 10px;
+}
+
+.card p,
+.card h2 {
+  opacity: var(--active);
+  transition: all 0.3s ease-out;
+}
+
+.card p {
+  max-height: 10rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav {
+  color: var(--primary-color);
+  font-size: 5rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  cursor: pointer;
+  user-select: none;
+  background: unset;
+  border: unset;
+}
+
+.navLeft,
+.navRight {
+  display: none;
+}
+
+/* Small phones */
+@media only screen and (max-width: 400px) {
+  .carousel {
+    height: 35rem;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  .card h2 {
+    margin-top: -0.5rem;
+    font-size: 1.3rem;
+  }
+}
+
+/* Uncommon phone size */
+@media only screen and (min-width: 500px) and (max-width: 599px) {
+  .card {
+    width: 100%;
+    max-width: 28rem;
+  }
+
+  .card h2 {
+    margin-top: -0.7rem;
+  }
+
+  .card p {
+    max-height: 12rem;
+  }
+}
+
+/* Small Tablet */
+@media only screen and (min-width: 600px) and (max-width: 769px) {
+  .card {
+    width: 100%;
+    max-width: 34rem;
+  }
+
+  .card h2 {
+    margin-top: -0.7rem;
+  }
+
+  .card p {
+    max-height: 14rem;
+  }
+}
+
+/* Small-Medium Desktop */
+@media only screen and (min-width: 770px) and (max-width: 999px) {
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .card h2 {
+    margin-top: 0rem;
+  }
+
+  .card p {
+    max-height: 16rem;
+  }
+
+  .navLeft,
+  .navRight {
+    top: 260px;
+    display: block;
+  }
+
+  .navLeft {
+    transform: translateX(-100%) translateY(-50%);
+  }
+
+  .navRight {
+    right: 0;
+    transform: translateX(100%) translateY(-50%);
+  }
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1000px) and (max-width: 2199px) {
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .card h2 {
+    margin-top: 0rem;
+  }
+
+  .card p {
+    max-height: 16rem;
+  }
+
+  .navLeft,
+  .navRight {
+    top: 260px;
+    display: block;
+  }
+
+  .navLeft {
+    transform: translateX(-100%) translateY(-50%);
+  }
+
+  .navRight {
+    right: 0;
+    transform: translateX(100%) translateY(-50%);
+  }
+}
+
+/* Full desktop */
+@media only screen and (min-width: 2200px) {
+  .highlightContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .carousel {
+    position: relative;
+    width: 35rem;
+    height: 40rem;
+    perspective: 500px;
+    transform-style: preserve-3d;
+  }
+
+  .cardContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%) rotateY(calc(var(--offset) * 50deg))
+      scaleY(calc(1 + var(--abs-offset) * -0.4))
+      translateZ(calc(var(--abs-offset) * -20rem))
+      translateX(calc(var(--direction) * -5rem));
+    filter: blur(calc(var(--abs-offset) * 0.5rem));
+    transition: all 0.3s ease-out;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 80rem;
+    height: 40em;
+    padding: 2rem;
+    background-color: hsl(38deg, 66%, calc(100% - var(--abs-offset) * 50%));
+    border-radius: 10px;
+    color: var(--white-text-color);
+    text-align: justify;
+    transition: all 0.3s ease-out;
+    margin: 0 auto;
+  }
+
+  .card h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 0 0.7em;
+    color: var(--black-text-color);
+    transition: all 0.3s ease-out;
+  }
+
+  .card img {
+    width: 100%;
+    height: 60%;
+    border-radius: 10px;
+  }
+
+  .card p,
+  .card h2 {
+    opacity: var(--active);
+    transition: all 0.3s ease-out;
+  }
+
+  .card p {
+    max-height: 10rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nav {
+    color: var(--primary-color);
+    font-size: 5rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    cursor: pointer;
+    user-select: none;
+    background: unset;
+    border: unset;
+  }
+
+  .navLeft,
+  .navRight {
+    top: 260px;
+    display: block;
+  }
+
+  .navLeft {
+    transform: translateX(-100%) translateY(-50%);
+  }
+
+  .navRight {
+    right: 0;
+    transform: translateX(100%) translateY(-50%);
+  }
+}
