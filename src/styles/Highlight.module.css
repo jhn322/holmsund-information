@@ -76,6 +76,7 @@
 .card p {
   max-height: 10rem;
   overflow: hidden;
+  letter-spacing: -0.3px;
   text-overflow: ellipsis;
 }
 

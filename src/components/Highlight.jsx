@@ -20,11 +20,11 @@ const Highlight = ({ children }) => {
   };
 
   const handleTouchEnd = () => {
-    if (touchStartX - touchEndX > 100 && active < count - 1) {
+    if (touchStartX - touchEndX > 20 && active < count - 1) {
       setActive((prevActive) => prevActive + 1);
     }
 
-    if (touchStartX - touchEndX < -100 && active > 0) {
+    if (touchStartX - touchEndX < -20 && active > 0) {
       setActive((prevActive) => prevActive - 1);
     }
   };
