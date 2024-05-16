@@ -67,6 +67,10 @@ li {
   position: absolute;
   left: 36px;
   top: 0;
+  background-color: rgba(110, 176, 242, 0.85);
+}
+
+.transparent .logoContainer:hover {
   background-color: rgba(242, 199, 110, 0.85);
 }
 
@@ -132,6 +136,41 @@ li {
   margin-right: 30px;
 }
 
+/* Scroll to top button */
+.scrollTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--third-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 99;
+  transition: background-color 0.3s;
+}
+
+.scrollTop:hover {
+  background-color: var(--accent-color);
+}
+
+.scrollIcon {
+  color: var(--primary-color);
+  font-size: 40px;
+}
+
+.scrollIcon:hover {
+  color: var(--primary-color);
+}
+
+/* Make the scroll-to-top button invisible */
+.invisible {
+  display: none;
+}
+
 /* ------------- Burger menu ------------- */
 @keyframes slideOut {
   from {
@@ -170,7 +209,7 @@ li {
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(242, 199, 110, 0.9);
+  background-color: rgba(110, 176, 242, 0.85);
   z-index: 100;
   animation: slideOut 0.3s forwards;
 }

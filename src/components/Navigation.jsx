@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { FiMenu, FiSearch, FiX, FiChevronUp } from "react-icons/fi"; // Import the up arrow icon
 import styles from "../styles/Navigation.module.css";
-import { FiMenu, FiSearch, FiX } from "react-icons/fi";
 import logo from "../assets/navLogo.png";
 
 const Navigation = () => {
@@ -46,6 +46,14 @@ const Navigation = () => {
     setPrevScrollPos(currentScrollPos);
   };
 
+  // Scrolls to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scroll to top
+    });
+  };
+
   // EventListener on window for scroll
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -55,110 +63,121 @@ const Navigation = () => {
   }, [prevScrollPos, visible]);
 
   return (
-    // Nav container, hide nav class and transparent class
-    <nav
-      className={`${styles.navContainer} ${!visible && styles.hideNav} ${
-        prevScrollPos <= 0.28 * window.innerHeight && styles.transparent // Nav bar is transparent on first 28vh of the page
-      }`}
-    >
-      {/* Conditional render nav with links */}
-      {isMenuOpen && (
-        <div
-          className={styles.blurBackground}
-          onClick={handleBlurBackgroundClick}
-        ></div>
-      )}
-      <div className={styles.navItems}>
-        <ul className={styles.navList}>
-          <li>
-            <NavLink to="/" className={styles.logoContainer}>
-              <img src={logo} alt="Logo" className={styles.logo} />
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/"
-              activeclassname={styles.active}
-              className={styles.navLink}
-            >
-              Hem
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/väder"
-              activeclassname={styles.active}
-              className={styles.navLink}
-            >
-              Väder
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/upptäck"
-              activeclassname={styles.active}
-              className={styles.navLink}
-            >
-              Upptäck
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/galleri"
-              activeclassname={styles.active}
-              className={styles.navLink}
-            >
-              Galleri
-            </NavLink>
-          </li>
-        </ul>
-        {/* Nav icons */}
-        <div className={styles.navIcons}>
-          <div className={styles.search}>
-            <FiSearch strokeWidth={3} className={styles.searchIcon} />
-          </div>
-          <FiMenu
-            strokeWidth={2.5}
-            className={styles.menuIcon}
-            onClick={toggleMenu}
-          />
-        </div>
-      </div>
-      {/* Inside the nav menu */}
-      {isMenuOpen && (
-        <div
-          className={`${styles.menuWrapper} ${
-            isMenuClosing ? styles.menuClosing : ""
-          }`}
-        >
-          <div className={styles.closeIcon} onClick={closeMenu}>
-            <FiX strokeWidth={3} className={styles.close} />
-          </div>
-          <ul className={styles.openMenu}>
+    <div>
+      {/* Nav container, hide nav class and transparent class */}
+      <nav
+        className={`${styles.navContainer} ${!visible && styles.hideNav} ${
+          prevScrollPos <= 0.28 * window.innerHeight && styles.transparent // Nav bar is transparent on first 28vh of the page
+        }`}
+      >
+        {/* Conditional render nav with links */}
+        {isMenuOpen && (
+          <div
+            className={styles.blurBackground}
+            onClick={handleBlurBackgroundClick}
+          ></div>
+        )}
+        <div className={styles.navItems}>
+          <ul className={styles.navList}>
             <li>
-              <NavLink to="/" activeclassname={styles.active}>
+              <NavLink to="/" className={styles.logoContainer}>
+                <img src={logo} alt="Logo" className={styles.logo} />
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/"
+                activeclassname={styles.active}
+                className={styles.navLink}
+              >
                 Hem
               </NavLink>
             </li>
             <li>
-              <NavLink to="/väder" activeclassname={styles.active}>
+              <NavLink
+                to="/väder"
+                activeclassname={styles.active}
+                className={styles.navLink}
+              >
                 Väder
               </NavLink>
             </li>
             <li>
-              <NavLink to="/upptäck" activeclassname={styles.active}>
+              <NavLink
+                to="/upptäck"
+                activeclassname={styles.active}
+                className={styles.navLink}
+              >
                 Upptäck
               </NavLink>
             </li>
             <li>
-              <NavLink to="/galleri" activeclassname={styles.active}>
+              <NavLink
+                to="/galleri"
+                activeclassname={styles.active}
+                className={styles.navLink}
+              >
                 Galleri
               </NavLink>
             </li>
           </ul>
+          {/* Nav icons */}
+          <div className={styles.navIcons}>
+            <div className={styles.search}>
+              <FiSearch strokeWidth={3} className={styles.searchIcon} />
+            </div>
+            <FiMenu
+              strokeWidth={2.5}
+              className={styles.menuIcon}
+              onClick={toggleMenu}
+            />
+          </div>
         </div>
-      )}
-    </nav>
+        {/* Inside the nav menu */}
+        {isMenuOpen && (
+          <div
+            className={`${styles.menuWrapper} ${
+              isMenuClosing ? styles.menuClosing : ""
+            }`}
+          >
+            <div className={styles.closeIcon} onClick={closeMenu}>
+              <FiX strokeWidth={3} className={styles.close} />
+            </div>
+            <ul className={styles.openMenu}>
+              <li>
+                <NavLink to="/" activeclassname={styles.active}>
+                  Hem
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/väder" activeclassname={styles.active}>
+                  Väder
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/upptäck" activeclassname={styles.active}>
+                  Upptäck
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/galleri" activeclassname={styles.active}>
+                  Galleri
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+        )}
+      </nav>
+      {/* Scroll to top button */}
+      <div
+        className={`${styles.scrollTop} ${
+          prevScrollPos <= 0.2 * window.innerHeight && styles.invisible
+        }`}
+        onClick={scrollToTop}
+      >
+        <FiChevronUp strokeWidth={3} className={styles.scrollIcon} />
+      </div>
+    </div>
   );
 };
 

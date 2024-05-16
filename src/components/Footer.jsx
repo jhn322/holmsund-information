@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/Footer.module.css";
 
 // Icons
-import { FaGithub, FaGoogle, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaGoogle, FaInstagram, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,6 +14,7 @@ const Footer = () => {
           <FaGithub className={styles.github} />
           <FaGoogle className={styles.google} />
           <FaInstagram className={styles.instagram} />
+          <FaFacebook className={styles.facebook} />
         </div>
         <div className={styles.footerText}>
           <ul>

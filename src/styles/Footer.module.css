@@ -33,20 +33,30 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  font-size: 25px;
-  margin: 0 -40px;
+  font-size: 40px;
+  margin: 0;
 }
 
 .github,
 .google,
-.instagram {
+.instagram,
+.facebook {
   cursor: pointer;
+  background-color: var(--third-color);
+  border-radius: 50%;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .github:hover,
 .google:hover,
-.instagram:hover {
-  color: var(--hover-color);
+.instagram:hover,
+.facebook:hover {
+  color: var(--background-color);
+  background-color: var(--hover-color);
 }
 
 .footerText ul {
