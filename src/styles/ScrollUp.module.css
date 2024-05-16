@@ -1,0 +1,42 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Scroll to top button */
+.scrollTop {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background-color: var(--third-color);
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 999;
+  transition: background-color 0.3s;
+}
+
+.scrollTop:hover {
+  background-color: var(--accent-color);
+}
+
+.scrollIcon {
+  color: var(--primary-color);
+  font-size: 40px;
+}
+
+.scrollIcon:hover {
+  color: var(--primary-color);
+}
+
+/* Button invisible at top */
+.invisible {
+  display: none;
+}

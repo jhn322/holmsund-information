@@ -10,6 +10,7 @@ import Spotlight from "../components/Spotlight";
 import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
 import Separator from "../components/Separator";
+import ScrollUp from "../components/ScrollUp";
 
 // Images
 import highlightImage1 from "../assets/highlight1.jpg";
@@ -106,6 +107,7 @@ const HomePage = () => {
       <Spotlight />
       <Gallery />
       <Footer />
+      <ScrollUp />
     </main>
   );
 };

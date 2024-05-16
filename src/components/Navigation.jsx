@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { FiMenu, FiSearch, FiX, FiChevronUp } from "react-icons/fi"; // Import the up arrow icon
+import { FiMenu, FiSearch, FiX } from "react-icons/fi";
 import styles from "../styles/Navigation.module.css";
 import logo from "../assets/navLogo.png";
 
@@ -168,15 +168,6 @@ const Navigation = () => {
           </div>
         )}
       </nav>
-      {/* Scroll to top button */}
-      <div
-        className={`${styles.scrollTop} ${
-          prevScrollPos <= 0.2 * window.innerHeight && styles.invisible
-        }`}
-        onClick={scrollToTop}
-      >
-        <FiChevronUp strokeWidth={3} className={styles.scrollIcon} />
-      </div>
     </div>
   );
 };
