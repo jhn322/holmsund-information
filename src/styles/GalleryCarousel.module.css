@@ -31,7 +31,7 @@ p {
   justify-content: flex-start;
   align-items: center;
   height: 85em;
-  background-color: var(--secondary-color);
+  background-color: var(--gallery-color);
 }
 
 .galleryImageContainer {
@@ -147,6 +147,12 @@ p {
 .carouselText h2 {
   text-transform: uppercase;
   color: var(--white-text-color);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.carouselText h2:hover {
+  color: var(--hover-color);
 }
 
 .carouselText p {

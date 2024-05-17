@@ -11,7 +11,8 @@
   position: fixed;
   bottom: 70px;
   right: 20px;
-  background-color: var(--third-color);
+  background-color: var(--accent-color);
+  border: 1px solid var(--primary-color);
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 50%;
@@ -19,12 +20,12 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 999;
+  z-index: 400;
   transition: background-color 0.3s;
 }
 
 .scrollTop:hover {
-  background-color: var(--accent-color);
+  background-color: var(--nav-color);
 }
 
 .scrollIcon {

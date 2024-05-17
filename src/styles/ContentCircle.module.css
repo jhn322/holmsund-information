@@ -48,7 +48,7 @@ body {
   font-weight: 600;
   margin-bottom: 1rem;
   border-radius: 35px;
-  color: var(--accent-color);
+  color: var(--nav-color);
 }
 
 .paragraphContent {

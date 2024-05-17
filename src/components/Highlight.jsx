@@ -20,11 +20,11 @@ const Highlight = ({ children }) => {
   };
 
   const handleTouchEnd = () => {
-    if (touchStartX - touchEndX > 20 && active < count - 1) {
+    if (touchStartX - touchEndX > 10 && active < count - 1) {
       setActive((prevActive) => prevActive + 1);
     }
 
-    if (touchStartX - touchEndX < -20 && active > 0) {
+    if (touchStartX - touchEndX < -10 && active > 0) {
       setActive((prevActive) => prevActive - 1);
     }
   };
@@ -42,7 +42,7 @@ const Highlight = ({ children }) => {
             className={`${styles.navLeft} ${styles.nav}`}
             onClick={() => setActive((i) => i - 1)}
           >
-            <FiChevronLeft />
+            <FiChevronLeft strokeWidth={2.5} className={styles.leftIcon} />
           </span>
         )}
         {React.Children.map(children, (child, i) => (
@@ -66,7 +66,7 @@ const Highlight = ({ children }) => {
             className={`${styles.navRight} ${styles.nav}`}
             onClick={() => setActive((i) => i + 1)}
           >
-            <FiChevronRight />
+            <FiChevronRight strokeWidth={2.5} className={styles.rightIcon} />
           </span>
         )}
       </div>

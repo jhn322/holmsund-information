@@ -60,11 +60,13 @@ body {
   padding: 18px;
   border-radius: 35px;
   width: 22em;
+  color: var(--nav-color);
   background-color: var(--hover-color);
 }
 
 .headerBtn:hover {
-  background-color: var(--accent-color);
+  color: var(--white-text-color);
+  background-color: var(--nav-color);
 }
 
 /* Small phones */

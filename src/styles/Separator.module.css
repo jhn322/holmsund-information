@@ -16,7 +16,7 @@ body {
   position: relative;
   height: 9em;
   width: 100%;
-  background-color: var(--third-color);
+  background-color: var(--accent-color);
 }
 
 .customShapeDividerBottom1715194381 {
@@ -37,7 +37,7 @@ body {
 }
 
 .customShapeDividerBottom1715194381 .shapeFill {
-  fill: #ffd98d;
+  fill: #e157c5;
 }
 
 /* Small phones */

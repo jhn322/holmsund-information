@@ -9,13 +9,12 @@
 
   /* Colors */
   --primary-color: #fff;
-  --background-color: #f3f4fa;
-  --accent-color: #6eb0f2;
-  --secondary-color: #f2986e;
-  --third-color: #f2c76e;
-  --hover-color: #c7a6f5;
-  --black-text-color: #0b0b0b;
   --white-text-color: #f7f7f7;
+  --black-text-color: #0b0b0b;
+  --nav-color: #ffcd2a;
+  --hover-color: #e94417;
+  --accent-color: #b6469f;
+  --gallery-color: #4da7f5;
 
   /* Defaults */
   color-scheme: light dark;
