@@ -56,7 +56,7 @@ li {
 .instagram:hover,
 .facebook:hover {
   color: var(--background-color);
-  background-color: var(--hover-color);
+  background-color: var(--gallery-color);
 }
 
 .footerText ul {
