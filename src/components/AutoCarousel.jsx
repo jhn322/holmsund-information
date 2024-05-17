@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import styles from "../styles/GalleryCarousel.module.css";
 
-const Carousel = ({ images }) => {
+const AutoCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [autoSlideTimeout, setAutoSlideTimeout] = useState(null);
 
@@ -77,4 +77,4 @@ const Carousel = ({ images }) => {
   );
 };
 
-export default Carousel;
+export default AutoCarousel;

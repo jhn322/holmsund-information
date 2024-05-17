@@ -1,67 +1,43 @@
 import React from "react";
-import styles from "../styles/Highlight.module.css";
+import styles from "../styles/Activity.module.css";
 
 // Components
 import Navigation from "../components/Navigation";
 import Header from "../components/Header";
 import ContentCircle from "../components/ContentCircle";
-import Highlight from "../components/Highlight";
-import Spotlight from "../components/Spotlight";
+import Activity from "../components/Activity";
+import Discover from "../components/Discover";
 import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
 import Separator from "../components/Separator";
 import ScrollUp from "../components/ScrollUp";
 
 // Images
-import highlightImage1 from "../assets/highlight1.jpg";
-import highlightImage2 from "../assets/highlight2.jpg";
-import highlightImage3 from "../assets/highlight3.jpg";
-import highlightImage4 from "../assets/highlight4.jpg";
-import highlightImage5 from "../assets/spotlight5.jpg";
-import highlightImage6 from "../assets/spotlight6.jpg";
-import highlightImage7 from "../assets/spotlight7.jpg";
-import highlightImage8 from "../assets/spotlight8.jpg";
+import activityImage1 from "../assets/activity1.jpg";
+import activityImage2 from "../assets/activity2.jpg";
+import activityImage3 from "../assets/activity3.jpg";
+import activityImage4 from "../assets/activity4.jpg";
 
 const HomePage = () => {
   const cards = [
     {
-      image: highlightImage1,
+      image: activityImage1,
       title: "Aqua Arena",
       text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
     },
     {
-      image: highlightImage2,
+      image: activityImage2,
       title: "Vattentornet",
       text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
     },
     {
-      image: highlightImage3,
+      image: activityImage3,
       title: "Golfbana",
       text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
     },
     {
-      image: highlightImage4,
+      image: activityImage4,
       title: "Storsjöhallen",
-      text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
-    },
-    {
-      image: highlightImage5,
-      title: "Ett till ställe",
-      text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
-    },
-    {
-      image: highlightImage6,
-      title: "Nästa ställe",
-      text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
-    },
-    {
-      image: highlightImage7,
-      title: "Långt borta",
-      text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
-    },
-    {
-      image: highlightImage8,
-      title: "Sista stället",
       text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
     },
   ];
@@ -94,7 +70,7 @@ const HomePage = () => {
       <Header />
       <ContentCircle />
       <Separator />
-      <Highlight>
+      <Activity>
         {cards.map((card, index) => (
           <Card
             key={index}
@@ -103,8 +79,8 @@ const HomePage = () => {
             text={card.text}
           />
         ))}
-      </Highlight>
-      <Spotlight />
+      </Activity>
+      <Discover />
       <Gallery />
       <Footer />
       <ScrollUp />

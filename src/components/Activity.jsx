@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-
-import styles from "../styles/Highlight.module.css";
+import { NavLink } from "react-router-dom";
+import styles from "../styles/Activity.module.css";
 
 const MAX_VISIBILITY = 3;
 
-const Highlight = ({ children }) => {
+const Activity = ({ children }) => {
   const [active, setActive] = useState(2);
   const count = React.Children.count(children);
   let touchStartX = 0;
@@ -31,7 +31,7 @@ const Highlight = ({ children }) => {
 
   return (
     <div
-      className={styles.highlightContainer}
+      className={styles.activityContainer}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -58,7 +58,9 @@ const Highlight = ({ children }) => {
               display: Math.abs(active - i) > MAX_VISIBILITY ? "none" : "block",
             }}
           >
-            {child}
+            <NavLink to="/upptäck" className={styles.cardLink}>
+              {child}
+            </NavLink>
           </div>
         ))}
         {active < count - 1 && (
@@ -74,4 +76,4 @@ const Highlight = ({ children }) => {
   );
 };
 
-export default Highlight;
+export default Activity;

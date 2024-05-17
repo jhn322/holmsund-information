@@ -1,5 +1,5 @@
 import React from "react";
-import Carousel from "./Carousel";
+import Carousel from "./AutoCarousel";
 import styles from "../styles/GalleryCarousel.module.css";
 
 // Static image and carousel of images

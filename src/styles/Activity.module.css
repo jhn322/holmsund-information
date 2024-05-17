@@ -7,7 +7,7 @@
   font-family: "Outfit", sans-serif;
 }
 
-.highlightContainer {
+.activityContainer {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -65,6 +65,7 @@
   width: 100%;
   height: 60%;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .card p,
@@ -263,7 +264,7 @@
 
 /* Full desktop */
 @media only screen and (min-width: 2200px) {
-  .highlightContainer {
+  .activityContainer {
     height: 70vh;
     margin-top: -2rem;
   }

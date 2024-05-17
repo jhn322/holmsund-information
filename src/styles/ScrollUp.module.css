@@ -9,7 +9,7 @@
 /* Scroll to top button */
 .scrollTop {
   position: fixed;
-  bottom: 70px;
+  bottom: 30px;
   right: 20px;
   background-color: var(--accent-color);
   border: 1px solid var(--primary-color);

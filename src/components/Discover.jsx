@@ -1,11 +1,12 @@
 import React, { useRef, useEffect, useState } from "react";
-import styles from "../styles/Spotlight.module.css";
+import styles from "../styles/Discover.module.css";
+import { NavLink } from "react-router-dom";
 
 // Images
-import cardImage5 from "../assets/spotlight5.jpg";
-import cardImage6 from "../assets/spotlight6.jpg";
-import cardImage7 from "../assets/spotlight7.jpg";
-import cardImage8 from "../assets/spotlight8.jpg";
+import cardImage5 from "../assets/discover1.jpg";
+import cardImage6 from "../assets/discover2.jpg";
+import cardImage7 from "../assets/discover3.jpg";
+import cardImage8 from "../assets/discover4.jpg";
 
 // Card Array
 const cardData = [
@@ -31,8 +32,8 @@ const cardData = [
   },
 ];
 
-const Spotlight = () => {
-  const spotlightContainerRef = useRef(null);
+const Discover = () => {
+  const discoverContainerRef = useRef(null);
   const [totalCardsHeight, setTotalCardsHeight] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -42,10 +43,10 @@ const Spotlight = () => {
 
   useEffect(() => {
     const calculateTotalHeight = () => {
-      if (spotlightContainerRef.current) {
+      if (discoverContainerRef.current) {
         const totalHeight = Array.from(
-          spotlightContainerRef.current.querySelectorAll(
-            `.${styles.spotlightCard}`
+          discoverContainerRef.current.querySelectorAll(
+            `.${styles.discoverCard}`
           )
         ).reduce((acc, card) => acc + card.offsetHeight, 0);
         setTotalCardsHeight(totalHeight);
@@ -53,10 +54,10 @@ const Spotlight = () => {
     };
 
     const handleScroll = () => {
-      if (!spotlightContainerRef.current) return;
+      if (!discoverContainerRef.current) return;
 
-      const cards = spotlightContainerRef.current.querySelectorAll(
-        `.${styles.spotlightCard}`
+      const cards = discoverContainerRef.current.querySelectorAll(
+        `.${styles.discoverCard}`
       );
 
       cards.forEach((card, i) => {
@@ -104,16 +105,16 @@ const Spotlight = () => {
 
   return (
     <section>
-      <div ref={spotlightContainerRef} className={styles.spotlightContainer}>
-        <div className={styles.spotlightInner}>
-          <div className={styles.spotlightTitle}>
+      <div ref={discoverContainerRef} className={styles.discoverContainer}>
+        <div className={styles.discoverInner}>
+          <div className={styles.discoverTitle}>
             <h2>Upptäck Holmsund</h2>
           </div>
-          <div className={styles.spotlightCardContainer}>
+          <div className={styles.discoverCardContainer}>
             {cardData.map((card, index) => (
               <div
                 key={index} // Add unique key prop here
-                className={`${styles.spotlightCard} ${
+                className={`${styles.discoverCard} ${
                   overlayStates[index] ? styles.expanded : ""
                 } ${isVisible ? styles.fadeInSlideIn : ""}`}
                 onMouseEnter={() => handleHover(index, true)}
@@ -123,21 +124,27 @@ const Spotlight = () => {
                   className={styles.cardImage}
                   style={{ backgroundImage: `url(${card.image})` }}
                 >
-                  <div
-                    className={`${styles.cardOverlay} ${
-                      overlayStates[index] && isHovered
-                        ? styles.expandedOverlay
-                        : ""
-                    }`}
-                  >
-                    <h3 className={styles.cardOverlayTitle}>{card.title}</h3>
-                    {overlayStates[index] && (
-                      <div>
-                        <p className={styles.expandedText}>{card.text}</p>
-                        <button className={styles.expandedBtn}>Läs mer</button>
-                      </div>
-                    )}
-                  </div>
+                  <NavLink to="upptäck">
+                    <div
+                      className={`${styles.cardOverlay} ${
+                        overlayStates[index] && isHovered
+                          ? styles.expandedOverlay
+                          : ""
+                      }`}
+                    >
+                      <h3 className={styles.cardOverlayTitle}>{card.title}</h3>
+                      {overlayStates[index] && (
+                        <div>
+                          <p className={styles.expandedText}>{card.text}</p>
+                          <NavLink to="/upptäck">
+                            <button className={styles.expandedBtn}>
+                              Läs mer
+                            </button>
+                          </NavLink>
+                        </div>
+                      )}
+                    </div>
+                  </NavLink>
                 </div>
               </div>
             ))}
@@ -148,4 +155,4 @@ const Spotlight = () => {
   );
 };
 
-export default Spotlight;
+export default Discover;

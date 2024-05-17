@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/Header.module.css";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -9,10 +10,13 @@ const Header = () => {
           <h1 className={styles.headerTitle}>
             Holmsund <br /> Information
           </h1>
+
           <div className={styles.btnContainer}>
-            <button className={styles.headerBtn}>
-              Flera aktiviteter man kan göra i Holmsund
-            </button>
+            <NavLink to="/aktiviteter">
+              <button className={styles.headerBtn}>
+                Flera aktiviteter man kan göra i Holmsund
+              </button>
+            </NavLink>
           </div>
         </div>
       </div>

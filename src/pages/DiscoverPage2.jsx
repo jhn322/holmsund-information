@@ -1,15 +1,16 @@
 import React from "react";
 import Navigation from "../components/Navigation";
 
-const FooterPage = () => {
+const DiscoverPage2 = () => {
   return (
     <div>
+      {" "}
       <div>
         <Navigation />
       </div>
-      FooterPage
+      DiscoverPage2
     </div>
   );
 };
 
-export default FooterPage;
+export default DiscoverPage2;
