@@ -17,6 +17,10 @@ import activityImage1 from "../assets/activity1.jpg";
 import activityImage2 from "../assets/activity2.jpg";
 import activityImage3 from "../assets/activity3.jpg";
 import activityImage4 from "../assets/activity4.jpg";
+import activityImage5 from "../assets/activity5.jpg";
+import activityImage6 from "../assets/activity6.jpg";
+import activityImage7 from "../assets/activity7.jpg";
+import activityImage8 from "../assets/activity8.jpg";
 
 const HomePage = () => {
   const cards = [
@@ -38,6 +42,26 @@ const HomePage = () => {
     {
       image: activityImage4,
       title: "Storsjöhallen",
+      text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
+    },
+    {
+      image: activityImage5,
+      title: "Nästa ställe",
+      text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
+    },
+    {
+      image: activityImage6,
+      title: "Utflykt",
+      text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
+    },
+    {
+      image: activityImage7,
+      title: "Skidspår",
+      text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
+    },
+    {
+      image: activityImage8,
+      title: "Stor skog",
       text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
     },
   ];

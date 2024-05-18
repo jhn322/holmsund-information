@@ -9,7 +9,10 @@ import DiscoverPage1 from "./pages/DiscoverPage1";
 import DiscoverPage2 from "./pages/DiscoverPage2";
 import DiscoverPage3 from "./pages/DiscoverPage3";
 import DiscoverPage4 from "./pages/DiscoverPage4";
-import GalleryPage from "./pages/GalleryPage";
+import GalleryPage1 from "./pages/GalleryPage1";
+import GalleryPage2 from "./pages/GalleryPage2";
+import GalleryPage3 from "./pages/GalleryPage3";
+import GalleryPage4 from "./pages/GalleryPage4";
 import FooterPage from "./pages/FooterPage";
 import MissingPage from "./pages/MissingPage";
 
@@ -41,7 +44,22 @@ const App = () => {
             path="/upptäck-4"
             element={<DiscoverPage4 page="upptäck-4" />}
           />
-          <Route path="/galleri" element={<GalleryPage page="galleri" />} />
+          <Route
+            path="/galleri-1"
+            element={<GalleryPage1 page="galleri-1" />}
+          />
+          <Route
+            path="/galleri-2"
+            element={<GalleryPage2 page="galleri-2" />}
+          />
+          <Route
+            path="/galleri-3"
+            element={<GalleryPage3 page="galleri-3" />}
+          />
+          <Route
+            path="/galleri-4"
+            element={<GalleryPage4 page="galleri-4" />}
+          />
           <Route path="/footer" element={<FooterPage page="footer" />} />
           <Route path="*" element={<MissingPage />} />
         </Routes>

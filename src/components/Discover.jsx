@@ -1,34 +1,38 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import styles from "../styles/Discover.module.css";
 import { NavLink } from "react-router-dom";
 
 // Images
-import cardImage5 from "../assets/discover1.jpg";
-import cardImage6 from "../assets/discover2.jpg";
-import cardImage7 from "../assets/discover3.jpg";
-import cardImage8 from "../assets/discover4.jpg";
+import discoverImage1 from "../assets/discover1.jpg";
+import discoverImage2 from "../assets/discover2.jpg";
+import discoverImage3 from "../assets/discover3.jpg";
+import discoverImage4 from "../assets/discover4.jpg";
 
-// Card Array
+// Card Array with NavLinks
 const cardData = [
   {
-    image: cardImage5,
+    image: discoverImage1,
     title: "Nästa ställe",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas, molestias incidunt minima quod, illo possimus hic.",
+    link: "/upptäck-1",
   },
   {
-    image: cardImage6,
+    image: discoverImage2,
     title: "Någon annanstans",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas, molestias incidunt minima quod, illo possimus hic.",
+    link: "/upptäck-2",
   },
   {
-    image: cardImage7,
+    image: discoverImage3,
     title: "Ett spännande ställe",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas, molestias incidunt minima quod, illo possimus hic.",
+    link: "/upptäck-3",
   },
   {
-    image: cardImage8,
+    image: discoverImage4,
     title: "Sista stället",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas, molestias incidunt minima quod, illo possimus hic.",
+    link: "/upptäck-4",
   },
 ];
 
@@ -113,7 +117,7 @@ const Discover = () => {
           <div className={styles.discoverCardContainer}>
             {cardData.map((card, index) => (
               <div
-                key={index} // Add unique key prop here
+                key={index}
                 className={`${styles.discoverCard} ${
                   overlayStates[index] ? styles.expanded : ""
                 } ${isVisible ? styles.fadeInSlideIn : ""}`}
@@ -124,7 +128,7 @@ const Discover = () => {
                   className={styles.cardImage}
                   style={{ backgroundImage: `url(${card.image})` }}
                 >
-                  <NavLink to="upptäck">
+                  <NavLink to={card.link}>
                     <div
                       className={`${styles.cardOverlay} ${
                         overlayStates[index] && isHovered
@@ -136,7 +140,7 @@ const Discover = () => {
                       {overlayStates[index] && (
                         <div>
                           <p className={styles.expandedText}>{card.text}</p>
-                          <NavLink to="/upptäck">
+                          <NavLink to={card.link}>
                             <button className={styles.expandedBtn}>
                               Läs mer
                             </button>

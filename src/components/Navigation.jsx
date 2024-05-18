@@ -86,20 +86,11 @@ const Navigation = () => {
             </li>
             <li>
               <NavLink
-                to="/"
+                to="/upptäck-1"
                 activeclassname={styles.active}
                 className={styles.navLink}
               >
-                Hem
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/väder"
-                activeclassname={styles.active}
-                className={styles.navLink}
-              >
-                Väder
+                Upptäck
               </NavLink>
             </li>
             <li>
@@ -113,11 +104,20 @@ const Navigation = () => {
             </li>
             <li>
               <NavLink
-                to="/galleri"
+                to="/galleri-1"
                 activeclassname={styles.active}
                 className={styles.navLink}
               >
                 Galleri
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/väder"
+                activeclassname={styles.active}
+                className={styles.navLink}
+              >
+                Väder
               </NavLink>
             </li>
           </ul>
@@ -150,11 +150,6 @@ const Navigation = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/väder" activeclassname={styles.active}>
-                  Väder
-                </NavLink>
-              </li>
-              <li>
                 <NavLink to="/aktiviteter" activeclassname={styles.active}>
                   Aktiviteter
                 </NavLink>
@@ -180,8 +175,28 @@ const Navigation = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/galleri" activeclassname={styles.active}>
-                  Galleri
+                <NavLink to="/galleri-1" activeclassname={styles.active}>
+                  Galleri-1
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/galleri-2" activeclassname={styles.active}>
+                  Galleri-2
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/galleri-3" activeclassname={styles.active}>
+                  Galleri-3
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/galleri-4" activeclassname={styles.active}>
+                  Galleri-4
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/väder" activeclassname={styles.active}>
+                  Väder
                 </NavLink>
               </li>
             </ul>
