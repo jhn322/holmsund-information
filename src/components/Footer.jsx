@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "../styles/Footer.module.css";
+import { NavLink } from "react-router-dom";
 
 // Icons
-import { FaGithub, FaGoogle, FaInstagram, FaFacebook } from "react-icons/fa";
+import { FaGithub, FaReact, FaInstagram, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,16 +12,50 @@ const Footer = () => {
     <section className={styles.footerContainer}>
       <div className={styles.footerInner}>
         <div className={styles.footerIcons}>
-          <FaGithub className={styles.github} />
-          <FaGoogle className={styles.google} />
-          <FaInstagram className={styles.instagram} />
-          <FaFacebook className={styles.facebook} />
+          <a
+            href="https://github.com/jhn322"
+            target="_blank"
+            rel="noopener noreferrer"
+            alt="GitHub website"
+          >
+            <FaGithub className={styles.github} />
+          </a>
+          <a
+            href="https://github.com/jhn322"
+            target="_blank"
+            rel="noopener noreferrer"
+            alt="Google website"
+          >
+            <FaReact className={styles.react} />
+          </a>
+          <a
+            href="https://github.com/jhn322"
+            target="_blank"
+            rel="noopener noreferrer"
+            alt="React website"
+          >
+            <FaInstagram className={styles.instagram} />
+          </a>
+          <a
+            href="https://github.com/jhn322"
+            target="_blank"
+            rel="noopener noreferrer"
+            alt="Facebook website"
+          >
+            <FaFacebook className={styles.facebook} />
+          </a>
         </div>
         <div className={styles.footerText}>
           <ul>
-            <li>Hem</li>
-            <li>Om oss</li>
+            <NavLink to="/">
+              <li>Hem</li>
+            </NavLink>
+            <NavLink to="/om-oss">
+              <li>Om oss</li>
+            </NavLink>
+            <li>Kontakta oss</li>
             <li>Användarvillkor</li>
+            <li>Cookiepolicy</li>
           </ul>
           <div className={styles.footerYear}>
             <p>

@@ -15,6 +15,7 @@ import GalleryPage3 from "./pages/GalleryPage3";
 import GalleryPage4 from "./pages/GalleryPage4";
 import FooterPage from "./pages/FooterPage";
 import MissingPage from "./pages/MissingPage";
+import AboutUsPage from "./pages/AboutUsPage";
 
 const App = () => {
   return (
@@ -61,6 +62,7 @@ const App = () => {
             element={<GalleryPage4 page="galleri-4" />}
           />
           <Route path="/footer" element={<FooterPage page="footer" />} />
+          <Route path="/om-oss" element={<AboutUsPage page="om-oss" />} />
           <Route path="*" element={<MissingPage />} />
         </Routes>
       </div>
