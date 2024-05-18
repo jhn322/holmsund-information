@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import styles from "../styles/GalleryCarousel.module.css";
+import { NavLink } from "react-router-dom";
 
 const AutoCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -48,7 +49,10 @@ const AutoCarousel = ({ images }) => {
               index === currentIndex ? styles.active : ""
             }`}
           >
-            <img src={image.url} alt={`Slide ${index}`} />
+            {/* Img with NavLink to other pages */}
+            <NavLink to={image.link}>
+              <img src={image.url} alt={`Slide ${index}`} />
+            </NavLink>
           </div>
         ))}
         <span className={styles.prev} onClick={goToPrevSlide}>
@@ -59,7 +63,9 @@ const AutoCarousel = ({ images }) => {
         </span>
       </div>
       <div className={styles.carouselText}>
-        <h2>{images[currentIndex].title}</h2>
+        <NavLink to={images[currentIndex].link}>
+          <h2>{images[currentIndex].title}</h2>
+        </NavLink>
         <p>{images[currentIndex].text}</p>
       </div>
       <div className={styles.dotPagination}>

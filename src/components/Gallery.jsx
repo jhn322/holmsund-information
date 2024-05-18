@@ -1,36 +1,40 @@
 import React from "react";
-import Carousel from "./AutoCarousel";
+import AutoCarousel from "./AutoCarousel";
 import styles from "../styles/GalleryCarousel.module.css";
 
 // Static image and carousel of images
+import staticGalleryImage from "../assets/staticGallery.jpg";
 import galleryImage1 from "../assets/gallery1.jpg";
 import galleryImage2 from "../assets/gallery2.jpg";
 import galleryImage3 from "../assets/gallery3.jpg";
 import galleryImage4 from "../assets/gallery4.jpg";
-import galleryImage5 from "../assets/gallery5.jpg";
 import galleryCircle from "../assets/galleryCircle.png";
 
 const Gallery = () => {
   const images = [
     {
-      url: galleryImage2,
+      url: galleryImage1,
       title: "Badställe",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+      link: "/galleri-1",
+    },
+    {
+      url: galleryImage2,
+      title: "Skog",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+      link: "/galleri-2",
     },
     {
       url: galleryImage3,
-      title: "Skog",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+      title: "Vattentorn",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
+      link: "/galleri-3",
     },
     {
       url: galleryImage4,
-      title: "Vattentorn",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
-    },
-    {
-      url: galleryImage5,
       title: "Storsjöskolan",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
+      link: "/galleri-4",
     },
   ];
 
@@ -41,7 +45,7 @@ const Gallery = () => {
           <div className={styles.galleryImageInner}>
             <article
               className={styles.galleryImage}
-              style={{ backgroundImage: `url(${galleryImage1})` }}
+              style={{ backgroundImage: `url(${staticGalleryImage})` }}
             >
               {/* galleryCircle is being handled in css additionally */}
               <div
@@ -56,7 +60,7 @@ const Gallery = () => {
           </div>
         </div>
         <div className={styles.carouselText}>
-          <Carousel images={images} />
+          <AutoCarousel images={images} />
         </div>
       </div>
     </section>
