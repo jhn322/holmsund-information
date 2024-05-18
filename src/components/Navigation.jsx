@@ -104,11 +104,11 @@ const Navigation = () => {
             </li>
             <li>
               <NavLink
-                to="/upptäck"
+                to="/aktiviteter"
                 activeclassname={styles.active}
                 className={styles.navLink}
               >
-                Upptäck
+                Aktiviteter
               </NavLink>
             </li>
             <li>
@@ -150,18 +150,33 @@ const Navigation = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/aktiviteter" activeclassname={styles.active}>
-                  Aktiviteter
-                </NavLink>
-              </li>
-              <li>
                 <NavLink to="/väder" activeclassname={styles.active}>
                   Väder
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/upptäck" activeclassname={styles.active}>
-                  Upptäck
+                <NavLink to="/aktiviteter" activeclassname={styles.active}>
+                  Aktiviteter
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/upptäck-1" activeclassname={styles.active}>
+                  Upptäck-1
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/upptäck-2" activeclassname={styles.active}>
+                  Upptäck-2
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/upptäck-3" activeclassname={styles.active}>
+                  Upptäck-3
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/upptäck-4" activeclassname={styles.active}>
+                  Upptäck-4
                 </NavLink>
               </li>
               <li>

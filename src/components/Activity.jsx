@@ -58,7 +58,7 @@ const Activity = ({ children }) => {
               display: Math.abs(active - i) > MAX_VISIBILITY ? "none" : "block",
             }}
           >
-            <NavLink to="/upptäck" className={styles.cardLink}>
+            <NavLink to="/aktiviteter" className={styles.cardLink}>
               {child}
             </NavLink>
           </div>
