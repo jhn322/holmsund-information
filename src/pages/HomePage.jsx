@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/Activity.module.css";
+import { NavLink } from "react-router-dom";
 
 // Components
 import Navigation from "../components/Navigation";
@@ -82,7 +83,12 @@ const HomePage = () => {
         </div>
         <img src={image} alt={title} />
         <div className={styles.cardText}>
-          <p>{hideText(text, 200)}</p>
+          <p>
+            {hideText(text, 200)}{" "}
+            <NavLink to="/aktiviteter">
+              <span className={styles.learnMore}>Läs Mer...</span>
+            </NavLink>
+          </p>
         </div>
       </div>
     );
