@@ -283,7 +283,7 @@ p {
   }
 
   .galleryContainer {
-    height: 112em;
+    height: 110em;
   }
 
   .galleryTitle {
@@ -343,7 +343,7 @@ p {
   .galleryContainer {
     flex-direction: row;
     justify-content: center;
-    height: 110vh;
+    height: 90vh;
     padding-bottom: 4rem;
   }
 
@@ -359,6 +359,7 @@ p {
   }
 
   .galleryImage {
+    margin-right: 1.8rem;
     width: calc(12rem + 20vw);
     height: calc(12rem + 20vw);
   }
@@ -376,7 +377,16 @@ p {
     align-items: center;
     position: relative;
     margin-top: -14rem;
-    margin-left: -0.8rem;
+    margin-left: -1.8rem;
+  }
+
+  .carouselText {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hoverContainer {
+    align-items: center;
   }
 
   .carouselInner {
@@ -413,13 +423,13 @@ p {
   .galleryContainer {
     flex-direction: row;
     justify-content: center;
-    height: 115vh;
+    height: 100vh;
     padding-bottom: 1rem;
   }
 
   .galleryImageInner {
     top: 0;
-    left: 4rem;
+    left: 13rem;
   }
 
   .galleryTitle {
@@ -477,9 +487,9 @@ p {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    max-width: 366px;
+    max-width: 500px;
     margin-top: 2rem;
-    margin-left: -10rem;
+    margin-left: -1.8rem;
     height: 200px;
   }
 }
@@ -493,13 +503,13 @@ p {
   .galleryContainer {
     flex-direction: row;
     justify-content: center;
-    height: 130vh;
+    height: 100vh;
     padding-bottom: 1rem;
   }
 
   .galleryImageInner {
     top: 0;
-    left: 1.5rem;
+    left: 16rem;
   }
 
   .galleryTitle {
@@ -557,9 +567,9 @@ p {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    max-width: 366px;
+    max-width: 600px;
     margin-top: 2rem;
-    margin-left: -17rem;
+    margin-left: -2.5rem;
     height: 200px;
   }
 
