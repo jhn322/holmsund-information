@@ -18,6 +18,11 @@ li {
   cursor: pointer;
 }
 
+a,
+p {
+  transition: color 0.3s;
+}
+
 .footerContainer {
   display: flex;
   flex-direction: column;
@@ -29,12 +34,25 @@ li {
   background-color: var(--black-text-color);
 }
 
+.footerContainer a:hover {
+  color: var(--white-text-color);
+}
+
+.iconsText {
+  display: none;
+}
+
 .footerIcons {
   display: flex;
   align-items: center;
   justify-content: space-around;
   font-size: 40px;
+  width: 20rem;
   margin: 0;
+}
+
+.iconsText p {
+  color: var(--white-text-color);
 }
 
 .github,
@@ -51,15 +69,31 @@ li {
   transition: all 0.3s ease-in-out;
 }
 
+.footerIcons a:hover .github,
+.footerIcons a:hover .react,
+.footerIcons a:hover .instagram,
+.footerIcons a:hover .facebook,
+.footerIcons a:hover .iconsText p,
+.iconsText:hover p,
+.iconsText:hover ~ .github,
+.iconsText:hover ~ .react,
+.iconsText:hover ~ .instagram,
+.iconsText:hover ~ .facebook {
+  color: var(--primary-color);
+}
+
+.footerIcons a:hover .github,
+.footerIcons a:hover .react,
+.footerIcons a:hover .instagram,
+.footerIcons a:hover .facebook,
 .github:hover,
 .react:hover,
 .instagram:hover,
 .facebook:hover {
-  color: var(--background-color);
   background-color: var(--gallery-color);
 }
 
-.footerText ul {
+.footerPolicy ul {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,5 +108,64 @@ li {
 }
 
 .footerYear p {
+  color: var(--white-text-color);
   font-size: 0.8rem;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  a {
+    padding: 6px 0;
+  }
+
+  .footerInner {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-bottom: 2rem;
+  }
+
+  .iconsText {
+    padding-right: 2rem;
+    padding-left: 0.5rem;
+    display: block;
+    transition: color 0.3s;
+  }
+
+  .iconsText p:hover {
+    color: var(--gallery-color);
+  }
+
+  .iconsText p {
+    font-size: 1.1rem;
+  }
+
+  .footerIcons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    font-size: 40px;
+    padding-right: 5rem;
+    margin: 0;
+  }
+
+  .footerIcons a {
+    display: flex;
+    align-items: center;
+  }
+
+  .footerPolicy ul {
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    padding-left: 5rem;
+    margin-top: 0;
+  }
+
+  .footerYear {
+    height: auto;
+  }
 }

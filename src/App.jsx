@@ -16,6 +16,8 @@ import GalleryPage4 from "./pages/GalleryPage4";
 import FooterPage from "./pages/FooterPage";
 import MissingPage from "./pages/MissingPage";
 import AboutUsPage from "./pages/AboutUsPage";
+import CookiesPage from "./pages/CookiesPage";
+import TermsOfService from "./pages/TermsOfService";
 
 const App = () => {
   return (
@@ -63,6 +65,11 @@ const App = () => {
           />
           <Route path="/footer" element={<FooterPage page="footer" />} />
           <Route path="/om-oss" element={<AboutUsPage page="om-oss" />} />
+          <Route path="/kakor" element={<CookiesPage page="kakor" />} />
+          <Route
+            path="/anvandarvillkor"
+            element={<TermsOfService page="anvandarvillkor" />}
+          />
           <Route path="*" element={<MissingPage />} />
         </Routes>
       </div>

@@ -167,15 +167,8 @@
   .navRight {
     top: 260px;
     display: block;
-    font-size: 90px;
-    background-color: var(--accent-color);
-    width: 3.2rem;
-    height: 3.2rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s;
+    font-size: 60px;
+    color: var(--white-text-color);
   }
 
   .navLeft {
@@ -188,14 +181,9 @@
     transform: translateX(100%) translateY(-50%);
   }
 
-  .navLeft:hover,
-  .navRight:hover {
-    background-color: var(--nav-color);
-  }
-
-  .rightIcon:hover,
-  .leftIcon:hover {
-    color: var(--primary-color);
+  .leftIcon,
+  .rightIcon {
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
   }
 }
 
@@ -233,14 +221,7 @@
     top: 260px;
     display: block;
     font-size: 90px;
-    background-color: var(--accent-color);
-    width: 3.2rem;
-    height: 3.2rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s;
+    color: var(--white-text-color);
   }
 
   .navLeft {
@@ -251,14 +232,9 @@
     right: 100px;
   }
 
-  .navLeft:hover,
-  .navRight:hover {
-    background-color: var(--nav-color);
-  }
-
-  .rightIcon:hover,
-  .leftIcon:hover {
-    color: var(--primary-color);
+  .leftIcon,
+  .rightIcon {
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
   }
 }
 
@@ -301,15 +277,7 @@
     top: 260px;
     display: block;
     font-size: 90px;
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-    width: 3.2rem;
-    height: 3.2rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s;
+    color: var(--white-text-color);
   }
 
   .navLeft {
@@ -320,13 +288,8 @@
     right: 200px;
   }
 
-  .navLeft:hover,
-  .navRight:hover {
-    background-color: var(--nav-color);
-  }
-
-  .rightIcon:hover,
-  .leftIcon:hover {
-    color: var(--primary-color);
+  .leftIcon,
+  .rightIcon {
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
   }
 }

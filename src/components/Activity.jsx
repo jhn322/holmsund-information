@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import styles from "../styles/Activity.module.css";
 
@@ -42,7 +42,7 @@ const Activity = ({ children }) => {
             className={`${styles.navLeft} ${styles.nav}`}
             onClick={() => setActive((i) => i - 1)}
           >
-            <FiChevronLeft strokeWidth={2.5} className={styles.leftIcon} />
+            <FaChevronLeft strokeWidth={1} className={styles.leftIcon} />
           </span>
         )}
         {React.Children.map(children, (child, i) => (
@@ -68,7 +68,7 @@ const Activity = ({ children }) => {
             className={`${styles.navRight} ${styles.nav}`}
             onClick={() => setActive((i) => i + 1)}
           >
-            <FiChevronRight strokeWidth={2.5} className={styles.rightIcon} />
+            <FaChevronRight strokeWidth={1} className={styles.rightIcon} />
           </span>
         )}
       </div>

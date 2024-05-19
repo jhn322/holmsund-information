@@ -248,7 +248,7 @@ li {
 }
 
 /* Desktop */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1135px) {
   /* Main nav */
   .navContainer {
     height: 10em;

@@ -19,33 +19,45 @@ const Footer = () => {
             alt="GitHub website"
           >
             <FaGithub className={styles.github} />
+            <div className={styles.iconsText}>
+              <p>GitHub</p>
+            </div>
           </a>
           <a
-            href="https://github.com/jhn322"
-            target="_blank"
-            rel="noopener noreferrer"
-            alt="Google website"
-          >
-            <FaReact className={styles.react} />
-          </a>
-          <a
-            href="https://github.com/jhn322"
+            href="https://react.dev/"
             target="_blank"
             rel="noopener noreferrer"
             alt="React website"
           >
-            <FaInstagram className={styles.instagram} />
+            <FaReact className={styles.react} />
+            <div className={styles.iconsText}>
+              <p>React</p>
+            </div>
           </a>
           <a
-            href="https://github.com/jhn322"
+            href="https://www.instagram.com/explore/locations/240089071/holmsund-vasterbottens-lan-sweden/"
+            target="_blank"
+            rel="noopener noreferrer"
+            alt="Instagram website"
+          >
+            <FaInstagram className={styles.instagram} />
+            <div className={styles.iconsText}>
+              <p>Instagram</p>
+            </div>
+          </a>
+          <a
+            href="https://www.facebook.com/groups/415551751837063/?locale=sv_SE"
             target="_blank"
             rel="noopener noreferrer"
             alt="Facebook website"
           >
             <FaFacebook className={styles.facebook} />
+            <div className={styles.iconsText}>
+              <p className={styles.text}>Facebook</p>
+            </div>
           </a>
         </div>
-        <div className={styles.footerText}>
+        <div className={styles.footerPolicy}>
           <ul>
             <NavLink to="/">
               <li>Hem</li>
@@ -53,16 +65,17 @@ const Footer = () => {
             <NavLink to="/om-oss">
               <li>Om oss</li>
             </NavLink>
-            <li>Kontakta oss</li>
-            <li>Användarvillkor</li>
-            <li>Cookiepolicy</li>
+            <NavLink to="/kakor">
+              <li>Cookiepolicy</li>
+            </NavLink>
+            <NavLink to="/anvandarvillkor">
+              <li>Användarvillkor</li>
+            </NavLink>
           </ul>
-          <div className={styles.footerYear}>
-            <p>
-              &copy; {currentYear} Holmsund Information. All rights reserved.
-            </p>
-          </div>
         </div>
+      </div>
+      <div className={styles.footerYear}>
+        <p>&copy; {currentYear} Holmsund Information. All rights reserved.</p>
       </div>
     </section>
   );

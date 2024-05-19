@@ -32,7 +32,7 @@ const ScrollUp = () => {
         className={`${styles.scrollTop} ${!visible && styles.invisible}`}
         onClick={scrollToTop}
       >
-        <FiChevronUp strokeWidth={3} className={styles.scrollIcon} />
+        <FiChevronUp strokeWidth={1} className={styles.scrollIcon} />
       </div>
     </div>
   );

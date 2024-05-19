@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import styles from "../styles/GalleryCarousel.module.css";
 import { NavLink } from "react-router-dom";
 
@@ -56,10 +56,10 @@ const AutoCarousel = ({ images }) => {
           </div>
         ))}
         <span className={styles.prev} onClick={goToPrevSlide}>
-          <FiChevronLeft />
+          <FaChevronLeft />
         </span>
         <span className={styles.next} onClick={goToNextSlide}>
-          <FiChevronRight />
+          <FaChevronRight />
         </span>
       </div>
       <div className={styles.carouselText}>
