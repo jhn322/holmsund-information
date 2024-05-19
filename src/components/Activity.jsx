@@ -74,7 +74,7 @@ const Card = ({ image, title, text }) => {
   return (
     <div className={styles.card}>
       <div className={styles.cardText}>
-        <h2>{title}</h2>
+        <h2 className={styles.cardTitle}>{title}</h2>
       </div>
       <img src={image} alt={title} />
       <div className={styles.cardText}>
