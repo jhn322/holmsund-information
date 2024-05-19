@@ -64,9 +64,14 @@ const AutoCarousel = ({ images }) => {
       </div>
       <div className={styles.carouselText}>
         <NavLink to={images[currentIndex].link}>
-          <h2>{images[currentIndex].title}</h2>
+          <div className={styles.hoverContainer}>
+            <h2>{images[currentIndex].title}</h2>
+            <p>
+              {images[currentIndex].text}{" "}
+              <span className={styles.learnMore}>Läs Mer...</span>
+            </p>
+          </div>
         </NavLink>
-        <p>{images[currentIndex].text}</p>
       </div>
       <div className={styles.dotPagination}>
         {images.map((_, index) => (

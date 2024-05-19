@@ -145,6 +145,18 @@ p {
   height: 200px;
 }
 
+.hoverContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: color 0.3s;
+}
+
+.hoverContainer:hover h2,
+.hoverContainer:hover .learnMore {
+  color: var(--hover-color);
+}
+
 .carouselText h2 {
   text-transform: uppercase;
   color: var(--white-text-color);
@@ -158,6 +170,17 @@ p {
 
 .carouselText p {
   color: var(--white-text-color);
+}
+
+.learnMore {
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.learnMore:hover {
+  color: var(--hover-color);
 }
 
 .dotPagination {
