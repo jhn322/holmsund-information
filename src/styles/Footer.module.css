@@ -56,7 +56,7 @@ p {
 }
 
 .github,
-.react,
+.twitter,
 .instagram,
 .facebook {
   cursor: pointer;
@@ -70,24 +70,24 @@ p {
 }
 
 .footerIcons a:hover .github,
-.footerIcons a:hover .react,
+.footerIcons a:hover .twitter,
 .footerIcons a:hover .instagram,
 .footerIcons a:hover .facebook,
 .footerIcons a:hover .iconsText p,
 .iconsText:hover p,
 .iconsText:hover ~ .github,
-.iconsText:hover ~ .react,
+.iconsText:hover ~ .twitter,
 .iconsText:hover ~ .instagram,
 .iconsText:hover ~ .facebook {
   color: var(--primary-color);
 }
 
 .footerIcons a:hover .github,
-.footerIcons a:hover .react,
+.footerIcons a:hover .twitter,
 .footerIcons a:hover .instagram,
 .footerIcons a:hover .facebook,
 .github:hover,
-.react:hover,
+.twitter:hover,
 .instagram:hover,
 .facebook:hover {
   background-color: var(--gallery-color);

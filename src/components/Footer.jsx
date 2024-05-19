@@ -3,7 +3,7 @@ import styles from "../styles/Footer.module.css";
 import { NavLink } from "react-router-dom";
 
 // Icons
-import { FaGithub, FaReact, FaInstagram, FaFacebook } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -24,14 +24,14 @@ const Footer = () => {
             </div>
           </a>
           <a
-            href="https://react.dev/"
+            href="https://x.com/search?q=%23holmsund&src=typeahead_click"
             target="_blank"
             rel="noopener noreferrer"
-            alt="React website"
+            alt="Twitter website"
           >
-            <FaReact className={styles.react} />
+            <FaTwitter className={styles.twitter} />
             <div className={styles.iconsText}>
-              <p>React</p>
+              <p>Twitter</p>
             </div>
           </a>
           <a
