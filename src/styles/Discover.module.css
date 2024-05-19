@@ -29,7 +29,7 @@ body {
 }
 
 .discoverTitle h2 {
-  margin-top: 4.2rem;
+  margin-top: -6rem;
   margin-bottom: 0;
   font-size: 2.5rem;
   padding: 20px 0;
@@ -286,6 +286,7 @@ body {
   }
 
   .discoverTitle h2 {
+    margin-top: 2rem;
     font-size: 3rem;
   }
 
@@ -326,9 +327,10 @@ body {
   }
 
   .discoverTitle h2 {
-    margin-top: 7rem;
+    margin-top: 9rem;
     font-size: 3rem;
   }
+
   .cardOverlay h3 {
     font-size: 1.7rem;
   }

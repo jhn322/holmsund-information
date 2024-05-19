@@ -76,6 +76,7 @@ span {
 .separatorSecondText {
   color: var(--white-text-color);
   font-size: 1.3rem;
+  padding-bottom: 2.5rem;
 }
 
 /* Small phones */
@@ -84,12 +85,12 @@ span {
     height: 58vh;
   }
 
-  .separatorContent {
-    height: 24rem;
-  }
-
   .separatorFirst {
     height: 5em;
+  }
+
+  .separatorContent {
+    height: 24rem;
   }
 
   .separatorSecond {
@@ -123,12 +124,12 @@ span {
     height: 63vh;
   }
 
-  .separatorContent {
-    height: 26rem;
-  }
-
   .separatorFirst {
     height: 8em;
+  }
+
+  .separatorContent {
+    height: 26rem;
   }
 
   .separatorSecondTitle {
@@ -142,12 +143,12 @@ span {
     height: 56vh;
   }
 
-  .separatorContent {
-    height: 20rem;
-  }
-
   .separatorFirst {
     height: 7em;
+  }
+
+  .separatorContent {
+    height: 20rem;
   }
 
   .separatorSecond {
@@ -165,12 +166,12 @@ span {
     height: 58vh;
   }
 
-  .separatorContent {
-    height: 20rem;
-  }
-
   .separatorFirst {
     height: 7em;
+  }
+
+  .separatorContent {
+    height: 20rem;
   }
 
   .separatorSecond {
@@ -185,19 +186,19 @@ span {
 /* Large Desktop */
 @media only screen and (min-width: 1200px) {
   .separatorContainer {
-    height: 66vh;
+    height: 70vh;
+  }
+
+  .separatorFirst {
+    height: 16em;
   }
 
   .separatorContent {
     height: 20rem;
   }
 
-  .separatorFirst {
-    height: 10em;
-  }
-
   .separatorSecond {
-    height: 30vh;
+    height: 26vh;
   }
 
   .separatorSecondTitle {
