@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import styles from "../styles/GalleryCarousel.module.css";
 import { NavLink } from "react-router-dom";
+
+// Icons
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
+// CSS
+import styles from "../styles/GalleryCarousel.module.css";
 
 const AutoCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);

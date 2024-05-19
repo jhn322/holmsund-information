@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+
+// Icons
 import { FiMenu, FiSearch, FiX } from "react-icons/fi";
+
+// CSS
 import styles from "../styles/Navigation.module.css";
+
+// Logo
 import logo from "../assets/navLogo.png";
 
 const Navigation = () => {

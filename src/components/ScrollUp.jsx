@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
+
+// Icons
 import { FiChevronUp } from "react-icons/fi";
+
+// CSS
 import styles from "../styles/ScrollUp.module.css";
 
 const ScrollUp = () => {

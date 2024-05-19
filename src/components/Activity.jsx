@@ -1,6 +1,10 @@
 import { useState } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+
+// Icons
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
+// CSS
 import styles from "../styles/Activity.module.css";
 
 // Images

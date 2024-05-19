@@ -1,6 +1,8 @@
 import { useRef, useEffect, useState } from "react";
-import styles from "../styles/Discover.module.css";
 import { NavLink } from "react-router-dom";
+
+// CSS
+import styles from "../styles/Discover.module.css";
 
 // Images
 import discoverImage1 from "../assets/discover1.jpg";

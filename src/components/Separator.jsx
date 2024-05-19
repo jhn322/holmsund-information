@@ -1,6 +1,7 @@
 import React from "react";
+
+// CSS
 import styles from "../styles/Separator.module.css";
-import { NavLink } from "react-router-dom";
 
 const Separator = () => {
   return (

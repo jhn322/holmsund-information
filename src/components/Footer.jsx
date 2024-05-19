@@ -1,6 +1,8 @@
 import React from "react";
-import styles from "../styles/Footer.module.css";
 import { NavLink } from "react-router-dom";
+
+// CSS
+import styles from "../styles/Footer.module.css";
 
 // Icons
 import { FaGithub, FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
