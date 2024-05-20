@@ -8,7 +8,7 @@ import { FiMenu, FiSearch, FiX } from "react-icons/fi";
 import styles from "../styles/Navigation.module.css";
 
 // Logo
-import logo from "../assets/navLogo.png";
+import logo from "../assets/navLogo.svg";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
