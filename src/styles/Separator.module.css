@@ -176,6 +176,10 @@ span {
     height: 20rem;
   }
 
+  .separatorText {
+    width: 95%;
+  }
+
   .separatorSecond {
     height: 29vh;
   }
@@ -197,6 +201,11 @@ span {
 
   .separatorContent {
     height: 20rem;
+    border: 1px solid red;
+  }
+
+  .separatorText {
+    max-width: 70rem;
   }
 
   .separatorSecond {
