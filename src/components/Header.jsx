@@ -4,7 +4,22 @@ import { NavLink } from "react-router-dom";
 // CSS
 import styles from "../styles/Header.module.css";
 
+const getCurrentSeason = () => {
+  const month = new Date().getMonth() + 1;
+  if (month >= 3 && month <= 5) {
+    return "Vår";
+  } else if (month >= 6 && month <= 8) {
+    return "Sommar";
+  } else if (month >= 9 && month <= 11) {
+    return "Höst";
+  } else {
+    return "Vinter";
+  }
+};
+
 const Header = () => {
+  const currentSeason = getCurrentSeason();
+
   return (
     <main className={styles.headerContainer}>
       <div className={styles.innerHeader}>
@@ -16,7 +31,7 @@ const Header = () => {
           <div className={styles.btnContainer}>
             <NavLink to="/aktiviteter">
               <button className={styles.headerBtn}>
-                Flera aktiviteter man kan göra i Holmsund
+                Aktiviteter man kan hitta på denna {currentSeason} i Holmsund
               </button>
             </NavLink>
           </div>

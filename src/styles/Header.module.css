@@ -57,8 +57,9 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  padding: 18px;
+  padding: 1.3rem;
   border-radius: 35px;
+  text-transform: uppercase;
   width: 22em;
   color: var(--nav-color);
   background-color: var(--hover-color);
@@ -98,7 +99,6 @@ body {
   }
 
   .headerBtn {
-    font-size: 1.1rem;
     width: 26em;
   }
 }
@@ -110,8 +110,7 @@ body {
   }
 
   .headerBtn {
-    font-size: 1.3rem;
-    padding: 1rem;
-    width: 30em;
+    padding: 1.3rem;
+    width: 33em;
   }
 }
