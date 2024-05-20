@@ -127,6 +127,7 @@ body {
 
 .expandedText {
   margin-top: 3rem;
+  max-width: 85%;
   color: var(--white-text-color);
 }
 
