@@ -18,7 +18,7 @@ span {
 }
 
 .separatorContainer {
-  height: 70vh;
+  height: 60vh;
 }
 
 .separatorFirst {
@@ -36,15 +36,18 @@ span {
 }
 
 .separatorContent {
-  height: 27rem;
+  height: 24rem;
   padding: 2rem 0;
   background-color: var(--primary-color);
 }
 
 .separatorText,
 .separatorSecondText {
-  max-width: 80%;
+  max-width: 90%;
+  padding: 0 1rem;
   font-size: 1.3rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .link,
@@ -65,8 +68,7 @@ span {
 
 .separatorSecond {
   background-color: var(--accent-color);
-  height: 30vh;
-  padding-bottom: 5rem;
+  height: 18rem;
 }
 
 .separatorSecondTitle {
@@ -83,11 +85,11 @@ span {
 /* Small phones */
 @media only screen and (max-width: 400px) {
   .separatorContainer {
-    height: 68vh;
+    height: 47rem;
   }
 
   .separatorFirst {
-    height: 5em;
+    height: 6rem;
   }
 
   .separatorContent {
@@ -95,7 +97,8 @@ span {
   }
 
   .separatorSecond {
-    height: 28vh;
+    height: 22rem;
+    padding-bottom: 6rem;
   }
 
   .separatorText {
@@ -136,6 +139,10 @@ span {
 
   .separatorSecondTitle {
     font-size: 2.75rem;
+  }
+
+  .separatorSecond {
+    height: 22rem;
   }
 }
 
