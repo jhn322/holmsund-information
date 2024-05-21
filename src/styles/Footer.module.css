@@ -38,6 +38,19 @@ p {
   color: var(--white-text-color);
 }
 
+.logoSection {
+  margin-top: -2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18rem;
+  height: auto;
+  margin: auto;
+}
+
 .iconsText {
   display: none;
 }
@@ -124,6 +137,18 @@ p {
     justify-content: center;
     flex-direction: row;
     padding-bottom: 2rem;
+  }
+
+  .logoSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .logo {
+    width: 24rem;
   }
 
   .iconsText {

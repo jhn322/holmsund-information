@@ -7,12 +7,21 @@ import styles from "../styles/Footer.module.css";
 // Icons
 import { FaGithub, FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
 
+// Logo
+import logo1 from "../assets/navLogo White.png";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
     <section className={styles.footerContainer}>
       <div className={styles.footerInner}>
+        <div className={styles.logoSection}>
+          {" "}
+          <NavLink to="/" className={styles.logoContainer}>
+            <img src={logo1} alt="Logo" className={styles.logo} />
+          </NavLink>
+        </div>
         <div className={styles.footerIcons}>
           <a
             href="https://github.com/jhn322"
