@@ -126,7 +126,7 @@ body {
 }
 
 .expandedText {
-  margin-top: 0rem;
+  margin-top: 3rem;
   max-width: 85%;
   color: var(--white-text-color);
 }
@@ -157,6 +157,10 @@ body {
   .cardOverlay h3 {
     font-size: 1.3rem;
   }
+
+  .expandedText {
+    margin-top: 3.5rem;
+  }
 }
 
 /* Uncommon phone size */
@@ -180,10 +184,6 @@ body {
 
   .cardOverlay h3 {
     font-size: 1.5rem;
-  }
-
-  .expandedText {
-    margin-top: 1rem;
   }
 }
 
@@ -224,7 +224,7 @@ body {
   }
 
   .expandedText {
-    margin-top: -0.5rem;
+    margin-top: 2.5rem;
   }
 }
 
@@ -265,7 +265,7 @@ body {
   }
 
   .expandedText {
-    margin-top: 2rem;
+    margin-top: 5rem;
   }
 }
 
@@ -306,7 +306,7 @@ body {
   }
 
   .expandedText {
-    margin-top: 6.5rem;
+    margin-top: 8rem;
   }
 }
 
@@ -347,6 +347,6 @@ body {
   }
 
   .expandedText {
-    margin-top: 9rem;
+    margin-top: 12rem;
   }
 }
