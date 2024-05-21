@@ -29,7 +29,7 @@ body {
 }
 
 .discoverTitle h2 {
-  margin-top: -6rem;
+  margin-top: 4rem;
   margin-bottom: 0;
   font-size: 2.5rem;
   padding: 20px 0;
@@ -161,6 +161,7 @@ body {
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 599px) {
   .discoverTitle h2 {
+    margin-top: 0rem;
     font-size: 2.75rem;
   }
 
@@ -172,6 +173,7 @@ body {
 /* Small Tablet */
 @media only screen and (min-width: 600px) and (max-width: 769px) {
   .discoverTitle h2 {
+    margin-top: 0rem;
     font-size: 3rem;
   }
 
@@ -207,6 +209,7 @@ body {
   }
 
   .discoverTitle h2 {
+    margin-top: 0rem;
     font-size: 3rem;
   }
 
@@ -247,6 +250,7 @@ body {
   }
 
   .discoverTitle h2 {
+    margin-top: 0rem;
     font-size: 3rem;
   }
 
@@ -328,7 +332,7 @@ body {
   }
 
   .discoverTitle h2 {
-    margin-top: 9rem;
+    margin-top: 12rem;
     font-size: 3rem;
   }
 

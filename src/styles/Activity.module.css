@@ -253,7 +253,7 @@
 /* Full desktop */
 @media only screen and (min-width: 2200px) {
   .activityContainer {
-    height: 70vh;
+    height: 85vh;
     margin-top: -2rem;
   }
 

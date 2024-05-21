@@ -18,7 +18,7 @@ span {
 }
 
 .separatorContainer {
-  height: 60vh;
+  height: 65vh;
 }
 
 .separatorFirst {
@@ -144,6 +144,10 @@ span {
   .separatorSecond {
     height: 22rem;
   }
+
+  .separatorSecondText {
+    margin-bottom: 2rem;
+  }
 }
 
 /* Small Tablet */
@@ -199,7 +203,7 @@ span {
 /* Large Desktop */
 @media only screen and (min-width: 1200px) {
   .separatorContainer {
-    height: 70vh;
+    height: 78vh;
   }
 
   .separatorFirst {
@@ -215,7 +219,7 @@ span {
   }
 
   .separatorSecond {
-    height: 26vh;
+    height: 22rem;
   }
 
   .separatorSecondTitle {
