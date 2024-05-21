@@ -145,6 +145,8 @@ p {
     justify-content: center;
     flex-direction: column;
     margin-top: 1rem;
+    margin-right: 6rem;
+    /* border: 1px solid red; */
   }
 
   .logo {
@@ -187,6 +189,7 @@ p {
     width: 100%;
     height: 100%;
     padding-left: 5rem;
+    margin-right: 5.9rem;
     margin-top: 0;
   }
 
