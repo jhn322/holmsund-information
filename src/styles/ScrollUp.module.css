@@ -10,7 +10,7 @@
 .scrollTop {
   position: fixed;
   bottom: 35px;
-  right: 15px;
+  right: 30px;
   background-color: var(--accent-color);
   border: 1px solid var(--primary-color);
   width: 2.6rem;
