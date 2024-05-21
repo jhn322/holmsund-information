@@ -75,7 +75,7 @@ li {
 }
 
 .logo {
-  width: 110px;
+  width: 140px;
   height: auto;
   position: relative;
   margin: auto;
@@ -284,6 +284,10 @@ li {
     height: 160px;
     width: 230px;
     left: 46px;
+  }
+
+  .logo {
+    width: 230px;
   }
 
   .closeIcon {

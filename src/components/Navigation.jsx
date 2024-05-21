@@ -8,13 +8,15 @@ import { FiMenu, FiSearch, FiX } from "react-icons/fi";
 import styles from "../styles/Navigation.module.css";
 
 // Logo
-import logo from "../assets/navLogo.svg";
+import logo1 from "../assets/navLogo White.png";
+import logo2 from "../assets/navLogo Black.png";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuClosing, setIsMenuClosing] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [visible, setVisible] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
 
   // Toggles the menu open/close
   const toggleMenu = () => {
@@ -87,7 +89,13 @@ const Navigation = () => {
           <ul className={styles.navList}>
             <li>
               <NavLink to="/" className={styles.logoContainer}>
-                <img src={logo} alt="Logo" className={styles.logo} />
+                <img
+                  src={isHovered ? logo2 : logo1}
+                  alt="Logo"
+                  className={styles.logo}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                />
               </NavLink>
             </li>
             <li>
