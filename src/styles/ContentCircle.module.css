@@ -25,7 +25,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5em 0;
+  padding: 3rem 0; /* potential issue in desktop */
 }
 
 .textContent {
@@ -34,7 +34,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 20px;
+  padding: 2rem 0;
 }
 
 .titleContent {
@@ -54,6 +54,7 @@ body {
   font-size: 1.3rem;
   word-spacing: 1px;
   line-height: 2rem;
+  max-width: 90%;
 }
 
 .fadeInSlideIn {
@@ -77,12 +78,15 @@ body {
   opacity: 0;
 }
 
+/* -------------2nd section - Circle----------------- */
+
 .circleContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70vh;
   width: 100%;
+  padding: 2rem;
   background-color: var(--grey-color);
   overflow: hidden;
 }

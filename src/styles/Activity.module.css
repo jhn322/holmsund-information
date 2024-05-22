@@ -14,15 +14,14 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border: 1px solid red;
   background-color: var(--primary-color);
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .carousel {
   position: relative;
-  width: 35rem;
-  height: 40rem;
+  width: 100vw;
+  height: 60vh;
   perspective: 500px;
   transform-style: preserve-3d;
 }
@@ -42,9 +41,9 @@
 
 .card {
   width: 100%;
-  max-width: 22rem;
-  height: 40em;
-  padding: 2rem;
+  /* max-width: 22rem; */
+  height: 40rem;
+  padding: 1rem;
   background-color: hsl(38deg, 66%, calc(100% - var(--abs-offset) * 50%));
   border-radius: 10px;
   text-align: justify;
@@ -58,7 +57,7 @@
   font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  margin: 0 0 0.7em;
+  margin: 0 0 0.5rem;
   color: var(--black-text-color);
   transition: all 0.3s ease-out;
 }
@@ -78,9 +77,21 @@
 
 .card p {
   max-height: 10rem;
-  overflow: hidden;
-  letter-spacing: -0.3px;
+  padding-bottom: 1rem;
+  padding: 0 0.5rem;
   text-overflow: ellipsis;
+}
+
+.learnMore {
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+  color: var(--black-text-color);
+}
+
+.learnMore:hover {
+  color: var(--hover-color);
 }
 
 .nav {
@@ -99,19 +110,23 @@
 
 .navLeft,
 .navRight {
-  display: none;
-}
-
-.learnMore {
-  font-size: 1.4rem;
-  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 240px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  color: var(--primary-color);
+  font-size: 50px;
+  height: 100%;
   cursor: pointer;
-  transition: color 0.3s;
-  color: var(--black-text-color);
+  padding: 0;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
 }
 
-.learnMore:hover {
-  color: var(--hover-color);
+.navLeft {
+  right: 60px;
 }
 
 /* Small phones */

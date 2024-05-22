@@ -44,7 +44,7 @@ span {
 .separatorText,
 .separatorSecondText {
   max-width: 90%;
-  padding: 0 1rem;
+  padding: 1rem;
   font-size: 1.3rem;
   word-break: break-word;
   overflow-wrap: break-word;
@@ -70,7 +70,6 @@ span {
   background-color: var(--accent-color);
   height: 30vh;
   padding: 2rem;
-  border: 1px solid red;
 }
 
 .separatorSecondTitle {
@@ -85,21 +84,20 @@ span {
 
 /* Small phones */
 @media only screen and (max-width: 400px) {
-  /* .separatorContainer {
-    height: 47rem;
-  } */
+  .separatorContainer {
+    height: 80vh;
+  }
 
   .separatorFirst {
-    height: 6rem;
+    height: 8vh;
   }
 
   .separatorContent {
-    height: 24rem;
+    height: 40vh;
   }
 
   .separatorSecond {
-    height: 22rem;
-    padding-bottom: 6rem;
+    height: 32vh;
   }
 
   .separatorText {
@@ -115,7 +113,6 @@ span {
   }
 
   .separatorSecondTitle {
-    margin-top: 4rem;
     font-size: 2.25rem;
   }
 

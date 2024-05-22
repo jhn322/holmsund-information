@@ -11,6 +11,8 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 .discoverContainer {
@@ -21,6 +23,7 @@ body {
   position: relative;
   background-color: var(--primary-color);
   padding: 2rem;
+  height: 190vh;
 }
 
 .discoverTitle {
@@ -33,13 +36,13 @@ body {
   margin: 4rem 0 0 0;
   margin-bottom: 0;
   font-size: 2.5rem;
-  padding: 20px 0;
+  padding: 1.5rem 0;
 }
 
 .discoverCardContainer {
   position: relative;
-  border: 1px solid green;
   z-index: 1;
+  padding: 2rem 0;
 }
 
 .discoverCardContainer h3 {
@@ -87,7 +90,7 @@ body {
   height: 18%;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.25);
-  padding: 20px;
+  padding: 1.5rem;
   color: var(--primary-color);
   text-align: center;
   border-radius: 10px;
@@ -119,7 +122,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 .expandedOverlay > div p {
@@ -134,7 +137,6 @@ body {
 
 .expandedBtn {
   padding: 0.5rem 1rem;
-  margin-top: 0.5rem;
   background-color: transparent;
   color: var(--primary-color);
   border: 2px solid #fff;

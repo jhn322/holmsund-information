@@ -8,7 +8,7 @@
 }
 
 body {
-  height: 100vh;
+  height: 130vh;
   margin: 0;
   padding: 0;
 }
@@ -30,7 +30,8 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 85em;
+  height: 130vh;
+  padding: 4rem;
   background-color: var(--gallery-color);
 }
 
@@ -64,7 +65,7 @@ p {
   top: -60px;
   left: -14px;
   height: 8rem;
-  width: 8em;
+  width: 8rem;
   background-image: url("../assets/galleryCircle.png");
   background-size: cover;
   z-index: 1;
@@ -86,6 +87,7 @@ p {
   align-items: center;
   position: relative;
   margin-left: 0.6rem;
+  padding-bottom: 4rem;
 }
 
 .carouselInner {
@@ -140,9 +142,9 @@ p {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  max-width: 366px;
+  max-width: 23rem;
   margin-top: 2rem;
-  height: 200px;
+  height: 12.5rem;
 }
 
 .hoverContainer {
@@ -185,6 +187,7 @@ p {
 
 .dotPagination {
   margin-top: 10px;
+  padding-bottom: 2rem;
 }
 
 .dot {

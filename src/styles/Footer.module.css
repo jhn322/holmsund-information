@@ -29,6 +29,7 @@ p {
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
+  height: 100%;
   width: auto;
   height: auto;
   background-color: var(--black-text-color);
