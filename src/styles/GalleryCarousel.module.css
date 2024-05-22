@@ -117,7 +117,7 @@ p {
   background-color: transparent;
   border: none;
   color: var(--primary-color);
-  font-size: 50px;
+  font-size: 3.125rem;
   height: 100%;
   cursor: pointer;
   padding: 0;
@@ -186,14 +186,14 @@ p {
 }
 
 .dotPagination {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   padding-bottom: 2rem;
 }
 
 .dot {
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 0.9375rem;
+  height: 0.9375rem;
   border-radius: 50%;
   background-color: var(--primary-color);
   margin: 2.5rem 0.65rem;
@@ -240,7 +240,7 @@ p {
   }
 
   .carouselText {
-    max-width: 326px;
+    max-width: 20.375rem;
   }
 }
 
@@ -251,7 +251,7 @@ p {
   }
 
   .galleryContainer {
-    height: 95em;
+    height: 150vh;
   }
 
   .galleryImage {
@@ -266,7 +266,7 @@ p {
 
   .prev,
   .next {
-    font-size: 60px;
+    font-size: 3.75rem;
   }
 
   .prev {
@@ -274,7 +274,7 @@ p {
   }
 
   .carouselText {
-    max-width: 442px;
+    max-width: 27.625rem;
   }
 }
 
@@ -285,7 +285,7 @@ p {
   }
 
   .galleryContainer {
-    height: 110em;
+    height: 160vh;
   }
 
   .galleryTitle {
@@ -320,7 +320,7 @@ p {
 
   .prev,
   .next {
-    font-size: 70px;
+    font-size: 4.375rem;
   }
 
   .next {
@@ -332,7 +332,7 @@ p {
   }
 
   .carouselText {
-    max-width: 550px;
+    max-width: 34.375rem;
   }
 }
 
@@ -345,7 +345,7 @@ p {
   .galleryContainer {
     flex-direction: row;
     justify-content: center;
-    height: 90vh;
+    height: 100vh;
     padding-bottom: 4rem;
   }
 
@@ -403,7 +403,7 @@ p {
 
   .prev,
   .next {
-    font-size: 60px;
+    font-size: 3.75rem;
     top: -10px;
   }
 
@@ -425,7 +425,7 @@ p {
   .galleryContainer {
     flex-direction: row;
     justify-content: center;
-    height: 100vh;
+    height: 120vh;
     padding-bottom: 1rem;
   }
 
@@ -472,7 +472,7 @@ p {
 
   .prev,
   .next {
-    font-size: 70px;
+    font-size: 4.375rem;
     top: -10px;
   }
 
@@ -489,10 +489,10 @@ p {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    max-width: 500px;
+    max-width: 31.25rem;
     margin-top: 2rem;
     margin-left: -1.8rem;
-    height: 200px;
+    height: 12.5rem;
   }
 }
 
@@ -505,7 +505,7 @@ p {
   .galleryContainer {
     flex-direction: row;
     justify-content: center;
-    height: 100vh;
+    height: 130vh;
     padding-bottom: 1rem;
   }
 
@@ -552,7 +552,7 @@ p {
 
   .prev,
   .next {
-    font-size: 70px;
+    font-size: 4.375rem;
     top: -10px;
   }
 
@@ -569,10 +569,10 @@ p {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    max-width: 600px;
+    max-width: 37.5rem;
     margin-top: 2rem;
     margin-left: -2.5rem;
-    height: 200px;
+    height: 12.5rem;
   }
 
   .dotPagination {

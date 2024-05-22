@@ -24,7 +24,7 @@ li {
   align-items: flex-end;
   justify-content: center;
   width: 100vw;
-  height: 6.5em;
+  height: 6.5rem;
   position: fixed;
   top: 0;
   z-index: 98;
@@ -62,8 +62,8 @@ li {
 .logoContainer {
   display: flex;
   border-radius: 0 0 10px 10px;
-  height: 100px;
-  width: 180px;
+  height: 6.25rem;
+  width: 11.25rem;
   position: absolute;
   left: 36px;
   top: 0;
@@ -75,7 +75,7 @@ li {
 }
 
 .logo {
-  width: 140px;
+  width: 8.75rem;
   height: auto;
   position: relative;
   margin: auto;
@@ -85,7 +85,7 @@ li {
 
 /* Nav icons */
 .navList li svg {
-  font-size: 34px;
+  font-size: 1.7rem;
   cursor: pointer;
   transition: color 0.3s;
 }
@@ -94,8 +94,8 @@ li {
 .navList li {
   display: flex;
   align-items: center;
-  margin: 0 15px;
-  font-size: 36px;
+  margin: 0 0.9375rem;
+  font-size: 2.25rem;
 }
 
 .navList li a {
@@ -111,17 +111,17 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 14px;
-  font-size: 34px;
+  margin: 0 0.875rem;
+  font-size: 2.125rem;
   cursor: pointer;
 }
 
 .searchIcon {
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 
 .menuIcon {
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 
 .searchIcon,
@@ -133,7 +133,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 30px;
+  margin-right: 1.875rem;
 }
 
 /* ------------- Burger menu ------------- */
@@ -194,12 +194,12 @@ li {
 }
 
 .openMenu li {
-  margin-bottom: 20px;
+  margin-bottom: 1.25px;
 }
 
 .openMenu li a {
   text-decoration: none;
-  font-size: 50px;
+  font-size: 3.125rem;
   transition: color 0.3s;
 }
 
@@ -211,8 +211,8 @@ li {
   position: absolute;
   top: 31px;
   right: 45px;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border: 2.8px solid var(--primary-color);
   border-radius: 50%;
   border-width: 3px;
@@ -224,7 +224,7 @@ li {
 }
 
 .close {
-  font-size: 30px;
+  font-size: 1.875rem;
   transition: color 0.3s;
 }
 
@@ -241,8 +241,8 @@ li {
   }
 
   .logoContainer {
-    height: 100px;
-    width: 160px;
+    height: 6.25rem;
+    width: 10rem;
     left: 18px;
   }
 }
@@ -251,7 +251,7 @@ li {
 @media only screen and (min-width: 1135px) {
   /* Main nav */
   .navContainer {
-    height: 10em;
+    height: 10rem;
   }
 
   .navItems {
@@ -267,32 +267,32 @@ li {
   }
 
   /* Nav icons */
-  .navList li svg {
-    font-size: 40px;
+  .navList li {
+    margin: 1.25rem;
   }
 
-  .navLink {
-    display: flex;
+  .navList li svg {
+    font-size: 2.5rem;
   }
 
   .navIcons {
-    font-size: 40px;
-    margin: 0 20px;
+    font-size: 2.5rem;
+    margin: 0 1.25rem;
   }
 
   .logoContainer {
-    height: 160px;
-    width: 230px;
-    left: 46px;
+    height: 10rem;
+    width: 14.375rem;
+    left: 2.875rem;
   }
 
   .logo {
-    width: 230px;
+    width: 14.375rem;
   }
 
   .closeIcon {
-    top: 55px;
-    right: 55px;
+    top: 3.4375rem;
+    right: 3.4375rem;
   }
 
   .menuWrapper {
@@ -300,10 +300,10 @@ li {
   }
 
   .searchIcon {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
 
   .menuIcon {
-    font-size: 44px;
+    font-size: 2.75rem;
   }
 }

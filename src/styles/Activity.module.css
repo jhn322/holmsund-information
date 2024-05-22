@@ -9,7 +9,7 @@
 
 .activityContainer {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,7 +22,8 @@
   position: relative;
   width: 100vw;
   height: 60vh;
-  perspective: 500px;
+  perspective: 18rem;
+  padding: 2rem 0;
   transform-style: preserve-3d;
 }
 
@@ -41,7 +42,6 @@
 
 .card {
   width: 100%;
-  /* max-width: 22rem; */
   height: 40rem;
   padding: 1rem;
   background-color: hsl(38deg, 66%, calc(100% - var(--abs-offset) * 50%));
@@ -118,7 +118,7 @@
   background-color: transparent;
   border: none;
   color: var(--primary-color);
-  font-size: 50px;
+  font-size: 3.125rem;
   height: 100%;
   cursor: pointer;
   padding: 0;
@@ -131,16 +131,7 @@
 
 /* Small phones */
 @media only screen and (max-width: 400px) {
-  .carousel {
-    height: 35rem;
-  }
-
-  .card {
-    width: 80%;
-  }
-
   .card h2 {
-    margin-top: -0.5rem;
     font-size: 1.3rem;
   }
 }
@@ -148,91 +139,58 @@
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 599px) {
   .card {
-    width: 100%;
-    max-width: 28rem;
+    width: 85%;
   }
-
-  .card h2 {
-    margin-top: -0.7rem;
-  }
-
   .card p {
     max-height: 12rem;
+  }
+
+  .navLeft,
+  .navRight {
+    right: 50px;
+  }
+
+  .navLeft {
+    right: 95px;
   }
 }
 
 /* Small Tablet */
 @media only screen and (min-width: 600px) and (max-width: 769px) {
   .card {
-    width: 100%;
-    max-width: 34rem;
-  }
-
-  .card h2 {
-    margin-top: -0.7rem;
+    width: 85%;
   }
 
   .card p {
     max-height: 14rem;
   }
-}
-
-/* Small-Medium Desktop */
-@media only screen and (min-width: 770px) and (max-width: 999px) {
-  .card {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .card h2 {
-    margin-top: 0rem;
-  }
-
-  .card p {
-    max-height: 16rem;
-  }
 
   .navLeft,
   .navRight {
-    top: 260px;
-    display: block;
-    font-size: 60px;
-    color: var(--white-text-color);
+    right: 60px;
   }
 
   .navLeft {
-    transform: translateX(-100%) translateY(-50%);
-    left: -15px;
-  }
-
-  .navRight {
-    right: -15px;
-    transform: translateX(100%) translateY(-50%);
-  }
-
-  .leftIcon,
-  .rightIcon {
-    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+    right: 105px;
   }
 }
 
 /* Large Desktop */
-@media only screen and (min-width: 1000px) and (max-width: 2199px) {
+@media only screen and (min-width: 770px) and (max-width: 2199px) {
   .carousel {
-    width: 100rem;
+    padding-bottom: 4rem;
+    margin-bottom: 8rem;
   }
 
   .cardContainer {
-    width: 40rem;
+    width: 85%;
     transform: translateX(-50%) rotateY(calc(var(--offset) * 50deg))
       scaleY(calc(1 + var(--abs-offset) * -0.4))
       translateZ(calc(var(--abs-offset) * -50rem))
       translateX(calc(var(--direction) * -12rem));
-    transition: all 0.3s ease-out;
   }
 
   .card {
-    width: 100%;
     max-width: 60rem;
     height: 45em;
   }
@@ -249,8 +207,7 @@
   .navRight {
     top: 260px;
     display: block;
-    font-size: 90px;
-    color: var(--white-text-color);
+    font-size: 5.625rem;
   }
 
   .navLeft {
@@ -260,36 +217,29 @@
   .navRight {
     right: 100px;
   }
-
-  .leftIcon,
-  .rightIcon {
-    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
-  }
 }
 
 /* Full desktop */
 @media only screen and (min-width: 2200px) {
-  .activityContainer {
-    height: 85vh;
-    margin-top: -2rem;
+  .carousel {
+    padding-bottom: 4rem;
+    margin-bottom: 8rem;
   }
 
-  .carousel {
-    width: 100rem;
+  .activityContainer {
+    height: 100vh;
   }
 
   .cardContainer {
-    width: 60rem;
+    width: 85%;
     transform: translateX(-50%) rotateY(calc(var(--offset) * 50deg))
       scaleY(calc(1 + var(--abs-offset) * -0.4))
       translateZ(calc(var(--abs-offset) * -50rem))
       translateX(calc(var(--direction) * -15rem));
-    transition: all 0.3s ease-out;
   }
 
   .card {
-    width: 100%;
-    max-width: 60rem;
+    max-width: 70rem;
     height: 45em;
   }
 
@@ -305,8 +255,7 @@
   .navRight {
     top: 260px;
     display: block;
-    font-size: 90px;
-    color: var(--white-text-color);
+    font-size: 5.625rem;
   }
 
   .navLeft {
@@ -315,10 +264,5 @@
 
   .navRight {
     right: 200px;
-  }
-
-  .leftIcon,
-  .rightIcon {
-    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
   }
 }

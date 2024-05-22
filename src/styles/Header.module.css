@@ -61,7 +61,7 @@ body {
   padding: 1.3rem;
   border-radius: 35px;
   text-transform: uppercase;
-  width: 22em;
+  width: 22rem;
   color: var(--nav-color);
   background-color: var(--hover-color);
 }
@@ -78,7 +78,7 @@ body {
   }
 
   .headerBtn {
-    width: 18em;
+    width: 18rem;
   }
 }
 
@@ -89,7 +89,7 @@ body {
   }
 
   .headerBtn {
-    width: 24em;
+    width: 24rem;
   }
 }
 
@@ -100,7 +100,7 @@ body {
   }
 
   .headerBtn {
-    width: 26em;
+    width: 26rem;
   }
 }
 
@@ -112,6 +112,6 @@ body {
 
   .headerBtn {
     padding: 1.3rem;
-    width: 33em;
+    width: 33rem;
   }
 }
