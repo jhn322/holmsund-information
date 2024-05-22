@@ -18,12 +18,12 @@ span {
 }
 
 .separatorContainer {
-  height: 65vh;
+  height: 90vh;
 }
 
 .separatorFirst {
   background-color: var(--accent-color);
-  height: 5.5em;
+  height: 10vh;
 }
 
 .separatorContent,
@@ -36,7 +36,7 @@ span {
 }
 
 .separatorContent {
-  height: 24rem;
+  height: 50vh;
   padding: 2rem 0;
   background-color: var(--primary-color);
 }
@@ -68,7 +68,9 @@ span {
 
 .separatorSecond {
   background-color: var(--accent-color);
-  height: 18rem;
+  height: 30vh;
+  padding: 2rem;
+  border: 1px solid red;
 }
 
 .separatorSecondTitle {
@@ -79,14 +81,13 @@ span {
 .separatorSecondText {
   color: var(--white-text-color);
   font-size: 1.3rem;
-  padding-bottom: 2.5rem;
 }
 
 /* Small phones */
 @media only screen and (max-width: 400px) {
-  .separatorContainer {
+  /* .separatorContainer {
     height: 47rem;
-  }
+  } */
 
   .separatorFirst {
     height: 6rem;
@@ -125,9 +126,9 @@ span {
 
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 599px) {
-  .separatorContainer {
+  /* .separatorContainer {
     height: 73vh;
-  }
+  } */
 
   .separatorFirst {
     height: 8em;
@@ -152,9 +153,9 @@ span {
 
 /* Small Tablet */
 @media only screen and (min-width: 600px) and (max-width: 769px) {
-  .separatorContainer {
+  /* .separatorContainer {
     height: 66vh;
-  }
+  } */
 
   .separatorFirst {
     height: 7em;
@@ -175,9 +176,9 @@ span {
 
 /* Desktop */
 @media only screen and (min-width: 770px) and (max-width: 1199px) {
-  .separatorContainer {
+  /* .separatorContainer {
     height: 64vh;
-  }
+  } */
 
   .separatorFirst {
     height: 7em;
@@ -202,9 +203,9 @@ span {
 
 /* Large Desktop */
 @media only screen and (min-width: 1200px) {
-  .separatorContainer {
+  /* .separatorContainer {
     height: 78vh;
-  }
+  } */
 
   .separatorFirst {
     height: 16em;
