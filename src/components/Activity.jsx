@@ -20,36 +20,36 @@ const slideWidth = 40;
 const cards = [
   {
     activityImg: {
-      title: "Efren Reyes",
-      desc: 'Known as "The Magician", Efren Reyes is well regarded by many professionals as the greatest all around activityImg of all time.',
+      title: "Första aktiviteten",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eius nemo, deserunt voluptates sint aliquam. Porro corrupti, ullam repellat, sunt, aliquid quos recusandae assumenda ut voluptatum in omnis non voluptatem?",
       image: activityImage1,
     },
   },
   {
     activityImg: {
-      title: "Ronnie O'Sullivan",
-      desc: "Ronald Antonio O'Sullivan is a six-time world champion and is the most successful activityImg in the history of snooker.",
+      title: "Andra aktiviteten",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eius nemo, deserunt voluptates sint aliquam. Porro corrupti, ullam repellat, sunt, aliquid quos recusandae assumenda ut voluptatum in omnis non voluptatem?",
       image: activityImage2,
     },
   },
   {
     activityImg: {
-      title: "Shane Van Boening",
-      desc: 'The "South Dakota Kid" is hearing-impaired and uses a hearing aid, but it has not limited his ability.',
+      title: "Tredje aktiviteten",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eius nemo, deserunt voluptates sint aliquam. Porro corrupti, ullam repellat, sunt, aliquid quos recusandae assumenda ut voluptatum in omnis non voluptatem?",
       image: activityImage3,
     },
   },
   {
     activityImg: {
-      title: "Mike Sigel",
-      desc: 'Mike Sigel or "Captain Hook" as many like to call him is an American professional pool activityImg with over 108 tournament wins.',
+      title: "Fjärde aktiviteten",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eius nemo, deserunt voluptates sint aliquam. Porro corrupti, ullam repellat, sunt, aliquid quos recusandae assumenda ut voluptatum in omnis non voluptatem?",
       image: activityImage4,
     },
   },
   {
     activityImg: {
-      title: "Willie Mosconi",
-      desc: 'Nicknamed "Mr. Pocket Billiards," Willie Mosconi was among the first Billiard Congress of America Hall of Fame inductees.',
+      title: "Femte aktiviteten",
+      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eius nemo, deserunt voluptates sint aliquam. Porro corrupti, ullam repellat, sunt, aliquid quos recusandae assumenda ut voluptatum in omnis non voluptatem?",
       image: activityImage5,
     },
   },

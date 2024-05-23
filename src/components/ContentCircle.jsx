@@ -36,13 +36,15 @@ const ContentCircle = () => {
           >
             <h2 className={styles.titleContent}>Holmsund, Västerbotten</h2>
             <h3 className={styles.undertitleContent}>
-              DET HÄR ÄR EN LÅNG UNDERRUBRIK. COOLT.
+              LOKAL OCH GLOBAL. ÄVENTYRLIG OCH AVSLAPPNAD.
             </h3>
             <p className={styles.paragraphContent}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Temporibus non nesciunt dolor aut, veniam mollitia quaerat
-              aperiam, obcaecati sit optio architecto itaque repellendus
-              cupiditate autem minima perferendis tenetur a vitae!
+              Holmsund, en mångsidig ort i Västerbotten, utmärker sig genom sin
+              charmiga hamn och natursköna omgivningar. Beläget vid Bottenvikens
+              kust, lockar Holmsund med sina mångsidiga fritidsaktiviteter och
+              genuina atmosfär. Med en historia präglad av sjöfart och närhet
+              till naturen, erbjuder Holmsund besökare och invånare en unik
+              upplevelse av den norrländska livsstilen. Välkommen.
             </p>
           </article>
         </div>
