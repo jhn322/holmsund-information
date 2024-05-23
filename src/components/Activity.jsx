@@ -1,10 +1,5 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
-
-// Icons
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-
-// CSS
+// Activity.js
+import React, { useState, useEffect } from "react";
 import styles from "../styles/Activity.module.css";
 
 // Images
@@ -17,147 +12,174 @@ import activityImage6 from "../assets/activity6.jpg";
 import activityImage7 from "../assets/activity7.jpg";
 import activityImage8 from "../assets/activity8.jpg";
 
-// Cards Data
+// Icons
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
+const slideWidth = 40;
+
 const cards = [
   {
-    image: activityImage1,
-    title: "Aqua Arena",
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
+    activityImg: {
+      title: "Efren Reyes",
+      desc: 'Known as "The Magician", Efren Reyes is well regarded by many professionals as the greatest all around activityImg of all time.',
+      image: activityImage1,
+    },
   },
   {
-    image: activityImage2,
-    title: "Vattentornet",
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
+    activityImg: {
+      title: "Ronnie O'Sullivan",
+      desc: "Ronald Antonio O'Sullivan is a six-time world champion and is the most successful activityImg in the history of snooker.",
+      image: activityImage2,
+    },
   },
   {
-    image: activityImage3,
-    title: "Golfbana",
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
+    activityImg: {
+      title: "Shane Van Boening",
+      desc: 'The "South Dakota Kid" is hearing-impaired and uses a hearing aid, but it has not limited his ability.',
+      image: activityImage3,
+    },
   },
   {
-    image: activityImage4,
-    title: "Storsjöhallen",
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
+    activityImg: {
+      title: "Mike Sigel",
+      desc: 'Mike Sigel or "Captain Hook" as many like to call him is an American professional pool activityImg with over 108 tournament wins.',
+      image: activityImage4,
+    },
   },
   {
-    image: activityImage5,
-    title: "Nästa ställe",
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
-  },
-  {
-    image: activityImage6,
-    title: "Utflykt",
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
-  },
-  {
-    image: activityImage7,
-    title: "Skidspår",
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
-  },
-  {
-    image: activityImage8,
-    title: "Stor skog",
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam placeat possimus atque, modi minima saepe, ex odio aliquam cumque quis officia cupiditate vitae at dicta amet. Tenetur enim nihil dolores.",
+    activityImg: {
+      title: "Willie Mosconi",
+      desc: 'Nicknamed "Mr. Pocket Billiards," Willie Mosconi was among the first Billiard Congress of America Hall of Fame inductees.',
+      image: activityImage5,
+    },
   },
 ];
 
-// Card Component
-const Card = ({ image, title, text }) => {
-  const hideText = (text, maxLength) => {
-    if (text.length > maxLength) {
-      return text.substring(0, maxLength) + "...";
-    } else {
-      return text;
-    }
+const length = cards.length;
+cards.push(...cards);
+
+const sleep = (ms = 0) => {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+};
+
+const createItem = (position, index) => {
+  const item = {
+    styles: {
+      transform: `translateX(${position * slideWidth}rem)`,
+    },
+    activityImg: cards[index].activityImg,
   };
 
+  switch (position) {
+    case length - 1:
+    case length + 1:
+      item.styles = { ...item.styles, filter: "grayscale(1)" };
+      break;
+    case length:
+      break;
+    default:
+      item.styles = { ...item.styles, opacity: 0 };
+      break;
+  }
+
+  return item;
+};
+
+const ActivitySlideItem = ({ pos, index, activeIndex }) => {
+  const item = createItem(pos, index, activeIndex);
+
   return (
-    <div className={styles.card}>
-      <div className={styles.cardText}>
-        <h2 className={styles.cardTitle}>{title}</h2>
+    <li className={styles.activitySlideItem} style={item.styles}>
+      <div className={styles.activitySlideItemImgLink}>
+        <img src={item.activityImg.image} alt={item.activityImg.title} />
       </div>
-      <img src={image} alt={title} />
-      <div className={styles.cardText}>
-        <p>
-          {hideText(text, 200)}{" "}
-          <NavLink to="/aktiviteter">
-            <span className={styles.learnMore}>Läs Mer...</span>
-          </NavLink>
-        </p>
+      <div className={styles.activitySlideItemBody}>
+        <h4>{item.activityImg.title}</h4>
+        <p>{item.activityImg.desc}</p>
       </div>
-    </div>
+    </li>
   );
 };
 
-const MAX_VISIBILITY = 3;
+const keys = Array.from(Array(cards.length).keys());
 
 const Activity = () => {
-  const [active, setActive] = useState(2);
-  const count = cards.length;
-  let touchStartX = 0;
-  let touchEndX = 0;
+  const [card, setcard] = useState(keys);
+  const [isTicking, setIsTicking] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const bigLength = card.length;
 
-  const handleTouchStart = (e) => {
-    touchStartX = e.touches[0].clientX;
-  };
-
-  const handleTouchMove = (e) => {
-    touchEndX = e.touches[0].clientX;
-  };
-
-  const handleTouchEnd = () => {
-    if (touchStartX - touchEndX > 10 && active < count - 1) {
-      setActive((prevActive) => prevActive + 1);
-    }
-
-    if (touchStartX - touchEndX < -10 && active > 0) {
-      setActive((prevActive) => prevActive - 1);
+  const prevClick = (jump = 1) => {
+    if (!isTicking) {
+      setIsTicking(true);
+      setcard((prev) => prev.map((_, i) => prev[(i + jump) % bigLength]));
     }
   };
+
+  const nextClick = (jump = 1) => {
+    if (!isTicking) {
+      setIsTicking(true);
+      setcard((prev) =>
+        prev.map((_, i) => prev[(i - jump + bigLength) % bigLength])
+      );
+    }
+  };
+
+  const handleDotClick = (index) => {
+    if (index < activeIndex) prevClick(activeIndex - index);
+    if (index > activeIndex) nextClick(index - activeIndex);
+  };
+
+  useEffect(() => {
+    if (isTicking) sleep(300).then(() => setIsTicking(false));
+  }, [isTicking]);
+
+  useEffect(() => {
+    setActiveIndex((length - (card[0] % length)) % length); // prettier-ignore
+  }, [card]);
 
   return (
-    <div
-      className={styles.activityContainer}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-    >
-      <div className={styles.carousel}>
-        {active > 0 && (
-          <span
-            className={`${styles.navLeft} ${styles.nav}`}
-            onClick={() => setActive((i) => i - 1)}
-          >
-            <FaChevronLeft strokeWidth={1} className={styles.leftIcon} />
-          </span>
-        )}
-        {cards.map((card, i) => (
-          <div
-            key={i}
-            className={styles.cardContainer}
-            style={{
-              "--active": i === active ? 1 : 0,
-              "--offset": (active - i) / 3,
-              "--direction": Math.sign(active - i),
-              "--abs-offset": Math.abs(active - i) / 3,
-              pointerEvents: active === i ? "auto" : "none",
-              opacity: Math.abs(active - i) >= MAX_VISIBILITY ? "0" : "1",
-              display: Math.abs(active - i) > MAX_VISIBILITY ? "none" : "block",
-            }}
-          >
-            <NavLink to="/aktiviteter" className={styles.cardLink}>
-              <Card image={card.image} title={card.title} text={card.text} />
-            </NavLink>
-          </div>
-        ))}
-        {active < count - 1 && (
-          <span
-            className={`${styles.navRight} ${styles.nav}`}
-            onClick={() => setActive((i) => i + 1)}
-          >
-            <FaChevronRight strokeWidth={1} className={styles.rightIcon} />
-          </span>
-        )}
+    <div className={styles.activityContainer}>
+      <div className={styles.activityInner}>
+        <button
+          className={`${styles.activityBtn} ${styles.activityBtnPrev}`}
+          onClick={() => prevClick()}
+        >
+          <FaChevronLeft
+            className={`${styles.activityBtnArrow} ${styles.activityBtnArrowLeft}`}
+          />
+        </button>
+        <div className={styles.activityWrap}>
+          <ul className={styles.activitySlideList}>
+            {card.map((pos, i) => (
+              <ActivitySlideItem
+                key={i}
+                index={i}
+                pos={pos}
+                activeIndex={activeIndex}
+              />
+            ))}
+          </ul>
+        </div>
+        <button
+          className={`${styles.activityBtn} ${styles.activityBtnNext}`}
+          onClick={() => nextClick()}
+        >
+          <FaChevronRight
+            className={`${styles.activityBtnArrow} ${styles.activityBtnArrowRight}`}
+          />
+        </button>
+        <div className={styles.activityDots}>
+          {card.slice(0, length).map((pos, i) => (
+            <span
+              key={i}
+              onClick={() => handleDotClick(i)}
+              className={`${styles.dot} ${
+                i === activeIndex ? styles.dotActive : ""
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

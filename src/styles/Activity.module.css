@@ -7,262 +7,180 @@
   font-family: "Outfit", sans-serif;
 }
 
+body {
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .activityContainer {
-  width: 100vw;
-  height: 80vh;
-  display: flex;
   align-items: center;
+  display: flex;
+  flex: 1;
   justify-content: center;
-  overflow: hidden;
-  background-color: var(--primary-color);
-  padding: 2rem 0;
-}
-
-.carousel {
   position: relative;
-  width: 100vw;
-  height: 60vh;
-  perspective: 18rem;
-  padding: 2rem 0;
-  transform-style: preserve-3d;
+  width: 100%;
+  height: 70vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-color);
 }
 
-.cardContainer {
-  position: absolute;
+.activityInner {
+  height: 40rem;
+  position: relative;
+  width: calc(40rem * 3); /* Adjusted width */
+}
+
+.activityWrap {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
   width: 100%;
+}
+
+.activitySlideList {
   height: 100%;
   left: 50%;
-  transform: translateX(-50%) rotateY(calc(var(--offset) * 50deg))
-    scaleY(calc(1 + var(--abs-offset) * -0.4))
-    translateZ(calc(var(--abs-offset) * -20rem))
-    translateX(calc(var(--direction) * -5rem));
-  filter: blur(calc(var(--abs-offset) * 0.5rem));
-  transition: all 0.3s ease-out;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  transform: translateX(-50%);
+  width: calc((5 + 0.5) * 40rem * 2); /* Adjusted width */
 }
 
-.card {
-  width: 100%;
-  height: 40rem;
+.activitySlideItem {
+  display: inline-block;
+  height: 30rem;
+  margin: 0;
   padding: 1rem;
-  background-color: hsl(38deg, 66%, calc(100% - var(--abs-offset) * 50%));
-  border-radius: 10px;
-  text-align: justify;
-  transition: all 0.3s ease-out;
-  margin: 0 auto;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  transition: all 0.3s;
+  width: 40rem;
 }
 
-.card h2 {
-  text-align: center;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin: 0 0 0.5rem;
-  color: var(--black-text-color);
-  transition: all 0.3s ease-out;
-}
-
-.card img {
+.activitySlideItemImgLink {
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
   width: 100%;
-  height: 60%;
-  border-radius: 10px;
+}
+
+.activitySlideItemImgLink img {
+  height: 100%;
   object-fit: cover;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  width: 100%;
 }
 
-.card p,
-.card h2 {
-  opacity: var(--active);
-  transition: all 0.3s ease-out;
+.activitySlideItemImgLink::after {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--hover-color);
+  content: "Läs mer";
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.3s ease;
+  width: 100%;
 }
 
-.card p {
-  max-height: 10rem;
-  padding-bottom: 1rem;
-  padding: 0 0.5rem;
-  text-overflow: ellipsis;
+.activitySlideItemImgLink:hover::after {
+  opacity: 1;
 }
 
-.learnMore {
-  font-size: 1.4rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: color 0.3s;
+.activitySlideItemImgLink:hover img {
+  transform: scale(1.3);
+}
+
+.activitySlideItemBody {
+  bottom: -2.5rem;
+  height: 10%;
+  position: absolute;
+}
+
+.activitySlideItemBody h4 {
+  margin: 0.7rem 0 0;
+  text-transform: uppercase;
   color: var(--black-text-color);
 }
 
-.learnMore:hover {
-  color: var(--hover-color);
+.activitySlideItemBody p {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  margin: 0.7rem 0 0;
+  color: var(--black-text-color);
 }
 
-.nav {
-  color: var(--primary-color);
-  font-size: 5rem;
-  position: absolute;
-  display: flex;
+.activityBtn {
   align-items: center;
-  justify-content: center;
-  z-index: 2;
-  cursor: pointer;
-  user-select: none;
-  background: unset;
-  border: unset;
-}
-
-.navLeft,
-.navRight {
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
   position: absolute;
-  bottom: 240px;
-  right: 15px;
+  top: 35%;
+  transform: translateY(-50%);
+  font-size: 5rem;
   background-color: transparent;
   border: none;
   color: var(--primary-color);
-  font-size: 3.125rem;
   height: 100%;
   cursor: pointer;
   padding: 0;
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
 }
 
-.navLeft {
-  right: 60px;
+.activityBtn:hover {
+  color: var(--hover-color);
+  background-color: transparent;
 }
 
-/* Small phones */
-@media only screen and (max-width: 400px) {
-  .card h2 {
-    font-size: 1.3rem;
-  }
+.activityBtn.activityBtnPrev {
+  left: -5rem;
 }
 
-/* Uncommon phone size */
-@media only screen and (min-width: 500px) and (max-width: 599px) {
-  .card {
-    width: 85%;
-  }
-  .card p {
-    max-height: 12rem;
-  }
-
-  .navLeft,
-  .navRight {
-    right: 50px;
-  }
-
-  .navLeft {
-    right: 95px;
-  }
+.activityBtn.activityBtnNext {
+  right: -5rem;
 }
 
-/* Small Tablet */
-@media only screen and (min-width: 600px) and (max-width: 769px) {
-  .card {
-    width: 85%;
-  }
-
-  .card p {
-    max-height: 14rem;
-  }
-
-  .navLeft,
-  .navRight {
-    right: 60px;
-  }
-
-  .navLeft {
-    right: 105px;
-  }
+.activityDots {
+  display: inline-flex;
+  left: 50%;
+  margin-top: 1rem;
+  position: absolute;
+  transform: translateX(-50%);
 }
 
-/* Large Desktop */
-@media only screen and (min-width: 770px) and (max-width: 2199px) {
-  .carousel {
-    padding-bottom: 4rem;
-    margin-bottom: 8rem;
-  }
-
-  .cardContainer {
-    width: 85%;
-    transform: translateX(-50%) rotateY(calc(var(--offset) * 50deg))
-      scaleY(calc(1 + var(--abs-offset) * -0.4))
-      translateZ(calc(var(--abs-offset) * -50rem))
-      translateX(calc(var(--direction) * -12rem));
-  }
-
-  .card {
-    max-width: 60rem;
-    height: 45em;
-  }
-
-  .card h2 {
-    margin-top: 0rem;
-  }
-
-  .card p {
-    max-height: 16rem;
-  }
-
-  .navLeft,
-  .navRight {
-    top: 260px;
-    display: block;
-    font-size: 5.625rem;
-  }
-
-  .navLeft {
-    left: 100px;
-  }
-
-  .navRight {
-    right: 100px;
-  }
+.activityDots .dot {
+  border: 0;
+  background-color: var(--primary-color);
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+  border-radius: 50%;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  margin: 0 0.3rem;
+  outline: none;
+  display: inline-block;
+  transform: scale(0.5);
 }
 
-/* Full desktop */
-@media only screen and (min-width: 2200px) {
-  .carousel {
-    padding-bottom: 4rem;
-    margin-bottom: 8rem;
-  }
-
-  .activityContainer {
-    height: 100vh;
-  }
-
-  .cardContainer {
-    width: 85%;
-    transform: translateX(-50%) rotateY(calc(var(--offset) * 50deg))
-      scaleY(calc(1 + var(--abs-offset) * -0.4))
-      translateZ(calc(var(--abs-offset) * -50rem))
-      translateX(calc(var(--direction) * -15rem));
-  }
-
-  .card {
-    max-width: 70rem;
-    height: 45em;
-  }
-
-  .card img {
-    height: 70%;
-  }
-
-  .card p {
-    max-height: 16rem;
-  }
-
-  .navLeft,
-  .navRight {
-    top: 260px;
-    display: block;
-    font-size: 5.625rem;
-  }
-
-  .navLeft {
-    left: 200px;
-  }
-
-  .navRight {
-    right: 200px;
-  }
+.activityDots .dotActive {
+  background: var(--hover-color);
 }
