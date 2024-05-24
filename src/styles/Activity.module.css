@@ -40,7 +40,7 @@ a {
 .activityInner {
   height: 40rem;
   position: relative;
-  width: calc(40rem * 3); /* Adjusted width */
+  width: calc(40rem * 3);
 }
 
 .activityWrap {
@@ -58,10 +58,10 @@ a {
   padding: 0;
   position: absolute;
   transform: translateX(-50%);
-  width: calc((5 + 0.5) * 40rem * 2); /* Adjusted width */
+  width: calc((5 + 0.5) * 40rem * 2);
 }
 
-.activitySlideItem {
+.activitySlide {
   display: inline-block;
   height: 30rem;
   margin: 0;
@@ -71,16 +71,17 @@ a {
   width: 40rem;
 }
 
-.activitySlideItemImgLink {
+.activitySlideImg {
   cursor: pointer;
   display: flex;
   height: 100%;
   overflow: hidden;
   position: relative;
   width: 100%;
+  border-radius: 10px;
 }
 
-.activitySlideItemImgLink img {
+.activitySlideImg img {
   height: 100%;
   object-fit: cover;
   transition: all 0.3s ease;
@@ -88,41 +89,50 @@ a {
   width: 100%;
 }
 
-.activitySlideItemImgLink::after {
+.activitySlideImg::after {
   align-items: center;
-  background: rgba(0, 0, 0, 0.5);
-  color: var(--hover-color);
-  content: "Läs mer";
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--white-text-color);
+  content: "Läs mer om" "\A"attr(data-title);
   display: flex;
-  height: 100%;
+  flex-direction: column;
   justify-content: center;
+  text-align: center;
   opacity: 0;
   position: absolute;
   transition: all 0.3s ease;
   width: 100%;
+  height: 100%;
+  font-size: 2.5rem;
+  border-radius: 10px;
+  border: 2px solid var(--white-text-color);
+  box-sizing: border-box;
+  white-space: pre;
 }
 
-.activitySlideItemImgLink:hover::after {
+.activitySlideImg:hover::after {
   opacity: 1;
+  border: 2px solid var(--hover-color);
+  color: var(--hover-color);
 }
 
-.activitySlideItemImgLink:hover img {
+.activitySlideImg:hover img {
   transform: scale(1.3);
 }
 
-.activitySlideItemBody {
+.activitySlideContent {
   bottom: -2.5rem;
   height: 10%;
   position: absolute;
 }
 
-.activitySlideItemBody h4 {
+.activitySlideContent h4 {
   margin: 0.7rem 0 0;
   text-transform: uppercase;
   color: var(--black-text-color);
 }
 
-.activitySlideItemBody p {
+.activitySlideContent p {
   font-size: 1.2rem;
   line-height: 1.3;
   margin: 0.7rem 0 0;

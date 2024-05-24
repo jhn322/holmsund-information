@@ -62,8 +62,8 @@ const sleep = (ms = 0) => {
   return new Promise((resolve) => setTimeout(resolve, ms));
 };
 
-const createItem = (position, index) => {
-  const item = {
+const createCard = (position, index) => {
+  const card = {
     styles: {
       transform: `translateX(${position * slideWidth}rem)`,
     },
@@ -73,29 +73,33 @@ const createItem = (position, index) => {
   switch (position) {
     case length - 1:
     case length + 1:
-      item.styles = { ...item.styles, filter: "grayscale(1)" };
+      card.styles = { ...card.styles, filter: "blur(2px)" };
       break;
     case length:
       break;
     default:
-      item.styles = { ...item.styles, opacity: 0 };
+      card.styles = { ...card.styles, opacity: 0 };
       break;
   }
 
-  return item;
+  return card;
 };
 
-const ActivitySlideItem = ({ pos, index, activeIndex }) => {
-  const item = createItem(pos, index, activeIndex);
+const ActivitySlide = ({ pos, index, activeIndex }) => {
+  const card = createCard(pos, index, activeIndex);
 
   return (
-    <li className={styles.activitySlideItem} style={item.styles}>
-      <div className={styles.activitySlideItemImgLink}>
-        <img src={item.activityImg.image} alt={item.activityImg.title} />
+    <li className={styles.activitySlide} style={card.styles}>
+      <div
+        className={styles.activitySlideImg}
+        data-title={card.activityImg.title}
+      >
+        <img src={card.activityImg.image} alt={card.activityImg.title} />
       </div>
-      <div className={styles.activitySlideItemBody}>
-        <h4>{item.activityImg.title}</h4>
-        <p>{item.activityImg.desc}</p>
+
+      <div className={styles.activitySlideContent}>
+        <h4>{card.activityImg.title}</h4>
+        <p>{card.activityImg.desc}</p>
       </div>
     </li>
   );
@@ -145,14 +149,12 @@ const Activity = () => {
           className={`${styles.activityBtn} ${styles.activityBtnPrev}`}
           onClick={() => prevClick()}
         >
-          <FaChevronLeft
-            className={`${styles.activityBtnArrow} ${styles.activityBtnArrowLeft}`}
-          />
+          <FaChevronLeft />
         </button>
         <div className={styles.activityWrap}>
           <ul className={styles.activitySlideList}>
             {card.map((pos, i) => (
-              <ActivitySlideItem
+              <ActivitySlide
                 key={i}
                 index={i}
                 pos={pos}
@@ -165,9 +167,7 @@ const Activity = () => {
           className={`${styles.activityBtn} ${styles.activityBtnNext}`}
           onClick={() => nextClick()}
         >
-          <FaChevronRight
-            className={`${styles.activityBtnArrow} ${styles.activityBtnArrowRight}`}
-          />
+          <FaChevronRight />
         </button>
         <div className={styles.activityDots}>
           {card.slice(0, length).map((pos, i) => (
