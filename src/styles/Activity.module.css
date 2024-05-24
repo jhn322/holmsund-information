@@ -31,16 +31,19 @@ a {
   justify-content: center;
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   left: 50%;
+  padding: 2rem;
   transform: translateX(-50%);
   background-color: var(--primary-color);
 }
 
 .activityInner {
   height: 40rem;
+  /* height: 80%; Ändra för att rymma text i enheter */
   position: relative;
   width: calc(40rem * 3);
+  border: 1px solid green;
 }
 
 .activityWrap {
@@ -48,11 +51,12 @@ a {
   overflow: hidden;
   position: relative;
   width: 100%;
+  border: 1px solid yellow;
 }
 
 .activitySlideList {
+  left: 50%; /* justera denna för centrering */
   height: 100%;
-  left: 50%;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -68,7 +72,8 @@ a {
   padding: 1rem;
   position: absolute;
   transition: all 0.3s;
-  width: 40rem;
+  border: 1px solid red;
+  width: 40rem; /* 20 är bra för mobil */
 }
 
 .activitySlideImg {
@@ -103,7 +108,7 @@ a {
   transition: all 0.3s ease;
   width: 100%;
   height: 100%;
-  font-size: 2.5rem;
+  font-size: 2rem;
   border-radius: 10px;
   border: 2px solid var(--white-text-color);
   box-sizing: border-box;
@@ -144,15 +149,15 @@ a {
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 35%;
-  transform: translateY(-50%);
-  font-size: 5rem;
+  top: 110px;
+  font-size: 3.125rem;
   background-color: transparent;
   border: none;
   color: var(--primary-color);
   height: 100%;
   cursor: pointer;
   padding: 0;
+  z-index: 2;
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
 }
 
@@ -162,11 +167,13 @@ a {
 }
 
 .activityBtn.activityBtnPrev {
-  left: -5rem;
+  left: 245px;
+  z-index: 3;
 }
 
 .activityBtn.activityBtnNext {
-  right: -5rem;
+  right: 5px;
+  z-index: 3;
 }
 
 .activityDots {
@@ -175,6 +182,8 @@ a {
   margin-top: 1rem;
   position: absolute;
   transform: translateX(-50%);
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .activityDots .dot {
@@ -193,4 +202,174 @@ a {
 
 .activityDots .dotActive {
   background: var(--hover-color);
+}
+
+/* Small phones */
+@media only screen and (max-width: 400px) {
+}
+
+/* Uncommon phone size */
+@media only screen and (min-width: 500px) and (max-width: 599px) {
+}
+
+/* Small Tablet */
+@media only screen and (min-width: 600px) and (max-width: 769px) {
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 770px) and (max-width: 849px) {
+}
+
+/* Medium Desktop */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1000px) and (max-width: 2199px) {
+}
+
+/* Full desktop */
+@media only screen and (min-width: 2200px) {
+  .activityContainer {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    left: 50%;
+    padding: 2rem;
+    transform: translateX(-50%);
+  }
+
+  .activityInner {
+    height: 40rem;
+    position: relative;
+    width: calc(40rem * 3);
+  }
+
+  .activityWrap {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .activitySlideList {
+    height: 100%;
+    left: 50%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    transform: translateX(-50%);
+    width: calc((5 + 0.5) * 40rem * 2);
+  }
+
+  .activitySlide {
+    display: inline-block;
+    height: 30rem;
+    margin: 0;
+    padding: 1rem;
+    position: absolute;
+    transition: all 0.3s;
+    width: 40rem;
+  }
+
+  .activitySlideImg {
+    cursor: pointer;
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .activitySlideImg img {
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+
+  .activitySlideImg::after {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--white-text-color);
+    content: "Läs mer om" "\A"attr(data-title);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 100%;
+    font-size: 2.5rem;
+    box-sizing: border-box;
+    white-space: pre;
+  }
+
+  .activitySlideContent {
+    bottom: -2.5rem;
+    height: 10%;
+    position: absolute;
+  }
+
+  .activitySlideContent h4 {
+    margin: 0.7rem 0 0;
+    text-transform: uppercase;
+    color: var(--black-text-color);
+  }
+
+  .activitySlideContent p {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    margin: 0.7rem 0 0;
+    color: var(--black-text-color);
+  }
+
+  .activityBtn {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    font-size: 5rem;
+    background-color: transparent;
+    height: 100%;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .activityBtn.activityBtnPrev {
+    left: -5rem;
+  }
+
+  .activityBtn.activityBtnNext {
+    right: -5rem;
+  }
+
+  .activityDots {
+    display: inline-flex;
+    left: 50%;
+    margin-top: 1rem;
+    position: absolute;
+    transform: translateX(-50%);
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .activityDots .dot {
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    margin: 0 0.3rem;
+    outline: none;
+    display: inline-block;
+    transform: scale(0.5);
+  }
 }
