@@ -15,7 +15,7 @@ import activityImage8 from "../assets/activity8.jpg";
 // Icons
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const slideWidth = 40; // 40 for full desktop
+const slideWidth = 40;
 
 const cards = [
   {
