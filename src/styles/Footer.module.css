@@ -47,7 +47,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 18rem;
+  width: 12rem;
   height: auto;
   margin: auto;
 }
@@ -150,7 +150,7 @@ p {
   }
 
   .logo {
-    width: 24rem;
+    width: 18rem;
   }
 
   .iconsText {

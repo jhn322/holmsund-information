@@ -26,6 +26,13 @@ body {
   height: 190vh;
 }
 
+/* Responsive size for cards */
+.discoverInner {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
 .discoverTitle {
   display: flex;
   justify-content: center;
@@ -202,17 +209,9 @@ body {
     gap: 2.125rem;
   }
 
-  .discoverCardContainer .discoverCard {
-    width: calc(50% - 1.25rem);
-  }
-
-  .discoverCard {
-    margin-bottom: 7rem;
-  }
-
   /* Margin from first row to second */
   .discoverCardContainer .discoverCard:nth-child(n + 1):nth-child(-n + 2) {
-    margin-bottom: -2rem;
+    margin-bottom: 2rem;
   }
 
   .discoverTitle h2 {
@@ -220,13 +219,12 @@ body {
     font-size: 3rem;
   }
 
-  .cardOverlay h3 {
-    font-size: 1.5rem;
+  .cardImage {
+    height: 30rem;
   }
 
-  .cardImage {
-    height: 26rem;
-    width: 21rem;
+  .cardOverlay h3 {
+    font-size: 1.5rem;
   }
 
   .expandedText {
@@ -247,17 +245,13 @@ body {
     gap: 2.5rem;
   }
 
-  .discoverCardContainer .discoverCard {
-    width: calc(50% - 1.25rem);
-  }
-
   .discoverCard {
     margin-bottom: 8.5rem;
   }
 
   /* Margin from first row to second */
   .discoverCardContainer .discoverCard:nth-child(n + 1):nth-child(-n + 2) {
-    margin-bottom: 0;
+    margin-bottom: 2rem;
   }
 
   .discoverTitle h2 {
@@ -265,13 +259,12 @@ body {
     font-size: 3rem;
   }
 
-  .cardOverlay h3 {
-    font-size: 1.7rem;
+  .cardImage {
+    height: 30rem;
   }
 
-  .cardImage {
-    height: 28rem;
-    width: 24rem;
+  .cardOverlay h3 {
+    font-size: 1.7rem;
   }
 
   .expandedText {
@@ -292,17 +285,17 @@ body {
     gap: 2.5rem;
   }
 
-  .discoverCardContainer .discoverCard {
-    width: calc(50% - 1.25rem);
-  }
-
   .discoverCard {
     margin-bottom: 13rem;
   }
 
+  .discoverInner {
+    max-width: 100rem;
+  }
+
   /* Margin from first row to second */
   .discoverCardContainer .discoverCard:nth-child(n + 1):nth-child(-n + 2) {
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
   }
 
   .discoverTitle h2 {
@@ -310,13 +303,12 @@ body {
     font-size: 3rem;
   }
 
-  .cardOverlay h3 {
-    font-size: 1.7rem;
+  .cardImage {
+    height: 35rem;
   }
 
-  .cardImage {
-    height: 32rem;
-    width: calc(15rem + 20vw);
+  .cardOverlay h3 {
+    font-size: 1.7rem;
   }
 
   .expandedText {
@@ -337,8 +329,8 @@ body {
     gap: 2.5rem;
   }
 
-  .discoverCardContainer .discoverCard {
-    width: calc(50% - 1.25rem);
+  .discoverInner {
+    max-width: 120rem;
   }
 
   .discoverCard {
@@ -347,20 +339,19 @@ body {
 
   /* Margin from first row to second */
   .discoverCardContainer .discoverCard:nth-child(n + 1):nth-child(-n + 2) {
-    margin-bottom: 6rem;
+    margin-bottom: 12rem;
   }
 
   .discoverTitle h2 {
     font-size: 3rem;
   }
 
-  .cardOverlay h3 {
-    font-size: 1.7rem;
+  .cardImage {
+    height: 40rem;
   }
 
-  .cardImage {
-    height: 34rem;
-    width: 50rem;
+  .cardOverlay h3 {
+    font-size: 1.7rem;
   }
 
   .expandedText {

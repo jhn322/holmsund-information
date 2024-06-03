@@ -73,7 +73,7 @@ const createCard = (position, index) => {
   switch (position) {
     case length - 1:
     case length + 1:
-      card.styles = { ...card.styles, filter: "blur(2px)" };
+      card.styles = { ...card.styles, filter: "grayscale(100%)" };
       break;
     case length:
       break;
