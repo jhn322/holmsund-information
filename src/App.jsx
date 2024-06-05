@@ -5,10 +5,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ActivityPage from "./pages/ActivityPage";
 import WeatherPage from "./pages/WeatherPage";
+import DiscoverPageMain from "./pages/DiscoverPageMain";
 import DiscoverPage1 from "./pages/DiscoverPage1";
 import DiscoverPage2 from "./pages/DiscoverPage2";
 import DiscoverPage3 from "./pages/DiscoverPage3";
 import DiscoverPage4 from "./pages/DiscoverPage4";
+import GalleryPageMain from "./pages/GalleryPageMain";
 import GalleryPage1 from "./pages/GalleryPage1";
 import GalleryPage2 from "./pages/GalleryPage2";
 import GalleryPage3 from "./pages/GalleryPage3";
@@ -32,6 +34,10 @@ const App = () => {
           />
           <Route path="/väder" element={<WeatherPage page="väder" />} />
           <Route
+            path="/upptäck"
+            element={<DiscoverPageMain page="upptäck" />}
+          />
+          <Route
             path="/upptäck-1"
             element={<DiscoverPage1 page="upptäck-1" />}
           />
@@ -47,6 +53,7 @@ const App = () => {
             path="/upptäck-4"
             element={<DiscoverPage4 page="upptäck-4" />}
           />
+          <Route path="/galleri" element={<GalleryPageMain page="galleri" />} />
           <Route
             path="/galleri-1"
             element={<GalleryPage1 page="galleri-1" />}

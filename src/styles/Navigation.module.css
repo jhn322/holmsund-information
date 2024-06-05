@@ -238,16 +238,8 @@ li {
 .galleryDropdownArrow {
   position: absolute;
   right: -4rem;
-  transform: translateY(-50%);
+  transform: translateY(-80%);
   font-size: 2.5rem;
-}
-
-.discoverDropdownArrow {
-  top: 13.8rem;
-}
-
-.galleryDropdownArrow {
-  top: 18.5rem;
 }
 
 .nestedMenu li {
@@ -312,6 +304,10 @@ li {
 
   .logo {
     width: 14.375rem;
+  }
+
+  .navLink {
+    display: inline;
   }
 
   .closeIcon {

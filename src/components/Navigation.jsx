@@ -62,21 +62,17 @@ const Navigation = () => {
     setPrevScrollPos(currentScrollPos);
   };
 
-  // Scrolls to the top of the page
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // Smooth scroll to top
-    });
-  };
-
   // EventListener on window for scroll
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    if (isMenuOpen) {
+      window.removeEventListener("scroll", handleScroll);
+    } else {
+      window.addEventListener("scroll", handleScroll);
+    }
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollPos, visible]);
+  }, [isMenuOpen, prevScrollPos, visible]);
 
   // Nested items in nav menu
   const toggleDiscover = () => {
@@ -117,7 +113,7 @@ const Navigation = () => {
             </li>
             <li>
               <NavLink
-                to="/upptäck-1"
+                to="/upptäck"
                 activeclassname={styles.active}
                 className={styles.navLink}
               >
@@ -135,7 +131,7 @@ const Navigation = () => {
             </li>
             <li>
               <NavLink
-                to="/galleri-1"
+                to="/galleri"
                 activeclassname={styles.active}
                 className={styles.navLink}
               >
@@ -185,12 +181,12 @@ const Navigation = () => {
                   Aktiviteter
                 </NavLink>
               </li>
-              <li>
-                <NavLink to="/upptäck-1" activeclassname={styles.active}>
+              <li className={isDiscoverOpen ? styles.openDropdown : ""}>
+                <NavLink to="/upptäck" activeclassname={styles.active}>
                   Upptäck
                 </NavLink>
                 <div
-                  className={styles.discoverDropdownArrow}
+                  className={`${styles.dropdownArrow} ${styles.discoverDropdownArrow}`}
                   onClick={toggleDiscover}
                 >
                   {isDiscoverOpen ? <FiChevronUp /> : <FiChevronDown />}
@@ -221,12 +217,12 @@ const Navigation = () => {
                   </ul>
                 )}
               </li>
-              <li>
-                <NavLink to="/galleri-1" activeclassname={styles.active}>
+              <li className={isGalleryOpen ? styles.openDropdown : ""}>
+                <NavLink to="/galleri" activeclassname={styles.active}>
                   Galleri
                 </NavLink>
                 <div
-                  className={styles.galleryDropdownArrow}
+                  className={`${styles.dropdownArrow} ${styles.galleryDropdownArrow}`}
                   onClick={toggleGallery}
                 >
                   {isGalleryOpen ? <FiChevronUp /> : <FiChevronDown />}
