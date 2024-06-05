@@ -27,8 +27,7 @@ const Navigation = () => {
   const [visible, setVisible] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
   const [isHoveredNav, setIsHoveredNav] = useState(false);
-  const [isDiscoverOpen, setIsDiscoverOpen] = useState(false);
-  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
   // Toggles the menu open/close
   const toggleMenu = () => {
@@ -78,13 +77,9 @@ const Navigation = () => {
     };
   }, [isMenuOpen, prevScrollPos, visible]);
 
-  // Nested items in nav menu
-  const toggleDiscover = () => {
-    setIsDiscoverOpen(!isDiscoverOpen);
-  };
-
-  const toggleGallery = () => {
-    setIsGalleryOpen(!isGalleryOpen);
+  // Function to toggle active dropdown
+  const toggleDropdown = (dropdownName) => {
+    setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
   };
 
   return (
@@ -230,18 +225,31 @@ const Navigation = () => {
                   Aktiviteter
                 </NavLink>
               </li>
-              <li className={isDiscoverOpen ? styles.openDropdown : ""}>
-                <NavLink to="/upptäck" activeclassname={styles.active}>
-                  Upptäck
-                </NavLink>
+              <li
+                className={
+                  activeDropdown === "discover" ? styles.openDropdown : ""
+                }
+              >
                 <div
-                  className={`${styles.dropdownArrow} ${styles.discoverDropdownArrow}`}
-                  onClick={toggleDiscover}
+                  onClick={() => toggleDropdown("discover")}
+                  className={styles.dropdownToggle}
+                  style={{ fontSize: "2rem" }}
                 >
-                  {isDiscoverOpen ? <FiChevronUp /> : <FiChevronDown />}
+                  Upptäck
+                  <div
+                    className={`${styles.discoverDropdownArrow} ${
+                      activeDropdown === "discover" ? styles.open : ""
+                    }`}
+                  >
+                    {activeDropdown === "discover" ? (
+                      <FiChevronUp />
+                    ) : (
+                      <FiChevronDown />
+                    )}
+                  </div>
                 </div>
-                {/* Show nested items if isDiscoverOpen is true */}
-                {isDiscoverOpen && (
+                {/* Show nested items if activeDropdown is true */}
+                {activeDropdown === "discover" && (
                   <ul className={styles.nestedMenu}>
                     <li>
                       <NavLink to="/upptäck-1" activeclassname={styles.active}>
@@ -266,18 +274,31 @@ const Navigation = () => {
                   </ul>
                 )}
               </li>
-              <li className={isGalleryOpen ? styles.openDropdown : ""}>
-                <NavLink to="/galleri" activeclassname={styles.active}>
-                  Galleri
-                </NavLink>
+              <li
+                className={
+                  activeDropdown === "gallery" ? styles.openDropdown : ""
+                }
+              >
                 <div
-                  className={`${styles.dropdownArrow} ${styles.galleryDropdownArrow}`}
-                  onClick={toggleGallery}
+                  onClick={() => toggleDropdown("gallery")}
+                  className={styles.dropdownToggle}
+                  style={{ fontSize: "2rem" }}
                 >
-                  {isGalleryOpen ? <FiChevronUp /> : <FiChevronDown />}
+                  Galleri
+                  <div
+                    className={`${styles.galleryDropdownArrow} ${
+                      activeDropdown === "gallery" ? styles.open : ""
+                    }`}
+                  >
+                    {activeDropdown === "gallery" ? (
+                      <FiChevronUp />
+                    ) : (
+                      <FiChevronDown />
+                    )}
+                  </div>
                 </div>
-                {/* Show nested items if isGalleryOpen is true */}
-                {isGalleryOpen && (
+                {/* Show nested items if activeDropdown is true */}
+                {activeDropdown === "gallery" && (
                   <ul className={styles.nestedMenu}>
                     <li>
                       <NavLink to="/galleri-1" activeclassname={styles.active}>
