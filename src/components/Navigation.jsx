@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
-// Icons
+// Menu Icons
 import {
   FiMenu,
   FiSearch,
@@ -10,12 +10,15 @@ import {
   FiChevronUp,
 } from "react-icons/fi";
 
+// Social Icons
+import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
+
 // CSS
 import styles from "../styles/Navigation.module.css";
 
 // Logo
-import logo1 from "../assets/navLogo White.png";
-import logo2 from "../assets/navLogo Black.png";
+import logo1 from "../assets/navLogo.png";
+import logo2 from "../assets/navLogoHover.png";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,6 +26,7 @@ const Navigation = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [visible, setVisible] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
+  const [isHoveredNav, setIsHoveredNav] = useState(false);
   const [isDiscoverOpen, setIsDiscoverOpen] = useState(false);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
 
@@ -167,10 +171,55 @@ const Navigation = () => {
               isMenuClosing ? styles.menuClosing : ""
             }`}
           >
+            <div className={styles.socialIcons}>
+              <a
+                href="https://github.com/jhn322"
+                target="_blank"
+                rel="noopener noreferrer"
+                alt="GitHub website"
+              >
+                <FaGithub className={styles.github} />
+              </a>
+              <a
+                href="https://x.com/search?q=%23holmsund&src=typeahead_click"
+                target="_blank"
+                rel="noopener noreferrer"
+                alt="Twitter website"
+              >
+                <FaXTwitter className={styles.twitterX} />
+              </a>
+              <a
+                href="https://www.instagram.com/explore/locations/240089071/holmsund-vasterbottens-lan-sweden/"
+                target="_blank"
+                rel="noopener noreferrer"
+                alt="Instagram website"
+              >
+                <FaInstagram className={styles.instagram} />
+              </a>
+              <a
+                href="https://www.facebook.com/groups/415551751837063/?locale=sv_SE"
+                target="_blank"
+                rel="noopener noreferrer"
+                alt="Facebook website"
+              >
+                <FaFacebook className={styles.facebook} />
+              </a>
+            </div>
             <div className={styles.closeIcon} onClick={closeMenu}>
-              <FiX strokeWidth={3} className={styles.close} />
+              <FiX strokeWidth={2} className={styles.close} />
             </div>
             <ul className={styles.openMenu}>
+              <li>
+                <NavLink to="/" className={styles.logoNavContainer}>
+                  <img
+                    src={isHoveredNav ? logo2 : logo1}
+                    alt="Logo"
+                    className={styles.logoNav}
+                    onMouseEnter={() => setIsHoveredNav(true)}
+                    onMouseLeave={() => setIsHoveredNav(false)}
+                  />
+                </NavLink>
+              </li>
               <li>
                 <NavLink to="/" activeclassname={styles.active}>
                   Hem
