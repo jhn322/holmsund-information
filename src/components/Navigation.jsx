@@ -2,7 +2,13 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 // Icons
-import { FiMenu, FiSearch, FiX } from "react-icons/fi";
+import {
+  FiMenu,
+  FiSearch,
+  FiX,
+  FiChevronDown,
+  FiChevronUp,
+} from "react-icons/fi";
 
 // CSS
 import styles from "../styles/Navigation.module.css";
@@ -17,6 +23,8 @@ const Navigation = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [visible, setVisible] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
+  const [isDiscoverOpen, setIsDiscoverOpen] = useState(false);
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
 
   // Toggles the menu open/close
   const toggleMenu = () => {
@@ -69,6 +77,15 @@ const Navigation = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollPos, visible]);
+
+  // Nested items in nav menu
+  const toggleDiscover = () => {
+    setIsDiscoverOpen(!isDiscoverOpen);
+  };
+
+  const toggleGallery = () => {
+    setIsGalleryOpen(!isGalleryOpen);
+  };
 
   return (
     <div>
@@ -170,43 +187,75 @@ const Navigation = () => {
               </li>
               <li>
                 <NavLink to="/upptäck-1" activeclassname={styles.active}>
-                  Upptäck-1
+                  Upptäck
                 </NavLink>
-              </li>
-              <li>
-                <NavLink to="/upptäck-2" activeclassname={styles.active}>
-                  Upptäck-2
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/upptäck-3" activeclassname={styles.active}>
-                  Upptäck-3
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/upptäck-4" activeclassname={styles.active}>
-                  Upptäck-4
-                </NavLink>
+                <div
+                  className={styles.discoverDropdownArrow}
+                  onClick={toggleDiscover}
+                >
+                  {isDiscoverOpen ? <FiChevronUp /> : <FiChevronDown />}
+                </div>
+                {/* Show nested items if isDiscoverOpen is true */}
+                {isDiscoverOpen && (
+                  <ul className={styles.nestedMenu}>
+                    <li>
+                      <NavLink to="/upptäck-1" activeclassname={styles.active}>
+                        Upptäck-1
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/upptäck-2" activeclassname={styles.active}>
+                        Upptäck-2
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/upptäck-3" activeclassname={styles.active}>
+                        Upptäck-3
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/upptäck-4" activeclassname={styles.active}>
+                        Upptäck-4
+                      </NavLink>
+                    </li>
+                  </ul>
+                )}
               </li>
               <li>
                 <NavLink to="/galleri-1" activeclassname={styles.active}>
-                  Galleri-1
+                  Galleri
                 </NavLink>
-              </li>
-              <li>
-                <NavLink to="/galleri-2" activeclassname={styles.active}>
-                  Galleri-2
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/galleri-3" activeclassname={styles.active}>
-                  Galleri-3
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/galleri-4" activeclassname={styles.active}>
-                  Galleri-4
-                </NavLink>
+                <div
+                  className={styles.galleryDropdownArrow}
+                  onClick={toggleGallery}
+                >
+                  {isGalleryOpen ? <FiChevronUp /> : <FiChevronDown />}
+                </div>
+                {/* Show nested items if isGalleryOpen is true */}
+                {isGalleryOpen && (
+                  <ul className={styles.nestedMenu}>
+                    <li>
+                      <NavLink to="/galleri-1" activeclassname={styles.active}>
+                        Galleri-1
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/galleri-2" activeclassname={styles.active}>
+                        Galleri-2
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/galleri-3" activeclassname={styles.active}>
+                        Galleri-3
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/galleri-4" activeclassname={styles.active}>
+                        Galleri-4
+                      </NavLink>
+                    </li>
+                  </ul>
+                )}
               </li>
               <li>
                 <NavLink to="/väder" activeclassname={styles.active}>

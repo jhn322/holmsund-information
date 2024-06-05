@@ -234,6 +234,30 @@ li {
   display: none;
 }
 
+.discoverDropdownArrow,
+.galleryDropdownArrow {
+  position: absolute;
+  right: -4rem;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+}
+
+.discoverDropdownArrow {
+  top: 13.8rem;
+}
+
+.galleryDropdownArrow {
+  top: 18.5rem;
+}
+
+.nestedMenu li {
+  margin: 1rem 0;
+}
+
+.nestedMenu li a {
+  font-size: 1.3rem;
+}
+
 /* Small phones */
 @media only screen and (max-width: 400px) {
   .navIcons {
