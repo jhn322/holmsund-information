@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import styles from "../styles/Footer.module.css";
 
 // Icons
-import { FaGithub, FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
+import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
 
 // Logo
 import logo1 from "../assets/navLogo White.png";
@@ -40,9 +40,9 @@ const Footer = () => {
             rel="noopener noreferrer"
             alt="Twitter website"
           >
-            <FaTwitter className={styles.twitter} />
+            <FaXTwitter className={styles.twitterX} />
             <div className={styles.iconsText}>
-              <p>Twitter</p>
+              <p>Twitter/X</p>
             </div>
           </a>
           <a

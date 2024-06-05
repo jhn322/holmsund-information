@@ -1,5 +1,4 @@
 import { useRef, useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 
 // CSS
 import styles from "../styles/Discover.module.css";
@@ -130,27 +129,30 @@ const Discover = () => {
                   className={styles.cardImage}
                   style={{ backgroundImage: `url(${card.image})` }}
                 >
-                  <NavLink to={card.link}>
-                    <div
-                      className={`${styles.cardOverlay} ${
-                        overlayStates[index] && isHovered
-                          ? styles.expandedOverlay
-                          : ""
-                      }`}
-                    >
-                      <h3 className={styles.cardOverlayTitle}>{card.title}</h3>
-                      {overlayStates[index] && (
-                        <div>
-                          <p className={styles.expandedText}>{card.text}</p>
-                          <NavLink to={card.link}>
-                            <button className={styles.expandedBtn}>
-                              Läs mer
-                            </button>
-                          </NavLink>
-                        </div>
-                      )}
-                    </div>
-                  </NavLink>
+                  <div
+                    className={`${styles.cardOverlay} ${
+                      overlayStates[index] && isHovered
+                        ? styles.expandedOverlay
+                        : ""
+                    }`}
+                  >
+                    <h3 className={styles.cardOverlayTitle}>{card.title}</h3>
+                    {overlayStates[index] && (
+                      <div>
+                        <p className={styles.expandedText}>{card.text}</p>
+                        <button
+                          className={styles.expandedBtn}
+                          onClick={() => {
+                            window.location.href = card.link;
+                          }}
+                        >
+                          <span className={styles.expandedBtnText}>
+                            Läs mer
+                          </span>
+                        </button>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}

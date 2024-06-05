@@ -70,7 +70,7 @@ p {
 }
 
 .github,
-.twitter,
+.twitterX,
 .instagram,
 .facebook {
   cursor: pointer;
@@ -84,24 +84,24 @@ p {
 }
 
 .footerIcons a:hover .github,
-.footerIcons a:hover .twitter,
+.footerIcons a:hover .twitterX,
 .footerIcons a:hover .instagram,
 .footerIcons a:hover .facebook,
 .footerIcons a:hover .iconsText p,
 .iconsText:hover p,
 .iconsText:hover ~ .github,
-.iconsText:hover ~ .twitter,
+.iconsText:hover ~ .twitterX,
 .iconsText:hover ~ .instagram,
 .iconsText:hover ~ .facebook {
   color: var(--primary-color);
 }
 
 .footerIcons a:hover .github,
-.footerIcons a:hover .twitter,
+.footerIcons a:hover .twitterX,
 .footerIcons a:hover .instagram,
 .footerIcons a:hover .facebook,
 .github:hover,
-.twitter:hover,
+.twitterX:hover,
 .instagram:hover,
 .facebook:hover {
   background-color: var(--gallery-color);

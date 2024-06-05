@@ -137,13 +137,13 @@ body {
 }
 
 .expandedText {
-  margin-top: 3rem;
+  margin-top: 1rem;
   max-width: 85%;
   color: var(--white-text-color);
 }
 
 .expandedBtn {
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 0.6rem;
   background-color: transparent;
   color: var(--primary-color);
   border: 2px solid #fff;
@@ -154,8 +154,12 @@ body {
 
 .expandedBtn:hover {
   background-color: var(--hover-color);
-  padding: 0.6rem 1.1rem;
+  padding: 0.4rem 0.7rem;
   border: none;
+}
+
+.expandedBtnText {
+  font-size: 1.1rem;
 }
 
 /* Small phones */
