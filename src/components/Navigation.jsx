@@ -217,12 +217,12 @@ const Navigation = () => {
               </li>
               <li>
                 <NavLink to="/" activeclassname={styles.active}>
-                  Hem
+                  <h4>Hem</h4>
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/aktiviteter" activeclassname={styles.active}>
-                  Aktiviteter
+                  <h4>Aktiviteter</h4>
                 </NavLink>
               </li>
               <li
@@ -235,7 +235,7 @@ const Navigation = () => {
                   className={styles.dropdownToggle}
                   style={{ fontSize: "2rem" }}
                 >
-                  Upptäck
+                  <h4>Upptäck</h4>
                   <div
                     className={`${styles.discoverDropdownArrow} ${
                       activeDropdown === "discover" ? styles.open : ""
@@ -253,22 +253,22 @@ const Navigation = () => {
                   <ul className={styles.nestedMenu}>
                     <li>
                       <NavLink to="/upptäck-1" activeclassname={styles.active}>
-                        Upptäck-1
+                        <h5>Upptäck-1</h5>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to="/upptäck-2" activeclassname={styles.active}>
-                        Upptäck-2
+                        <h5>Upptäck-2</h5>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to="/upptäck-3" activeclassname={styles.active}>
-                        Upptäck-3
+                        <h5>Upptäck-3</h5>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to="/upptäck-4" activeclassname={styles.active}>
-                        Upptäck-4
+                        <h5>Upptäck-4</h5>
                       </NavLink>
                     </li>
                   </ul>
@@ -284,7 +284,7 @@ const Navigation = () => {
                   className={styles.dropdownToggle}
                   style={{ fontSize: "2rem" }}
                 >
-                  Galleri
+                  <h4>Galleri</h4>
                   <div
                     className={`${styles.galleryDropdownArrow} ${
                       activeDropdown === "gallery" ? styles.open : ""
@@ -302,22 +302,22 @@ const Navigation = () => {
                   <ul className={styles.nestedMenu}>
                     <li>
                       <NavLink to="/galleri-1" activeclassname={styles.active}>
-                        Galleri-1
+                        <h5>Galleri-1</h5>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to="/galleri-2" activeclassname={styles.active}>
-                        Galleri-2
+                        <h5>Galleri-2</h5>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to="/galleri-3" activeclassname={styles.active}>
-                        Galleri-3
+                        <h5>Galleri-3</h5>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to="/galleri-4" activeclassname={styles.active}>
-                        Galleri-4
+                        <h5>Galleri-4</h5>
                       </NavLink>
                     </li>
                   </ul>
@@ -325,7 +325,7 @@ const Navigation = () => {
               </li>
               <li>
                 <NavLink to="/väder" activeclassname={styles.active}>
-                  Väder
+                  <h4>Väder</h4>
                 </NavLink>
               </li>
             </ul>

@@ -17,6 +17,11 @@ li {
   list-style: none;
 }
 
+h4,
+h5 {
+  font-weight: 500;
+}
+
 /* Main nav */
 .navContainer {
   display: flex;
@@ -266,7 +271,7 @@ li {
 .logoNavContainer {
   position: absolute;
   left: -38px;
-  top: -80px;
+  top: -50px;
   width: auto;
   height: 2px;
 }
@@ -317,8 +322,25 @@ li {
   }
 }
 
+/* Tablet */
+@media only screen and (min-width: 600px) and (max-width: 1134px) {
+  h4 {
+    font-size: 2.5rem;
+  }
+}
+
 /* Desktop */
 @media only screen and (min-width: 1135px) {
+  h4 {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
   /* Main nav */
   .navContainer {
     height: 10rem;
@@ -379,6 +401,10 @@ li {
 
   .openMenu {
     top: 50%;
+  }
+
+  .nestedMenu li a {
+    font-size: 1.3rem;
   }
 
   .github,
