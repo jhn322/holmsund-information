@@ -191,7 +191,7 @@ h5 {
 .socialIcons {
   position: absolute;
   top: 31px;
-  left: 30px;
+  left: 45px;
   display: flex;
   justify-content: space-around;
 }
@@ -225,6 +225,7 @@ h5 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 13rem;
 }
 
 .openMenu li {
@@ -289,7 +290,7 @@ h5 {
 .discoverDropdownArrow,
 .galleryDropdownArrow {
   position: absolute;
-  right: -4rem;
+  right: -3rem;
   transform: translateY(-80%);
   font-size: 2.5rem;
 }
@@ -321,6 +322,7 @@ h5 {
 
 .nestedItems {
   margin-left: 1.6rem;
+  width: 12rem;
 }
 
 /* Small phones */
@@ -338,6 +340,11 @@ h5 {
   .logoNavContainer {
     display: none;
   }
+
+  .discoverDropdownArrow,
+  .galleryDropdownArrow {
+    right: -2rem;
+  }
 }
 
 /* Tablet */
@@ -348,6 +355,11 @@ h5 {
 
   .logoNavContainer {
     display: inline;
+  }
+
+  .discoverDropdownArrow,
+  .galleryDropdownArrow {
+    right: -7rem;
   }
 }
 
@@ -483,6 +495,11 @@ h5 {
 
   .nestedMenu li a {
     font-size: 1.3rem;
+  }
+
+  .discoverDropdownArrow,
+  .galleryDropdownArrow {
+    right: -9rem;
   }
 
   .github,
