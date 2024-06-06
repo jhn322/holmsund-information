@@ -191,7 +191,7 @@ h5 {
 .socialIcons {
   position: absolute;
   top: 31px;
-  left: 45px;
+  left: 40px;
   display: flex;
   justify-content: space-around;
 }
@@ -483,6 +483,7 @@ h5 {
 
   .socialIcons {
     top: 48px;
+    left: 45px;
   }
 
   .openMenu {
