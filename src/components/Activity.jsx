@@ -14,6 +14,7 @@ import activityImage8 from "../assets/activity8.jpg";
 
 // Icons
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 
 const slideWidth = 40;
 
@@ -149,7 +150,7 @@ const Activity = () => {
           className={`${styles.activityBtn} ${styles.activityBtnPrev}`}
           onClick={() => prevClick()}
         >
-          <FaChevronLeft />
+          <HiChevronLeft strokeWidth={1.5} />
         </button>
         <div className={styles.activityWrap}>
           <ul className={styles.activitySlideList}>
@@ -167,7 +168,7 @@ const Activity = () => {
           className={`${styles.activityBtn} ${styles.activityBtnNext}`}
           onClick={() => nextClick()}
         >
-          <FaChevronRight />
+          <HiChevronRight strokeWidth={1.5} />
         </button>
         <div className={styles.activityDots}>
           {card.slice(0, length).map((pos, i) => (

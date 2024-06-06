@@ -122,11 +122,11 @@ h5 {
 }
 
 .searchIcon {
-  font-size: 1.75rem;
+  font-size: 2rem;
 }
 
 .menuIcon {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .searchIcon,
@@ -242,7 +242,7 @@ h5 {
   border-color: var(--hover-color);
 }
 
-.closeIcon {
+.closeCircle {
   position: absolute;
   top: 31px;
   right: 45px;
@@ -258,8 +258,8 @@ h5 {
   transition: border-color 0.3s;
 }
 
-.close {
-  font-size: 1.875rem;
+.closeIcon {
+  font-size: 2.2rem;
   transition: color 0.3s;
 }
 
@@ -287,12 +287,12 @@ h5 {
   transform: translateY(-50%);
 }
 
-.discoverDropdownArrow,
-.galleryDropdownArrow {
+.discoverDropdownIcon,
+.galleryDropdownIcon {
   position: absolute;
   right: -3rem;
   transform: translateY(-80%);
-  font-size: 2.5rem;
+  font-size: 1.75rem;
 }
 
 .nestedMenuContainer li {
@@ -341,8 +341,8 @@ h5 {
     display: none;
   }
 
-  .discoverDropdownArrow,
-  .galleryDropdownArrow {
+  .discoverDropdownIcon,
+  .galleryDropdownIcon {
     right: -2rem;
   }
 }
@@ -357,9 +357,10 @@ h5 {
     display: inline;
   }
 
-  .discoverDropdownArrow,
-  .galleryDropdownArrow {
+  .discoverDropdownIcon,
+  .galleryDropdownIcon {
     right: -7rem;
+    font-size: 2rem;
   }
 }
 
@@ -498,9 +499,18 @@ h5 {
     font-size: 1.3rem;
   }
 
-  .discoverDropdownArrow,
-  .galleryDropdownArrow {
+  .nestedItems {
+    width: 18rem;
+  }
+
+  .nestedMenuMain {
+    width: 17rem;
+  }
+
+  .discoverDropdownIcon,
+  .galleryDropdownIcon {
     right: -9rem;
+    font-size: 2.5rem;
   }
 
   .github,
@@ -511,10 +521,10 @@ h5 {
   }
 
   .searchIcon {
-    font-size: 2.25rem;
+    font-size: 2.4rem;
   }
 
   .menuIcon {
-    font-size: 2.75rem;
+    font-size: 3.4rem;
   }
 }

@@ -3,12 +3,12 @@ import { NavLink } from "react-router-dom";
 
 // Menu Icons
 import {
-  FiMenu,
-  FiSearch,
-  FiX,
-  FiChevronDown,
-  FiChevronUp,
-} from "react-icons/fi";
+  HiBars3,
+  HiMagnifyingGlass,
+  HiMiniXMark,
+  HiMiniPlus,
+  HiMiniMinusSmall,
+} from "react-icons/hi2";
 
 // Social Icons
 import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
@@ -218,10 +218,13 @@ const Navigation = () => {
           {/* Nav icons */}
           <div className={styles.navIcons}>
             <div className={styles.search}>
-              <FiSearch strokeWidth={3} className={styles.searchIcon} />
+              <HiMagnifyingGlass
+                strokeWidth={1}
+                className={styles.searchIcon}
+              />
             </div>
-            <FiMenu
-              strokeWidth={2.5}
+            <HiBars3
+              strokeWidth={1}
               className={styles.menuIcon}
               onClick={toggleMenu}
             />
@@ -268,8 +271,8 @@ const Navigation = () => {
                 <FaFacebook className={styles.facebook} />
               </a>
             </div>
-            <div className={styles.closeIcon} onClick={closeMenu}>
-              <FiX strokeWidth={2} className={styles.close} />
+            <div className={styles.closeCircle} onClick={closeMenu}>
+              <HiMiniXMark className={styles.closeIcon} />
             </div>
             <ul className={styles.openMenu}>
               <li>
@@ -305,14 +308,14 @@ const Navigation = () => {
                 >
                   <h4>Upptäck</h4>
                   <div
-                    className={`${styles.discoverDropdownArrow} ${
+                    className={`${styles.discoverDropdownIcon} ${
                       activeDropdown === "discover" ? styles.open : ""
                     }`}
                   >
                     {activeDropdown === "discover" ? (
-                      <FiChevronUp />
+                      <HiMiniMinusSmall strokeWidth={1} />
                     ) : (
-                      <FiChevronDown />
+                      <HiMiniPlus strokeWidth={1} />
                     )}
                   </div>
                 </div>
@@ -377,14 +380,14 @@ const Navigation = () => {
                 >
                   <h4>Galleri</h4>
                   <div
-                    className={`${styles.galleryDropdownArrow} ${
+                    className={`${styles.galleryDropdownIcon} ${
                       activeDropdown === "gallery" ? styles.open : ""
                     }`}
                   >
                     {activeDropdown === "gallery" ? (
-                      <FiChevronUp />
+                      <HiMiniMinusSmall strokeWidth={1} />
                     ) : (
-                      <FiChevronDown />
+                      <HiMiniPlus strokeWidth={1} />
                     )}
                   </div>
                 </div>

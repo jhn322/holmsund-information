@@ -30,7 +30,7 @@
 
 .scrollIcon {
   color: var(--primary-color);
-  font-size: 40px;
+  font-size: 2.2rem;
 }
 
 .scrollIcon:hover {
