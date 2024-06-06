@@ -177,7 +177,7 @@ const Navigation = () => {
                     <li>
                       <NavLink to="/galleri" activeclassname={styles.active}>
                         <h5 className={styles.dropdownMenuAll}>
-                          Titta på alla bilder i galleriet
+                          Se alla bilder i Galleri
                         </h5>
                       </NavLink>
                     </li>
@@ -395,7 +395,7 @@ const Navigation = () => {
                       <li>
                         <NavLink to="/gallery" activeclassname={styles.active}>
                           <h5 className={styles.nestedMenuMain}>
-                            Se allt i galleriet
+                            Se alla bilder i Galleri
                           </h5>
                         </NavLink>
                       </li>
