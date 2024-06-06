@@ -23,7 +23,7 @@ body {
   position: relative;
   background-color: var(--primary-color);
   padding: 2rem;
-  height: 190vh;
+  height: 280vh;
 }
 
 /* Responsive size for cards */

@@ -19,12 +19,12 @@ span {
 }
 
 .separatorContainer {
-  height: 75vh;
+  height: 84vh;
 }
 
 .separatorFirst {
   background-color: var(--accent-color);
-  height: 10vh;
+  height: 12vh;
 }
 
 .separatorContent,
@@ -37,7 +37,7 @@ span {
 }
 
 .separatorContent {
-  height: 35vh;
+  height: 36vh;
   padding: 2rem 0;
   background-color: var(--primary-color);
 }
@@ -69,7 +69,7 @@ span {
 
 .separatorSecond {
   background-color: var(--accent-color);
-  height: 30vh;
+  height: 36vh;
   padding: 2rem;
 }
 
@@ -85,22 +85,6 @@ span {
 
 /* Small phones */
 @media only screen and (max-width: 400px) {
-  .separatorContainer {
-    height: 70vh;
-  }
-
-  .separatorFirst {
-    height: 8vh;
-  }
-
-  .separatorContent {
-    height: 35vh;
-  }
-
-  .separatorSecond {
-    height: 27vh;
-  }
-
   .separatorText {
     font-size: 1.1rem;
   }
@@ -125,15 +109,15 @@ span {
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 599px) {
   .separatorContainer {
-    height: 80vh;
+    height: 88vh;
   }
 
   .separatorFirst {
-    height: 12vh;
+    height: 14vh;
   }
 
   .separatorContent {
-    height: 42vh;
+    height: 44vh;
   }
 
   .separatorSecondTitle {
@@ -141,26 +125,26 @@ span {
   }
 
   .separatorSecond {
-    height: 26vh;
+    height: 30vh;
   }
 }
 
 /* Small Tablet */
 @media only screen and (min-width: 600px) and (max-width: 769px) {
   .separatorContainer {
-    height: 80vh;
+    height: 88vh;
   }
 
   .separatorFirst {
-    height: 15vh;
+    height: 17vh;
   }
 
   .separatorContent {
-    height: 40vh;
+    height: 43vh;
   }
 
   .separatorSecond {
-    height: 25vh;
+    height: 28vh;
   }
 
   .separatorSecondTitle {
@@ -171,15 +155,15 @@ span {
 /* Desktop */
 @media only screen and (min-width: 770px) and (max-width: 1199px) {
   .separatorContainer {
-    height: 68vh;
+    height: 78vh;
   }
 
   .separatorFirst {
-    height: 10vh;
+    height: 14vh;
   }
 
   .separatorContent {
-    height: 32vh;
+    height: 34vh;
   }
 
   .separatorText {
@@ -187,7 +171,7 @@ span {
   }
 
   .separatorSecond {
-    height: 26vh;
+    height: 30vh;
   }
 
   .separatorSecondTitle {
@@ -198,15 +182,15 @@ span {
 /* Large Desktop */
 @media only screen and (min-width: 1200px) {
   .separatorContainer {
-    height: 72vh;
+    height: 82vh;
   }
 
   .separatorFirst {
-    height: 12vh;
+    height: 14vh;
   }
 
   .separatorContent {
-    height: 30vh;
+    height: 34vh;
   }
 
   .separatorText {
@@ -214,7 +198,7 @@ span {
   }
 
   .separatorSecond {
-    height: 30vh;
+    height: 34vh;
   }
 
   .separatorSecondTitle {

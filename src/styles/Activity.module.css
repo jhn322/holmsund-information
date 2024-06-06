@@ -31,7 +31,7 @@ a {
   justify-content: center;
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 130vh;
   left: 50%;
   padding: 2rem;
   transform: translateX(-50%);
@@ -170,7 +170,7 @@ a {
 }
 
 .activityBtn.activityBtnPrev {
-  left: 245px;
+  left: 220px;
   z-index: 3;
 }
 
@@ -344,7 +344,6 @@ a {
     padding: 1rem;
     position: absolute;
     transition: all 0.3s;
-    border: 1px solid red;
     width: 40rem; /* 20 är bra för mobil */
   }
 
