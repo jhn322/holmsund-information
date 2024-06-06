@@ -25,9 +25,11 @@ const Navigation = () => {
   const [isMenuClosing, setIsMenuClosing] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [visible, setVisible] = useState(true);
-  const [isHovered, setIsHovered] = useState(false);
-  const [isHoveredNav, setIsHoveredNav] = useState(false);
+  const [isHoveredLogo, setIsHoveredLogo] = useState(false);
+  const [isHoveredLogoNavMenu, setIsHoveredLogoNavMenu] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isDiscoverHovered, setIsDiscoverHovered] = useState(false);
+  const [isGalleryHovered, setIsGalleryHovered] = useState(false);
 
   // Toggles the menu open/close
   const toggleMenu = () => {
@@ -102,21 +104,54 @@ const Navigation = () => {
             <li>
               <NavLink to="/" className={styles.logoContainer}>
                 <img
-                  src={isHovered ? logo2 : logo1}
+                  src={isHoveredLogo ? logo2 : logo1}
                   alt="Logo"
                   className={styles.logo}
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
+                  onMouseEnter={() => setIsHoveredLogo(true)}
+                  onMouseLeave={() => setIsHoveredLogo(false)}
                 />
               </NavLink>
             </li>
             <li>
               <NavLink
                 to="/upptäck"
-                activeclassname={styles.active}
                 className={styles.navLink}
+                activeclassname={styles.active}
+                onMouseEnter={() => setIsDiscoverHovered(true)}
+                onMouseLeave={() => setIsDiscoverHovered(false)}
               >
                 Upptäck
+                {isDiscoverHovered && (
+                  <div className={styles.dropdownMenu}>
+                    <li>
+                      <NavLink to="/upptäck" activeclassname={styles.active}>
+                        <h5 className={styles.dropdownMenuAll}>
+                          Upptäck allt i Holmsund
+                        </h5>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/upptäck-1" activeclassname={styles.active}>
+                        <h5>Första upptäck länk</h5>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/upptäck-2" activeclassname={styles.active}>
+                        <h5>Andra upptäck länk</h5>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/upptäck-3" activeclassname={styles.active}>
+                        <h5>Tredje upptäck länk</h5>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/upptäck-4" activeclassname={styles.active}>
+                        <h5>Fjärde upptäck länk</h5>
+                      </NavLink>
+                    </li>
+                  </div>
+                )}
               </NavLink>
             </li>
             <li>
@@ -131,10 +166,43 @@ const Navigation = () => {
             <li>
               <NavLink
                 to="/galleri"
-                activeclassname={styles.active}
                 className={styles.navLink}
+                activeclassname={styles.active}
+                onMouseEnter={() => setIsGalleryHovered(true)}
+                onMouseLeave={() => setIsGalleryHovered(false)}
               >
                 Galleri
+                {isGalleryHovered && (
+                  <div className={styles.dropdownMenu}>
+                    <li>
+                      <NavLink to="/galleri" activeclassname={styles.active}>
+                        <h5 className={styles.dropdownMenuAll}>
+                          Titta på alla bilder i galleriet
+                        </h5>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/galleri-1" activeclassname={styles.active}>
+                        <h5>Först galleri länk</h5>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/galleri-2" activeclassname={styles.active}>
+                        <h5>Andra galleri länk</h5>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/galleri-3" activeclassname={styles.active}>
+                        <h5>Tredje galleri länk</h5>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/galleri-4" activeclassname={styles.active}>
+                        <h5>Fjärde galleri länk</h5>
+                      </NavLink>
+                    </li>
+                  </div>
+                )}
               </NavLink>
             </li>
             <li>
@@ -207,11 +275,11 @@ const Navigation = () => {
               <li>
                 <NavLink to="/" className={styles.logoNavContainer}>
                   <img
-                    src={isHoveredNav ? logo2 : logo1}
+                    src={isHoveredLogoNavMenu ? logo2 : logo1}
                     alt="Logo"
                     className={styles.logoNav}
-                    onMouseEnter={() => setIsHoveredNav(true)}
-                    onMouseLeave={() => setIsHoveredNav(false)}
+                    onMouseEnter={() => setIsHoveredLogoNavMenu(true)}
+                    onMouseLeave={() => setIsHoveredLogoNavMenu(false)}
                   />
                 </NavLink>
               </li>
@@ -250,27 +318,50 @@ const Navigation = () => {
                 </div>
                 {/* Show nested items if activeDropdown is true */}
                 {activeDropdown === "discover" && (
-                  <ul className={styles.nestedMenu}>
-                    <li>
-                      <NavLink to="/upptäck-1" activeclassname={styles.active}>
-                        <h5>Upptäck-1</h5>
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/upptäck-2" activeclassname={styles.active}>
-                        <h5>Upptäck-2</h5>
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/upptäck-3" activeclassname={styles.active}>
-                        <h5>Upptäck-3</h5>
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/upptäck-4" activeclassname={styles.active}>
-                        <h5>Upptäck-4</h5>
-                      </NavLink>
-                    </li>
+                  <ul className={styles.nestedMenuContainer}>
+                    <div className={styles.nestedMenu}>
+                      <li>
+                        <NavLink to="/upptäck" activeclassname={styles.active}>
+                          <h5 className={styles.nestedMenuMain}>
+                            Upptäck allt i Holmsund
+                          </h5>
+                        </NavLink>
+                      </li>
+                    </div>
+                    <div className={styles.nestedItems}>
+                      <li>
+                        <NavLink
+                          to="/upptäck-1"
+                          activeclassname={styles.active}
+                        >
+                          <h5>Första upptäck länken</h5>
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/upptäck-2"
+                          activeclassname={styles.active}
+                        >
+                          <h5>Andra upptäck länken</h5>
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/upptäck-3"
+                          activeclassname={styles.active}
+                        >
+                          <h5>Tredje upptäck länken</h5>
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/upptäck-4"
+                          activeclassname={styles.active}
+                        >
+                          <h5>Fjärde upptäck länken</h5>
+                        </NavLink>
+                      </li>
+                    </div>
                   </ul>
                 )}
               </li>
@@ -299,27 +390,50 @@ const Navigation = () => {
                 </div>
                 {/* Show nested items if activeDropdown is true */}
                 {activeDropdown === "gallery" && (
-                  <ul className={styles.nestedMenu}>
-                    <li>
-                      <NavLink to="/galleri-1" activeclassname={styles.active}>
-                        <h5>Galleri-1</h5>
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/galleri-2" activeclassname={styles.active}>
-                        <h5>Galleri-2</h5>
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/galleri-3" activeclassname={styles.active}>
-                        <h5>Galleri-3</h5>
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/galleri-4" activeclassname={styles.active}>
-                        <h5>Galleri-4</h5>
-                      </NavLink>
-                    </li>
+                  <ul className={styles.nestedMenuContainer}>
+                    <div className={styles.nestedMenu}>
+                      <li>
+                        <NavLink to="/gallery" activeclassname={styles.active}>
+                          <h5 className={styles.nestedMenuMain}>
+                            Se allt i galleriet
+                          </h5>
+                        </NavLink>
+                      </li>
+                    </div>
+                    <div className={styles.nestedItems}>
+                      <li>
+                        <NavLink
+                          to="/galleri-1"
+                          activeclassname={styles.active}
+                        >
+                          <h5>Första galleri länken</h5>
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/galleri-2"
+                          activeclassname={styles.active}
+                        >
+                          <h5>Andra galleri länken</h5>
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/galleri-3"
+                          activeclassname={styles.active}
+                        >
+                          <h5>Tredje galleri länken</h5>
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/galleri-4"
+                          activeclassname={styles.active}
+                        >
+                          <h5>Fjärde galleri länken</h5>
+                        </NavLink>
+                      </li>
+                    </div>
                   </ul>
                 )}
               </li>
