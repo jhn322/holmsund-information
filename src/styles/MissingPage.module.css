@@ -19,14 +19,14 @@
   background-repeat: no-repeat;
   background-size: 25rem;
   background-position-x: center;
-  background-position-y: 11.25rem;
+  background-position-y: 5rem;
   background-color: var(--primary-color);
 }
 
 /* Text with position */
 .MissingText {
   font-size: 1.2rem;
-  margin-top: 22rem;
+  margin-top: 25rem;
 }
 
 /* Button styling */
