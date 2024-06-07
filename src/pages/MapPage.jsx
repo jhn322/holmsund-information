@@ -1,11 +1,10 @@
 import React from "react";
 
+// Components
+import Layout from "../layouts/Layout";
+
 const MapPage = () => {
-  return (
-    <div>
-      Maps <Navigation />
-    </div>
-  );
+  return <Layout></Layout>;
 };
 
 export default MapPage;

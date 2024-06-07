@@ -1,4 +1,6 @@
 import React from "react";
+
+// Components
 import Layout from "../layouts/Layout";
 import Header from "../components/Header";
 import ContentCircle from "../components/ContentCircle";

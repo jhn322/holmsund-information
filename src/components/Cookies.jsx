@@ -10,12 +10,21 @@ const Cookies = () => {
     setVisible(false);
   };
 
+  const handleDeny = () => {
+    setVisible(false);
+  };
+
   if (!visible) return null;
 
   return (
     <div className={styles.cookiesContainer}>
       <p>Chocolate chip cookies or vanilla?</p>
-      <button onClick={handleAccept}>Accept</button>
+      <button className={styles.deny} onClick={handleDeny}>
+        Deny
+      </button>
+      <button className={styles.accept} onClick={handleAccept}>
+        Accept
+      </button>
     </div>
   );
 };

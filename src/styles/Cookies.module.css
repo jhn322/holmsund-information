@@ -11,29 +11,38 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #222;
-  color: #fff;
+  z-index: 999;
+  background-color: var(--primary-color);
   text-align: center;
-  padding: 20px;
+  padding: 1rem;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .cookiesContainer p {
-  margin: 0;
+  margin: 0.5rem 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 1.1rem;
+  color: var(--black-text-color);
 }
 
 .cookiesContainer button {
-  background-color: #4caf50;
-  color: white;
+  color: var(--white-text-color);
+  border-radius: 10px;
   border: none;
-  padding: 10px 20px;
-  margin-left: 10px;
+  padding: 0.65rem 1.25rem;
+  margin-left: 0.65rem;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
-.cookiesContainer button:hover {
-  background-color: #45a049;
+.accept {
+  background-color: #4eb646;
+}
+
+.accept:hover {
+  background-color: #5cda53;
+}
+
+.deny:hover {
+  background-color: #db55c0;
 }
