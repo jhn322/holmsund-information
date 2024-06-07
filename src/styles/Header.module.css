@@ -42,7 +42,7 @@ body {
 }
 
 .headerTitle {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 600;
 }
 
@@ -72,11 +72,7 @@ body {
 }
 
 /* Small phones */
-@media only screen and (max-width: 400px) {
-  .headerTitle {
-    font-size: 3rem;
-  }
-
+@media only screen and (max-width: 389px) {
   .headerBtn {
     width: 18rem;
   }

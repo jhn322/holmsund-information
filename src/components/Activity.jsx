@@ -99,7 +99,7 @@ const ActivitySlide = ({ pos, index, activeIndex }) => {
       </div>
 
       <div className={styles.activitySlideContent}>
-        <h4>{card.activityImg.title}</h4>
+        <h3>{card.activityImg.title}</h3>
         <p>{card.activityImg.desc}</p>
       </div>
     </li>

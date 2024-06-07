@@ -38,20 +38,20 @@ body {
 }
 
 .titleContent {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   margin-bottom: 5rem;
   margin-top: 0.5rem;
 }
 
 .undertitleContent {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 1rem;
   color: var(--nav-color);
 }
 
 .paragraphContent {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   word-spacing: 1px;
   line-height: 2rem;
   max-width: 90%;
@@ -121,19 +121,7 @@ body {
 }
 
 /* Small phones */
-@media only screen and (max-width: 400px) {
-  .titleContent {
-    font-size: 2.25rem;
-  }
-
-  .undertitleContent {
-    font-size: 1.3rem;
-  }
-
-  .paragraphContent {
-    font-size: 1.1rem;
-  }
-
+@media only screen and (max-width: 389px) {
   .circleBack,
   .circleFront {
     width: calc(18rem + 20vw);
@@ -144,12 +132,16 @@ body {
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 599px) {
   .titleContent {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
   }
 
   .undertitleContent {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     max-width: 32rem;
+  }
+
+  .paragraphContent {
+    font-size: 1.2rem;
   }
 
   .circleBack,
@@ -162,12 +154,16 @@ body {
 /* Small Tablet */
 @media only screen and (min-width: 600px) and (max-width: 769px) {
   .titleContent {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .undertitleContent {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     max-width: 32rem;
+  }
+
+  .paragraphContent {
+    font-size: 1.2rem;
   }
 
   .circleBack,
@@ -203,6 +199,10 @@ body {
     font-size: 1.8rem;
     width: 85%;
     max-width: 39rem;
+  }
+
+  .paragraphContent {
+    font-size: 1.3rem;
   }
 
   .circleContainer {

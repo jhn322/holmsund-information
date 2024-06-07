@@ -8,7 +8,6 @@
 }
 
 body {
-  font-size: 1.3rem;
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -132,10 +131,12 @@ a {
   justify-content: center;
 }
 
-.activitySlideContent h4 {
+.activitySlideContent h3 {
   margin: 0.7rem 0 0;
   text-transform: uppercase;
   color: var(--black-text-color);
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .activitySlideContent p {
@@ -208,7 +209,7 @@ a {
 }
 
 /* Small phones */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 389px) {
   .activityContainer {
     height: 160vh;
   }
@@ -229,9 +230,14 @@ a {
     margin-top: -3rem;
   }
 
+  .activitySlideContent h3 {
+    font-size: 1.3rem;
+  }
+
   .activitySlideContent p {
     width: 70%;
     max-width: 80%;
+    font-size: 1.2rem;
   }
 }
 
@@ -241,9 +247,14 @@ a {
     margin-top: -3.5rem;
   }
 
+  .activitySlideContent h3 {
+    font-size: 1.3rem;
+  }
+
   .activitySlideContent p {
     width: 80%;
     max-width: 90%;
+    font-size: 1.2rem;
   }
 }
 
@@ -254,14 +265,16 @@ a {
     margin-top: 0;
   }
 
-  .activitySlideContent h4 {
+  .activitySlideContent h3 {
     text-align: left;
+    font-size: 1.5rem;
   }
 
   .activitySlideContent p {
     width: 100%;
     max-width: 100%;
     text-align: left;
+    font-size: 1.3rem;
   }
 }
 
@@ -272,14 +285,16 @@ a {
     margin-top: 0;
   }
 
-  .activitySlideContent h4 {
+  .activitySlideContent h3 {
     text-align: left;
+    font-size: 1.7rem;
   }
 
   .activitySlideContent p {
     width: 100%;
     max-width: 100%;
     text-align: left;
+    font-size: 1.3rem;
   }
 }
 
@@ -290,14 +305,16 @@ a {
     margin-top: 0;
   }
 
-  .activitySlideContent h4 {
+  .activitySlideContent h3 {
     text-align: left;
+    font-size: 1.7rem;
   }
 
   .activitySlideContent p {
     width: 100%;
     max-width: 100%;
     text-align: left;
+    font-size: 1.3rem;
   }
 }
 
@@ -400,14 +417,16 @@ a {
     margin-top: 0;
   }
 
-  .activitySlideContent h4 {
+  .activitySlideContent h3 {
     text-align: left;
+    font-size: 1.7rem;
   }
 
   .activitySlideContent p {
     width: 100%;
     max-width: 100%;
     text-align: left;
+    font-size: 1.3rem;
   }
 
   .activityBtn {

@@ -46,14 +46,14 @@ span {
 .separatorSecondText {
   max-width: 90%;
   padding: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   word-break: break-word;
   overflow-wrap: break-word;
 }
 
 .link,
 .hashtag {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: var(--accent-color);
   transition: color 0.3s;
 }
@@ -64,7 +64,7 @@ span {
 }
 
 .hashtag {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .separatorSecond {
@@ -74,17 +74,17 @@ span {
 }
 
 .separatorSecondTitle {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   color: var(--white-text-color);
 }
 
 .separatorSecondText {
   color: var(--white-text-color);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 /* Small phones */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 389px) {
   .separatorContainer {
     height: 100vh;
   }
@@ -97,28 +97,8 @@ span {
     height: 42vh;
   }
 
-  .separatorText {
-    font-size: 1.1rem;
-  }
-
-  .link {
-    font-size: 1.1rem;
-  }
-
-  .hashtag {
-    font-size: 1.3rem;
-  }
-
   .separatorSecond {
     height: 42vh;
-  }
-
-  .separatorSecondTitle {
-    font-size: 2.25rem;
-  }
-
-  .separatorSecondText {
-    font-size: 1.1rem;
   }
 }
 
@@ -136,8 +116,13 @@ span {
     height: 44vh;
   }
 
+  .separatorText,
+  .separatorSecondText {
+    font-size: 1.2rem;
+  }
+
   .separatorSecondTitle {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
   }
 
   .separatorSecond {
@@ -159,12 +144,17 @@ span {
     height: 43vh;
   }
 
+  .separatorText,
+  .separatorSecondText {
+    font-size: 1.2rem;
+  }
+
   .separatorSecond {
     height: 28vh;
   }
 
   .separatorSecondTitle {
-    font-size: 3rem;
+    font-size: 2.75rem;
   }
 }
 
@@ -182,8 +172,10 @@ span {
     height: 34vh;
   }
 
-  .separatorText {
+  .separatorText,
+  .separatorSecondText {
     width: 95%;
+    font-size: 1.3rem;
   }
 
   .separatorSecond {
@@ -209,8 +201,10 @@ span {
     height: 34vh;
   }
 
-  .separatorText {
+  .separatorText,
+  .separatorSecondText {
     max-width: 95%;
+    font-size: 1.3rem;
   }
 
   .separatorSecond {

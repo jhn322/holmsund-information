@@ -25,7 +25,7 @@
 
 /* Text with position */
 .MissingText {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-top: 25rem;
 }
 
@@ -34,7 +34,7 @@
   padding: 0.875rem 1.5rem;
   border-radius: 2.188rem;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-top: 1rem;
 }
 
@@ -43,19 +43,17 @@
 }
 
 /* Small phones */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 389px) {
   .MissingContainer {
     background-size: 22rem;
   }
 
   .MissingText {
-    font-size: 1.1rem;
     max-width: 21.25rem;
   }
 
   .MissingBtn {
     padding: 0.75rem 1.375rem;
-    font-size: 1.1rem;
   }
 }
 
@@ -67,13 +65,13 @@
 
   .MissingText {
     margin-top: 30rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     max-width: 33.75rem;
   }
 
   .MissingBtn {
     padding: 1rem 1.625rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 

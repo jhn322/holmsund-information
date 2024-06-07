@@ -42,7 +42,7 @@ body {
 .discoverTitle h2 {
   margin: 4rem 0 0 0;
   margin-bottom: 0;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   padding: 2rem 0;
 }
 
@@ -106,7 +106,7 @@ body {
 }
 
 .cardOverlay h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 
@@ -163,17 +163,9 @@ body {
 }
 
 /* Small phones */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 389px) {
   .discoverContainer {
     height: 340vh;
-  }
-
-  .discoverTitle h2 {
-    font-size: 2.25rem;
-  }
-
-  .cardOverlay h3 {
-    font-size: 1.3rem;
   }
 
   .expandedText {
@@ -185,7 +177,7 @@ body {
 @media only screen and (min-width: 500px) and (max-width: 599px) {
   .discoverTitle h2 {
     margin-top: 1rem;
-    font-size: 2.75rem;
+    font-size: 2.5rem;
   }
 
   .cardOverlay h3 {
@@ -196,11 +188,11 @@ body {
 /* Small Tablet */
 @media only screen and (min-width: 600px) and (max-width: 769px) {
   .discoverTitle h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .cardOverlay h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
