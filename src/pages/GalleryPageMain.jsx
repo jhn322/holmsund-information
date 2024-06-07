@@ -1,11 +1,10 @@
 import React from "react";
 
+// Components
+import Layout from "../layouts/Layout";
+
 const GalleryPageMain = () => {
-  return (
-    <div>
-      GalleryPage <Navigation />
-    </div>
-  );
+  return <Layout></Layout>;
 };
 
 export default GalleryPageMain;

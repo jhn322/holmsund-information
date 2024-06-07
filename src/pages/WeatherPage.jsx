@@ -1,16 +1,10 @@
 import React from "react";
-import Navigation from "../components/Navigation";
+
+// Components
+import Layout from "../layouts/Layout";
 
 const WeatherPage = () => {
-  return (
-    <div>
-      {" "}
-      <div>
-        <Navigation />
-      </div>
-      Weather
-    </div>
-  );
+  return <Layout></Layout>;
 };
 
 export default WeatherPage;

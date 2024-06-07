@@ -1,16 +1,10 @@
 import React from "react";
-import Navigation from "../components/Navigation";
+
+// Components
+import Layout from "../layouts/Layout";
 
 const ActivityPage = () => {
-  return (
-    <div>
-      {" "}
-      <div>
-        <Navigation />
-      </div>
-      ActivityPage
-    </div>
-  );
+  return <Layout></Layout>;
 };
 
 export default ActivityPage;

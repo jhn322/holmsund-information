@@ -1,16 +1,10 @@
 import React from "react";
-import Navigation from "../components/Navigation";
+
+// Components
+import Layout from "../layouts/Layout";
 
 const DiscoverPage4 = () => {
-  return (
-    <div>
-      {" "}
-      <div>
-        <Navigation />
-      </div>
-      DiscoverPage4
-    </div>
-  );
+  return <Layout></Layout>;
 };
 
 export default DiscoverPage4;

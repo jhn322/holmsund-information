@@ -1,7 +1,10 @@
 import React from "react";
 
+// Components
+import Layout from "../layouts/Layout";
+
 const AboutUsPage = () => {
-  return <div>AboutUsPage</div>;
+  return <Layout></Layout>;
 };
 
 export default AboutUsPage;

@@ -1,29 +1,24 @@
 import React from "react";
-
-// Components
-import Navigation from "../components/Navigation";
+import Layout from "../layouts/Layout";
 import Header from "../components/Header";
 import ContentCircle from "../components/ContentCircle";
 import Activity from "../components/Activity";
 import Discover from "../components/Discover";
 import Gallery from "../components/Gallery";
-import Footer from "../components/Footer";
 import Separator from "../components/Separator";
-import ScrollUp from "../components/ScrollUp";
+import ShareMaps from "../components/ShareMaps";
 
 const HomePage = () => {
   return (
-    <main>
-      <Navigation />
+    <Layout>
       <Header />
       <ContentCircle />
       <Separator />
       <Activity />
       <Discover />
       <Gallery />
-      <Footer />
-      <ScrollUp />
-    </main>
+      <ShareMaps />
+    </Layout>
   );
 };
 

@@ -1,0 +1,44 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+.story {
+  margin-top: 20px;
+}
+
+.storyHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.circle {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #000;
+}
+
+.storyText {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.storyHashtag {
+  font-size: 18px;
+  color: #888;
+}
+
+.adress p {
+  font-size: 2rem;
+}

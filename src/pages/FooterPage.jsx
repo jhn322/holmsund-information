@@ -1,15 +1,10 @@
 import React from "react";
-import Navigation from "../components/Navigation";
+
+// Components
+import Layout from "../layouts/Layout";
 
 const FooterPage = () => {
-  return (
-    <div>
-      <div>
-        <Navigation />
-      </div>
-      FooterPage
-    </div>
-  );
+  return <Layout></Layout>;
 };
 
 export default FooterPage;

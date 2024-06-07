@@ -15,11 +15,12 @@ import GalleryPage1 from "./pages/GalleryPage1";
 import GalleryPage2 from "./pages/GalleryPage2";
 import GalleryPage3 from "./pages/GalleryPage3";
 import GalleryPage4 from "./pages/GalleryPage4";
+import MapPage from "./pages/MapPage";
 import FooterPage from "./pages/FooterPage";
 import MissingPage from "./pages/MissingPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import CookiesPage from "./pages/CookiesPage";
-import TermsOfService from "./pages/TermsOfService";
+import TermsOfServicePage from "./pages/TermsOfServicePage";
 
 const App = () => {
   return (
@@ -70,12 +71,13 @@ const App = () => {
             path="/galleri-4"
             element={<GalleryPage4 page="galleri-4" />}
           />
+          <Route path="/karta" element={<MapPage page="karta" />} />
           <Route path="/footer" element={<FooterPage page="footer" />} />
           <Route path="/om-oss" element={<AboutUsPage page="om-oss" />} />
           <Route path="/kakor" element={<CookiesPage page="kakor" />} />
           <Route
             path="/anvandarvillkor"
-            element={<TermsOfService page="anvandarvillkor" />}
+            element={<TermsOfServicePage page="anvandarvillkor" />}
           />
           <Route path="*" element={<MissingPage />} />
         </Routes>

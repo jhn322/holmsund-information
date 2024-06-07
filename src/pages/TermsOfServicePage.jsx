@@ -3,8 +3,8 @@ import React from "react";
 // Components
 import Layout from "../layouts/Layout";
 
-const GalleryPage2 = () => {
+const TermsOfServicePage = () => {
   return <Layout></Layout>;
 };
 
-export default GalleryPage2;
+export default TermsOfServicePage;
