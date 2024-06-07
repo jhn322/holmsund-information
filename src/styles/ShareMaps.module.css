@@ -9,10 +9,12 @@
 
 .container {
   text-align: center;
+  height: 60vh;
+  background-color: var(--primary-color);
 }
 
 .story {
-  margin-top: 20px;
+  margin: 0;
 }
 
 .storyHeader {
@@ -25,20 +27,26 @@
 .circle {
   font-size: 24px;
   margin-right: 10px;
-  color: #000;
+  color: var(--black-text-color);
 }
 
 .storyText {
   font-size: 18px;
   font-weight: bold;
   margin-right: 10px;
+  padding: 2rem 0;
+  color: var(--black-text-color);
 }
 
 .storyHashtag {
   font-size: 18px;
-  color: #888;
+  margin-top: 0.4rem;
+  margin-left: -0.6rem;
+  color: var(--black-text-color);
 }
 
 .adress p {
   font-size: 2rem;
+  color: var(--black-text-color);
+  padding: 0 2rem;
 }

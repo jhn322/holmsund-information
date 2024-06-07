@@ -209,6 +209,10 @@ a {
 
 /* Small phones */
 @media only screen and (max-width: 400px) {
+  .activityContainer {
+    height: 160vh;
+  }
+
   .activitySlideContent {
     margin-top: -0.8rem;
   }

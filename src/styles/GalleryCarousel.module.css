@@ -214,6 +214,10 @@ p {
     font-size: 1.1rem;
   }
 
+  .galleryContainer {
+    height: 200vh;
+  }
+
   .galleryCircle {
     top: -40px;
     left: -8px;

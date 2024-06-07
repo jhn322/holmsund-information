@@ -1,4 +1,5 @@
 import React from "react";
+
 // CSS
 import styles from "../styles/ShareMaps.module.css";
 
@@ -8,15 +9,15 @@ const ShareMaps = () => {
       <header className={styles.inner}>
         <div className={styles.story}>
           <div className={styles.storyHeader}>
-            <span className={styles.circle}>⬤</span>
-            <span className={styles.storyText}>Dela din story</span>
+            <h3 className={styles.storyText}>
+              Dela din story <span className={styles.circle}>⬤</span>{" "}
+            </h3>
             <span className={styles.storyHashtag}>#Holmsund</span>
           </div>
           <div className={styles.adress}>
-            <p>
-              Kulgränd 1 Holmsund, Umeå Västerbotten, Sverige 910 20
-              Koordinater: 63.7066° N, 20.3686° E
-            </p>
+            <p>Kulgränd 1 Holmsund, Umeå Västerbotten</p>
+            <p>Sverige 913 32</p>
+            <p>63.7066° N, 20.3686° E</p>
           </div>
         </div>
       </header>

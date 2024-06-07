@@ -85,6 +85,18 @@ span {
 
 /* Small phones */
 @media only screen and (max-width: 400px) {
+  .separatorContainer {
+    height: 100vh;
+  }
+
+  .separatorFirst {
+    height: 16vh;
+  }
+
+  .separatorContent {
+    height: 42vh;
+  }
+
   .separatorText {
     font-size: 1.1rem;
   }
@@ -95,6 +107,10 @@ span {
 
   .hashtag {
     font-size: 1.3rem;
+  }
+
+  .separatorSecond {
+    height: 42vh;
   }
 
   .separatorSecondTitle {
