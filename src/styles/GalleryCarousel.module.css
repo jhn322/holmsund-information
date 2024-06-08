@@ -30,7 +30,7 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 170vh;
+  height: 190vh;
   padding: 4rem;
   background-color: var(--gallery-color);
 }
@@ -251,7 +251,7 @@ p {
   }
 
   .galleryContainer {
-    height: 160vh;
+    height: 170vh;
   }
 
   .galleryImage {

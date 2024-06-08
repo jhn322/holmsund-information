@@ -1,5 +1,6 @@
-// Activity.js
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+
+// CSS
 import styles from "../styles/Activity.module.css";
 
 // Images
@@ -13,7 +14,6 @@ import activityImage7 from "../assets/activity7.jpg";
 import activityImage8 from "../assets/activity8.jpg";
 
 // Icons
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 
 const slideWidth = 40;
