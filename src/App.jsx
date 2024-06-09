@@ -10,6 +10,10 @@ import DiscoverPage1 from "./pages/DiscoverPage1";
 import DiscoverPage2 from "./pages/DiscoverPage2";
 import DiscoverPage3 from "./pages/DiscoverPage3";
 import DiscoverPage4 from "./pages/DiscoverPage4";
+import DiscoverPage5 from "./pages/DiscoverPage5";
+import DiscoverPage6 from "./pages/DiscoverPage6";
+import DiscoverPage7 from "./pages/DiscoverPage7";
+import DiscoverPage8 from "./pages/DiscoverPage8";
 import GalleryPageMain from "./pages/GalleryPageMain";
 import GalleryPage1 from "./pages/GalleryPage1";
 import GalleryPage2 from "./pages/GalleryPage2";
@@ -34,6 +38,8 @@ const App = () => {
             element={<ActivityPage page="aktiviteter" />}
           />
           <Route path="/väder" element={<WeatherPage page="väder" />} />
+
+          {/* Upptäck sektion */}
           <Route
             path="/upptäck"
             element={<DiscoverPageMain page="upptäck" />}
@@ -54,6 +60,24 @@ const App = () => {
             path="/upptäck-4"
             element={<DiscoverPage4 page="upptäck-4" />}
           />
+          <Route
+            path="/upptäck-5"
+            element={<DiscoverPage1 page="upptäck-5" />}
+          />
+          <Route
+            path="/upptäck-6"
+            element={<DiscoverPage2 page="upptäck-6" />}
+          />
+          <Route
+            path="/upptäck-7"
+            element={<DiscoverPage3 page="upptäck-7" />}
+          />
+          <Route
+            path="/upptäck-8"
+            element={<DiscoverPage4 page="upptäck-8" />}
+          />
+
+          {/* Galleri sektion */}
           <Route path="/galleri" element={<GalleryPageMain page="galleri" />} />
           <Route
             path="/galleri-1"

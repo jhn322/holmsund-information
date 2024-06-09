@@ -1,186 +1,130 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 // CSS
 import styles from "../styles/Activity.module.css";
+
+// Icons
+import { HiChevronLeft, HiChevronRight, HiArrowRight } from "react-icons/hi2";
 
 // Images
 import activityImage1 from "../assets/activity1.jpg";
 import activityImage2 from "../assets/activity2.jpg";
 import activityImage3 from "../assets/activity3.jpg";
 import activityImage4 from "../assets/activity4.jpg";
-import activityImage5 from "../assets/activity5.jpg";
-import activityImage6 from "../assets/activity6.jpg";
-import activityImage7 from "../assets/activity7.jpg";
-import activityImage8 from "../assets/activity8.jpg";
+import featuredCircle from "../assets/circle.png";
 
-// Icons
-import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
+const ActivityCarousel = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
 
-const slideWidth = 40;
+  const slides = [
+    {
+      src: activityImage1,
+      title: "Vin Festival",
+      description:
+        "Fira med oss den 8 juni i Kellogg Mall Park. Upplev en fantastisk kväll med utsökta viner från lokala vingårdar, musik och god mat. Ta chansen att träffa vinmakare och delta i exklusiva vinprovningar.",
+      link: "/aktiviteter",
+    },
+    {
+      src: activityImage2,
+      title: "Kattmuseum",
+      description:
+        "Katten sov lugnt på den mysiga, varma soffan. Utforska vårt kattmuseum där du kan lära dig om katternas historia och deras roll i olika kulturer.",
+      link: "/aktiviteter",
+    },
+    {
+      src: activityImage3,
+      title: "Simlektioner",
+      description:
+        "Hon skrattade högt åt det roliga skämtet hennes vän berättade. Välkommen till våra simlektioner, där du kan lära dig att simma eller förbättra dina simfärdigheter. Våra erfarna instruktörer ger personlig uppmärksamhet och ser till att varje lektion är både säker och rolig. Perfekt för alla åldrar och nivåer!",
+      link: "/aktiviteter",
+    },
+    {
+      src: activityImage4,
+      title: "Auktionsshow",
+      description:
+        "De kom tidigt, till deras värds stora glädje. Delta i vår spännande auktionsshow där unika föremål från hela världen går under klubban. Möt samlare och säljare, och kanske gå hem med en oväntad skatt.",
+      link: "/aktiviteter",
+    },
+  ];
 
-const cards = [
-  {
-    activityImg: {
-      title: "Första aktiviteten",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eius nemo, deserunt voluptates sint aliquam. Porro corrupti, ullam repellat, sunt, aliquid quos recusandae assumenda ut voluptatum in omnis non voluptatem?",
-      image: activityImage1,
-    },
-  },
-  {
-    activityImg: {
-      title: "Andra aktiviteten",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eius nemo, deserunt voluptates sint aliquam. Porro corrupti, ullam repellat, sunt, aliquid quos recusandae assumenda ut voluptatum in omnis non voluptatem?",
-      image: activityImage2,
-    },
-  },
-  {
-    activityImg: {
-      title: "Tredje aktiviteten",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eius nemo, deserunt voluptates sint aliquam. Porro corrupti, ullam repellat, sunt, aliquid quos recusandae assumenda ut voluptatum in omnis non voluptatem?",
-      image: activityImage3,
-    },
-  },
-  {
-    activityImg: {
-      title: "Fjärde aktiviteten",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eius nemo, deserunt voluptates sint aliquam. Porro corrupti, ullam repellat, sunt, aliquid quos recusandae assumenda ut voluptatum in omnis non voluptatem?",
-      image: activityImage4,
-    },
-  },
-  {
-    activityImg: {
-      title: "Femte aktiviteten",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eius nemo, deserunt voluptates sint aliquam. Porro corrupti, ullam repellat, sunt, aliquid quos recusandae assumenda ut voluptatum in omnis non voluptatem?",
-      image: activityImage5,
-    },
-  },
-];
-
-const length = cards.length;
-cards.push(...cards);
-
-const sleep = (ms = 0) => {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-};
-
-const createCard = (position, index) => {
-  const card = {
-    styles: {
-      transform: `translateX(${position * slideWidth}rem)`,
-    },
-    activityImg: cards[index].activityImg,
+  const truncateDescription = (text, wordLimit) => {
+    const words = text.split(" ");
+    if (words.length > wordLimit) {
+      return words.slice(0, wordLimit).join(" ") + "...";
+    }
+    return text;
   };
 
-  switch (position) {
-    case length - 1:
-    case length + 1:
-      card.styles = { ...card.styles, filter: "grayscale(100%)" };
-      break;
-    case length:
-      break;
-    default:
-      card.styles = { ...card.styles, opacity: 0 };
-      break;
-  }
+  const handlePrev = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
+    );
+  };
 
-  return card;
-};
-
-const ActivitySlide = ({ pos, index, activeIndex }) => {
-  const card = createCard(pos, index, activeIndex);
+  const handleNext = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   return (
-    <li className={styles.activitySlide} style={card.styles}>
-      <div
-        className={styles.activitySlideImg}
-        data-title={card.activityImg.title}
-      >
-        <img src={card.activityImg.image} alt={card.activityImg.title} />
+    <div className={styles.activityCarousel}>
+      <div className={styles.activityContainer}>
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`${styles.activitySlide} ${
+              index === activeIndex ? styles.active : ""
+            }`}
+          >
+            <a href={slide.link}>
+              <img src={slide.src} alt={`Slide ${index + 1}`} />
+            </a>
+            <div className={styles.slideCounter}>
+              {index + 1}/{slides.length}
+            </div>
+            <div className={styles.activityCaption}>
+              <a href={slide.link}>
+                <h3 className={styles.captionTitle}>{slide.title}</h3>
+              </a>
+              <p>{truncateDescription(slide.description, 25)}</p>
+              <div className={styles.linkContainer}>
+                <a className={styles.captionLink} href={slide.link}>
+                  Läs Mer...
+                </a>
+              </div>
+              <div className={styles.arrowContainer}>
+                <a href={slide.link}>
+                  <HiArrowRight className={styles.arrowIcon} />
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-
-      <div className={styles.activitySlideContent}>
-        <h3>{card.activityImg.title}</h3>
-        <p>{card.activityImg.desc}</p>
+      <div className={styles.activityNav}>
+        <span className={styles.navPrev} onClick={handlePrev}>
+          <HiChevronLeft strokeWidth={1.5} />
+        </span>
+        <span className={styles.navNext} onClick={handleNext}>
+          <HiChevronRight strokeWidth={1.5} />
+        </span>
       </div>
-    </li>
+    </div>
   );
 };
 
-const keys = Array.from(Array(cards.length).keys());
-
 const Activity = () => {
-  const [card, setcard] = useState(keys);
-  const [isTicking, setIsTicking] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const bigLength = card.length;
-
-  const prevClick = (jump = 1) => {
-    if (!isTicking) {
-      setIsTicking(true);
-      setcard((prev) => prev.map((_, i) => prev[(i + jump) % bigLength]));
-    }
-  };
-
-  const nextClick = (jump = 1) => {
-    if (!isTicking) {
-      setIsTicking(true);
-      setcard((prev) =>
-        prev.map((_, i) => prev[(i - jump + bigLength) % bigLength])
-      );
-    }
-  };
-
-  const handleDotClick = (index) => {
-    if (index < activeIndex) prevClick(activeIndex - index);
-    if (index > activeIndex) nextClick(index - activeIndex);
-  };
-
-  useEffect(() => {
-    if (isTicking) sleep(300).then(() => setIsTicking(false));
-  }, [isTicking]);
-
-  useEffect(() => {
-    setActiveIndex((length - (card[0] % length)) % length); // prettier-ignore
-  }, [card]);
-
   return (
-    <div className={styles.activityContainer}>
-      <div className={styles.activityInner}>
-        <button
-          className={`${styles.activityBtn} ${styles.activityBtnPrev}`}
-          onClick={() => prevClick()}
-        >
-          <HiChevronLeft strokeWidth={1.5} />
-        </button>
-        <div className={styles.activityWrap}>
-          <ul className={styles.activitySlideList}>
-            {card.map((pos, i) => (
-              <ActivitySlide
-                key={i}
-                index={i}
-                pos={pos}
-                activeIndex={activeIndex}
-              />
-            ))}
-          </ul>
-        </div>
-        <button
-          className={`${styles.activityBtn} ${styles.activityBtnNext}`}
-          onClick={() => nextClick()}
-        >
-          <HiChevronRight strokeWidth={1.5} />
-        </button>
-        <div className={styles.activityDots}>
-          {card.slice(0, length).map((pos, i) => (
-            <span
-              key={i}
-              onClick={() => handleDotClick(i)}
-              className={`${styles.dot} ${
-                i === activeIndex ? styles.dotActive : ""
-              }`}
-            />
-          ))}
-        </div>
+    <div className={styles.featuredContainer}>
+      <div className={styles.featuredImage}></div>
+      <div className={styles.featuredInner}>
+        <div
+          className={styles.featuredCircle}
+          style={{ backgroundImage: `url(${featuredCircle})` }}
+        ></div>
+        <h2 className={styles.featuredTitle}>Utvalda Aktiviteter</h2>
+        <ActivityCarousel />
       </div>
     </div>
   );

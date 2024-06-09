@@ -8,6 +8,7 @@
 }
 
 .cookiesContainer {
+  display: none; /* REMOVE TO ENABLE */
   position: fixed;
   bottom: 0;
   width: 100%;

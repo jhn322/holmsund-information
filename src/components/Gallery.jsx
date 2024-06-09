@@ -1,10 +1,11 @@
-import React from "react";
-
-// JSX
-import AutoCarousel from "./AutoCarousel";
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 // CSS
-import styles from "../styles/GalleryCarousel.module.css";
+import styles from "../styles/Gallery.module.css";
+
+// Icons
+import { HiChevronLeft, HiChevronRight, HiArrowRight } from "react-icons/hi2";
 
 // Static image and carousel of images
 import staticGalleryImage from "../assets/staticGallery.jpg";
@@ -12,7 +13,7 @@ import galleryImage1 from "../assets/gallery1.jpg";
 import galleryImage2 from "../assets/gallery2.jpg";
 import galleryImage3 from "../assets/gallery3.jpg";
 import galleryImage4 from "../assets/gallery4.jpg";
-import galleryCircle from "../assets/galleryCircle.png";
+import galleryCircle from "../assets/circle.png";
 
 const Gallery = () => {
   const images = [
@@ -42,6 +43,41 @@ const Gallery = () => {
     },
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [autoSlideTimeout, setAutoSlideTimeout] = useState(null);
+
+  useEffect(() => {
+    startAutoSlide();
+
+    return () => {
+      clearTimeout(autoSlideTimeout);
+    };
+  }, [currentIndex]);
+
+  const startAutoSlide = () => {
+    clearTimeout(autoSlideTimeout);
+
+    const timeout = setTimeout(goToNextSlide, 5000);
+    setAutoSlideTimeout(timeout);
+  };
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+    startAutoSlide();
+  };
+
+  const goToPrevSlide = () => {
+    const newIndex = (currentIndex - 1 + images.length) % images.length;
+    setCurrentIndex(newIndex);
+    startAutoSlide();
+  };
+
+  const goToNextSlide = () => {
+    const newIndex = (currentIndex + 1) % images.length;
+    setCurrentIndex(newIndex);
+    startAutoSlide();
+  };
+
   return (
     <section>
       <div className={styles.galleryContainer}>
@@ -63,8 +99,64 @@ const Gallery = () => {
             </article>
           </div>
         </div>
-        <div className={styles.carouselText}>
-          <AutoCarousel images={images} />
+        <div className={styles.galleryCarousel}>
+          <div className={styles.carouselContainer}>
+            <div className={styles.carouselInner}>
+              {images.map((image, index) => (
+                <div
+                  key={index}
+                  className={`${styles.slide} ${
+                    index === currentIndex ? styles.active : ""
+                  }`}
+                >
+                  {/* Img with NavLink to other pages */}
+                  <NavLink to={image.link}>
+                    <img src={image.url} alt={`Slide ${index}`} />
+                  </NavLink>
+                </div>
+              ))}
+              <div className={styles.carouselNav}>
+                <span className={styles.prev} onClick={goToPrevSlide}>
+                  <HiChevronLeft strokeWidth={1.5} />
+                </span>
+                <span className={styles.next} onClick={goToNextSlide}>
+                  <HiChevronRight strokeWidth={1.5} />
+                </span>
+              </div>
+            </div>
+            <div className={styles.carouselText}>
+              <NavLink to={images[currentIndex].link}>
+                <div className={styles.hoverContainer}>
+                  <h2>{images[currentIndex].title}</h2>
+                  <p>{images[currentIndex].text} </p>
+                  <div className={styles.linkContainer}>
+                    <a
+                      className={styles.carouselLink}
+                      href={images[currentIndex].link}
+                    >
+                      Läs Mer...
+                    </a>
+                  </div>
+                  <div className={styles.arrowContainer}>
+                    <a href={images[currentIndex].link}>
+                      <HiArrowRight className={styles.arrowIcon} />
+                    </a>
+                  </div>
+                </div>
+              </NavLink>
+            </div>
+          </div>
+          <div className={styles.dotPagination}>
+            {images.map((_, index) => (
+              <span
+                key={index}
+                className={`${styles.dot} ${
+                  index === currentIndex ? styles.active : ""
+                }`}
+                onClick={() => goToSlide(index)}
+              ></span>
+            ))}
+          </div>
         </div>
       </div>
     </section>
