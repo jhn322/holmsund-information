@@ -90,16 +90,12 @@ p {
 }
 
 /* --- Hovering within container gives simultaneous hover on 3 elements --- */
-.carouselContainer:hover .hoverContainer h2,
-.carouselContainer:hover .hoverContainer .carouselLink {
+.carouselContainer.hover .hoverContainer h2,
+.carouselContainer.hover .hoverContainer .carouselLink,
+.carouselContainer.hover .arrowIcon {
   color: var(--hover-color);
+  border-color: var(--hover-color);
 }
-
-.carouselContainer:hover .arrowIcon {
-  border: 2px solid var(--hover-color);
-  color: var(--hover-color);
-}
-
 /* -------------------------------------------------------------------------- */
 
 .carouselInner {
@@ -120,8 +116,8 @@ p {
   display: block;
 }
 
-.prev,
-.next {
+.navPrev,
+.navNext {
   display: flex;
   align-items: flex-end;
   position: absolute;
@@ -136,16 +132,16 @@ p {
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
 }
 
-.next {
+.navNext {
   right: 0;
 }
 
-.prev {
+.navPrev {
   right: 45px;
 }
 
-.prev:hover,
-.next:hover {
+.navPrev:hover,
+.navNext:hover {
   color: var(--hover-color);
 }
 
@@ -276,12 +272,12 @@ p {
     height: calc(21rem + 20vw);
   }
 
-  .prev,
-  .next {
+  .navPrev,
+  .navNext {
     font-size: 3.75rem;
   }
 
-  .prev {
+  .navPrev {
     right: 50px;
   }
 
@@ -334,16 +330,16 @@ p {
     height: calc(24rem + 26vw);
   }
 
-  .prev,
-  .next {
+  .navPrev,
+  .navNext {
     font-size: 4.375rem;
   }
 
-  .next {
+  .navNext {
     right: -5px;
   }
 
-  .prev {
+  .navPrev {
     right: 50px;
   }
 
@@ -421,17 +417,17 @@ p {
     height: calc(12rem + 20vw);
   }
 
-  .prev,
-  .next {
+  .navPrev,
+  .navNext {
     font-size: 3.75rem;
     top: -10px;
   }
 
-  .prev {
+  .navPrev {
     right: 50px;
   }
 
-  .next {
+  .navNext {
     right: 0;
   }
 }
@@ -494,17 +490,17 @@ p {
     height: 33rem;
   }
 
-  .prev,
-  .next {
+  .navPrev,
+  .navNext {
     font-size: 4.375rem;
     top: -10px;
   }
 
-  .prev {
+  .navPrev {
     right: 50px;
   }
 
-  .next {
+  .navNext {
     right: -5px;
   }
 
@@ -577,17 +573,17 @@ p {
     height: 40rem;
   }
 
-  .prev,
-  .next {
+  .navPrev,
+  .navNext {
     font-size: 4.375rem;
     top: -10px;
   }
 
-  .prev {
+  .navPrev {
     right: 50px;
   }
 
-  .next {
+  .navNext {
     right: -5px;
   }
 

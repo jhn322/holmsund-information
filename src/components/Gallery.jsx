@@ -45,6 +45,8 @@ const Gallery = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [autoSlideTimeout, setAutoSlideTimeout] = useState(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isNavHovered, setIsNavHovered] = useState(false);
 
   useEffect(() => {
     startAutoSlide();
@@ -78,6 +80,24 @@ const Gallery = () => {
     startAutoSlide();
   };
 
+  // Additional useState to prevent hover trigger on other elements by the nav buttons
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const handleNavMouseEnter = () => {
+    setIsNavHovered(true);
+  };
+
+  const handleNavMouseLeave = () => {
+    setIsNavHovered(false);
+  };
+  // <---------------------------------------------------------------------------> //
+
   return (
     <section>
       <div className={styles.galleryContainer}>
@@ -87,12 +107,10 @@ const Gallery = () => {
               className={styles.galleryImage}
               style={{ backgroundImage: `url(${staticGalleryImage})` }}
             >
-              {/* galleryCircle is being handled in css additionally */}
               <div
                 className={styles.galleryCircle}
                 style={{ backgroundImage: `url(${galleryCircle})` }}
               ></div>
-              {/* Main title */}
               <h2 className={styles.galleryTitle}>
                 Första & <br /> Andra
               </h2>
@@ -100,7 +118,13 @@ const Gallery = () => {
           </div>
         </div>
         <div className={styles.galleryCarousel}>
-          <div className={styles.carouselContainer}>
+          <div
+            className={`${styles.carouselContainer} ${
+              isHovered && !isNavHovered ? styles.hover : ""
+            }`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
             <div className={styles.carouselInner}>
               {images.map((image, index) => (
                 <div
@@ -109,17 +133,20 @@ const Gallery = () => {
                     index === currentIndex ? styles.active : ""
                   }`}
                 >
-                  {/* Img with NavLink to other pages */}
                   <NavLink to={image.link}>
                     <img src={image.url} alt={`Slide ${index}`} />
                   </NavLink>
                 </div>
               ))}
-              <div className={styles.carouselNav}>
-                <span className={styles.prev} onClick={goToPrevSlide}>
+              <div
+                className={styles.carouselNav}
+                onMouseEnter={handleNavMouseEnter}
+                onMouseLeave={handleNavMouseLeave}
+              >
+                <span className={styles.navPrev} onClick={goToPrevSlide}>
                   <HiChevronLeft strokeWidth={1.5} />
                 </span>
-                <span className={styles.next} onClick={goToNextSlide}>
+                <span className={styles.navNext} onClick={goToNextSlide}>
                   <HiChevronRight strokeWidth={1.5} />
                 </span>
               </div>
