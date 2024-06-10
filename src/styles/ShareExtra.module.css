@@ -1,0 +1,165 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+.mainContainer {
+  text-align: center;
+  height: 175vh;
+  background-color: var(--primary-color);
+}
+
+.shareContainer {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.shareHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.shareTitle {
+  font-size: 2.25rem;
+  font-weight: bold;
+  padding: 3rem 0;
+  color: var(--black-text-color);
+}
+
+.shareDot {
+  font-size: 12px;
+  vertical-align: 50%;
+  color: var(--black-text-color);
+}
+
+.shareImageContainer {
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  width: 100%;
+}
+
+.shareImage {
+  width: 90%;
+  height: 25rem;
+  max-width: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.mapContainer,
+.weatherContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.mapContainer {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.weatherInner {
+  margin-top: 4rem;
+}
+
+.mapInner,
+.weatherInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(135deg, #b6469f, #4da7f5);
+  width: 100%;
+  height: 25rem;
+}
+
+.mapInner {
+  background-image: linear-gradient(135deg, #e94417, #ffcd2a);
+}
+
+.weatherContent,
+.mapContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 70%;
+}
+
+.weather h3,
+.map h3 {
+  font-size: 2rem;
+  color: var(--white-text-color);
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.mapInner p,
+.weather p {
+  font-size: 1.1rem;
+  color: var(--white-text-color);
+}
+
+.weatherText,
+.mapText {
+  height: 100%;
+}
+
+.mapText p,
+.weatherText p {
+  text-align: center;
+}
+
+.weatherText p {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.mapBtnText,
+.weatherBtnText {
+  border: 2px solid var(--white-text-color);
+  border-radius: 35px;
+  color: var(--white-text-color);
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.weatherBtnText:hover {
+  color: #7b7ccf;
+  background-color: var(--primary-color);
+}
+
+.mapBtnText:hover {
+  color: #f69122;
+  background-color: var(--primary-color);
+}
+
+/* Small phones */
+@media only screen and (max-width: 389px) {
+}
+
+/* Uncommon phone size */
+@media only screen and (min-width: 500px) and (max-width: 769px) {
+}
+
+/* Tablet */
+@media only screen and (min-width: 780px) and (max-width: 1033px) {
+}
+
+/* Desktop */
+@media only screen and (min-width: 1034px) {
+}

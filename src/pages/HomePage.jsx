@@ -9,7 +9,7 @@ import Discover from "../components/Discover";
 import DiscoverMore from "../components/DiscoverMore";
 import Gallery from "../components/Gallery";
 import Separator from "../components/Separator";
-import ShareMaps from "../components/ShareMaps";
+import ShareExtra from "../components/ShareExtra";
 
 const HomePage = () => {
   return (
@@ -21,7 +21,7 @@ const HomePage = () => {
       <Activity />
       <DiscoverMore />
       <Gallery />
-      <ShareMaps />
+      <ShareExtra />
     </Layout>
   );
 };
