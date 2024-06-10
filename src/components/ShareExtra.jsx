@@ -31,7 +31,7 @@ const ShareExtra = () => {
                 <div className={styles.weather}>
                   <h3>Väder Information</h3>
                 </div>
-                <div className={styles.mapContent}>
+                <div className={styles.weatherContent}>
                   <div className={styles.weather}>
                     <p>
                       Här kan du hitta väderprognoser för Homsund, inklusive
