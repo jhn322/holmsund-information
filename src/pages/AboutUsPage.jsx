@@ -1,7 +1,7 @@
 import React from "react";
 
 // CSS
-import styles from "../styles/AboutUs.module.css";
+import styles from "../styles/AboutUsPage.module.css";
 
 // Components
 import Layout from "../layouts/Layout";
