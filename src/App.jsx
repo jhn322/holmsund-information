@@ -20,7 +20,6 @@ import GalleryPage2 from "./pages/GalleryPage2";
 import GalleryPage3 from "./pages/GalleryPage3";
 import GalleryPage4 from "./pages/GalleryPage4";
 import MapPage from "./pages/MapPage";
-import FooterPage from "./pages/FooterPage";
 import MissingPage from "./pages/MissingPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import CookiesPage from "./pages/CookiesPage";
@@ -62,19 +61,19 @@ const App = () => {
           />
           <Route
             path="/upptäck-5"
-            element={<DiscoverPage1 page="upptäck-5" />}
+            element={<DiscoverPage5 page="upptäck-5" />}
           />
           <Route
             path="/upptäck-6"
-            element={<DiscoverPage2 page="upptäck-6" />}
+            element={<DiscoverPage6 page="upptäck-6" />}
           />
           <Route
             path="/upptäck-7"
-            element={<DiscoverPage3 page="upptäck-7" />}
+            element={<DiscoverPage7 page="upptäck-7" />}
           />
           <Route
             path="/upptäck-8"
-            element={<DiscoverPage4 page="upptäck-8" />}
+            element={<DiscoverPage8 page="upptäck-8" />}
           />
 
           {/* Galleri sektion */}
@@ -96,7 +95,6 @@ const App = () => {
             element={<GalleryPage4 page="galleri-4" />}
           />
           <Route path="/karta" element={<MapPage page="karta" />} />
-          <Route path="/footer" element={<FooterPage page="footer" />} />
           <Route path="/om-oss" element={<AboutUsPage page="om-oss" />} />
           <Route path="/kakor" element={<CookiesPage page="kakor" />} />
           <Route

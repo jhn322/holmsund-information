@@ -396,7 +396,7 @@ const Navigation = () => {
                   <ul className={styles.nestedMenuContainer}>
                     <div className={styles.nestedMenu}>
                       <li>
-                        <NavLink to="/gallery" activeclassname={styles.active}>
+                        <NavLink to="/galleri" activeclassname={styles.active}>
                           <h5 className={styles.nestedMenuMain}>
                             Se alla bilder i Galleri
                           </h5>
