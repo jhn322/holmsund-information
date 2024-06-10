@@ -10,8 +10,6 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
   overflow-x: hidden;
 }
 
@@ -22,8 +20,7 @@ body {
   justify-content: center;
   position: relative;
   background-color: var(--primary-color);
-  padding: 2rem;
-  height: 290vh;
+  padding: 4rem 2rem;
 }
 
 /* Responsive size for cards */
@@ -164,10 +161,6 @@ body {
 
 /* Small phones */
 @media only screen and (max-width: 389px) {
-  .discoverContainer {
-    height: 340vh;
-  }
-
   .expandedText {
     margin-top: 4rem;
   }
@@ -198,10 +191,6 @@ body {
 
 /* Small Desktop */
 @media only screen and (min-width: 770px) and (max-width: 849px) {
-  .discoverContainer {
-    height: 130vh;
-  }
-
   .discoverCardContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -234,10 +223,6 @@ body {
 
 /* Medium Desktop */
 @media only screen and (min-width: 850px) and (max-width: 999px) {
-  .discoverContainer {
-    height: 140vh;
-  }
-
   .discoverCardContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -275,7 +260,7 @@ body {
 /* Large Desktop */
 @media only screen and (min-width: 1000px) and (max-width: 2199px) {
   .discoverContainer {
-    height: 150vh;
+    padding: 4rem 2rem;
   }
 
   .discoverCardContainer {
@@ -318,10 +303,6 @@ body {
 
 /* Full desktop */
 @media only screen and (min-width: 2200px) {
-  .discoverContainer {
-    height: 160vh;
-  }
-
   .discoverCardContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
