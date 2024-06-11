@@ -330,7 +330,19 @@ h5 {
   width: 12rem;
   overflow: auto;
   max-height: 11.6rem;
+  -webkit-overflow-scrolling: touch;
 }
+
+/* Always show scrollbar for better UX */
+.nestedItems::-webkit-scrollbar {
+  width: 4px;
+}
+
+.nestedItems::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+/* --------------------------------- */
 
 /* Small phones */
 @media only screen and (max-width: 389px) {
@@ -510,7 +522,6 @@ h5 {
 
   .nestedItems {
     width: 18rem;
-    overflow: auto;
     max-height: 100%;
   }
 
