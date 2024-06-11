@@ -31,6 +31,23 @@
   border: 2px solid var(--hover-color);
   color: var(--hover-color);
 }
+
+/* Scroll bar style */
+.activityContainer::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.activityContainer::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.activityContainer::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
 /* ----------------------------------------------------------------------- */
 
 .activitySlide {
@@ -201,15 +218,26 @@
 
 /* Desktop */
 @media only screen and (min-width: 770px) and (max-width: 1399px) {
-  .activityCarousel,
-  .featuredContainer {
+  .activityContainer {
+    overflow: auto;
+    max-height: 100vh;
+    max-width: 98%;
+  }
+
+  .activityCarousel {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
   }
 
   .activitySlide {
+    display: block;
     width: 100%;
     margin-top: 0;
+    padding-bottom: 6rem;
+    margin-bottom: 1rem;
   }
 
   .activitySlide img {
@@ -233,6 +261,11 @@
     font-size: 1.3rem;
   }
 
+  .featuredContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
   .featuredTitle {
     font-size: 3rem;
   }
@@ -249,7 +282,6 @@
 
   .featuredInner {
     width: 50%;
-    /* overflow-y: auto; */
   }
 
   .featuredCircle {
@@ -270,20 +302,31 @@
 
 /* Large Desktop */
 @media only screen and (min-width: 1400px) {
-  .activityContainer,
-  .featuredContainer {
+  .activityContainer {
+    overflow: auto;
+    max-height: 100vh;
+    width: 90%;
+  }
+
+  .activityCarousel {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
   }
 
   .activitySlide {
+    display: block;
     width: 100%;
     margin-top: 0;
+    padding-bottom: 6rem;
+    margin-bottom: 1rem;
   }
 
   .activitySlide img {
-    width: 32rem;
-    height: 28rem;
+    width: 20rem;
+    height: 20rem;
   }
 
   .slideCounter {
@@ -306,6 +349,11 @@
     display: none;
   }
 
+  .featuredContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
   .featuredImage {
     width: 50%;
     height: auto;
@@ -314,7 +362,6 @@
 
   .featuredInner {
     width: 50%;
-    /* overflow-y: auto; */
   }
 
   .featuredCircle {
@@ -327,9 +374,10 @@
 
   .featuredTitle {
     position: absolute;
-    top: 47%;
-    left: -212px;
+    top: 42%;
+    left: -160px;
     margin: 0 auto;
-    font-size: 3rem;
+    font-size: 3.5rem;
+    max-width: 20rem;
   }
 }
