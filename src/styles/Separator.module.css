@@ -63,8 +63,8 @@ span {
 
 .separatorSecond {
   background-color: var(--accent-color);
-  height: 26rem;
-  padding: 2rem;
+  height: 20rem;
+  padding: 2rem 0;
 }
 
 .separatorSecondTitle {
