@@ -288,6 +288,7 @@ h5 {
 }
 
 .discoverDropdownIcon,
+.activityDropdownIcon,
 .galleryDropdownIcon {
   position: absolute;
   right: -3rem;
@@ -342,6 +343,7 @@ h5 {
   }
 
   .discoverDropdownIcon,
+  .activityDropdownIcon,
   .galleryDropdownIcon {
     right: -2rem;
   }
@@ -358,6 +360,7 @@ h5 {
   }
 
   .discoverDropdownIcon,
+  .activityDropdownIcon,
   .galleryDropdownIcon {
     right: -7rem;
     font-size: 2rem;
@@ -504,10 +507,11 @@ h5 {
   }
 
   .nestedMenuMain {
-    width: 17rem;
+    width: 18rem;
   }
 
   .discoverDropdownIcon,
+  .activityDropdownIcon,
   .galleryDropdownIcon {
     right: -9rem;
     font-size: 2.5rem;

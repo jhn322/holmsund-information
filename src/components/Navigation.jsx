@@ -29,6 +29,7 @@ const Navigation = () => {
   const [isHoveredLogoNavMenu, setIsHoveredLogoNavMenu] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isDiscoverHovered, setIsDiscoverHovered] = useState(false);
+  const [isActivityHovered, setIsActivityHovered] = useState(false);
   const [isGalleryHovered, setIsGalleryHovered] = useState(false);
 
   // Toggles the menu open/close
@@ -150,6 +151,26 @@ const Navigation = () => {
                         <h5>Fjärde upptäck länk</h5>
                       </NavLink>
                     </li>
+                    <li>
+                      <NavLink to="/upptäck-5" activeclassname={styles.active}>
+                        <h5>Femte upptäck länk</h5>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/upptäck-6" activeclassname={styles.active}>
+                        <h5>Sjätte upptäck länk</h5>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/upptäck-7" activeclassname={styles.active}>
+                        <h5>Sjunde upptäck länk</h5>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="/upptäck-8" activeclassname={styles.active}>
+                        <h5>Åttonde upptäck länk</h5>
+                      </NavLink>
+                    </li>
                   </div>
                 )}
               </NavLink>
@@ -157,10 +178,58 @@ const Navigation = () => {
             <li>
               <NavLink
                 to="/aktiviteter"
-                activeclassname={styles.active}
                 className={styles.navLink}
+                activeclassname={styles.active}
+                onMouseEnter={() => setIsActivityHovered(true)}
+                onMouseLeave={() => setIsActivityHovered(false)}
               >
                 Aktiviteter
+                {isActivityHovered && (
+                  <div className={styles.dropdownMenu}>
+                    <li>
+                      <NavLink
+                        to="/aktiviteter"
+                        activeclassname={styles.active}
+                      >
+                        <h5 className={styles.dropdownMenuAll}>
+                          Utforska alla aktiviteter
+                        </h5>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/aktiviteter"
+                        activeclassname={styles.active}
+                      >
+                        <h5>Först aktiviteter länk</h5>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/aktiviteter"
+                        activeclassname={styles.active}
+                      >
+                        <h5>Andra aktiviteter länk</h5>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/aktiviteter"
+                        activeclassname={styles.active}
+                      >
+                        <h5>Tredje aktiviteter länk</h5>
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/aktiviteter"
+                        activeclassname={styles.active}
+                      >
+                        <h5>Fjärde aktiviteter länk</h5>
+                      </NavLink>
+                    </li>
+                  </div>
+                )}
               </NavLink>
             </li>
             <li>
@@ -291,10 +360,80 @@ const Navigation = () => {
                   <h4>Hem</h4>
                 </NavLink>
               </li>
-              <li>
-                <NavLink to="/aktiviteter" activeclassname={styles.active}>
+              <li
+                className={
+                  activeDropdown === "activity" ? styles.openDropdown : ""
+                }
+              >
+                <div
+                  onClick={() => toggleDropdown("activity")}
+                  className={styles.dropdownToggle}
+                  style={{ fontSize: "2rem" }}
+                >
                   <h4>Aktiviteter</h4>
-                </NavLink>
+                  <div
+                    className={`${styles.activityDropdownIcon} ${
+                      activeDropdown === "activity" ? styles.open : ""
+                    }`}
+                  >
+                    {activeDropdown === "activity" ? (
+                      <HiMiniMinusSmall strokeWidth={1} />
+                    ) : (
+                      <HiMiniPlus strokeWidth={1} />
+                    )}
+                  </div>
+                </div>
+                {/* Show nested items if activeDropdown is true */}
+                {activeDropdown === "activity" && (
+                  <ul className={styles.nestedMenuContainer}>
+                    <div className={styles.nestedMenu}>
+                      <li>
+                        <NavLink
+                          to="/aktiviteter"
+                          activeclassname={styles.active}
+                        >
+                          <h5 className={styles.nestedMenuMain}>
+                            Utforska alla aktiviteter
+                          </h5>
+                        </NavLink>
+                      </li>
+                    </div>
+                    <div className={styles.nestedItems}>
+                      <li>
+                        <NavLink
+                          to="/aktiviteter"
+                          activeclassname={styles.active}
+                        >
+                          <h5>Första aktiviteter länken</h5>
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/aktiviteter"
+                          activeclassname={styles.active}
+                        >
+                          <h5>Andra aktiviteter länken</h5>
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/aktiviteter"
+                          activeclassname={styles.active}
+                        >
+                          <h5>Tredje aktiviteter länken</h5>
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/aktiviteter"
+                          activeclassname={styles.active}
+                        >
+                          <h5>Fjärde aktiviteter länken</h5>
+                        </NavLink>
+                      </li>
+                    </div>
+                  </ul>
+                )}
               </li>
               <li
                 className={
@@ -362,6 +501,38 @@ const Navigation = () => {
                           activeclassname={styles.active}
                         >
                           <h5>Fjärde upptäck länken</h5>
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/upptäck-5"
+                          activeclassname={styles.active}
+                        >
+                          <h5>Femte upptäck länken</h5>
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/upptäck-6"
+                          activeclassname={styles.active}
+                        >
+                          <h5>Sjätte upptäck länken</h5>
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/upptäck-7"
+                          activeclassname={styles.active}
+                        >
+                          <h5>Sjunde upptäck länken</h5>
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink
+                          to="/upptäck-8"
+                          activeclassname={styles.active}
+                        >
+                          <h5>Åttonde upptäck länken</h5>
                         </NavLink>
                       </li>
                     </div>

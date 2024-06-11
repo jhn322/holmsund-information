@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Pages
 import HomePage from "./pages/HomePage";
 import ActivityPage from "./pages/ActivityPage";
-import WeatherPage from "./pages/WeatherPage";
 import DiscoverPageMain from "./pages/DiscoverPageMain";
 import DiscoverPage1 from "./pages/DiscoverPage1";
 import DiscoverPage2 from "./pages/DiscoverPage2";
@@ -19,11 +18,12 @@ import GalleryPage1 from "./pages/GalleryPage1";
 import GalleryPage2 from "./pages/GalleryPage2";
 import GalleryPage3 from "./pages/GalleryPage3";
 import GalleryPage4 from "./pages/GalleryPage4";
+import WeatherPage from "./pages/WeatherPage";
 import MapPage from "./pages/MapPage";
-import MissingPage from "./pages/MissingPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import CookiesPage from "./pages/CookiesPage";
 import TermsOfServicePage from "./pages/TermsOfServicePage";
+import MissingPage from "./pages/MissingPage";
 
 const App = () => {
   return (
@@ -32,11 +32,27 @@ const App = () => {
         {/* Routes */}
         <Routes>
           <Route path="/" element={<HomePage />} />
+          {/* Aktiviteter sektion */}
           <Route
             path="/aktiviteter"
             element={<ActivityPage page="aktiviteter" />}
           />
-          <Route path="/väder" element={<WeatherPage page="väder" />} />
+          <Route
+            path="/aktiviteter"
+            element={<ActivityPage page="aktiviteter" />}
+          />
+          <Route
+            path="/aktiviteter"
+            element={<ActivityPage page="aktiviteter" />}
+          />
+          <Route
+            path="/aktiviteter"
+            element={<ActivityPage page="aktiviteter" />}
+          />
+          <Route
+            path="/aktiviteter"
+            element={<ActivityPage page="aktiviteter" />}
+          />
 
           {/* Upptäck sektion */}
           <Route
@@ -94,6 +110,7 @@ const App = () => {
             path="/galleri-4"
             element={<GalleryPage4 page="galleri-4" />}
           />
+          <Route path="/väder" element={<WeatherPage page="väder" />} />
           <Route path="/karta" element={<MapPage page="karta" />} />
           <Route path="/om-oss" element={<AboutUsPage page="om-oss" />} />
           <Route path="/kakor" element={<CookiesPage page="kakor" />} />
