@@ -328,6 +328,8 @@ h5 {
 .nestedItems {
   margin-left: 1.6rem;
   width: 12rem;
+  overflow: auto;
+  max-height: 11.6rem;
 }
 
 /* Small phones */
@@ -354,7 +356,7 @@ h5 {
 }
 
 /* Tablet */
-@media only screen and (min-width: 549px) and (max-width: 1134px) {
+@media only screen and (min-width: 549px) and (max-width: 1434px) {
   h4 {
     font-size: 2.5rem;
   }
@@ -372,7 +374,7 @@ h5 {
 }
 
 /* Desktop */
-@media only screen and (min-width: 1135px) {
+@media only screen and (min-width: 1435px) {
   h4 {
     font-size: 3rem;
     font-weight: 500;
@@ -508,6 +510,8 @@ h5 {
 
   .nestedItems {
     width: 18rem;
+    overflow: auto;
+    max-height: 100%;
   }
 
   .nestedMenuMain {
