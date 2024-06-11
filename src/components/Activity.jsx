@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSwipeable } from "react-swipeable";
 
 // CSS
 import styles from "../styles/Activity.module.css";
@@ -67,8 +68,16 @@ const ActivityCarousel = () => {
     );
   };
 
+  // Swipe handlers
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: handleNext,
+    onSwipedRight: handlePrev,
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
+
   return (
-    <div className={styles.activityCarousel}>
+    <div {...swipeHandlers} className={styles.activityCarousel}>
       <div className={styles.activityContainer}>
         {slides.map((slide, index) => (
           <div

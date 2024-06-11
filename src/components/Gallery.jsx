@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useSwipeable } from "react-swipeable";
 
 // CSS
 import styles from "../styles/Gallery.module.css";
@@ -80,6 +81,14 @@ const Gallery = () => {
     startAutoSlide();
   };
 
+  // Swipe handlers
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: goToNextSlide,
+    onSwipedRight: goToPrevSlide,
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
+
   // Additional useState to prevent hover trigger on other elements by the nav buttons
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -119,6 +128,7 @@ const Gallery = () => {
         </div>
         <div className={styles.galleryCarousel}>
           <div
+            {...swipeHandlers}
             className={`${styles.carouselContainer} ${
               isHovered && !isNavHovered ? styles.hover : ""
             }`}
