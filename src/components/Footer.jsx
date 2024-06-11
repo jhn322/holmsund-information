@@ -8,7 +8,7 @@ import styles from "../styles/Footer.module.css";
 import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
 
 // Logo
-import logo1 from "../assets/navLogo.png";
+import logo1 from "../assets/navLogo2.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -68,6 +68,8 @@ const Footer = () => {
             </div>
           </a>
         </div>
+      </div>
+      <aside className={styles.secondFooter}>
         <div className={styles.footerPolicy}>
           <ul>
             <NavLink to="/">
@@ -84,10 +86,10 @@ const Footer = () => {
             </NavLink>
           </ul>
         </div>
-      </div>
-      <div className={styles.footerYear}>
-        <p>&copy; {currentYear} Holmsund Information. All rights reserved.</p>
-      </div>
+        <div className={styles.footerYear}>
+          <p>&copy; {currentYear} Holmsund Information. All rights reserved.</p>
+        </div>
+      </aside>
     </section>
   );
 };

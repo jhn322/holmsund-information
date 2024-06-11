@@ -31,22 +31,18 @@ p {
   height: 100%;
   width: auto;
   height: auto;
-  background-color: var(--black-text-color);
+  background-color: var(--primary-color);
 }
 
 .footerContainer a:hover {
-  color: var(--white-text-color);
-}
-
-.logoSection {
-  margin-top: -2rem;
+  color: var(--black-text-color);
 }
 
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 12rem;
+  width: 14rem;
   height: auto;
   margin: auto;
 }
@@ -62,10 +58,11 @@ p {
   font-size: 2.5rem;
   width: 20rem;
   margin: 0;
+  padding: 2rem 2rem 4rem 2rem;
 }
 
 .iconsText p {
-  color: var(--white-text-color);
+  color: var(--black-text-color);
 }
 
 .github,
@@ -79,20 +76,15 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease;
 }
 
 .footerIcons a:hover .github,
 .footerIcons a:hover .twitterX,
 .footerIcons a:hover .instagram,
 .footerIcons a:hover .facebook,
-.footerIcons a:hover .iconsText p,
-.iconsText:hover p,
-.iconsText:hover ~ .github,
-.iconsText:hover ~ .twitterX,
-.iconsText:hover ~ .instagram,
-.iconsText:hover ~ .facebook {
-  color: var(--primary-color);
+.iconsText:hover p {
+  color: var(--black-text-color);
 }
 
 .footerIcons a:hover .github,
@@ -106,18 +98,25 @@ p {
   background-color: var(--gallery-color);
 }
 
+/* -----------Second Footer----------- */
+
+.secondFooter {
+  background-color: var(--nav-color);
+  width: 100%;
+}
+
 .footerPolicy ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   font-size: 1.1rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  padding: 2rem 0;
 }
 
 .footerYear {
-  margin-bottom: 2rem;
+  text-align: center;
+  padding-bottom: 2rem;
 }
 
 .footerYear p {
@@ -144,7 +143,6 @@ p {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 1rem;
     margin-right: 6rem;
   }
 
@@ -183,13 +181,17 @@ p {
   }
 
   .footerPolicy ul {
-    align-items: flex-start;
-    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    padding-left: 5rem;
-    margin-right: 5.9rem;
     margin-top: 0;
+    padding: 1rem;
+  }
+
+  .footerPolicy li {
+    margin: 0 1rem;
   }
 
   .footerYear {
