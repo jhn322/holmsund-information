@@ -70,9 +70,9 @@ p {
 
 .galleryTitle {
   position: absolute;
-  top: -32px;
+  top: -42px;
   left: 40px;
-  line-height: 2rem;
+  line-height: 2.5rem;
   z-index: 2;
   color: var(--white-text-color);
 }
@@ -287,8 +287,8 @@ p {
   }
 
   .galleryTitle {
-    top: -40px;
-    line-height: 2.5rem;
+    top: -51px;
+    line-height: 3rem;
   }
 
   .galleryCircle {
@@ -357,9 +357,9 @@ p {
   }
 
   .galleryTitle {
-    top: -60px;
-    line-height: 3.75rem;
-    font-size: 4rem;
+    top: -56px;
+    line-height: 3.25rem;
+    font-size: 3rem;
   }
 
   .galleryImage {
@@ -441,8 +441,8 @@ p {
   }
 
   .galleryTitle {
-    top: -60px;
-    line-height: 3.75rem;
+    top: -73px;
+    line-height: 4.25rem;
     font-size: 4rem;
   }
 
@@ -524,8 +524,8 @@ p {
   }
 
   .galleryTitle {
-    top: -60px;
-    line-height: 3.75rem;
+    top: -73px;
+    line-height: 4.25rem;
     font-size: 4rem;
   }
 

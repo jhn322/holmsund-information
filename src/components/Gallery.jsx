@@ -112,7 +112,7 @@ const Gallery = () => {
                 style={{ backgroundImage: `url(${galleryCircle})` }}
               ></div>
               <h2 className={styles.galleryTitle}>
-                Första & <br /> Andra
+                Uppfriskad & <br /> Förnyad
               </h2>
             </article>
           </div>

@@ -140,7 +140,7 @@ body {
 }
 
 .expandedBtn {
-  padding: 0.3rem 0.6rem;
+  padding: 0.5rem 0.8rem;
   background-color: transparent;
   color: var(--primary-color);
   border: 2px solid #fff;
@@ -151,7 +151,8 @@ body {
 
 .expandedBtn:hover {
   background-color: var(--hover-color);
-  padding: 0.4rem 0.7rem;
+  color: var(--black-text-color);
+  padding: 0.6rem 0.9rem;
   border: none;
 }
 
@@ -299,6 +300,22 @@ body {
   .expandedText {
     margin-top: 8rem;
   }
+
+  .expandedBtnText {
+    font-size: 1.3rem;
+  }
+
+  .expandedBtn {
+    padding: 0.6rem 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .expandedBtn:hover {
+    background-color: var(--hover-color);
+    color: var(--black-text-color);
+    padding: 0.7rem 1.3rem;
+    border: none;
+  }
 }
 
 /* Full desktop */
@@ -337,5 +354,22 @@ body {
 
   .expandedText {
     margin-top: 12rem;
+    max-width: 60%;
+  }
+
+  .expandedBtnText {
+    font-size: 1.3rem;
+  }
+
+  .expandedBtn {
+    padding: 0.6rem 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .expandedBtn:hover {
+    background-color: var(--hover-color);
+    color: var(--black-text-color);
+    padding: 0.7rem 1.3rem;
+    border: none;
   }
 }

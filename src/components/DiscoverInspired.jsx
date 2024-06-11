@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 
 // CSS
-import styles from "../styles/Discover.module.css";
+import styles from "../styles/DiscoverInspired.module.css";
 
 // Images
 import discoverMoreImage1 from "../assets/discoverMore1.jpg";
@@ -37,7 +37,7 @@ const cardData = [
   },
 ];
 
-const Discover = () => {
+const DiscoverInspired = () => {
   const discoverContainerRef = useRef(null);
   const [totalCardsHeight, setTotalCardsHeight] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
@@ -113,7 +113,7 @@ const Discover = () => {
       <div ref={discoverContainerRef} className={styles.discoverContainer}>
         <div className={styles.discoverInner}>
           <div className={styles.discoverTitle}>
-            <h2>Upptäck Holmsund</h2>
+            <h2>Bli Inspirerad</h2>
           </div>
           <div className={styles.discoverCardContainer}>
             {cardData.map((card, index) => (
@@ -163,4 +163,4 @@ const Discover = () => {
   );
 };
 
-export default Discover;
+export default DiscoverInspired;
