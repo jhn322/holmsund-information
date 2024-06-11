@@ -162,7 +162,7 @@ span {
 
   .separatorText,
   .separatorSecondText {
-    max-width: 95%;
+    max-width: 50%;
     font-size: 1.3rem;
   }
 

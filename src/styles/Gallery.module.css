@@ -585,8 +585,10 @@ p {
   }
 
   .dotPagination {
+    margin-left: 13.6rem;
     margin-top: -24rem;
     z-index: 10;
+    width: 40%;
     filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
   }
 }
