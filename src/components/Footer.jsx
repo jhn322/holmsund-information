@@ -8,7 +8,7 @@ import styles from "../styles/Footer.module.css";
 import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
 
 // Logo
-import logo1 from "../assets/navLogo2.png";
+import logo from "../assets/navLogo2.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,7 +19,7 @@ const Footer = () => {
         <div className={styles.logoSection}>
           {" "}
           <NavLink to="/" className={styles.logoContainer}>
-            <img src={logo1} alt="Logo" className={styles.logo} />
+            <img src={logo} alt="Logo" className={styles.logo} />
           </NavLink>
         </div>
         <div className={styles.footerIcons}>

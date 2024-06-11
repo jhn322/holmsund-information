@@ -13,10 +13,10 @@ const ShareExtra = () => {
       <header className={styles.inner}>
         <div className={styles.shareContainer}>
           <div className={styles.shareHeader}>
-            <h3 className={styles.shareTitle}>
+            <h2 className={styles.shareTitle}>
               Dela din story <span className={styles.shareDot}>⬤ </span>
               #Holmsund
-            </h3>
+            </h2>
           </div>
           <div className={styles.shareImageContainer}>
             <aside

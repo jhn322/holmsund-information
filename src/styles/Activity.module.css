@@ -70,7 +70,7 @@
 }
 
 .activityCaption h3 {
-  font-size: 1.3rem;
+  font-size: 2rem;
   text-transform: uppercase;
 }
 
@@ -174,4 +174,162 @@
   z-index: 11;
   position: absolute;
   top: -22px;
+}
+
+/* Uncommon phone size */
+@media only screen and (min-width: 500px) and (max-width: 599px) {
+  .activityCaption p {
+    font-size: 1.2rem;
+  }
+
+  .featuredTitle {
+    font-size: 2.25rem;
+  }
+}
+
+/* Small Tablet */
+@media only screen and (min-width: 600px) and (max-width: 769px) {
+  .activityCaption h3,
+  .featuredTitle {
+    font-size: 2.25rem;
+  }
+
+  .activityCaption p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 770px) and (max-width: 1399px) {
+  .activityCarousel,
+  .featuredContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .activitySlide {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .activitySlide img {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .slideCounter {
+    display: none;
+  }
+
+  .activityCaption {
+    width: 90%;
+  }
+
+  .activityCaption h3 {
+    font-size: 2.25rem;
+  }
+
+  .activityCaption p {
+    font-size: 1.3rem;
+  }
+
+  .featuredTitle {
+    font-size: 3rem;
+  }
+
+  .activityNav {
+    display: none;
+  }
+
+  .featuredImage {
+    width: 50%;
+    height: auto;
+    background-size: cover;
+  }
+
+  .featuredInner {
+    width: 50%;
+    /* overflow-y: auto; */
+  }
+
+  .featuredCircle {
+    width: 15rem;
+    height: 15rem;
+    top: 50%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .featuredTitle {
+    font-size: 2.5rem;
+    top: 50%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1400px) {
+  .activityContainer,
+  .featuredContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .activitySlide {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .activitySlide img {
+    width: 32rem;
+    height: 28rem;
+  }
+
+  .slideCounter {
+    display: none;
+  }
+
+  .activityCaption {
+    width: 50%;
+  }
+
+  .activityCaption h3 {
+    font-size: 2.5rem;
+  }
+
+  .activityCaption p {
+    font-size: 1.3rem;
+  }
+
+  .activityNav {
+    display: none;
+  }
+
+  .featuredImage {
+    width: 50%;
+    height: auto;
+    background-size: cover;
+  }
+
+  .featuredInner {
+    width: 50%;
+    /* overflow-y: auto; */
+  }
+
+  .featuredCircle {
+    width: 15rem;
+    height: 15rem;
+    top: 38.5%;
+    left: 0%;
+    transform: translateX(-50%);
+  }
+
+  .featuredTitle {
+    position: absolute;
+    top: 47%;
+    left: -212px;
+    margin: 0 auto;
+    font-size: 3rem;
+  }
 }
