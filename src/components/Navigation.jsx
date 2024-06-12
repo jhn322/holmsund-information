@@ -616,6 +616,11 @@ const Navigation = () => {
                   <h4>Väder</h4>
                 </NavLink>
               </li>
+              <li>
+                <NavLink to="/karta" activeclassname={styles.active}>
+                  <h4>Karta</h4>
+                </NavLink>
+              </li>
             </ul>
           </div>
         )}

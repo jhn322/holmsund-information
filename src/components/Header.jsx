@@ -19,19 +19,20 @@ const getCurrentSeason = () => {
 
 const Header = () => {
   const currentSeason = getCurrentSeason();
+  const headerClass = `${styles.headerContainer} ${
+    styles[currentSeason.split(" ")[0]]
+  }`;
 
   return (
-    <main className={styles.headerContainer}>
+    <main className={headerClass}>
       <div className={styles.innerHeader}>
         <div className={styles.header}>
-          <h1 className={styles.headerTitle}>
-            Holmsund <br /> Information
-          </h1>
+          <h1 className={styles.headerTitle}>{currentSeason} i Holmsund</h1>
 
           <div className={styles.btnContainer}>
             <NavLink to="/aktiviteter">
               <button className={styles.headerBtn}>
-                Aktiviteter man kan hitta på denna {currentSeason} i Holmsund
+                Aktiviteter man kan hitta på denna {currentSeason}
               </button>
             </NavLink>
           </div>

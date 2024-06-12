@@ -17,11 +17,26 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../assets/header1.jpg");
   background-size: cover;
   height: 100vh;
   overflow: hidden;
   padding: 2rem;
+}
+
+.headerContainer.Vår {
+  background-image: url("../assets/headerSpring.jpg");
+}
+
+.headerContainer.Sommar {
+  background-image: url("../assets/headerSummer.jpg");
+}
+
+.headerContainer.Höst {
+  background-image: url("../assets/headerAutumn.jpg");
+}
+
+.headerContainer.Vinter {
+  background-image: url("../assets/headerWinter.jpg");
 }
 
 .innerHeader {
