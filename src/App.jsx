@@ -37,22 +37,6 @@ const App = () => {
             path="/aktiviteter"
             element={<ActivityPage page="aktiviteter" />}
           />
-          <Route
-            path="/aktiviteter"
-            element={<ActivityPage page="aktiviteter" />}
-          />
-          <Route
-            path="/aktiviteter"
-            element={<ActivityPage page="aktiviteter" />}
-          />
-          <Route
-            path="/aktiviteter"
-            element={<ActivityPage page="aktiviteter" />}
-          />
-          <Route
-            path="/aktiviteter"
-            element={<ActivityPage page="aktiviteter" />}
-          />
 
           {/* Upptäck sektion */}
           <Route
