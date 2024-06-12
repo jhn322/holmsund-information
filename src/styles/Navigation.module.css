@@ -297,7 +297,7 @@ h5 {
   position: absolute;
   right: -3rem;
   transform: translateY(-80%);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .nestedMenuContainer li {
@@ -381,7 +381,7 @@ h5 {
   .activityDropdownIcon,
   .galleryDropdownIcon {
     right: -7rem;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -533,7 +533,7 @@ h5 {
   .activityDropdownIcon,
   .galleryDropdownIcon {
     right: -9rem;
-    font-size: 2.25rem;
+    font-size: 1.75rem;
   }
 
   .github,
