@@ -3,12 +3,12 @@ import { NavLink } from "react-router-dom";
 
 // Menu Icons
 import {
-  HiBars3,
-  HiMagnifyingGlass,
-  HiMiniXMark,
-  HiMiniPlus,
-  HiMiniMinusSmall,
-} from "react-icons/hi2";
+  RxHamburgerMenu,
+  RxMagnifyingGlass,
+  RxCross2,
+  RxPlus,
+  RxMinus,
+} from "react-icons/rx";
 
 // Social Icons
 import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
@@ -287,13 +287,13 @@ const Navigation = () => {
           {/* Nav icons */}
           <div className={styles.navIcons}>
             <div className={styles.search}>
-              <HiMagnifyingGlass
-                strokeWidth={1}
+              <RxMagnifyingGlass
+                strokeWidth={0.6}
                 className={styles.searchIcon}
               />
             </div>
-            <HiBars3
-              strokeWidth={1}
+            <RxHamburgerMenu
+              strokeWidth={0.6}
               className={styles.menuIcon}
               onClick={toggleMenu}
             />
@@ -341,7 +341,7 @@ const Navigation = () => {
               </a>
             </div>
             <div className={styles.closeCircle} onClick={closeMenu}>
-              <HiMiniXMark className={styles.closeIcon} />
+              <RxCross2 className={styles.closeIcon} />
             </div>
             <ul className={styles.openMenu}>
               <li>
@@ -377,9 +377,9 @@ const Navigation = () => {
                     }`}
                   >
                     {activeDropdown === "activity" ? (
-                      <HiMiniMinusSmall strokeWidth={1} />
+                      <RxMinus strokeWidth={1} />
                     ) : (
-                      <HiMiniPlus strokeWidth={1} />
+                      <RxPlus strokeWidth={1} />
                     )}
                   </div>
                 </div>
@@ -452,9 +452,9 @@ const Navigation = () => {
                     }`}
                   >
                     {activeDropdown === "discover" ? (
-                      <HiMiniMinusSmall strokeWidth={1} />
+                      <RxMinus strokeWidth={1} />
                     ) : (
-                      <HiMiniPlus strokeWidth={1} />
+                      <RxPlus strokeWidth={1} />
                     )}
                   </div>
                 </div>
@@ -556,9 +556,9 @@ const Navigation = () => {
                     }`}
                   >
                     {activeDropdown === "gallery" ? (
-                      <HiMiniMinusSmall strokeWidth={1} />
+                      <RxMinus strokeWidth={1} />
                     ) : (
-                      <HiMiniPlus strokeWidth={1} />
+                      <RxPlus strokeWidth={1} />
                     )}
                   </div>
                 </div>

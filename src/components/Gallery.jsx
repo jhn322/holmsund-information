@@ -6,7 +6,7 @@ import { useSwipeable } from "react-swipeable";
 import styles from "../styles/Gallery.module.css";
 
 // Icons
-import { HiChevronLeft, HiChevronRight, HiArrowRight } from "react-icons/hi2";
+import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
 
 // Static image and carousel of images
 import staticGalleryImage from "../assets/staticGallery.jpg";
@@ -154,10 +154,10 @@ const Gallery = () => {
                 onMouseLeave={handleNavMouseLeave}
               >
                 <span className={styles.navPrev} onClick={goToPrevSlide}>
-                  <HiChevronLeft strokeWidth={1.5} />
+                  <RxChevronLeft strokeWidth={0.8} />
                 </span>
                 <span className={styles.navNext} onClick={goToNextSlide}>
-                  <HiChevronRight strokeWidth={1.5} />
+                  <RxChevronRight strokeWidth={0.8} />
                 </span>
               </div>
             </div>
@@ -176,7 +176,7 @@ const Gallery = () => {
                   </div>
                   <div className={styles.arrowContainer}>
                     <a href={images[currentIndex].link}>
-                      <HiArrowRight className={styles.arrowIcon} />
+                      <RxArrowRight className={styles.arrowIcon} />
                     </a>
                   </div>
                 </div>

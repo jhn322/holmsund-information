@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 
 // Icons
-import { FiChevronUp } from "react-icons/fi";
-import { HiChevronUp } from "react-icons/hi2";
+import { RxChevronUp } from "react-icons/rx";
 
 // CSS
 import styles from "../styles/ScrollUp.module.css";
@@ -37,7 +36,7 @@ const ScrollUp = () => {
         className={`${styles.scrollTop} ${!visible && styles.invisible}`}
         onClick={scrollToTop}
       >
-        <HiChevronUp className={styles.scrollIcon} />
+        <RxChevronUp className={styles.scrollIcon} />
       </div>
     </div>
   );

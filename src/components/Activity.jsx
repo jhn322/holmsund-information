@@ -5,6 +5,7 @@ import { useSwipeable } from "react-swipeable";
 import styles from "../styles/Activity.module.css";
 
 // Icons
+import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
 import { HiChevronLeft, HiChevronRight, HiArrowRight } from "react-icons/hi2";
 
 // Images
@@ -104,7 +105,7 @@ const ActivityCarousel = () => {
               </div>
               <div className={styles.arrowContainer}>
                 <a href={slide.link}>
-                  <HiArrowRight className={styles.arrowIcon} />
+                  <RxArrowRight className={styles.arrowIcon} />
                 </a>
               </div>
             </div>
@@ -113,10 +114,10 @@ const ActivityCarousel = () => {
       </div>
       <div className={styles.activityNav}>
         <span className={styles.navPrev} onClick={handlePrev}>
-          <HiChevronLeft strokeWidth={1.5} />
+          <RxChevronLeft strokeWidth={0.2} />
         </span>
         <span className={styles.navNext} onClick={handleNext}>
-          <HiChevronRight strokeWidth={1.5} />
+          <RxChevronRight strokeWidth={0.2} />
         </span>
       </div>
     </div>

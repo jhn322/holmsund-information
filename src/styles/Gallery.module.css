@@ -123,7 +123,7 @@ p {
   background-color: transparent;
   border: none;
   color: var(--primary-color);
-  font-size: 3.125rem;
+  font-size: 3.8rem;
   height: 100%;
   cursor: pointer;
   padding: 0;
@@ -135,7 +135,7 @@ p {
 }
 
 .navPrev {
-  right: 45px;
+  right: 40px;
 }
 
 .navPrev:hover,
@@ -183,7 +183,7 @@ p {
 }
 
 .arrowIcon {
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   border: 2px solid var(--primary-color);
   border-radius: 50%;
   padding: 0.6rem;
@@ -260,11 +260,11 @@ p {
 
   .navPrev,
   .navNext {
-    font-size: 3.75rem;
+    font-size: 4.2rem;
   }
 
   .navPrev {
-    right: 50px;
+    right: 44px;
   }
 
   .carouselText {
@@ -314,7 +314,7 @@ p {
 
   .navPrev,
   .navNext {
-    font-size: 4.375rem;
+    font-size: 4.8rem;
   }
 
   .navNext {
@@ -322,7 +322,7 @@ p {
   }
 
   .navPrev {
-    right: 50px;
+    right: 45px;
   }
 
   .carouselText {
@@ -395,12 +395,12 @@ p {
 
   .navPrev,
   .navNext {
-    font-size: 3.75rem;
+    font-size: 4.2rem;
     top: -10px;
   }
 
   .navPrev {
-    right: 50px;
+    right: 45px;
   }
 
   .navNext {
@@ -462,12 +462,12 @@ p {
 
   .navPrev,
   .navNext {
-    font-size: 4.375rem;
+    font-size: 4.8rem;
     top: -10px;
   }
 
   .navPrev {
-    right: 50px;
+    right: 45px;
   }
 
   .navNext {
@@ -541,12 +541,12 @@ p {
 
   .navPrev,
   .navNext {
-    font-size: 4.375rem;
+    font-size: 5rem;
     top: -10px;
   }
 
   .navPrev {
-    right: 50px;
+    right: 45px;
   }
 
   .navNext {
