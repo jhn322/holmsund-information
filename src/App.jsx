@@ -2,28 +2,28 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Pages
-import HomePage from "./pages/HomePage";
-import ActivityPage from "./pages/ActivityPage";
-import DiscoverPageMain from "./pages/DiscoverPageMain";
-import DiscoverPage1 from "./pages/DiscoverPage1";
-import DiscoverPage2 from "./pages/DiscoverPage2";
-import DiscoverPage3 from "./pages/DiscoverPage3";
-import DiscoverPage4 from "./pages/DiscoverPage4";
-import DiscoverPage5 from "./pages/DiscoverPage5";
-import DiscoverPage6 from "./pages/DiscoverPage6";
-import DiscoverPage7 from "./pages/DiscoverPage7";
-import DiscoverPage8 from "./pages/DiscoverPage8";
-import GalleryPageMain from "./pages/GalleryPageMain";
-import GalleryPage1 from "./pages/GalleryPage1";
-import GalleryPage2 from "./pages/GalleryPage2";
-import GalleryPage3 from "./pages/GalleryPage3";
-import GalleryPage4 from "./pages/GalleryPage4";
-import WeatherPage from "./pages/WeatherPage";
-import MapPage from "./pages/MapPage";
-import AboutUsPage from "./pages/AboutUsPage";
-import CookiesPage from "./pages/CookiesPage";
-import TermsOfServicePage from "./pages/TermsOfServicePage";
-import MissingPage from "./pages/MissingPage";
+import HomePage from "./components/pages/HomePage";
+import ActivityPage from "./components/pages/ActivityPage";
+import DiscoverPageMain from "./components/pages/DiscoverPageMain";
+import DiscoverPage1 from "./components/pages/DiscoverPage1";
+import DiscoverPage2 from "./components/pages/DiscoverPage2";
+import DiscoverPage3 from "./components/pages/DiscoverPage3";
+import DiscoverPage4 from "./components/pages/DiscoverPage4";
+import DiscoverPage5 from "./components/pages/DiscoverPage5";
+import DiscoverPage6 from "./components/pages/DiscoverPage6";
+import DiscoverPage7 from "./components/pages/DiscoverPage7";
+import DiscoverPage8 from "./components/pages/DiscoverPage8";
+import GalleryPageMain from "./components/pages/GalleryPageMain";
+import GalleryPage1 from "./components/pages/GalleryPage1";
+import GalleryPage2 from "./components/pages/GalleryPage2";
+import GalleryPage3 from "./components/pages/GalleryPage3";
+import GalleryPage4 from "./components/pages/GalleryPage4";
+import WeatherPage from "./components/pages/WeatherPage";
+import MapPage from "./components/pages/MapPage";
+import AboutUsPage from "./components/pages/AboutUsPage";
+import CookiesPage from "./components/pages/CookiesPage";
+import TermsOfServicePage from "./components/pages/TermsOfServicePage";
+import MissingPage from "./components/pages/MissingPage";
 
 const App = () => {
   return (
