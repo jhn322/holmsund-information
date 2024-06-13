@@ -2,7 +2,9 @@ import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 
 // CSS
-import styles from "../../styles/addon/ActivityAddon.module.css";
+import styles from "../../styles/addon/MainCarouselAddon.module.css";
+// Component specific styling
+import styles2 from "../../styles/addon/ActivityAddon.module.css";
 
 // Icons
 import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
@@ -78,7 +80,7 @@ const Carousel = () => {
 
   return (
     <div {...swipeHandlers} className={styles.carousel}>
-      <div className={styles.container}>
+      <div className={styles2.container}>
         {slides.map((slide, index) => (
           <div
             key={index}
@@ -92,19 +94,19 @@ const Carousel = () => {
             <div className={styles.slideCounter}>
               {index + 1}/{slides.length}
             </div>
-            <div className={styles.caption}>
+            <div className={styles2.caption}>
               <a href={slide.link}>
-                <h3 className={styles.captionTitle}>{slide.title}</h3>
+                <h3 className={styles2.captionTitle}>{slide.title}</h3>
               </a>
               <p>{truncateDescription(slide.description, 25)}</p>
               <div className={styles.linkContainer}>
-                <a className={styles.captionLink} href={slide.link}>
+                <a className={styles2.captionLink} href={slide.link}>
                   Läs Mer...
                 </a>
               </div>
               <div className={styles.arrowContainer}>
                 <a href={slide.link}>
-                  <RxArrowRight className={styles.arrowIcon} />
+                  <RxArrowRight className={styles2.arrowIcon} />
                 </a>
               </div>
             </div>
@@ -126,8 +128,8 @@ const Carousel = () => {
 const ActivityAddon = () => {
   return (
     <div className={styles.featuredContainer}>
-      <div className={styles.featuredImage}></div>
-      <div className={styles.featuredInner}>
+      <div className={styles2.featuredImage}></div>
+      <div className={styles2.featuredInner}>
         <div
           className={styles.featuredCircle}
           style={{ backgroundImage: `url(${featuredCircle})` }}

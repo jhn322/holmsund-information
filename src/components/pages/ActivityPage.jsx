@@ -1,5 +1,5 @@
 import React from "react";
-import ActivityAddon from "../addon/ActivityAddon";
+import GalleryAddon from "../addon/GalleryAddon";
 
 // CSS
 import styles from "../../styles/pages/GalleryPageMain.module.css";
@@ -24,7 +24,7 @@ const ActivityPage = () => {
   return (
     <Layout>
       <div className={styles.gridContainer}>{gridItems}</div>
-      <ActivityAddon />
+      <GalleryAddon />
     </Layout>
   );
 };

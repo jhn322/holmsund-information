@@ -2,7 +2,9 @@ import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 
 // CSS
-import styles from "../../styles/addon/GalleryAddon.module.css";
+import styles from "../../styles/addon/MainCarouselAddon.module.css";
+// Component specific styling
+import styles2 from "../../styles/addon/GalleryAddon.module.css";
 
 // Icons
 import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
@@ -126,8 +128,8 @@ const Carousel = () => {
 const GalleryAddon = () => {
   return (
     <div className={styles.featuredContainer}>
-      <div className={styles.featuredImage}></div>
-      <div className={styles.featuredInner}>
+      <div className={styles2.featuredImage}></div>
+      <div className={styles2.featuredInner}>
         <div
           className={styles.featuredCircle}
           style={{ backgroundImage: `url(${featuredCircle})` }}

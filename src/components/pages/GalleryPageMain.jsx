@@ -1,5 +1,4 @@
 import React from "react";
-import Separator from "../home/Separator";
 import DiscoverAddon from "../addon/DiscoverAddon";
 
 // CSS
@@ -25,7 +24,6 @@ const GalleryPageMain = () => {
   return (
     <Layout>
       <div className={styles.gridContainer}>{gridItems}</div>
-      <Separator />
       <DiscoverAddon />
     </Layout>
   );
