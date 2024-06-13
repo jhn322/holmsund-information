@@ -124,7 +124,7 @@ const Navigation = () => {
                 Upptäck
                 {isDiscoverHovered && (
                   <div className={styles.dropdownMenu}>
-                    <li>
+                    <li className={styles.dropdownMenuAllContainer}>
                       <NavLink to="/upptäck" activeclassname={styles.active}>
                         <h5 className={styles.dropdownMenuAll}>
                           Upptäck allt i Holmsund
@@ -186,7 +186,7 @@ const Navigation = () => {
                 Aktiviteter
                 {isActivityHovered && (
                   <div className={styles.dropdownMenu}>
-                    <li>
+                    <li className={styles.dropdownMenuAllContainer}>
                       <NavLink
                         to="/aktiviteter"
                         activeclassname={styles.active}
@@ -243,7 +243,7 @@ const Navigation = () => {
                 Galleri
                 {isGalleryHovered && (
                   <div className={styles.dropdownMenu}>
-                    <li>
+                    <li className={styles.dropdownMenuAllContainer}>
                       <NavLink to="/galleri" activeclassname={styles.active}>
                         <h5 className={styles.dropdownMenuAll}>
                           Se alla bilder i Galleri
