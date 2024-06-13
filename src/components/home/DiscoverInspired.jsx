@@ -4,10 +4,10 @@ import { useRef, useEffect, useState } from "react";
 import styles from "../../styles/home/DiscoverInspired.module.css";
 
 // Images
-import discoverMoreImage1 from "../../assets/discoverMore1.jpg";
-import discoverMoreImage2 from "../../assets/discoverMore2.jpg";
-import discoverMoreImage3 from "../../assets/discoverMore3.jpg";
-import discoverMoreImage4 from "../../assets/discoverMore4.jpg";
+import discoverMoreImage1 from "../../assets/discoverInspired1.jpg";
+import discoverMoreImage2 from "../../assets/discoverInspired2.jpg";
+import discoverMoreImage3 from "../../assets/discoverInspired3.jpg";
+import discoverMoreImage4 from "../../assets/discoverInspired4.jpg";
 
 // Card Array with NavLinks
 const cardData = [

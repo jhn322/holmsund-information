@@ -1,4 +1,5 @@
 import React from "react";
+import GalleryAddon from "../addon/GalleryAddon";
 
 // CSS
 import styles from "../../styles/pages/DiscoverPageMain.module.css";
@@ -27,6 +28,7 @@ const DiscoverPageMain = () => {
   return (
     <Layout>
       <div className={styles.gridContainer}>{gridItems}</div>
+      <GalleryAddon />
     </Layout>
   );
 };

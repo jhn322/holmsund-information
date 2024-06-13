@@ -85,6 +85,10 @@ const Navigation = () => {
     setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
   };
 
+  const handleMainNavLinkClick = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div>
       {/* Nav container, hide nav class and transparent class */}
@@ -118,6 +122,7 @@ const Navigation = () => {
                 to="/upptäck"
                 className={styles.navLink}
                 activeclassname={styles.active}
+                onClick={handleMainNavLinkClick}
                 onMouseEnter={() => setIsDiscoverHovered(true)}
                 onMouseLeave={() => setIsDiscoverHovered(false)}
               >
@@ -180,6 +185,7 @@ const Navigation = () => {
                 to="/aktiviteter"
                 className={styles.navLink}
                 activeclassname={styles.active}
+                onClick={handleMainNavLinkClick}
                 onMouseEnter={() => setIsActivityHovered(true)}
                 onMouseLeave={() => setIsActivityHovered(false)}
               >
@@ -237,6 +243,7 @@ const Navigation = () => {
                 to="/galleri"
                 className={styles.navLink}
                 activeclassname={styles.active}
+                onClick={handleMainNavLinkClick}
                 onMouseEnter={() => setIsGalleryHovered(true)}
                 onMouseLeave={() => setIsGalleryHovered(false)}
               >

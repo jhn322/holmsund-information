@@ -26,8 +26,8 @@
   z-index: 1;
   width: 100%;
   height: 100%;
-  padding-top: 3rem;
-  padding-bottom: 1rem;
+  margin-top: 3rem;
+  padding: 1rem 0 2rem 0;
 }
 
 .image {
@@ -142,7 +142,8 @@
 @media only screen and (min-width: 780px) and (max-width: 1199px) {
   .imageContainer {
     position: relative;
-    padding-bottom: 0;
+    margin-top: 0;
+    padding: 0;
   }
 
   .image {
@@ -187,7 +188,8 @@
 @media only screen and (min-width: 1200px) {
   .imageContainer {
     position: relative;
-    padding-bottom: 0;
+    margin-top: 0;
+    padding: 0;
   }
 
   .image {

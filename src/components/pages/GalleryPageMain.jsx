@@ -1,6 +1,6 @@
 import React from "react";
-import Discover from "../home/Discover";
 import Separator from "../home/Separator";
+import DiscoverAddon from "../addon/DiscoverAddon";
 
 // CSS
 import styles from "../../styles/pages/GalleryPageMain.module.css";
@@ -26,7 +26,7 @@ const GalleryPageMain = () => {
     <Layout>
       <div className={styles.gridContainer}>{gridItems}</div>
       <Separator />
-      <Discover />
+      <DiscoverAddon />
     </Layout>
   );
 };
