@@ -7,11 +7,22 @@ import styles from "../styles/GalleryPageMain.module.css";
 import Layout from "../layouts/Layout";
 
 const GalleryPageMain = () => {
+  const images = [
+    "https://via.placeholder.com/300",
+    "https://via.placeholder.com/300",
+    "https://via.placeholder.com/300",
+    "https://via.placeholder.com/300",
+  ];
+
+  const gridItems = images.map((image, index) => (
+    <div className={styles.gridItem} key={index}>
+      <img src={image} alt={`Image ${index}`} />
+    </div>
+  ));
+
   return (
     <Layout>
-      <div className={styles.container}>
-        <h2>UNDER CONSTRUCTION</h2>
-      </div>
+      <div className={styles.gridContainer}>{gridItems}</div>
     </Layout>
   );
 };
