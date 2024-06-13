@@ -293,7 +293,7 @@ const Navigation = () => {
               />
             </div>
             <RxHamburgerMenu
-              strokeWidth={0.6}
+              strokeWidth={0.8}
               className={styles.menuIcon}
               onClick={toggleMenu}
             />
