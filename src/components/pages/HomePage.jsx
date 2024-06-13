@@ -13,7 +13,7 @@ import ShareExtra from "../home/ShareExtra";
 
 const HomePage = () => {
   return (
-    <Layout>
+    <Layout showExtra={false}>
       <Header />
       <ContentCircle />
       <Separator />

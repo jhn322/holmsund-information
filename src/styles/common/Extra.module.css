@@ -12,7 +12,7 @@
   background-color: var(--primary-color);
 }
 
-.shareContainer {
+.container {
   margin: 0;
   display: flex;
   align-items: center;
@@ -20,35 +20,17 @@
   flex-direction: column;
 }
 
-.shareHeader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.shareTitle {
-  font-size: 2.25rem;
-  font-weight: bold;
-  padding: 3rem 0 2rem 0;
-  color: var(--black-text-color);
-}
-
-.shareDot {
-  font-size: 12px;
-  vertical-align: 50%;
-  color: var(--black-text-color);
-}
-
-.shareImageContainer {
+.imageContainer {
   display: grid;
   place-items: center;
   z-index: 1;
   width: 100%;
   height: 100%;
-  padding-bottom: 9rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 }
 
-.shareImage {
+.image {
   width: 90%;
   height: 26rem;
   max-width: 22rem;
@@ -76,13 +58,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: var(--accent-color);
+  background-image: linear-gradient(135deg, #b6469f, #4da7f5);
   width: 100%;
   height: 25rem;
 }
 
 .mapInner {
-  background-color: var(--gallery-color);
+  background-image: linear-gradient(135deg, #e94417, #ffcd2a);
 }
 
 .weatherContent,
@@ -134,23 +116,17 @@
 }
 
 .weatherBtnText:hover {
-  color: var(--accent-color);
+  color: #7b7ccf;
   background-color: var(--primary-color);
 }
 
 .mapBtnText:hover {
-  color: var(--gallery-color);
+  color: #f69122;
   background-color: var(--primary-color);
 }
 
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 779px) {
-  .shareTitle {
-    font-size: 2.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
   .weather h3,
   .map h3 {
     font-size: 2.25rem;
@@ -164,20 +140,12 @@
 
 /* Tablet */
 @media only screen and (min-width: 780px) and (max-width: 1199px) {
-  .shareHeader {
-    padding: 9rem 0;
-  }
-
-  .shareTitle {
-    font-size: 3rem;
-  }
-
-  .shareImageContainer {
+  .imageContainer {
     position: relative;
     padding-bottom: 0;
   }
 
-  .shareImage {
+  .image {
     position: absolute;
     top: 15.05rem;
     left: 50%;
@@ -217,20 +185,12 @@
 
 /* Desktop */
 @media only screen and (min-width: 1200px) {
-  .shareHeader {
-    padding: 9rem 0;
-  }
-
-  .shareTitle {
-    font-size: 3rem;
-  }
-
-  .shareImageContainer {
+  .imageContainer {
     position: relative;
     padding-bottom: 0;
   }
 
-  .shareImage {
+  .image {
     position: absolute;
     top: 15.05rem;
     left: 50%;

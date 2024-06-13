@@ -159,7 +159,7 @@
 .featuredImage {
   width: 100%;
   height: 28rem;
-  background-image: url("../assets/staticActivity.jpg");
+  background-image: url("../../assets/staticActivity.jpg");
   background-size: cover;
   background-position: center;
 }

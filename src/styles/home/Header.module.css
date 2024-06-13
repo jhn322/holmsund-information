@@ -24,19 +24,19 @@ body {
 }
 
 .headerContainer.Vår {
-  background-image: url("../assets/headerSpring.jpg");
+  background-image: url("../../assets/headerSpring.jpg");
 }
 
 .headerContainer.Sommar {
-  background-image: url("../assets/headerSummer.jpg");
+  background-image: url("../../assets/headerSummer.jpg");
 }
 
 .headerContainer.Höst {
-  background-image: url("../assets/headerAutumn.jpg");
+  background-image: url("../../assets/headerAutumn.jpg");
 }
 
 .headerContainer.Vinter {
-  background-image: url("../assets/headerWinter.jpg");
+  background-image: url("../../assets/headerWinter.jpg");
 }
 
 .innerHeader {
