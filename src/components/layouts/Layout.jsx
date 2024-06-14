@@ -2,18 +2,31 @@ import React from "react";
 
 // Components
 import Navigation from "../common/Navigation";
-import ScrollUp from "../common/ScrollUp";
+import HeaderAddon from "../addon/HeaderAddon";
 import Extra from "../common/Extra";
+import ScrollUp from "../common/ScrollUp";
 import Cookies from "../common/Cookies";
 import Footer from "../common/Footer";
 
-const Layout = ({ children, showExtra = true }) => {
+const Layout = ({
+  children,
+  renderExtra = true,
+  renderHeaderAddon = true,
+  headerTitle,
+  headerBackgroundImage,
+}) => {
   return (
     <div>
       <Navigation />
+      {renderHeaderAddon && (
+        <HeaderAddon
+          title={headerTitle}
+          backgroundImage={headerBackgroundImage}
+        />
+      )}
       <main>{children}</main>
+      {renderExtra && <Extra />}
       <ScrollUp />
-      {showExtra && <Extra />}
       <Cookies />
       <Footer />
     </div>

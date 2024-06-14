@@ -1,3 +1,4 @@
+// DiscoverPageMain.jsx
 import React from "react";
 import ActivityAddon from "../addon/ActivityAddon";
 
@@ -6,6 +7,9 @@ import styles from "../../styles/pages/DiscoverPageMain.module.css";
 
 // Components
 import Layout from "../layouts/Layout";
+
+// Images
+import headerBackgroundImage2 from "../../assets/headerBackgroundImage2.jpg";
 
 const DiscoverPageMain = () => {
   const images = [
@@ -26,7 +30,10 @@ const DiscoverPageMain = () => {
   ));
 
   return (
-    <Layout>
+    <Layout
+      headerTitle="Discover Main Page"
+      headerBackgroundImage={headerBackgroundImage2}
+    >
       <div className={styles.gridContainer}>{gridItems}</div>
       <ActivityAddon />
     </Layout>

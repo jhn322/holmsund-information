@@ -1,8 +1,12 @@
+// GalleryPageMain.jsx
 import React from "react";
 import DiscoverAddon from "../addon/DiscoverAddon";
 
 // CSS
 import styles from "../../styles/pages/GalleryPageMain.module.css";
+
+// Images
+import headerBackgroundImage3 from "../../assets/headerBackgroundImage3.jpg";
 
 // Components
 import Layout from "../layouts/Layout";
@@ -22,7 +26,10 @@ const GalleryPageMain = () => {
   ));
 
   return (
-    <Layout>
+    <Layout
+      headerTitle="Gallery Main Page"
+      headerBackgroundImage={headerBackgroundImage3}
+    >
       <div className={styles.gridContainer}>{gridItems}</div>
       <DiscoverAddon />
     </Layout>

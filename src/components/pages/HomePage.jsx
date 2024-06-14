@@ -9,11 +9,11 @@ import Discover from "../home/Discover";
 import DiscoverInspired from "../home/DiscoverInspired";
 import Gallery from "../home/Gallery";
 import Separator from "../home/Separator";
-import ShareExtra from "../home/ShareExtra";
+import ExtraHome from "../home/ExtraHome";
 
 const HomePage = () => {
   return (
-    <Layout showExtra={false}>
+    <Layout renderExtra={false} renderHeaderAddon={false}>
       <Header />
       <ContentCircle />
       <Separator />
@@ -21,7 +21,7 @@ const HomePage = () => {
       <Activity />
       <DiscoverInspired />
       <Gallery />
-      <ShareExtra />
+      <ExtraHome />
     </Layout>
   );
 };

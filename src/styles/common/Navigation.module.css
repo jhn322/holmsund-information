@@ -445,7 +445,7 @@ h5 {
   /* Dropdown menu container */
   .dropdownMenu {
     position: absolute;
-    top: 67%;
+    top: 64%;
     display: none;
     z-index: 999;
     background-color: rgba(182, 70, 159, 0.85);

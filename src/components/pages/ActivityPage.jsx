@@ -4,6 +4,9 @@ import GalleryAddon from "../addon/GalleryAddon";
 // CSS
 import styles from "../../styles/pages/GalleryPageMain.module.css";
 
+// Images
+import headerBackgroundImage1 from "../../assets/headerBackgroundImage1.jpg";
+
 // Components
 import Layout from "../layouts/Layout";
 
@@ -22,7 +25,10 @@ const ActivityPage = () => {
   ));
 
   return (
-    <Layout>
+    <Layout
+      headerTitle="Activity Page"
+      headerBackgroundImage={headerBackgroundImage1}
+    >
       <div className={styles.gridContainer}>{gridItems}</div>
       <GalleryAddon />
     </Layout>
