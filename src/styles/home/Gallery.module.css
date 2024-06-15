@@ -53,7 +53,7 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 10px;
+  border-radius: 20px;
   z-index: 0;
   position: relative;
 }
@@ -103,7 +103,7 @@ p {
 .carouselInner img {
   width: calc(17rem + 20vw);
   height: calc(17rem + 20vw);
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .slide {

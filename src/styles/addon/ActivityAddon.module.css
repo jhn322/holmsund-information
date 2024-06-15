@@ -22,13 +22,13 @@
 .container::-webkit-scrollbar {
   width: 8px;
   height: 8px;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: transparent;
 }
 
 .container::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .container::-webkit-scrollbar-thumb:hover {

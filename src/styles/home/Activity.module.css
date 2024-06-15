@@ -36,13 +36,13 @@
 .activityContainer::-webkit-scrollbar {
   width: 8px;
   height: 8px;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: transparent;
 }
 
 .activityContainer::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .activityContainer::-webkit-scrollbar-thumb:hover {
@@ -59,7 +59,7 @@
 .activitySlide img {
   width: 100%;
   height: 25rem;
-  border-radius: 10px;
+  border-radius: 20px;
   object-fit: cover;
 }
 

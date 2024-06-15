@@ -5,27 +5,26 @@ import GalleryAddon from "../addon/GalleryAddon";
 import Layout from "../layouts/Layout";
 
 // CSS
-import styles from "../../styles/pages/GalleryPageMain.module.css";
+import styles from "../../styles/pages/ActivityPage.module.css";
 
 // Images
-import headerBackgroundImage1 from "../../assets/header/header5.jpg";
-import headerBackgroundImage2 from "../../assets/header/header6.jpg";
-import headerBackgroundImage3 from "../../assets/header/header7.jpg";
-import headerBackgroundImage4 from "../../assets/header/header8.jpg";
+import header5 from "../../assets/header/header5.jpg";
+import header6 from "../../assets/header/header6.jpg";
+import header7 from "../../assets/header/header7.jpg";
+import header8 from "../../assets/header/header8.jpg";
+import activityPage1 from "../../assets/activity/activityPage1.jpg";
+import activityPage2 from "../../assets/activity/activityPage2.jpg";
+import activityPage3 from "../../assets/activity/activityPage3.jpg";
+import activityPage4 from "../../assets/activity/activityPage4.jpg";
 
 const ActivityPage = () => {
-  const headerImages = [
-    headerBackgroundImage1,
-    headerBackgroundImage2,
-    headerBackgroundImage3,
-    headerBackgroundImage4,
-  ];
+  const headerImages = [header5, header6, header7, header8];
 
   const gridImages = [
-    "https://via.placeholder.com/300",
-    "https://via.placeholder.com/300",
-    "https://via.placeholder.com/300",
-    "https://via.placeholder.com/300",
+    { src: activityPage1, title: "Title 1" },
+    { src: activityPage2, title: "Title 2" },
+    { src: activityPage3, title: "Title 3" },
+    { src: activityPage4, title: "Title 4" },
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -42,7 +41,8 @@ const ActivityPage = () => {
 
   const gridItems = gridImages.map((image, index) => (
     <div className={styles.gridItem} key={index}>
-      <img src={image} alt={`Image ${index}`} />
+      <img src={image.src} alt={`Image ${index}`} />
+      <h4 className={styles.title}>{image.title}</h4>
     </div>
   ));
 
@@ -51,6 +51,15 @@ const ActivityPage = () => {
       headerTitle="Activity Page"
       headerBackgroundImage={headerImages[currentImageIndex]}
     >
+      <div className={styles.textContainer}>
+        <h2 className={styles.activityTitle}>Activity Page Title</h2>
+        <p className={styles.activityText}>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, numquam
+          et repudiandae rem dolore, quam quidem quas nisi libero, cupiditate
+          voluptate? Corporis aliquid accusamus maxime excepturi delectus.
+          Praesentium, impedit quia.
+        </p>
+      </div>
       <div className={styles.gridContainer}>{gridItems}</div>
       <GalleryAddon />
     </Layout>

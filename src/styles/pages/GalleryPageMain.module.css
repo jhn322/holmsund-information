@@ -7,6 +7,23 @@
   font-family: "Outfit", sans-serif;
 }
 
+body {
+  background-color: var(--primary-color);
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.galleryText {
+  margin-top: 2rem;
+}
+
 .gridContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -21,8 +38,9 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 20px;
   padding-top: 56.25%;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
 }
 
 .gridItem img {
@@ -54,6 +72,24 @@
 
 .gridItem:hover img {
   transform: scale(1.1);
+}
+
+.title {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--white-text-color);
+  font-size: 2.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  text-align: center;
+  z-index: 20;
+}
+
+.gridItem:hover .title {
+  opacity: 1;
 }
 
 @media (max-width: 2200px) {
