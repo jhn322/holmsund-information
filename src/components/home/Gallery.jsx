@@ -9,12 +9,12 @@ import styles from "../../styles/home/Gallery.module.css";
 import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
 
 // Static image and carousel of images
-import staticGalleryImage from "../../assets/staticGallery.jpg";
-import galleryImage1 from "../../assets/gallery1.jpg";
-import galleryImage2 from "../../assets/gallery2.jpg";
-import galleryImage3 from "../../assets/gallery3.jpg";
-import galleryImage4 from "../../assets/gallery4.jpg";
-import galleryCircle from "../../assets/circle.png";
+import staticGalleryImage from "../../assets/gallery/staticGallery.jpg";
+import galleryImage1 from "../../assets/gallery/gallery1.jpg";
+import galleryImage2 from "../../assets/gallery/gallery2.jpg";
+import galleryImage3 from "../../assets/gallery/gallery3.jpg";
+import galleryImage4 from "../../assets/gallery/gallery4.jpg";
+import galleryCircle from "../../assets/other/circle.png";
 
 const Gallery = () => {
   const images = [

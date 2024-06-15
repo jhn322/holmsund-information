@@ -10,11 +10,11 @@ import styles2 from "../../styles/addon/DiscoverInspiredAddon.module.css";
 import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
 
 // Images
-import image1 from "../../assets/discoverInspired1.jpg";
-import image2 from "../../assets/discoverInspired2.jpg";
-import image3 from "../../assets/discoverInspired3.jpg";
-import image4 from "../../assets/discoverInspired4.jpg";
-import featuredCircle from "../../assets/circle.png";
+import image1 from "../../assets/discover/discoverInspired1.jpg";
+import image2 from "../../assets/discover/discoverInspired2.jpg";
+import image3 from "../../assets/discover/discoverInspired3.jpg";
+import image4 from "../../assets/discover/discoverInspired4.jpg";
+import featuredCircle from "../../assets/other/circle.png";
 
 const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);

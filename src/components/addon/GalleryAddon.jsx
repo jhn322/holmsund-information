@@ -10,11 +10,11 @@ import styles2 from "../../styles/addon/GalleryAddon.module.css";
 import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
 
 // Images
-import image1 from "../../assets/gallery1.jpg";
-import image2 from "../../assets/gallery2.jpg";
-import image3 from "../../assets/gallery3.jpg";
-import image4 from "../../assets/gallery4.jpg";
-import featuredCircle from "../../assets/circle.png";
+import image1 from "../../assets/gallery/gallery1.jpg";
+import image2 from "../../assets/gallery/gallery2.jpg";
+import image3 from "../../assets/gallery/gallery3.jpg";
+import image4 from "../../assets/gallery/gallery4.jpg";
+import featuredCircle from "../../assets/other/circle.png";
 
 const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);

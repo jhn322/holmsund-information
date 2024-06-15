@@ -78,7 +78,7 @@
 .featuredImage {
   width: 100%;
   height: 28rem;
-  background-image: url("../../assets/StaticActivityAddon.jpg");
+  background-image: url("../../assets/activity/StaticActivityAddon.jpg");
   background-size: cover;
   background-position: center;
 }

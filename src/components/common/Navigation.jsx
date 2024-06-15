@@ -17,8 +17,8 @@ import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
 import styles from "../../styles/common/Navigation.module.css";
 
 // Logo
-import logo1 from "../../assets/navLogo.png";
-import logo2 from "../../assets/navLogoHover.png";
+import logo1 from "../../assets/logo/navLogo.png";
+import logo2 from "../../assets/logo/navLogoHover.png";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

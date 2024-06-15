@@ -8,7 +8,7 @@ import styles from "../../styles/common/Footer.module.css";
 import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
 
 // Logo
-import logo from "../../assets/navLogo2.png";
+import logo from "../../assets/logo/navLogo2.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

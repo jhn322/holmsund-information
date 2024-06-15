@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 // Images
-import image from "../../assets/share.jpg";
+import image from "../../assets/other/share.jpg";
 
 // CSS
 import styles from "../../styles/common/Extra.module.css";

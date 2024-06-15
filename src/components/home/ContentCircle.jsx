@@ -4,8 +4,8 @@ import { useEffect, useRef } from "react";
 import styles from "../../styles/home/ContentCircle.module.css";
 
 // Images
-import circle1Image from "../../assets/circle1.png";
-import circle2Image from "../../assets/circle2.png";
+import circle1Image from "../../assets/other/circle1.png";
+import circle2Image from "../../assets/other/circle2.png";
 
 const ContentCircle = () => {
   const contentRef = useRef(null);
