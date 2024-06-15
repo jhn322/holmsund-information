@@ -5,7 +5,7 @@ import GalleryAddon from "../addon/GalleryAddon";
 import Layout from "../layouts/Layout";
 
 // CSS
-import styles from "../../styles/pages/ActivityPage.module.css";
+import styles from "../../styles/pages/PageMain.module.css";
 
 // Images
 import header5 from "../../assets/header/header5.jpg";

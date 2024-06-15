@@ -5,7 +5,8 @@ import DiscoverAddon from "../addon/DiscoverAddon";
 import Layout from "../layouts/Layout";
 
 // CSS
-import styles from "../../styles/pages/DiscoverPageMain.module.css";
+import styles from "../../styles/pages/PageMain.module.css";
+import styles2 from "../../styles/pages/DiscoverPageMain.module.css";
 
 // Images
 import header1 from "../../assets/header/header1.jpg";
@@ -68,7 +69,7 @@ const DiscoverPageMain = () => {
           Praesentium, impedit quia.
         </p>
       </div>
-      <div className={styles.gridContainer}>{gridItems}</div>
+      <div className={styles2.gridContainer}>{gridItems}</div>
       <DiscoverAddon />
     </Layout>
   );

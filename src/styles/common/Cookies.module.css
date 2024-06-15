@@ -28,7 +28,7 @@
 
 .cookiesContainer button {
   color: var(--white-text-color);
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
   padding: 0.65rem 1.25rem;
   margin-left: 0.65rem;

@@ -5,7 +5,7 @@ import ActivityAddon from "../addon/ActivityAddon";
 import Layout from "../layouts/Layout";
 
 // CSS
-import styles from "../../styles/pages/GalleryPageMain.module.css";
+import styles from "../../styles/pages/PageMain.module.css";
 
 // Images
 import header9 from "../../assets/header/header9.jpg";
