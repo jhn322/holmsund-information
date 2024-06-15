@@ -52,8 +52,8 @@ const GalleryPageMain = () => {
       headerBackgroundImage={headerImages[currentImageIndex]}
     >
       <div className={styles.textContainer}>
-        <h2 className={styles.galleryTitle}>Gallery Page Title</h2>
-        <p className={styles.galleryText}>
+        <h2 className={styles.mainTitle}>Gallery Page Title</h2>
+        <p className={styles.mainText}>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, numquam
           et repudiandae rem dolore, quam quidem quas nisi libero, cupiditate
           voluptate? Corporis aliquid accusamus maxime excepturi delectus.

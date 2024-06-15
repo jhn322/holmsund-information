@@ -20,8 +20,17 @@ body {
   padding: 2rem;
 }
 
-.activityText {
+.textContainer p {
+  max-width: 90%;
+}
+
+.mainTitle {
+  font-size: 2.25rem;
+}
+
+.mainText {
   margin-top: 2rem;
+  font-size: 1.1rem;
 }
 
 .gridContainer {
@@ -97,8 +106,27 @@ body {
   opacity: 1;
 }
 
+/* Uncommon phone size */
+@media only screen and (min-width: 500px) and (max-width: 599px) {
+  .mainTitle {
+    font-size: 2.25rem;
+  }
+
+  .mainText {
+    font-size: 1.2rem;
+  }
+}
+
 /* Small Tablet */
 @media only screen and (min-width: 600px) and (max-width: 769px) {
+  .mainTitle {
+    font-size: 2.25rem;
+  }
+
+  .mainText {
+    font-size: 1.3rem;
+  }
+
   .gridContainer {
     max-width: 40rem;
     margin: 6rem auto;
@@ -108,6 +136,14 @@ body {
 
 /* Desktop */
 @media only screen and (min-width: 770px) and (max-width: 1399px) {
+  .mainTitle {
+    font-size: 2.5rem;
+  }
+
+  .mainText {
+    font-size: 1.3rem;
+  }
+
   .gridContainer {
     grid-template-columns: repeat(2, 1fr);
     max-width: 70rem;
@@ -122,6 +158,18 @@ body {
 
 /* Large Desktop */
 @media only screen and (min-width: 1400px) {
+  .textContainer p {
+    max-width: 50%;
+  }
+
+  .mainTitle {
+    font-size: 3.5rem;
+  }
+
+  .mainText {
+    font-size: 1.3rem;
+  }
+
   .gridContainer {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;

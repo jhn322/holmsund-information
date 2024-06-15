@@ -52,8 +52,8 @@ const ActivityPage = () => {
       headerBackgroundImage={headerImages[currentImageIndex]}
     >
       <div className={styles.textContainer}>
-        <h2 className={styles.activityTitle}>Activity Page Title</h2>
-        <p className={styles.activityText}>
+        <h2 className={styles.mainTitle}>Activity Page Title</h2>
+        <p className={styles.mainText}>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, numquam
           et repudiandae rem dolore, quam quidem quas nisi libero, cupiditate
           voluptate? Corporis aliquid accusamus maxime excepturi delectus.

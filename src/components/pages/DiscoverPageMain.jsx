@@ -61,8 +61,8 @@ const DiscoverPageMain = () => {
       headerBackgroundImage={headerImages[currentImageIndex]}
     >
       <div className={styles.textContainer}>
-        <h2 className={styles.discoverTitle}>Discover Page Title</h2>
-        <p className={styles.discoverText}>
+        <h2 className={styles.mainTitle}>Discover Page Title</h2>
+        <p className={styles.mainText}>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, numquam
           et repudiandae rem dolore, quam quidem quas nisi libero, cupiditate
           voluptate? Corporis aliquid accusamus maxime excepturi delectus.
