@@ -3,6 +3,7 @@ import React from "react";
 // Components
 import Navigation from "../common/Navigation";
 import HeaderAddon from "../addon/HeaderAddon";
+import SeparatorAddon from "../addon/SeparatorAddon";
 import FeaturedAddon1 from "../addon/FeaturedAddon1";
 import FeaturedAddon2 from "../addon/FeaturedAddon2";
 import FeaturedAddon3 from "../addon/FeaturedAddon3";
@@ -41,14 +42,15 @@ const LayoutMainPage = ({
         backgroundImage={headerBackgroundImage}
       />
       <main>{children}</main>
-      {renderFeaturedAddon1 && <FeaturedAddon1 />}
-      {renderFeaturedAddon2 && <FeaturedAddon2 />}
-      {renderFeaturedAddon3 && <FeaturedAddon3 />}
-      {renderFeaturedAddon4 && <FeaturedAddon4 />}
+      <SeparatorAddon />
       {renderDiscoverAddon1 && <DiscoverAddon1 title={discoverTitle1} />}
       {renderDiscoverAddon2 && <DiscoverAddon2 title={discoverTitle2} />}
       {renderDiscoverAddon3 && <DiscoverAddon3 title={discoverTitle3} />}
       {renderDiscoverAddon4 && <DiscoverAddon4 title={discoverTitle4} />}
+      {renderFeaturedAddon1 && <FeaturedAddon1 />}
+      {renderFeaturedAddon2 && <FeaturedAddon2 />}
+      {renderFeaturedAddon3 && <FeaturedAddon3 />}
+      {renderFeaturedAddon4 && <FeaturedAddon4 />}
       <Extra />
       <ScrollUp />
       <Cookies />

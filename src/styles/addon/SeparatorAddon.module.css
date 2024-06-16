@@ -1,0 +1,33 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.separatorFirst {
+  background-color: var(--accent-color);
+  height: 9rem;
+}
+
+/* Uncommon phone size */
+@media only screen and (min-width: 500px) and (max-width: 599px) {
+  .separatorFirst {
+    height: 10rem;
+  }
+}
+
+/* Tablet - Desktop */
+@media only screen and (min-width: 600px) and (max-width: 1199px) {
+  .separatorFirst {
+    height: 12rem;
+  }
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1200px) {
+  .separatorFirst {
+    height: 18rem;
+  }
+}

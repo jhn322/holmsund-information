@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 
 // CSS
-import styles from "../../styles/home/DiscoverInspired.module.css";
+import styles from "../../styles/home/Discover.module.css";
 
 // Images
 import discoverMoreImage1 from "../../assets/discover/discoverInspired1.jpg";
