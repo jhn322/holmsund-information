@@ -2,18 +2,19 @@ import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 
 // CSS
-import styles from "../../styles/addon/MainCarouselAddon.module.css";
+import styles from "../../styles/home/Activity.module.css";
+
 // Component specific styling
-import styles2 from "../../styles/addon/DiscoverInspiredAddon.module.css";
+import styles2 from "../../styles/addon/DiscoverAddon.module.css";
 
 // Icons
 import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
 
 // Images
-import image1 from "../../assets/discover/discoverInspired1.jpg";
-import image2 from "../../assets/discover/discoverInspired2.jpg";
-import image3 from "../../assets/discover/discoverInspired3.jpg";
-import image4 from "../../assets/discover/discoverInspired4.jpg";
+import image1 from "../../assets/discover/discover1.jpg";
+import image2 from "../../assets/discover/discover2.jpg";
+import image3 from "../../assets/discover/discover3.jpg";
+import image4 from "../../assets/discover/discover4.jpg";
 import featuredCircle from "../../assets/other/circle.png";
 
 const Carousel = () => {
@@ -25,28 +26,28 @@ const Carousel = () => {
       title: "Vin Festival",
       description:
         "Fira med oss den 8 juni i Kellogg Mall Park. Upplev en fantastisk kväll med utsökta viner från lokala vingårdar, musik och god mat. Ta chansen att träffa vinmakare och delta i exklusiva vinprovningar.",
-      link: "/upptäck-5",
+      link: "/upptäck-1",
     },
     {
       src: image2,
       title: "Kattmuseum",
       description:
         "Katten sov lugnt på den mysiga, varma soffan. Utforska vårt kattmuseum där du kan lära dig om katternas historia och deras roll i olika kulturer.",
-      link: "/upptäck-6",
+      link: "/upptäck-2",
     },
     {
       src: image3,
       title: "Simlektioner",
       description:
         "Hon skrattade högt åt det roliga skämtet hennes vän berättade. Välkommen till våra simlektioner, där du kan lära dig att simma eller förbättra dina simfärdigheter. Våra erfarna instruktörer ger personlig uppmärksamhet och ser till att varje lektion är både säker och rolig. Perfekt för alla åldrar och nivåer!",
-      link: "/upptäck-7",
+      link: "/upptäck-3",
     },
     {
       src: image4,
       title: "Auktionsshow",
       description:
         "De kom tidigt, till deras värds stora glädje. Delta i vår spännande auktionsshow där unika föremål från hela världen går under klubban. Möt samlare och säljare, och kanske gå hem med en oväntad skatt.",
-      link: "/upptäck-8",
+      link: "/upptäck-4",
     },
   ];
 
@@ -125,7 +126,7 @@ const Carousel = () => {
   );
 };
 
-const DiscoverInspiredAddon = () => {
+const FeatureAddon2 = () => {
   return (
     <div className={styles.featuredContainer}>
       <div className={styles2.featuredImage}></div>
@@ -134,11 +135,11 @@ const DiscoverInspiredAddon = () => {
           className={styles.featuredCircle}
           style={{ backgroundImage: `url(${featuredCircle})` }}
         ></div>
-        <h2 className={styles.featuredTitle}>Hitta ny Inspiration</h2>
+        <h2 className={styles.featuredTitle}>Mer att Utforska</h2>
         <Carousel />
       </div>
     </div>
   );
 };
 
-export default DiscoverInspiredAddon;
+export default FeatureAddon2;

@@ -77,12 +77,12 @@ const ActivityCarousel = () => {
   });
 
   return (
-    <div {...swipeHandlers} className={styles.activityCarousel}>
-      <div className={styles.activityContainer}>
+    <div {...swipeHandlers} className={styles.carousel}>
+      <div className={styles.container}>
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`${styles.activitySlide} ${
+            className={`${styles.slide} ${
               index === activeIndex ? styles.active : ""
             }`}
           >
@@ -92,7 +92,7 @@ const ActivityCarousel = () => {
             <div className={styles.slideCounter}>
               {index + 1}/{slides.length}
             </div>
-            <div className={styles.activityCaption}>
+            <div className={styles.caption}>
               <a href={slide.link}>
                 <h3 className={styles.captionTitle}>{slide.title}</h3>
               </a>
@@ -111,7 +111,7 @@ const ActivityCarousel = () => {
           </div>
         ))}
       </div>
-      <div className={styles.activityNav}>
+      <div className={styles.nav}>
         <span className={styles.navPrev} onClick={handlePrev}>
           <RxChevronLeft strokeWidth={0.2} />
         </span>

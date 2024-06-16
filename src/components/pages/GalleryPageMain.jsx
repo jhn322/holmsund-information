@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import ActivityAddon from "../addon/ActivityAddon";
 
 // Components
-import Layout from "../layouts/Layout";
+import LayoutPageMain from "../layouts/LayoutPageMain";
 
 // CSS
 import styles from "../../styles/pages/PageMain.module.css";
@@ -47,9 +46,10 @@ const GalleryPageMain = () => {
   ));
 
   return (
-    <Layout
+    <LayoutPageMain
       headerTitle="Gallery Page"
       headerBackgroundImage={headerImages[currentImageIndex]}
+      renderFeatureAddon2={true}
     >
       <div className={styles.textContainer}>
         <h2 className={styles.mainTitle}>Gallery Page Title</h2>
@@ -61,8 +61,7 @@ const GalleryPageMain = () => {
         </p>
       </div>
       <div className={styles.gridContainer}>{gridItems}</div>
-      <ActivityAddon />
-    </Layout>
+    </LayoutPageMain>
   );
 };
 

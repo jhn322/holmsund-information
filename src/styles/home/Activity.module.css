@@ -7,63 +7,63 @@
   font-family: "Outfit", sans-serif;
 }
 
-.activityCarousel {
+.carousel {
   position: relative;
   width: 100%;
   padding: 6rem 0;
 }
 
-.activityContainer {
+.container {
   cursor: pointer;
 }
 
-.activityContainer .captionTitle {
+.container .captionTitle {
   transition: color 0.3s;
 }
 
 /* --- Hovering within container gives simultaneous hover on 3 elements --- */
-.activityContainer:hover .captionTitle,
-.activityContainer:hover .captionLink {
+.container:hover .captionTitle,
+.container:hover .captionLink {
   color: var(--hover-color);
 }
 
-.activityContainer:hover .arrowIcon {
+.container:hover .arrowIcon {
   border: 2px solid var(--hover-color);
   color: var(--hover-color);
 }
 
 /* Scroll bar style */
-.activityContainer::-webkit-scrollbar {
+.container::-webkit-scrollbar {
   width: 8px;
   height: 8px;
   border-radius: 10px;
   background-color: transparent;
 }
 
-.activityContainer::-webkit-scrollbar-thumb {
+.container::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
 
-.activityContainer::-webkit-scrollbar-thumb:hover {
+.container::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 /* ----------------------------------------------------------------------- */
 
-.activitySlide {
+.slide {
   display: none;
   width: 100%;
   margin-top: 6rem;
 }
 
-.activitySlide img {
+.slide img {
   width: 100%;
   height: 25rem;
   border-radius: 10px;
   object-fit: cover;
 }
 
-.activitySlide.active {
+.slide.active {
   display: block;
 }
 
@@ -78,7 +78,7 @@
   font-size: 1rem;
 }
 
-.activityCaption {
+.caption {
   width: 80%;
   max-height: 20rem;
   margin: 0 auto;
@@ -86,12 +86,12 @@
   padding: 2rem 0;
 }
 
-.activityCaption h3 {
+.caption h3 {
   font-size: 2rem;
   text-transform: uppercase;
 }
 
-.activityCaption p {
+.caption p {
   font-size: 1.1rem;
   color: var(--white-text-color);
   line-height: 2rem;
@@ -120,7 +120,7 @@
   border: 2px solid var(--hover-color);
 }
 
-.activityNav {
+.nav {
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -129,14 +129,14 @@
   cursor: pointer;
 }
 
-.activityNav span {
+.nav span {
   border: none;
   color: var(--primary-color);
   font-size: 2.3rem;
   cursor: pointer;
 }
 
-.activityNav span:hover {
+.nav span:hover {
   color: var(--hover-color);
 }
 
@@ -195,7 +195,7 @@
 
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 599px) {
-  .activityCaption p {
+  .caption p {
     font-size: 1.2rem;
   }
 
@@ -206,25 +206,25 @@
 
 /* Small Tablet */
 @media only screen and (min-width: 600px) and (max-width: 769px) {
-  .activityCaption h3,
+  .caption h3,
   .featuredTitle {
     font-size: 2.25rem;
   }
 
-  .activityCaption p {
+  .caption p {
     font-size: 1.2rem;
   }
 }
 
 /* Desktop */
 @media only screen and (min-width: 770px) and (max-width: 1399px) {
-  .activityContainer {
+  .container {
     overflow: auto;
     max-height: 100vh;
     max-width: 98%;
   }
 
-  .activityCarousel {
+  .carousel {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -232,7 +232,7 @@
     padding: 2rem 0;
   }
 
-  .activitySlide {
+  .slide {
     display: block;
     width: 100%;
     margin-top: 0;
@@ -240,7 +240,7 @@
     margin-bottom: 1rem;
   }
 
-  .activitySlide img {
+  .slide img {
     width: 20rem;
     height: 20rem;
   }
@@ -249,15 +249,15 @@
     display: none;
   }
 
-  .activityCaption {
+  .caption {
     width: 90%;
   }
 
-  .activityCaption h3 {
+  .caption h3 {
     font-size: 2.25rem;
   }
 
-  .activityCaption p {
+  .caption p {
     font-size: 1.3rem;
   }
 
@@ -270,7 +270,7 @@
     font-size: 3rem;
   }
 
-  .activityNav {
+  .nav {
     display: none;
   }
 
@@ -302,13 +302,13 @@
 
 /* Large Desktop */
 @media only screen and (min-width: 1400px) {
-  .activityContainer {
+  .container {
     overflow: auto;
     max-height: 100vh;
     width: 90%;
   }
 
-  .activityCarousel {
+  .carousel {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -316,7 +316,7 @@
     padding: 2rem 0;
   }
 
-  .activitySlide {
+  .slide {
     display: block;
     width: 100%;
     margin-top: 0;
@@ -324,7 +324,7 @@
     margin-bottom: 1rem;
   }
 
-  .activitySlide img {
+  .slide img {
     width: 20rem;
     height: 20rem;
   }
@@ -333,19 +333,19 @@
     display: none;
   }
 
-  .activityCaption {
+  .caption {
     width: 50%;
   }
 
-  .activityCaption h3 {
+  .caption h3 {
     font-size: 2.5rem;
   }
 
-  .activityCaption p {
+  .caption p {
     font-size: 1.3rem;
   }
 
-  .activityNav {
+  .nav {
     display: none;
   }
 

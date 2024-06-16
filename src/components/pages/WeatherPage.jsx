@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import DiscoverInspiredAddon from "../addon/DiscoverInspiredAddon";
 
 // Components
-import Layout from "../layouts/Layout";
+import LayoutMainPage from "../layouts/LayoutPageMain";
 
 // CSS
 import styles from "../../styles/pages/WeatherPage.module.css";
@@ -34,15 +33,15 @@ const WeatherPage = () => {
   }, [headerImages.length]);
 
   return (
-    <Layout
+    <LayoutMainPage
       headerTitle="Weather Page"
       headerBackgroundImage={headerImages[currentImageIndex]}
+      renderFeatureAddon3={true}
     >
       <div className={styles.container}>
         <h2>UNDER CONSTRUCTION</h2>
       </div>
-      <DiscoverInspiredAddon />
-    </Layout>
+    </LayoutMainPage>
   );
 };
 

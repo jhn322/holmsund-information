@@ -204,7 +204,7 @@ const Navigation = () => {
                     </li>
                     <li>
                       <NavLink
-                        to="/aktiviteter"
+                        to="/aktiviteter-1"
                         activeclassname={styles.active}
                       >
                         <h5>Först aktiviteter länk</h5>
@@ -212,7 +212,7 @@ const Navigation = () => {
                     </li>
                     <li>
                       <NavLink
-                        to="/aktiviteter"
+                        to="/aktiviteter-2"
                         activeclassname={styles.active}
                       >
                         <h5>Andra aktiviteter länk</h5>
@@ -220,7 +220,7 @@ const Navigation = () => {
                     </li>
                     <li>
                       <NavLink
-                        to="/aktiviteter"
+                        to="/aktiviteter-3"
                         activeclassname={styles.active}
                       >
                         <h5>Tredje aktiviteter länk</h5>
@@ -228,7 +228,7 @@ const Navigation = () => {
                     </li>
                     <li>
                       <NavLink
-                        to="/aktiviteter"
+                        to="/aktiviteter-4"
                         activeclassname={styles.active}
                       >
                         <h5>Fjärde aktiviteter länk</h5>
@@ -408,7 +408,7 @@ const Navigation = () => {
                     <div className={styles.nestedItems}>
                       <li>
                         <NavLink
-                          to="/aktiviteter"
+                          to="/aktiviteter-1"
                           activeclassname={styles.active}
                         >
                           <h5>Första aktiviteter länken</h5>
@@ -416,7 +416,7 @@ const Navigation = () => {
                       </li>
                       <li>
                         <NavLink
-                          to="/aktiviteter"
+                          to="/aktiviteter-2"
                           activeclassname={styles.active}
                         >
                           <h5>Andra aktiviteter länken</h5>
@@ -424,7 +424,7 @@ const Navigation = () => {
                       </li>
                       <li>
                         <NavLink
-                          to="/aktiviteter"
+                          to="/aktiviteter-3"
                           activeclassname={styles.active}
                         >
                           <h5>Tredje aktiviteter länken</h5>
@@ -432,7 +432,7 @@ const Navigation = () => {
                       </li>
                       <li>
                         <NavLink
-                          to="/aktiviteter"
+                          to="/aktiviteter-4"
                           activeclassname={styles.active}
                         >
                           <h5>Fjärde aktiviteter länken</h5>

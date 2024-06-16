@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import DiscoverAddon from "../addon/DiscoverAddon";
 
 // Components
-import Layout from "../layouts/Layout";
+import LayoutPageMain from "../layouts/LayoutPageMain";
 
 // CSS
 import styles from "../../styles/pages/PageMain.module.css";
@@ -56,9 +55,10 @@ const DiscoverPageMain = () => {
   ));
 
   return (
-    <Layout
+    <LayoutPageMain
       headerTitle="Discover Page"
       headerBackgroundImage={headerImages[currentImageIndex]}
+      renderFeatureAddon1={true}
     >
       <div className={styles.textContainer}>
         <h2 className={styles.mainTitle}>Discover Page Title</h2>
@@ -70,8 +70,7 @@ const DiscoverPageMain = () => {
         </p>
       </div>
       <div className={styles2.gridContainer}>{gridItems}</div>
-      <DiscoverAddon />
-    </Layout>
+    </LayoutPageMain>
   );
 };
 

@@ -4,15 +4,15 @@ import React from "react";
 import styles from "../../styles/pages/GalleryPage.module.css";
 
 // Components
-import Layout from "../layouts/Layout";
+import LayoutPage from "../layouts/LayoutPage";
 
 const GalleryPage4 = () => {
   return (
-    <Layout>
+    <LayoutPage>
       <div className={styles.container}>
         <h2>UNDER CONSTRUCTION</h2>
       </div>
-    </Layout>
+    </LayoutPage>
   );
 };
 
