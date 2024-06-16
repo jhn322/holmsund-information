@@ -49,7 +49,9 @@ const ActivityPage = () => {
     <LayoutPageMain
       headerTitle="Activity Page"
       headerBackgroundImage={headerImages[currentImageIndex]}
-      renderFeatureAddon4={true}
+      renderFeaturedAddon2={true}
+      discoverTitle1="Upptäck 1"
+      renderDiscoverAddon1={true}
     >
       <div className={styles.textContainer}>
         <h2 className={styles.mainTitle}>Activity Page Title</h2>

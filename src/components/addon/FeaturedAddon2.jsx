@@ -5,7 +5,7 @@ import { useSwipeable } from "react-swipeable";
 import styles from "../../styles/home/Activity.module.css";
 
 // Component specific styling
-import styles2 from "../../styles/addon/DiscoverInspiredAddon.module.css";
+import styles2 from "../../styles/addon/featuredAddon2.module.css";
 
 // Icons
 import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
@@ -126,7 +126,7 @@ const Carousel = () => {
   );
 };
 
-const FeatureAddon3 = () => {
+const FeaturedAddon2 = () => {
   return (
     <div className={styles.featuredContainer}>
       <div className={styles2.featuredImage}></div>
@@ -142,4 +142,4 @@ const FeatureAddon3 = () => {
   );
 };
 
-export default FeatureAddon3;
+export default FeaturedAddon2;

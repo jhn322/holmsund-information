@@ -3,10 +3,10 @@ import React from "react";
 // Components
 import Navigation from "../common/Navigation";
 import HeaderAddon from "../addon/HeaderAddon";
-import ActivityAddon from "../addon/FeatureAddon1";
-import DiscoverAddon from "../addon/FeatureAddon2";
-import DiscoverInspiredAddon from "../addon/FeatureAddon3";
-import GalleryAddon from "../addon/FeatureAddon4";
+import FeatureAddon1 from "../addon/FeaturedAddon3";
+import FeatureAddon2 from "../addon/FeaturedAddon1";
+import FeatureAddon3 from "../addon/FeaturedAddon2";
+import FeatureAddon4 from "../addon/FeaturedAddon4";
 import Extra from "../common/Extra";
 import ScrollUp from "../common/ScrollUp";
 import Cookies from "../common/Cookies";
@@ -16,10 +16,10 @@ const LayoutPage = ({
   children,
   headerTitle,
   headerBackgroundImage,
-  renderActivityAddon = false,
-  renderDiscoverAddon = false,
-  renderDiscoverInspiredAddon = false,
-  renderGalleryAddon = false,
+  renderFeatureAddon1 = false,
+  renderFeatureAddon2 = false,
+  renderFeatureAddon3 = false,
+  renderFeatureAddon4 = false,
 }) => {
   return (
     <div>
@@ -29,10 +29,10 @@ const LayoutPage = ({
         backgroundImage={headerBackgroundImage}
       />
       <main>{children}</main>
-      {renderActivityAddon && <ActivityAddon />}
-      {renderDiscoverAddon && <DiscoverAddon />}
-      {renderDiscoverInspiredAddon && <DiscoverInspiredAddon />}
-      {renderGalleryAddon && <GalleryAddon />}
+      {renderFeatureAddon1 && <FeatureAddon1 />}
+      {renderFeatureAddon2 && <FeatureAddon2 />}
+      {renderFeatureAddon3 && <FeatureAddon3 />}
+      {renderFeatureAddon4 && <FeatureAddon4 />}
       <Extra />
       <ScrollUp />
       <Cookies />
