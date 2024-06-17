@@ -37,42 +37,42 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
 
-          {/* Upptäck sektion */}
+          {/* upptack sektion */}
           <Route
-            path="/upptäck"
-            element={<DiscoverPageMain page="upptäck" />}
+            path="/upptack"
+            element={<DiscoverPageMain page="upptack" />}
           />
           <Route
-            path="/upptäck-1"
-            element={<DiscoverPage1 page="upptäck-1" />}
+            path="/upptack-1"
+            element={<DiscoverPage1 page="upptack-1" />}
           />
           <Route
-            path="/upptäck-2"
-            element={<DiscoverPage2 page="upptäck-2" />}
+            path="/upptack-2"
+            element={<DiscoverPage2 page="upptack-2" />}
           />
           <Route
-            path="/upptäck-3"
-            element={<DiscoverPage3 page="upptäck-3" />}
+            path="/upptack-3"
+            element={<DiscoverPage3 page="upptack-3" />}
           />
           <Route
-            path="/upptäck-4"
-            element={<DiscoverPage4 page="upptäck-4" />}
+            path="/upptack-4"
+            element={<DiscoverPage4 page="upptack-4" />}
           />
           <Route
-            path="/upptäck-5"
-            element={<DiscoverPage5 page="upptäck-5" />}
+            path="/upptack-5"
+            element={<DiscoverPage5 page="upptack-5" />}
           />
           <Route
-            path="/upptäck-6"
-            element={<DiscoverPage6 page="upptäck-6" />}
+            path="/upptack-6"
+            element={<DiscoverPage6 page="upptack-6" />}
           />
           <Route
-            path="/upptäck-7"
-            element={<DiscoverPage7 page="upptäck-7" />}
+            path="/upptack-7"
+            element={<DiscoverPage7 page="upptack-7" />}
           />
           <Route
-            path="/upptäck-8"
-            element={<DiscoverPage8 page="upptäck-8" />}
+            path="/upptack-8"
+            element={<DiscoverPage8 page="upptack-8" />}
           />
 
           {/* Aktiviteter sektion */}

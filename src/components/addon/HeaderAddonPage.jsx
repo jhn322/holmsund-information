@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 // CSS
 import styles from "../../styles/addon/HeaderAddon.module.css";
@@ -22,6 +22,33 @@ const getCurrentSeason = () => {
 
 const HeaderAddonPage = ({ title, backgroundImage }) => {
   const currentSeason = getCurrentSeason();
+  const { pathname } = useLocation();
+
+  // Defines a mapping from category identifiers to base paths
+  const categoryToPath = {
+    aktiviteter: "/aktiviteter",
+    upptack: "/upptack",
+    galleri: "/galleri",
+  };
+
+  // Extract category identifier from pathname
+  const getCategoryFromPath = (pathname) => {
+    const parts = pathname.split("-");
+    if (parts.length >= 1) {
+      return parts[0].split("/")[1];
+    }
+    return "";
+  };
+
+  const currentCategory = getCategoryFromPath(pathname);
+  const basePath = categoryToPath[currentCategory];
+
+  // Custom message for each category
+  const categoryMessages = {
+    upptack: "Se allt du kan upptäcka",
+    aktiviteter: "Se alla aktiviteter du kan hitta på",
+    galleri: "Bli inspirerad av allting som finns i galleriet",
+  };
 
   return (
     <header
@@ -34,9 +61,9 @@ const HeaderAddonPage = ({ title, backgroundImage }) => {
         </h1>
 
         <div className={`${styles.btnContainer} ${styles3.btnContainer}`}>
-          <NavLink to="/aktiviteter">
+          <NavLink to={basePath}>
             <button className={`${styles.headerBtn} ${styles3.headerBtn}`}>
-              Se alla Aktiviteter man kan hitta på denna {currentSeason}
+              {categoryMessages[currentCategory]} denna {currentSeason}
             </button>
           </NavLink>
         </div>

@@ -119,7 +119,7 @@ const Navigation = () => {
             </li>
             <li>
               <NavLink
-                to="/upptäck"
+                to="/upptack"
                 className={styles.navLink}
                 activeclassname={styles.active}
                 onClick={handleMainNavLinkClick}
@@ -130,49 +130,49 @@ const Navigation = () => {
                 {isDiscoverHovered && (
                   <div className={styles.dropdownMenu}>
                     <li className={styles.dropdownMenuAllContainer}>
-                      <NavLink to="/upptäck" activeclassname={styles.active}>
+                      <NavLink to="/upptack" activeclassname={styles.active}>
                         <h5 className={styles.dropdownMenuAll}>
                           Upptäck allt i Holmsund
                         </h5>
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/upptäck-1" activeclassname={styles.active}>
+                      <NavLink to="/upptack-1" activeclassname={styles.active}>
                         <h5>Första upptäck länk</h5>
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/upptäck-2" activeclassname={styles.active}>
+                      <NavLink to="/upptack-2" activeclassname={styles.active}>
                         <h5>Andra upptäck länk</h5>
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/upptäck-3" activeclassname={styles.active}>
+                      <NavLink to="/upptack-3" activeclassname={styles.active}>
                         <h5>Tredje upptäck länk</h5>
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/upptäck-4" activeclassname={styles.active}>
+                      <NavLink to="/upptack-4" activeclassname={styles.active}>
                         <h5>Fjärde upptäck länk</h5>
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/upptäck-5" activeclassname={styles.active}>
+                      <NavLink to="/upptack-5" activeclassname={styles.active}>
                         <h5>Femte upptäck länk</h5>
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/upptäck-6" activeclassname={styles.active}>
+                      <NavLink to="/upptack-6" activeclassname={styles.active}>
                         <h5>Sjätte upptäck länk</h5>
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/upptäck-7" activeclassname={styles.active}>
+                      <NavLink to="/upptack-7" activeclassname={styles.active}>
                         <h5>Sjunde upptäck länk</h5>
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/upptäck-8" activeclassname={styles.active}>
+                      <NavLink to="/upptack-8" activeclassname={styles.active}>
                         <h5>Åttonde upptäck länk</h5>
                       </NavLink>
                     </li>
@@ -470,7 +470,7 @@ const Navigation = () => {
                   <ul className={styles.nestedMenuContainer}>
                     <div className={styles.nestedMenu}>
                       <li>
-                        <NavLink to="/upptäck" activeclassname={styles.active}>
+                        <NavLink to="/upptack" activeclassname={styles.active}>
                           <h5 className={styles.nestedMenuMain}>
                             Upptäck allt i Holmsund
                           </h5>
@@ -480,7 +480,7 @@ const Navigation = () => {
                     <div className={styles.nestedItems}>
                       <li>
                         <NavLink
-                          to="/upptäck-1"
+                          to="/upptack-1"
                           activeclassname={styles.active}
                         >
                           <h5>Första upptäck länken</h5>
@@ -488,7 +488,7 @@ const Navigation = () => {
                       </li>
                       <li>
                         <NavLink
-                          to="/upptäck-2"
+                          to="/upptack-2"
                           activeclassname={styles.active}
                         >
                           <h5>Andra upptäck länken</h5>
@@ -496,7 +496,7 @@ const Navigation = () => {
                       </li>
                       <li>
                         <NavLink
-                          to="/upptäck-3"
+                          to="/upptack-3"
                           activeclassname={styles.active}
                         >
                           <h5>Tredje upptäck länken</h5>
@@ -504,7 +504,7 @@ const Navigation = () => {
                       </li>
                       <li>
                         <NavLink
-                          to="/upptäck-4"
+                          to="/upptack-4"
                           activeclassname={styles.active}
                         >
                           <h5>Fjärde upptäck länken</h5>
@@ -512,7 +512,7 @@ const Navigation = () => {
                       </li>
                       <li>
                         <NavLink
-                          to="/upptäck-5"
+                          to="/upptack-5"
                           activeclassname={styles.active}
                         >
                           <h5>Femte upptäck länken</h5>
@@ -520,7 +520,7 @@ const Navigation = () => {
                       </li>
                       <li>
                         <NavLink
-                          to="/upptäck-6"
+                          to="/upptack-6"
                           activeclassname={styles.active}
                         >
                           <h5>Sjätte upptäck länken</h5>
@@ -528,7 +528,7 @@ const Navigation = () => {
                       </li>
                       <li>
                         <NavLink
-                          to="/upptäck-7"
+                          to="/upptack-7"
                           activeclassname={styles.active}
                         >
                           <h5>Sjunde upptäck länken</h5>
@@ -536,7 +536,7 @@ const Navigation = () => {
                       </li>
                       <li>
                         <NavLink
-                          to="/upptäck-8"
+                          to="/upptack-8"
                           activeclassname={styles.active}
                         >
                           <h5>Åttonde upptäck länken</h5>
