@@ -41,6 +41,7 @@ h5 {
 /* Transparent nav */
 .transparent {
   background-color: transparent;
+  box-shadow: none;
 }
 
 /* Hide nav on scroll */

@@ -11,10 +11,10 @@ import header5 from "../../assets/header/header5.jpg";
 import header6 from "../../assets/header/header6.jpg";
 import header7 from "../../assets/header/header7.jpg";
 import header8 from "../../assets/header/header8.jpg";
-import activityPage1 from "../../assets/activity/activityPage1.jpg";
-import activityPage2 from "../../assets/activity/activityPage2.jpg";
-import activityPage3 from "../../assets/activity/activityPage3.jpg";
-import activityPage4 from "../../assets/activity/activityPage4.jpg";
+import activityPage1 from "../../assets/activity/activityPageMain1.jpg";
+import activityPage2 from "../../assets/activity/activityPageMain2.jpg";
+import activityPage3 from "../../assets/activity/activityPageMain3.jpg";
+import activityPage4 from "../../assets/activity/activityPageMain4.jpg";
 
 const ActivityPage = () => {
   const headerImages = [header5, header6, header7, header8];

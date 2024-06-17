@@ -6,9 +6,20 @@ import styles from "../../styles/pages/ActivityPage.module.css";
 // Components
 import LayoutPage from "../layouts/LayoutPage";
 
+// Image
+import backgroundImage from "../../assets/activity/activityPage2.jpg";
+
 const ActivityPage2 = () => {
   return (
-    <LayoutPage>
+    <LayoutPage
+      headerTitle="Activity Page 2"
+      headerBackgroundImage={backgroundImage}
+      renderDiscoverAddon4={true}
+      renderActivityAddon3={true}
+      renderGalleryAddon1={true}
+      discoverTitle4="Galleri"
+      galleryTitle1="Upptäck 1"
+    >
       <div className={styles.container}>
         <h2>UNDER CONSTRUCTION</h2>
       </div>

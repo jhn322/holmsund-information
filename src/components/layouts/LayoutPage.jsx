@@ -2,7 +2,7 @@ import React from "react";
 
 // Components
 import Navigation from "../common/Navigation";
-import HeaderAddon from "../addon/HeaderAddon";
+import HeaderAddonPage from "../addon/HeaderAddonPage";
 import SeparatorAddon from "../addon/SeparatorAddon";
 import ActivityAddon1 from "../addon/ActivityAddon1";
 import ActivityAddon2 from "../addon/ActivityAddon2";
@@ -21,7 +21,7 @@ import ScrollUp from "../common/ScrollUp";
 import Cookies from "../common/Cookies";
 import Footer from "../common/Footer";
 
-const LayoutMainPage = ({
+const LayoutPage = ({
   children,
   headerTitle,
   discoverTitle1,
@@ -49,7 +49,7 @@ const LayoutMainPage = ({
   return (
     <div>
       <Navigation />
-      <HeaderAddon
+      <HeaderAddonPage
         title={headerTitle}
         backgroundImage={headerBackgroundImage}
       />
@@ -75,4 +75,4 @@ const LayoutMainPage = ({
   );
 };
 
-export default LayoutMainPage;
+export default LayoutPage;
