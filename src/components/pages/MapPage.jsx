@@ -38,9 +38,9 @@ const MapPage = () => {
       headerBackgroundImage={headerImages[currentImageIndex]}
       renderDiscoverAddon2={true}
       renderActivityAddon1={true}
-      renderGalleryAddon2={true}
-      discoverTitle4="Galleri"
-      galleryTitle2="Aktiviteter"
+      renderGalleryAddon1={true}
+      discoverTitle2="Upptäck 2"
+      galleryTitle2="Upptäck 1"
     >
       <div className={styles.container}>
         <h2>UNDER CONSTRUCTION</h2>

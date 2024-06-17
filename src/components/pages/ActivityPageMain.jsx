@@ -52,7 +52,7 @@ const ActivityPage = () => {
       renderActivityAddon1={true}
       renderDiscoverAddon2={true}
       renderGalleryAddon4={true}
-      discoverTitle2="Upptäck 1"
+      discoverTitle2="Upptäck 2"
       galleryTitle4="Galleri"
     >
       <div className={styles.textContainer}>

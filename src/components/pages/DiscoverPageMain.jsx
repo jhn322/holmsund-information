@@ -60,7 +60,7 @@ const DiscoverPageMain = () => {
       headerBackgroundImage={headerImages[currentImageIndex]}
       renderDiscoverAddon3={true}
       renderActivityAddon4={true}
-      discoverTitle3="Missa inte dessa aktiviteter!"
+      discoverTitle3="Aktiviteter"
     >
       <div className={styles.textContainer}>
         <h2 className={styles.mainTitle}>Discover Page Title</h2>
