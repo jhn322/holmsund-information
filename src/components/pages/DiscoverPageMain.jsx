@@ -58,9 +58,9 @@ const DiscoverPageMain = () => {
     <LayoutPageMain
       headerTitle="Discover Page"
       headerBackgroundImage={headerImages[currentImageIndex]}
-      renderFeaturedAddon4={true}
-      discoverTitle3="Aktiviteter"
       renderDiscoverAddon3={true}
+      renderActivityAddon4={true}
+      discoverTitle3="Missa inte dessa aktiviteter!"
     >
       <div className={styles.textContainer}>
         <h2 className={styles.mainTitle}>Discover Page Title</h2>

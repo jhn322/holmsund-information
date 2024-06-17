@@ -36,9 +36,11 @@ const MapPage = () => {
     <LayoutMainPage
       headerTitle="Map Page"
       headerBackgroundImage={headerImages[currentImageIndex]}
-      renderFeaturedAddon3={true}
+      renderDiscoverAddon2={true}
+      renderActivityAddon1={true}
+      renderGalleryAddon2={true}
       discoverTitle4="Galleri"
-      renderDiscoverAddon4={true}
+      galleryTitle2="Aktiviteter"
     >
       <div className={styles.container}>
         <h2>UNDER CONSTRUCTION</h2>

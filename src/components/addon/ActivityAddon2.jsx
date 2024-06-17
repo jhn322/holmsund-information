@@ -3,9 +3,8 @@ import { useSwipeable } from "react-swipeable";
 
 // CSS
 import styles from "../../styles/home/Activity.module.css";
-
 // Component specific styling
-import styles2 from "../../styles/addon/featuredAddon2.module.css";
+import styles2 from "../../styles/addon/ActivityAddon2.module.css";
 
 // Icons
 import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
@@ -126,11 +125,11 @@ const Carousel = () => {
   );
 };
 
-const FeaturedAddon2 = () => {
+const ActivityAddon2 = () => {
   return (
-    <div className={styles.featuredContainer}>
-      <div className={styles2.featuredImage}></div>
-      <div className={styles2.featuredInner}>
+    <div className={`${styles.featuredContainer} ${styles2.featuredContainer}`}>
+      <div className={`${styles.featuredImage} ${styles2.featuredImage}`}></div>
+      <div className={`${styles.featuredInner} ${styles2.featuredInner}`}>
         <div
           className={styles.featuredCircle}
           style={{ backgroundImage: `url(${featuredCircle})` }}
@@ -142,4 +141,4 @@ const FeaturedAddon2 = () => {
   );
 };
 
-export default FeaturedAddon2;
+export default ActivityAddon2;

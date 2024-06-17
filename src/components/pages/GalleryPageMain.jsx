@@ -49,9 +49,11 @@ const GalleryPageMain = () => {
     <LayoutPageMain
       headerTitle="Gallery Page"
       headerBackgroundImage={headerImages[currentImageIndex]}
-      renderFeaturedAddon1={true}
-      discoverTitle2="Upptäck 2"
-      renderDiscoverAddon2={true}
+      renderDiscoverAddon1={true}
+      renderActivityAddon2={true}
+      renderGalleryAddon3={true}
+      discoverTitle2="Upptäck 1"
+      galleryTitle3="Aktiviteter"
     >
       <div className={styles.textContainer}>
         <h2 className={styles.mainTitle}>Gallery Page Title</h2>

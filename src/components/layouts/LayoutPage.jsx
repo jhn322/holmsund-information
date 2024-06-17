@@ -3,23 +3,48 @@ import React from "react";
 // Components
 import Navigation from "../common/Navigation";
 import HeaderAddon from "../addon/HeaderAddon";
-import FeatureAddon1 from "../addon/FeaturedAddon3";
-import FeatureAddon2 from "../addon/FeaturedAddon1";
-import FeatureAddon3 from "../addon/FeaturedAddon2";
-import FeatureAddon4 from "../addon/FeaturedAddon4";
+import SeparatorAddon from "../addon/SeparatorAddon";
+import ActivityAddon1 from "../addon/ActivityAddon1";
+import ActivityAddon2 from "../addon/ActivityAddon2";
+import ActivityAddon3 from "../addon/ActivityAddon3";
+import ActivityAddon4 from "../addon/ActivityAddon4";
+import DiscoverAddon1 from "../addon/DiscoverAddon1";
+import DiscoverAddon2 from "../addon/DiscoverAddon2";
+import DiscoverAddon3 from "../addon/DiscoverAddon3";
+import DiscoverAddon4 from "../addon/DiscoverAddon4";
+import GalleryAddon1 from "../addon/GalleryAddon1";
+import GalleryAddon2 from "../addon/GalleryAddon2";
+import GalleryAddon3 from "../addon/GalleryAddon3";
+import GalleryAddon4 from "../addon/GalleryAddon4";
 import Extra from "../common/Extra";
 import ScrollUp from "../common/ScrollUp";
 import Cookies from "../common/Cookies";
 import Footer from "../common/Footer";
 
-const LayoutPage = ({
+const LayoutMainPage = ({
   children,
   headerTitle,
+  discoverTitle1,
+  discoverTitle2,
+  discoverTitle3,
+  discoverTitle4,
+  galleryTitle1,
+  galleryTitle2,
+  galleryTitle3,
+  galleryTitle4,
   headerBackgroundImage,
-  renderFeatureAddon1 = false,
-  renderFeatureAddon2 = false,
-  renderFeatureAddon3 = false,
-  renderFeatureAddon4 = false,
+  renderActivityAddon1 = false,
+  renderActivityAddon2 = false,
+  renderActivityAddon3 = false,
+  renderActivityAddon4 = false,
+  renderDiscoverAddon1 = false,
+  renderDiscoverAddon2 = false,
+  renderDiscoverAddon3 = false,
+  renderDiscoverAddon4 = false,
+  renderGalleryAddon1 = false,
+  renderGalleryAddon2 = false,
+  renderGalleryAddon3 = false,
+  renderGalleryAddon4 = false,
 }) => {
   return (
     <div>
@@ -29,10 +54,19 @@ const LayoutPage = ({
         backgroundImage={headerBackgroundImage}
       />
       <main>{children}</main>
-      {renderFeatureAddon1 && <FeatureAddon1 />}
-      {renderFeatureAddon2 && <FeatureAddon2 />}
-      {renderFeatureAddon3 && <FeatureAddon3 />}
-      {renderFeatureAddon4 && <FeatureAddon4 />}
+      <SeparatorAddon />
+      {renderDiscoverAddon1 && <DiscoverAddon1 title={discoverTitle1} />}
+      {renderDiscoverAddon2 && <DiscoverAddon2 title={discoverTitle2} />}
+      {renderDiscoverAddon3 && <DiscoverAddon3 title={discoverTitle3} />}
+      {renderDiscoverAddon4 && <DiscoverAddon4 title={discoverTitle4} />}
+      {renderActivityAddon1 && <ActivityAddon1 />}
+      {renderActivityAddon2 && <ActivityAddon2 />}
+      {renderActivityAddon3 && <ActivityAddon3 />}
+      {renderActivityAddon4 && <ActivityAddon4 />}
+      {renderGalleryAddon1 && <GalleryAddon1 title={galleryTitle1} />}
+      {renderGalleryAddon2 && <GalleryAddon2 title={galleryTitle2} />}
+      {renderGalleryAddon3 && <GalleryAddon3 title={galleryTitle3} />}
+      {renderGalleryAddon4 && <GalleryAddon4 title={galleryTitle4} />}
       <Extra />
       <ScrollUp />
       <Cookies />
@@ -41,4 +75,4 @@ const LayoutPage = ({
   );
 };
 
-export default LayoutPage;
+export default LayoutMainPage;

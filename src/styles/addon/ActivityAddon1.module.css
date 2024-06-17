@@ -1,0 +1,7 @@
+.featuredImage {
+  background-image: url("../../assets/discover/staticDiscoverAddon.jpg");
+}
+
+.featuredInner {
+  background-color: var(--accent-color);
+}

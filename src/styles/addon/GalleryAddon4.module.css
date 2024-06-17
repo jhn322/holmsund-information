@@ -1,0 +1,47 @@
+.galleryContainer {
+  background-color: var(--hover-color);
+}
+
+.galleryTitle {
+  color: var(--black-text-color);
+}
+
+/* --- Hovering within container gives simultaneous hover on 3 elements --- */
+.carouselContainer.hover .hoverContainer h2,
+.carouselContainer.hover .hoverContainer .carouselLink,
+.carouselContainer.hover .arrowIcon {
+  color: var(--nav-color);
+  border-color: var(--nav-color);
+}
+/* -------------------------------------------------------------------------- */
+
+.navPrev:hover,
+.navNext:hover {
+  color: var(--nav-color);
+}
+
+.navPrev svg:hover,
+.navNext svg:hover {
+  color: var(--nav-color);
+}
+
+.carouselText h2 {
+  color: var(--black-text-color);
+}
+
+.carouselText p {
+  color: var(--black-text-color);
+}
+
+.carouselLink {
+  color: var(--black-text-color);
+}
+
+.arrowIcon {
+  border: 2px solid var(--black-text-color);
+  color: var(--black-text-color);
+}
+
+.dot.active {
+  background-color: var(--nav-color);
+}

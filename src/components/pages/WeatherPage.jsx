@@ -36,9 +36,11 @@ const WeatherPage = () => {
     <LayoutMainPage
       headerTitle="Weather Page"
       headerBackgroundImage={headerImages[currentImageIndex]}
-      renderFeaturedAddon3={true}
-      discoverTitle4="Galleri"
       renderDiscoverAddon4={true}
+      renderActivityAddon3={true}
+      renderGalleryAddon1={true}
+      discoverTitle4="Galleri"
+      galleryTitle1="Upptäck allting som går"
     >
       <div className={styles.container}>
         <h2>UNDER CONSTRUCTION</h2>

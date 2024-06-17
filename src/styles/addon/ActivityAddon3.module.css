@@ -1,0 +1,39 @@
+.container .captionTitle {
+  color: var(--black-text-color);
+}
+
+/* --- Hovering within container gives simultaneous hover on 3 elements --- */
+.container:hover .captionTitle,
+.container:hover .captionLink {
+  color: var(--nav-color);
+}
+
+.container:hover .arrowIcon {
+  border: 2px solid var(--nav-color);
+  color: var(--nav-color);
+}
+
+.caption p {
+  color: var(--black-text-color);
+}
+
+.captionLink {
+  color: var(--black-text-color);
+}
+
+.arrowIcon {
+  color: var(--black-text-color);
+  border: 2px solid var(--black-text-color);
+}
+
+.arrowIcon:hover {
+  border: 2px solid var(--nav-color);
+}
+
+.featuredImage {
+  background-image: url("../../assets/activity/StaticActivityAddon.jpg");
+}
+
+.featuredInner {
+  background-color: var(--hover-color);
+}

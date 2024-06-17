@@ -1,0 +1,7 @@
+.featuredImage {
+  background-image: url("../../assets/discover/staticDiscoverInspiredAddon.jpg");
+}
+
+.featuredInner {
+  background-color: var(--nav-color);
+}

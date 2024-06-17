@@ -37,7 +37,7 @@ const cardData = [
   },
 ];
 
-const Discover = ({ title }) => {
+const DiscoverAddon2 = ({ title }) => {
   const discoverContainerRef = useRef(null);
   const [totalCardsHeight, setTotalCardsHeight] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
@@ -163,4 +163,4 @@ const Discover = ({ title }) => {
   );
 };
 
-export default Discover;
+export default DiscoverAddon2;
