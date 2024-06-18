@@ -17,7 +17,7 @@ import activityPage2 from "../../assets/activity/activityPageMain2.jpg";
 import activityPage3 from "../../assets/activity/activityPageMain3.jpg";
 import activityPage4 from "../../assets/activity/activityPageMain4.jpg";
 
-const ActivityPage = () => {
+const ActivityPageMain = () => {
   const headerImages = [header5, header6, header7, header8];
 
   const gridImages = [
@@ -28,6 +28,18 @@ const ActivityPage = () => {
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Function to preload images
+  const preloadImages = (urls) => {
+    urls.forEach((url) => {
+      const img = new Image();
+      img.src = url;
+    });
+  };
+
+  useEffect(() => {
+    preloadImages(headerImages);
+  }, [headerImages]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -61,10 +73,10 @@ const ActivityPage = () => {
       <div className={styles.textContainer}>
         <h2 className={styles.mainTitle}>Activity Page Title</h2>
         <p className={styles.mainText}>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, numquam
-          et repudiandae rem dolore, quam quidem quas nisi libero, cupiditate
-          voluptate? Corporis aliquid accusamus maxime excepturi delectus.
-          Praesentium, impedit quia.
+          Du kan välja bland flera spännande aktiviteter här nere. Oavsett om du
+          föredrar att ta en avkopplande promenad vid vattnet, njuta av en glass
+          på stranden, eller prova på något mer spännande som att åka på en
+          båttur, finns det något som passar alla intressen.
         </p>
       </div>
       <div className={styles.gridContainer}>{gridItems}</div>
@@ -72,4 +84,4 @@ const ActivityPage = () => {
   );
 };
 
-export default ActivityPage;
+export default ActivityPageMain;

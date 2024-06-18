@@ -29,6 +29,18 @@ const GalleryPageMain = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  // Function to preload images
+  const preloadImages = (urls) => {
+    urls.forEach((url) => {
+      const img = new Image();
+      img.src = url;
+    });
+  };
+
+  useEffect(() => {
+    preloadImages(headerImages);
+  }, [headerImages]);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex(
@@ -61,10 +73,10 @@ const GalleryPageMain = () => {
       <div className={styles.textContainer}>
         <h2 className={styles.mainTitle}>Gallery Page Title</h2>
         <p className={styles.mainText}>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, numquam
-          et repudiandae rem dolore, quam quidem quas nisi libero, cupiditate
-          voluptate? Corporis aliquid accusamus maxime excepturi delectus.
-          Praesentium, impedit quia.
+          Du kan besöka ett imponerande galleri här nere. Galleriet innehåller
+          en mängd sevärda platser och intressanta punkter, från historiska
+          byggnader till natursköna områden. Det finns mycket att upptäcka och
+          utforska i denna samling av fascinerande platser.
         </p>
       </div>
       <div className={styles.gridContainer}>{gridItems}</div>

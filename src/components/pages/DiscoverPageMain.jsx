@@ -38,6 +38,18 @@ const DiscoverPageMain = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  // Function to preload images
+  const preloadImages = (urls) => {
+    urls.forEach((url) => {
+      const img = new Image();
+      img.src = url;
+    });
+  };
+
+  useEffect(() => {
+    preloadImages(headerImages);
+  }, [headerImages]);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex(
@@ -68,10 +80,10 @@ const DiscoverPageMain = () => {
       <div className={styles.textContainer}>
         <h2 className={styles.mainTitle}>Discover Page Title</h2>
         <p className={styles.mainText}>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, numquam
-          et repudiandae rem dolore, quam quidem quas nisi libero, cupiditate
-          voluptate? Corporis aliquid accusamus maxime excepturi delectus.
-          Praesentium, impedit quia.
+          Du kan utforska flera fascinerande platser här nere. Oavsett om du
+          föredrar att vandra längs kusten, upptäcka lokala butiker och
+          marknader, eller besöka historiska sevärdheter, finns det många
+          spännande möjligheter att utforska och uppleva.
         </p>
       </div>
       <div className={styles2.gridContainer}>{gridItems}</div>
