@@ -6,7 +6,6 @@
   padding: 0;
 }
 
-/* Scroll down button */
 .scrollDown {
   position: fixed;
   bottom: 35px;
@@ -37,7 +36,6 @@
   color: var(--primary-color);
 }
 
-/* Button invisible when scrolled down */
 .invisible {
   display: none;
 }

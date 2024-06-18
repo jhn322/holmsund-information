@@ -23,22 +23,6 @@ body {
   padding: 2rem;
 }
 
-.headerContainer.Vår {
-  background-image: url("../../assets/header/headerSpring.jpg");
-}
-
-.headerContainer.Sommar {
-  background-image: url("../../assets/header/headerSummer.jpg");
-}
-
-.headerContainer.Höst {
-  background-image: url("../../assets/header/headerAutumn.jpg");
-}
-
-.headerContainer.Vinter {
-  background-image: url("../../assets/header/headerWinter.jpg");
-}
-
 .innerHeader {
   display: flex;
   align-items: center;

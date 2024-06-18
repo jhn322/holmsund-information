@@ -3,6 +3,7 @@ import React from "react";
 // Components
 import Navigation from "../common/Navigation";
 import HeaderAddonPage from "../addon/HeaderAddonPage";
+import Breadcrumb from "../common/Breadcrumb";
 import SeparatorAddon from "../addon/SeparatorAddon";
 import ActivityAddon1 from "../addon/ActivityAddon1";
 import ActivityAddon2 from "../addon/ActivityAddon2";
@@ -17,7 +18,6 @@ import GalleryAddon2 from "../addon/GalleryAddon2";
 import GalleryAddon3 from "../addon/GalleryAddon3";
 import GalleryAddon4 from "../addon/GalleryAddon4";
 import Extra from "../common/Extra";
-import Breadcrumb from "../common/Breadcrumb";
 import ScrollDown from "../common/ScrollDown";
 import ScrollUp from "../common/ScrollUp";
 import Cookies from "../common/Cookies";

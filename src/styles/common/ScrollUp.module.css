@@ -6,7 +6,6 @@
   padding: 0;
 }
 
-/* Scroll to top button */
 .scrollUp {
   position: fixed;
   bottom: 35px;
@@ -37,7 +36,6 @@
   color: var(--primary-color);
 }
 
-/* Button invisible at top */
 .invisible {
   display: none;
 }
