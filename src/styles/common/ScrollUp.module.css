@@ -19,7 +19,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 400;
+  z-index: 21;
   transition: background-color 0.3s;
 }
 

@@ -51,6 +51,7 @@
   z-index: 2;
   color: var(--white-text-color);
   max-width: 30rem;
+  font-size: 2.25rem;
 }
 
 /* Carousel of images */

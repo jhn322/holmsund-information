@@ -8,8 +8,9 @@
 
 .scrollDown {
   position: fixed;
-  bottom: 35px;
-  left: 50%;
+  bottom: 15px;
+  transform: translate(-50%, -50%);
+  left: 46%;
   background-color: var(--accent-color);
   border: 1px solid var(--primary-color);
   width: 2.6rem;
@@ -19,7 +20,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 400;
+  z-index: 20;
   transition: background-color 0.3s;
 }
 
