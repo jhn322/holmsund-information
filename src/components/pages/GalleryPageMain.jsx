@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import LayoutPageMain from "../layouts/LayoutPageMain";
 
 // CSS
-import styles from "../../styles/pages/PageMain.module.css";
+import styles from "../../styles/pages/AllPageMain.module.css";
 
 // Images
 import header9 from "../../assets/header/header9.jpg";
