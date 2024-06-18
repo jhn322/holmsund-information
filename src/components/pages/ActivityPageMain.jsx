@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 
 // Components
 import LayoutPageMain from "../layouts/LayoutPageMain";
+import ImagePreloader from "../common/ImagePreloader";
 
 // CSS
 import styles from "../../styles/pages/AllPageMain.module.css";
@@ -29,16 +30,11 @@ const ActivityPageMain = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Function to preload images
-  const preloadImages = (urls) => {
-    urls.forEach((url) => {
-      const img = new Image();
-      img.src = url;
-    });
-  };
-
+  // Preload header images
   useEffect(() => {
-    preloadImages(headerImages);
+    headerImages.forEach((imgSrc) => {
+      <ImagePreloader key={imgSrc} src={imgSrc} />;
+    });
   }, [headerImages]);
 
   useEffect(() => {
