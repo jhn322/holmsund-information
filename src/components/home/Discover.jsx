@@ -15,25 +15,25 @@ const cardData = [
     image: discoverImage1,
     title: "Nästa ställe",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
-    link: "/upptäck-1",
+    link: "/utforska-1",
   },
   {
     image: discoverImage2,
     title: "Någon annanstans",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
-    link: "/upptäck-2",
+    link: "/utforska-2",
   },
   {
     image: discoverImage3,
     title: "Ett spännande ställe",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
-    link: "/upptäck-3",
+    link: "/utforska-3",
   },
   {
     image: discoverImage4,
     title: "Sista stället",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
-    link: "/upptäck-4",
+    link: "/utforska-4",
   },
 ];
 
@@ -113,7 +113,7 @@ const Discover = () => {
       <div ref={discoverContainerRef} className={styles.discoverContainer}>
         <div className={styles.discoverInner}>
           <div className={styles.discoverTitle}>
-            <h2>Upptäck Holmsund</h2>
+            <h2>Utforska Holmsund</h2>
           </div>
           <div className={styles.discoverCardContainer}>
             {cardData.map((card, index) => (

@@ -17,8 +17,8 @@ const DiscoverPage8 = () => {
       renderDiscoverAddon2={true}
       renderActivityAddon4={true}
       renderGalleryAddon1={true}
-      discoverTitle2="Upptäck 2"
-      galleryTitle1="Upptäck 1"
+      discoverTitle2="Utforska 2"
+      galleryTitle1="Utforska 1"
     >
       <div className={styles.container}>
         <h2>UNDER CONSTRUCTION</h2>

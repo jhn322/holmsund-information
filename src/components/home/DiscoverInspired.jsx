@@ -15,25 +15,25 @@ const cardData = [
     image: discoverMoreImage1,
     title: "Nästa ställe",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
-    link: "/upptäck-5",
+    link: "/utforska-5",
   },
   {
     image: discoverMoreImage2,
     title: "Någon annanstans",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
-    link: "/upptäck-6",
+    link: "/utforska-6",
   },
   {
     image: discoverMoreImage3,
     title: "Ett spännande ställe",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
-    link: "/upptäck-7",
+    link: "/utforska-7",
   },
   {
     image: discoverMoreImage4,
     title: "Sista stället",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
-    link: "/upptäck-8",
+    link: "/utforska-8",
   },
 ];
 

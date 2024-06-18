@@ -18,7 +18,7 @@ const GalleryPage4 = () => {
       renderActivityAddon3={true}
       renderGalleryAddon1={true}
       discoverTitle2="Galleri"
-      galleryTitle3="Upptäck 1"
+      galleryTitle3="Utforska 1"
     >
       <div className={styles.container}>
         <h2>UNDER CONSTRUCTION</h2>
