@@ -24,7 +24,7 @@ const Extra = () => {
               <div className={styles.weatherInner}>
                 <div className={styles.weatherText}>
                   <div className={styles.weather}>
-                    <h3>Väder Information</h3>
+                    <h3>Väderinformation</h3>
                   </div>
                   <div className={styles.weatherContent}>
                     <div className={styles.weather}>

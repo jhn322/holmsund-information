@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // CSS
 import styles from "../../styles/addon/HeaderAddon.module.css";
 
 const HeaderAddon = ({ title, backgroundImage }) => {
+  useEffect(() => {
+    const img = new Image();
+    img.src = backgroundImage;
+  }, [backgroundImage]);
+
   return (
     <header
       className={styles.headerContainer}

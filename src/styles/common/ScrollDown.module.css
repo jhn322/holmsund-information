@@ -8,9 +8,9 @@
 
 .scrollDown {
   position: fixed;
-  bottom: 50px;
-  transform: translate(-50%, -50%);
-  left: 45%;
+  bottom: 60px;
+  left: calc(50% - 1.3rem);
+  transform: translateX(-50%);
   background-color: var(--accent-color);
   border: 1px solid var(--primary-color);
   width: 2.6rem;
@@ -53,12 +53,5 @@
 }
 
 .jump {
-  animation: jump 2s ease-in-out 100;
-}
-
-/* Desktop */
-@media only screen and (min-width: 700px) {
-  .scrollDown {
-    left: 50%;
-  }
+  animation: jump 2s ease-in-out 9999;
 }
