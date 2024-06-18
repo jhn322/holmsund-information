@@ -12,7 +12,7 @@ import backgroundImage from "../../assets/activity/activityPage4.jpg";
 const ActivityPage4 = () => {
   return (
     <LayoutPage
-      headerTitle="Activity Page 3"
+      headerTitle="Activity Page 4"
       headerBackgroundImage={backgroundImage}
       renderDiscoverAddon3={true}
       renderActivityAddon1={true}

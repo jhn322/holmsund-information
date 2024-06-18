@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 // Components
 import LayoutPageMain from "../layouts/LayoutPageMain";
@@ -20,10 +21,10 @@ const ActivityPage = () => {
   const headerImages = [header5, header6, header7, header8];
 
   const gridImages = [
-    { src: activityPage1, title: "Title 1" },
-    { src: activityPage2, title: "Title 2" },
-    { src: activityPage3, title: "Title 3" },
-    { src: activityPage4, title: "Title 4" },
+    { src: activityPage1, title: "Title 1", path: "/aktiviteter-1" },
+    { src: activityPage2, title: "Title 2", path: "/aktiviteter-2" },
+    { src: activityPage3, title: "Title 3", path: "/aktiviteter-3" },
+    { src: activityPage4, title: "Title 4", path: "/aktiviteter-4" },
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -39,10 +40,12 @@ const ActivityPage = () => {
   }, [headerImages.length]);
 
   const gridItems = gridImages.map((image, index) => (
-    <div className={styles.gridItem} key={index}>
-      <img src={image.src} alt={`Image ${index}`} />
-      <h4 className={styles.title}>{image.title}</h4>
-    </div>
+    <NavLink to={image.path} className={styles.gridItemLink} key={index}>
+      <div className={styles.gridItem}>
+        <img src={image.src} alt={`Image ${index}`} />
+        <h4 className={styles.title}>{image.title}</h4>
+      </div>
+    </NavLink>
   ));
 
   return (

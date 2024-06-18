@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 // Components
 import LayoutPageMain from "../layouts/LayoutPageMain";
@@ -25,14 +26,14 @@ const DiscoverPageMain = () => {
   const headerImages = [header1, header2, header3, header4];
 
   const gridImages = [
-    { src: discoverPageMain1, title: "Title 1" },
-    { src: discoverPageMain2, title: "Title 2" },
-    { src: discoverPageMain3, title: "Title 3" },
-    { src: discoverPageMain4, title: "Title 4" },
-    { src: discoverPageMain5, title: "Title 5" },
-    { src: discoverPageMain6, title: "Title 6" },
-    { src: discoverPageMain7, title: "Title 7" },
-    { src: discoverPageMain8, title: "Title 8" },
+    { src: discoverPageMain1, title: "Title 1", path: "/utforska-1" },
+    { src: discoverPageMain2, title: "Title 2", path: "/utforska-2" },
+    { src: discoverPageMain3, title: "Title 3", path: "/utforska-3" },
+    { src: discoverPageMain4, title: "Title 4", path: "/utforska-4" },
+    { src: discoverPageMain5, title: "Title 5", path: "/utforska-5" },
+    { src: discoverPageMain6, title: "Title 6", path: "/utforska-6" },
+    { src: discoverPageMain7, title: "Title 7", path: "/utforska-7" },
+    { src: discoverPageMain8, title: "Title 8", path: "/utforska-8" },
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -48,10 +49,12 @@ const DiscoverPageMain = () => {
   }, [headerImages.length]);
 
   const gridItems = gridImages.map((image, index) => (
-    <div className={styles.gridItem} key={index}>
-      <img src={image.src} alt={`Image ${index}`} />
-      <h4 className={styles.title}>{image.title}</h4>
-    </div>
+    <NavLink to={image.path} className={styles2.gridItemLink} key={index}>
+      <div className={styles.gridItem}>
+        <img src={image.src} alt={`Image ${index}`} />
+        <h4 className={styles.title}>{image.title}</h4>
+      </div>
+    </NavLink>
   ));
 
   return (
