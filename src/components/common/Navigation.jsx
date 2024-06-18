@@ -90,7 +90,7 @@ const Navigation = () => {
   };
 
   return (
-    <div>
+    <header>
       {/* Nav container, hide nav class and transparent class */}
       <nav
         className={`${styles.navContainer} ${!visible && styles.hideNav} ${
@@ -128,7 +128,7 @@ const Navigation = () => {
               >
                 Utforska
                 {isDiscoverHovered && (
-                  <div className={styles.dropdownMenu}>
+                  <ul className={styles.dropdownMenu}>
                     <li className={styles.dropdownMenuAllContainer}>
                       <NavLink to="/utforska" activeclassname={styles.active}>
                         <h5 className={styles.dropdownMenuAll}>
@@ -176,7 +176,7 @@ const Navigation = () => {
                         <h5>Åttonde utforska länk</h5>
                       </NavLink>
                     </li>
-                  </div>
+                  </ul>
                 )}
               </NavLink>
             </li>
@@ -191,7 +191,7 @@ const Navigation = () => {
               >
                 Aktiviteter
                 {isActivityHovered && (
-                  <div className={styles.dropdownMenu}>
+                  <ul className={styles.dropdownMenu}>
                     <li className={styles.dropdownMenuAllContainer}>
                       <NavLink
                         to="/aktiviteter"
@@ -234,7 +234,7 @@ const Navigation = () => {
                         <h5>Fjärde aktiviteter länk</h5>
                       </NavLink>
                     </li>
-                  </div>
+                  </ul>
                 )}
               </NavLink>
             </li>
@@ -249,7 +249,7 @@ const Navigation = () => {
               >
                 Galleri
                 {isGalleryHovered && (
-                  <div className={styles.dropdownMenu}>
+                  <ul className={styles.dropdownMenu}>
                     <li className={styles.dropdownMenuAllContainer}>
                       <NavLink to="/galleri" activeclassname={styles.active}>
                         <h5 className={styles.dropdownMenuAll}>
@@ -277,7 +277,7 @@ const Navigation = () => {
                         <h5>Fjärde galleri länk</h5>
                       </NavLink>
                     </li>
-                  </div>
+                  </ul>
                 )}
               </NavLink>
             </li>
@@ -632,7 +632,7 @@ const Navigation = () => {
           </div>
         )}
       </nav>
-    </div>
+    </header>
   );
 };
 

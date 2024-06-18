@@ -43,17 +43,17 @@ const ScrollDown = () => {
   }
 
   return (
-    <div>
+    <main>
       {/* Scroll down button */}
-      <div
+      <article
         className={`${styles.scrollDown} ${!visible && styles.invisible} ${
           styles.jump
         }`}
         onClick={scrollDown}
       >
         <RxChevronDown className={styles.scrollIcon} />
-      </div>
-    </div>
+      </article>
+    </main>
   );
 };
 

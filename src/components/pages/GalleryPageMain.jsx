@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 
 // Components
 import LayoutPageMain from "../layouts/LayoutPageMain";
-import ImagePreloader from "../common/ImagePreloader";
 
 // CSS
 import styles from "../../styles/pages/AllPageMain.module.css";
@@ -33,7 +32,8 @@ const GalleryPageMain = () => {
   // Preload header images
   useEffect(() => {
     headerImages.forEach((imgSrc) => {
-      <ImagePreloader key={imgSrc} src={imgSrc} />;
+      const img = new Image();
+      img.src = imgSrc;
     });
   }, [headerImages]);
 
@@ -66,7 +66,7 @@ const GalleryPageMain = () => {
       discoverTitle1="Utforska 1"
       galleryTitle3="Aktiviteter"
     >
-      <div className={styles.textContainer}>
+      <section className={styles.textContainer}>
         <h2 className={styles.mainTitle}>Gallery Page Title</h2>
         <p className={styles.mainText}>
           Du kan besöka ett imponerande galleri här nere. Galleriet innehåller
@@ -74,7 +74,7 @@ const GalleryPageMain = () => {
           byggnader till natursköna områden. Det finns mycket att upptäcka och
           utforska i denna samling av fascinerande platser.
         </p>
-      </div>
+      </section>
       <div className={styles.gridContainer}>{gridItems}</div>
     </LayoutPageMain>
   );

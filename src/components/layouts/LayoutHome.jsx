@@ -17,7 +17,7 @@ import Footer from "../common/Footer";
 
 const LayoutHome = () => {
   return (
-    <div>
+    <main>
       <Navigation />
       <Header />
       <ContentCircle />
@@ -31,7 +31,7 @@ const LayoutHome = () => {
       <ScrollUp />
       <Cookies />
       <Footer />
-    </div>
+    </main>
   );
 };
 

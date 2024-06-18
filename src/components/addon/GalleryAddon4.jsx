@@ -112,7 +112,7 @@ const GalleryAddon2 = ({ title }) => {
   return (
     <section>
       <div className={`${styles.galleryContainer} ${styles2.galleryContainer}`}>
-        <div className={styles.galleryImageContainer}>
+        <figure className={styles.galleryImageContainer}>
           <div className={styles.galleryImageInner}>
             <article
               className={styles.galleryImage}
@@ -127,21 +127,19 @@ const GalleryAddon2 = ({ title }) => {
               </h2>
             </article>
           </div>
-        </div>
-        <div className={styles.galleryCarousel}>
-          <div
+        </figure>
+        <section className={styles.galleryCarousel}>
+          <article
             {...swipeHandlers}
             className={`${styles.carouselContainer} ${
-              styles2.carouselContainer
-            } ${isHovered && !isNavHovered ? styles.hover : ""} ${
-              isHovered && !isNavHovered ? styles2.hover : ""
+              isHovered && !isNavHovered ? styles.hover : ""
             }`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
             <div className={styles.carouselInner}>
               {images.map((image, index) => (
-                <div
+                <figure
                   key={index}
                   className={`${styles.slide} ${
                     index === currentIndex ? styles.active : ""
@@ -150,37 +148,29 @@ const GalleryAddon2 = ({ title }) => {
                   <NavLink to={image.link}>
                     <img src={image.url} alt={`Slide ${index}`} />
                   </NavLink>
-                </div>
+                </figure>
               ))}
-              <div
+              <nav
                 className={styles.carouselNav}
                 onMouseEnter={handleNavMouseEnter}
                 onMouseLeave={handleNavMouseLeave}
               >
-                <span
-                  className={`${styles.navPrev} ${styles2.navPrev}`}
-                  onClick={goToPrevSlide}
-                >
+                <span className={styles.navPrev} onClick={goToPrevSlide}>
                   <RxChevronLeft strokeWidth={0.8} />
                 </span>
-                <span
-                  className={`${styles.navNext} ${styles2.navNext}`}
-                  onClick={goToNextSlide}
-                >
+                <span className={styles.navNext} onClick={goToNextSlide}>
                   <RxChevronRight strokeWidth={0.8} />
                 </span>
-              </div>
+              </nav>
             </div>
-            <div className={`${styles.carouselText} ${styles2.carouselText}`}>
+            <section className={styles.carouselText}>
               <NavLink to={images[currentIndex].link}>
-                <div
-                  className={`${styles.hoverContainer} ${styles2.hoverContainer}`}
-                >
+                <header className={styles.hoverContainer}>
                   <h2>{images[currentIndex].title}</h2>
                   <p>{images[currentIndex].text} </p>
                   <div className={styles.linkContainer}>
                     <a
-                      className={`${styles.carouselLink} ${styles2.carouselLink}`}
+                      className={styles.carouselLink}
                       href={images[currentIndex].link}
                     >
                       Läs Mer...
@@ -188,27 +178,25 @@ const GalleryAddon2 = ({ title }) => {
                   </div>
                   <div className={styles.arrowContainer}>
                     <a href={images[currentIndex].link}>
-                      <RxArrowRight
-                        className={`${styles.arrowIcon} ${styles2.arrowIcon}`}
-                      />
+                      <RxArrowRight className={styles.arrowIcon} />
                     </a>
                   </div>
-                </div>
+                </header>
               </NavLink>
-            </div>
-          </div>
+            </section>
+          </article>
           <div className={styles.dotPagination}>
             {images.map((_, index) => (
               <span
                 key={index}
-                className={`${styles.dot} ${styles2.dot} ${
+                className={`${styles.dot} ${
                   index === currentIndex ? styles.active : ""
-                } ${index === currentIndex ? styles2.active : ""}`}
+                }`}
                 onClick={() => goToSlide(index)}
               ></span>
             ))}
           </div>
-        </div>
+        </section>
       </div>
     </section>
   );

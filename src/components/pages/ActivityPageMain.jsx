@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 
 // Components
 import LayoutPageMain from "../layouts/LayoutPageMain";
-import ImagePreloader from "../common/ImagePreloader";
 
 // CSS
 import styles from "../../styles/pages/AllPageMain.module.css";
@@ -33,7 +32,8 @@ const ActivityPageMain = () => {
   // Preload header images
   useEffect(() => {
     headerImages.forEach((imgSrc) => {
-      <ImagePreloader key={imgSrc} src={imgSrc} />;
+      const img = new Image();
+      img.src = imgSrc;
     });
   }, [headerImages]);
 
@@ -66,7 +66,7 @@ const ActivityPageMain = () => {
       discoverTitle2="Utforska 2"
       galleryTitle4="Galleri"
     >
-      <div className={styles.textContainer}>
+      <section className={styles.textContainer}>
         <h2 className={styles.mainTitle}>Activity Page Title</h2>
         <p className={styles.mainText}>
           Du kan välja bland flera spännande aktiviteter här nere. Oavsett om du
@@ -74,7 +74,7 @@ const ActivityPageMain = () => {
           på stranden, eller prova på något mer spännande som att åka på en
           båttur, finns det något som passar alla intressen.
         </p>
-      </div>
+      </section>
       <div className={styles.gridContainer}>{gridItems}</div>
     </LayoutPageMain>
   );

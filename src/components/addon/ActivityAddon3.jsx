@@ -79,10 +79,10 @@ const Carousel = () => {
   });
 
   return (
-    <div {...swipeHandlers} className={styles.carousel}>
-      <div className={`${styles.container} ${styles2.container}`}>
+    <section {...swipeHandlers} className={styles.carousel}>
+      <main className={`${styles.container} ${styles2.container}`}>
         {slides.map((slide, index) => (
-          <div
+          <figure
             key={index}
             className={`${styles.slide} ${
               index === activeIndex ? styles.active : ""
@@ -94,7 +94,7 @@ const Carousel = () => {
             <div className={styles.slideCounter}>
               {index + 1}/{slides.length}
             </div>
-            <div className={`${styles.caption} ${styles2.caption}`}>
+            <figcaption className={`${styles.caption} ${styles2.caption}`}>
               <a href={slide.link}>
                 <h3
                   className={`${styles.captionTitle} ${styles2.captionTitle}`}
@@ -118,35 +118,37 @@ const Carousel = () => {
                   />
                 </a>
               </div>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
         ))}
-      </div>
-      <div className={styles.nav}>
+      </main>
+      <nav className={styles.nav}>
         <span className={styles.navPrev} onClick={handlePrev}>
           <RxChevronLeft strokeWidth={0.2} />
         </span>
         <span className={styles.navNext} onClick={handleNext}>
           <RxChevronRight strokeWidth={0.2} />
         </span>
-      </div>
-    </div>
+      </nav>
+    </section>
   );
 };
 
 const ActivityAddon3 = () => {
   return (
-    <div className={`${styles.featuredContainer} ${styles2.featuredContainer}`}>
+    <aside
+      className={`${styles.featuredContainer} ${styles2.featuredContainer}`}
+    >
       <div className={`${styles.featuredImage} ${styles2.featuredImage}`}></div>
-      <div className={`${styles.featuredInner} ${styles2.featuredInner}`}>
+      <section className={`${styles.featuredInner} ${styles2.featuredInner}`}>
         <div
           className={styles.featuredCircle}
           style={{ backgroundImage: `url(${featuredCircle})` }}
         ></div>
         <h2 className={styles.featuredTitle}>Håll dig Aktiv</h2>
         <Carousel />
-      </div>
-    </div>
+      </section>
+    </aside>
   );
 };
 

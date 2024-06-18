@@ -9,30 +9,30 @@ import styles from "../../styles/home/ShareExtra.module.css";
 
 const ExtraHome = () => {
   return (
-    <div className={styles.mainContainer}>
+    <section className={styles.mainContainer}>
       <header className={styles.inner}>
-        <div className={styles.shareContainer}>
-          <div className={styles.shareHeader}>
+        <article className={styles.shareContainer}>
+          <header className={styles.shareHeader}>
             <h2 className={styles.shareTitle}>
               Dela din story <span className={styles.shareDot}>⬤ </span>
               #Holmsund
             </h2>
-          </div>
-          <div className={styles.shareImageContainer}>
+          </header>
+          <aside className={styles.shareImageContainer}>
             <aside
               className={styles.shareImage}
               style={{ backgroundImage: `url(${shareImage})` }}
             ></aside>
-          </div>
+          </aside>
           <div className={styles.extraContainer}>
             {/* Navigate to weather section */}
-            <div className={styles.weatherContainer}>
+            <section className={styles.weatherContainer}>
               <div className={styles.weatherInner}>
-                <div className={styles.weatherText}>
-                  <div className={styles.weather}>
+                <article className={styles.weatherText}>
+                  <header className={styles.weather}>
                     <h3>Väderinformation</h3>
-                  </div>
-                  <div className={styles.weatherContent}>
+                  </header>
+                  <article className={styles.weatherContent}>
                     <div className={styles.weather}>
                       <p>
                         Här kan du hitta regelbundet uppdaterade väderprognoser
@@ -40,8 +40,8 @@ const ExtraHome = () => {
                         vindförhållanden för de kommande dagarna.
                       </p>
                     </div>
-                  </div>
-                </div>
+                  </article>
+                </article>
                 <NavLink to="/väder">
                   {" "}
                   <p className={styles.weatherBtnText}>
@@ -49,14 +49,14 @@ const ExtraHome = () => {
                   </p>{" "}
                 </NavLink>
               </div>
-            </div>
+            </section>
             {/* Navigate to maps section */}
-            <div className={styles.mapContainer}>
+            <section className={styles.mapContainer}>
               <div className={styles.mapInner}>
                 <div className={styles.mapText}>
-                  <div className={styles.map}>
+                  <header className={styles.map}>
                     <h3>Platsinformation</h3>
-                  </div>
+                  </header>
                   <div className={styles.mapContent}>
                     <div className={styles.map}>
                       <p>Kulgränd 1 Holmsund</p>
@@ -79,11 +79,11 @@ const ExtraHome = () => {
                   </p>{" "}
                 </NavLink>
               </div>
-            </div>
+            </section>
           </div>
-        </div>
+        </article>
       </header>
-    </div>
+    </section>
   );
 };
 

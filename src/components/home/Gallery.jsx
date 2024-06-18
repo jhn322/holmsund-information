@@ -110,9 +110,9 @@ const Gallery = () => {
   return (
     <section>
       <div className={styles.galleryContainer}>
-        <div className={styles.galleryImageContainer}>
+        <figure className={styles.galleryImageContainer}>
           <div className={styles.galleryImageInner}>
-            <article
+            <div
               className={styles.galleryImage}
               style={{ backgroundImage: `url(${staticGalleryImage})` }}
             >
@@ -123,11 +123,11 @@ const Gallery = () => {
               <h2 className={styles.galleryTitle}>
                 Uppfriskad & <br /> Förnyad
               </h2>
-            </article>
+            </div>
           </div>
-        </div>
-        <div className={styles.galleryCarousel}>
-          <div
+        </figure>
+        <section className={styles.galleryCarousel}>
+          <article
             {...swipeHandlers}
             className={`${styles.carouselContainer} ${
               isHovered && !isNavHovered ? styles.hover : ""
@@ -137,7 +137,7 @@ const Gallery = () => {
           >
             <div className={styles.carouselInner}>
               {images.map((image, index) => (
-                <div
+                <figure
                   key={index}
                   className={`${styles.slide} ${
                     index === currentIndex ? styles.active : ""
@@ -146,9 +146,9 @@ const Gallery = () => {
                   <NavLink to={image.link}>
                     <img src={image.url} alt={`Slide ${index}`} />
                   </NavLink>
-                </div>
+                </figure>
               ))}
-              <div
+              <nav
                 className={styles.carouselNav}
                 onMouseEnter={handleNavMouseEnter}
                 onMouseLeave={handleNavMouseLeave}
@@ -159,11 +159,11 @@ const Gallery = () => {
                 <span className={styles.navNext} onClick={goToNextSlide}>
                   <RxChevronRight strokeWidth={0.8} />
                 </span>
-              </div>
+              </nav>
             </div>
-            <div className={styles.carouselText}>
+            <section className={styles.carouselText}>
               <NavLink to={images[currentIndex].link}>
-                <div className={styles.hoverContainer}>
+                <header className={styles.hoverContainer}>
                   <h2>{images[currentIndex].title}</h2>
                   <p>{images[currentIndex].text} </p>
                   <div className={styles.linkContainer}>
@@ -179,10 +179,10 @@ const Gallery = () => {
                       <RxArrowRight className={styles.arrowIcon} />
                     </a>
                   </div>
-                </div>
+                </header>
               </NavLink>
-            </div>
-          </div>
+            </section>
+          </article>
           <div className={styles.dotPagination}>
             {images.map((_, index) => (
               <span
@@ -194,7 +194,7 @@ const Gallery = () => {
               ></span>
             ))}
           </div>
-        </div>
+        </section>
       </div>
     </section>
   );

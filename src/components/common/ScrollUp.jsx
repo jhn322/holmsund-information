@@ -30,15 +30,15 @@ const ScrollUp = () => {
   };
 
   return (
-    <div>
+    <main>
       {/* Scroll to top button */}
-      <div
+      <article
         className={`${styles.scrollUp} ${!visible && styles.invisible}`}
         onClick={scrollToTop}
       >
         <RxChevronUp className={styles.scrollIcon} />
-      </div>
-    </div>
+      </article>
+    </main>
   );
 };
 

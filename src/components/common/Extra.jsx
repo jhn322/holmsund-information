@@ -9,24 +9,24 @@ import styles from "../../styles/common/Extra.module.css";
 
 const Extra = () => {
   return (
-    <div className={styles.mainContainer}>
+    <section className={styles.mainContainer}>
       <header className={styles.inner}>
-        <div className={styles.container}>
-          <div className={styles.imageContainer}>
+        <article className={styles.container}>
+          <aside className={styles.imageContainer}>
             <aside
               className={styles.image}
               style={{ backgroundImage: `url(${image})` }}
             ></aside>
-          </div>
+          </aside>
           <div className={styles.extraContainer}>
             {/* Navigate to weather section */}
-            <div className={styles.weatherContainer}>
+            <section className={styles.weatherContainer}>
               <div className={styles.weatherInner}>
-                <div className={styles.weatherText}>
-                  <div className={styles.weather}>
+                <article className={styles.weatherText}>
+                  <header className={styles.weather}>
                     <h3>Väderinformation</h3>
-                  </div>
-                  <div className={styles.weatherContent}>
+                  </header>
+                  <article className={styles.weatherContent}>
                     <div className={styles.weather}>
                       <p>
                         Här kan du hitta regelbundet uppdaterade väderprognoser
@@ -34,8 +34,8 @@ const Extra = () => {
                         vindförhållanden för de kommande dagarna.
                       </p>
                     </div>
-                  </div>
-                </div>
+                  </article>
+                </article>
                 <NavLink to="/väder">
                   {" "}
                   <p className={styles.weatherBtnText}>
@@ -43,14 +43,14 @@ const Extra = () => {
                   </p>{" "}
                 </NavLink>
               </div>
-            </div>
+            </section>
             {/* Navigate to maps section */}
-            <div className={styles.mapContainer}>
+            <section className={styles.mapContainer}>
               <div className={styles.mapInner}>
                 <div className={styles.mapText}>
-                  <div className={styles.map}>
+                  <header className={styles.map}>
                     <h3>Platsinformation</h3>
-                  </div>
+                  </header>
                   <div className={styles.mapContent}>
                     <div className={styles.map}>
                       <p>Kulgränd 1 Holmsund</p>
@@ -73,11 +73,11 @@ const Extra = () => {
                   </p>{" "}
                 </NavLink>
               </div>
-            </div>
+            </section>
           </div>
-        </div>
+        </article>
       </header>
-    </div>
+    </section>
   );
 };
 

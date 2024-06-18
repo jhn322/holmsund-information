@@ -15,14 +15,14 @@ const Footer = () => {
 
   return (
     <section className={styles.footerContainer}>
-      <div className={styles.footerInner}>
-        <div className={styles.logoSection}>
+      <article className={styles.footerInner}>
+        <aside className={styles.logoSection}>
           {" "}
           <NavLink to="/" className={styles.logoContainer}>
             <img src={logo} alt="Logo" className={styles.logo} />
           </NavLink>
-        </div>
-        <div className={styles.footerIcons}>
+        </aside>
+        <section className={styles.footerIcons}>
           <a
             href="https://github.com/jhn322"
             target="_blank"
@@ -67,8 +67,8 @@ const Footer = () => {
               <p className={styles.text}>Facebook</p>
             </div>
           </a>
-        </div>
-      </div>
+        </section>
+      </article>
       <aside className={styles.secondFooter}>
         <div className={styles.footerPolicy}>
           <ul>

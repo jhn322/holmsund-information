@@ -112,7 +112,7 @@ const GalleryAddon2 = ({ title }) => {
   return (
     <section>
       <div className={`${styles.galleryContainer} ${styles2.galleryContainer}`}>
-        <div className={styles.galleryImageContainer}>
+        <figure className={styles.galleryImageContainer}>
           <div className={styles.galleryImageInner}>
             <article
               className={styles.galleryImage}
@@ -127,9 +127,9 @@ const GalleryAddon2 = ({ title }) => {
               </h2>
             </article>
           </div>
-        </div>
-        <div className={styles.galleryCarousel}>
-          <div
+        </figure>
+        <section className={styles.galleryCarousel}>
+          <article
             {...swipeHandlers}
             className={`${styles.carouselContainer} ${
               isHovered && !isNavHovered ? styles.hover : ""
@@ -139,7 +139,7 @@ const GalleryAddon2 = ({ title }) => {
           >
             <div className={styles.carouselInner}>
               {images.map((image, index) => (
-                <div
+                <figure
                   key={index}
                   className={`${styles.slide} ${
                     index === currentIndex ? styles.active : ""
@@ -148,9 +148,9 @@ const GalleryAddon2 = ({ title }) => {
                   <NavLink to={image.link}>
                     <img src={image.url} alt={`Slide ${index}`} />
                   </NavLink>
-                </div>
+                </figure>
               ))}
-              <div
+              <nav
                 className={styles.carouselNav}
                 onMouseEnter={handleNavMouseEnter}
                 onMouseLeave={handleNavMouseLeave}
@@ -161,11 +161,11 @@ const GalleryAddon2 = ({ title }) => {
                 <span className={styles.navNext} onClick={goToNextSlide}>
                   <RxChevronRight strokeWidth={0.8} />
                 </span>
-              </div>
+              </nav>
             </div>
-            <div className={styles.carouselText}>
+            <section className={styles.carouselText}>
               <NavLink to={images[currentIndex].link}>
-                <div className={styles.hoverContainer}>
+                <header className={styles.hoverContainer}>
                   <h2>{images[currentIndex].title}</h2>
                   <p>{images[currentIndex].text} </p>
                   <div className={styles.linkContainer}>
@@ -181,10 +181,10 @@ const GalleryAddon2 = ({ title }) => {
                       <RxArrowRight className={styles.arrowIcon} />
                     </a>
                   </div>
-                </div>
+                </header>
               </NavLink>
-            </div>
-          </div>
+            </section>
+          </article>
           <div className={styles.dotPagination}>
             {images.map((_, index) => (
               <span
@@ -196,7 +196,7 @@ const GalleryAddon2 = ({ title }) => {
               ></span>
             ))}
           </div>
-        </div>
+        </section>
       </div>
     </section>
   );

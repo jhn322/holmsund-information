@@ -110,14 +110,14 @@ const Discover = () => {
 
   return (
     <section>
-      <div ref={discoverContainerRef} className={styles.discoverContainer}>
-        <div className={styles.discoverInner}>
-          <div className={styles.discoverTitle}>
+      <main ref={discoverContainerRef} className={styles.discoverContainer}>
+        <article className={styles.discoverInner}>
+          <header className={styles.discoverTitle}>
             <h2>Utforska Holmsund</h2>
-          </div>
-          <div className={styles.discoverCardContainer}>
+          </header>
+          <section className={styles.discoverCardContainer}>
             {cardData.map((card, index) => (
-              <div
+              <article
                 key={index}
                 className={`${styles.discoverCard} ${
                   overlayStates[index] ? styles.expanded : ""
@@ -125,11 +125,11 @@ const Discover = () => {
                 onMouseEnter={() => handleHover(index, true)}
                 onMouseLeave={() => handleHover(index, false)}
               >
-                <div
+                <figure
                   className={styles.cardImage}
                   style={{ backgroundImage: `url(${card.image})` }}
                 >
-                  <div
+                  <figcaption
                     className={`${styles.cardOverlay} ${
                       overlayStates[index] && isHovered
                         ? styles.expandedOverlay
@@ -152,13 +152,13 @@ const Discover = () => {
                         </button>
                       </div>
                     )}
-                  </div>
-                </div>
-              </div>
+                  </figcaption>
+                </figure>
+              </article>
             ))}
-          </div>
-        </div>
-      </div>
+          </section>
+        </article>
+      </main>
     </section>
   );
 };

@@ -52,12 +52,12 @@ const Header = () => {
   }`;
 
   return (
-    <main
+    <header
       className={headerClass}
       style={{ backgroundImage: `url(${randomImage})` }}
     >
-      <div className={styles.innerHeader}>
-        <div className={styles.header}>
+      <section className={styles.innerHeader}>
+        <article className={styles.header}>
           <h1 className={styles.headerTitle}>{currentSeason} i Holmsund</h1>
 
           <div className={styles.btnContainer}>
@@ -67,9 +67,9 @@ const Header = () => {
               </button>
             </NavLink>
           </div>
-        </div>
-      </div>
-    </main>
+        </article>
+      </section>
+    </header>
   );
 };
 

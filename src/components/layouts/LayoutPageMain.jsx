@@ -49,14 +49,14 @@ const LayoutPageMain = ({
   renderGalleryAddon4 = false,
 }) => {
   return (
-    <div>
+    <main>
       <Navigation />
       <HeaderAddon
         title={headerTitle}
         backgroundImage={headerBackgroundImage}
       />
       <Breadcrumb />
-      <main>{children}</main>
+      <section>{children}</section>
       <SeparatorAddon />
       {renderDiscoverAddon1 && <DiscoverAddon1 title={discoverTitle1} />}
       {renderDiscoverAddon2 && <DiscoverAddon2 title={discoverTitle2} />}
@@ -75,7 +75,7 @@ const LayoutPageMain = ({
       <ScrollUp />
       <Cookies />
       <Footer />
-    </div>
+    </main>
   );
 };
 

@@ -55,19 +55,18 @@ const HeaderAddonPage = ({ title, backgroundImage }) => {
       className={`${styles.headerContainer} ${styles2.headerContainer}`}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className={`${styles.header} ${styles3.header}`}>
+      <section className={`${styles.header} ${styles3.header}`}>
         <h1 className={`${styles.headerTitle} ${styles2.headerTitle}`}>
           {title}
         </h1>
-
-        <div className={`${styles.btnContainer} ${styles3.btnContainer}`}>
+        <article className={`${styles.btnContainer} ${styles3.btnContainer}`}>
           <NavLink to={basePath}>
             <button className={`${styles.headerBtn} ${styles3.headerBtn}`}>
               {categoryMessages[currentCategory]} denna {currentSeason}
             </button>
           </NavLink>
-        </div>
-      </div>
+        </article>
+      </section>
     </header>
   );
 };

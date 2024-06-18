@@ -20,7 +20,7 @@ const ActivityPage4 = () => {
       discoverTitle3="Aktiviteter"
       galleryTitle2="Utforska 2"
     >
-      <div className={styles.container}>
+      <article className={styles.container}>
         <h2 className={styles.title}>Activity 4</h2>
         <p className={styles.boldText}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
@@ -50,7 +50,7 @@ const ActivityPage4 = () => {
           optio nesciunt quasi? Optio deleniti harum vero quibusdam aspernatur
           nostrum vel repellendus culpa tempore.
         </p>
-      </div>
+      </article>
     </LayoutPage>
   );
 };

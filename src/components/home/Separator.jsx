@@ -5,10 +5,10 @@ import styles from "../../styles/home/Separator.module.css";
 
 const Separator = () => {
   return (
-    <aside>
-      <div className={styles.separatorContainer}>
+    <section>
+      <main className={styles.separatorContainer}>
         <div className={styles.separatorFirst}></div>
-        <div className={styles.separatorContent}>
+        <article className={styles.separatorContent}>
           <p className={styles.separatorText}>
             Här hittar du de senaste nyheterna om Holmsunds tätort, platser,
             restauranger, aktiviteter och mycket mer. Dela med dig av din
@@ -48,16 +48,16 @@ const Separator = () => {
               <span className={styles.hashtag}>#Holmsund</span>
             </a>
           </p>
-        </div>
-        <div className={styles.separatorSecond}>
+        </article>
+        <section className={styles.separatorSecond}>
           <h2 className={styles.separatorSecondTitle}>Aktiviteter</h2>
           <p className={styles.separatorSecondText}>
             Utforska Holmsund i dag, från spännande utomhusäventyr till långa
             motionsspår och mysiga kaféer!
           </p>
-        </div>
-      </div>
-    </aside>
+        </section>
+      </main>
+    </section>
   );
 };
 

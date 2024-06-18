@@ -23,7 +23,7 @@ const Breadcrumb = () => {
 
   return (
     <nav aria-label={styles.breadcrumb}>
-      <div className={styles.breadcrumb}>
+      <article className={styles.breadcrumb}>
         <span className={styles.breadcrumbItem}>
           <Link to="/">Hem</Link>
         </span>
@@ -42,7 +42,7 @@ const Breadcrumb = () => {
             </span>
           );
         })}
-      </div>
+      </article>
     </nav>
   );
 };

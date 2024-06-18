@@ -29,15 +29,17 @@ const ContentCircle = () => {
   return (
     <section className={styles.contentContainer}>
       <div className={styles.innerContent}>
-        <div className={styles.content}>
-          <article
+        <article className={styles.content}>
+          <div
             ref={contentRef}
             className={`${styles.textContent} ${styles.hidden}`}
           >
-            <h2 className={styles.titleContent}>Holmsund, Västerbotten</h2>
-            <h3 className={styles.undertitleContent}>
-              LOKAL OCH GLOBAL. ÄVENTYRLIG OCH AVSLAPPNAD.
-            </h3>
+            <header>
+              <h2 className={styles.titleContent}>Holmsund, Västerbotten</h2>
+              <h3 className={styles.undertitleContent}>
+                LOKAL OCH GLOBAL. ÄVENTYRLIG OCH AVSLAPPNAD.
+              </h3>
+            </header>
             <p className={styles.paragraphContent}>
               Holmsund, en mångsidig ort i Västerbotten, utmärker sig genom sin
               charmiga hamn och natursköna omgivningar. Beläget vid Bottenvikens
@@ -46,10 +48,10 @@ const ContentCircle = () => {
               till naturen, erbjuder Holmsund besökare och invånare en unik
               upplevelse av den norrländska livsstilen. Välkommen.
             </p>
-          </article>
-        </div>
+          </div>
+        </article>
       </div>
-      <article className={styles.circleContainer}>
+      <aside className={styles.circleContainer}>
         <div className={styles.circleBackground}>
           <h2>double circle</h2>
           <img
@@ -63,7 +65,7 @@ const ContentCircle = () => {
             alt="Circle 1"
           />
         </div>
-      </article>
+      </aside>
     </section>
   );
 };

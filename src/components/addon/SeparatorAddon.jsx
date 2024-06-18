@@ -5,11 +5,11 @@ import styles from "../../styles/addon/SeparatorAddon.module.css";
 
 const Separator = () => {
   return (
-    <aside>
+    <section>
       <div className={styles.separatorContainer}>
         <div className={styles.separatorFirst}></div>
       </div>
-    </aside>
+    </section>
   );
 };
 

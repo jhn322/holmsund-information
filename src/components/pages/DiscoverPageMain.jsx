@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 
 // Components
 import LayoutPageMain from "../layouts/LayoutPageMain";
-import ImagePreloader from "../common/ImagePreloader";
 
 // CSS
 import styles from "../../styles/pages/AllPageMain.module.css";
@@ -42,7 +41,8 @@ const DiscoverPageMain = () => {
   // Preload header images
   useEffect(() => {
     headerImages.forEach((imgSrc) => {
-      <ImagePreloader key={imgSrc} src={imgSrc} />;
+      const img = new Image();
+      img.src = imgSrc;
     });
   }, [headerImages]);
 
@@ -73,7 +73,7 @@ const DiscoverPageMain = () => {
       renderActivityAddon4={true}
       discoverTitle3="Aktiviteter"
     >
-      <div className={styles.textContainer}>
+      <section className={styles.textContainer}>
         <h2 className={styles.mainTitle}>Discover Page Title</h2>
         <p className={styles.mainText}>
           Du kan utforska flera fascinerande platser här nere. Oavsett om du
@@ -81,7 +81,7 @@ const DiscoverPageMain = () => {
           marknader, eller besöka historiska sevärdheter, finns det många
           spännande möjligheter att utforska och uppleva.
         </p>
-      </div>
+      </section>
       <div className={styles2.gridContainer}>{gridItems}</div>
     </LayoutPageMain>
   );
