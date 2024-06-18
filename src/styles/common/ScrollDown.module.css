@@ -8,9 +8,9 @@
 
 .scrollDown {
   position: fixed;
-  bottom: 15px;
+  bottom: 100px;
   transform: translate(-50%, -50%);
-  left: 46%;
+  left: 45%;
   background-color: var(--accent-color);
   border: 1px solid var(--primary-color);
   width: 2.6rem;
