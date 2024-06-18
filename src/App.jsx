@@ -37,42 +37,42 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
 
-          {/* upptack sektion */}
+          {/* utforska sektion */}
           <Route
-            path="/upptack"
-            element={<DiscoverPageMain page="upptack" />}
+            path="/utforska"
+            element={<DiscoverPageMain page="utforska" />}
           />
           <Route
-            path="/upptack-1"
-            element={<DiscoverPage1 page="upptack-1" />}
+            path="/utforska-1"
+            element={<DiscoverPage1 page="utforska-1" />}
           />
           <Route
-            path="/upptack-2"
-            element={<DiscoverPage2 page="upptack-2" />}
+            path="/utforska-2"
+            element={<DiscoverPage2 page="utforska-2" />}
           />
           <Route
-            path="/upptack-3"
-            element={<DiscoverPage3 page="upptack-3" />}
+            path="/utforska-3"
+            element={<DiscoverPage3 page="utforska-3" />}
           />
           <Route
-            path="/upptack-4"
-            element={<DiscoverPage4 page="upptack-4" />}
+            path="/utforska-4"
+            element={<DiscoverPage4 page="utforska-4" />}
           />
           <Route
-            path="/upptack-5"
-            element={<DiscoverPage5 page="upptack-5" />}
+            path="/utforska-5"
+            element={<DiscoverPage5 page="utforska-5" />}
           />
           <Route
-            path="/upptack-6"
-            element={<DiscoverPage6 page="upptack-6" />}
+            path="/utforska-6"
+            element={<DiscoverPage6 page="utforska-6" />}
           />
           <Route
-            path="/upptack-7"
-            element={<DiscoverPage7 page="upptack-7" />}
+            path="/utforska-7"
+            element={<DiscoverPage7 page="utforska-7" />}
           />
           <Route
-            path="/upptack-8"
-            element={<DiscoverPage8 page="upptack-8" />}
+            path="/utforska-8"
+            element={<DiscoverPage8 page="utforska-8" />}
           />
 
           {/* Aktiviteter sektion */}

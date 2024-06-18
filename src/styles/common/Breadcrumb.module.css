@@ -1,0 +1,34 @@
+/* styles.css */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color: var(--primary-color);
+}
+
+.breadcrumbItem a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+.breadcrumbItem a:hover {
+  text-decoration: underline;
+  color: var(--hover-color);
+}
+
+.breadcrumb svg:hover {
+  color: var(--grey-text-color);
+}
+
+.arrowIcon {
+  color: var(--grey-text-color);
+  vertical-align: middle;
+  margin: 0 -2px 0 -6px;
+}
+
+.breadcrumbCurrent {
+  color: var(--grey-text-color);
+}

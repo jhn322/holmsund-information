@@ -17,6 +17,8 @@ import GalleryAddon2 from "../addon/GalleryAddon2";
 import GalleryAddon3 from "../addon/GalleryAddon3";
 import GalleryAddon4 from "../addon/GalleryAddon4";
 import Extra from "../common/Extra";
+import Breadcrumb from "../common/Breadcrumb";
+import ScrollDown from "../common/ScrollDown";
 import ScrollUp from "../common/ScrollUp";
 import Cookies from "../common/Cookies";
 import Footer from "../common/Footer";
@@ -53,6 +55,7 @@ const LayoutPage = ({
         title={headerTitle}
         backgroundImage={headerBackgroundImage}
       />
+      <Breadcrumb />
       <main>{children}</main>
       <SeparatorAddon />
       {renderDiscoverAddon1 && <DiscoverAddon1 title={discoverTitle1} />}
@@ -68,6 +71,7 @@ const LayoutPage = ({
       {renderGalleryAddon3 && <GalleryAddon3 title={galleryTitle3} />}
       {renderGalleryAddon4 && <GalleryAddon4 title={galleryTitle4} />}
       <Extra />
+      <ScrollDown />
       <ScrollUp />
       <Cookies />
       <Footer />

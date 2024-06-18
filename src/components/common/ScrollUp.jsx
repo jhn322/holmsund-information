@@ -33,7 +33,7 @@ const ScrollUp = () => {
     <div>
       {/* Scroll to top button */}
       <div
-        className={`${styles.scrollTop} ${!visible && styles.invisible}`}
+        className={`${styles.scrollUp} ${!visible && styles.invisible}`}
         onClick={scrollToTop}
       >
         <RxChevronUp className={styles.scrollIcon} />

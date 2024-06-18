@@ -10,6 +10,7 @@ import Activity from "../home/Activity";
 import DiscoverInspired from "../home/DiscoverInspired";
 import Gallery from "../home/Gallery";
 import ExtraHome from "../home/ExtraHome";
+import ScrollDown from "../common/ScrollDown";
 import ScrollUp from "../common/ScrollUp";
 import Cookies from "../common/Cookies";
 import Footer from "../common/Footer";
@@ -18,7 +19,6 @@ const LayoutHome = () => {
   return (
     <div>
       <Navigation />
-      <ScrollUp />
       <Header />
       <ContentCircle />
       <Separator />
@@ -27,6 +27,8 @@ const LayoutHome = () => {
       <DiscoverInspired />
       <Gallery />
       <ExtraHome />
+      <ScrollDown />
+      <ScrollUp />
       <Cookies />
       <Footer />
     </div>

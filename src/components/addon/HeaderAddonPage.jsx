@@ -27,7 +27,7 @@ const HeaderAddonPage = ({ title, backgroundImage }) => {
   // Defines a mapping from category identifiers to base paths
   const categoryToPath = {
     aktiviteter: "/aktiviteter",
-    upptack: "/upptack",
+    utforska: "/utforska",
     galleri: "/galleri",
   };
 
@@ -45,7 +45,7 @@ const HeaderAddonPage = ({ title, backgroundImage }) => {
 
   // Custom message for each category
   const categoryMessages = {
-    upptack: "Se allt du kan upptäcka",
+    utforska: "Se allt du kan utforska",
     aktiviteter: "Se alla aktiviteter du kan hitta på",
     galleri: "Bli inspirerad av allting som finns i galleriet",
   };

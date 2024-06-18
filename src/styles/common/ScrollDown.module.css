@@ -6,11 +6,11 @@
   padding: 0;
 }
 
-/* Scroll to top button */
-.scrollUp {
+/* Scroll down button */
+.scrollDown {
   position: fixed;
   bottom: 35px;
-  right: 30px;
+  left: 50%;
   background-color: var(--accent-color);
   border: 1px solid var(--primary-color);
   width: 2.6rem;
@@ -24,7 +24,7 @@
   transition: background-color 0.3s;
 }
 
-.scrollUp:hover {
+.scrollDown:hover {
   background-color: var(--nav-color);
 }
 
@@ -37,7 +37,22 @@
   color: var(--primary-color);
 }
 
-/* Button invisible at top */
+/* Button invisible when scrolled down */
 .invisible {
   display: none;
+}
+
+/* Jump animation */
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.jump {
+  animation: jump 2s ease-in-out 100;
 }
