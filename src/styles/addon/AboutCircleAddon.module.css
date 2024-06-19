@@ -1,0 +1,50 @@
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+}
+
+.innerContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 0 3rem 0;
+}
+
+.circleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--accent-color);
+  overflow: hidden;
+}
+
+.hidden {
+  opacity: 1;
+}
+
+/* Desktop */
+@media only screen and (min-width: 770px) {
+  .contentContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .innerContent {
+    flex-direction: column;
+    width: 50%;
+    padding: 3rem 0;
+  }
+
+  .circleContainer {
+    width: 50%;
+    height: 90vh;
+    overflow: hidden;
+    padding: 2rem 0;
+  }
+}

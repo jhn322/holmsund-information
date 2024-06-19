@@ -6,6 +6,7 @@ import LayoutPageMain from "../layouts/LayoutPageMain";
 
 // CSS
 import styles from "../../styles/pages/AllPageMain.module.css";
+// Component specific styling
 import styles2 from "../../styles/pages/DiscoverPageMain.module.css";
 
 // Images

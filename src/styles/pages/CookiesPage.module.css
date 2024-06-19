@@ -8,10 +8,50 @@
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100vh;
-  background-color: darkkhaki;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: var(--grey-text-color);
+}
+
+.text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: var(--black-text-color);
+}
+
+.list {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  list-style: inside;
+  color: var(--black-text-color);
+  margin: -1rem 0 -1rem 0;
+  cursor: text;
+}
+
+.list:hover {
+  color: var(--black-text-color);
+}
+
+.lastList {
+  margin-bottom: 1rem;
+}
+
+/* Desktop */
+@media only screen and (min-width: 800px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .text,
+  .list {
+    font-size: 1.3rem;
+  }
 }

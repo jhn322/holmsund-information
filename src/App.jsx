@@ -120,8 +120,8 @@ const App = () => {
           <Route path="/om-oss" element={<AboutUsPage page="om-oss" />} />
           <Route path="/kakor" element={<CookiesPage page="kakor" />} />
           <Route
-            path="/anvandarvillkor"
-            element={<TermsOfServicePage page="anvandarvillkor" />}
+            path="/användarvillkor"
+            element={<TermsOfServicePage page="användarvillkor" />}
           />
           <Route path="*" element={<MissingPage />} />
         </Routes>
