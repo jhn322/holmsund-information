@@ -114,7 +114,7 @@ const GalleryAddon1 = ({ title }) => {
       <div className={`${styles.galleryContainer} ${styles2.galleryContainer}`}>
         <figure className={styles.galleryImageContainer}>
           <div className={styles.galleryImageInner}>
-            <div
+            <article
               className={styles.galleryImage}
               style={{ backgroundImage: `url(${staticGalleryImage})` }}
             >
@@ -125,14 +125,16 @@ const GalleryAddon1 = ({ title }) => {
               <h2 className={`${styles.galleryTitle} ${styles2.galleryTitle}`}>
                 {title}
               </h2>
-            </div>
+            </article>
           </div>
         </figure>
         <section className={styles.galleryCarousel}>
           <article
             {...swipeHandlers}
             className={`${styles.carouselContainer} ${
-              isHovered && !isNavHovered ? styles.hover : ""
+              styles2.carouselContainer
+            } ${isHovered && !isNavHovered ? styles.hover : ""} ${
+              isHovered && !isNavHovered ? styles2.hover : ""
             }`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -155,22 +157,32 @@ const GalleryAddon1 = ({ title }) => {
                 onMouseEnter={handleNavMouseEnter}
                 onMouseLeave={handleNavMouseLeave}
               >
-                <span className={styles.navPrev} onClick={goToPrevSlide}>
+                <span
+                  className={`${styles.navPrev} ${styles2.navPrev}`}
+                  onClick={goToPrevSlide}
+                >
                   <RxChevronLeft strokeWidth={0.8} />
                 </span>
-                <span className={styles.navNext} onClick={goToNextSlide}>
+                <span
+                  className={`${styles.navNext} ${styles2.navNext}`}
+                  onClick={goToNextSlide}
+                >
                   <RxChevronRight strokeWidth={0.8} />
                 </span>
               </nav>
             </div>
-            <section className={styles.carouselText}>
+            <section
+              className={`${styles.carouselText} ${styles2.carouselText}`}
+            >
               <NavLink to={images[currentIndex].link}>
-                <header className={styles.hoverContainer}>
+                <header
+                  className={`${styles.hoverContainer} ${styles2.hoverContainer}`}
+                >
                   <h2>{images[currentIndex].title}</h2>
                   <p>{images[currentIndex].text} </p>
                   <div className={styles.linkContainer}>
                     <a
-                      className={styles.carouselLink}
+                      className={`${styles.carouselLink} ${styles2.carouselLink}`}
                       href={images[currentIndex].link}
                     >
                       Läs Mer...
@@ -178,7 +190,9 @@ const GalleryAddon1 = ({ title }) => {
                   </div>
                   <div className={styles.arrowContainer}>
                     <a href={images[currentIndex].link}>
-                      <RxArrowRight className={styles.arrowIcon} />
+                      <RxArrowRight
+                        className={`${styles.arrowIcon} ${styles2.arrowIcon}`}
+                      />
                     </a>
                   </div>
                 </header>
@@ -189,9 +203,9 @@ const GalleryAddon1 = ({ title }) => {
             {images.map((_, index) => (
               <span
                 key={index}
-                className={`${styles.dot} ${
+                className={`${styles.dot} ${styles2.dot} ${
                   index === currentIndex ? styles.active : ""
-                }`}
+                } ${index === currentIndex ? styles2.active : ""}`}
                 onClick={() => goToSlide(index)}
               ></span>
             ))}

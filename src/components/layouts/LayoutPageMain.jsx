@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 
 // Components
 import Navigation from "../common/Navigation";
@@ -48,6 +48,57 @@ const LayoutPageMain = ({
   renderGalleryAddon3 = false,
   renderGalleryAddon4 = false,
 }) => {
+  const [shuffleComponents, setShuffleComponents] = useState([]);
+
+  useEffect(() => {
+    const components = [
+      renderDiscoverAddon1 && <DiscoverAddon1 title={discoverTitle1} />,
+      renderDiscoverAddon2 && <DiscoverAddon2 title={discoverTitle2} />,
+      renderDiscoverAddon3 && <DiscoverAddon3 title={discoverTitle3} />,
+      renderDiscoverAddon4 && <DiscoverAddon4 title={discoverTitle4} />,
+      renderActivityAddon1 && <ActivityAddon1 />,
+      renderActivityAddon2 && <ActivityAddon2 />,
+      renderActivityAddon3 && <ActivityAddon3 />,
+      renderActivityAddon4 && <ActivityAddon4 />,
+      renderGalleryAddon1 && <GalleryAddon1 title={galleryTitle1} />,
+      renderGalleryAddon2 && <GalleryAddon2 title={galleryTitle2} />,
+      renderGalleryAddon3 && <GalleryAddon3 title={galleryTitle3} />,
+      renderGalleryAddon4 && <GalleryAddon4 title={galleryTitle4} />,
+    ].filter(Boolean);
+
+    // Function to shuffle array
+    const shuffleArray = (array) => {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    };
+
+    setShuffleComponents(shuffleArray(components));
+  }, [
+    renderActivityAddon1,
+    renderActivityAddon2,
+    renderActivityAddon3,
+    renderActivityAddon4,
+    renderDiscoverAddon1,
+    renderDiscoverAddon2,
+    renderDiscoverAddon3,
+    renderDiscoverAddon4,
+    renderGalleryAddon1,
+    renderGalleryAddon2,
+    renderGalleryAddon3,
+    renderGalleryAddon4,
+    discoverTitle1,
+    discoverTitle2,
+    discoverTitle3,
+    discoverTitle4,
+    galleryTitle1,
+    galleryTitle2,
+    galleryTitle3,
+    galleryTitle4,
+  ]);
+
   return (
     <main>
       <Navigation />
@@ -58,18 +109,7 @@ const LayoutPageMain = ({
       <Breadcrumb />
       <section>{children}</section>
       <SeparatorAddon />
-      {renderDiscoverAddon1 && <DiscoverAddon1 title={discoverTitle1} />}
-      {renderDiscoverAddon2 && <DiscoverAddon2 title={discoverTitle2} />}
-      {renderDiscoverAddon3 && <DiscoverAddon3 title={discoverTitle3} />}
-      {renderDiscoverAddon4 && <DiscoverAddon4 title={discoverTitle4} />}
-      {renderActivityAddon1 && <ActivityAddon1 />}
-      {renderActivityAddon2 && <ActivityAddon2 />}
-      {renderActivityAddon3 && <ActivityAddon3 />}
-      {renderActivityAddon4 && <ActivityAddon4 />}
-      {renderGalleryAddon1 && <GalleryAddon1 title={galleryTitle1} />}
-      {renderGalleryAddon2 && <GalleryAddon2 title={galleryTitle2} />}
-      {renderGalleryAddon3 && <GalleryAddon3 title={galleryTitle3} />}
-      {renderGalleryAddon4 && <GalleryAddon4 title={galleryTitle4} />}
+      {shuffleComponents}
       <Extra />
       <ScrollDown />
       <ScrollUp />

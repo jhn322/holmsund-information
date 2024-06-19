@@ -7,14 +7,28 @@
 }
 
 .separatorFirst {
-  background-color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--grey-text-color);
   height: 9rem;
+}
+
+.separatorFirst h2 {
+  color: var(--white-text-color);
+  text-align: center;
+  font-size: 2.25rem;
+  max-width: 80%;
 }
 
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 599px) {
   .separatorFirst {
     height: 10rem;
+  }
+
+  .separatorFirst h2 {
+    font-size: 2.5rem;
   }
 }
 
@@ -23,11 +37,19 @@
   .separatorFirst {
     height: 12rem;
   }
+
+  .separatorFirst h2 {
+    font-size: 2.5rem;
+  }
 }
 
 /* Large Desktop */
 @media only screen and (min-width: 1200px) {
   .separatorFirst {
     height: 18rem;
+  }
+
+  .separatorFirst h2 {
+    font-size: 3.5rem;
   }
 }
