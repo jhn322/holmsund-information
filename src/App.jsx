@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Pages
+import ScrollToTop from "./components/common/ScrollToTop";
 import HomePage from "./components/pages/HomePage";
 import DiscoverPageMain from "./components/pages/DiscoverPageMain";
 import DiscoverPage1 from "./components/pages/DiscoverPage1";
@@ -32,6 +33,7 @@ import MissingPage from "./components/pages/MissingPage";
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <div>
         {/* Routes */}
         <Routes>
