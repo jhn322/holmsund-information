@@ -35,7 +35,7 @@ p {
 }
 
 .footerContainer a:hover {
-  color: var(--black-text-color);
+  color: var(--white-text-color);
 }
 
 .logo {
@@ -84,7 +84,7 @@ p {
 .footerIcons a:hover .instagram,
 .footerIcons a:hover .facebook,
 .iconsText:hover p {
-  color: var(--black-text-color);
+  color: var(--white-text-color);
 }
 
 .footerIcons a:hover .github,
