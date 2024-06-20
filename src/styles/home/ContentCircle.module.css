@@ -117,22 +117,23 @@ body {
 .circleBack {
   left: 140%;
   opacity: 0.8;
-  width: calc(18rem + 20vw);
-  height: calc(18rem + 20vw);
+  width: calc(16rem + 16vw);
+  height: calc(16rem + 16vw);
 }
 
 .circleFront {
-  width: calc(18rem + 20vw);
-  height: calc(18rem + 20vw);
+  width: calc(16rem + 16vw);
+  height: calc(16rem + 16vw);
   border-radius: 50%;
+  left: 30%;
 }
 
 /* Small phones */
 @media only screen and (max-width: 389px) {
   .circleBack,
   .circleFront {
-    width: calc(18rem + 20vw);
-    height: calc(18rem + 20vw);
+    width: calc(14rem + 16vw);
+    height: calc(14rem + 16vw);
   }
 }
 
@@ -153,8 +154,8 @@ body {
 
   .circleBack,
   .circleFront {
-    width: calc(22rem + 20vw);
-    height: calc(22rem + 20vw);
+    width: calc(20rem + 16vw);
+    height: calc(20rem + 16vw);
   }
 }
 
@@ -175,8 +176,8 @@ body {
 
   .circleBack,
   .circleFront {
-    width: calc(27rem + 20vw);
-    height: calc(27rem + 20vw);
+    width: calc(23rem + 16vw);
+    height: calc(23rem + 16vw);
   }
 }
 
@@ -220,8 +221,8 @@ body {
 
   .circleBack,
   .circleFront {
-    width: calc(13rem + 20vw);
-    height: calc(13rem + 20vw);
+    width: calc(10rem + 16vw);
+    height: calc(10rem + 16vw);
   }
 }
 
