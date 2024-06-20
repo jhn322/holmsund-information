@@ -14,7 +14,7 @@ const AboutCircleAddon = () => {
         <article className={styles.content}>
           <div className={`${styles.textContent} ${styles2.hidden}`}>
             <header>
-              <h2 className={styles.titleContent}>Om Oss</h2>
+              <h2 className={styles2.titleContent}>Om Oss</h2>
             </header>
             <p className={styles.paragraphContent}>
               Holmsund, en mångsidig ort i Västerbotten, utmärker sig genom sin

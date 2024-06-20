@@ -14,7 +14,7 @@ const CookiesCircleAddon = () => {
         <article className={styles.content}>
           <div className={`${styles.textContent} ${styles2.hidden}`}>
             <header>
-              <h2 className={styles.titleContent}>Cookiepolicy</h2>
+              <h2 className={styles2.titleContent}>Cookiepolicy</h2>
             </header>
             <p className={styles.paragraphContent}>
               Vår Cookie Policy förklarar hur vi använder cookies och liknande
