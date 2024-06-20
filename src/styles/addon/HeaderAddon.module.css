@@ -18,11 +18,17 @@ body {
   justify-content: center;
   align-items: center;
   background-size: cover;
+  background-position: center;
   text-align: center;
   height: 90vh;
   overflow: hidden;
   padding: 2rem;
-  transition: background-image 1s ease-in-out;
+  transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.headerContainer.loaded {
+  opacity: 1;
 }
 
 .headerTitle {
