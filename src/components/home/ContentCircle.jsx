@@ -34,7 +34,7 @@ const ContentCircle = () => {
             ref={contentRef}
             className={`${styles.textContent} ${styles.hidden}`}
           >
-            <header>
+            <header className={styles.headerTitle}>
               <h2 className={styles.titleContent}>Holmsund, Västerbotten</h2>
               <h3 className={styles.undertitleContent}>
                 LOKAL OCH GLOBAL. ÄVENTYRLIG OCH AVSLAPPNAD.
