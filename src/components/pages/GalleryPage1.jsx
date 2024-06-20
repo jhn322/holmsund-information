@@ -17,8 +17,8 @@ const GalleryPage1 = () => {
       renderDiscoverAddon1={true}
       renderActivityAddon2={true}
       renderGalleryAddon4={true}
-      discoverTitle2="Utforska 1"
-      galleryTitle3="Galleri"
+      discoverTitle1="Utforska 1"
+      galleryTitle4="Galleri"
     >
       <article className={styles.container}>
         <h2 className={styles.title}>Gallery 1</h2>

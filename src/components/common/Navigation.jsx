@@ -35,11 +35,13 @@ const Navigation = () => {
   // Nav not transparent on path
   const location = useLocation();
   const currentPath = location.pathname;
-  const shouldBeTransparent = ![
-    "/användarvillkor",
-    "/om-oss",
-    "/cookiepolicy",
-  ].includes(currentPath);
+
+  // Decoded path to handle special characters
+  const decodePath = (path) => decodeURIComponent(path);
+
+  const decodedCurrentPath = decodePath(currentPath);
+  const pathsToExclude = ["/användarvillkor", "/om-oss", "/cookiepolicy"];
+  const shouldBeTransparent = !pathsToExclude.includes(decodedCurrentPath);
 
   // Toggles the menu open/close
   const toggleMenu = () => {
