@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 // Menu Icons
 import {
@@ -31,6 +31,15 @@ const Navigation = () => {
   const [isDiscoverHovered, setIsDiscoverHovered] = useState(false);
   const [isActivityHovered, setIsActivityHovered] = useState(false);
   const [isGalleryHovered, setIsGalleryHovered] = useState(false);
+
+  // Nav not transparent on path
+  const location = useLocation();
+  const currentPath = location.pathname;
+  const shouldBeTransparent = ![
+    "/användarvillkor",
+    "/om-oss",
+    "/cookiepolicy",
+  ].includes(currentPath);
 
   // Toggles the menu open/close
   const toggleMenu = () => {
@@ -94,7 +103,9 @@ const Navigation = () => {
       {/* Nav container, hide nav class and transparent class */}
       <nav
         className={`${styles.navContainer} ${!visible && styles.hideNav} ${
-          prevScrollPos <= 0.28 * window.innerHeight && styles.transparent // Nav bar is transparent on first 28vh of the page
+          shouldBeTransparent &&
+          prevScrollPos <= 0.28 * window.innerHeight &&
+          styles.transparent // Nav bar is transparent on first 28vh of the page unless on specified paths
         }`}
       >
         {/* Conditional render nav with links */}

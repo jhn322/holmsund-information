@@ -118,7 +118,10 @@ const App = () => {
           <Route path="/väder" element={<WeatherPage page="väder" />} />
           <Route path="/karta" element={<MapPage page="karta" />} />
           <Route path="/om-oss" element={<AboutUsPage page="om-oss" />} />
-          <Route path="/kakor" element={<CookiesPage page="kakor" />} />
+          <Route
+            path="/cookiepolicy"
+            element={<CookiesPage page="cookiepolicy" />}
+          />
           <Route
             path="/användarvillkor"
             element={<TermsOfServicePage page="användarvillkor" />}

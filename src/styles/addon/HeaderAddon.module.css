@@ -19,7 +19,7 @@ body {
   align-items: center;
   background-size: cover;
   text-align: center;
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
   padding: 2rem;
   transition: background-image 1s ease-in-out;

@@ -8,7 +8,7 @@ const Separator = () => {
     <section>
       <div className={styles.separatorContainer}>
         <div className={styles.separatorFirst}>
-          <h2>Rekommenderat för dig</h2>
+          <h2>Mer att upptäcka</h2>
         </div>
       </div>
     </section>

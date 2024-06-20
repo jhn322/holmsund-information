@@ -78,7 +78,7 @@ const Footer = () => {
             <NavLink to="/om-oss">
               <li>Om oss</li>
             </NavLink>
-            <NavLink to="/kakor">
+            <NavLink to="/cookiepolicy">
               <li>Cookiepolicy</li>
             </NavLink>
             <NavLink to="/användarvillkor">

@@ -31,7 +31,7 @@ span {
 }
 
 .separatorContent {
-  height: 26rem;
+  height: 18rem;
   padding: 2rem 0;
   background-color: var(--primary-color);
 }
@@ -84,7 +84,7 @@ span {
   }
 
   .separatorContent {
-    height: 34rem;
+    height: 22rem;
   }
 
   .separatorText,
@@ -108,7 +108,7 @@ span {
   }
 
   .separatorContent {
-    height: 32rem;
+    height: 24rem;
   }
 
   .separatorText,
@@ -132,7 +132,7 @@ span {
   }
 
   .separatorContent {
-    height: 26rem;
+    height: 20rem;
   }
 
   .separatorText,
@@ -157,7 +157,7 @@ span {
   }
 
   .separatorContent {
-    height: 26rem;
+    height: 22rem;
   }
 
   .separatorText,
