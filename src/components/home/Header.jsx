@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 // CSS
@@ -29,6 +29,7 @@ const seasonImages = {
   Vinter: [headerWinter1, headerWinter2, headerWinter3, headerWinter4],
 };
 
+// Season generator
 const getCurrentSeason = () => {
   const month = new Date().getMonth() + 1;
   if (month >= 3 && month <= 5) {
@@ -43,6 +44,7 @@ const getCurrentSeason = () => {
 };
 
 const Header = () => {
+  // Array of header images randomized
   const currentSeason = getCurrentSeason();
   const images = seasonImages[currentSeason];
   const randomImage = images[Math.floor(Math.random() * images.length)];
@@ -50,6 +52,23 @@ const Header = () => {
   const headerClass = `${styles.headerContainer} ${
     styles[currentSeason.split(" ")[0]]
   }`;
+
+  // Button path & text randomized
+  const buttonOptions = [
+    {
+      text: `Aktiviteter man kan hitta på denna ${currentSeason}`,
+      path: "/aktiviteter",
+    },
+    { text: `Utforska Holmsund denna ${currentSeason}`, path: "/utforska" },
+    { text: `Ta en titt i Galleriet denna ${currentSeason}`, path: "/galleri" },
+  ];
+
+  const [currentButton, setCurrentButton] = useState(buttonOptions[0]);
+
+  useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * buttonOptions.length);
+    setCurrentButton(buttonOptions[randomIndex]);
+  }, []);
 
   return (
     <header
@@ -61,10 +80,8 @@ const Header = () => {
           <h1 className={styles.headerTitle}>{currentSeason} i Holmsund</h1>
 
           <div className={styles.btnContainer}>
-            <NavLink to="/aktiviteter">
-              <button className={styles.headerBtn}>
-                Aktiviteter man kan hitta på denna {currentSeason}
-              </button>
+            <NavLink to={currentButton.path}>
+              <button className={styles.headerBtn}>{currentButton.text}</button>
             </NavLink>
           </div>
         </article>
