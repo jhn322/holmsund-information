@@ -26,7 +26,7 @@
 .arrowIcon {
   color: var(--grey-text-color);
   vertical-align: middle;
-  margin: -2px -2px 0 -6px;
+  margin: -4px -2px 0 -6px;
 }
 
 .breadcrumbCurrent {
