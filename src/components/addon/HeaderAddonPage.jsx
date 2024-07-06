@@ -47,7 +47,7 @@ const HeaderAddonPage = ({ title, backgroundImage }) => {
   const categoryMessages = {
     utforska: "Se allt du kan utforska",
     aktiviteter: "Se alla aktiviteter du kan hitta på",
-    galleri: "Bli inspirerad av allting som finns i galleriet",
+    galleri: "Inspireras av det som finns i galleriet",
   };
 
   return (

@@ -7,18 +7,13 @@ import LayoutMainPage from "../layouts/LayoutPageMain";
 import styles from "../../styles/pages/MapPage.module.css";
 
 // Images
-import headerBackgroundImage1 from "../../assets/header/header13.jpg";
-import headerBackgroundImage2 from "../../assets/header/header14.jpg";
-import headerBackgroundImage3 from "../../assets/header/header15.jpg";
-import headerBackgroundImage4 from "../../assets/header/header16.jpg";
+import header17 from "../../assets/header/header17.jpg";
+import header18 from "../../assets/header/header18.jpg";
+import header19 from "../../assets/header/header19.jpg";
+import header20 from "../../assets/header/header20.jpg";
 
 const MapPage = () => {
-  const headerImages = [
-    headerBackgroundImage1,
-    headerBackgroundImage2,
-    headerBackgroundImage3,
-    headerBackgroundImage4,
-  ];
+  const headerImages = [header17, header18, header19, header20];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 

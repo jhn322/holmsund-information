@@ -7,18 +7,13 @@ import LayoutMainPage from "../layouts/LayoutPageMain";
 import styles from "../../styles/pages/WeatherPage.module.css";
 
 // Images
-import headerBackgroundImage1 from "../../assets/header/header13.jpg";
-import headerBackgroundImage2 from "../../assets/header/header14.jpg";
-import headerBackgroundImage3 from "../../assets/header/header15.jpg";
-import headerBackgroundImage4 from "../../assets/header/header16.jpg";
+import header13 from "../../assets/header/header13.jpg";
+import header14 from "../../assets/header/header14.jpg";
+import header15 from "../../assets/header/header15.jpg";
+import header16 from "../../assets/header/header16.jpg";
 
 const WeatherPage = () => {
-  const headerImages = [
-    headerBackgroundImage1,
-    headerBackgroundImage2,
-    headerBackgroundImage3,
-    headerBackgroundImage4,
-  ];
+  const headerImages = [header13, header14, header15, header16];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
