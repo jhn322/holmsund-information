@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 // CSS
 import styles from "../../styles/home/Discover.module.css";
@@ -37,14 +38,21 @@ const cardData = [
   },
 ];
 
-const DiscoverAddon2 = ({ title }) => {
+const DiscoverAddon1 = ({ title }) => {
   const discoverContainerRef = useRef(null);
   const [totalCardsHeight, setTotalCardsHeight] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [currentPath, setCurrentPath] = useState("");
   const [overlayStates, setOverlayStates] = useState(
     Array(cardData.length).fill(false)
   );
+
+  const location = useLocation();
+
+  useEffect(() => {
+    setCurrentPath(location.pathname);
+  }, [location.pathname]);
 
   useEffect(() => {
     const calculateTotalHeight = () => {
@@ -126,7 +134,9 @@ const DiscoverAddon2 = ({ title }) => {
                 onMouseLeave={() => handleHover(index, false)}
               >
                 <figure
-                  className={styles.cardImage}
+                  className={`${styles.cardImage} ${
+                    currentPath === card.link ? styles.currentPageImage : ""
+                  }`}
                   style={{ backgroundImage: `url(${card.image})` }}
                 >
                   <figcaption
@@ -154,6 +164,11 @@ const DiscoverAddon2 = ({ title }) => {
                     )}
                   </figcaption>
                 </figure>
+                {currentPath === card.link && (
+                  <div className={`${styles.currentPageMessage}`}>
+                    Nuvarande Sida
+                  </div>
+                )}
               </article>
             ))}
           </section>
@@ -163,4 +178,4 @@ const DiscoverAddon2 = ({ title }) => {
   );
 };
 
-export default DiscoverAddon2;
+export default DiscoverAddon1;

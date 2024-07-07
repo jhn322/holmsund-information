@@ -1,3 +1,12 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
 .galleryContainer {
   display: flex;
   text-align: center;
@@ -142,6 +151,7 @@
   color: var(--white-text-color);
   cursor: pointer;
   transition: color 0.3s;
+  font-size: 2rem;
 }
 
 .carouselText p {
@@ -204,6 +214,7 @@
   color: var(--white-text-color);
   font-size: 2rem;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 /* Small phones */
@@ -262,6 +273,10 @@
   .carouselText {
     max-width: 27.625rem;
   }
+
+  .carouselText h2 {
+    font-size: 2.25rem;
+  }
 }
 
 /* Small Tablet */
@@ -312,10 +327,14 @@
   .carouselText {
     max-width: 34.375rem;
   }
+
+  .carouselText h2 {
+    font-size: 2.25rem;
+  }
 }
 
 /* Desktop */
-@media only screen and (min-width: 770px) and (max-width: 1199px) {
+@media only screen and (min-width: 800px) and (max-width: 1199px) {
   .galleryContainer {
     flex-direction: row;
     justify-content: center;
@@ -357,6 +376,10 @@
   .carouselText {
     align-items: center;
     text-align: center;
+  }
+
+  .carouselText h2 {
+    font-size: 2.25rem;
   }
 
   .hoverContainer {
@@ -464,6 +487,10 @@
     margin-left: -1.8rem;
     height: 12.5rem;
   }
+
+  .carouselText h2 {
+    font-size: 2.25rem;
+  }
 }
 
 /* Large Desktop */
@@ -542,6 +569,10 @@
     margin-top: 2rem;
     margin-left: -2.5rem;
     height: 12.5rem;
+  }
+
+  .carouselText h2 {
+    font-size: 2.5rem;
   }
 
   .dotPagination {

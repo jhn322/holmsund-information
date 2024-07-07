@@ -160,6 +160,22 @@ body {
   font-size: 1.1rem;
 }
 
+/* ---- Darken if on the current path in addon only ---- */
+.currentPageImage {
+  filter: brightness(0.1);
+}
+
+.currentPageMessage {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10rem;
+  color: var(--white-text-color);
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 /* Small phones */
 @media only screen and (max-width: 389px) {
   .expandedText {
@@ -174,7 +190,8 @@ body {
     font-size: 2.5rem;
   }
 
-  .cardOverlay h3 {
+  .cardOverlay h3,
+  .currentPageMessage {
     font-size: 1.5rem;
   }
 }
@@ -185,7 +202,8 @@ body {
     font-size: 2.5rem;
   }
 
-  .cardOverlay h3 {
+  .cardOverlay h3,
+  .currentPageMessage {
     font-size: 1.3rem;
   }
 }
@@ -213,12 +231,17 @@ body {
     height: 30rem;
   }
 
-  .cardOverlay h3 {
+  .cardOverlay h3,
+  .currentPageMessage {
     font-size: 1.5rem;
   }
 
   .expandedText {
     margin-top: 2rem;
+  }
+
+  .currentPageMessage {
+    bottom: 8rem;
   }
 }
 
@@ -249,12 +272,17 @@ body {
     height: 30rem;
   }
 
-  .cardOverlay h3 {
+  .cardOverlay h3,
+  .currentPageMessage {
     font-size: 1.7rem;
   }
 
   .expandedText {
     margin-top: 5rem;
+  }
+
+  .currentPageMessage {
+    bottom: 8rem;
   }
 }
 
@@ -294,7 +322,8 @@ body {
     height: 35rem;
   }
 
-  .cardOverlay h3 {
+  .cardOverlay h3,
+  .currentPageMessage {
     font-size: 1.7rem;
   }
 
@@ -316,6 +345,10 @@ body {
     color: var(--black-text-color);
     padding: 0.7rem 1.3rem;
     border: none;
+  }
+
+  .currentPageMessage {
+    bottom: 8rem;
   }
 }
 
@@ -349,7 +382,8 @@ body {
     height: 40rem;
   }
 
-  .cardOverlay h3 {
+  .cardOverlay h3,
+  .currentPageMessage {
     font-size: 1.7rem;
   }
 
@@ -372,5 +406,9 @@ body {
     color: var(--black-text-color);
     padding: 0.7rem 1.3rem;
     border: none;
+  }
+
+  .currentPageMessage {
+    bottom: 4rem;
   }
 }
