@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
 
 // CSS
@@ -19,6 +19,9 @@ import galleryImage4 from "../../assets/discover/discover4.jpg";
 import galleryCircle from "../../assets/other/circle.png";
 
 const GalleryAddon1 = ({ title }) => {
+  const location = useLocation();
+  const currentPath = location.pathname;
+
   const images = [
     {
       url: galleryImage1,
@@ -147,9 +150,22 @@ const GalleryAddon1 = ({ title }) => {
                     index === currentIndex ? styles.active : ""
                   }`}
                 >
-                  <NavLink to={image.link}>
-                    <img src={image.url} alt={`Slide ${index}`} />
-                  </NavLink>
+                  {currentPath === image.link ? (
+                    <div className={styles.currentPageOverlay}>
+                      <img
+                        src={image.url}
+                        alt={`Slide ${index}`}
+                        className={styles.currentPageImage}
+                      />
+                      <div className={styles.currentPageMessage}>
+                        Nuvarande Sida
+                      </div>
+                    </div>
+                  ) : (
+                    <NavLink to={image.link}>
+                      <img src={image.url} alt={`Slide ${index}`} />
+                    </NavLink>
+                  )}
                 </figure>
               ))}
               <nav

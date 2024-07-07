@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
 
 // CSS
@@ -19,6 +19,9 @@ import galleryImage4 from "../../assets/activity/activity4.jpg";
 import galleryCircle from "../../assets/other/circle.png";
 
 const GalleryAddon3 = ({ title }) => {
+  const location = useLocation();
+  const currentPath = location.pathname;
+
   const images = [
     {
       url: galleryImage1,
@@ -147,9 +150,22 @@ const GalleryAddon3 = ({ title }) => {
                     index === currentIndex ? styles.active : ""
                   }`}
                 >
-                  <NavLink to={image.link}>
-                    <img src={image.url} alt={`Slide ${index}`} />
-                  </NavLink>
+                  {currentPath === image.link ? (
+                    <div className={styles.currentPageOverlay}>
+                      <img
+                        src={image.url}
+                        alt={`Slide ${index}`}
+                        className={styles.currentPageImage}
+                      />
+                      <div className={styles.currentPageMessage}>
+                        Nuvarande Sida
+                      </div>
+                    </div>
+                  ) : (
+                    <NavLink to={image.link}>
+                      <img src={image.url} alt={`Slide ${index}`} />
+                    </NavLink>
+                  )}
                 </figure>
               ))}
               <nav
@@ -179,7 +195,7 @@ const GalleryAddon3 = ({ title }) => {
                   className={`${styles.hoverContainer} ${styles2.hoverContainer}`}
                 >
                   <h2>{images[currentIndex].title}</h2>
-                  <p>{images[currentIndex].text} </p>
+                  <p>{images[currentIndex].text}</p>
                   <div className={styles.linkContainer}>
                     <a
                       className={`${styles.carouselLink} ${styles2.carouselLink}`}

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
 
 // CSS
@@ -19,30 +19,33 @@ import galleryImage4 from "../../assets/discover/discoverInspired4.jpg";
 import galleryCircle from "../../assets/other/circle.png";
 
 const GalleryAddon2 = ({ title }) => {
+  const location = useLocation();
+  const currentPath = location.pathname;
+
   const images = [
     {
       url: galleryImage1,
       title: "Badställe",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
-      link: "/upptäck-5",
+      link: "/utforska-5",
     },
     {
       url: galleryImage2,
       title: "Skog",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
-      link: "/upptäck-6",
+      link: "/utforska-6",
     },
     {
       url: galleryImage3,
       title: "Vattentorn",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
-      link: "/upptäck-7",
+      link: "/utforska-7",
     },
     {
       url: galleryImage4,
       title: "Storsjöskolan",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
-      link: "/upptäck-8",
+      link: "/utforska-8",
     },
   ];
 
@@ -147,9 +150,22 @@ const GalleryAddon2 = ({ title }) => {
                     index === currentIndex ? styles.active : ""
                   }`}
                 >
-                  <NavLink to={image.link}>
-                    <img src={image.url} alt={`Slide ${index}`} />
-                  </NavLink>
+                  {currentPath === image.link ? (
+                    <div className={styles.currentPageOverlay}>
+                      <img
+                        src={image.url}
+                        alt={`Slide ${index}`}
+                        className={styles.currentPageImage}
+                      />
+                      <div className={styles.currentPageMessage}>
+                        Nuvarande Sida
+                      </div>
+                    </div>
+                  ) : (
+                    <NavLink to={image.link}>
+                      <img src={image.url} alt={`Slide ${index}`} />
+                    </NavLink>
+                  )}
                 </figure>
               ))}
               <nav
@@ -179,7 +195,7 @@ const GalleryAddon2 = ({ title }) => {
                   className={`${styles.hoverContainer} ${styles2.hoverContainer}`}
                 >
                   <h2>{images[currentIndex].title}</h2>
-                  <p>{images[currentIndex].text} </p>
+                  <p>{images[currentIndex].text}</p>
                   <div className={styles.linkContainer}>
                     <a
                       className={`${styles.carouselLink} ${styles2.carouselLink}`}
