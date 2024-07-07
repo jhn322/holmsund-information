@@ -4,11 +4,11 @@ import React from "react";
 import styles from "../../styles/pages/CookiesPage.module.css";
 
 // Components
-import LayoutLegal from "../layouts/LayoutLegal";
+import LayoutOther from "../layouts/LayoutOther";
 
 const CookiesPage = () => {
   return (
-    <LayoutLegal renderCookiesCircleAddon={true}>
+    <LayoutOther renderCookiesCircleAddon={true}>
       <div className={styles.container}>
         <h3 className={styles.title}>Generellt</h3>
         <p className={styles.text}>
@@ -63,7 +63,7 @@ const CookiesPage = () => {
           <em>Verkställandedatum: 2024-06-19</em>
         </p>
       </div>
-    </LayoutLegal>
+    </LayoutOther>
   );
 };
 

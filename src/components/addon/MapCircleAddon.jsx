@@ -1,0 +1,46 @@
+// CSS
+import styles from "../../styles/home/ContentCircle.module.css";
+// Component specific styling
+import styles2 from "../../styles/addon/MapCircleAddon.module.css";
+
+// Images
+import circle1Image from "../../assets/other/circle1.png";
+import circle2Image from "../../assets/other/circleOrange.png";
+
+const MapCircleAddon = () => {
+  return (
+    <section className={styles.contentContainer}>
+      <div className={styles.innerContent}>
+        <article className={styles.content}>
+          <div className={`${styles.textContent} ${styles2.hidden}`}>
+            <header>
+              <h2 className={styles2.titleContent}>Kartor</h2>
+            </header>
+            <p className={styles.paragraphContent}>
+              Utforska Holmsund med kartor som ger en översiktlig bild av
+              stadsplanering, grönområden och infrastruktur, perfekt för att
+              navigera och upptäcka vår samhälls charm och funktioner.
+            </p>
+          </div>
+        </article>
+      </div>
+      <aside className={styles2.circleContainer}>
+        <div className={styles.circleBackground}>
+          <h2>double circle</h2>
+          <img
+            src={circle2Image}
+            className={styles.circleBack}
+            alt="Circle 2"
+          />
+          <img
+            src={circle1Image}
+            className={styles.circleFront}
+            alt="Circle 1"
+          />
+        </div>
+      </aside>
+    </section>
+  );
+};
+
+export default MapCircleAddon;

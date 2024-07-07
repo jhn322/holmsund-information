@@ -1,0 +1,82 @@
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+}
+
+.innerContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 0 3rem 0;
+}
+
+.titleContent {
+  font-size: 2.25rem;
+  margin-bottom: 3rem;
+  margin-top: 5rem;
+}
+
+.circleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--hover-color);
+  overflow: hidden;
+}
+
+.hidden {
+  opacity: 1;
+}
+
+/* Uncommon phone size */
+@media only screen and (min-width: 500px) and (max-width: 599px) {
+  .titleContent {
+    font-size: 2.5rem;
+  }
+}
+
+/* Small Tablet */
+@media only screen and (min-width: 600px) and (max-width: 769px) {
+  .titleContent {
+    font-size: 2.5rem;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 770px) {
+  .contentContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .innerContent {
+    flex-direction: column;
+    width: 50%;
+    padding: 3rem 0;
+  }
+
+  .titleContent {
+    font-size: 3rem;
+    max-width: 31.25rem;
+  }
+
+  .circleContainer {
+    width: 50%;
+    height: 90vh;
+    overflow: hidden;
+    padding: 2rem 0;
+  }
+}
+
+/* Fonts */
+@media only screen and (min-width: 1200px) {
+  .titleContent {
+    font-size: 3.5rem;
+  }
+}

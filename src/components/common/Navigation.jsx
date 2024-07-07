@@ -40,7 +40,12 @@ const Navigation = () => {
   const decodePath = (path) => decodeURIComponent(path);
 
   const decodedCurrentPath = decodePath(currentPath);
-  const pathsToExclude = ["/användarvillkor", "/om-oss", "/cookiepolicy"];
+  const pathsToExclude = [
+    "/användarvillkor",
+    "/om-oss",
+    "/cookiepolicy",
+    "/kartor",
+  ];
   const shouldBeTransparent = !pathsToExclude.includes(decodedCurrentPath);
 
   // Toggles the menu open/close
@@ -637,8 +642,8 @@ const Navigation = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/karta" activeclassname={styles.active}>
-                  <h4>Karta</h4>
+                <NavLink to="/kartor" activeclassname={styles.active}>
+                  <h4>Kartor</h4>
                 </NavLink>
               </li>
             </ul>

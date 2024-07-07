@@ -4,11 +4,11 @@ import React from "react";
 import styles from "../../styles/pages/AboutUsPage.module.css";
 
 // Components
-import LayoutLegal from "../layouts/LayoutLegal";
+import LayoutOther from "../layouts/LayoutOther";
 
 const AboutUsPage = () => {
   return (
-    <LayoutLegal renderAboutCircleAddon={true}>
+    <LayoutOther renderAboutCircleAddon={true}>
       <div className={styles.container}>
         <h2 className={styles.title}>Om Holmsund</h2>
         <p className={styles.text}>
@@ -50,7 +50,7 @@ const AboutUsPage = () => {
           nyttig och inspirerande.
         </p>
       </div>
-    </LayoutLegal>
+    </LayoutOther>
   );
 };
 

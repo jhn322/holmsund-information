@@ -1,36 +1,15 @@
-import { useState, useEffect } from "react";
+import react from "react";
 
 // Components
-import LayoutMainPage from "../layouts/LayoutPageMain";
+import LayoutLegal from "../layouts/LayoutOther";
 
 // CSS
 import styles from "../../styles/pages/MapPage.module.css";
 
-// Images
-import header17 from "../../assets/header/header17.jpg";
-import header18 from "../../assets/header/header18.jpg";
-import header19 from "../../assets/header/header19.jpg";
-import header20 from "../../assets/header/header20.jpg";
-
 const MapPage = () => {
-  const headerImages = [header17, header18, header19, header20];
-
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex(
-        (prevIndex) => (prevIndex + 1) % headerImages.length
-      );
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [headerImages.length]);
-
   return (
-    <LayoutMainPage
-      headerTitle="Map Page"
-      headerBackgroundImage={headerImages[currentImageIndex]}
+    <LayoutLegal
+      renderMapCircleAddon={true}
       renderDiscoverAddon2={true}
       renderActivityAddon1={true}
       renderGalleryAddon1={true}
@@ -54,8 +33,48 @@ const MapPage = () => {
             title="Karta av Holmsund"
           ></iframe>
         </div>
+        <div className={styles.downloadMap}>
+          <div className={styles.downloadInner}>
+            <a href="https://www.umea.se/download/18.2bd9ced91726ea4d7b4e0/1591359485936/Karta%20%C3%B6ver%20f%C3%B6rbudsomr%C3%A5de,%20Holmsund.pdf">
+              <h3>Ladda ner karta över Holmsunds Förbundsområde</h3>
+            </a>
+            <div className={styles.description}>
+              <p>
+                Holmsunds förbundsområde är en del av Holmsund i Sverige och
+                utgör ett administrativt område inom vilket olika typer av
+                samhällsservice och infrastruktur planeras och administreras.
+              </p>
+            </div>
+
+            <div>
+              <a href="https://www.umea.se/download/18.1b050b4218a5de7f11e1969/1694097655160/%C3%96versiktsplan%20f%C3%B6r%20Holmsund%20och%20Obbola%20%E2%80%93%20samr%C3%A5d.pdf">
+                <h3>Ladda ner Översiktsplan för Holmsund</h3>
+              </a>
+              <div className={styles.description}>
+                <p>
+                  Holmsunds översiktsplan är en strategisk plan som beskriver
+                  framtida utvecklingsmål och förvaltning av Holmsund med fokus
+                  på samhällsbyggnad, infrastruktur och miljö.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <a href="https://www.umea.se/download/18.670b9ed18a0718f46c1fe86/1692698499312/Plankarta%20F%C3%B6p%20Holmsund-Obbola%20%E2%80%93%20samr%C3%A5d.pdf">
+                <h3>Ladda ner Holmsunds Plankarta</h3>
+              </a>
+              <div className={styles.description}>
+                <p>
+                  Holmsunds plankarta är en detaljerad kartbild som visar
+                  aktuell markanvändning, zonindelning och planerad utveckling
+                  inom Holmsunds geografiska område.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </LayoutMainPage>
+    </LayoutLegal>
   );
 };
 

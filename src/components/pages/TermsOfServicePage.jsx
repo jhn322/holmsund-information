@@ -4,11 +4,11 @@ import React from "react";
 import styles from "../../styles/pages/TermsOfServicePage.module.css";
 
 // Components
-import LayoutLegal from "../layouts/LayoutLegal";
+import LayoutOther from "../layouts/LayoutOther";
 
 const TermsOfServicePage = () => {
   return (
-    <LayoutLegal renderTermsCircleAddon={true}>
+    <LayoutOther renderTermsCircleAddon={true}>
       <div className={styles.container}>
         <h3 className={styles.title}>1. Generellt</h3>
         <p className={styles.text}>
@@ -72,7 +72,7 @@ const TermsOfServicePage = () => {
           <em>Verkställandedatum: 2024-06-19</em>
         </p>
       </div>
-    </LayoutLegal>
+    </LayoutOther>
   );
 };
 

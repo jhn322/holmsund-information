@@ -118,7 +118,7 @@ const App = () => {
             element={<GalleryPage4 page="galleri-4" />}
           />
           <Route path="/väder" element={<WeatherPage page="väder" />} />
-          <Route path="/karta" element={<MapPage page="karta" />} />
+          <Route path="/kartor" element={<MapPage page="kartor" />} />
           <Route path="/om-oss" element={<AboutUsPage page="om-oss" />} />
           <Route
             path="/cookiepolicy"
