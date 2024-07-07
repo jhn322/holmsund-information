@@ -4,7 +4,7 @@ import styles from "../../styles/home/ContentCircle.module.css";
 import styles2 from "../../styles/addon/MapCircleAddon.module.css";
 
 // Images
-import circle1Image from "../../assets/other/circle1.png";
+import circle1Image from "../../assets/other/mapCircle.jpg";
 import circle2Image from "../../assets/other/circleOrange.png";
 
 const MapCircleAddon = () => {
