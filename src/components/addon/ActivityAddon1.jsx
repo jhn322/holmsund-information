@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
+import { useLocation } from "react-router-dom";
 
 // CSS
 import styles from "../../styles/home/Activity.module.css";
@@ -18,6 +19,8 @@ import featuredCircle from "../../assets/other/circle.png";
 
 const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   const slides = [
     {
@@ -88,9 +91,26 @@ const Carousel = () => {
               index === activeIndex ? styles.active : ""
             }`}
           >
-            <a href={slide.link}>
-              <img src={slide.src} alt={`Slide ${index + 1}`} />
-            </a>
+            {currentPath === slide.link ? (
+              <div
+                className={`${styles.currentPageOverlay} ${styles2.currentPageOverlay}`}
+              >
+                <img
+                  src={slide.src}
+                  alt={`Slide ${index + 1}`}
+                  className={`${styles.currentPageImage} ${styles2.currentPageImage}`}
+                />
+                <div
+                  className={`${styles.currentPageMessage} ${styles2.currentPageMessage}`}
+                >
+                  Nuvarande Sida
+                </div>
+              </div>
+            ) : (
+              <a href={slide.link}>
+                <img src={slide.src} alt={`Slide ${index + 1}`} />
+              </a>
+            )}
             <div className={styles.slideCounter}>
               {index + 1}/{slides.length}
             </div>
