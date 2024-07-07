@@ -28,6 +28,7 @@ import Footer from "../common/Footer";
 
 const LayoutPageOther = ({
   children,
+  renderSeparatorAddon = false,
   renderTermsCircleAddon = false,
   renderCookiesCircleAddon = false,
   renderAboutCircleAddon = false,
@@ -113,7 +114,7 @@ const LayoutPageOther = ({
       {renderMapCircleAddon && <MapCircleAddon />}
       <Breadcrumb />
       <section>{children}</section>
-      <SeparatorAddon />
+      {renderSeparatorAddon && <SeparatorAddon />}
       {shuffleComponents}
       <Extra />
       <ScrollDown />

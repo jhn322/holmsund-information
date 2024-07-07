@@ -9,6 +9,7 @@ import styles from "../../styles/pages/MapPage.module.css";
 const MapPage = () => {
   return (
     <LayoutLegal
+      renderSeparatorAddon={true}
       renderMapCircleAddon={true}
       renderDiscoverAddon2={true}
       renderActivityAddon1={true}
