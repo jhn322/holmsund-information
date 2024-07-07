@@ -36,6 +36,14 @@
 .googleMaps iframe {
   border: 0;
   width: 100%;
-  height: 480px;
+  height: 45rem;
   border-radius: 10px;
+  max-width: 80rem;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1100px) {
+  .googleMaps iframe {
+    height: 55rem;
+  }
 }
