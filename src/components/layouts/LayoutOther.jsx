@@ -7,6 +7,7 @@ import CookiesCircleAddon from "../addon/CookiesCircleAddon";
 import AboutCircleAddon from "../addon/AboutCircleAddon";
 import MapCircleAddon from "../addon/MapCircleAddon";
 import Breadcrumb from "../common/Breadcrumb";
+import OtherAddon from "../addon/OtherAddon";
 import SeparatorAddon from "../addon/SeparatorAddon";
 import ActivityAddon1 from "../addon/ActivityAddon1";
 import ActivityAddon2 from "../addon/ActivityAddon2";
@@ -28,6 +29,7 @@ import Footer from "../common/Footer";
 
 const LayoutPageOther = ({
   children,
+  renderOtherAddon = false,
   renderSeparatorAddon = false,
   renderTermsCircleAddon = false,
   renderCookiesCircleAddon = false,
@@ -116,6 +118,7 @@ const LayoutPageOther = ({
       <section>{children}</section>
       {renderSeparatorAddon && <SeparatorAddon />}
       {shuffleComponents}
+      {renderOtherAddon && <OtherAddon />}
       <Extra />
       <ScrollDown />
       <ScrollUp />

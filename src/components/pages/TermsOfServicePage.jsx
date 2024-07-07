@@ -8,7 +8,7 @@ import LayoutOther from "../layouts/LayoutOther";
 
 const TermsOfServicePage = () => {
   return (
-    <LayoutOther renderTermsCircleAddon={true}>
+    <LayoutOther renderTermsCircleAddon={true} renderOtherAddon={true}>
       <div className={styles.container}>
         <h3 className={styles.title}>1. Generellt</h3>
         <p className={styles.text}>

@@ -8,7 +8,7 @@ import LayoutOther from "../layouts/LayoutOther";
 
 const CookiesPage = () => {
   return (
-    <LayoutOther renderCookiesCircleAddon={true}>
+    <LayoutOther renderCookiesCircleAddon={true} renderOtherAddon={true}>
       <div className={styles.container}>
         <h3 className={styles.title}>Generellt</h3>
         <p className={styles.text}>

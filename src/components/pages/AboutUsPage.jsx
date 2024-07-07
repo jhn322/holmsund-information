@@ -8,7 +8,7 @@ import LayoutOther from "../layouts/LayoutOther";
 
 const AboutUsPage = () => {
   return (
-    <LayoutOther renderAboutCircleAddon={true}>
+    <LayoutOther renderAboutCircleAddon={true} renderOtherAddon={true}>
       <div className={styles.container}>
         <h2 className={styles.title}>Om Holmsund</h2>
         <p className={styles.text}>
