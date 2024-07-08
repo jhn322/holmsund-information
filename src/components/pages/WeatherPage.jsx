@@ -161,7 +161,7 @@ const WeatherPage = () => {
                 <img
                   className={styles.img}
                   src={day.day.condition.icon}
-                  alt="Weather Icon"
+                  alt="Weather Icons"
                 />
               </div>
             ))}
