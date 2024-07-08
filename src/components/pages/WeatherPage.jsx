@@ -111,7 +111,7 @@ const WeatherPage = () => {
             <h1>Nuvarande väder</h1>
             <p>Temperatur: {weatherData.current.temp_c}°C</p>
             <p>Luftfuktighet: {weatherData.current.humidity}%</p>
-            <p>Vind: {weatherData.current.wind_kph} kph</p>
+            <p>Vind: {weatherData.current.wind_kph} km/h</p>
             <p>
               Väder: {translateCondition(weatherData.current.condition.text)}
             </p>
