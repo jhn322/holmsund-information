@@ -5,7 +5,7 @@ import styles2 from "../../styles/addon/CookiesCircleAddon.module.css";
 
 // Images
 import circle1Image from "../../assets/other/cookiesCircle.jpg";
-import circle2Image from "../../assets/other/circleWhite.png";
+import circle2Image from "../../assets/other/circleOrange.png";
 
 const CookiesCircleAddon = () => {
   return (

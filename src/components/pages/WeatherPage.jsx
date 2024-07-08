@@ -29,8 +29,9 @@ const WeatherPage = () => {
 
   return (
     <LayoutMainPage
-      headerTitle="Weather Page"
+      headerTitle="Väder i Holmsund"
       headerBackgroundImage={headerImages[currentImageIndex]}
+      renderWeatherCircleAddon={true}
       renderDiscoverAddon4={true}
       renderActivityAddon3={true}
       renderGalleryAddon2={true}

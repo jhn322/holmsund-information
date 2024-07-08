@@ -66,7 +66,7 @@ const Extra = () => {
                     </div>
                   </div>
                 </div>
-                <NavLink to="/karta">
+                <NavLink to="/kartor">
                   {" "}
                   <p className={styles.mapBtnText}>
                     Se karta över Holmsund

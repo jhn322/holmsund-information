@@ -5,7 +5,7 @@ import styles from "../../styles/home/ContentCircle.module.css";
 
 // Images
 import circle1Image from "../../assets/other/circle1.png";
-import circle2Image from "../../assets/other/circle2.png";
+import circle2Image from "../../assets/other/circlePurple.png";
 
 const ContentCircle = () => {
   const contentRef = useRef(null);

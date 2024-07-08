@@ -17,6 +17,7 @@ import GalleryAddon1 from "../addon/GalleryAddon1";
 import GalleryAddon2 from "../addon/GalleryAddon2";
 import GalleryAddon3 from "../addon/GalleryAddon3";
 import GalleryAddon4 from "../addon/GalleryAddon4";
+import MapCircleAddon from "../addon/WeatherCircleAddon";
 import Extra from "../common/Extra";
 import ScrollDown from "../common/ScrollDown";
 import ScrollUp from "../common/ScrollUp";
@@ -47,6 +48,7 @@ const LayoutPageMain = ({
   renderGalleryAddon2 = false,
   renderGalleryAddon3 = false,
   renderGalleryAddon4 = false,
+  renderWeatherCircleAddon = false,
 }) => {
   const [shuffleComponents, setShuffleComponents] = useState([]);
 
@@ -106,6 +108,7 @@ const LayoutPageMain = ({
         title={headerTitle}
         backgroundImage={headerBackgroundImage}
       />
+      {renderWeatherCircleAddon && <MapCircleAddon />}
       <Breadcrumb />
       <section>{children}</section>
       <SeparatorAddon />

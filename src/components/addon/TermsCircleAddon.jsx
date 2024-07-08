@@ -5,7 +5,7 @@ import styles2 from "../../styles/addon/TermsCircleAddon.module.css";
 
 // Images
 import circle1Image from "../../assets/other/termsofserviceCircle.jpg";
-import circle2Image from "../../assets/other/circleYellow.png";
+import circle2Image from "../../assets/other/circleWhite.png";
 
 const TermsCircleAddon = () => {
   return (
