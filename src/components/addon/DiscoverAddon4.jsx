@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { trackDiscoverButtonClick } from "../analytics/addon";
 import styles from "../../styles/home/Discover.module.css";
 import discoverImage1 from "../../assets/gallery/gallery1.jpg";
 import discoverImage2 from "../../assets/gallery/gallery2.jpg";
@@ -112,6 +113,11 @@ const DiscoverAddon1 = ({ title }) => {
     setOverlayStates(newOverlayStates);
   };
 
+  // Google Analytics
+  const handleButtonClick = (buttonText, buttonUrl) => {
+    trackDiscoverButtonClick(buttonText, buttonUrl);
+  };
+
   return (
     <section>
       <main ref={discoverContainerRef} className={styles.discoverContainer}>
@@ -149,6 +155,7 @@ const DiscoverAddon1 = ({ title }) => {
                         <button
                           className={styles.expandedBtn}
                           onClick={() => {
+                            handleButtonClick(card.title, card.link);
                             window.location.href = card.link;
                           }}
                         >

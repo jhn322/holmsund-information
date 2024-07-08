@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { trackHeaderAddonPageClick } from "../analytics/addon";
 import styles from "../../styles/addon/HeaderAddon.module.css";
 import styles2 from "../../styles/addon/HeaderAddonPage.module.css";
 import styles3 from "../../styles/home/Header.module.css";
@@ -58,7 +59,16 @@ const HeaderAddonPage = ({ title, backgroundImage }) => {
         </h1>
         <article className={`${styles.btnContainer} ${styles3.btnContainer}`}>
           <NavLink to={basePath}>
-            <button className={`${styles.headerBtn} ${styles3.headerBtn}`}>
+            <button
+              className={`${styles.headerBtn} ${styles3.headerBtn}`}
+              onClick={() => {
+                trackHeaderAddonPageClick(
+                  "Header Button",
+                  categoryMessages[currentCategory],
+                  basePath
+                );
+              }}
+            >
               {categoryMessages[currentCategory]} denna {currentSeason}
             </button>
           </NavLink>

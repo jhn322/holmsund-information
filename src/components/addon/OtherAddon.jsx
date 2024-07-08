@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { trackOtherAddonElementClick } from "../analytics/addon";
 import styles from "../../styles/home/Discover.module.css";
 import styles2 from "../../styles/addon/OtherAddon.module.css";
 import otherImage1 from "../../assets/other/aboutusCircle.jpg";
@@ -121,6 +122,11 @@ const OtherAddon = () => {
                           <button
                             className={styles.expandedBtn}
                             onClick={() => {
+                              trackOtherAddonElementClick(
+                                "Card",
+                                card.title,
+                                card.link
+                              );
                               window.location.href = card.link;
                             }}
                           >

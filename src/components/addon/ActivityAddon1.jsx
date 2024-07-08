@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import { useLocation } from "react-router-dom";
+import { trackActivityElementClick } from "../analytics/addon";
 import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
 import styles from "../../styles/home/Activity.module.css";
 import styles2 from "../../styles/addon/ActivityAddon1.module.css";
@@ -74,6 +75,11 @@ const Carousel = () => {
     trackMouse: true,
   });
 
+  // Google Analytics
+  const trackElementClickEvent = (elementType, elementText, elementUrl) => {
+    trackActivityElementClick(elementType, elementText, elementUrl);
+  };
+
   return (
     <section {...swipeHandlers} className={styles.carousel}>
       <main className={styles.container}>
@@ -100,7 +106,12 @@ const Carousel = () => {
                 </div>
               </div>
             ) : (
-              <a href={slide.link}>
+              <a
+                href={slide.link}
+                onClick={() =>
+                  trackElementClickEvent("image_link", slide.title, slide.link)
+                }
+              >
                 <img src={slide.src} alt={`Slide ${index + 1}`} />
               </a>
             )}
@@ -108,17 +119,45 @@ const Carousel = () => {
               {index + 1}/{slides.length}
             </div>
             <figcaption className={styles.caption}>
-              <a href={slide.link}>
+              <a
+                href={slide.link}
+                onClick={() =>
+                  trackElementClickEvent(
+                    "caption_title",
+                    slide.title,
+                    slide.link
+                  )
+                }
+              >
                 <h3 className={styles.captionTitle}>{slide.title}</h3>
               </a>
               <p>{truncateDescription(slide.description, 25)}</p>
               <div className={styles.linkContainer}>
-                <a className={styles.captionLink} href={slide.link}>
+                <a
+                  className={styles.captionLink}
+                  href={slide.link}
+                  onClick={() =>
+                    trackElementClickEvent(
+                      "caption_link",
+                      "Läs Mer...",
+                      slide.link
+                    )
+                  }
+                >
                   Läs Mer...
                 </a>
               </div>
               <div className={styles.arrowContainer}>
-                <a href={slide.link}>
+                <a
+                  href={slide.link}
+                  onClick={() =>
+                    trackElementClickEvent(
+                      "arrow_icon",
+                      "Arrow Icon",
+                      slide.link
+                    )
+                  }
+                >
                   <RxArrowRight className={styles.arrowIcon} />
                 </a>
               </div>

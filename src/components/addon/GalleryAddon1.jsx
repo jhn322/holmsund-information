@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
+import { trackGalleryElementClick } from "../analytics/addon";
 import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
 import styles from "../../styles/home/Gallery.module.css";
 import styles2 from "../../styles/addon/GalleryAddon1.module.css";
@@ -103,7 +104,11 @@ const GalleryAddon1 = ({ title }) => {
   const handleNavMouseLeave = () => {
     setIsNavHovered(false);
   };
-  // <---------------------------------------------------------------------------> //
+
+  // Google Analytics
+  const trackElementClickEvent = (elementType, elementText, elementUrl) => {
+    trackGalleryElementClick(elementType, elementText, elementUrl);
+  };
 
   return (
     <section>
@@ -155,7 +160,16 @@ const GalleryAddon1 = ({ title }) => {
                       </div>
                     </div>
                   ) : (
-                    <NavLink to={image.link}>
+                    <NavLink
+                      to={image.link}
+                      onClick={() =>
+                        trackElementClickEvent(
+                          "carousel_img",
+                          image.title,
+                          image.link
+                        )
+                      }
+                    >
                       <img src={image.url} alt={`Slide ${index}`} />
                     </NavLink>
                   )}
@@ -193,12 +207,28 @@ const GalleryAddon1 = ({ title }) => {
                     <a
                       className={`${styles.carouselLink} ${styles2.carouselLink}`}
                       href={images[currentIndex].link}
+                      onClick={() =>
+                        trackElementClickEvent(
+                          "carousel_link",
+                          "Läs Mer...",
+                          images[currentIndex].link
+                        )
+                      }
                     >
                       Läs Mer...
                     </a>
                   </div>
                   <div className={styles.arrowContainer}>
-                    <a href={images[currentIndex].link}>
+                    <a
+                      href={images[currentIndex].link}
+                      onClick={() =>
+                        trackElementClickEvent(
+                          "arrow_icon",
+                          "Arrow Icon",
+                          images[currentIndex].link
+                        )
+                      }
+                    >
                       <RxArrowRight
                         className={`${styles.arrowIcon} ${styles2.arrowIcon}`}
                       />
