@@ -54,18 +54,34 @@ const LayoutPageMain = ({
 
   useEffect(() => {
     const components = [
-      renderDiscoverAddon1 && <DiscoverAddon1 title={discoverTitle1} />,
-      renderDiscoverAddon2 && <DiscoverAddon2 title={discoverTitle2} />,
-      renderDiscoverAddon3 && <DiscoverAddon3 title={discoverTitle3} />,
-      renderDiscoverAddon4 && <DiscoverAddon4 title={discoverTitle4} />,
-      renderActivityAddon1 && <ActivityAddon1 />,
-      renderActivityAddon2 && <ActivityAddon2 />,
-      renderActivityAddon3 && <ActivityAddon3 />,
-      renderActivityAddon4 && <ActivityAddon4 />,
-      renderGalleryAddon1 && <GalleryAddon1 title={galleryTitle1} />,
-      renderGalleryAddon2 && <GalleryAddon2 title={galleryTitle2} />,
-      renderGalleryAddon3 && <GalleryAddon3 title={galleryTitle3} />,
-      renderGalleryAddon4 && <GalleryAddon4 title={galleryTitle4} />,
+      renderDiscoverAddon1 && (
+        <DiscoverAddon1 key="discover1" title={discoverTitle1} />
+      ),
+      renderDiscoverAddon2 && (
+        <DiscoverAddon2 key="discover2" title={discoverTitle2} />
+      ),
+      renderDiscoverAddon3 && (
+        <DiscoverAddon3 key="discover3" title={discoverTitle3} />
+      ),
+      renderDiscoverAddon4 && (
+        <DiscoverAddon4 key="discover4" title={discoverTitle4} />
+      ),
+      renderActivityAddon1 && <ActivityAddon1 key="activity1" />,
+      renderActivityAddon2 && <ActivityAddon2 key="activity2" />,
+      renderActivityAddon3 && <ActivityAddon3 key="activity3" />,
+      renderActivityAddon4 && <ActivityAddon4 key="activity4" />,
+      renderGalleryAddon1 && (
+        <GalleryAddon1 key="gallery1" title={galleryTitle1} />
+      ),
+      renderGalleryAddon2 && (
+        <GalleryAddon2 key="gallery2" title={galleryTitle2} />
+      ),
+      renderGalleryAddon3 && (
+        <GalleryAddon3 key="gallery3" title={galleryTitle3} />
+      ),
+      renderGalleryAddon4 && (
+        <GalleryAddon4 key="gallery4" title={galleryTitle4} />
+      ),
     ].filter(Boolean);
 
     // Function to shuffle array

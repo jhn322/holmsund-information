@@ -7,11 +7,174 @@
   font-family: "Outfit", sans-serif;
 }
 
+h3 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
 .container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: 6rem auto;
+}
+
+.container h1,
+.container h2,
+.container h3,
+.container p {
+  color: var(--white-text-color);
+}
+
+.weatherInfo {
+  width: 100%;
+  margin-bottom: 2rem;
   text-align: center;
-  height: 100vh;
-  background-color: green;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 50rem;
+  background-color: var(--hover-color);
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+}
+
+.weatherInfo h1 {
+  font-size: 2rem;
+  color: var(--black-text-color);
+  padding: 2rem;
+}
+
+.weatherInfo p {
+  color: var(--black-text-color);
+  padding: 0.3rem 0;
+}
+
+.forecastInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 4rem;
+  width: 100%;
+  margin-bottom: 6rem;
+  margin: 0 auto;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+}
+
+.forecastInfo p {
+  padding: 0.3rem 0;
+}
+
+.threeDayTitle {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.threeDayTitle h2 {
+  font-size: 2rem;
+  color: var(--black-text-color);
+}
+
+.forecastDay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+  max-width: 35rem;
+  border-radius: 10px;
+}
+
+.img {
+  padding: 1rem 0;
+  width: 5rem;
+}
+
+.orangeBackground {
+  background-color: var(--nav-color);
+}
+
+.purpleBackground {
+  background-color: var(--accent-color);
+}
+
+.blueBackground {
+  background-color: var(--gallery-color);
+}
+
+/* Uncommon phone size */
+@media only screen and (min-width: 500px) and (max-width: 599px) {
+  .forecastInfo {
+    flex-direction: row;
+  }
+
+  h3,
+  .weatherInfo h1,
+  .threeDayTitle h2 {
+    font-size: 2.25rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Small Tablet */
+@media only screen and (min-width: 600px) and (max-width: 769px) {
+  .forecastInfo {
+    flex-direction: row;
+  }
+
+  h3,
+  .weatherInfo h1,
+  .threeDayTitle h2 {
+    font-size: 2.25rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 770px) and (max-width: 999px) {
+  .forecastInfo {
+    flex-direction: row;
+  }
+
+  h3,
+  .weatherInfo h1,
+  .threeDayTitle h2 {
+    font-size: 2.25rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1000px) {
+  .forecastInfo {
+    flex-direction: row;
+  }
+
+  h3,
+  .weatherInfo h1,
+  .threeDayTitle h2 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
 }
