@@ -1,5 +1,3 @@
-import react from "react";
-
 // Components
 import LayoutLegal from "../layouts/LayoutOther";
 
@@ -15,7 +13,7 @@ const MapPage = () => {
       renderActivityAddon1={true}
       renderGalleryAddon1={true}
       discoverTitle2="Upptäck 2"
-      galleryTitle2="Upptäck 1"
+      galleryTitle1="Upptäck 1"
     >
       <div className={styles.container}>
         <h2 className={styles.title}>Holmsund</h2>

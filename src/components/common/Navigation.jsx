@@ -41,6 +41,7 @@ const Navigation = () => {
 
   const decodedCurrentPath = decodePath(currentPath);
   const pathsToExclude = [
+    "/väder",
     "/användarvillkor",
     "/om-oss",
     "/cookiepolicy",

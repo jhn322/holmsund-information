@@ -36,6 +36,7 @@ const LayoutPageMain = ({
   galleryTitle3,
   galleryTitle4,
   headerBackgroundImage,
+  renderHeaderAddon = true,
   renderActivityAddon1 = false,
   renderActivityAddon2 = false,
   renderActivityAddon3 = false,
@@ -120,10 +121,12 @@ const LayoutPageMain = ({
   return (
     <main>
       <Navigation />
-      <HeaderAddon
-        title={headerTitle}
-        backgroundImage={headerBackgroundImage}
-      />
+      {renderHeaderAddon && (
+        <HeaderAddon
+          title={headerTitle}
+          backgroundImage={headerBackgroundImage}
+        />
+      )}
       {renderWeatherCircleAddon && <MapCircleAddon />}
       <Breadcrumb />
       <section>{children}</section>
