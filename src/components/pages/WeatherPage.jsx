@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 // Components
 import LayoutMainPage from "../layouts/LayoutPageMain";
-import config from "../../config";
+import config from "../../config.js";
 
 // CSS
 import styles from "../../styles/pages/WeatherPage.module.css";
