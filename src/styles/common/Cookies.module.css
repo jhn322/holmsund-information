@@ -8,12 +8,11 @@
 }
 
 .cookiesContainer {
-  display: none; /* REMOVE TO ENABLE */
   position: fixed;
   bottom: 0;
   width: 100%;
   z-index: 999;
-  background-color: var(--primary-color);
+  background-color: var(--nav-color);
   text-align: center;
   padding: 1rem;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
@@ -23,11 +22,11 @@
   margin: 0.5rem 0;
   padding: 0;
   font-size: 1.1rem;
-  color: var(--black-text-color);
+  color: var(--white-text-color);
 }
 
 .cookiesContainer button {
-  color: var(--white-text-color);
+  color: var(--nav-color);
   border-radius: 10px;
   border: none;
   padding: 0.65rem 1.25rem;
@@ -36,14 +35,26 @@
   font-size: 1rem;
 }
 
+.navToCookiepolicy {
+  margin-left: 0.25rem;
+  text-decoration: underline;
+}
+
+.navToCookiepolicy:hover {
+  color: var(--hover-color);
+}
+
+.acceptContainer {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
 .accept {
-  background-color: #4eb646;
+  background-color: var(--hover-color);
+  transition: all 0.3s;
 }
 
 .accept:hover {
-  background-color: #5cda53;
-}
-
-.deny:hover {
-  background-color: #db55c0;
+  background-color: #41e917;
+  color: var(--white-text-color);
 }

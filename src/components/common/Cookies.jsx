@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 // CSS
 import styles from "../../styles/common/Cookies.module.css";
 
 const Cookies = () => {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(() => {
+    const acceptedCookies = localStorage.getItem("acceptedCookies");
+    return acceptedCookies ? false : true;
+  });
 
   const handleAccept = () => {
-    setVisible(false);
-  };
-
-  const handleDeny = () => {
+    localStorage.setItem("acceptedCookies", "true");
     setVisible(false);
   };
 
@@ -18,13 +19,19 @@ const Cookies = () => {
 
   return (
     <main className={styles.cookiesContainer}>
-      <p>Chocolate chip cookies or vanilla?</p>
-      <button className={styles.deny} onClick={handleDeny}>
-        Deny
-      </button>
-      <button className={styles.accept} onClick={handleAccept}>
-        Accept
-      </button>
+      <p>
+        För att förbättra din upplevelse använder vi teknik för att analysera
+        klicks, navigering och andra interaktioner på vår webbplats. Du kan läs
+        mer i våran cookiepolicy genom att
+        <NavLink to="/cookiepolicy" className={styles.navToCookiepolicy}>
+          klicka här.
+        </NavLink>
+      </p>
+      <div className={styles.acceptContainer}>
+        <button className={styles.accept} onClick={handleAccept}>
+          Jag förstår
+        </button>
+      </div>
     </main>
   );
 };
