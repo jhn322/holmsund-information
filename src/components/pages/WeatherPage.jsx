@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 
 // Components
 import LayoutMainPage from "../layouts/LayoutPageMain";
-import config from "../../../config";
 
 // CSS
 import styles from "../../styles/pages/WeatherPage.module.css";
@@ -11,11 +10,11 @@ const WeatherPage = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [forecastData, setForecastData] = useState(null);
   const [error, setError] = useState(null);
-  const apiKey = config.apiKey;
 
   useEffect(() => {
     const fetchWeatherData = async () => {
       try {
+        const apiKey = import.meta.env.VITE_API_KEY;
         const response = await fetch(
           `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=Holmsund`
         );
@@ -31,6 +30,7 @@ const WeatherPage = () => {
 
     const fetchForecastData = async () => {
       try {
+        const apiKey = import.meta.env.VITE_API_KEY;
         const response = await fetch(
           `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Holmsund&days=3`
         );
@@ -46,7 +46,7 @@ const WeatherPage = () => {
 
     fetchWeatherData();
     fetchForecastData();
-  }, [apiKey]);
+  }, []);
 
   const getDayOfWeek = (dateString) => {
     const date = new Date(dateString);
@@ -74,7 +74,7 @@ const WeatherPage = () => {
       fog: "Dimma",
       clear: "Klart",
       "patchy light rain": "Fläckvis lätt regn",
-      "patchy rain nearby": "Fläckvis regn nära",
+      "patchy rain nearby": "Fläckvis regn i närheten",
     };
 
     for (const key in conditionMappings) {
@@ -118,7 +118,7 @@ const WeatherPage = () => {
             <img
               className={styles.img}
               src={weatherData.current.condition.icon}
-              alt="Weather Icon"
+              alt="Weather Icons"
             />
           </div>
         )}
