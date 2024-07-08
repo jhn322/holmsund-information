@@ -7,7 +7,7 @@
   font-family: "Outfit", sans-serif;
 }
 
-/* Missing page structure with bg */
+/* Missing page structure */
 .MissingContainer {
   display: flex;
   flex-direction: column;
@@ -15,18 +15,21 @@
   justify-content: center;
   min-height: 100vh;
   text-align: center;
-  background-image: url("../assets/other/404.png");
-  background-repeat: no-repeat;
-  background-size: 25rem;
-  background-position-x: center;
-  background-position-y: 5rem;
   background-color: var(--primary-color);
+}
+
+/* Image styling */
+.MissingImage {
+  width: 25rem;
+  max-width: 100%;
+  margin-bottom: 2rem;
+  padding: 1rem;
 }
 
 /* Text with position */
 .MissingText {
   font-size: 1.1rem;
-  margin-top: 25rem;
+  padding: 2rem;
 }
 
 /* Button styling */
@@ -44,8 +47,8 @@
 
 /* Small phones */
 @media only screen and (max-width: 389px) {
-  .MissingContainer {
-    background-size: 22rem;
+  .MissingImage {
+    width: 22rem;
   }
 
   .MissingText {
@@ -59,12 +62,11 @@
 
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 599px) {
-  .MissingContainer {
-    background-size: 28rem;
+  .MissingImage {
+    width: 28rem;
   }
 
   .MissingText {
-    margin-top: 30rem;
     font-size: 1.2rem;
     max-width: 33.75rem;
   }
@@ -77,12 +79,11 @@
 
 /* Small Tablet */
 @media only screen and (min-width: 600px) and (max-width: 769px) {
-  .MissingContainer {
-    background-size: 31rem;
+  .MissingImage {
+    width: 31rem;
   }
 
   .MissingText {
-    margin-top: 36rem;
     font-size: 1.3rem;
   }
 
@@ -94,14 +95,12 @@
 
 /* Desktop */
 @media only screen and (min-width: 770px) {
-  .MissingContainer {
-    background-size: 40rem;
-    background-position-y: 0;
+  .MissingImage {
+    width: 40rem;
   }
 
   .MissingText {
     font-size: 1.3rem;
-    margin-top: 30rem;
   }
 
   .MissingBtn {
