@@ -21,25 +21,25 @@ const GalleryAddon1 = ({ title }) => {
       url: galleryImage1,
       title: "Badställe",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
-      link: "/upptäck-1",
+      link: "/utforska-1",
     },
     {
       url: galleryImage2,
       title: "Skog",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
-      link: "/upptäck-2",
+      link: "/utforska-2",
     },
     {
       url: galleryImage3,
       title: "Vattentorn",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
-      link: "/upptäck-3",
+      link: "/utforska-3",
     },
     {
       url: galleryImage4,
       title: "Storsjöskolan",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
-      link: "/upptäck-4",
+      link: "/utforska-4",
     },
   ];
 
