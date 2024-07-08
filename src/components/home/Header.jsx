@@ -4,6 +4,9 @@ import { NavLink } from "react-router-dom";
 // CSS
 import styles from "../../styles/home/Header.module.css";
 
+// Components
+import { trackHeaderButtonClick } from "../analytics/buttons";
+
 // Images
 import headerSpring1 from "../../assets/header/headerSpring1.jpg";
 import headerSpring2 from "../../assets/header/headerSpring2.jpg";
@@ -70,6 +73,11 @@ const Header = () => {
     setCurrentButton(buttonOptions[randomIndex]);
   }, []);
 
+  // Google Analytics
+  const handleButtonClick = () => {
+    trackHeaderButtonClick(currentButton.text, currentButton.path);
+  };
+
   return (
     <header
       className={headerClass}
@@ -78,10 +86,11 @@ const Header = () => {
       <section className={styles.innerHeader}>
         <article className={styles.header}>
           <h1 className={styles.headerTitle}>{currentSeason} i Holmsund</h1>
-
           <div className={styles.btnContainer}>
             <NavLink to={currentButton.path}>
-              <button className={styles.headerBtn}>{currentButton.text}</button>
+              <button className={styles.headerBtn} onClick={handleButtonClick}>
+                {currentButton.text}
+              </button>
             </NavLink>
           </div>
         </article>

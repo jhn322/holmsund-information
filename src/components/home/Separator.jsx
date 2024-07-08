@@ -3,7 +3,15 @@ import React from "react";
 // CSS
 import styles from "../../styles/home/Separator.module.css";
 
+// Components
+import { trackSeparatorLinkClick } from "../analytics/links";
+
 const Separator = () => {
+  // Google Analytics
+  const handleLinkClick = (linkText, linkUrl) => {
+    trackSeparatorLinkClick(linkText, linkUrl);
+  };
+
   return (
     <section>
       <main className={styles.separatorContainer}>
@@ -18,6 +26,12 @@ const Separator = () => {
               target="_blank"
               rel="noopener noreferrer"
               alt="Twitter website"
+              onClick={() =>
+                handleLinkClick(
+                  "Twitter",
+                  "https://x.com/search?q=%23holmsund&src=typeahead_click"
+                )
+              }
             >
               <span className={styles.link}>Twitter,</span>
             </a>
@@ -26,6 +40,12 @@ const Separator = () => {
               target="_blank"
               rel="noopener noreferrer"
               alt="Instagram website"
+              onClick={() =>
+                handleLinkClick(
+                  "Instagram",
+                  "https://www.instagram.com/explore/locations/c2142469/holmsund-sweden/?hl=en"
+                )
+              }
             >
               <span className={styles.link}>Instagram</span>
             </a>
@@ -35,6 +55,12 @@ const Separator = () => {
               target="_blank"
               rel="noopener noreferrer"
               alt="Facebook website"
+              onClick={() =>
+                handleLinkClick(
+                  "Facebook",
+                  "https://www.facebook.com/groups/415551751837063/?locale=sv_SE"
+                )
+              }
             >
               <span className={styles.link}>Facebook</span>
             </a>
@@ -44,6 +70,12 @@ const Separator = () => {
               target="_blank"
               rel="noopener noreferrer"
               alt="Instagram website"
+              onClick={() =>
+                handleLinkClick(
+                  "Instagram hashtag",
+                  "https://www.instagram.com/explore/locations/240089071/holmsund-vasterbottens-lan-sweden/"
+                )
+              }
             >
               <span className={styles.hashtag}>#Holmsund</span>
             </a>

@@ -7,7 +7,14 @@ import shareImage from "../../assets/other/share.jpg";
 // CSS
 import styles from "../../styles/home/ShareExtra.module.css";
 
+// Components
+import { trackExtraHomeElementClick } from "../analytics/links";
+
 const ExtraHome = () => {
+  const trackNavLinkClick = (buttonText, linkUrl) => {
+    trackExtraHomeElementClick("navlink_button", buttonText, linkUrl);
+  };
+
   return (
     <section className={styles.mainContainer}>
       <header className={styles.inner}>
@@ -42,7 +49,12 @@ const ExtraHome = () => {
                     </div>
                   </article>
                 </article>
-                <NavLink to="/väder">
+                <NavLink
+                  to="/väder"
+                  onClick={() =>
+                    trackNavLinkClick("Kolla vädret i Holmsund", "/väder")
+                  }
+                >
                   {" "}
                   <p className={styles.weatherBtnText}>
                     Kolla vädret i Holmsund
@@ -72,7 +84,12 @@ const ExtraHome = () => {
                     </div>
                   </div>
                 </div>
-                <NavLink to="/kartor">
+                <NavLink
+                  to="/kartor"
+                  onClick={() =>
+                    trackNavLinkClick("Se karta över Holmsund", "/kartor")
+                  }
+                >
                   {" "}
                   <p className={styles.mapBtnText}>
                     Se karta över Holmsund

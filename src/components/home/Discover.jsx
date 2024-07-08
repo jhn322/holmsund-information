@@ -3,6 +3,9 @@ import { useRef, useEffect, useState } from "react";
 // CSS
 import styles from "../../styles/home/Discover.module.css";
 
+// Components
+import { trackDiscoverButtonClick } from "../analytics/buttons";
+
 // Images
 import discoverImage1 from "../../assets/discover/discover1.jpg";
 import discoverImage2 from "../../assets/discover/discover2.jpg";
@@ -108,6 +111,11 @@ const Discover = () => {
     setOverlayStates(newOverlayStates);
   };
 
+  // Google Analytics
+  const handleButtonClick = (buttonText, buttonUrl) => {
+    trackDiscoverButtonClick(buttonText, buttonUrl);
+  };
+
   return (
     <section>
       <main ref={discoverContainerRef} className={styles.discoverContainer}>
@@ -143,6 +151,7 @@ const Discover = () => {
                         <button
                           className={styles.expandedBtn}
                           onClick={() => {
+                            handleButtonClick(card.title, card.link);
                             window.location.href = card.link;
                           }}
                         >
