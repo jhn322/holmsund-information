@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-
-// CSS
+import { trackCookiesElementClick } from "../analytics/common";
 import styles from "../../styles/common/Cookies.module.css";
 
 const Cookies = () => {
@@ -13,6 +12,12 @@ const Cookies = () => {
   const handleAccept = () => {
     localStorage.setItem("acceptedCookies", "true");
     setVisible(false);
+    trackCookiesElementClick("button", "Accept Cookies", null);
+  };
+
+  // Google Analytics
+  const handleNavLinkClick = () => {
+    trackCookiesElementClick("navlink", "Cookie Policy", "/cookiepolicy");
   };
 
   if (!visible) return null;
@@ -23,7 +28,11 @@ const Cookies = () => {
         För att förbättra din upplevelse använder vi teknik för att analysera
         klicks, navigering och andra interaktioner på vår webbplats. Du kan läs
         mer i våran cookiepolicy genom att
-        <NavLink to="/cookiepolicy" className={styles.navToCookiepolicy}>
+        <NavLink
+          to="/cookiepolicy"
+          className={styles.navToCookiepolicy}
+          onClick={handleNavLinkClick}
+        >
           klicka här.
         </NavLink>
       </p>

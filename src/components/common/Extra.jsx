@@ -1,13 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
-// Images
+import { trackExtraElementClick } from "../analytics/common";
+import styles from "../../styles/common/Extra.module.css";
 import image from "../../assets/other/share.jpg";
 
-// CSS
-import styles from "../../styles/common/Extra.module.css";
-
 const Extra = () => {
+  // Google Analytics
+  const handleNavLinkClick = (label) => {
+    trackExtraElementClick("link", label, window.location.href);
+  };
+
   return (
     <section className={styles.mainContainer}>
       <header className={styles.inner}>
@@ -36,11 +38,13 @@ const Extra = () => {
                     </div>
                   </article>
                 </article>
-                <NavLink to="/väder">
-                  {" "}
+                <NavLink
+                  to="/väder"
+                  onClick={() => handleNavLinkClick("Kolla vädret i Holmsund")}
+                >
                   <p className={styles.weatherBtnText}>
                     Kolla vädret i Holmsund
-                  </p>{" "}
+                  </p>
                 </NavLink>
               </div>
             </section>
@@ -66,11 +70,11 @@ const Extra = () => {
                     </div>
                   </div>
                 </div>
-                <NavLink to="/kartor">
-                  {" "}
-                  <p className={styles.mapBtnText}>
-                    Se karta över Holmsund
-                  </p>{" "}
+                <NavLink
+                  to="/kartor"
+                  onClick={() => handleNavLinkClick("Se karta över Holmsund")}
+                >
+                  <p className={styles.mapBtnText}>Se karta över Holmsund</p>
                 </NavLink>
               </div>
             </section>

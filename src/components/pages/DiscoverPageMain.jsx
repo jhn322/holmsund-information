@@ -1,15 +1,8 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-
-// Components
 import LayoutPageMain from "../layouts/LayoutPageMain";
-
-// CSS
 import styles from "../../styles/pages/AllPageMain.module.css";
-// Component specific styling
 import styles2 from "../../styles/pages/DiscoverPageMain.module.css";
-
-// Images
 import header1 from "../../assets/header/header1.jpg";
 import header2 from "../../assets/header/header2.jpg";
 import header3 from "../../assets/header/header3.jpg";

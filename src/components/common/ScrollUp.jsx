@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
-
-// Icons
+import { trackScrollUpElementClick } from "../analytics/common";
 import { RxChevronUp } from "react-icons/rx";
-
-// CSS
 import styles from "../../styles/common/ScrollUp.module.css";
 
 const ScrollUp = () => {
@@ -27,6 +24,9 @@ const ScrollUp = () => {
       top: 0,
       behavior: "smooth",
     });
+
+    // Google Analytics
+    trackScrollUpElementClick("icon", "Scroll Up", null);
   };
 
   return (

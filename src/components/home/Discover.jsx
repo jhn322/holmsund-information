@@ -1,12 +1,6 @@
 import { useRef, useEffect, useState } from "react";
-
-// CSS
+import { trackDiscoverButtonClick } from "../analytics/home";
 import styles from "../../styles/home/Discover.module.css";
-
-// Components
-import { trackDiscoverButtonClick } from "../analytics/buttons";
-
-// Images
 import discoverImage1 from "../../assets/discover/discover1.jpg";
 import discoverImage2 from "../../assets/discover/discover2.jpg";
 import discoverImage3 from "../../assets/discover/discover3.jpg";

@@ -1,9 +1,5 @@
 import { useEffect, useRef } from "react";
-
-// CSS
 import styles from "../../styles/home/ContentCircle.module.css";
-
-// Images
 import circle1Image from "../../assets/other/circle1.png";
 import circle2Image from "../../assets/other/circlePurple.png";
 

@@ -1,7 +1,4 @@
-// Components
 import LayoutLegal from "../layouts/LayoutOther";
-
-// CSS
 import styles from "../../styles/pages/MapPage.module.css";
 
 const MapPage = () => {

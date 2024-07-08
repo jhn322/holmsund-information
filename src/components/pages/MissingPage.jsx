@@ -1,10 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-// CSS
 import styles from "../../styles/pages/MissingPage.module.css";
 
-// Missing page component
 const MissingPage = () => {
   return (
     <main className={styles.MissingContainer}>

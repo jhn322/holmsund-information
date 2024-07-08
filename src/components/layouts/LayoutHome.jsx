@@ -1,6 +1,4 @@
 import React from "react";
-
-// Components
 import Navigation from "../common/Navigation";
 import Header from "../home/Header";
 import ContentCircle from "../home/ContentCircle";

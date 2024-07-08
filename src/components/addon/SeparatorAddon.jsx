@@ -1,6 +1,4 @@
 import React from "react";
-
-// CSS
 import styles from "../../styles/addon/SeparatorAddon.module.css";
 
 const Separator = () => {

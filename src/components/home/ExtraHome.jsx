@@ -1,16 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
-// Images
+import { trackExtraHomeElementClick } from "../analytics/home";
+import styles from "../../styles/home/ShareExtra.module.css";
 import shareImage from "../../assets/other/share.jpg";
 
-// CSS
-import styles from "../../styles/home/ShareExtra.module.css";
-
-// Components
-import { trackExtraHomeElementClick } from "../analytics/links";
-
 const ExtraHome = () => {
+  // Google Analytics
   const trackNavLinkClick = (buttonText, linkUrl) => {
     trackExtraHomeElementClick("navlink_button", buttonText, linkUrl);
   };

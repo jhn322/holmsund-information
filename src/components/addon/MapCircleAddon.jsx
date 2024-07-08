@@ -1,9 +1,5 @@
-// CSS
 import styles from "../../styles/home/ContentCircle.module.css";
-// Component specific styling
 import styles2 from "../../styles/addon/MapCircleAddon.module.css";
-
-// Images
 import circle1Image from "../../assets/other/mapCircle.jpg";
 import circle2Image from "../../assets/other/circleYellow.png";
 

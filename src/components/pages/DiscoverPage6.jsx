@@ -1,12 +1,6 @@
 import React from "react";
-
-// CSS
-import styles from "../../styles/pages/AllPage.module.css";
-
-// Components
 import LayoutPage from "../layouts/LayoutPage";
-
-// Image
+import styles from "../../styles/pages/AllPage.module.css";
 import backgroundImage from "../../assets/discover/discoverPage6.jpg";
 
 const DiscoverPage6 = () => {

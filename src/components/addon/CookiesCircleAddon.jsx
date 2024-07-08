@@ -1,9 +1,5 @@
-// CSS
 import styles from "../../styles/home/ContentCircle.module.css";
-// Component specific styling
 import styles2 from "../../styles/addon/CookiesCircleAddon.module.css";
-
-// Images
 import circle1Image from "../../assets/other/cookiesCircle.jpg";
 import circle2Image from "../../assets/other/circleOrange.png";
 

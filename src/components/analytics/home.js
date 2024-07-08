@@ -1,4 +1,31 @@
-// Home page Separator
+// Header
+export const trackHeaderButtonClick = (buttonText, buttonPath) => {
+  gtag("event", "Button_click", {
+    event_category: "header-button-click",
+    event_label: buttonText,
+    event_path: buttonPath,
+  });
+};
+
+// Discover
+export const trackDiscoverButtonClick = (buttonText, buttonUrl) => {
+  gtag("event", "Button_click", {
+    event_category: "discover-button-click",
+    event_label: buttonText,
+    event_url: buttonUrl,
+  });
+};
+
+// Discover Inspired
+export const trackDiscoverInspiredButtonClick = (buttonText, buttonUrl) => {
+  gtag("event", "Button_click", {
+    event_category: "discover-inspired-button-click",
+    event_label: buttonText,
+    event_url: buttonUrl,
+  });
+};
+
+// Separator
 export const trackSeparatorLinkClick = (linkText, linkUrl) => {
   gtag("event", "Link_click", {
     event_category: "separator-link-click",
@@ -7,7 +34,7 @@ export const trackSeparatorLinkClick = (linkText, linkUrl) => {
   });
 };
 
-// Home page Acitivty
+// Acitivty
 export const trackActivityElementClick = (
   elementType,
   elementText,
@@ -20,7 +47,7 @@ export const trackActivityElementClick = (
   });
 };
 
-// Home page Gallery
+// Gallery
 export const trackGalleryElementClick = (
   elementType,
   elementText,
@@ -33,7 +60,7 @@ export const trackGalleryElementClick = (
   });
 };
 
-// Home page Extra
+// Extra Home
 export const trackExtraHomeElementClick = (
   elementType,
   elementText,

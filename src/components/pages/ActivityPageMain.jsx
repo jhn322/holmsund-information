@@ -1,10 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-
-// Components
 import LayoutPageMain from "../layouts/LayoutPageMain";
-
-// CSS
 import styles from "../../styles/pages/AllPageMain.module.css";
 
 // Images

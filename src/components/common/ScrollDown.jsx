@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
-
-// Icons
+import { trackScrollDownElementClick } from "../analytics/common";
 import { RxChevronDown } from "react-icons/rx";
-
-// CSS
 import styles from "../../styles/common/ScrollDown.module.css";
 
 const ScrollDown = () => {
@@ -35,7 +32,10 @@ const ScrollDown = () => {
     });
     setVisible(false);
     setUsed(true);
-    localStorage.getItem("scrollDownUsed", "true");
+    localStorage.setItem("scrollDownUsed", "true");
+
+    // Google Analytics
+    trackScrollDownElementClick("icon", "Scroll Down", null);
   };
 
   if (used) {

@@ -1,10 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-
-// CSS
 import styles from "../../styles/home/Discover.module.css";
-
-// Images
 import discoverImage1 from "../../assets/discover/discoverInspired1.jpg";
 import discoverImage2 from "../../assets/discover/discoverInspired2.jpg";
 import discoverImage3 from "../../assets/discover/discoverInspired3.jpg";

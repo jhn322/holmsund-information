@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-
-// Components
 import Navigation from "../common/Navigation";
 import TermsCircleAddon from "../addon/TermsCircleAddon";
 import CookiesCircleAddon from "../addon/CookiesCircleAddon";

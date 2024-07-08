@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-
-// CSS
 import styles from "../../styles/addon/HeaderAddon.module.css";
 
 const HeaderAddon = ({ title, backgroundImage }) => {

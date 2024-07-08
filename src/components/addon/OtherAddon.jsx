@@ -1,12 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-
-// CSS
 import styles from "../../styles/home/Discover.module.css";
-// Component specific styling
 import styles2 from "../../styles/addon/OtherAddon.module.css";
-
-// Images
 import otherImage1 from "../../assets/other/aboutusCircle.jpg";
 import otherImage2 from "../../assets/other/cookiesCircle.jpg";
 import otherImage3 from "../../assets/other/termsofserviceCircle.jpg";

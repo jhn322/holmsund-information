@@ -1,17 +1,9 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useSwipeable } from "react-swipeable";
-
-// CSS
-import styles from "../../styles/home/Gallery.module.css";
-
-// Components
-import { trackGalleryElementClick } from "../analytics/links";
-
-// Icons
+import { trackGalleryElementClick } from "../analytics/home";
 import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
-
-// Static image and carousel of images
+import styles from "../../styles/home/Gallery.module.css";
 import staticGalleryImage from "../../assets/gallery/staticGallery.jpg";
 import galleryImage1 from "../../assets/gallery/gallery1.jpg";
 import galleryImage2 from "../../assets/gallery/gallery2.jpg";

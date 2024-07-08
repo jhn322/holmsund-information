@@ -1,10 +1,6 @@
 import React from "react";
-
-// CSS
+import { trackSeparatorLinkClick } from "../analytics/home";
 import styles from "../../styles/home/Separator.module.css";
-
-// Components
-import { trackSeparatorLinkClick } from "../analytics/links";
 
 const Separator = () => {
   // Google Analytics

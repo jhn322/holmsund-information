@@ -1,16 +1,8 @@
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
-
-// CSS
-import styles from "../../styles/home/Activity.module.css";
-
-// Components
-import { trackActivityElementClick } from "../analytics/links";
-
-// Icons
+import { trackActivityElementClick } from "../analytics/home";
 import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
-
-// Images
+import styles from "../../styles/home/Activity.module.css";
 import activityImage1 from "../../assets/activity/activity1.jpg";
 import activityImage2 from "../../assets/activity/activity2.jpg";
 import activityImage3 from "../../assets/activity/activity3.jpg";

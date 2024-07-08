@@ -1,13 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-
-// CSS
+import { trackHeaderButtonClick } from "../analytics/home";
 import styles from "../../styles/home/Header.module.css";
-
-// Components
-import { trackHeaderButtonClick } from "../analytics/buttons";
-
-// Images
 import headerSpring1 from "../../assets/header/headerSpring1.jpg";
 import headerSpring2 from "../../assets/header/headerSpring2.jpg";
 import headerSpring3 from "../../assets/header/headerSpring3.jpg";

@@ -1,9 +1,6 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
-
-// CSS
 import styles from "../../styles/addon/HeaderAddon.module.css";
-// Component specific styling
 import styles2 from "../../styles/addon/HeaderAddonPage.module.css";
 import styles3 from "../../styles/home/Header.module.css";
 

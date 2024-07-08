@@ -1,9 +1,5 @@
-// CSS
 import styles from "../../styles/home/ContentCircle.module.css";
-// Component specific styling
 import styles2 from "../../styles/addon/WeatherCircleAddon.module.css";
-
-// Images
 import circle1Image from "../../assets/other/weatherCircle.jpg";
 import circle2Image from "../../assets/other/circlePurple.png";
 

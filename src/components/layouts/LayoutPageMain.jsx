@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-
-// Components
 import Navigation from "../common/Navigation";
 import HeaderAddon from "../addon/HeaderAddon";
 import Breadcrumb from "../common/Breadcrumb";

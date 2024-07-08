@@ -1,11 +1,8 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-
-// CSS
-import styles from "../../styles/common/Breadcrumb.module.css";
-
-// Icons
+import { trackBreadcrumbElementClick } from "../analytics/common";
 import { RxChevronRight } from "react-icons/rx";
+import styles from "../../styles/common/Breadcrumb.module.css";
 
 const Breadcrumb = () => {
   const location = useLocation();
@@ -21,11 +18,18 @@ const Breadcrumb = () => {
     }
   };
 
+  // Google Analytics
+  const trackLinkClick = (linkText, linkUrl) => {
+    trackBreadcrumbElementClick("breadcrumb_link", linkText, linkUrl);
+  };
+
   return (
     <nav aria-label={styles.breadcrumb}>
       <article className={styles.breadcrumb}>
         <span className={styles.breadcrumbItem}>
-          <Link to="/">Hem</Link>
+          <Link to="/" onClick={() => trackLinkClick("Hem", "/")}>
+            Hem
+          </Link>
         </span>
         {pathnames.map((value, index) => {
           const isLast = index === pathnames.length - 1;
@@ -37,7 +41,9 @@ const Breadcrumb = () => {
               {isLast ? (
                 <span className={styles.breadcrumbCurrent}>{decodedValue}</span>
               ) : (
-                <Link to={to}>{decodedValue}</Link>
+                <Link to={to} onClick={() => trackLinkClick(decodedValue, to)}>
+                  {decodedValue}
+                </Link>
               )}
             </span>
           );

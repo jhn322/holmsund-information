@@ -1,10 +1,6 @@
 import React from "react";
-
-// CSS
-import styles from "../../styles/pages/TermsOfServicePage.module.css";
-
-// Components
 import LayoutOther from "../layouts/LayoutOther";
+import styles from "../../styles/pages/TermsOfServicePage.module.css";
 
 const TermsOfServicePage = () => {
   return (

@@ -1,9 +1,5 @@
 import { useState, useEffect } from "react";
-
-// Components
 import LayoutMainPage from "../layouts/LayoutPageMain";
-
-// CSS
 import styles from "../../styles/pages/WeatherPage.module.css";
 
 const WeatherPage = () => {

@@ -1,21 +1,14 @@
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import { useLocation } from "react-router-dom";
-
-// CSS
-import styles from "../../styles/home/Activity.module.css";
-// Component specific styling
-import styles2 from "../../styles/addon/ActivityAddon4.module.css";
-
-// Icons
 import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
-
-// Images
+import styles from "../../styles/home/Activity.module.css";
+import styles2 from "../../styles/addon/ActivityAddon4.module.css";
+import featuredCircle from "../../assets/other/circle.png";
 import image1 from "../../assets/gallery/gallery1.jpg";
 import image2 from "../../assets/gallery/gallery2.jpg";
 import image3 from "../../assets/gallery/gallery3.jpg";
 import image4 from "../../assets/gallery/gallery4.jpg";
-import featuredCircle from "../../assets/other/circle.png";
 
 const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
