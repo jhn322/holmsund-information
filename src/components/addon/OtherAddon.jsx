@@ -3,6 +3,8 @@ import { useLocation } from "react-router-dom";
 
 // CSS
 import styles from "../../styles/home/Discover.module.css";
+// Component specific styling
+import styles2 from "../../styles/addon/OtherAddon.module.css";
 
 // Images
 import otherImage1 from "../../assets/other/aboutusCircle.jpg";
@@ -31,7 +33,7 @@ const cardData = [
   },
 ];
 
-const OtherAddon = ({ title }) => {
+const OtherAddon = () => {
   const discoverContainerRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -90,12 +92,9 @@ const OtherAddon = ({ title }) => {
 
   return (
     <section>
-      <main ref={discoverContainerRef} className={styles.discoverContainer}>
+      <main ref={discoverContainerRef} className={styles2.discoverContainer}>
         <article className={styles.discoverInner}>
-          <header className={styles.discoverTitle}>
-            <h2>{title}</h2>
-          </header>
-          <section className={styles.discoverCardContainer}>
+          <section className={styles2.discoverCardContainer}>
             {cardData
               .filter((card) => card.link !== currentPath)
               .map((card, index) => (
