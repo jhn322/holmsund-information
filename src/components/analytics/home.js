@@ -1,7 +1,7 @@
 // Header
 export const trackHeaderButtonClick = (buttonText, buttonPath) => {
-  gtag("event", "Button_click", {
-    event_category: "header-button-click",
+  gtag("event", "Header_click", {
+    event_category: "Header_button_click",
     event_label: buttonText,
     event_path: buttonPath,
   });
@@ -9,8 +9,8 @@ export const trackHeaderButtonClick = (buttonText, buttonPath) => {
 
 // Discover
 export const trackDiscoverButtonClick = (buttonText, buttonUrl) => {
-  gtag("event", "Button_click", {
-    event_category: "discover-button-click",
+  gtag("event", "Discover_click", {
+    event_category: "Discover_button_click",
     event_label: buttonText,
     event_url: buttonUrl,
   });
@@ -18,8 +18,8 @@ export const trackDiscoverButtonClick = (buttonText, buttonUrl) => {
 
 // Discover Inspired
 export const trackDiscoverInspiredButtonClick = (buttonText, buttonUrl) => {
-  gtag("event", "Button_click", {
-    event_category: "discover-inspired-button-click",
+  gtag("event", "Discover_inspired_click", {
+    event_category: "Discover_inspired_button_click",
     event_label: buttonText,
     event_url: buttonUrl,
   });
@@ -27,8 +27,8 @@ export const trackDiscoverInspiredButtonClick = (buttonText, buttonUrl) => {
 
 // Separator
 export const trackSeparatorLinkClick = (linkText, linkUrl) => {
-  gtag("event", "Link_click", {
-    event_category: "separator-link-click",
+  gtag("event", "Separator_click", {
+    event_category: "Separator_link_click",
     event_label: linkText,
     event_url: linkUrl,
   });
@@ -40,7 +40,7 @@ export const trackActivityElementClick = (
   elementText,
   elementUrl
 ) => {
-  gtag("event", "Element_click", {
+  gtag("event", "Activity_click", {
     event_category: elementType,
     event_label: elementText,
     event_url: elementUrl,
@@ -53,7 +53,7 @@ export const trackGalleryElementClick = (
   elementText,
   elementUrl
 ) => {
-  gtag("event", "Element_click", {
+  gtag("event", "Gallery_click", {
     event_category: elementType,
     event_label: elementText,
     event_url: elementUrl,
@@ -66,7 +66,7 @@ export const trackExtraHomeElementClick = (
   elementText,
   elementUrl
 ) => {
-  gtag("event", "Element_click", {
+  gtag("event", "Extra_home_click", {
     event_category: elementType,
     event_label: elementText,
     event_url: elementUrl,

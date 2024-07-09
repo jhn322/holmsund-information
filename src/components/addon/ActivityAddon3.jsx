@@ -13,6 +13,7 @@ import image4 from "../../assets/activity/activity4.jpg";
 
 const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   const location = useLocation();
   const currentPath = location.pathname;
 
@@ -88,7 +89,9 @@ const Carousel = () => {
             key={index}
             className={`${styles.slide} ${
               index === activeIndex ? styles.active : ""
-            }`}
+            } ${index === hoveredIndex ? styles.hovered : ""}`}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
           >
             {currentPath === slide.link ? (
               <div

@@ -4,7 +4,7 @@ export const trackScrollDownElementClick = (
   elementText,
   elementUrl
 ) => {
-  gtag("event", "Element_click", {
+  gtag("event", "Scroll_down_click", {
     event_category: elementType,
     event_label: elementText,
     event_url: elementUrl,
@@ -17,7 +17,7 @@ export const trackScrollUpElementClick = (
   elementText,
   elementUrl
 ) => {
-  gtag("event", "Element_click", {
+  gtag("event", "Scroll_up_click", {
     event_category: elementType,
     event_label: elementText,
     event_url: elementUrl,
@@ -30,7 +30,7 @@ export const trackBreadcrumbElementClick = (
   elementText,
   elementUrl
 ) => {
-  gtag("event", "Element_click", {
+  gtag("event", "Breadcrumb_click", {
     event_category: elementType,
     event_label: elementText,
     event_url: elementUrl,
@@ -43,7 +43,7 @@ export const trackCookiesElementClick = (
   elementText,
   elementUrl
 ) => {
-  gtag("event", "Element_click", {
+  gtag("event", "Cookies_click", {
     event_category: elementType,
     event_label: elementText,
     event_url: elementUrl,
@@ -56,7 +56,7 @@ export const trackExtraElementClick = (
   elementText,
   elementUrl
 ) => {
-  gtag("event", "Element_click", {
+  gtag("event", "Extra_click", {
     event_category: elementType,
     event_label: elementText,
     event_url: elementUrl,
@@ -69,7 +69,7 @@ export const trackFooterElementClick = (
   elementText,
   elementUrl
 ) => {
-  gtag("event", "Element_click", {
+  gtag("event", "Footer_click", {
     event_category: elementType,
     event_label: elementText,
     event_url: elementUrl,
@@ -77,8 +77,12 @@ export const trackFooterElementClick = (
 };
 
 // Navigation
-export const trackElementClick = (elementType, elementText, elementUrl) => {
-  window.gtag("event", "Element_click", {
+export const trackNavigationElementClick = (
+  elementType,
+  elementText,
+  elementUrl
+) => {
+  window.gtag("event", "Navigation_click", {
     event_category: elementType,
     event_label: elementText,
     event_url: elementUrl,

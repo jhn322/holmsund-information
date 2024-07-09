@@ -4,7 +4,7 @@ export const trackOtherAddonElementClick = (
   elementText,
   elementUrl
 ) => {
-  gtag("event", "Element_click", {
+  gtag("event", "Other_addon_click", {
     event_category: elementType,
     event_label: elementText,
     event_url: elementUrl,
@@ -17,7 +17,7 @@ export const trackHeaderAddonPageClick = (
   elementText,
   elementUrl
 ) => {
-  gtag("event", "Element_click", {
+  gtag("event", "Header_addon_click", {
     event_category: elementType,
     event_label: elementText,
     event_url: elementUrl,
@@ -26,7 +26,7 @@ export const trackHeaderAddonPageClick = (
 
 // DiscoverAddon
 export const trackDiscoverButtonClick = (buttonText, buttonUrl) => {
-  gtag("event", "Button_click", {
+  gtag("event", "Discover_addon_click", {
     event_category: "discover-button-click",
     event_label: buttonText,
     event_url: buttonUrl,
@@ -39,7 +39,7 @@ export const trackActivityElementClick = (
   elementText,
   elementUrl
 ) => {
-  gtag("event", "Element_click", {
+  gtag("event", "Activity_addon_click", {
     event_category: elementType,
     event_label: elementText,
     event_url: elementUrl,
@@ -52,7 +52,7 @@ export const trackGalleryElementClick = (
   elementText,
   elementUrl
 ) => {
-  gtag("event", "Element_click", {
+  gtag("event", "Gallery_addon_click", {
     event_category: elementType,
     event_label: elementText,
     event_url: elementUrl,

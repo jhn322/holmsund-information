@@ -11,6 +11,7 @@ import featuredCircle from "../../assets/other/circle.png";
 
 const ActivityCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const slides = [
     {
@@ -84,7 +85,9 @@ const ActivityCarousel = () => {
             key={index}
             className={`${styles.slide} ${
               index === activeIndex ? styles.active : ""
-            }`}
+            } ${index === hoveredIndex ? styles.hovered : ""}`}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
           >
             <a
               href={slide.link}

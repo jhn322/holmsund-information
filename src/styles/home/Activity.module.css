@@ -22,12 +22,12 @@
 }
 
 /* --- Hovering within container gives simultaneous hover on 3 elements --- */
-.container:hover .captionTitle,
-.container:hover .captionLink {
+.hovered .captionTitle,
+.hovered .captionLink {
   color: var(--hover-color);
 }
 
-.container:hover .arrowIcon {
+.hovered .arrowIcon {
   border: 2px solid var(--hover-color);
   color: var(--hover-color);
 }
