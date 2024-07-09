@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { trackMissingPageClick } from "../analytics/pages";
 import styles from "../../styles/pages/MissingPage.module.css";
 import NotFoundImage from "../../assets/other/404.png";
 
@@ -14,7 +15,12 @@ const MissingPage = () => {
       <p className={styles.MissingText}>
         Oops. Vi kunde inte hitta sidan du letade efter :(
       </p>
-      <button className={styles.MissingBtn}>
+      <button
+        className={styles.MissingBtn}
+        onClick={() => {
+          trackMissingPageClick("Button", "Go back home", "/");
+        }}
+      >
         <Link to="/" className={styles.LinkHome}>
           Gå tillbaka hem
         </Link>

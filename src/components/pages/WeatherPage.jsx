@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import LayoutMainPage from "../layouts/LayoutPageMain";
+import { trackWeatherPageClick } from "../analytics/pages";
 import styles from "../../styles/pages/WeatherPage.module.css";
 
 const WeatherPage = () => {
@@ -88,6 +89,10 @@ const WeatherPage = () => {
     styles.blueBackground,
   ];
 
+  const handleLinkClick = (title, url) => {
+    trackWeatherPageClick("Link", title, url);
+  };
+
   return (
     <LayoutMainPage
       renderHeaderAddon={false}
@@ -118,8 +123,8 @@ const WeatherPage = () => {
             />
           </div>
         )}
-        <div className={styles.threeDayTitle}>
-          <h2>3-dagars prognos</h2>
+        <div className={styles.title}>
+          <h2>Prognos för kommande 3 dagar</h2>
         </div>
         {forecastData && (
           <div className={styles.forecastInfo}>
@@ -131,10 +136,27 @@ const WeatherPage = () => {
                 }`}
               >
                 <h3>{getDayOfWeek(day.date)}</h3>
-                <p>Datum: {day.date}</p>
-                <p>Högsta Temperatur: {day.day.maxtemp_c}°C</p>
-                <p>Lägsta Temperatur: {day.day.mintemp_c}°C</p>
-                <p>Väder: {translateCondition(day.day.condition.text)}</p>
+                <p>
+                  Datum: <span className={styles.weatherSpan}>{day.date}</span>
+                </p>
+                <p>
+                  Högsta Temperatur:{" "}
+                  <span className={styles.weatherSpan}>
+                    {day.day.maxtemp_c}°C
+                  </span>
+                </p>
+                <p>
+                  Lägsta Temperatur:{" "}
+                  <span className={styles.weatherSpan}>
+                    {day.day.mintemp_c}°C
+                  </span>
+                </p>
+                <p>
+                  Väder:{" "}
+                  <span className={styles.weatherSpan}>
+                    {translateCondition(day.day.condition.text)}
+                  </span>
+                </p>
                 <img
                   className={styles.img}
                   src={day.day.condition.icon}
@@ -144,6 +166,35 @@ const WeatherPage = () => {
             ))}
           </div>
         )}
+        <div className={`${styles.title} ${styles.title2}`}>
+          <h2>Extern prognos</h2>
+        </div>
+        <div className={styles.goToWeather}>
+          <div className={styles.InnerWeather}>
+            <a
+              href="https://www.yr.no/nb/v%C3%A6rvarsel/daglig-tabell/2-605676/Sverige/V%C3%A4sterbottens%20l%C3%A4n/Ume%C3%A5%20Kommun/Holmsund"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() =>
+                handleLinkClick(
+                  "För mer väderinformation klicka här",
+                  "https://www.yr.no/nb/v%C3%A4rvarsel/daglig-tabell/2-605676/Sverige/V%C3%A4sterbottens%20l%C3%A4n/Ume%C3%A5%20Kommun/Holmsund"
+                )
+              }
+            >
+              <h3>För mer väderinformation klicka här</h3>
+            </a>
+            <div className={styles.description}>
+              <p>
+                yr.no är en väderwebbplats som drivs av det norska
+                meteorologiska institutet och NRK (Norsk rikskringkasting).
+                Webbplatsen erbjuder detaljerade väderprognoser för platser över
+                hela världen, inklusive temperatur, nederbörd, vind och mycket
+                mer.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </LayoutMainPage>
   );

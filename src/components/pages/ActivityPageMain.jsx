@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { trackMainPagesClick } from "../analytics/pages";
 import LayoutPageMain from "../layouts/LayoutPageMain";
 import styles from "../../styles/pages/AllPageMain.module.css";
 
@@ -44,7 +45,14 @@ const ActivityPageMain = () => {
   }, [headerImages.length]);
 
   const gridItems = gridImages.map((image, index) => (
-    <NavLink to={image.path} className={styles.gridItemLink} key={index}>
+    <NavLink
+      to={image.path}
+      className={styles.gridItemLink}
+      key={index}
+      onClick={() => {
+        trackMainPagesClick("Grid Image", image.title, image.path);
+      }}
+    >
       <div className={styles.gridItem}>
         <img src={image.src} alt={`Image ${index}`} />
         <h4 className={styles.title}>{image.title}</h4>

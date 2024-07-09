@@ -71,13 +71,19 @@ p {
   padding: 0.3rem 0;
 }
 
-.threeDayTitle {
+.weatherSpan {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.2rem 0.4rem;
+  border-radius: 10px;
+}
+
+.title {
   text-align: center;
   margin-top: 2rem;
   padding: 2rem;
 }
 
-.threeDayTitle h2 {
+.title h2 {
   font-size: 2rem;
   color: var(--black-text-color);
 }
@@ -111,6 +117,42 @@ p {
   background-color: var(--gallery-color);
 }
 
+.title2 {
+  margin-top: 4rem;
+}
+
+.goToWeather {
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: left;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  max-width: 50rem;
+  background-color: var(--grey-text-color);
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+}
+
+.InnerWeather h3 {
+  padding: 0.5rem 2rem;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--white-text-color);
+  font-size: 1.3rem;
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+
+.description p {
+  color: var(--white-text-color);
+  padding: 0 2rem;
+  padding-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.InnerWeather h3:hover {
+  color: var(--hover-color);
+}
+
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 599px) {
   .forecastInfo {
@@ -119,12 +161,17 @@ p {
 
   h3,
   .weatherInfo h1,
-  .threeDayTitle h2 {
+  .title h2 {
     font-size: 2.25rem;
   }
 
-  p {
+  p,
+  .description p {
     font-size: 1.2rem;
+  }
+
+  .InnerWeather h3 {
+    font-size: 1.4rem;
   }
 }
 
@@ -136,12 +183,17 @@ p {
 
   h3,
   .weatherInfo h1,
-  .threeDayTitle h2 {
+  .title h2 {
     font-size: 2.25rem;
   }
 
-  p {
+  p,
+  .description p {
     font-size: 1.2rem;
+  }
+
+  .InnerWeather h3 {
+    font-size: 1.5rem;
   }
 }
 
@@ -153,12 +205,17 @@ p {
 
   h3,
   .weatherInfo h1,
-  .threeDayTitle h2 {
+  .title h2 {
     font-size: 2.25rem;
   }
 
-  p {
+  p,
+  .description p {
     font-size: 1.3rem;
+  }
+
+  .InnerWeather h3 {
+    font-size: 1.5rem;
   }
 }
 
@@ -170,11 +227,20 @@ p {
 
   h3,
   .weatherInfo h1,
-  .threeDayTitle h2 {
+  .title h2 {
     font-size: 2.5rem;
   }
 
-  p {
+  p,
+  .description p {
     font-size: 1.3rem;
+  }
+
+  .InnerWeather {
+    padding: 1rem;
+  }
+
+  .InnerWeather h3 {
+    font-size: 1.6rem;
   }
 }
