@@ -20,26 +20,26 @@
 .galleryImageContainer {
   position: relative;
   padding-bottom: 4rem;
+  width: 100%;
+  max-width: 30rem;
 }
 
 .galleryImageInner {
   position: relative;
   top: 20px;
-  left: 48%;
+  left: 34%;
   transform: translateX(-50%);
   z-index: 1;
   margin-top: 6rem;
 }
 
 .galleryImage {
-  width: calc(17rem + 20vw);
-  height: calc(17rem + 20vw);
+  aspect-ratio: 1;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 10px;
-  z-index: 0;
-  position: relative;
+  min-width: 20rem;
 }
 
 .galleryCircle {
@@ -80,10 +80,17 @@
   color: var(--hover-color);
   border-color: var(--hover-color);
 }
-/* -------------------------------------------------------------------------- */
 
 .carouselInner {
   position: relative;
+  overflow: hidden;
+  width: calc(17rem + 20vw);
+  height: calc(17rem + 20vw);
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 .carouselInner img {
@@ -93,11 +100,19 @@
 }
 
 .slide {
-  display: none;
+  min-width: calc(17rem + 20vw);
 }
 
-.active {
-  display: block;
+.carouselNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 10px;
+  z-index: 2;
 }
 
 .navPrev,
@@ -105,7 +120,7 @@
   display: flex;
   align-items: flex-end;
   position: absolute;
-  top: -10px;
+  top: 170px;
   background-color: transparent;
   border: none;
   color: var(--primary-color);
@@ -179,8 +194,10 @@
 }
 
 .dotPagination {
-  margin-top: 0;
-  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 1rem;
 }
 
 .dot {
@@ -193,7 +210,8 @@
   cursor: pointer;
 }
 
-.dot.active {
+.dot.active,
+.dot:hover {
   background-color: var(--hover-color);
 }
 
@@ -218,7 +236,7 @@
 }
 
 /* Small phones */
-@media only screen and (max-width: 389px) {
+/* @media only screen and (max-width: 389px) {
   .galleryCircle {
     top: -40px;
     left: -8px;
@@ -247,10 +265,10 @@
   .carouselText {
     max-width: 20.375rem;
   }
-}
+} */
 
 /* Uncommon phone size */
-@media only screen and (min-width: 500px) and (max-width: 599px) {
+/* @media only screen and (min-width: 500px) and (max-width: 599px) {
   .galleryImage {
     width: calc(21rem + 20vw);
     height: calc(21rem + 20vw);
@@ -264,6 +282,7 @@
   .navPrev,
   .navNext {
     font-size: 4.2rem;
+    top: 185px;
   }
 
   .navPrev {
@@ -277,10 +296,10 @@
   .carouselText h2 {
     font-size: 2.25rem;
   }
-}
+} */
 
 /* Small Tablet */
-@media only screen and (min-width: 600px) and (max-width: 769px) {
+/* @media only screen and (min-width: 600px) and (max-width: 769px) {
   .galleryTitle {
     top: -51px;
     line-height: 3rem;
@@ -314,6 +333,7 @@
   .navPrev,
   .navNext {
     font-size: 4.8rem;
+    top: 200px;
   }
 
   .navNext {
@@ -331,10 +351,10 @@
   .carouselText h2 {
     font-size: 2.25rem;
   }
-}
+} */
 
 /* Desktop */
-@media only screen and (min-width: 800px) and (max-width: 1199px) {
+/* @media only screen and (min-width: 800px) and (max-width: 1199px) {
   .galleryContainer {
     flex-direction: row;
     justify-content: center;
@@ -409,92 +429,10 @@
   .navNext {
     right: 0;
   }
-}
-
-/* Medium Desktop */
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  p {
-    font-size: 1.3rem;
-  }
-
-  .galleryContainer {
-    flex-direction: row;
-    justify-content: center;
-    padding: 10rem 0;
-  }
-
-  .galleryImageInner {
-    top: 0;
-    left: 15rem;
-  }
-
-  .galleryTitle {
-    top: -73px;
-    line-height: 4.25rem;
-    font-size: 4rem;
-  }
-
-  .galleryImage {
-    width: 33rem;
-    height: 33rem;
-  }
-
-  .galleryCircle {
-    top: -80px;
-    left: -50px;
-    height: 45%;
-    width: 45%;
-  }
-
-  .carouselContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    margin-left: 2rem;
-  }
-
-  .carouselInner {
-    position: relative;
-  }
-
-  .carouselInner img {
-    width: 33rem;
-    height: 33rem;
-  }
-
-  .navPrev,
-  .navNext {
-    font-size: 4.8rem;
-    top: -10px;
-  }
-
-  .navPrev {
-    right: 45px;
-  }
-
-  .navNext {
-    right: -5px;
-  }
-
-  .carouselText {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    max-width: 31.25rem;
-    margin-top: 2rem;
-    margin-left: -1.8rem;
-    height: 12.5rem;
-  }
-
-  .carouselText h2 {
-    font-size: 2.25rem;
-  }
-}
+} */
 
 /* Large Desktop */
-@media only screen and (min-width: 1400px) {
+/* @media only screen and (min-width: 1200px) {
   p {
     font-size: 1.3rem;
   }
@@ -517,8 +455,8 @@
   }
 
   .galleryImage {
-    width: 40rem;
-    height: 40rem;
+    width: 32rem;
+    height: 32rem;
   }
 
   .galleryCircle {
@@ -542,8 +480,8 @@
   }
 
   .carouselInner img {
-    width: 40rem;
-    height: 40rem;
+    width: 32rem;
+    height: 32rem;
   }
 
   .navPrev,
@@ -567,7 +505,7 @@
     text-align: left;
     max-width: 37.5rem;
     margin-top: 2rem;
-    margin-left: -2.5rem;
+    margin-left: 5.5rem;
     height: 12.5rem;
   }
 
@@ -582,4 +520,4 @@
     width: 40%;
     filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
   }
-}
+} */

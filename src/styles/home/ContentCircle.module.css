@@ -224,7 +224,7 @@ body {
   }
 }
 
-/* Fonts */
+/* Medium Desktop */
 @media only screen and (min-width: 1200px) {
   .titleContent {
     font-size: 3.5rem;
@@ -237,5 +237,16 @@ body {
   .textContent p {
     max-width: 60%;
     padding: 0;
+  }
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1800px) {
+  .circleBack {
+    left: 20rem;
+  }
+
+  .circleFront {
+    left: -5rem;
   }
 }
