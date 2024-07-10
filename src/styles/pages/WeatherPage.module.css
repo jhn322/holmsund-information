@@ -23,6 +23,7 @@ p {
   justify-content: center;
   padding: 2rem;
   margin: 6rem auto;
+  text-align: center;
 }
 
 .container h1,
@@ -33,12 +34,13 @@ p {
 }
 
 .weatherInfo {
+  position: relative;
   width: 100%;
   margin-bottom: 2rem;
-  text-align: center;
-  padding: 2rem;
+  text-align: left;
+  padding: 2rem 3rem;
   border-radius: 10px;
-  max-width: 50rem;
+  max-width: 43rem;
   background-color: var(--hover-color);
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
 }
@@ -46,7 +48,7 @@ p {
 .weatherInfo h1 {
   font-size: 2rem;
   color: var(--black-text-color);
-  padding: 2rem;
+  padding-bottom: 1rem;
 }
 
 .weatherInfo p {
@@ -54,27 +56,14 @@ p {
   padding: 0.3rem 0;
 }
 
-.forecastInfo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 4rem;
-  width: 100%;
-  margin-bottom: 6rem;
-  margin: 0 auto;
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
-}
-
-.forecastInfo p {
-  padding: 0.3rem 0;
-}
-
 .weatherSpan {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 0.2rem 0.4rem;
   border-radius: 10px;
+}
+
+.img {
+  width: 6rem;
 }
 
 .title {
@@ -88,21 +77,31 @@ p {
   color: var(--black-text-color);
 }
 
+.forecastInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 4rem;
+  width: 100%;
+  margin-bottom: 6rem;
+  text-align: center;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+}
+
+.forecastInfo p {
+  padding: 0.3rem 0;
+}
+
 .forecastDay {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
+  text-align: left;
+  padding: 2rem 3rem;
   width: 100%;
   max-width: 35rem;
   border-radius: 10px;
-}
-
-.img {
-  padding: 1rem 0;
-  width: 5rem;
 }
 
 .orangeBackground {
