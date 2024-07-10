@@ -1,12 +1,3 @@
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Outfit", sans-serif;
-}
-
 .container {
   max-width: 50rem;
   margin: 0 auto;
@@ -25,6 +16,40 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   color: var(--black-text-color);
+}
+
+.contactContainer {
+  margin-top: 4rem;
+}
+
+.contactInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background-color: var(--white-text-color);
+}
+
+.reactLogo {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.contactText {
+  font-size: 1.1rem;
+  color: var(--black-text-color);
+  margin: 0;
+}
+
+.emailLink {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.emailLink:hover {
+  color: var(--hover-color);
 }
 
 /* Desktop */

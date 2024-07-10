@@ -1,11 +1,17 @@
 import React from "react";
 import LayoutOther from "../layouts/LayoutOther";
 import styles from "../../styles/pages/AboutUsPage.module.css";
+import ReactLogo from "../../assets/other/React.png";
 
 const AboutUsPage = () => {
+  const handleEmailClick = () => {
+    window.location.href = `mailto:${import.meta.env.CONTACT_EMAIL}`;
+  };
+
   return (
     <LayoutOther renderAboutCircleAddon={true} renderOtherAddon={true}>
-      <div className={styles.container}>
+      <article className={styles.container}>
+        {/* Holmsund */}
         <h2 className={styles.title}>Om Holmsund</h2>
         <p className={styles.text}>
           Holmsund är en charmig ort belägen vid kusten i Västerbottens län,
@@ -28,24 +34,69 @@ const AboutUsPage = () => {
           Holmsund har också ett starkt samhälle med engagerade invånare som
           arbetar tillsammans för att skapa en trivsam och hållbar miljö. Med
           lokala evenemang, sportaktiviteter och kulturupplevelser finns det
-          alltid något att göra och upptäcka.
+          alltid något att göra och upptäcka. Holmsund är även känt för sitt
+          välbefinnande och livskvalitet, där gemenskap och hälsa står i fokus.
         </p>
         <p className={styles.text}>
-          Vi välkomnar dig att utforska Holmsund och upptäcka allt som denna
-          unika ort har att erbjuda. Oavsett om du är här för en kort visit
-          eller planerar att stanna längre, kommer du att hitta en varm
-          gemenskap och vacker natur som gör din tid i Holmsund oförglömlig.
+          Närheten till havet präglar också Holmsunds identitet, med många
+          invånare som njuter av sjölivet och de många aktiviteter som erbjuds
+          längs kusten. Som en del av Västerbottens vackra skärgård är Holmsund
+          en magnet för besökare som söker avkoppling och äventyr, både på land
+          och till sjöss.
         </p>
-        <h2 className={styles.title}>Utvecklare</h2>
         <p className={styles.text}>
-          Denna sida är skapad av en enda engagerad individ på sin fritid med
-          syfte att ge ut information om Holmsund, lära sig webbdesign och
-          experimentera med modern webbteknik. Sidan är byggd med React, ett
-          kraftfullt JavaScript-bibliotek för att bygga användargränssnitt. Tack
-          för att du besöker sidan, och vi hoppas att du finner informationen
-          nyttig och inspirerande.
+          Holmsund är också känt för sin gastronomi, där lokala råvaror och
+          traditionella recept går hand i hand med moderna matupplevelser. De
+          lokala restaurangerna och kaféerna är populära mötesplatser där man
+          kan njuta av både lokala delikatesser och internationella rätter.
         </p>
-      </div>
+        <p className={styles.text}>
+          För den som är intresserad av historia erbjuder Holmsund flera
+          intressanta sevärdheter och museer. Besökare kan lära sig mer om
+          regionens industriella arv eller utforska gamla byggnader och platser
+          som berättar om ortens historia och utveckling genom tiderna.
+        </p>
+        <p className={styles.text}>
+          Under sommarmånaderna blomstrar Holmsund med ett rikt kulturutbud av
+          festivaler, konserter och konstutställningar. Invånare och besökare
+          samlas för att fira och njuta av gemensamma kulturella evenemang som
+          berikar ortens dynamiska samhällsliv.
+        </p>
+        <p className={styles.text}>
+          Holmsund är stolt över sitt hållbara tänkande och arbetar aktivt för
+          att minska sin miljöpåverkan. Genom initiativ för återvinning,
+          energieffektivitet och hållbar stadsplanering strävar orten efter att
+          vara en förebild för andra samhällen när det gäller att bevara och
+          vårda naturen för framtida generationer.
+        </p>
+
+        {/* Developer */}
+        <div className={styles.contactContainer}>
+          <section className={styles.contactInner}>
+            <h2 className={styles.title}>Utvecklare</h2>
+            <p className={styles.text}>
+              Denna sida är skapad av en enda engagerad individ på sin fritid
+              med syfte att ge ut information om Holmsund, lära sig webbdesign
+              och experimentera med modern webbteknik. Sidan är byggd med React,
+              ett kraftfullt JavaScript-bibliotek för att bygga
+              användargränssnitt. Tack för att du besöker sidan, och vi hoppas
+              att du finner informationen nyttig och inspirerande.
+            </p>
+            <img
+              src={ReactLogo}
+              alt="React Logo"
+              className={styles.reactLogo}
+            />
+            <p className={styles.contactText}>
+              Vill du kontakta oss?
+              <span className={styles.emailLink} onClick={handleEmailClick}>
+                Klicka här
+              </span>
+              för att skicka ett mail.
+            </p>
+          </section>
+        </div>
+      </article>
     </LayoutOther>
   );
 };
