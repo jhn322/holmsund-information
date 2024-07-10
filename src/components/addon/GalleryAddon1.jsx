@@ -174,7 +174,7 @@ const GalleryAddon1 = ({ title }) => {
                         to={image.link}
                         onClick={(e) => {
                           if (currentPath === image.link) {
-                            e.preventDefault(); // Prevent default action only for the currentPath card
+                            e.preventDefault();
                             return;
                           }
                           trackElementClickEvent(
