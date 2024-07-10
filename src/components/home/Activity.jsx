@@ -12,6 +12,7 @@ import featuredCircle from "../../assets/other/circle.png";
 const ActivityCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [deltaX, setDeltaX] = useState(0);
 
   const slides = [
     {
@@ -56,18 +57,26 @@ const ActivityCarousel = () => {
     setActiveIndex((prevIndex) =>
       prevIndex === 0 ? slides.length - 1 : prevIndex - 1
     );
+    setDeltaX(0);
   };
 
   const handleNext = () => {
     setActiveIndex((prevIndex) =>
       prevIndex === slides.length - 1 ? 0 : prevIndex + 1
     );
+    setDeltaX(0);
   };
 
   // Swipe handlers
   const swipeHandlers = useSwipeable({
     onSwipedLeft: handleNext,
     onSwipedRight: handlePrev,
+    onSwiping: (eventData) => {
+      setDeltaX(eventData.deltaX);
+    },
+    onSwiped: () => {
+      setDeltaX(0);
+    },
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
     delta: 10,
@@ -88,7 +97,10 @@ const ActivityCarousel = () => {
           <div
             className={styles.slider}
             style={{
-              transform: `translateX(-${activeIndex * 100}%)`,
+              transform: `translateX(calc(-${
+                activeIndex * 100
+              }% + ${deltaX}px))`,
+              transition: deltaX ? "none" : "transform 0.3s ease", // Disable transition during swipe
             }}
           >
             {slides.map((slide, index) => (

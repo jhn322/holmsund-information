@@ -74,6 +74,10 @@ const Carousel = () => {
     onSwipedRight: handlePrev,
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
+    delta: 10,
+    minDistance: 20,
+    preventScrollOnSwipe: true,
+    trackTouch: true,
   });
 
   // Google Analytics
@@ -84,89 +88,102 @@ const Carousel = () => {
   return (
     <section {...swipeHandlers} className={styles.carousel}>
       <main className={styles.container}>
-        {slides.map((slide, index) => (
-          <figure
-            key={index}
-            className={`${styles.slide} ${
-              index === activeIndex ? styles.active : ""
-            } ${index === hoveredIndex ? styles.hovered : ""}`}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
+        <div className={styles.carouselInner}>
+          <div
+            className={styles.slider}
+            style={{
+              transform: `translateX(-${activeIndex * 100}%)`,
+            }}
           >
-            {currentPath === slide.link ? (
-              <div
-                className={`${styles.currentPageOverlay} ${styles2.currentPageOverlay}`}
+            {slides.map((slide, index) => (
+              <figure
+                key={index}
+                className={`${styles.slide} ${
+                  index === activeIndex ? styles.active : ""
+                } ${index === hoveredIndex ? styles.hovered : ""}`}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
               >
-                <img
-                  src={slide.src}
-                  alt={`Slide ${index + 1}`}
-                  className={`${styles.currentPageImage} ${styles2.currentPageImage}`}
-                />
-                <div
-                  className={`${styles.currentPageMessage} ${styles2.currentPageMessage}`}
-                >
-                  Nuvarande Sida
+                {currentPath === slide.link ? (
+                  <div
+                    className={`${styles.currentPageOverlay} ${styles2.currentPageOverlay}`}
+                  >
+                    <img
+                      src={slide.src}
+                      alt={`Slide ${index + 1}`}
+                      className={`${styles.currentPageImage} ${styles2.currentPageImage}`}
+                    />
+                    <div
+                      className={`${styles.currentPageMessage} ${styles2.currentPageMessage}`}
+                    >
+                      Nuvarande Sida
+                    </div>
+                  </div>
+                ) : (
+                  <a
+                    href={slide.link}
+                    onClick={() =>
+                      trackElementClickEvent(
+                        "image_link",
+                        slide.title,
+                        slide.link
+                      )
+                    }
+                  >
+                    <img src={slide.src} alt={`Slide ${index + 1}`} />
+                  </a>
+                )}
+                <div className={styles.slideCounter}>
+                  {index + 1}/{slides.length}
                 </div>
-              </div>
-            ) : (
-              <a
-                href={slide.link}
-                onClick={() =>
-                  trackElementClickEvent("image_link", slide.title, slide.link)
-                }
-              >
-                <img src={slide.src} alt={`Slide ${index + 1}`} />
-              </a>
-            )}
-            <div className={styles.slideCounter}>
-              {index + 1}/{slides.length}
-            </div>
-            <figcaption className={styles.caption}>
-              <a
-                href={slide.link}
-                onClick={() =>
-                  trackElementClickEvent(
-                    "caption_title",
-                    slide.title,
-                    slide.link
-                  )
-                }
-              >
-                <h3 className={styles.captionTitle}>{slide.title}</h3>
-              </a>
-              <p>{truncateDescription(slide.description, 25)}</p>
-              <div className={styles.linkContainer}>
-                <a
-                  className={styles.captionLink}
-                  href={slide.link}
-                  onClick={() =>
-                    trackElementClickEvent(
-                      "caption_link",
-                      "Läs Mer...",
-                      slide.link
-                    )
-                  }
-                >
-                  Läs Mer...
-                </a>
-              </div>
-              <div className={styles.arrowContainer}>
-                <a
-                  href={slide.link}
-                  onClick={() =>
-                    trackElementClickEvent(
-                      "arrow_icon",
-                      "Arrow Icon",
-                      slide.link
-                    )
-                  }
-                >
-                  <RxArrowRight className={styles.arrowIcon} />
-                </a>
-              </div>
-            </figcaption>
-          </figure>
-        ))}
+                <figcaption className={styles.caption}>
+                  <a
+                    href={slide.link}
+                    onClick={() =>
+                      trackElementClickEvent(
+                        "caption_title",
+                        slide.title,
+                        slide.link
+                      )
+                    }
+                  >
+                    <h3 className={styles.captionTitle}>{slide.title}</h3>
+                  </a>
+                  <p>{truncateDescription(slide.description, 25)}</p>
+                  <div className={styles.linkContainer}>
+                    <a
+                      className={styles.captionLink}
+                      href={slide.link}
+                      onClick={() =>
+                        trackElementClickEvent(
+                          "caption_link",
+                          "Läs Mer...",
+                          slide.link
+                        )
+                      }
+                    >
+                      Läs Mer...
+                    </a>
+                  </div>
+                  <div className={styles.arrowContainer}>
+                    <a
+                      href={slide.link}
+                      onClick={() =>
+                        trackElementClickEvent(
+                          "arrow_icon",
+                          "Arrow Icon",
+                          slide.link
+                        )
+                      }
+                    >
+                      <RxArrowRight className={styles.arrowIcon} />
+                    </a>
+                  </div>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
       </main>
       <nav className={styles.nav}>
         <span className={styles.navPrev} onClick={handlePrev}>
