@@ -110,11 +110,29 @@ const WeatherPage = () => {
         {weatherData && (
           <div className={styles.weatherInfo}>
             <h1>Nuvarande väder</h1>
-            <p>Temperatur: {weatherData.current.temp_c}°C</p>
-            <p>Luftfuktighet: {weatherData.current.humidity}%</p>
-            <p>Vind: {weatherData.current.wind_kph} km/h</p>
             <p>
-              Väder: {translateCondition(weatherData.current.condition.text)}
+              Temperatur:{" "}
+              <span className={styles.weatherSpan}>
+                {weatherData.current.temp_c}°C
+              </span>
+            </p>
+            <p>
+              Luftfuktighet:{" "}
+              <span className={styles.weatherSpan}>
+                {weatherData.current.humidity}%
+              </span>
+            </p>
+            <p>
+              Vind:{" "}
+              <span className={styles.weatherSpan}>
+                {weatherData.current.wind_kph} km/h
+              </span>
+            </p>
+            <p>
+              Väder:{" "}
+              <span className={styles.weatherSpan}>
+                {translateCondition(weatherData.current.condition.text)}
+              </span>
             </p>
             <img
               className={styles.img}
