@@ -19,6 +19,7 @@ import MapCircleAddon from "../addon/WeatherCircleAddon";
 import Extra from "../common/Extra";
 import ScrollDown from "../common/ScrollDown";
 import ScrollUp from "../common/ScrollUp";
+import ScrollToTop from "../common/ScrollToTop";
 import Cookies from "../common/Cookies";
 import Footer from "../common/Footer";
 
@@ -133,6 +134,7 @@ const LayoutPageMain = ({
       <Extra />
       <ScrollDown />
       <ScrollUp />
+      <ScrollToTop />
       <Cookies />
       <Footer />
     </main>

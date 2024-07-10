@@ -221,12 +221,12 @@ const GalleryAddon1 = ({ title }) => {
                       onClick={() =>
                         trackElementClickEvent(
                           "carousel_link",
-                          "Läs Mer...",
+                          "Läs Mer",
                           images[currentIndex].link
                         )
                       }
                     >
-                      Läs Mer...
+                      Läs Mer
                     </a>
                   </div>
                   <div className={styles.arrowContainer}>

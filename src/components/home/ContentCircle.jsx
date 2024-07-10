@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import styles from "../../styles/home/ContentCircle.module.css";
-import circle1Image from "../../assets/other/circle1.png";
+import circle1Image from "../../assets/other/homeCircle.png";
 import circle2Image from "../../assets/other/circlePurple.png";
 
 const ContentCircle = () => {

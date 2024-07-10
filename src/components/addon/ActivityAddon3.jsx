@@ -193,12 +193,12 @@ const Carousel = () => {
                       onClick={() =>
                         trackElementClickEvent(
                           "caption_link",
-                          "Läs Mer...",
+                          "Läs Mer",
                           slide.link
                         )
                       }
                     >
-                      Läs Mer...
+                      Läs Mer
                     </a>
                   </div>
                   <div className={styles.arrowContainer}>

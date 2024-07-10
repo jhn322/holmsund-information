@@ -187,12 +187,12 @@ const Gallery = () => {
                       onClick={() =>
                         trackElementClickEvent(
                           "carousel_link",
-                          "Läs Mer...",
+                          "Läs Mer",
                           images[currentIndex].link
                         )
                       }
                     >
-                      Läs Mer...
+                      Läs Mer
                     </a>
                   </div>
                   <div className={styles.arrowContainer}>

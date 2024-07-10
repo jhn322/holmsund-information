@@ -168,12 +168,12 @@ const ActivityCarousel = () => {
                       onClick={() =>
                         trackElementClickEvent(
                           "caption_link",
-                          "Läs Mer...",
+                          "Läs Mer",
                           slide.link
                         )
                       }
                     >
-                      Läs Mer...
+                      Läs Mer
                     </a>
                   </aside>
                   <div className={styles.arrowContainer}>
