@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
-import { useSwipeable } from "react-swipeable";
 import { trackGalleryElementClick } from "../analytics/home";
 import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
 import styles from "../../styles/home/Gallery.module.css";
@@ -42,6 +41,9 @@ const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isNavHovered, setIsNavHovered] = useState(false);
+  const [deltaX, setDeltaX] = useState(0);
+  const [isSwiping, setIsSwiping] = useState(false);
+  const initialTouch = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
     const interval = setInterval(goToNextSlide, 3000);
@@ -51,19 +53,46 @@ const Gallery = () => {
   const goToPrevSlide = () => {
     const newIndex = (currentIndex - 1 + images.length) % images.length;
     setCurrentIndex(newIndex);
+    setDeltaX(0);
   };
 
   const goToNextSlide = () => {
     const newIndex = (currentIndex + 1) % images.length;
     setCurrentIndex(newIndex);
+    setDeltaX(0);
   };
 
-  const swipeHandlers = useSwipeable({
-    onSwipedLeft: goToNextSlide,
-    onSwipedRight: goToPrevSlide,
-    preventDefaultTouchmoveEvent: true,
-    trackMouse: true,
-  });
+  const handleTouchStart = (event) => {
+    const touch = event.touches[0];
+    initialTouch.current = { x: touch.clientX, y: touch.clientY };
+  };
+
+  const handleTouchMove = (event) => {
+    const touch = event.touches[0];
+    const deltaX = touch.clientX - initialTouch.current.x;
+    const deltaY = touch.clientY - initialTouch.current.y;
+
+    // Check if horizontal swipe is dominant
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      event.preventDefault();
+      setIsSwiping(true);
+      setDeltaX(deltaX);
+    } else {
+      setIsSwiping(false);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (isSwiping) {
+      if (deltaX < -50) {
+        goToNextSlide();
+      } else if (deltaX > 50) {
+        goToPrevSlide();
+      }
+    }
+    setDeltaX(0);
+    setIsSwiping(false);
+  };
 
   // Prevent nav buttons to trigger hover on other elements
   const handleMouseEnter = () => setIsHovered(true);
@@ -97,18 +126,23 @@ const Gallery = () => {
         </figure>
         <section className={styles.galleryCarousel}>
           <article
-            {...swipeHandlers}
             className={`${styles.carouselContainer} ${
               isHovered && !isNavHovered ? styles.hover : ""
             }`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
           >
             <div className={styles.carouselInner}>
               <div
                 className={styles.slider}
                 style={{
-                  transform: `translateX(-${currentIndex * 100}%)`,
+                  transform: `translateX(calc(-${
+                    currentIndex * 100
+                  }% + ${deltaX}px))`,
+                  transition: isSwiping ? "none" : "transform 0.3s ease", // Disable transition during swipe
                 }}
               >
                 {images.map((image, index) => (
