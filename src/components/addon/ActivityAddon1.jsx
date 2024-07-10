@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useSwipeable } from "react-swipeable";
+import { useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { trackActivityElementClick } from "../analytics/addon";
 import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
@@ -14,6 +13,9 @@ import image4 from "../../assets/discover/discover4.jpg";
 const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [deltaX, setDeltaX] = useState(0);
+  const [isSwiping, setIsSwiping] = useState(false);
+  const initialTouch = useRef({ x: 0, y: 0 });
   const location = useLocation();
   const currentPath = location.pathname;
 
@@ -60,25 +62,47 @@ const Carousel = () => {
     setActiveIndex((prevIndex) =>
       prevIndex === 0 ? slides.length - 1 : prevIndex - 1
     );
+    setDeltaX(0);
   };
 
   const handleNext = () => {
     setActiveIndex((prevIndex) =>
       prevIndex === slides.length - 1 ? 0 : prevIndex + 1
     );
+    setDeltaX(0);
   };
 
-  // Swipe handlers
-  const swipeHandlers = useSwipeable({
-    onSwipedLeft: handleNext,
-    onSwipedRight: handlePrev,
-    preventDefaultTouchmoveEvent: true,
-    trackMouse: true,
-    delta: 10,
-    minDistance: 20,
-    preventScrollOnSwipe: true,
-    trackTouch: true,
-  });
+  const handleTouchStart = (event) => {
+    const touch = event.touches[0];
+    initialTouch.current = { x: touch.clientX, y: touch.clientY };
+  };
+
+  const handleTouchMove = (event) => {
+    const touch = event.touches[0];
+    const deltaX = touch.clientX - initialTouch.current.x;
+    const deltaY = touch.clientY - initialTouch.current.y;
+
+    // Check if horizontal swipe is dominant
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      event.preventDefault();
+      setIsSwiping(true);
+      setDeltaX(deltaX);
+    } else {
+      setIsSwiping(false);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (isSwiping) {
+      if (deltaX < -50) {
+        handleNext();
+      } else if (deltaX > 50) {
+        handlePrev();
+      }
+    }
+    setDeltaX(0);
+    setIsSwiping(false);
+  };
 
   // Google Analytics
   const trackElementClickEvent = (elementType, elementText, elementUrl) => {
@@ -86,13 +110,21 @@ const Carousel = () => {
   };
 
   return (
-    <section {...swipeHandlers} className={styles.carousel}>
+    <section
+      className={styles.carousel}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <main className={styles.container}>
         <div className={styles.carouselInner}>
           <div
             className={styles.slider}
             style={{
-              transform: `translateX(-${activeIndex * 100}%)`,
+              transform: `translateX(calc(-${
+                activeIndex * 100
+              }% + ${deltaX}px))`,
+              transition: isSwiping ? "none" : "transform 0.3s ease",
             }}
           >
             {slides.map((slide, index) => (
