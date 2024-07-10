@@ -70,6 +70,10 @@ const ActivityCarousel = () => {
     onSwipedRight: handlePrev,
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
+    delta: 10,
+    minDistance: 20,
+    preventScrollOnSwipe: true,
+    trackTouch: true,
   });
 
   // Google Analytics
@@ -80,72 +84,85 @@ const ActivityCarousel = () => {
   return (
     <section {...swipeHandlers} className={styles.carousel}>
       <main className={styles.container}>
-        {slides.map((slide, index) => (
-          <figure
-            key={index}
-            className={`${styles.slide} ${
-              index === activeIndex ? styles.active : ""
-            } ${index === hoveredIndex ? styles.hovered : ""}`}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
+        <div className={styles.carouselInner}>
+          <div
+            className={styles.slider}
+            style={{
+              transform: `translateX(-${activeIndex * 100}%)`,
+            }}
           >
-            <a
-              href={slide.link}
-              onClick={() =>
-                trackElementClickEvent("image_link", slide.title, slide.link)
-              }
-            >
-              <img src={slide.src} alt={`Slide ${index + 1}`} />
-            </a>
-            <div className={styles.slideCounter}>
-              {index + 1}/{slides.length}
-            </div>
-            <figcaption className={styles.caption}>
-              <a
-                href={slide.link}
-                onClick={() =>
-                  trackElementClickEvent(
-                    "caption_title",
-                    slide.title,
-                    slide.link
-                  )
-                }
+            {slides.map((slide, index) => (
+              <figure
+                key={index}
+                className={`${styles.slide} ${
+                  index === hoveredIndex ? styles.hovered : ""
+                }`}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
               >
-                <h3 className={styles.captionTitle}>{slide.title}</h3>
-              </a>
-              <p>{truncateDescription(slide.description, 25)}</p>
-              <aside className={styles.linkContainer}>
-                <a
-                  className={styles.captionLink}
-                  href={slide.link}
-                  onClick={() =>
-                    trackElementClickEvent(
-                      "caption_link",
-                      "Läs Mer...",
-                      slide.link
-                    )
-                  }
-                >
-                  Läs Mer...
-                </a>
-              </aside>
-              <div className={styles.arrowContainer}>
                 <a
                   href={slide.link}
                   onClick={() =>
                     trackElementClickEvent(
-                      "arrow_icon",
-                      "Arrow Icon",
+                      "image_link",
+                      slide.title,
                       slide.link
                     )
                   }
                 >
-                  <RxArrowRight className={styles.arrowIcon} />
+                  <img src={slide.src} alt={`Slide ${index + 1}`} />
                 </a>
-              </div>
-            </figcaption>
-          </figure>
-        ))}
+                <div className={styles.slideCounter}>
+                  {index + 1}/{slides.length}
+                </div>
+                <figcaption className={styles.caption}>
+                  <a
+                    href={slide.link}
+                    onClick={() =>
+                      trackElementClickEvent(
+                        "caption_title",
+                        slide.title,
+                        slide.link
+                      )
+                    }
+                  >
+                    <h3 className={styles.captionTitle}>{slide.title}</h3>
+                  </a>
+                  <p>{truncateDescription(slide.description, 25)}</p>
+                  <aside className={styles.linkContainer}>
+                    <a
+                      className={styles.captionLink}
+                      href={slide.link}
+                      onClick={() =>
+                        trackElementClickEvent(
+                          "caption_link",
+                          "Läs Mer...",
+                          slide.link
+                        )
+                      }
+                    >
+                      Läs Mer...
+                    </a>
+                  </aside>
+                  <div className={styles.arrowContainer}>
+                    <a
+                      href={slide.link}
+                      onClick={() =>
+                        trackElementClickEvent(
+                          "arrow_icon",
+                          "Arrow Icon",
+                          slide.link
+                        )
+                      }
+                    >
+                      <RxArrowRight className={styles.arrowIcon} />
+                    </a>
+                  </div>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
       </main>
       <nav className={styles.nav}>
         <span className={styles.navPrev} onClick={handlePrev}>
