@@ -118,6 +118,10 @@ body {
   transition: height 0.8s ease, background-color 0.8s ease;
 }
 
+.expandedOverlay.currentPathOverlay {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
 .expandedOverlay h3 {
   margin-bottom: 0.5rem;
 }
@@ -162,6 +166,7 @@ body {
 
 /* ---- Darken if on the current path in addon only ---- */
 .currentPageImage {
+  cursor: default;
   filter: brightness(0.1);
 }
 
@@ -170,8 +175,9 @@ body {
   left: 50%;
   transform: translateX(-50%);
   bottom: 10rem;
+  cursor: auto;
   color: var(--white-text-color);
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -190,8 +196,7 @@ body {
     font-size: 2.5rem;
   }
 
-  .cardOverlay h3,
-  .currentPageMessage {
+  .cardOverlay h3 {
     font-size: 1.5rem;
   }
 }
@@ -202,8 +207,7 @@ body {
     font-size: 2.5rem;
   }
 
-  .cardOverlay h3,
-  .currentPageMessage {
+  .cardOverlay h3 {
     font-size: 1.3rem;
   }
 }
@@ -231,8 +235,7 @@ body {
     height: 30rem;
   }
 
-  .cardOverlay h3,
-  .currentPageMessage {
+  .cardOverlay h3 {
     font-size: 1.5rem;
   }
 
@@ -272,8 +275,7 @@ body {
     height: 30rem;
   }
 
-  .cardOverlay h3,
-  .currentPageMessage {
+  .cardOverlay h3 {
     font-size: 1.7rem;
   }
 
@@ -322,8 +324,7 @@ body {
     height: 35rem;
   }
 
-  .cardOverlay h3,
-  .currentPageMessage {
+  .cardOverlay h3 {
     font-size: 1.7rem;
   }
 
@@ -382,8 +383,7 @@ body {
     height: 40rem;
   }
 
-  .cardOverlay h3,
-  .currentPageMessage {
+  .cardOverlay h3 {
     font-size: 1.7rem;
   }
 

@@ -227,27 +227,36 @@ const GalleryAddon4 = ({ title }) => {
                     <a
                       className={`${styles.carouselLink} ${styles2.carouselLink}`}
                       href={images[currentIndex].link}
-                      onClick={() =>
+                      onClick={(e) => {
+                        if (currentPath === images[currentIndex].link) {
+                          e.preventDefault();
+                          return;
+                        }
                         trackElementClickEvent(
                           "carousel_link",
                           "Läs Mer",
                           images[currentIndex].link
-                        )
-                      }
+                        );
+                      }}
                     >
                       Läs Mer
                     </a>
                   </div>
                   <div className={styles.arrowContainer}>
                     <a
+                      className={`${styles.carouselLink} ${styles2.carouselLink}`}
                       href={images[currentIndex].link}
-                      onClick={() =>
+                      onClick={(e) => {
+                        if (currentPath === images[currentIndex].link) {
+                          e.preventDefault();
+                          return;
+                        }
                         trackElementClickEvent(
-                          "arrow_icon",
-                          "Arrow Icon",
+                          "carousel_link",
+                          "Läs Mer",
                           images[currentIndex].link
-                        )
-                      }
+                        );
+                      }}
                     >
                       <RxArrowRight
                         className={`${styles.arrowIcon} ${styles2.arrowIcon}`}

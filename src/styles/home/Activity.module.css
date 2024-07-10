@@ -209,6 +209,7 @@
 
 /* ---- Darken if on the current path in addon only ---- */
 .currentPageOverlay {
+  cursor: auto;
   position: relative;
 }
 

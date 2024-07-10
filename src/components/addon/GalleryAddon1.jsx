@@ -172,13 +172,17 @@ const GalleryAddon1 = ({ title }) => {
                     ) : (
                       <NavLink
                         to={image.link}
-                        onClick={() =>
+                        onClick={(e) => {
+                          if (currentPath === image.link) {
+                            e.preventDefault(); // Prevent default action only for the currentPath card
+                            return;
+                          }
                           trackElementClickEvent(
                             "carousel_img",
                             image.title,
                             image.link
-                          )
-                        }
+                          );
+                        }}
                       >
                         <img src={image.url} alt={`Slide ${index}`} />
                       </NavLink>
@@ -218,13 +222,17 @@ const GalleryAddon1 = ({ title }) => {
                     <a
                       className={`${styles.carouselLink} ${styles2.carouselLink}`}
                       href={images[currentIndex].link}
-                      onClick={() =>
+                      onClick={(e) => {
+                        if (currentPath === images[currentIndex].link) {
+                          e.preventDefault();
+                          return;
+                        }
                         trackElementClickEvent(
                           "carousel_link",
                           "Läs Mer",
                           images[currentIndex].link
-                        )
-                      }
+                        );
+                      }}
                     >
                       Läs Mer
                     </a>
@@ -232,13 +240,17 @@ const GalleryAddon1 = ({ title }) => {
                   <div className={styles.arrowContainer}>
                     <a
                       href={images[currentIndex].link}
-                      onClick={() =>
+                      onClick={(e) => {
+                        if (currentPath === images[currentIndex].link) {
+                          e.preventDefault();
+                          return;
+                        }
                         trackElementClickEvent(
                           "arrow_icon",
                           "Arrow Icon",
                           images[currentIndex].link
-                        )
-                      }
+                        );
+                      }}
                     >
                       <RxArrowRight
                         className={`${styles.arrowIcon} ${styles2.arrowIcon}`}

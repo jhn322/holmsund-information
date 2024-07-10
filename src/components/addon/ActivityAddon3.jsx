@@ -154,13 +154,17 @@ const Carousel = () => {
                 ) : (
                   <a
                     href={slide.link}
-                    onClick={() =>
+                    onClick={(e) => {
+                      if (currentPath === slide.link) {
+                        e.preventDefault();
+                        return;
+                      }
                       trackElementClickEvent(
                         "image_link",
                         slide.title,
                         slide.link
-                      )
-                    }
+                      );
+                    }}
                   >
                     <div className={styles.imgContainer}>
                       <img src={slide.src} alt={`Slide ${index + 1}`} />
@@ -181,13 +185,17 @@ const Carousel = () => {
                 <figcaption className={`${styles.caption} ${styles2.caption}`}>
                   <a
                     href={slide.link}
-                    onClick={() =>
+                    onClick={(e) => {
+                      if (currentPath === slide.link) {
+                        e.preventDefault(); // Prevent default action only for the currentPath card
+                        return;
+                      }
                       trackElementClickEvent(
                         "caption_title",
                         slide.title,
                         slide.link
-                      )
-                    }
+                      );
+                    }}
                   >
                     <h3
                       className={`${styles.captionTitle} ${styles2.captionTitle}`}
@@ -200,13 +208,17 @@ const Carousel = () => {
                     <a
                       className={`${styles.captionLink} ${styles2.captionLink}`}
                       href={slide.link}
-                      onClick={() =>
+                      onClick={(e) => {
+                        if (currentPath === slide.link) {
+                          e.preventDefault(); // Prevent default action only for the currentPath card
+                          return;
+                        }
                         trackElementClickEvent(
                           "caption_link",
                           "Läs Mer",
                           slide.link
-                        )
-                      }
+                        );
+                      }}
                     >
                       Läs Mer
                     </a>
@@ -214,13 +226,17 @@ const Carousel = () => {
                   <div className={styles.arrowContainer}>
                     <a
                       href={slide.link}
-                      onClick={() =>
+                      onClick={(e) => {
+                        if (currentPath === slide.link) {
+                          e.preventDefault(); // Prevent default action only for the currentPath card
+                          return;
+                        }
                         trackElementClickEvent(
                           "arrow_icon",
                           "Arrow Icon",
                           slide.link
-                        )
-                      }
+                        );
+                      }}
                     >
                       <RxArrowRight
                         className={`${styles.arrowIcon} ${styles2.arrowIcon}`}

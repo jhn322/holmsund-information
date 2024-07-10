@@ -44,6 +44,7 @@ const DiscoverAddon1 = ({ title }) => {
   const [overlayStates, setOverlayStates] = useState(
     Array(cardData.length).fill(false)
   );
+  const [currentPathIndex, setCurrentPathIndex] = useState(-1);
 
   const location = useLocation();
 
@@ -105,6 +106,11 @@ const DiscoverAddon1 = ({ title }) => {
     };
   }, []);
 
+  useEffect(() => {
+    const index = cardData.findIndex((card) => card.link === currentPath);
+    setCurrentPathIndex(index);
+  }, [currentPath, cardData]);
+
   const handleHover = (index, hovered) => {
     setIsHovered(hovered);
     const newOverlayStates = overlayStates.map((state, i) =>
@@ -143,8 +149,14 @@ const DiscoverAddon1 = ({ title }) => {
                 >
                   <figcaption
                     className={`${styles.cardOverlay} ${
-                      overlayStates[index] && isHovered
+                      overlayStates[index] &&
+                      isHovered &&
+                      index !== currentPathIndex
                         ? styles.expandedOverlay
+                        : ""
+                    } ${
+                      index === currentPathIndex
+                        ? styles.currentPathOverlay
                         : ""
                     }`}
                   >

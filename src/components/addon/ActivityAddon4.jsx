@@ -154,13 +154,17 @@ const Carousel = () => {
                 ) : (
                   <a
                     href={slide.link}
-                    onClick={() =>
+                    onClick={(e) => {
+                      if (currentPath === slide.link) {
+                        e.preventDefault();
+                        return;
+                      }
                       trackElementClickEvent(
                         "image_link",
                         slide.title,
                         slide.link
-                      )
-                    }
+                      );
+                    }}
                   >
                     <div className={styles.imgContainer}>
                       <img src={slide.src} alt={`Slide ${index + 1}`} />
@@ -181,28 +185,35 @@ const Carousel = () => {
                 <figcaption className={styles.caption}>
                   <a
                     href={slide.link}
-                    onClick={() =>
+                    onClick={(e) => {
+                      if (currentPath === slide.link) {
+                        e.preventDefault();
+                        return;
+                      }
                       trackElementClickEvent(
-                        "caption_title",
+                        "image_link",
                         slide.title,
                         slide.link
-                      )
-                    }
+                      );
+                    }}
                   >
                     <h3 className={styles.captionTitle}>{slide.title}</h3>
                   </a>
                   <p>{truncateDescription(slide.description, 25)}</p>
                   <div className={styles.linkContainer}>
                     <a
-                      className={styles.captionLink}
                       href={slide.link}
-                      onClick={() =>
+                      onClick={(e) => {
+                        if (currentPath === slide.link) {
+                          e.preventDefault();
+                          return;
+                        }
                         trackElementClickEvent(
-                          "caption_link",
-                          "Läs Mer",
+                          "image_link",
+                          slide.title,
                           slide.link
-                        )
-                      }
+                        );
+                      }}
                     >
                       Läs Mer
                     </a>
@@ -210,13 +221,17 @@ const Carousel = () => {
                   <div className={styles.arrowContainer}>
                     <a
                       href={slide.link}
-                      onClick={() =>
+                      onClick={(e) => {
+                        if (currentPath === slide.link) {
+                          e.preventDefault();
+                          return;
+                        }
                         trackElementClickEvent(
-                          "arrow_icon",
-                          "Arrow Icon",
+                          "image_link",
+                          slide.title,
                           slide.link
-                        )
-                      }
+                        );
+                      }}
                     >
                       <RxArrowRight className={styles.arrowIcon} />
                     </a>
