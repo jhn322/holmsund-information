@@ -142,11 +142,21 @@ const ActivityCarousel = () => {
                     )
                   }
                 >
-                  <img src={slide.src} alt={`Slide ${index + 1}`} />
+                  <div className={styles.imgContainer}>
+                    <img src={slide.src} alt={`Slide ${index + 1}`} />
+                    <div className={styles.slideCounter}>
+                      {index + 1}/{slides.length}
+                    </div>
+                    <nav className={styles.nav}>
+                      <span className={styles.navPrev} onClick={handlePrev}>
+                        <RxChevronLeft strokeWidth={0.2} />
+                      </span>
+                      <span className={styles.navNext} onClick={handleNext}>
+                        <RxChevronRight strokeWidth={0.2} />
+                      </span>
+                    </nav>
+                  </div>
                 </a>
-                <div className={styles.slideCounter}>
-                  {index + 1}/{slides.length}
-                </div>
                 <figcaption className={styles.caption}>
                   <a
                     href={slide.link}
@@ -196,14 +206,6 @@ const ActivityCarousel = () => {
           </div>
         </div>
       </main>
-      <nav className={styles.nav}>
-        <span className={styles.navPrev} onClick={handlePrev}>
-          <RxChevronLeft strokeWidth={0.2} />
-        </span>
-        <span className={styles.navNext} onClick={handleNext}>
-          <RxChevronRight strokeWidth={0.2} />
-        </span>
-      </nav>
     </section>
   );
 };

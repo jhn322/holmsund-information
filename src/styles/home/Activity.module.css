@@ -21,7 +21,6 @@
   transition: color 0.3s;
 }
 
-/* --- Hovering within container gives simultaneous hover on 3 elements --- */
 .hovered .captionTitle,
 .hovered .captionLink {
   color: var(--hover-color);
@@ -32,7 +31,6 @@
   color: var(--hover-color);
 }
 
-/* Scroll bar style */
 .container::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -70,9 +68,13 @@
 
 .slide img {
   width: 100%;
-  height: 36rem;
+  height: 26rem;
   border-radius: 10px;
   object-fit: cover;
+}
+
+.imgContainer {
+  position: relative;
 }
 
 .slideCounter {
@@ -131,9 +133,11 @@
   display: flex;
   justify-content: space-between;
   position: absolute;
-  top: 362px;
+  top: 50%;
   width: 100%;
+  transform: translateY(-50%);
   cursor: pointer;
+  z-index: 1;
 }
 
 .nav span {
