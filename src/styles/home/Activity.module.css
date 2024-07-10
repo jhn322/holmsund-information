@@ -21,6 +21,7 @@
   transition: color 0.3s;
 }
 
+/* --- Simultaneous hover on 3 elements --- */
 .hovered .captionTitle,
 .hovered .captionLink {
   color: var(--hover-color);
