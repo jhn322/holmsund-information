@@ -65,6 +65,7 @@ const Gallery = () => {
     trackMouse: true,
   });
 
+  // Prevent nav buttons to trigger hover on other elements
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
   const handleNavMouseEnter = () => setIsNavHovered(true);
@@ -80,7 +81,7 @@ const Gallery = () => {
       <div className={styles.galleryContainer}>
         <figure className={styles.galleryImageContainer}>
           <div className={styles.galleryImageInner}>
-            <div
+            <article
               className={styles.galleryImage}
               style={{ backgroundImage: `url(${staticGalleryImage})` }}
             >
@@ -91,7 +92,7 @@ const Gallery = () => {
               <h2 className={styles.galleryTitle}>
                 Uppfriskad & <br /> Förnyad
               </h2>
-            </div>
+            </article>
           </div>
         </figure>
         <section className={styles.galleryCarousel}>

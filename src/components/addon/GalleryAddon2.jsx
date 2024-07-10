@@ -44,43 +44,24 @@ const GalleryAddon2 = ({ title }) => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [autoSlideTimeout, setAutoSlideTimeout] = useState(null);
   const [isHovered, setIsHovered] = useState(false);
   const [isNavHovered, setIsNavHovered] = useState(false);
 
   useEffect(() => {
-    startAutoSlide();
-
-    return () => {
-      clearTimeout(autoSlideTimeout);
-    };
+    const interval = setInterval(goToNextSlide, 3000);
+    return () => clearInterval(interval);
   }, [currentIndex]);
-
-  const startAutoSlide = () => {
-    clearTimeout(autoSlideTimeout);
-
-    const timeout = setTimeout(goToNextSlide, 5000);
-    setAutoSlideTimeout(timeout);
-  };
-
-  const goToSlide = (index) => {
-    setCurrentIndex(index);
-    startAutoSlide();
-  };
 
   const goToPrevSlide = () => {
     const newIndex = (currentIndex - 1 + images.length) % images.length;
     setCurrentIndex(newIndex);
-    startAutoSlide();
   };
 
   const goToNextSlide = () => {
     const newIndex = (currentIndex + 1) % images.length;
     setCurrentIndex(newIndex);
-    startAutoSlide();
   };
 
-  // Swipe handlers
   const swipeHandlers = useSwipeable({
     onSwipedLeft: goToNextSlide,
     onSwipedRight: goToPrevSlide,
@@ -88,22 +69,11 @@ const GalleryAddon2 = ({ title }) => {
     trackMouse: true,
   });
 
-  // Additional useState to prevent hover trigger on other elements by the nav buttons
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  const handleNavMouseEnter = () => {
-    setIsNavHovered(true);
-  };
-
-  const handleNavMouseLeave = () => {
-    setIsNavHovered(false);
-  };
+  // Prevent nav buttons to trigger hover on other elements
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
+  const handleNavMouseEnter = () => setIsNavHovered(true);
+  const handleNavMouseLeave = () => setIsNavHovered(false);
 
   // Google Analytics
   const trackElementClickEvent = (elementType, elementText, elementUrl) => {
@@ -141,40 +111,47 @@ const GalleryAddon2 = ({ title }) => {
             onMouseLeave={handleMouseLeave}
           >
             <div className={styles.carouselInner}>
-              {images.map((image, index) => (
-                <figure
-                  key={index}
-                  className={`${styles.slide} ${
-                    index === currentIndex ? styles.active : ""
-                  }`}
-                >
-                  {currentPath === image.link ? (
-                    <div className={styles.currentPageOverlay}>
-                      <img
-                        src={image.url}
-                        alt={`Slide ${index}`}
-                        className={styles.currentPageImage}
-                      />
-                      <div className={styles.currentPageMessage}>
-                        Nuvarande Sida
+              <div
+                className={styles.slider}
+                style={{
+                  transform: `translateX(-${currentIndex * 100}%)`,
+                }}
+              >
+                {images.map((image, index) => (
+                  <figure
+                    key={index}
+                    className={`${styles.slide} ${
+                      index === currentIndex ? styles.active : ""
+                    }`}
+                  >
+                    {currentPath === image.link ? (
+                      <div className={styles.currentPageOverlay}>
+                        <img
+                          src={image.url}
+                          alt={`Slide ${index}`}
+                          className={styles.currentPageImage}
+                        />
+                        <div className={styles.currentPageMessage}>
+                          Nuvarande Sida
+                        </div>
                       </div>
-                    </div>
-                  ) : (
-                    <NavLink
-                      to={image.link}
-                      onClick={() =>
-                        trackElementClickEvent(
-                          "carousel_img",
-                          image.title,
-                          image.link
-                        )
-                      }
-                    >
-                      <img src={image.url} alt={`Slide ${index}`} />
-                    </NavLink>
-                  )}
-                </figure>
-              ))}
+                    ) : (
+                      <NavLink
+                        to={image.link}
+                        onClick={() =>
+                          trackElementClickEvent(
+                            "carousel_img",
+                            image.title,
+                            image.link
+                          )
+                        }
+                      >
+                        <img src={image.url} alt={`Slide ${index}`} />
+                      </NavLink>
+                    )}
+                  </figure>
+                ))}
+              </div>
               <nav
                 className={styles.carouselNav}
                 onMouseEnter={handleNavMouseEnter}
@@ -202,7 +179,7 @@ const GalleryAddon2 = ({ title }) => {
                   className={`${styles.hoverContainer} ${styles2.hoverContainer}`}
                 >
                   <h2>{images[currentIndex].title}</h2>
-                  <p>{images[currentIndex].text}</p>
+                  <p>{images[currentIndex].text} </p>
                   <div className={styles.linkContainer}>
                     <a
                       className={`${styles.carouselLink} ${styles2.carouselLink}`}
@@ -245,7 +222,7 @@ const GalleryAddon2 = ({ title }) => {
                 className={`${styles.dot} ${styles2.dot} ${
                   index === currentIndex ? styles.active : ""
                 } ${index === currentIndex ? styles2.active : ""}`}
-                onClick={() => goToSlide(index)}
+                onClick={() => setCurrentIndex(index)}
               ></span>
             ))}
           </div>
