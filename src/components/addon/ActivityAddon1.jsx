@@ -221,13 +221,17 @@ const Carousel = () => {
                   <div className={styles.arrowContainer}>
                     <a
                       href={slide.link}
-                      onClick={() =>
+                      onClick={(e) => {
+                        if (currentPath === slide.link) {
+                          e.preventDefault();
+                          return;
+                        }
                         trackElementClickEvent(
-                          "arrow_icon",
-                          "Arrow Icon",
+                          "image_link",
+                          slide.title,
                           slide.link
-                        )
-                      }
+                        );
+                      }}
                     >
                       <RxArrowRight className={styles.arrowIcon} />
                     </a>

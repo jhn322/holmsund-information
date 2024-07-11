@@ -187,7 +187,7 @@ const Carousel = () => {
                     href={slide.link}
                     onClick={(e) => {
                       if (currentPath === slide.link) {
-                        e.preventDefault(); // Prevent default action only for the currentPath card
+                        e.preventDefault();
                         return;
                       }
                       trackElementClickEvent(
@@ -210,7 +210,7 @@ const Carousel = () => {
                       href={slide.link}
                       onClick={(e) => {
                         if (currentPath === slide.link) {
-                          e.preventDefault(); // Prevent default action only for the currentPath card
+                          e.preventDefault();
                           return;
                         }
                         trackElementClickEvent(
@@ -230,7 +230,7 @@ const Carousel = () => {
                       href={slide.link}
                       onClick={(e) => {
                         if (currentPath === slide.link) {
-                          e.preventDefault(); // Prevent default action only for the currentPath card
+                          e.preventDefault();
                           return;
                         }
                         trackElementClickEvent(
