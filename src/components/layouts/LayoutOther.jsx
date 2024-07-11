@@ -25,6 +25,7 @@ import ScrollUp from "../common/ScrollUp";
 import ScrollToTop from "../common/ScrollToTop";
 import Cookies from "../common/Cookies";
 import Footer from "../common/Footer";
+import { ThemeProvider } from "../context/ThemeContext";
 
 const LayoutPageOther = ({
   children,
@@ -124,22 +125,24 @@ const LayoutPageOther = ({
 
   return (
     <main>
-      <Navigation />
-      {renderTermsCircleAddon && <TermsCircleAddon />}
-      {renderCookiesCircleAddon && <CookiesCircleAddon />}
-      {renderAboutCircleAddon && <AboutCircleAddon />}
-      {renderMapCircleAddon && <MapCircleAddon />}
-      <Breadcrumb />
-      <section>{children}</section>
-      {renderSeparatorAddon && <SeparatorAddon />}
-      {shuffleComponents}
-      {renderOtherAddon && <OtherAddon />}
-      <Extra />
-      <ScrollDown />
-      <ScrollUp />
-      <ScrollToTop />
-      <Cookies />
-      <Footer />
+      <ThemeProvider>
+        <Navigation />
+        {renderTermsCircleAddon && <TermsCircleAddon />}
+        {renderCookiesCircleAddon && <CookiesCircleAddon />}
+        {renderAboutCircleAddon && <AboutCircleAddon />}
+        {renderMapCircleAddon && <MapCircleAddon />}
+        <Breadcrumb />
+        <section>{children}</section>
+        {renderSeparatorAddon && <SeparatorAddon />}
+        {shuffleComponents}
+        {renderOtherAddon && <OtherAddon />}
+        <Extra />
+        <ScrollDown />
+        <ScrollUp />
+        <ScrollToTop />
+        <Cookies />
+        <Footer />
+      </ThemeProvider>
     </main>
   );
 };

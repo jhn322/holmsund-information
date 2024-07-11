@@ -33,7 +33,7 @@ span {
 .separatorContent {
   height: 18rem;
   padding: 2rem 0;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
 }
 
 .separatorText,

@@ -27,6 +27,10 @@
   color: var(--black-text-color);
 }
 
+.text a {
+  color: var(--black-text-color);
+}
+
 .list {
   font-size: 1.1rem;
   line-height: 1.6;

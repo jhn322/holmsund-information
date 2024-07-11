@@ -13,7 +13,7 @@
   align-items: center;
   text-align: center;
   flex-direction: column;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
 }
 
 .title {

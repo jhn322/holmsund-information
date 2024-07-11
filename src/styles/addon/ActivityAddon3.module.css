@@ -1,5 +1,5 @@
 .container .captionTitle {
-  color: var(--black-text-color);
+  color: #0b0b0b;
 }
 
 /* --- Hovering within container gives simultaneous hover on 3 elements --- */
@@ -14,16 +14,20 @@
 }
 
 .caption p {
-  color: var(--black-text-color);
+  color: #0b0b0b;
 }
 
 .captionLink {
-  color: var(--black-text-color);
+  color: #0b0b0b;
+}
+
+.arrowContainer svg {
+  color: #0b0b0b;
 }
 
 .arrowIcon {
-  color: var(--black-text-color);
-  border: 2px solid var(--black-text-color);
+  color: #0b0b0b;
+  border: 2px solid #0b0b0b;
 }
 
 .arrowIcon:hover {

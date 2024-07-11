@@ -115,7 +115,7 @@ const Discover = () => {
       <main ref={discoverContainerRef} className={styles.discoverContainer}>
         <article className={styles.discoverInner}>
           <header className={styles.discoverTitle}>
-            <h2>Utforska Holmsund</h2>
+            <h2 className={styles.excludedWhiteText}>Utforska Holmsund</h2>
           </header>
           <section className={styles.discoverCardContainer}>
             {cardData.map((card, index) => (

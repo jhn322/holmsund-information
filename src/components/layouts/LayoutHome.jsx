@@ -13,25 +13,28 @@ import ScrollUp from "../common/ScrollUp";
 import ScrollToTop from "../common/ScrollToTop";
 import Cookies from "../common/Cookies";
 import Footer from "../common/Footer";
+import { ThemeProvider } from "../context/ThemeContext";
 
 const LayoutHome = () => {
   return (
-    <main>
-      <Navigation />
-      <Header />
-      <ContentCircle />
-      <Separator />
-      <Discover />
-      <Activity />
-      <DiscoverInspired />
-      <Gallery />
-      <ExtraHome />
-      <ScrollDown />
-      <ScrollUp />
-      <ScrollToTop />
-      <Cookies />
-      <Footer />
-    </main>
+    <ThemeProvider>
+      <main>
+        <Navigation />
+        <Header />
+        <ContentCircle />
+        <Separator />
+        <Discover />
+        <Activity />
+        <DiscoverInspired />
+        <Gallery />
+        <ExtraHome />
+        <ScrollDown />
+        <ScrollUp />
+        <ScrollToTop />
+        <Cookies />
+        <Footer />
+      </main>
+    </ThemeProvider>
   );
 };
 

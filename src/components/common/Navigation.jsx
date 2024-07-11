@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import ThemeToggleButton from "../theme/ThemeToggleButton";
 import {
   RxHamburgerMenu,
   RxMagnifyingGlass,
@@ -362,6 +363,7 @@ const Navigation = () => {
                 <FaFacebook className={styles.facebook} />
               </a>
             </div>
+            <ThemeToggleButton />
             <div className={styles.closeCircle} onClick={closeMenu}>
               <RxCross2 className={styles.closeIcon} />
             </div>

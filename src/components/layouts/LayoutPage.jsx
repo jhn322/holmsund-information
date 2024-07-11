@@ -21,6 +21,7 @@ import ScrollUp from "../common/ScrollUp";
 import ScrollToTop from "../common/ScrollToTop";
 import Cookies from "../common/Cookies";
 import Footer from "../common/Footer";
+import { ThemeProvider } from "../context/ThemeContext";
 
 const LayoutPage = ({
   children,
@@ -116,21 +117,23 @@ const LayoutPage = ({
 
   return (
     <main>
-      <Navigation />
-      <HeaderAddonPage
-        title={headerTitle}
-        backgroundImage={headerBackgroundImage}
-      />
-      <Breadcrumb />
-      <section>{children}</section>
-      <SeparatorAddon />
-      {shuffleComponents}
-      <Extra />
-      <ScrollDown />
-      <ScrollUp />
-      <ScrollToTop />
-      <Cookies />
-      <Footer />
+      <ThemeProvider>
+        <Navigation />
+        <HeaderAddonPage
+          title={headerTitle}
+          backgroundImage={headerBackgroundImage}
+        />
+        <Breadcrumb />
+        <section>{children}</section>
+        <SeparatorAddon />
+        {shuffleComponents}
+        <Extra />
+        <ScrollDown />
+        <ScrollUp />
+        <ScrollToTop />
+        <Cookies />
+        <Footer />
+      </ThemeProvider>
     </main>
   );
 };

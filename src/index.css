@@ -7,8 +7,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* Colors */
-  --primary-color: #fff;
+  /* Light Theme Colors */
+  --background-color: #fff;
   --grey-color: #f1f2f2;
   --white-text-color: #f7f7f7;
   --black-text-color: #0b0b0b;
@@ -20,10 +20,30 @@
 
   /* Defaults */
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--black-text-color);
+  background-color: var(--background-color);
 }
 
+/* Dark theme */
+[dark-theme="dark"] {
+  /* Dark Theme Colors */
+  --background-color: #242424;
+  --grey-color: #2c2c2c;
+  --white-text-color: #e2e2e2;
+  --black-text-color: #e2e2e2;
+  --grey-text-color: #b5b5b5;
+}
+
+/* Override styles */
+[dark-theme="dark"] .excludedWhiteText {
+  color: #f7f7f7 !important;
+}
+
+[dark-theme="dark"] .excludedBlackText {
+  color: #0b0b0b !important;
+}
+
+/* Link and List styles */
 a,
 li {
   font-weight: 500;
@@ -38,6 +58,12 @@ svg:hover {
   color: var(--hover-color);
 }
 
+/* Icon styles */
+svg {
+  color: var(--primary-color);
+}
+
+/* Heading styles */
 h1 {
   color: var(--white-text-color);
   font-size: 3.2em;
@@ -52,10 +78,16 @@ h3 {
   color: var(--white-text-color);
 }
 
+h4 {
+  color: var(--white-text-color);
+}
+
+/* Paragraph styles */
 p {
   color: var(--black-text-color);
 }
 
+/* Button styles */
 button {
   border: 1px solid transparent;
   padding: 0.6em 1.2em;

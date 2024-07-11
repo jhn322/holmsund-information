@@ -22,6 +22,7 @@ import ScrollUp from "../common/ScrollUp";
 import ScrollToTop from "../common/ScrollToTop";
 import Cookies from "../common/Cookies";
 import Footer from "../common/Footer";
+import { ThemeProvider } from "../context/ThemeContext";
 
 const LayoutPageMain = ({
   children,
@@ -119,24 +120,26 @@ const LayoutPageMain = ({
 
   return (
     <main>
-      <Navigation />
-      {renderHeaderAddon && (
-        <HeaderAddon
-          title={headerTitle}
-          backgroundImage={headerBackgroundImage}
-        />
-      )}
-      {renderWeatherCircleAddon && <MapCircleAddon />}
-      <Breadcrumb />
-      <section>{children}</section>
-      <SeparatorAddon />
-      {shuffleComponents}
-      <Extra />
-      <ScrollDown />
-      <ScrollUp />
-      <ScrollToTop />
-      <Cookies />
-      <Footer />
+      <ThemeProvider>
+        <Navigation />
+        {renderHeaderAddon && (
+          <HeaderAddon
+            title={headerTitle}
+            backgroundImage={headerBackgroundImage}
+          />
+        )}
+        {renderWeatherCircleAddon && <MapCircleAddon />}
+        <Breadcrumb />
+        <section>{children}</section>
+        <SeparatorAddon />
+        {shuffleComponents}
+        <Extra />
+        <ScrollDown />
+        <ScrollUp />
+        <ScrollToTop />
+        <Cookies />
+        <Footer />
+      </ThemeProvider>
     </main>
   );
 };

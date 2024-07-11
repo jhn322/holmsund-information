@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   padding: 0rem 2rem;
 }
 

@@ -9,7 +9,7 @@
 
 .mainContainer {
   text-align: center;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
 }
 
 .container {
@@ -117,12 +117,12 @@
 
 .weatherBtnText:hover {
   color: #7b7ccf;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
 }
 
 .mapBtnText:hover {
   color: #f69122;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
 }
 
 /* Uncommon phone size */

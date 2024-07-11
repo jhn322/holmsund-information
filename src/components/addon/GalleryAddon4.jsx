@@ -242,7 +242,9 @@ const GalleryAddon4 = ({ title }) => {
                       Läs Mer
                     </a>
                   </div>
-                  <div className={styles.arrowContainer}>
+                  <div
+                    className={`${styles.arrowContainer} ${styles2.arrowContainer}`}
+                  >
                     <a
                       className={`${styles.carouselLink} ${styles2.carouselLink}`}
                       href={images[currentIndex].link}

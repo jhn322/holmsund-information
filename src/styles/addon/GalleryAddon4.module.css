@@ -3,7 +3,7 @@
 }
 
 .galleryTitle {
-  color: var(--black-text-color);
+  color: #0b0b0b;
 }
 
 /* --- Hovering within container gives simultaneous hover on 3 elements --- */
@@ -26,20 +26,24 @@
 }
 
 .carouselText h2 {
-  color: var(--black-text-color);
+  color: #0b0b0b;
 }
 
 .carouselText p {
-  color: var(--black-text-color);
+  color: #0b0b0b;
 }
 
 .carouselLink {
-  color: var(--black-text-color);
+  color: #0b0b0b;
+}
+
+.arrowContainer svg {
+  color: #0b0b0b;
 }
 
 .arrowIcon {
-  border: 2px solid var(--black-text-color);
-  color: var(--black-text-color);
+  border: 2px solid #0b0b0b;
+  color: #0b0b0b;
 }
 
 .dot.active {

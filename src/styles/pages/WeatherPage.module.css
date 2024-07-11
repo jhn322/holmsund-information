@@ -47,12 +47,12 @@ p {
 
 .weatherInfo h1 {
   font-size: 2rem;
-  color: var(--black-text-color);
+  color: #0b0b0b;
   padding-bottom: 1rem;
 }
 
 .weatherInfo p {
-  color: var(--black-text-color);
+  color: #0b0b0b;
   padding: 0.3rem 0;
 }
 
@@ -127,7 +127,7 @@ p {
   padding: 2rem 1rem;
   border-radius: 10px;
   max-width: 50rem;
-  background-color: var(--grey-text-color);
+  background-color: var(--grey-color);
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
 }
 

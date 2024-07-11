@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--grey-text-color);
+  background-color: var(--grey-color);
   height: 9rem;
 }
 

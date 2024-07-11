@@ -223,7 +223,9 @@ const Carousel = () => {
                       Läs Mer
                     </a>
                   </div>
-                  <div className={styles.arrowContainer}>
+                  <div
+                    className={`${styles.arrowContainer} ${styles2.arrowContainer}`}
+                  >
                     <a
                       href={slide.link}
                       onClick={(e) => {
