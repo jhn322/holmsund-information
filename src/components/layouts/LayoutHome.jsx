@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import Navigation from "../common/Navigation";
 import Header from "../home/Header";
 import ContentCircle from "../home/ContentCircle";
@@ -19,13 +18,6 @@ import { ThemeProvider } from "../context/ThemeContext";
 const LayoutHome = () => {
   return (
     <ThemeProvider>
-      <Helmet>
-        <title>Home - Holmsund Info</title>
-        <meta
-          name="description"
-          content="Välkommen till hemsidan av Holmsund Information. Upptäck våra aktiviteter, galleri och mer."
-        />
-      </Helmet>
       <div>
         <Navigation />
         <header>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
 import Navigation from "../common/Navigation";
 import TermsCircleAddon from "../addon/TermsCircleAddon";
 import CookiesCircleAddon from "../addon/CookiesCircleAddon";
@@ -126,13 +125,6 @@ const LayoutPageOther = ({
 
   return (
     <ThemeProvider>
-      <Helmet>
-        <title>Information - Holmsund Information</title>
-        <meta
-          name="description"
-          content="Information om Kakor, Användarvillkor och mer."
-        />
-      </Helmet>
       <div>
         <Navigation />
         {renderTermsCircleAddon && <TermsCircleAddon />}

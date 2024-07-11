@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
 import Navigation from "../common/Navigation";
 import HeaderAddon from "../addon/HeaderAddon";
 import Breadcrumb from "../common/Breadcrumb";
@@ -121,13 +120,6 @@ const LayoutPageMain = ({
 
   return (
     <ThemeProvider>
-      <Helmet>
-        <title>{headerTitle} - Holmsund Information</title>
-        <meta
-          name="description"
-          content={`Information about ${headerTitle}.`}
-        />
-      </Helmet>
       <div>
         <Navigation />
         {renderHeaderAddon && (
