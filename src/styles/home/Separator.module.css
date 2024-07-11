@@ -46,6 +46,7 @@ span {
 .link,
 .hashtag {
   font-size: 1.1rem;
+  word-wrap: break-word;
   color: var(--accent-color);
   transition: color 0.3s;
 }
