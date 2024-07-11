@@ -45,12 +45,6 @@ const Navigation = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     setIsMenuClosing(false);
-    // Apply overflow hidden to the body to prevent scrolling when menu is open
-    if (!isMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
   };
 
   // Argument to close the menu on a timeout
@@ -58,10 +52,20 @@ const Navigation = () => {
     setIsMenuClosing(true);
     setTimeout(() => {
       setIsMenuOpen(false);
-      // Remove overflow hidden when menu is closed
-      document.body.style.overflow = "auto";
     }, 150);
   };
+
+  // Manage body scroll based on menu state open/closed
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isMenuOpen]);
 
   // Sets background blur when menu is open
   const handleBlurBackgroundClick = () => {
