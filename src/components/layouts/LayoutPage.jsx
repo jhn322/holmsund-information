@@ -118,7 +118,7 @@ const LayoutPage = ({
   return (
     <ThemeProvider>
       <div>
-        {/* <Navigation /> */}
+        <Navigation />
         <HeaderAddonPage
           title={headerTitle}
           backgroundImage={headerBackgroundImage}

@@ -41,18 +41,18 @@ p {
   padding: 2rem 3rem;
   border-radius: 10px;
   max-width: 43rem;
-  background-color: var(--hover-color);
+  background-color: var(--grey-color);
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
 }
 
 .weatherInfo h1 {
   font-size: 2rem;
-  color: #0b0b0b;
+  color: var(--black-text-color);
   padding-bottom: 1rem;
 }
 
 .weatherInfo p {
-  color: #0b0b0b;
+  color: var(--black-text-color);
   padding: 0.3rem 0;
 }
 
