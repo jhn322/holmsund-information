@@ -127,7 +127,7 @@ p {
   padding: 2rem 1rem;
   border-radius: 10px;
   max-width: 50rem;
-  background-color: var(--grey-color);
+  background-color: var(--grey-text-color);
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
 }
 
