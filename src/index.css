@@ -34,15 +34,6 @@
   --grey-text-color: #b5b5b5;
 }
 
-/* Override styles */
-[dark-theme="dark"] .excludedWhiteText {
-  color: #f7f7f7 !important;
-}
-
-[dark-theme="dark"] .excludedBlackText {
-  color: #0b0b0b !important;
-}
-
 /* Link and List styles */
 a,
 li {
