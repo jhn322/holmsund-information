@@ -450,7 +450,8 @@ h5 {
     top: 64%;
     display: none;
     z-index: 999;
-    background-color: rgba(182, 70, 159, 0.85);
+    background-color: rgba(182, 70, 159, 0.9);
+    backdrop-filter: blur(10px);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 1rem 0;
