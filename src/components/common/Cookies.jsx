@@ -15,7 +15,6 @@ const Cookies = () => {
     trackCookiesElementClick("button", "Accept Cookies", null);
   };
 
-  // Google Analytics
   const handleNavLinkClick = () => {
     trackCookiesElementClick("navlink", "Cookie Policy", "/cookiepolicy");
   };
@@ -23,25 +22,33 @@ const Cookies = () => {
   if (!visible) return null;
 
   return (
-    <main className={styles.cookiesContainer}>
-      <p>
-        För att förbättra din upplevelse använder vi teknik för att analysera
-        klicks, navigering och andra interaktioner på vår webbplats. Du kan läs
-        mer i våran cookiepolicy genom att
-        <NavLink
-          to="/cookiepolicy"
-          className={styles.navToCookiepolicy}
-          onClick={handleNavLinkClick}
-        >
-          klicka här.
-        </NavLink>
-      </p>
-      <div className={styles.acceptContainer}>
-        <button className={styles.accept} onClick={handleAccept}>
-          Jag förstår
-        </button>
-      </div>
-    </main>
+    <>
+      <div className={styles.overlay}></div>
+      <main className={styles.cookiesContainer}>
+        <p>
+          För att förbättra din upplevelse använder vi teknik för att analysera
+          klick, navigering och andra interaktioner på vår webbplats. Dessa
+          analyser hjälper oss att förstå hur våra besökare använder webbplatsen
+          och gör det möjligt för oss att förbättra innehållet och
+          funktionaliteten. Vi kan också använda cookies för att komma ihåg dina
+          preferenser och göra din upplevelse mer personlig. För mer information
+          om hur vi använder cookies och hur du kan hantera dina inställningar,
+          vänligen läs vår cookiepolicy genom att
+          <NavLink
+            to="/cookiepolicy"
+            className={styles.navToCookiepolicy}
+            onClick={handleNavLinkClick}
+          >
+            klicka här.
+          </NavLink>
+        </p>
+        <div className={styles.acceptContainer}>
+          <button className={styles.accept} onClick={handleAccept}>
+            Jag samtycker
+          </button>
+        </div>
+      </main>
+    </>
   );
 };
 
