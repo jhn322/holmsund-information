@@ -33,14 +33,15 @@ const Cookies = () => {
           funktionaliteten. Vi kan också använda cookies för att komma ihåg dina
           preferenser och göra din upplevelse mer personlig. För mer information
           om hur vi använder cookies och hur du kan hantera dina inställningar,
-          vänligen läs vår cookiepolicy genom att
+          vänligen läs vår
           <NavLink
             to="/cookiepolicy"
             className={styles.navToCookiepolicy}
             onClick={handleNavLinkClick}
           >
-            klicka här.
+            cookiepolicy
           </NavLink>
+          .
         </p>
         <div className={styles.acceptContainer}>
           <button className={styles.accept} onClick={handleAccept}>

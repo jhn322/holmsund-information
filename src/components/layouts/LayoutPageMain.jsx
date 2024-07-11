@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import Navigation from "../common/Navigation";
 import HeaderAddon from "../addon/HeaderAddon";
 import Breadcrumb from "../common/Breadcrumb";
@@ -119,8 +120,15 @@ const LayoutPageMain = ({
   ]);
 
   return (
-    <main>
-      <ThemeProvider>
+    <ThemeProvider>
+      <Helmet>
+        <title>{headerTitle} - Holmsund Information</title>
+        <meta
+          name="description"
+          content={`Information about ${headerTitle}.`}
+        />
+      </Helmet>
+      <div>
         <Navigation />
         {renderHeaderAddon && (
           <HeaderAddon
@@ -130,17 +138,19 @@ const LayoutPageMain = ({
         )}
         {renderWeatherCircleAddon && <MapCircleAddon />}
         <Breadcrumb />
-        <section>{children}</section>
-        <SeparatorAddon />
-        {shuffleComponents}
-        <Extra />
-        <ScrollDown />
-        <ScrollUp />
-        <ScrollToTop />
+        <main role="main">
+          <section>{children}</section>
+          <SeparatorAddon />
+          {shuffleComponents}
+          <Extra />
+          <ScrollDown />
+          <ScrollUp />
+          <ScrollToTop />
+        </main>
         <Cookies />
         <Footer />
-      </ThemeProvider>
-    </main>
+      </div>
+    </ThemeProvider>
   );
 };
 

@@ -1,45 +1,50 @@
-import React from "react";
+import React, { lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-// Pages
 import ScrollToTop from "./components/common/ScrollToTop";
-import HomePage from "./components/pages/HomePage";
-import DiscoverPageMain from "./components/pages/DiscoverPageMain";
-import DiscoverPage1 from "./components/pages/DiscoverPage1";
-import DiscoverPage2 from "./components/pages/DiscoverPage2";
-import DiscoverPage3 from "./components/pages/DiscoverPage3";
-import DiscoverPage4 from "./components/pages/DiscoverPage4";
-import DiscoverPage5 from "./components/pages/DiscoverPage5";
-import DiscoverPage6 from "./components/pages/DiscoverPage6";
-import DiscoverPage7 from "./components/pages/DiscoverPage7";
-import DiscoverPage8 from "./components/pages/DiscoverPage8";
-import ActivityPageMain from "./components/pages/ActivityPageMain";
-import ActivityPage1 from "./components/pages/ActivityPage1";
-import ActivityPage2 from "./components/pages/ActivityPage2";
-import ActivityPage3 from "./components/pages/ActivityPage3";
-import ActivityPage4 from "./components/pages/ActivityPage4";
-import GalleryPageMain from "./components/pages/GalleryPageMain";
-import GalleryPage1 from "./components/pages/GalleryPage1";
-import GalleryPage2 from "./components/pages/GalleryPage2";
-import GalleryPage3 from "./components/pages/GalleryPage3";
-import GalleryPage4 from "./components/pages/GalleryPage4";
-import WeatherPage from "./components/pages/WeatherPage";
-import MapPage from "./components/pages/MapPage";
-import AboutUsPage from "./components/pages/AboutUsPage";
-import CookiesPage from "./components/pages/CookiesPage";
-import TermsOfServicePage from "./components/pages/TermsOfServicePage";
-import MissingPage from "./components/pages/MissingPage";
+
+const HomePage = lazy(() => import("./components/pages/HomePage"));
+const DiscoverPageMain = lazy(() =>
+  import("./components/pages/DiscoverPageMain")
+);
+const DiscoverPage1 = lazy(() => import("./components/pages/DiscoverPage1"));
+const DiscoverPage2 = lazy(() => import("./components/pages/DiscoverPage2"));
+const DiscoverPage3 = lazy(() => import("./components/pages/DiscoverPage3"));
+const DiscoverPage4 = lazy(() => import("./components/pages/DiscoverPage4"));
+const DiscoverPage5 = lazy(() => import("./components/pages/DiscoverPage5"));
+const DiscoverPage6 = lazy(() => import("./components/pages/DiscoverPage6"));
+const DiscoverPage7 = lazy(() => import("./components/pages/DiscoverPage7"));
+const DiscoverPage8 = lazy(() => import("./components/pages/DiscoverPage8"));
+const ActivityPageMain = lazy(() =>
+  import("./components/pages/ActivityPageMain")
+);
+const ActivityPage1 = lazy(() => import("./components/pages/ActivityPage1"));
+const ActivityPage2 = lazy(() => import("./components/pages/ActivityPage2"));
+const ActivityPage3 = lazy(() => import("./components/pages/ActivityPage3"));
+const ActivityPage4 = lazy(() => import("./components/pages/ActivityPage4"));
+const GalleryPageMain = lazy(() =>
+  import("./components/pages/GalleryPageMain")
+);
+const GalleryPage1 = lazy(() => import("./components/pages/GalleryPage1"));
+const GalleryPage2 = lazy(() => import("./components/pages/GalleryPage2"));
+const GalleryPage3 = lazy(() => import("./components/pages/GalleryPage3"));
+const GalleryPage4 = lazy(() => import("./components/pages/GalleryPage4"));
+const WeatherPage = lazy(() => import("./components/pages/WeatherPage"));
+const MapPage = lazy(() => import("./components/pages/MapPage"));
+const AboutUsPage = lazy(() => import("./components/pages/AboutUsPage"));
+const CookiesPage = lazy(() => import("./components/pages/CookiesPage"));
+const TermsOfServicePage = lazy(() =>
+  import("./components/pages/TermsOfServicePage")
+);
+const MissingPage = lazy(() => import("./components/pages/MissingPage"));
 
 const App = () => {
   return (
     <Router>
       <ScrollToTop />
       <div>
-        {/* Routes */}
         <Routes>
           <Route path="/" element={<HomePage />} />
-
-          {/* utforska sektion */}
+          {/* utforska section */}
           <Route
             path="/utforska"
             element={<DiscoverPageMain page="utforska" />}
@@ -76,8 +81,7 @@ const App = () => {
             path="/utforska-8"
             element={<DiscoverPage8 page="utforska-8" />}
           />
-
-          {/* Aktiviteter sektion */}
+          {/* Aktiviteter section */}
           <Route
             path="/aktiviteter"
             element={<ActivityPageMain page="aktiviteter" />}
@@ -98,8 +102,7 @@ const App = () => {
             path="/aktiviteter-4"
             element={<ActivityPage4 page="aktiviteter-4" />}
           />
-
-          {/* Galleri sektion */}
+          {/* Galleri section */}
           <Route path="/galleri" element={<GalleryPageMain page="galleri" />} />
           <Route
             path="/galleri-1"

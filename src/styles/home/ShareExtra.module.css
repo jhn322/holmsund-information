@@ -127,6 +127,7 @@
 .mapBtnText {
   border: 2px solid var(--white-text-color);
   border-radius: 35px;
+  font-size: 1.1rem;
   color: var(--white-text-color);
   padding: 1rem 2rem;
   margin-bottom: 2rem;
@@ -158,6 +159,11 @@
 
   .mapInner p,
   .weather p {
+    font-size: 1.2rem;
+  }
+
+  .weatherBtnText,
+  .mapBtnText {
     font-size: 1.2rem;
   }
 }
@@ -213,6 +219,11 @@
   .map h3 {
     font-size: 2.5rem;
   }
+
+  .weatherBtnText,
+  .mapBtnText {
+    font-size: 1.1rem;
+  }
 }
 
 /* Desktop */
@@ -264,6 +275,11 @@
 
   .mapInner p,
   .weather p {
+    font-size: 1.3rem;
+  }
+
+  .weatherBtnText,
+  .mapBtnText {
     font-size: 1.3rem;
   }
 }

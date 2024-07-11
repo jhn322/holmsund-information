@@ -24,10 +24,10 @@ const Breadcrumb = () => {
   };
 
   return (
-    <nav aria-label={styles.breadcrumb}>
-      <article className={styles.breadcrumb}>
+    <nav aria-label="Breadcrumb" className={styles.breadcrumb}>
+      <article>
         <span className={styles.breadcrumbItem}>
-          <Link to="/" onClick={() => trackLinkClick("Hem", "/")}>
+          <Link to="/" onClick={() => trackLinkClick("Home", "/")}>
             Hem
           </Link>
         </span>
@@ -37,7 +37,7 @@ const Breadcrumb = () => {
           const decodedValue = decodeURIComponentSafe(value);
           return (
             <span key={to} className={styles.breadcrumbItem}>
-              <RxChevronRight className={styles.arrowIcon} />
+              <RxChevronRight className={styles.arrowIcon} aria-hidden="true" />
               {isLast ? (
                 <span className={styles.breadcrumbCurrent}>{decodedValue}</span>
               ) : (

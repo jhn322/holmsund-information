@@ -6,7 +6,7 @@ import styles from "../../styles/common/ScrollDown.module.css";
 const ScrollDown = () => {
   const [visible, setVisible] = useState(true);
   const [used, setUsed] = useState(() => {
-    localStorage.getItem("ScrollDownUsed") === "true";
+    return localStorage.getItem("scrollDownUsed") === "true";
   });
 
   useEffect(() => {

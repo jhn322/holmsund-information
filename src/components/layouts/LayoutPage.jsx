@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import Navigation from "../common/Navigation";
 import HeaderAddonPage from "../addon/HeaderAddonPage";
 import Breadcrumb from "../common/Breadcrumb";
@@ -116,25 +117,34 @@ const LayoutPage = ({
   ]);
 
   return (
-    <main>
-      <ThemeProvider>
+    <ThemeProvider>
+      <Helmet>
+        <title>{headerTitle} - Holmsund Information</title>
+        <meta
+          name="Individuella sidor"
+          content={`Information about ${headerTitle}.`}
+        />
+      </Helmet>
+      <div>
         <Navigation />
         <HeaderAddonPage
           title={headerTitle}
           backgroundImage={headerBackgroundImage}
         />
         <Breadcrumb />
-        <section>{children}</section>
-        <SeparatorAddon />
-        {shuffleComponents}
-        <Extra />
-        <ScrollDown />
-        <ScrollUp />
-        <ScrollToTop />
+        <main>
+          <section>{children}</section>
+          <SeparatorAddon />
+          {shuffleComponents}
+          <Extra />
+          <ScrollDown />
+          <ScrollUp />
+          <ScrollToTop />
+        </main>
         <Cookies />
         <Footer />
-      </ThemeProvider>
-    </main>
+      </div>
+    </ThemeProvider>
   );
 };
 

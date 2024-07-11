@@ -66,13 +66,13 @@ const ExtraHome = () => {
                   </header>
                   <div className={styles.mapContent}>
                     <div className={styles.map}>
-                      <p>Kulgränd 1 Holmsund</p>
+                      <p>Kulgränd 1, Holmsund</p>
                     </div>
                     <div className={styles.map}>
-                      <p>Umeå Västerbotten</p>
+                      <p>Umeå, Västerbotten</p>
                     </div>
                     <div className={styles.map}>
-                      <p>Sverige 913 32</p>
+                      <p>Sverige, 913 32</p>
                     </div>
                     <div className={styles.map}>
                       <p>63.7066° N / 20.3686° E</p>

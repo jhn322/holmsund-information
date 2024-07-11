@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Navigation from "../common/Navigation";
 import Header from "../home/Header";
 import ContentCircle from "../home/ContentCircle";
@@ -18,22 +19,47 @@ import { ThemeProvider } from "../context/ThemeContext";
 const LayoutHome = () => {
   return (
     <ThemeProvider>
-      <main>
+      <Helmet>
+        <title>Home - Holmsund Info</title>
+        <meta
+          name="description"
+          content="Välkommen till hemsidan av Holmsund Information. Upptäck våra aktiviteter, galleri och mer."
+        />
+      </Helmet>
+      <div>
         <Navigation />
-        <Header />
-        <ContentCircle />
-        <Separator />
-        <Discover />
-        <Activity />
-        <DiscoverInspired />
-        <Gallery />
-        <ExtraHome />
-        <ScrollDown />
-        <ScrollUp />
-        <ScrollToTop />
-        <Cookies />
-        <Footer />
-      </main>
+        <header>
+          <Header />
+        </header>
+        <main>
+          <section>
+            <ContentCircle />
+          </section>
+          <Separator />
+          <section>
+            <Discover />
+          </section>
+          <section>
+            <Activity />
+          </section>
+          <section>
+            <DiscoverInspired />
+          </section>
+          <section>
+            <Gallery />
+          </section>
+          <section>
+            <ExtraHome />
+          </section>
+          <ScrollDown />
+          <ScrollUp />
+          <ScrollToTop />
+        </main>
+        <footer>
+          <Cookies />
+          <Footer />
+        </footer>
+      </div>
     </ThemeProvider>
   );
 };

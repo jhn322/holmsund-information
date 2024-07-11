@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import Navigation from "../common/Navigation";
 import TermsCircleAddon from "../addon/TermsCircleAddon";
 import CookiesCircleAddon from "../addon/CookiesCircleAddon";
@@ -124,26 +125,35 @@ const LayoutPageOther = ({
   ]);
 
   return (
-    <main>
-      <ThemeProvider>
+    <ThemeProvider>
+      <Helmet>
+        <title>Information - Holmsund Information</title>
+        <meta
+          name="description"
+          content="Information om Kakor, Användarvillkor och mer."
+        />
+      </Helmet>
+      <div>
         <Navigation />
         {renderTermsCircleAddon && <TermsCircleAddon />}
         {renderCookiesCircleAddon && <CookiesCircleAddon />}
         {renderAboutCircleAddon && <AboutCircleAddon />}
         {renderMapCircleAddon && <MapCircleAddon />}
         <Breadcrumb />
-        <section>{children}</section>
-        {renderSeparatorAddon && <SeparatorAddon />}
-        {shuffleComponents}
-        {renderOtherAddon && <OtherAddon />}
+        <main>
+          <section>{children}</section>
+          {renderSeparatorAddon && <SeparatorAddon />}
+          {shuffleComponents}
+          {renderOtherAddon && <OtherAddon />}
+        </main>
         <Extra />
         <ScrollDown />
         <ScrollUp />
         <ScrollToTop />
         <Cookies />
         <Footer />
-      </ThemeProvider>
-    </main>
+      </div>
+    </ThemeProvider>
   );
 };
 

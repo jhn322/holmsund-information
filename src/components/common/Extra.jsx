@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { trackExtraElementClick } from "../analytics/common";
 import styles from "../../styles/common/Extra.module.css";
-import image from "../../assets/other/share.jpg";
+import shareImage from "../../assets/other/share.jpg";
 
 const Extra = () => {
   // Google Analytics
@@ -17,7 +17,7 @@ const Extra = () => {
           <aside className={styles.imageContainer}>
             <aside
               className={styles.image}
-              style={{ backgroundImage: `url(${image})` }}
+              style={{ backgroundImage: `url(${shareImage})` }}
             ></aside>
           </aside>
           <div className={styles.extraContainer}>
@@ -57,13 +57,13 @@ const Extra = () => {
                   </header>
                   <div className={styles.mapContent}>
                     <div className={styles.map}>
-                      <p>Kulgränd 1 Holmsund</p>
+                      <p>Kulgränd 1, Holmsund</p>
                     </div>
                     <div className={styles.map}>
-                      <p>Umeå Västerbotten</p>
+                      <p>Umeå, Västerbotten</p>
                     </div>
                     <div className={styles.map}>
-                      <p>Sverige 913 32</p>
+                      <p>Sverige, 913 32</p>
                     </div>
                     <div className={styles.map}>
                       <p>63.7066° N / 20.3686° E</p>
