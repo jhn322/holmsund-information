@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-
-// Menu Icons
 import {
   RxHamburgerMenu,
   RxMagnifyingGlass,
@@ -9,14 +7,8 @@ import {
   RxPlus,
   RxMinus,
 } from "react-icons/rx";
-
-// Social Icons
 import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
-
-// CSS
 import styles from "../../styles/common/Navigation.module.css";
-
-// Logo
 import logo1 from "../../assets/logo/navLogo.png";
 import logo2 from "../../assets/logo/navLogoHover.png";
 

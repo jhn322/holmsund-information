@@ -46,6 +46,7 @@
 .emailLink {
   cursor: pointer;
   text-decoration: underline;
+  transition: all 0.3s;
 }
 
 .emailLink:hover {

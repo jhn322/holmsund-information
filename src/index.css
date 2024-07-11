@@ -29,6 +29,7 @@ li {
   font-weight: 500;
   text-decoration: inherit;
   color: var(--white-text-color);
+  transition: all 0.3s;
 }
 
 li:hover,

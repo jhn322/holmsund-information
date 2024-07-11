@@ -105,14 +105,14 @@
   margin: 0 auto;
 }
 
-.mapBtnText,
-.weatherBtnText {
+.weatherBtnText,
+.mapBtnText {
   border: 2px solid var(--white-text-color);
   border-radius: 35px;
   color: var(--white-text-color);
   padding: 1rem 2rem;
   margin-bottom: 2rem;
-  transition: all 0.1s ease-in-out;
+  transition: color 0.3s, background-color 0.3s;
 }
 
 .weatherBtnText:hover {
