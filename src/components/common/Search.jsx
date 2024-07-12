@@ -5,69 +5,116 @@ import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
 import styles from "../../styles/common/Search.module.css";
 
 const SearchComponent = ({ onClose }) => {
+  const navigate = useNavigate();
+  const inputRef = useRef(null);
+  const searchContainerRef = useRef(null);
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [showResults, setShowResults] = useState(false);
-  const navigate = useNavigate();
-  const searchContainerRef = useRef(null);
-  const inputRef = useRef(null);
 
   const pages = [
-    { path: "/", title: "Hem", categoryTitle: "Home" },
-    { path: "/utforska", title: "Utforska", categoryTitle: "Explore" },
-    { path: "/utforska-1", title: "Utforska 1", categoryTitle: "Explore" },
-    { path: "/utforska-2", title: "Utforska 2", categoryTitle: "Explore" },
-    { path: "/utforska-3", title: "Utforska 3", categoryTitle: "Explore" },
-    { path: "/utforska-4", title: "Utforska 4", categoryTitle: "Explore" },
-    { path: "/utforska-5", title: "Utforska 5", categoryTitle: "Explore" },
-    { path: "/utforska-6", title: "Utforska 6", categoryTitle: "Explore" },
-    { path: "/utforska-7", title: "Utforska 7", categoryTitle: "Explore" },
-    { path: "/utforska-8", title: "Utforska 8", categoryTitle: "Explore" },
-    { path: "/aktiviteter", title: "Aktiviteter", categoryTitle: "Activities" },
+    { path: "/", title: "Hem", categoryTitle: "Hem" },
+    { path: "/utforska", title: "Utforska", categoryTitle: "Utforska" },
+    {
+      path: "/utforska-1",
+      title: "Utforska 1 titel",
+      categoryTitle: "Utforska",
+    },
+    {
+      path: "/utforska-2",
+      title: "Utforska 2 titel",
+      categoryTitle: "Utforska",
+    },
+    {
+      path: "/utforska-3",
+      title: "Utforska 3 titel",
+      categoryTitle: "Utforska",
+    },
+    {
+      path: "/utforska-4",
+      title: "Utforska 4 titel",
+      categoryTitle: "Utforska",
+    },
+    {
+      path: "/utforska-5",
+      title: "Utforska 5 titel",
+      categoryTitle: "Utforska",
+    },
+    {
+      path: "/utforska-6",
+      title: "Utforska 6 titel",
+      categoryTitle: "Utforska",
+    },
+    {
+      path: "/utforska-7",
+      title: "Utforska 7 titel",
+      categoryTitle: "Utforska",
+    },
+    {
+      path: "/utforska-8",
+      title: "Utforska 8 titel",
+      categoryTitle: "Utforska",
+    },
+    {
+      path: "/aktiviteter",
+      title: "Aktiviteterna",
+      categoryTitle: "Aktiviteter",
+    },
     {
       path: "/aktiviteter-1",
-      title: "Aktiviteter 1",
-      categoryTitle: "Activities",
+      title: "Aktiviteter 1 titel",
+      categoryTitle: "Aktiviteter",
     },
     {
       path: "/aktiviteter-2",
-      title: "Aktiviteter 2",
-      categoryTitle: "Activities",
+      title: "Aktiviteter 2 titel",
+      categoryTitle: "Aktiviteter",
     },
     {
       path: "/aktiviteter-3",
-      title: "Aktiviteter 3",
-      categoryTitle: "Activities",
+      title: "Aktiviteter 3 titel",
+      categoryTitle: "Aktiviteter",
     },
     {
       path: "/aktiviteter-4",
-      title: "Aktiviteter 4",
-      categoryTitle: "Activities",
+      title: "Aktiviteter 4 titel",
+      categoryTitle: "Aktiviteter",
     },
-    { path: "/galleri", title: "Galleri", categoryTitle: "Gallery" },
-    { path: "/galleri-1", title: "Galleri 1", categoryTitle: "Gallery" },
-    { path: "/galleri-2", title: "Galleri 2", categoryTitle: "Gallery" },
-    { path: "/galleri-3", title: "Galleri 3", categoryTitle: "Gallery" },
-    { path: "/galleri-4", title: "Galleri 4", categoryTitle: "Gallery" },
-    { path: "/väder", title: "Väder", categoryTitle: "Weather" },
-    { path: "/kartor", title: "Kartor", categoryTitle: "Maps" },
-    { path: "/om-oss", title: "Om Oss", categoryTitle: "About Us" },
+    { path: "/galleri", title: "Galleriet", categoryTitle: "Galleri" },
+    { path: "/galleri-1", title: "Galleri 1 titel", categoryTitle: "Galleri" },
+    { path: "/galleri-2", title: "Galleri 2 titel", categoryTitle: "Galleri" },
+    { path: "/galleri-3", title: "Galleri 3 titel", categoryTitle: "Galleri" },
+    { path: "/galleri-4", title: "Galleri 4 titel", categoryTitle: "Galleri" },
+    { path: "/väder", title: "Vädret", categoryTitle: "Väder" },
+    { path: "/kartor", title: "Kartorna", categoryTitle: "Kartor" },
+    { path: "/om-oss", title: "Om Oss", categoryTitle: "Om Oss" },
     {
       path: "/cookiepolicy",
-      title: "Cookie Policy",
-      categoryTitle: "Policies",
+      title: "Kakor",
+      categoryTitle: "Cookie policy",
     },
     {
       path: "/användarvillkor",
       title: "Användarvillkor",
-      categoryTitle: "Policies",
+      categoryTitle: "Villkor",
     },
   ];
 
   const handleSearch = (searchQuery) => {
-    const filteredResults = pages.filter((page) =>
-      page.title.toLowerCase().includes(searchQuery.toLowerCase())
+    const lowerCaseQuery = searchQuery.toLowerCase();
+
+    const startsWithResults = pages.filter((page) =>
+      page.title.toLowerCase().startsWith(lowerCaseQuery)
     );
+
+    const containsResults = pages.filter(
+      (page) =>
+        page.title.toLowerCase().includes(lowerCaseQuery) &&
+        !page.title.toLowerCase().startsWith(lowerCaseQuery)
+    );
+
+    const filteredResults = [...startsWithResults, ...containsResults];
+
     setResults(filteredResults);
     setShowResults(true);
   };
