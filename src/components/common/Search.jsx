@@ -4,7 +4,7 @@ import { RxMagnifyingGlass, RxCross2 } from "react-icons/rx";
 import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
 import styles from "../../styles/common/Search.module.css";
 
-const SearchComponent = ({ onClose }) => {
+const Search = ({ onClose }) => {
   const navigate = useNavigate();
   const inputRef = useRef(null);
   const searchContainerRef = useRef(null);
@@ -116,7 +116,13 @@ const SearchComponent = ({ onClose }) => {
     const filteredResults = [...startsWithResults, ...containsResults];
 
     setResults(filteredResults);
-    setShowResults(true);
+    setShowResults(searchQuery.trim() !== "");
+  };
+
+  const handleResultClick = (e, path) => {
+    e.preventDefault();
+    e.stopPropagation();
+    handleNavigate(path);
   };
 
   const handleNavigate = (path) => {
@@ -155,11 +161,6 @@ const SearchComponent = ({ onClose }) => {
     if (query.trim() !== "") {
       setShowResults(true);
     }
-  };
-
-  const handleResultClick = (e, path) => {
-    e.stopPropagation();
-    handleNavigate(path);
   };
 
   return (
@@ -223,7 +224,7 @@ const SearchComponent = ({ onClose }) => {
               setQuery(e.target.value);
               handleSearch(e.target.value);
             }}
-            placeholder="Sök..."
+            placeholder="Sök denna sida..."
             className={styles.searchInput}
             ref={inputRef}
             onFocus={handleInputFocus}
@@ -241,24 +242,20 @@ const SearchComponent = ({ onClose }) => {
         {showResults && (
           <div className={styles.resultsContainer} ref={searchContainerRef}>
             <ul className={styles.searchResults}>
-              {query.trim() !== "" ? (
-                results.length > 0 ? (
-                  results.map((page, index) => (
-                    <li
-                      key={index}
-                      onClick={(e) => handleResultClick(e, page.path)}
-                    >
-                      <div>{page.title}</div>
-                      <div className={styles.categoryTitle}>
-                        {page.categoryTitle}
-                      </div>
-                    </li>
-                  ))
-                ) : (
-                  <li>Inga resultat</li>
-                )
+              {results.length > 0 ? (
+                results.map((page, index) => (
+                  <li
+                    key={index}
+                    onClick={(e) => handleResultClick(e, page.path)}
+                  >
+                    <div>{page.title}</div>
+                    <div className={styles.categoryTitle}>
+                      {page.categoryTitle}
+                    </div>
+                  </li>
+                ))
               ) : (
-                <li>Skriv en sökterm</li>
+                <li>Inga resultat hittades</li>
               )}
             </ul>
           </div>
@@ -268,4 +265,4 @@ const SearchComponent = ({ onClose }) => {
   );
 };
 
-export default SearchComponent;
+export default Search;
