@@ -27,12 +27,12 @@ const TermsCircleAddon = () => {
           <h2 className={styles2.hidden}>Double Circle</h2>
           <img
             src={circle2Image}
-            className={styles.circleBack}
+            className={`${styles.circleBack} ${styles2.circleBack}`}
             alt="White Circle"
           />
           <img
             src={circle1Image}
-            className={styles.circleFront}
+            className={`${styles.circleFront} ${styles2.circleFront}`}
             alt="Terms of Service Circle"
           />
         </div>

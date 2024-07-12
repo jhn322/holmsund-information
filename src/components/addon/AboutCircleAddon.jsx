@@ -28,12 +28,12 @@ const AboutCircleAddon = () => {
           <h2 className={styles2.hidden}>Double Circle</h2>
           <img
             src={circle2Image}
-            className={styles.circleBack}
+            className={`${styles.circleBack} ${styles2.circleBack}`}
             alt="Blue Circle"
           />
           <img
             src={circle1Image}
-            className={styles.circleFront}
+            className={`${styles.circleFront} ${styles2.circleFront}`}
             alt="About Us Circle"
           />
         </div>

@@ -26,15 +26,15 @@ const CookiesCircleAddon = () => {
       </div>
       <aside className={styles2.circleContainer}>
         <div className={styles.circleBackground}>
-          <h2 className={styles2.circleHeader}>Double Circle</h2>
+          <h2 className={styles2.hidden}>Double Circle</h2>
           <img
             src={circle2Image}
-            className={styles.circleBack}
-            alt="Orange Circle Background"
+            className={`${styles.circleBack} ${styles2.circleBack}`}
+            alt="Orange Circle"
           />
           <img
             src={circle1Image}
-            className={styles.circleFront}
+            className={`${styles.circleFront} ${styles2.circleFront}`}
             alt="Cookies Circle"
           />
         </div>
