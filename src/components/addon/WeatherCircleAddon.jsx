@@ -3,7 +3,7 @@ import styles2 from "../../styles/addon/WeatherCircleAddon.module.css";
 import circle1Image from "../../assets/other/weatherCircle.jpg";
 import circle2Image from "../../assets/other/circlePurple.png";
 
-const AboutCircleAddon = () => {
+const WeatherCircleAddon = () => {
   return (
     <section className={styles.contentContainer}>
       <div className={styles.innerContent}>
@@ -25,16 +25,16 @@ const AboutCircleAddon = () => {
       </div>
       <aside className={styles2.circleContainer}>
         <div className={styles.circleBackground}>
-          <h2>double circle</h2>
+          <h2 className={styles2.hidden}>Double Circle</h2>
           <img
             src={circle2Image}
             className={styles.circleBack}
-            alt="Circle 2"
+            alt="Purple Circle"
           />
           <img
             src={circle1Image}
             className={styles.circleFront}
-            alt="Circle 1"
+            alt="Weather Circle"
           />
         </div>
       </aside>
@@ -42,4 +42,4 @@ const AboutCircleAddon = () => {
   );
 };
 
-export default AboutCircleAddon;
+export default WeatherCircleAddon;

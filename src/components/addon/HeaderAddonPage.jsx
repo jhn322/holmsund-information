@@ -48,6 +48,14 @@ const HeaderAddonPage = ({ title, backgroundImage }) => {
     galleri: "Inspireras av det som finns i galleriet",
   };
 
+  const handleClick = () => {
+    trackHeaderAddonPageClick(
+      "Header Button",
+      categoryMessages[currentCategory],
+      basePath
+    );
+  };
+
   return (
     <header
       className={`${styles.headerContainer} ${styles2.headerContainer}`}
@@ -61,13 +69,7 @@ const HeaderAddonPage = ({ title, backgroundImage }) => {
           <NavLink to={basePath}>
             <button
               className={`${styles.headerBtn} ${styles3.headerBtn}`}
-              onClick={() => {
-                trackHeaderAddonPageClick(
-                  "Header Button",
-                  categoryMessages[currentCategory],
-                  basePath
-                );
-              }}
+              onClick={handleClick}
             >
               {categoryMessages[currentCategory]} denna {currentSeason}
             </button>

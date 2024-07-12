@@ -21,6 +21,7 @@ const Footer = () => {
             to="/"
             className={styles.logoContainer}
             onClick={() => handleElementClick("Logo", window.location.href)}
+            aria-label="Home"
           >
             <img src={logo} alt="Logo" className={styles.logo} />
           </NavLink>
@@ -30,10 +31,10 @@ const Footer = () => {
             href="https://github.com/jhn322"
             target="_blank"
             rel="noopener noreferrer"
-            alt="GitHub website"
             onClick={() =>
               handleElementClick("GitHub", "https://github.com/jhn322")
             }
+            aria-label="GitHub"
           >
             <FaGithub className={styles.github} />
             <div className={styles.iconsText}>
@@ -44,13 +45,13 @@ const Footer = () => {
             href="https://x.com/search?q=%23holmsund&src=typeahead_click"
             target="_blank"
             rel="noopener noreferrer"
-            alt="Twitter website"
             onClick={() =>
               handleElementClick(
                 "Twitter/X",
                 "https://x.com/search?q=%23holmsund&src=typeahead_click"
               )
             }
+            aria-label="Twitter/X"
           >
             <FaXTwitter className={styles.twitterX} />
             <div className={styles.iconsText}>
@@ -61,13 +62,13 @@ const Footer = () => {
             href="https://www.instagram.com/explore/locations/240089071/holmsund-vasterbottens-lan-sweden/"
             target="_blank"
             rel="noopener noreferrer"
-            alt="Instagram website"
             onClick={() =>
               handleElementClick(
                 "Instagram",
                 "https://www.instagram.com/explore/locations/240089071/holmsund-vasterbottens-lan-sweden/"
               )
             }
+            aria-label="Instagram"
           >
             <FaInstagram className={styles.instagram} />
             <div className={styles.iconsText}>
@@ -78,13 +79,13 @@ const Footer = () => {
             href="https://www.facebook.com/groups/415551751837063/?locale=sv_SE"
             target="_blank"
             rel="noopener noreferrer"
-            alt="Facebook website"
             onClick={() =>
               handleElementClick(
                 "Facebook",
                 "https://www.facebook.com/groups/415551751837063/?locale=sv_SE"
               )
             }
+            aria-label="Facebook"
           >
             <FaFacebook className={styles.facebook} />
             <div className={styles.iconsText}>
@@ -99,12 +100,14 @@ const Footer = () => {
             <NavLink
               to="/"
               onClick={() => handleElementClick("Hem", window.location.href)}
+              aria-label="Home"
             >
               <li>Hem</li>
             </NavLink>
             <NavLink
               to="/om-oss"
               onClick={() => handleElementClick("Om oss", window.location.href)}
+              aria-label="About us"
             >
               <li>Om oss</li>
             </NavLink>
@@ -113,6 +116,7 @@ const Footer = () => {
               onClick={() =>
                 handleElementClick("Cookiepolicy", window.location.href)
               }
+              aria-label="Cookie policy"
             >
               <li>Cookiepolicy</li>
             </NavLink>
@@ -121,6 +125,7 @@ const Footer = () => {
               onClick={() =>
                 handleElementClick("Användarvillkor", window.location.href)
               }
+              aria-label="Terms of service"
             >
               <li>Användarvillkor</li>
             </NavLink>

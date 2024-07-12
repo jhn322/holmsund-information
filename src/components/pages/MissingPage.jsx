@@ -5,6 +5,10 @@ import styles from "../../styles/pages/MissingPage.module.css";
 import NotFoundImage from "../../assets/other/404.png";
 
 const MissingPage = () => {
+  const handleGoBackHome = () => {
+    trackMissingPageClick("Button", "Go back home", "/");
+  };
+
   return (
     <main className={styles.MissingContainer}>
       <img
@@ -15,12 +19,7 @@ const MissingPage = () => {
       <p className={styles.MissingText}>
         Oops. Vi kunde inte hitta sidan du letade efter :(
       </p>
-      <button
-        className={styles.MissingBtn}
-        onClick={() => {
-          trackMissingPageClick("Button", "Go back home", "/");
-        }}
-      >
+      <button className={styles.MissingBtn} onClick={handleGoBackHome}>
         <Link to="/" className={styles.LinkHome}>
           Gå tillbaka hem
         </Link>

@@ -24,16 +24,16 @@ const TermsCircleAddon = () => {
       </div>
       <aside className={styles2.circleContainer}>
         <div className={styles.circleBackground}>
-          <h2>double circle</h2>
+          <h2 className={styles2.hidden}>Double Circle</h2>
           <img
             src={circle2Image}
             className={styles.circleBack}
-            alt="Circle 2"
+            alt="White Circle"
           />
           <img
             src={circle1Image}
             className={styles.circleFront}
-            alt="Circle 1"
+            alt="Terms of Service Circle"
           />
         </div>
       </aside>

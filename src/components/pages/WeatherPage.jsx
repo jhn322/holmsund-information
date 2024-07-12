@@ -48,7 +48,7 @@ const WeatherPage = () => {
   const getDayOfWeek = (dateString) => {
     const date = new Date(dateString);
     const dayOfWeek = date.toLocaleDateString("sv-SE", { weekday: "long" });
-    return dayOfWeek.charAt(0).toUpperCase() + dayOfWeek.slice(1);
+    return `${dayOfWeek.charAt(0).toUpperCase()}${dayOfWeek.slice(1)}`;
   };
 
   const translateCondition = (condition) => {

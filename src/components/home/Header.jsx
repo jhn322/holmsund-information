@@ -81,8 +81,15 @@ const Header = () => {
         <article className={styles.header}>
           <h1 className={styles.headerTitle}>{currentSeason} i Holmsund</h1>
           <div className={styles.btnContainer}>
-            <NavLink to={currentButton.path}>
-              <button className={styles.headerBtn} onClick={handleButtonClick}>
+            <NavLink
+              to={currentButton.path}
+              aria-label={`Navigate to ${currentButton.text}`}
+            >
+              <button
+                className={styles.headerBtn}
+                onClick={handleButtonClick}
+                aria-label={currentButton.text}
+              >
                 {currentButton.text}
               </button>
             </NavLink>

@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "../../styles/home/ContentCircle.module.css";
 import styles2 from "../../styles/addon/MapCircleAddon.module.css";
 import circle1Image from "../../assets/other/mapCircle.jpg";
@@ -22,16 +23,16 @@ const MapCircleAddon = () => {
       </div>
       <aside className={styles2.circleContainer}>
         <div className={styles.circleBackground}>
-          <h2>double circle</h2>
+          <h2 className={styles2.circleTitle}>double circle</h2>
           <img
             src={circle2Image}
             className={styles.circleBack}
-            alt="Circle 2"
+            alt="Yellow Circle Background"
           />
           <img
             src={circle1Image}
             className={styles.circleFront}
-            alt="Circle 1"
+            alt="Map Circle Image"
           />
         </div>
       </aside>

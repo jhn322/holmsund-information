@@ -115,6 +115,8 @@ const Carousel = () => {
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
+      aria-roledescription="carousel"
+      aria-label="Activity carousel"
     >
       <main className={`${styles.container} ${styles2.container}`}>
         <div className={styles.carouselInner}>
@@ -135,6 +137,18 @@ const Carousel = () => {
                 } ${index === hoveredIndex ? styles.hovered : ""}`}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
+                tabIndex="0"
+                aria-label={`${slide.title}`}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    trackElementClickEvent(
+                      "image_link",
+                      slide.title,
+                      slide.link
+                    );
+                    window.location.href = slide.link;
+                  }
+                }}
               >
                 {currentPath === slide.link ? (
                   <div
@@ -167,16 +181,24 @@ const Carousel = () => {
                     }}
                   >
                     <div className={styles.imgContainer}>
-                      <img src={slide.src} alt={`Slide ${index + 1}`} />
+                      <img src={slide.src} alt={slide.title} />
                     </div>
                     <div className={styles.slideCounter}>
                       {index + 1}/{slides.length}
                     </div>
                     <nav className={styles.nav}>
-                      <span className={styles.navPrev} onClick={handlePrev}>
+                      <span
+                        className={styles.navPrev}
+                        onClick={handlePrev}
+                        aria-label="Previous slide"
+                      >
                         <RxChevronLeft strokeWidth={0.2} />
                       </span>
-                      <span className={styles.navNext} onClick={handleNext}>
+                      <span
+                        className={styles.navNext}
+                        onClick={handleNext}
+                        aria-label="Next slide"
+                      >
                         <RxChevronRight strokeWidth={0.2} />
                       </span>
                     </nav>
@@ -219,6 +241,7 @@ const Carousel = () => {
                           slide.link
                         );
                       }}
+                      aria-label={`Read more about ${slide.title}`}
                     >
                       Läs Mer
                     </a>
@@ -239,6 +262,7 @@ const Carousel = () => {
                           slide.link
                         );
                       }}
+                      aria-label={`Read more about ${slide.title}`}
                     >
                       <RxArrowRight
                         className={`${styles.arrowIcon} ${styles2.arrowIcon}`}

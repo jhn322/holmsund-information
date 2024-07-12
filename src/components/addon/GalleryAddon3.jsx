@@ -99,13 +99,6 @@ const GalleryAddon3 = ({ title }) => {
     setIsSwiping(false);
   };
 
-  const swipeHandlers = useSwipeable({
-    onSwipedLeft: goToNextSlide,
-    onSwipedRight: goToPrevSlide,
-    preventDefaultTouchmoveEvent: true,
-    trackMouse: true,
-  });
-
   // Prevent nav buttons to trigger hover on other elements
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => setIsHovered(false);
@@ -125,10 +118,12 @@ const GalleryAddon3 = ({ title }) => {
             <article
               className={styles.galleryImage}
               style={{ backgroundImage: `url(${staticGalleryImage})` }}
+              aria-label="Static gallery background image"
             >
               <div
                 className={styles.galleryCircle}
                 style={{ backgroundImage: `url(${galleryCircle})` }}
+                aria-label="Gallery decorative circle"
               ></div>
               <h2 className={`${styles.galleryTitle} ${styles2.galleryTitle}`}>
                 {title}
@@ -138,7 +133,6 @@ const GalleryAddon3 = ({ title }) => {
         </figure>
         <section className={styles.galleryCarousel}>
           <article
-            {...swipeHandlers}
             className={`${styles.carouselContainer} ${
               styles2.carouselContainer
             } ${isHovered && !isNavHovered ? styles.hover : ""} ${
@@ -188,8 +182,9 @@ const GalleryAddon3 = ({ title }) => {
                             image.link
                           )
                         }
+                        aria-label={`Navigate to ${image.title}`}
                       >
-                        <img src={image.url} alt={`Slide ${index}`} />
+                        <img src={image.url} alt={image.title} />
                       </NavLink>
                     )}
                   </figure>
@@ -203,12 +198,16 @@ const GalleryAddon3 = ({ title }) => {
                 <span
                   className={`${styles.navPrev} ${styles2.navPrev}`}
                   onClick={goToPrevSlide}
+                  aria-label="Previous slide"
+                  role="button"
                 >
                   <RxChevronLeft strokeWidth={0.8} />
                 </span>
                 <span
                   className={`${styles.navNext} ${styles2.navNext}`}
                   onClick={goToNextSlide}
+                  aria-label="Next slide"
+                  role="button"
                 >
                   <RxChevronRight strokeWidth={0.8} />
                 </span>
@@ -217,7 +216,10 @@ const GalleryAddon3 = ({ title }) => {
             <section
               className={`${styles.carouselText} ${styles2.carouselText}`}
             >
-              <NavLink to={images[currentIndex].link}>
+              <NavLink
+                to={images[currentIndex].link}
+                aria-label={`Read more about ${images[currentIndex].title}`}
+              >
                 <header
                   className={`${styles.hoverContainer} ${styles2.hoverContainer}`}
                 >
@@ -238,11 +240,14 @@ const GalleryAddon3 = ({ title }) => {
                           images[currentIndex].link
                         );
                       }}
+                      aria-label={`Read more about ${images[currentIndex].title}`}
                     >
                       Läs Mer
                     </a>
                   </div>
-                  <div className={styles.arrowContainer}>
+                  <div
+                    className={`${styles.arrowContainer} ${styles2.arrowContainer}`}
+                  >
                     <a
                       className={`${styles.carouselLink} ${styles2.carouselLink}`}
                       href={images[currentIndex].link}
@@ -257,6 +262,7 @@ const GalleryAddon3 = ({ title }) => {
                           images[currentIndex].link
                         );
                       }}
+                      aria-label={`Arrow icon to ${images[currentIndex].title}`}
                     >
                       <RxArrowRight
                         className={`${styles.arrowIcon} ${styles2.arrowIcon}`}
@@ -275,6 +281,8 @@ const GalleryAddon3 = ({ title }) => {
                   index === currentIndex ? styles.active : ""
                 } ${index === currentIndex ? styles2.active : ""}`}
                 onClick={() => setCurrentIndex(index)}
+                aria-label={`Go to slide ${index + 1}`}
+                role="button"
               ></span>
             ))}
           </div>

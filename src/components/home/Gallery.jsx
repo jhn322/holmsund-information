@@ -113,10 +113,12 @@ const Gallery = () => {
             <article
               className={styles.galleryImage}
               style={{ backgroundImage: `url(${staticGalleryImage})` }}
+              aria-label="Static gallery background image"
             >
               <div
                 className={styles.galleryCircle}
                 style={{ backgroundImage: `url(${galleryCircle})` }}
+                aria-label="Gallery decorative circle"
               ></div>
               <h2 className={styles.galleryTitle}>
                 Uppfriskad & <br /> Förnyad
@@ -156,8 +158,9 @@ const Gallery = () => {
                           image.link
                         )
                       }
+                      aria-label={`Navigate to ${image.title}`}
                     >
-                      <img src={image.url} alt={`Slide ${index}`} />
+                      <img src={image.url} alt={image.title} />
                     </NavLink>
                   </figure>
                 ))}
@@ -167,16 +170,29 @@ const Gallery = () => {
                 onMouseEnter={handleNavMouseEnter}
                 onMouseLeave={handleNavMouseLeave}
               >
-                <span className={styles.navPrev} onClick={goToPrevSlide}>
+                <span
+                  className={styles.navPrev}
+                  onClick={goToPrevSlide}
+                  aria-label="Previous slide"
+                  role="button"
+                >
                   <RxChevronLeft strokeWidth={0.8} />
                 </span>
-                <span className={styles.navNext} onClick={goToNextSlide}>
+                <span
+                  className={styles.navNext}
+                  onClick={goToNextSlide}
+                  aria-label="Next slide"
+                  role="button"
+                >
                   <RxChevronRight strokeWidth={0.8} />
                 </span>
               </nav>
             </div>
             <section className={styles.carouselText}>
-              <NavLink to={images[currentIndex].link}>
+              <NavLink
+                to={images[currentIndex].link}
+                aria-label={`Read more about ${images[currentIndex].title}`}
+              >
                 <header className={styles.hoverContainer}>
                   <h2>{images[currentIndex].title}</h2>
                   <p>{images[currentIndex].text}</p>
@@ -191,6 +207,7 @@ const Gallery = () => {
                           images[currentIndex].link
                         )
                       }
+                      aria-label={`Read more about ${images[currentIndex].title}`}
                     >
                       Läs Mer
                     </a>
@@ -205,6 +222,7 @@ const Gallery = () => {
                           images[currentIndex].link
                         )
                       }
+                      aria-label={`Arrow icon to ${images[currentIndex].title}`}
                     >
                       <RxArrowRight className={styles.arrowIcon} />
                     </a>
@@ -221,6 +239,8 @@ const Gallery = () => {
                   index === currentIndex ? styles.active : ""
                 }`}
                 onClick={() => setCurrentIndex(index)}
+                aria-label={`Go to slide ${index + 1}`}
+                role="button"
               ></span>
             ))}
           </div>

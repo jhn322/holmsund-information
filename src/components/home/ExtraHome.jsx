@@ -24,6 +24,7 @@ const ExtraHome = () => {
             <aside
               className={styles.shareImage}
               style={{ backgroundImage: `url(${shareImage})` }}
+              aria-label="Share your story image background"
             ></aside>
           </aside>
           <div className={styles.extraContainer}>
@@ -49,11 +50,11 @@ const ExtraHome = () => {
                   onClick={() =>
                     trackNavLinkClick("Kolla vädret i Holmsund", "/väder")
                   }
+                  aria-label="Kolla vädret i Holmsund"
                 >
-                  {" "}
                   <p className={styles.weatherBtnText}>
                     Kolla vädret i Holmsund
-                  </p>{" "}
+                  </p>
                 </NavLink>
               </div>
             </section>
@@ -84,11 +85,9 @@ const ExtraHome = () => {
                   onClick={() =>
                     trackNavLinkClick("Se karta över Holmsund", "/kartor")
                   }
+                  aria-label="Se karta över Holmsund"
                 >
-                  {" "}
-                  <p className={styles.mapBtnText}>
-                    Se karta över Holmsund
-                  </p>{" "}
+                  <p className={styles.mapBtnText}>Se karta över Holmsund</p>
                 </NavLink>
               </div>
             </section>

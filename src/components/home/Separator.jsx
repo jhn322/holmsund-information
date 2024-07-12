@@ -21,13 +21,13 @@ const Separator = () => {
               href="https://x.com/search?q=%23holmsund&src=typeahead_click"
               target="_blank"
               rel="noopener noreferrer"
-              alt="Twitter website"
               onClick={() =>
                 handleLinkClick(
                   "Twitter",
                   "https://x.com/search?q=%23holmsund&src=typeahead_click"
                 )
               }
+              aria-label="Share your experience on Twitter"
             >
               <span className={styles.link}>Twitter,</span>
             </a>
@@ -35,13 +35,13 @@ const Separator = () => {
               href="https://www.instagram.com/explore/locations/c2142469/holmsund-sweden/?hl=en"
               target="_blank"
               rel="noopener noreferrer"
-              alt="Instagram website"
               onClick={() =>
                 handleLinkClick(
                   "Instagram",
                   "https://www.instagram.com/explore/locations/c2142469/holmsund-sweden/?hl=en"
                 )
               }
+              aria-label="Share your experience on Instagram"
             >
               <span className={styles.link}>Instagram</span>
             </a>
@@ -50,13 +50,13 @@ const Separator = () => {
               href="https://www.facebook.com/groups/415551751837063/?locale=sv_SE"
               target="_blank"
               rel="noopener noreferrer"
-              alt="Facebook website"
               onClick={() =>
                 handleLinkClick(
                   "Facebook",
                   "https://www.facebook.com/groups/415551751837063/?locale=sv_SE"
                 )
               }
+              aria-label="Share your experience on Facebook"
             >
               <span className={styles.link}>Facebook</span>
             </a>
@@ -65,13 +65,13 @@ const Separator = () => {
               href="https://www.instagram.com/explore/locations/240089071/holmsund-vasterbottens-lan-sweden/"
               target="_blank"
               rel="noopener noreferrer"
-              alt="Instagram website"
               onClick={() =>
                 handleLinkClick(
                   "Instagram hashtag",
                   "https://www.instagram.com/explore/locations/240089071/holmsund-vasterbottens-lan-sweden/"
                 )
               }
+              aria-label="Instagram hashtag Holmsund"
             >
               <span className={styles.hashtag}>#Holmsund</span>
             </a>

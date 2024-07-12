@@ -126,6 +126,13 @@ const Discover = () => {
                 } ${isVisible ? styles.fadeInSlideIn : ""}`}
                 onMouseEnter={() => handleHover(index, true)}
                 onMouseLeave={() => handleHover(index, false)}
+                tabIndex="0"
+                aria-label={`Discover ${card.title}`}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    handleHover(index, !overlayStates[index]);
+                  }
+                }}
               >
                 <figure
                   className={styles.cardImage}
@@ -148,6 +155,7 @@ const Discover = () => {
                             handleButtonClick(card.title, card.link);
                             window.location.href = card.link;
                           }}
+                          aria-label={`Read more about ${card.title}`}
                         >
                           <span className={styles.expandedBtnText}>
                             Läs mer

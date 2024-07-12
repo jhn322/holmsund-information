@@ -35,10 +35,15 @@ const DiscoverPageMain = () => {
 
   // Preload header images
   useEffect(() => {
+    const preloadImages = [];
     headerImages.forEach((imgSrc) => {
       const img = new Image();
       img.src = imgSrc;
+      preloadImages.push(img);
     });
+    return () => {
+      preloadImages.forEach((img) => (img.src = ""));
+    };
   }, [headerImages]);
 
   useEffect(() => {
