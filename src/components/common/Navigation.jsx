@@ -145,6 +145,12 @@ const Navigation = () => {
             onClick={handleBlurBackgroundClick}
           ></div>
         )}
+        {isSearchOpen && (
+          <div
+            className={styles.blurBackground}
+            onClick={handleBlurBackgroundClick}
+          ></div>
+        )}
         <div className={styles.navItems}>
           <ul className={styles.navList}>
             <li>

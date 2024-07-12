@@ -85,8 +85,8 @@ const Search = ({ onClose }) => {
     { path: "/galleri-2", title: "Galleri 2 titel", categoryTitle: "Galleri" },
     { path: "/galleri-3", title: "Galleri 3 titel", categoryTitle: "Galleri" },
     { path: "/galleri-4", title: "Galleri 4 titel", categoryTitle: "Galleri" },
-    { path: "/väder", title: "Vädret", categoryTitle: "Väder" },
-    { path: "/kartor", title: "Kartorna", categoryTitle: "Kartor" },
+    { path: "/väder", title: "Väder", categoryTitle: "Väder" },
+    { path: "/kartor", title: "Kartor", categoryTitle: "Kartor" },
     { path: "/om-oss", title: "Om Oss", categoryTitle: "Om Oss" },
     {
       path: "/cookiepolicy",

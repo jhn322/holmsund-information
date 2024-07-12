@@ -164,8 +164,8 @@ h5 {
 
 /* Blurs the background when wrapper menu is open */
 .blurBackground {
-  backdrop-filter: blur(5px);
-  filter: blur(5px);
+  backdrop-filter: blur(10px);
+  filter: blur(10px);
   position: fixed;
   top: 0;
   left: 0;
