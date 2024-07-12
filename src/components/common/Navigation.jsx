@@ -33,7 +33,6 @@ const Navigation = () => {
 
   // Decoded path to handle special characters
   const decodePath = (path) => decodeURIComponent(path);
-
   const decodedCurrentPath = decodePath(currentPath);
   const pathsToExclude = [
     "/väder",
@@ -44,13 +43,11 @@ const Navigation = () => {
   ];
   const shouldBeTransparent = !pathsToExclude.includes(decodedCurrentPath);
 
-  // Toggles the menu open/close
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     setIsMenuClosing(false);
   };
 
-  // Argument to close the menu on a timeout
   const closeMenu = () => {
     setIsMenuClosing(true);
     setTimeout(() => {
@@ -58,12 +55,30 @@ const Navigation = () => {
     }, 150);
   };
 
+  const toggleSearch = () => {
+    setIsSearchOpen(!isSearchOpen);
+  };
+
   // Manage body scroll based on menu state open/closed
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]);
+
   useEffect(() => {
     const scrollbarWidth =
       window.innerWidth - document.documentElement.clientWidth;
 
-    if (isMenuOpen) {
+    if (isMenuOpen || isSearchOpen) {
       document.body.style.overflowY = "hidden";
       document.body.style.paddingRight = `${scrollbarWidth}px`;
     } else {
@@ -75,11 +90,12 @@ const Navigation = () => {
       document.body.style.overflowY = "auto";
       document.body.style.paddingRight = "0";
     };
-  }, [isMenuOpen]);
+  }, [isMenuOpen, isSearchOpen]);
 
   // Sets background blur when menu is open
   const handleBlurBackgroundClick = () => {
     setIsMenuOpen(false);
+    setIsSearchOpen(false);
     // Remove overflow hidden when clicking on the background blur
     document.body.style.overflow = "auto";
   };
@@ -110,11 +126,6 @@ const Navigation = () => {
 
   const handleMainNavLinkClick = (e) => {
     e.preventDefault();
-  };
-
-  // Function to toggle search component
-  const toggleSearch = () => {
-    setIsSearchOpen(!isSearchOpen);
   };
 
   return (

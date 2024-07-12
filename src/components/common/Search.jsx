@@ -239,7 +239,7 @@ const SearchComponent = ({ onClose }) => {
           )}
         </div>
         {showResults && (
-          <div className={styles.resultsContainer}>
+          <div className={styles.resultsContainer} ref={searchContainerRef}>
             <ul className={styles.searchResults}>
               {query.trim() !== "" ? (
                 results.length > 0 ? (
