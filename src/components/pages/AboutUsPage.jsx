@@ -5,7 +5,7 @@ import ReactLogo from "../../assets/other/React.png";
 
 const AboutUsPage = () => {
   const handleEmailClick = () => {
-    window.location.href = `mailto:${import.meta.env.CONTACT_EMAIL}`;
+    window.location.href = `mailto:${import.meta.env.VITE_CONTACT_EMAIL}`;
   };
 
   return (
