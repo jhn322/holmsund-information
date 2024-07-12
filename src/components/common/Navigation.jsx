@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import ThemeToggleButton from "../theme/ThemeToggleButton";
+import Search from "../common/Search";
 import {
   RxHamburgerMenu,
   RxMagnifyingGlass,
@@ -24,6 +25,7 @@ const Navigation = () => {
   const [isDiscoverHovered, setIsDiscoverHovered] = useState(false);
   const [isActivityHovered, setIsActivityHovered] = useState(false);
   const [isGalleryHovered, setIsGalleryHovered] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   // Nav not transparent on path
   const location = useLocation();
@@ -108,6 +110,11 @@ const Navigation = () => {
 
   const handleMainNavLinkClick = (e) => {
     e.preventDefault();
+  };
+
+  // Function to toggle search component
+  const toggleSearch = () => {
+    setIsSearchOpen(!isSearchOpen);
   };
 
   return (
@@ -316,7 +323,10 @@ const Navigation = () => {
           </ul>
           {/* Nav icons */}
           <div className={styles.navIcons}>
-            <div className={styles.search}>
+            <div className={styles.search} onClick={toggleSearch}>
+              {isSearchOpen && (
+                <Search onClose={() => setIsSearchOpen(false)} />
+              )}
               <RxMagnifyingGlass
                 strokeWidth={0.6}
                 className={styles.searchIcon}
