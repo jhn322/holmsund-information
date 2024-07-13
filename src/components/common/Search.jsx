@@ -131,18 +131,6 @@ const Search = ({ onClose }) => {
     return () => window.removeEventListener("resize", setVh);
   }, []);
 
-  useEffect(() => {
-    if (showResults) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [showResults]);
-
   const handleTouchMove = useCallback(
     (e) => {
       if (showResults) {
@@ -153,7 +141,9 @@ const Search = ({ onClose }) => {
   );
 
   useEffect(() => {
-    document.addEventListener("touchmove", handleTouchMove, { passive: false });
+    document.addEventListener("touchmove", handleTouchMove, {
+      passive: false,
+    });
     return () => {
       document.removeEventListener("touchmove", handleTouchMove);
     };
