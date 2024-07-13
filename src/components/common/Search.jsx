@@ -1,122 +1,43 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { RxMagnifyingGlass, RxCross2 } from "react-icons/rx";
 import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
+import debounce from "lodash/debounce";
 import styles from "../../styles/common/Search.module.css";
+import pages from "../data/Pages";
 
 const Search = ({ onClose }) => {
   const navigate = useNavigate();
   const inputRef = useRef(null);
+  const searchContainerRef = useRef(null);
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [showResults, setShowResults] = useState(false);
 
-  const pages = [
-    { path: "/", title: "Hem", categoryTitle: "Hem" },
-    { path: "/utforska", title: "Utforska", categoryTitle: "Utforska" },
-    {
-      path: "/utforska-1",
-      title: "Utforska 1 titel",
-      categoryTitle: "Utforska",
-    },
-    {
-      path: "/utforska-2",
-      title: "Utforska 2 titel",
-      categoryTitle: "Utforska",
-    },
-    {
-      path: "/utforska-3",
-      title: "Utforska 3 titel",
-      categoryTitle: "Utforska",
-    },
-    {
-      path: "/utforska-4",
-      title: "Utforska 4 titel",
-      categoryTitle: "Utforska",
-    },
-    {
-      path: "/utforska-5",
-      title: "Utforska 5 titel",
-      categoryTitle: "Utforska",
-    },
-    {
-      path: "/utforska-6",
-      title: "Utforska 6 titel",
-      categoryTitle: "Utforska",
-    },
-    {
-      path: "/utforska-7",
-      title: "Utforska 7 titel",
-      categoryTitle: "Utforska",
-    },
-    {
-      path: "/utforska-8",
-      title: "Utforska 8 titel",
-      categoryTitle: "Utforska",
-    },
-    {
-      path: "/aktiviteter",
-      title: "Aktiviteterna",
-      categoryTitle: "Aktiviteter",
-    },
-    {
-      path: "/aktiviteter-1",
-      title: "Aktiviteter 1 titel",
-      categoryTitle: "Aktiviteter",
-    },
-    {
-      path: "/aktiviteter-2",
-      title: "Aktiviteter 2 titel",
-      categoryTitle: "Aktiviteter",
-    },
-    {
-      path: "/aktiviteter-3",
-      title: "Aktiviteter 3 titel",
-      categoryTitle: "Aktiviteter",
-    },
-    {
-      path: "/aktiviteter-4",
-      title: "Aktiviteter 4 titel",
-      categoryTitle: "Aktiviteter",
-    },
-    { path: "/galleri", title: "Galleriet", categoryTitle: "Galleri" },
-    { path: "/galleri-1", title: "Galleri 1 titel", categoryTitle: "Galleri" },
-    { path: "/galleri-2", title: "Galleri 2 titel", categoryTitle: "Galleri" },
-    { path: "/galleri-3", title: "Galleri 3 titel", categoryTitle: "Galleri" },
-    { path: "/galleri-4", title: "Galleri 4 titel", categoryTitle: "Galleri" },
-    { path: "/väder", title: "Väder", categoryTitle: "Väder" },
-    { path: "/kartor", title: "Kartor", categoryTitle: "Kartor" },
-    { path: "/om-oss", title: "Om Oss", categoryTitle: "Om Oss" },
-    { path: "/cookiepolicy", title: "Kakor", categoryTitle: "Cookie policy" },
-    {
-      path: "/användarvillkor",
-      title: "Användarvillkor",
-      categoryTitle: "Villkor",
-    },
-  ];
+  const handleSearch = useCallback(
+    debounce((searchQuery) => {
+      const lowerCaseQuery = searchQuery.toLowerCase();
 
-  const handleSearch = (searchQuery) => {
-    const lowerCaseQuery = searchQuery.toLowerCase();
+      const startsWithResults = pages.filter((page) =>
+        page.title.toLowerCase().startsWith(lowerCaseQuery)
+      );
 
-    const startsWithResults = pages.filter((page) =>
-      page.title.toLowerCase().startsWith(lowerCaseQuery)
-    );
+      const containsResults = pages.filter(
+        (page) =>
+          page.title.toLowerCase().includes(lowerCaseQuery) &&
+          !page.title.toLowerCase().startsWith(lowerCaseQuery)
+      );
 
-    const containsResults = pages.filter(
-      (page) =>
-        page.title.toLowerCase().includes(lowerCaseQuery) &&
-        !page.title.toLowerCase().startsWith(lowerCaseQuery)
-    );
+      const filteredResults = [...startsWithResults, ...containsResults];
 
-    const filteredResults = [...startsWithResults, ...containsResults];
-
-    setResults(filteredResults);
-    setShowResults(searchQuery.trim() !== "");
-  };
+      setResults(filteredResults);
+      setShowResults(searchQuery.trim() !== "");
+    }, 300),
+    []
+  );
 
   const handleResultClick = (e, path) => {
     e.preventDefault();
-    e.stopPropagation();
     handleNavigate(path);
   };
 
@@ -130,6 +51,7 @@ const Search = ({ onClose }) => {
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (
+        searchContainerRef.current &&
         !searchContainerRef.current.contains(e.target) &&
         !e.target.closest(`.${styles.menuWrapper}`)
       ) {
@@ -151,7 +73,6 @@ const Search = ({ onClose }) => {
   }, []);
 
   const handleInputFocus = (e) => {
-    e.stopPropagation();
     if (query.trim() !== "") {
       setShowResults(true);
     }
@@ -159,6 +80,7 @@ const Search = ({ onClose }) => {
 
   return (
     <div
+      ref={searchContainerRef}
       className={`${styles.menuWrapper} ${showResults ? styles.menuOpen : ""}`}
       onClick={(e) => e.stopPropagation()}
     >
@@ -221,6 +143,7 @@ const Search = ({ onClose }) => {
             className={styles.searchInput}
             ref={inputRef}
             onFocus={handleInputFocus}
+            aria-label="Search this site"
           />
           {query && (
             <RxCross2
@@ -234,12 +157,13 @@ const Search = ({ onClose }) => {
         </div>
         {showResults && (
           <div className={styles.resultsContainer}>
-            <ul className={styles.searchResults}>
+            <ul className={styles.searchResults} role="listbox">
               {results.length > 0 ? (
                 results.map((page, index) => (
                   <li
                     key={index}
                     onClick={(e) => handleResultClick(e, page.path)}
+                    role="option"
                   >
                     <div>{page.title}</div>
                     <div className={styles.categoryTitle}>
