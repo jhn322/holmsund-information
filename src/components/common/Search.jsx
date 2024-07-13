@@ -13,6 +13,7 @@ const Search = ({ onClose }) => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [showResults, setShowResults] = useState(false);
+  const [isSearchClosing, setIsSearchClosing] = useState(false);
 
   const handleSearch = useCallback(
     debounce((searchQuery) => {
@@ -45,7 +46,15 @@ const Search = ({ onClose }) => {
     navigate(path);
     setQuery("");
     setShowResults(false);
-    onClose();
+    handleClose();
+  };
+
+  const handleClose = () => {
+    setIsSearchClosing(true);
+    setTimeout(() => {
+      setIsSearchClosing(false);
+      onClose();
+    }, 150);
   };
 
   useEffect(() => {
@@ -56,7 +65,7 @@ const Search = ({ onClose }) => {
         !e.target.closest(`.${styles.menuWrapper}`)
       ) {
         setShowResults(false);
-        onClose();
+        handleClose();
       }
     };
 
@@ -81,7 +90,9 @@ const Search = ({ onClose }) => {
   return (
     <div
       ref={searchContainerRef}
-      className={`${styles.menuWrapper} ${showResults ? styles.menuOpen : ""}`}
+      className={`${styles.menuWrapper} ${showResults ? styles.menuOpen : ""} ${
+        isSearchClosing ? styles.menuClosing : ""
+      }`}
       onClick={(e) => e.stopPropagation()}
     >
       <div className={styles.container}>
@@ -124,7 +135,7 @@ const Search = ({ onClose }) => {
         className={styles.closeCircle}
         onClick={(e) => {
           e.stopPropagation();
-          onClose();
+          handleClose();
         }}
       >
         <RxCross2 className={`${styles.closeIcon} ${styles.closeIconSize}`} />

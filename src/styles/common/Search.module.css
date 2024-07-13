@@ -23,8 +23,26 @@
   overflow: hidden;
 }
 
-.menuWrapper.menuOpen {
+.menuWrapper.menuClosing {
   animation: slideIn 0.3s forwards;
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }
 
 .socialIcons {
@@ -173,24 +191,6 @@
 
 .categoryTitle {
   font-size: 1.1rem;
-}
-
-@keyframes slideOut {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
 }
 
 /* Tablet */
