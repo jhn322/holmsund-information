@@ -257,10 +257,6 @@ h5 {
   color: var(--white-text-color);
 }
 
-.closeIcon:hover {
-  border-color: var(--hover-color);
-}
-
 .closeCircle {
   position: absolute;
   top: 31px;
@@ -277,13 +273,17 @@ h5 {
   transition: border-color 0.3s;
 }
 
+.closeIcon {
+  font-size: 1.8rem;
+  transition: color 0.3s;
+}
+
 .closeCircle:hover {
   border-color: var(--hover-color);
 }
 
-.closeIcon {
-  font-size: 1.8rem;
-  transition: color 0.3s;
+.closeCircle:hover .closeIcon {
+  color: var(--hover-color);
 }
 
 /* Hides nav items when this menu is open */

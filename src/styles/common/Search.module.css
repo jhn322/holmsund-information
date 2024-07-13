@@ -86,11 +86,6 @@
   color: var(--accent-color);
 }
 
-.closeIcon:hover,
-.closeCircle:hover {
-  border-color: var(--hover-color);
-}
-
 .closeCircle {
   position: absolute;
   top: 31px;
@@ -110,6 +105,14 @@
 .closeIcon {
   font-size: 1.8rem;
   transition: color 0.3s;
+}
+
+.closeCircle:hover {
+  border-color: var(--hover-color);
+}
+
+.closeCircle:hover .closeIcon {
+  color: var(--hover-color);
 }
 
 .openMenu {
