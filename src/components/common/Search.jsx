@@ -23,18 +23,15 @@ const Search = ({ onClose }) => {
   };
   const fuse = new Fuse(pages, fuseOptions);
 
-  const handleSearch = useCallback(
-    debounce((searchQuery) => {
-      const lowerCaseQuery = searchQuery.toLowerCase();
-      const searchResults = fuse.search(lowerCaseQuery);
+  const handleSearch = useCallback((searchQuery) => {
+    const lowerCaseQuery = searchQuery.toLowerCase();
+    const searchResults = fuse.search(lowerCaseQuery);
 
-      const filteredResults = searchResults.map((result) => result.item);
+    const filteredResults = searchResults.map((result) => result.item);
 
-      setResults(filteredResults);
-      setShowResults(searchQuery.trim() !== "");
-    }, 300),
-    []
-  );
+    setResults(filteredResults);
+    setShowResults(searchQuery.trim() !== "");
+  }, []);
 
   const handleResultClick = (e, path) => {
     e.preventDefault();
