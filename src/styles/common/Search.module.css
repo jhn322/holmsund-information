@@ -165,7 +165,7 @@
   max-height: 70vh;
   overflow-y: auto;
   width: 80%;
-  margin-top: 2rem;
+  margin-top: 0;
   border-radius: 10px;
   flex: 1;
 }
@@ -191,23 +191,6 @@
   transition: all 0.2s ease-in-out;
 }
 
-.searchResults li:hover {
-  background-color: var(--background-color);
-  padding: 0.5rem;
-}
-
-.searchResults li:hover > div:first-child {
-  color: var(--nav-color);
-}
-
-.searchResults li:hover .categoryTitle {
-  color: var(--nav-color);
-}
-
-.searchResults li.noResults:hover {
-  color: var(--nav-color);
-}
-
 .categoryTitle {
   font-size: 1.1rem;
   transition: color 0.3s;
@@ -219,8 +202,81 @@
   font-weight: bold;
 }
 
-.searchResults li:hover .highlight {
+.searchResults li.noResults,
+.searchResults li.noResults:hover,
+.noMatch,
+.noMatch:hover {
+  background-color: transparent;
+  color: var(--white-text-color);
+  cursor: default;
+}
+
+.searchResults li:hover {
+  color: var(--nav-color);
+}
+
+.searchResults li:not(.noResults):not(.suggestionItem) {
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.searchResults li:not(.noResults):not(.suggestionItem):hover {
+  background-color: var(--background-color);
+  padding: 0.5rem;
+}
+
+.searchResults li:not(.noResults):not(.suggestionItem):hover > div:first-child {
+  color: var(--nav-color);
+}
+
+.searchResults li:not(.noResults):not(.suggestionItem):hover .categoryTitle {
+  color: var(--nav-color);
+}
+
+.searchResults li:not(.noResults):not(.suggestionItem):hover .highlight {
   color: var(--accent-color);
+}
+
+.suggestionItem {
+  padding: 0.5rem;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.suggestionItem:hover {
+  background-color: var(--background-color);
+  padding: 0.9rem;
+}
+
+.suggestionItem:hover > div:first-child {
+  color: var(--nav-color);
+}
+
+.suggestionItem:hover .categoryTitle {
+  color: var(--nav-color);
+}
+
+.suggestionItem:hover .highlight {
+  color: var(--accent-color);
+}
+
+.noMatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.noMatch p {
+  color: var(--white-text-color);
+  font-size: 1.2rem;
+}
+
+.maybe {
+  display: flex;
+  align-self: flex-start;
+  margin-top: 3rem;
 }
 
 /* Tablet */
@@ -272,5 +328,9 @@
   .searchInput::placeholder,
   .resultsContainer {
     font-size: 2.25rem;
+  }
+
+  .noMatch p {
+    font-size: 1.75rem;
   }
 }

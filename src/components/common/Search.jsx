@@ -104,6 +104,22 @@ const Search = ({ onClose }) => {
     );
   };
 
+  const getSuggestions = (query) => {
+    const suggestionFuse = new Fuse(pages, {
+      keys: ["title"],
+      includeScore: true,
+      threshold: 0.6,
+    });
+
+    let suggestions = suggestionFuse.search(query).slice(0, 3);
+
+    if (suggestions.length === 0) {
+      return pages.slice(0, 3);
+    }
+
+    return suggestions.map((result) => result.item);
+  };
+
   return (
     <div
       ref={searchContainerRef}
@@ -192,6 +208,7 @@ const Search = ({ onClose }) => {
                     key={index}
                     onClick={(e) => handleResultClick(e, page.path)}
                     role="option"
+                    className={styles.suggestionItem}
                   >
                     <div>{highlightMatch(page.title, query)}</div>
                     <div className={styles.categoryTitle}>
@@ -201,33 +218,26 @@ const Search = ({ onClose }) => {
                 ))
               ) : (
                 <li className={styles.noResults}>
-                  {query.trim() === "" ? null : (
+                  {query.trim() !== "" && (
                     <>
-                      Inga resultat hittades 😞
-                      {pages.filter((page) =>
-                        page.title.toLowerCase().includes(query.toLowerCase())
-                      ).length > 0 && (
-                        <>
-                          Menade du:
-                          <span className={styles.suggestion}>
-                            {pages
-                              .filter((page) =>
-                                page.title
-                                  .toLowerCase()
-                                  .includes(query.toLowerCase())
-                              )
-                              .map((page) => (
-                                <span
-                                  key={page.path}
-                                  onClick={() => setQuery(page.title)}
-                                  className={styles.suggestedResult}
-                                >
-                                  {page.title}
-                                </span>
-                              ))}
-                          </span>
-                        </>
-                      )}
+                      <div className={styles.noMatch}>
+                        <p>Inga resultat hittades 😞</p>
+                        <div className={styles.maybe}>Menade du:</div>
+                      </div>
+                      <ul className={styles.suggestionList}>
+                        {getSuggestions(query).map((page) => (
+                          <li
+                            key={page.path}
+                            onClick={(e) => handleResultClick(e, page.path)}
+                            className={styles.suggestionItem}
+                          >
+                            <div>{highlightMatch(page.title, query)}</div>
+                            <div className={styles.categoryTitle}>
+                              {page.categoryTitle}
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
                     </>
                   )}
                 </li>
