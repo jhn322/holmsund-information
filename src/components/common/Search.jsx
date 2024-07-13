@@ -220,7 +220,7 @@ const Search = ({ onClose }) => {
                 <li className={styles.noResults}>
                   {query.trim() === "" ? null : (
                     <>
-                      Inga resultat hittades.
+                      Inga resultat hittades 😞
                       {pages.filter((page) =>
                         page.title.toLowerCase().includes(query.toLowerCase())
                       ).length > 0 && (
