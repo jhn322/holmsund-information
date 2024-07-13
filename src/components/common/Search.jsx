@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
+import debounce from "lodash/debounce";
+import Fuse from "fuse.js";
 import { RxMagnifyingGlass, RxCross2 } from "react-icons/rx";
 import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
-import debounce from "lodash/debounce";
 import styles from "../../styles/common/Search.module.css";
 import pages from "../data/Pages";
 
@@ -15,21 +16,19 @@ const Search = ({ onClose }) => {
   const [showResults, setShowResults] = useState(false);
   const [isSearchClosing, setIsSearchClosing] = useState(false);
 
+  const fuseOptions = {
+    keys: ["title", "categoryTitle", "path"],
+    includeScore: true,
+    threshold: 0.4,
+  };
+  const fuse = new Fuse(pages, fuseOptions);
+
   const handleSearch = useCallback(
     debounce((searchQuery) => {
       const lowerCaseQuery = searchQuery.toLowerCase();
+      const searchResults = fuse.search(lowerCaseQuery);
 
-      const startsWithResults = pages.filter((page) =>
-        page.title.toLowerCase().startsWith(lowerCaseQuery)
-      );
-
-      const containsResults = pages.filter(
-        (page) =>
-          page.title.toLowerCase().includes(lowerCaseQuery) &&
-          !page.title.toLowerCase().startsWith(lowerCaseQuery)
-      );
-
-      const filteredResults = [...startsWithResults, ...containsResults];
+      const filteredResults = searchResults.map((result) => result.item);
 
       setResults(filteredResults);
       setShowResults(searchQuery.trim() !== "");
@@ -218,7 +217,37 @@ const Search = ({ onClose }) => {
                   </li>
                 ))
               ) : (
-                <li>Inga resultat hittades</li>
+                <li>
+                  {query.trim() === "" ? null : (
+                    <>
+                      Inga resultat hittades.
+                      {pages.filter((page) =>
+                        page.title.toLowerCase().includes(query.toLowerCase())
+                      ).length > 0 && (
+                        <>
+                          Menade du:
+                          <span className={styles.suggestion}>
+                            {pages
+                              .filter((page) =>
+                                page.title
+                                  .toLowerCase()
+                                  .includes(query.toLowerCase())
+                              )
+                              .map((page) => (
+                                <span
+                                  key={page.path}
+                                  onClick={() => setQuery(page.title)}
+                                  className={styles.suggestedResult}
+                                >
+                                  {page.title}
+                                </span>
+                              ))}
+                          </span>
+                        </>
+                      )}
+                    </>
+                  )}
+                </li>
               )}
             </ul>
           </div>

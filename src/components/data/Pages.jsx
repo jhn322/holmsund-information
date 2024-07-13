@@ -43,7 +43,7 @@ const pages = [
   },
   {
     path: "/aktiviteter",
-    title: "Aktiviteterna",
+    title: "Aktiviteter",
     categoryTitle: "Aktiviteter",
   },
   {
@@ -66,7 +66,7 @@ const pages = [
     title: "Aktiviteter 4 titel",
     categoryTitle: "Aktiviteter",
   },
-  { path: "/galleri", title: "Galleriet", categoryTitle: "Galleri" },
+  { path: "/galleri", title: "Galleri", categoryTitle: "Galleri" },
   { path: "/galleri-1", title: "Galleri 1 titel", categoryTitle: "Galleri" },
   { path: "/galleri-2", title: "Galleri 2 titel", categoryTitle: "Galleri" },
   { path: "/galleri-3", title: "Galleri 3 titel", categoryTitle: "Galleri" },
