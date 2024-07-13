@@ -155,6 +155,7 @@
 .clearIcon {
   font-size: 1.8rem;
   cursor: pointer;
+  transition: color 0.3s;
 }
 
 .resultsContainer {
@@ -183,14 +184,40 @@
 .searchResults li {
   margin-bottom: 1rem;
   cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
 }
 
 .searchResults li:hover {
-  color: var(--hover-color);
+  background-color: var(--background-color);
+  padding: 0.5rem;
+}
+
+.searchResults li:hover > div:first-child {
+  color: var(--nav-color);
+}
+
+.searchResults li:hover .categoryTitle {
+  color: var(--nav-color);
 }
 
 .categoryTitle {
   font-size: 1.1rem;
+  transition: color 0.3s;
+  margin-left: 0.4rem;
+}
+
+.highlight {
+  color: var(--hover-color);
+  font-weight: bold;
+}
+
+.nonHighlight {
+  color: inherit; /* Or specify non-highlighted text color */
+}
+
+.searchResults li:hover .highlight {
+  color: var(--accent-color);
 }
 
 /* Tablet */

@@ -87,6 +87,41 @@ const Search = ({ onClose }) => {
     }
   };
 
+  const highlightMatch = (text, query) => {
+    if (!query) return text;
+
+    const regex = new RegExp(`(${query})`, "gi");
+    const parts = text.split(regex);
+
+    return parts
+      .map((part, index) => {
+        if (regex.test(part)) {
+          return (
+            <span
+              key={index}
+              style={{ margin: "0", padding: "0" }}
+              className={styles.highlight}
+            >
+              {part}
+            </span>
+          );
+        } else if (part.trim() !== "") {
+          return (
+            <span
+              key={index}
+              style={{ margin: "0", padding: "0" }}
+              className={styles.nonHighlight}
+            >
+              {part}
+            </span>
+          );
+        } else {
+          return null;
+        }
+      })
+      .filter(Boolean);
+  };
+
   return (
     <div
       ref={searchContainerRef}
@@ -176,7 +211,7 @@ const Search = ({ onClose }) => {
                     onClick={(e) => handleResultClick(e, page.path)}
                     role="option"
                   >
-                    <div>{page.title}</div>
+                    <div>{highlightMatch(page.title, query)}</div>
                     <div className={styles.categoryTitle}>
                       {page.categoryTitle}
                     </div>
