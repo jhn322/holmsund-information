@@ -53,36 +53,6 @@ const Search = ({ onClose }) => {
     }, 150);
   };
 
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (
-        searchContainerRef.current &&
-        !searchContainerRef.current.contains(e.target) &&
-        !e.target.closest(`.${styles.menuWrapper}`)
-      ) {
-        setShowResults(false);
-        handleClose();
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [onClose]);
-
-  useEffect(() => {
-    if (inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, []);
-
-  const handleInputFocus = (e) => {
-    if (query.trim() !== "") {
-      setShowResults(true);
-    }
-  };
-
   const highlightMatch = (text, query) => {
     if (!query) return text;
 
@@ -123,6 +93,76 @@ const Search = ({ onClose }) => {
     }
 
     return suggestions.map((result) => result.item);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        searchContainerRef.current &&
+        !searchContainerRef.current.contains(e.target) &&
+        !e.target.closest(`.${styles.menuWrapper}`)
+      ) {
+        setShowResults(false);
+        handleClose();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [onClose]);
+
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, []);
+
+  useEffect(() => {
+    const setVh = () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    };
+
+    setVh();
+    window.addEventListener("resize", setVh);
+
+    return () => window.removeEventListener("resize", setVh);
+  }, []);
+
+  useEffect(() => {
+    if (showResults) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showResults]);
+
+  const handleTouchMove = useCallback(
+    (e) => {
+      if (showResults) {
+        e.preventDefault();
+      }
+    },
+    [showResults]
+  );
+
+  useEffect(() => {
+    document.addEventListener("touchmove", handleTouchMove, { passive: false });
+    return () => {
+      document.removeEventListener("touchmove", handleTouchMove);
+    };
+  }, [handleTouchMove]);
+
+  const handleInputFocus = (e) => {
+    if (query.trim() !== "") {
+      setShowResults(true);
+    }
   };
 
   return (
