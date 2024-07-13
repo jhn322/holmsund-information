@@ -104,6 +104,10 @@ const Search = ({ onClose }) => {
     );
   };
 
+  const shuffleArray = (array) => {
+    return array.sort(() => Math.random() - 0.5);
+  };
+
   const getSuggestions = (query) => {
     const suggestionFuse = new Fuse(pages, {
       keys: ["title"],
@@ -114,7 +118,8 @@ const Search = ({ onClose }) => {
     let suggestions = suggestionFuse.search(query).slice(0, 3);
 
     if (suggestions.length === 0) {
-      return pages.slice(0, 3);
+      const shuffledPages = shuffleArray([...pages]);
+      return shuffledPages.slice(0, 3);
     }
 
     return suggestions.map((result) => result.item);
