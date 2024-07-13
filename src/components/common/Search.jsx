@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import debounce from "lodash/debounce";
 import Fuse from "fuse.js";
 import { RxMagnifyingGlass, RxCross2 } from "react-icons/rx";
 import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
@@ -53,6 +52,36 @@ const Search = ({ onClose }) => {
     }, 150);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        searchContainerRef.current &&
+        !searchContainerRef.current.contains(e.target) &&
+        !e.target.closest(`.${styles.menuWrapper}`)
+      ) {
+        setShowResults(false);
+        handleClose();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [onClose]);
+
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, []);
+
+  const handleInputFocus = (e) => {
+    if (query.trim() !== "") {
+      setShowResults(true);
+    }
+  };
+
   const highlightMatch = (text, query) => {
     if (!query) return text;
 
@@ -93,66 +122,6 @@ const Search = ({ onClose }) => {
     }
 
     return suggestions.map((result) => result.item);
-  };
-
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (
-        searchContainerRef.current &&
-        !searchContainerRef.current.contains(e.target) &&
-        !e.target.closest(`.${styles.menuWrapper}`)
-      ) {
-        setShowResults(false);
-        handleClose();
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [onClose]);
-
-  useEffect(() => {
-    if (inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, []);
-
-  useEffect(() => {
-    const setVh = () => {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty("--vh", `${vh}px`);
-    };
-
-    setVh();
-    window.addEventListener("resize", setVh);
-
-    return () => window.removeEventListener("resize", setVh);
-  }, []);
-
-  const handleTouchMove = useCallback(
-    (e) => {
-      if (showResults) {
-        e.preventDefault();
-      }
-    },
-    [showResults]
-  );
-
-  useEffect(() => {
-    document.addEventListener("touchmove", handleTouchMove, {
-      passive: false,
-    });
-    return () => {
-      document.removeEventListener("touchmove", handleTouchMove);
-    };
-  }, [handleTouchMove]);
-
-  const handleInputFocus = (e) => {
-    if (query.trim() !== "") {
-      setShowResults(true);
-    }
   };
 
   return (

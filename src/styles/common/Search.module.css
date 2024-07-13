@@ -21,7 +21,7 @@
   flex-direction: column;
   padding: 2rem;
   transform: translateX(100%);
-  overflow-y: auto;
+  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -126,7 +126,6 @@
   padding-top: 1.25rem;
   margin-top: 8rem;
   overflow: hidden;
-  max-height: calc(100% - 8rem);
 }
 
 .searchForm {
@@ -137,13 +136,6 @@
   width: 100%;
   position: relative;
   cursor: default;
-}
-.searchForm:focus-within {
-  position: fixed;
-  top: 8rem;
-  left: 2rem;
-  right: 2rem;
-  z-index: 1000;
 }
 
 .searchIcon {
@@ -328,14 +320,6 @@
 
   .searchForm {
     width: 80%;
-  }
-
-  .searchForm:focus-within {
-    position: static;
-    top: auto;
-    left: auto;
-    right: auto;
-    z-index: auto;
   }
 
   .resultsContainer {
