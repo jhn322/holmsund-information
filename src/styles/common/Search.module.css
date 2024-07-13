@@ -201,6 +201,10 @@
   color: var(--nav-color);
 }
 
+.searchResults li.noResults:hover {
+  color: var(--nav-color);
+}
+
 .categoryTitle {
   font-size: 1.1rem;
   transition: color 0.3s;
@@ -213,7 +217,7 @@
 }
 
 .nonHighlight {
-  color: inherit; /* Or specify non-highlighted text color */
+  color: inherit;
 }
 
 .searchResults li:hover .highlight {

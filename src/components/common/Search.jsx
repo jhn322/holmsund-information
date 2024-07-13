@@ -217,7 +217,7 @@ const Search = ({ onClose }) => {
                   </li>
                 ))
               ) : (
-                <li>
+                <li className={styles.noResults}>
                   {query.trim() === "" ? null : (
                     <>
                       Inga resultat hittades.
