@@ -7,7 +7,6 @@ import styles from "../../styles/common/Search.module.css";
 const Search = ({ onClose }) => {
   const navigate = useNavigate();
   const inputRef = useRef(null);
-  const searchContainerRef = useRef(null);
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [showResults, setShowResults] = useState(false);
@@ -88,11 +87,7 @@ const Search = ({ onClose }) => {
     { path: "/väder", title: "Väder", categoryTitle: "Väder" },
     { path: "/kartor", title: "Kartor", categoryTitle: "Kartor" },
     { path: "/om-oss", title: "Om Oss", categoryTitle: "Om Oss" },
-    {
-      path: "/cookiepolicy",
-      title: "Kakor",
-      categoryTitle: "Cookie policy",
-    },
+    { path: "/cookiepolicy", title: "Kakor", categoryTitle: "Cookie policy" },
     {
       path: "/användarvillkor",
       title: "Användarvillkor",
@@ -135,7 +130,6 @@ const Search = ({ onClose }) => {
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (
-        searchContainerRef.current &&
         !searchContainerRef.current.contains(e.target) &&
         !e.target.closest(`.${styles.menuWrapper}`)
       ) {
@@ -166,7 +160,6 @@ const Search = ({ onClose }) => {
   return (
     <div
       className={`${styles.menuWrapper} ${showResults ? styles.menuOpen : ""}`}
-      ref={searchContainerRef}
       onClick={(e) => e.stopPropagation()}
     >
       <div className={styles.container}>
@@ -240,7 +233,7 @@ const Search = ({ onClose }) => {
           )}
         </div>
         {showResults && (
-          <div className={styles.resultsContainer} ref={searchContainerRef}>
+          <div className={styles.resultsContainer}>
             <ul className={styles.searchResults}>
               {results.length > 0 ? (
                 results.map((page, index) => (

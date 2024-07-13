@@ -17,6 +17,7 @@ import logo2 from "../../assets/logo/navLogoHover.png";
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuClosing, setIsMenuClosing] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [visible, setVisible] = useState(true);
   const [isHoveredLogo, setIsHoveredLogo] = useState(false);
@@ -25,7 +26,6 @@ const Navigation = () => {
   const [isDiscoverHovered, setIsDiscoverHovered] = useState(false);
   const [isActivityHovered, setIsActivityHovered] = useState(false);
   const [isGalleryHovered, setIsGalleryHovered] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   // Nav not transparent on path
   const location = useLocation();
