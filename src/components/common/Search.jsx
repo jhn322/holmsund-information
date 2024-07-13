@@ -86,36 +86,22 @@ const Search = ({ onClose }) => {
   const highlightMatch = (text, query) => {
     if (!query) return text;
 
-    const regex = new RegExp(`(${query})`, "gi");
-    const parts = text.split(regex);
+    let startIndex = text.toLowerCase().indexOf(query.toLowerCase());
+    if (startIndex === -1) return text;
 
-    return parts
-      .map((part, index) => {
-        if (regex.test(part)) {
-          return (
-            <span
-              key={index}
-              style={{ margin: "0", padding: "0" }}
-              className={styles.highlight}
-            >
-              {part}
-            </span>
-          );
-        } else if (part.trim() !== "") {
-          return (
-            <span
-              key={index}
-              style={{ margin: "0", padding: "0" }}
-              className={styles.nonHighlight}
-            >
-              {part}
-            </span>
-          );
-        } else {
-          return null;
-        }
-      })
-      .filter(Boolean);
+    const endIndex = startIndex + query.length;
+    return (
+      <>
+        {text.substring(0, startIndex)}
+        <span
+          style={{ margin: "0", padding: "0" }}
+          className={styles.highlight}
+        >
+          {text.substring(startIndex, endIndex)}
+        </span>
+        {text.substring(endIndex)}
+      </>
+    );
   };
 
   return (

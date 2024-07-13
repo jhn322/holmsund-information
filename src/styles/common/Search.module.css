@@ -216,10 +216,6 @@
   font-weight: bold;
 }
 
-.nonHighlight {
-  color: inherit;
-}
-
 .searchResults li:hover .highlight {
   color: var(--accent-color);
 }
