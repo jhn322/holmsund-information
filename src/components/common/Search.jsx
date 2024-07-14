@@ -87,17 +87,9 @@ const Search = ({ onClose }) => {
     if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
       document.body.style.position = "fixed";
       document.body.style.width = "100%";
+      document.body.style.height = "100%";
     }
   };
-
-  // const handleInputBlur = (e) => {
-  //   document.body.style.overflow = "";
-
-  //   if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-  //     document.body.style.position = "";
-  //     document.body.style.width = "";
-  //   }
-  // };
 
   const highlightMatch = (text, query) => {
     if (!query) return text;
@@ -208,7 +200,6 @@ const Search = ({ onClose }) => {
             className={styles.searchInput}
             ref={inputRef}
             onFocus={handleInputFocus}
-            // onBlur={handleInputBlur}
             aria-label="Search this site"
           />
           {query && (
