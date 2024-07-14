@@ -80,13 +80,24 @@ const Search = ({ onClose }) => {
     if (query.trim() !== "") {
       setShowResults(true);
     }
+
     // Lock body scroll when keyboard is open
     document.body.style.overflow = "hidden";
+
+    if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+    }
   };
 
   const handleInputBlur = (e) => {
     // Unlock body scroll when keyboard is closed
     document.body.style.overflow = "";
+
+    if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      document.body.style.position = "";
+      document.body.style.width = "";
+    }
   };
 
   const highlightMatch = (text, query) => {

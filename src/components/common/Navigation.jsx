@@ -105,9 +105,19 @@ const Navigation = () => {
     if (isMenuOpen || isSearchOpen) {
       document.body.style.overflowY = "hidden";
       document.body.style.paddingRight = `${scrollbarWidth}px`;
+
+      if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        document.body.style.position = "fixed";
+        document.body.style.width = "100%";
+      }
     } else {
       document.body.style.overflowY = "auto";
       document.body.style.paddingRight = "0";
+
+      if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        document.body.style.position = "";
+        document.body.style.width = "";
+      }
     }
 
     return () => {
