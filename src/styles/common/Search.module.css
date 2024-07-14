@@ -123,7 +123,7 @@
   justify-content: flex-start;
   align-items: center;
   padding-top: 1.25rem;
-  margin-top: 4rem;
+  margin-top: 8rem;
   overflow: hidden;
 }
 
@@ -317,10 +317,6 @@
   .socialIcons {
     top: 22px;
     left: 67px;
-  }
-
-  .openMenu {
-    margin-top: 8rem;
   }
 
   .searchForm {
