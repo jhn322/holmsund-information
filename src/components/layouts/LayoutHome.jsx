@@ -1,5 +1,5 @@
 import React from "react";
-import Navigation from "../common/Navigation";
+import Nav from "../common/Nav";
 import Header from "../home/Header";
 import ContentCircle from "../home/ContentCircle";
 import Separator from "../home/Separator";
@@ -19,7 +19,7 @@ const LayoutHome = () => {
   return (
     <ThemeProvider>
       <div>
-        <Navigation />
+        <Nav />
         <header>
           <Header />
         </header>

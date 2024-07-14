@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Navigation from "../common/Navigation";
+import Nav from "../common/Nav";
 import TermsCircleAddon from "../addon/TermsCircleAddon";
 import CookiesCircleAddon from "../addon/CookiesCircleAddon";
 import AboutCircleAddon from "../addon/AboutCircleAddon";
@@ -126,7 +126,7 @@ const LayoutPageOther = ({
   return (
     <ThemeProvider>
       <div>
-        <Navigation />
+        <Nav />
         {renderTermsCircleAddon && <TermsCircleAddon />}
         {renderCookiesCircleAddon && <CookiesCircleAddon />}
         {renderAboutCircleAddon && <AboutCircleAddon />}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Navigation from "../common/Navigation";
+import Nav from "../common/Nav";
 import HeaderAddon from "../addon/HeaderAddon";
 import Breadcrumb from "../common/Breadcrumb";
 import SeparatorAddon from "../addon/SeparatorAddon";
@@ -121,7 +121,7 @@ const LayoutPageMain = ({
   return (
     <ThemeProvider>
       <div>
-        <Navigation />
+        <Nav />
         {renderHeaderAddon && (
           <HeaderAddon
             title={headerTitle}
