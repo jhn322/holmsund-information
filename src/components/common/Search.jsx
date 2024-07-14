@@ -88,7 +88,7 @@ const Search = ({ onClose }) => {
       document.body.style.position = "fixed";
       document.body.style.top = `-${window.scrollY}px`;
       document.body.style.width = "100%";
-      document.body.style.height = "100%";
+      document.body.style.height = "120vh";
     }
   };
 
