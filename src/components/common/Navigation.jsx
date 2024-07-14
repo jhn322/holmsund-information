@@ -59,6 +59,30 @@ const Navigation = () => {
     setIsSearchOpen(!isSearchOpen);
   };
 
+  // Function to toggle active dropdown
+  const toggleDropdown = (dropdownName) => {
+    setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
+  };
+
+  // Sets background blur when menu is open
+  const handleBlurBackgroundClick = () => {
+    setIsMenuOpen(false);
+    setIsSearchOpen(false);
+    // Remove overflow hidden when clicking on the background blur
+    document.body.style.overflow = "auto";
+  };
+
+  // Handles the scroll on page for nav vertically
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY;
+    setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+    setPrevScrollPos(currentScrollPos);
+  };
+
+  const handleMainNavLinkClick = (e) => {
+    e.preventDefault();
+  };
+
   // Manage body scroll based on menu state open/closed
   useEffect(() => {
     const handleScroll = () => {
@@ -92,21 +116,6 @@ const Navigation = () => {
     };
   }, [isMenuOpen, isSearchOpen]);
 
-  // Sets background blur when menu is open
-  const handleBlurBackgroundClick = () => {
-    setIsMenuOpen(false);
-    setIsSearchOpen(false);
-    // Remove overflow hidden when clicking on the background blur
-    document.body.style.overflow = "auto";
-  };
-
-  // Handles the scroll on page for nav vertically
-  const handleScroll = () => {
-    const currentScrollPos = window.scrollY;
-    setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-    setPrevScrollPos(currentScrollPos);
-  };
-
   // EventListener on window for scroll
   useEffect(() => {
     if (isMenuOpen) {
@@ -119,14 +128,17 @@ const Navigation = () => {
     };
   }, [isMenuOpen, prevScrollPos, visible]);
 
-  // Function to toggle active dropdown
-  const toggleDropdown = (dropdownName) => {
-    setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
-  };
+  useEffect(() => {
+    if (isMenuOpen || isSearchOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
 
-  const handleMainNavLinkClick = (e) => {
-    e.preventDefault();
-  };
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen, isSearchOpen]);
 
   return (
     <header>

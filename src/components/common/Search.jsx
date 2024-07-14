@@ -80,6 +80,13 @@ const Search = ({ onClose }) => {
     if (query.trim() !== "") {
       setShowResults(true);
     }
+    // Lock body scroll when keyboard is open
+    document.body.style.overflow = "hidden";
+  };
+
+  const handleInputBlur = (e) => {
+    // Unlock body scroll when keyboard is closed
+    document.body.style.overflow = "";
   };
 
   const highlightMatch = (text, query) => {
@@ -191,6 +198,7 @@ const Search = ({ onClose }) => {
             className={styles.searchInput}
             ref={inputRef}
             onFocus={handleInputFocus}
+            onBlur={handleInputBlur}
             aria-label="Search this site"
           />
           {query && (
