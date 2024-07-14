@@ -319,6 +319,10 @@
     left: 67px;
   }
 
+  .openMenu {
+    margin-top: 8rem;
+  }
+
   .searchForm {
     width: 80%;
   }
