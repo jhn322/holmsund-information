@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
+import debounce from "lodash/debounce";
 import Fuse from "fuse.js";
 import { RxMagnifyingGlass, RxCross2 } from "react-icons/rx";
 import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
@@ -81,7 +82,6 @@ const Search = ({ onClose }) => {
       setShowResults(true);
     }
 
-    // Lock body scroll when keyboard is open
     document.body.style.overflow = "hidden";
 
     if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
@@ -90,15 +90,14 @@ const Search = ({ onClose }) => {
     }
   };
 
-  const handleInputBlur = (e) => {
-    // Unlock body scroll when keyboard is closed
-    document.body.style.overflow = "";
+  // const handleInputBlur = (e) => {
+  //   document.body.style.overflow = "";
 
-    if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-      document.body.style.position = "";
-      document.body.style.width = "";
-    }
-  };
+  //   if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+  //     document.body.style.position = "";
+  //     document.body.style.width = "";
+  //   }
+  // };
 
   const highlightMatch = (text, query) => {
     if (!query) return text;
@@ -209,7 +208,7 @@ const Search = ({ onClose }) => {
             className={styles.searchInput}
             ref={inputRef}
             onFocus={handleInputFocus}
-            onBlur={handleInputBlur}
+            // onBlur={handleInputBlur}
             aria-label="Search this site"
           />
           {query && (
