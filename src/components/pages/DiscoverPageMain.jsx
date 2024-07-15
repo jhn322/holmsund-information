@@ -60,6 +60,7 @@ const DiscoverPageMain = () => {
     <NavLink
       to={image.path}
       className={styles2.gridItemLink}
+      aria-label="Länkar till utforska sidor"
       key={index}
       onClick={() => {
         trackMainPagesClick("Grid Image", image.title, image.path);

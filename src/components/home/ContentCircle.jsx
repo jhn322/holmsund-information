@@ -53,14 +53,12 @@ const ContentCircle = () => {
           <img
             src={circle2Image}
             className={styles.circleBack}
-            alt="Background circle in purple color"
-            aria-label="Background circle in purple color"
+            alt="Lila bakgrund"
           />
           <img
             src={circle1Image}
             className={styles.circleFront}
-            alt="Foreground circle in light color"
-            aria-label="Foreground circle in light color"
+            alt="Bild startsida"
           />
         </div>
       </aside>

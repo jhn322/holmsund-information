@@ -28,12 +28,12 @@ const TermsCircleAddon = () => {
           <img
             src={circle2Image}
             className={`${styles.circleBack} ${styles2.circleBack}`}
-            alt="White Circle"
+            alt="Vit cirkel"
           />
           <img
             src={circle1Image}
             className={`${styles.circleFront} ${styles2.circleFront}`}
-            alt="Terms of Service Circle"
+            alt="Användarvillkor bild"
           />
         </div>
       </aside>

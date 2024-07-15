@@ -141,7 +141,7 @@ const DiscoverAddon3 = ({ title }) => {
                 onMouseEnter={() => handleHover(index, true)}
                 onMouseLeave={() => handleHover(index, false)}
                 tabIndex="0"
-                aria-label={`Discover ${card.title}`}
+                aria-label={`Aktiviteter ${card.title}`}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === " ") {
                     handleHover(index, !overlayStates[index]);
@@ -177,7 +177,7 @@ const DiscoverAddon3 = ({ title }) => {
                             handleButtonClick(card.title, card.link);
                             window.location.href = card.link;
                           }}
-                          aria-label={`Read more about ${card.title}`}
+                          aria-label={`Läs mer om ${card.title}`}
                         >
                           <span className={styles.expandedBtnText}>
                             Läs mer

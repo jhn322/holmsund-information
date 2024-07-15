@@ -40,6 +40,7 @@ const Extra = () => {
                 </article>
                 <NavLink
                   to="/väder"
+                  aria-label="Navigera till vädersida"
                   onClick={() => handleNavLinkClick("Kolla vädret i Holmsund")}
                 >
                   <p className={styles.weatherBtnText}>
@@ -72,6 +73,7 @@ const Extra = () => {
                 </div>
                 <NavLink
                   to="/kartor"
+                  aria-label="Navigera till kartsida"
                   onClick={() => handleNavLinkClick("Se karta över Holmsund")}
                 >
                   <p className={styles.mapBtnText}>Se karta över Holmsund</p>

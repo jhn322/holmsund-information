@@ -190,9 +190,10 @@ const WeatherPage = () => {
         <div className={styles.goToWeather}>
           <div className={styles.InnerWeather}>
             <a
-              href="https://www.yr.no/nb/v%C3%A6rvarsel/daglig-tabell/2-605676/Sverige/V%C3%A4sterbottens%20l%C3%A4n/Ume%C3%A5%20Kommun/Holmsund"
+              href="https://www.smhi.se/vader/prognoser/ortsprognoser/q/Holmsund/Ume%C3%A5/605676"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Extern länk till SMHI vädersida"
               onClick={() =>
                 handleLinkClick(
                   "För mer väderinformation klicka här",
@@ -204,11 +205,10 @@ const WeatherPage = () => {
             </a>
             <div className={styles.description}>
               <p>
-                yr.no är en väderwebbplats som drivs av det norska
-                meteorologiska institutet och NRK (Norsk rikskringkasting).
-                Webbplatsen erbjuder detaljerade väderprognoser för platser över
-                hela världen, inklusive temperatur, nederbörd, vind och mycket
-                mer.
+                SMHI är en pålitlig och omfattande källa för väderinformation i
+                Sverige, med detaljerade prognoser och varningar. Dess
+                användarvänliga gränssnitt gör det enkelt att få aktuella
+                väderuppdateringar och planera aktiviteter utomhus.
               </p>
             </div>
           </div>

@@ -118,12 +118,12 @@ const GalleryAddon2 = ({ title }) => {
             <article
               className={styles.galleryImage}
               style={{ backgroundImage: `url(${staticGalleryImage})` }}
-              aria-label="Static gallery background image"
+              aria-label="Bild på galleri"
             >
               <div
                 className={styles.galleryCircle}
                 style={{ backgroundImage: `url(${galleryCircle})` }}
-                aria-label="Gallery decorative circle"
+                aria-label="Cirkel bild"
               ></div>
               <h2 className={`${styles.galleryTitle} ${styles2.galleryTitle}`}>
                 {title}
@@ -157,6 +157,7 @@ const GalleryAddon2 = ({ title }) => {
                 {images.map((image, index) => (
                   <figure
                     key={index}
+                    tabIndex="0"
                     className={`${styles.slide} ${
                       index === currentIndex ? styles.active : ""
                     }`}
@@ -182,7 +183,7 @@ const GalleryAddon2 = ({ title }) => {
                             image.link
                           )
                         }
-                        aria-label={`Navigate to ${image.title}`}
+                        aria-label={`Navigera till ${image.title}`}
                       >
                         <img src={image.url} alt={image.title} />
                       </NavLink>
@@ -198,7 +199,7 @@ const GalleryAddon2 = ({ title }) => {
                 <span
                   className={`${styles.navPrev} ${styles2.navPrev}`}
                   onClick={goToPrevSlide}
-                  aria-label="Previous slide"
+                  aria-label="Tidigare bild"
                   role="button"
                 >
                   <RxChevronLeft strokeWidth={0.8} />
@@ -206,7 +207,7 @@ const GalleryAddon2 = ({ title }) => {
                 <span
                   className={`${styles.navNext} ${styles2.navNext}`}
                   onClick={goToNextSlide}
-                  aria-label="Next slide"
+                  aria-label="Nästa bild"
                   role="button"
                 >
                   <RxChevronRight strokeWidth={0.8} />
@@ -218,7 +219,7 @@ const GalleryAddon2 = ({ title }) => {
             >
               <NavLink
                 to={images[currentIndex].link}
-                aria-label={`Read more about ${images[currentIndex].title}`}
+                aria-label={`Läs mer om ${images[currentIndex].title}`}
               >
                 <header
                   className={`${styles.hoverContainer} ${styles2.hoverContainer}`}
@@ -240,7 +241,7 @@ const GalleryAddon2 = ({ title }) => {
                           images[currentIndex].link
                         );
                       }}
-                      aria-label={`Read more about ${images[currentIndex].title}`}
+                      aria-label={`Läs mer om ${images[currentIndex].title}`}
                     >
                       Läs Mer
                     </a>
@@ -262,7 +263,7 @@ const GalleryAddon2 = ({ title }) => {
                           images[currentIndex].link
                         );
                       }}
-                      aria-label={`Arrow icon to ${images[currentIndex].title}`}
+                      aria-label={`Navigera till ${images[currentIndex].title}`}
                     >
                       <RxArrowRight
                         className={`${styles.arrowIcon} ${styles2.arrowIcon}`}
@@ -281,7 +282,7 @@ const GalleryAddon2 = ({ title }) => {
                   index === currentIndex ? styles.active : ""
                 } ${index === currentIndex ? styles2.active : ""}`}
                 onClick={() => setCurrentIndex(index)}
-                aria-label={`Go to slide ${index + 1}`}
+                aria-label={`Gå till nästa indikator ${index + 1}`}
                 role="button"
               ></span>
             ))}

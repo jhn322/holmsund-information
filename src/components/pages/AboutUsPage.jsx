@@ -89,7 +89,11 @@ const AboutUsPage = () => {
             />
             <p className={styles.contactText}>
               Vill du kontakta oss?
-              <span className={styles.emailLink} onClick={handleEmailClick}>
+              <span
+                className={styles.emailLink}
+                aria-label="Acceptera knapp"
+                onClick={handleEmailClick}
+              >
                 Klicka här
               </span>
               för att skicka ett mail.

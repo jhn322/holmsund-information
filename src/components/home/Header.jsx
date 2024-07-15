@@ -83,7 +83,7 @@ const Header = () => {
           <div className={styles.btnContainer}>
             <NavLink
               to={currentButton.path}
-              aria-label={`Navigate to ${currentButton.text}`}
+              aria-label={`¨Navigera till ${currentButton.text}`}
             >
               <button
                 className={styles.headerBtn}

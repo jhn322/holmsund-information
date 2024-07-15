@@ -121,6 +121,7 @@ const OtherAddon = () => {
                           <p className={styles.expandedText}>{card.text}</p>
                           <button
                             className={styles.expandedBtn}
+                            aria-label={`Navigera till ${card.title}`}
                             onClick={() => {
                               trackOtherAddonElementClick(
                                 "Card",

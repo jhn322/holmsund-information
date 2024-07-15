@@ -69,6 +69,7 @@ const HeaderAddonPage = ({ title, backgroundImage }) => {
           <NavLink to={basePath}>
             <button
               className={`${styles.headerBtn} ${styles3.headerBtn}`}
+              aria-label="Knapp till huvudsida för kategori"
               onClick={handleClick}
             >
               {categoryMessages[currentCategory]} denna {currentSeason}

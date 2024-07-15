@@ -23,15 +23,18 @@ const Search = ({ onClose }) => {
   };
   const fuse = new Fuse(pages, fuseOptions);
 
-  const handleSearch = useCallback((searchQuery) => {
-    const lowerCaseQuery = searchQuery.toLowerCase();
-    const searchResults = fuse.search(lowerCaseQuery);
+  const handleSearch = useCallback(
+    debounce((searchQuery) => {
+      const lowerCaseQuery = searchQuery.toLowerCase();
+      const searchResults = fuse.search(lowerCaseQuery);
 
-    const filteredResults = searchResults.map((result) => result.item);
+      const filteredResults = searchResults.map((result) => result.item);
 
-    setResults(filteredResults);
-    setShowResults(searchQuery.trim() !== "");
-  }, []);
+      setResults(filteredResults);
+      setShowResults(searchQuery.trim() !== "");
+    }, 300),
+    []
+  );
 
   const handleResultClick = (e, path) => {
     e.preventDefault();
@@ -77,7 +80,7 @@ const Search = ({ onClose }) => {
     }
   }, []);
 
-  const handleInputFocus = (e) => {
+  const handleInputFocus = () => {
     if (query.trim() !== "") {
       setShowResults(true);
     }
@@ -113,9 +116,7 @@ const Search = ({ onClose }) => {
     );
   };
 
-  const shuffleArray = (array) => {
-    return array.sort(() => Math.random() - 0.5);
-  };
+  const shuffleArray = (array) => array.sort(() => Math.random() - 0.5);
 
   const getSuggestions = (query) => {
     const suggestionFuse = new Fuse(pages, {
@@ -143,12 +144,12 @@ const Search = ({ onClose }) => {
       onClick={(e) => e.stopPropagation()}
     >
       <header className={styles.container}>
-        <nav className={styles.socialIcons}>
+        <nav className={styles.socialIcons} aria-label="Social media links">
           <a
             href="https://github.com/jhn322"
             target="_blank"
             rel="noopener noreferrer"
-            alt="GitHub website"
+            aria-label="GitHub website"
           >
             <FaGithub className={styles.github} />
           </a>
@@ -156,7 +157,7 @@ const Search = ({ onClose }) => {
             href="https://x.com/search?q=%23holmsund&src=typeahead_click"
             target="_blank"
             rel="noopener noreferrer"
-            alt="Twitter website"
+            aria-label="Twitter website"
           >
             <FaXTwitter className={styles.twitterX} />
           </a>
@@ -164,7 +165,7 @@ const Search = ({ onClose }) => {
             href="https://www.instagram.com/explore/locations/240089071/holmsund-vasterbottens-lan-sweden/"
             target="_blank"
             rel="noopener noreferrer"
-            alt="Instagram website"
+            aria-label="Instagram website"
           >
             <FaInstagram className={styles.instagram} />
           </a>
@@ -172,7 +173,7 @@ const Search = ({ onClose }) => {
             href="https://www.facebook.com/groups/415551751837063/?locale=sv_SE"
             target="_blank"
             rel="noopener noreferrer"
-            alt="Facebook website"
+            aria-label="Facebook website"
           >
             <FaFacebook className={styles.facebook} />
           </a>
@@ -184,11 +185,14 @@ const Search = ({ onClose }) => {
           e.stopPropagation();
           handleClose();
         }}
+        role="button"
+        aria-label="Close search"
+        tabIndex={0}
       >
         <RxCross2 className={`${styles.closeIcon} ${styles.closeIconSize}`} />
       </div>
       <main className={styles.openMenu}>
-        <form className={styles.searchForm}>
+        <form className={styles.searchForm} role="search">
           <RxMagnifyingGlass className={styles.searchIcon} />
           <input
             type="text"
@@ -210,12 +214,19 @@ const Search = ({ onClose }) => {
                 setQuery("");
                 setShowResults(false);
               }}
+              role="button"
+              aria-label="Clear search"
+              tabIndex={0}
             />
           )}
         </form>
         {showResults && (
           <div className={styles.resultsContainer}>
-            <ul className={styles.searchResults} role="listbox">
+            <ul
+              className={styles.searchResults}
+              role="listbox"
+              aria-live="polite"
+            >
               {results.length > 0 ? (
                 results.map((page, index) => (
                   <li
@@ -223,6 +234,7 @@ const Search = ({ onClose }) => {
                     onClick={(e) => handleResultClick(e, page.path)}
                     role="option"
                     className={styles.suggestionItem}
+                    tabIndex={0}
                   >
                     <div>{highlightMatch(page.title, query)}</div>
                     <div className={styles.categoryTitle}>
@@ -244,6 +256,7 @@ const Search = ({ onClose }) => {
                             key={page.path}
                             onClick={(e) => handleResultClick(e, page.path)}
                             className={styles.suggestionItem}
+                            tabIndex={0}
                           >
                             <div>{highlightMatch(page.title, query)}</div>
                             <div className={styles.categoryTitle}>

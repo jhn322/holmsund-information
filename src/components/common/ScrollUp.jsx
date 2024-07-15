@@ -36,7 +36,10 @@ const ScrollUp = () => {
         className={`${styles.scrollUp} ${!visible && styles.invisible}`}
         onClick={scrollToTop}
       >
-        <RxChevronUp className={styles.scrollIcon} />
+        <RxChevronUp
+          className={styles.scrollIcon}
+          aria-label="Scrolla up ikon"
+        />
       </article>
     </main>
   );

@@ -27,12 +27,12 @@ const MapCircleAddon = () => {
           <img
             src={circle2Image}
             className={styles.circleBack}
-            alt="Yellow Circle Background"
+            alt="Gul cirkel bild"
           />
           <img
             src={circle1Image}
             className={styles.circleFront}
-            alt="Map Circle Image"
+            alt="Bild på karta bakgrund"
           />
         </div>
       </aside>

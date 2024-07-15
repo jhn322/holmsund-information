@@ -51,7 +51,10 @@ const ScrollDown = () => {
         }`}
         onClick={scrollDown}
       >
-        <RxChevronDown className={styles.scrollIcon} />
+        <RxChevronDown
+          className={styles.scrollIcon}
+          aria-label="Scolla ner ikon"
+        />
       </article>
     </main>
   );

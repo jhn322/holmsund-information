@@ -116,7 +116,7 @@ const ActivityCarousel = () => {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
       aria-roledescription="carousel"
-      aria-label="Activity carousel"
+      aria-label="Aktiviteter karusell"
     >
       <main className={styles.container}>
         <div className={styles.carouselInner}>
@@ -169,14 +169,14 @@ const ActivityCarousel = () => {
                       <span
                         className={styles.navPrev}
                         onClick={handlePrev}
-                        aria-label="Previous slide"
+                        aria-label="Tidigare bild"
                       >
                         <RxChevronLeft strokeWidth={0.2} />
                       </span>
                       <span
                         className={styles.navNext}
                         onClick={handleNext}
-                        aria-label="Next slide"
+                        aria-label="Näst bild"
                       >
                         <RxChevronRight strokeWidth={0.2} />
                       </span>
@@ -208,7 +208,7 @@ const ActivityCarousel = () => {
                           slide.link
                         )
                       }
-                      aria-label={`Read more about ${slide.title}`}
+                      aria-label={`Läs mer om ${slide.title}`}
                     >
                       Läs Mer
                     </a>
@@ -223,7 +223,7 @@ const ActivityCarousel = () => {
                           slide.link
                         )
                       }
-                      aria-label={`Read more about ${slide.title}`}
+                      aria-label={`Läs mer om ${slide.title}`}
                     >
                       <RxArrowRight className={styles.arrowIcon} />
                     </a>

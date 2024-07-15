@@ -58,14 +58,18 @@ const Carousel = () => {
     return text;
   };
 
-  const handlePrev = () => {
+  const handlePrev = (event) => {
+    event.stopPropagation();
+    event.preventDefault();
     setActiveIndex((prevIndex) =>
       prevIndex === 0 ? slides.length - 1 : prevIndex - 1
     );
     setDeltaX(0);
   };
 
-  const handleNext = () => {
+  const handleNext = (event) => {
+    event.stopPropagation();
+    event.preventDefault();
     setActiveIndex((prevIndex) =>
       prevIndex === slides.length - 1 ? 0 : prevIndex + 1
     );
@@ -116,7 +120,7 @@ const Carousel = () => {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
       aria-roledescription="carousel"
-      aria-label="Activity carousel"
+      aria-label="Galleri karusell"
     >
       <main className={styles.container}>
         <div className={styles.carouselInner}>
@@ -189,14 +193,14 @@ const Carousel = () => {
                         <span
                           className={styles.navPrev}
                           onClick={handlePrev}
-                          aria-label="Previous slide"
+                          aria-label="Tidigare bild"
                         >
                           <RxChevronLeft strokeWidth={0.2} />
                         </span>
                         <span
                           className={styles.navNext}
                           onClick={handleNext}
-                          aria-label="Next slide"
+                          aria-label="Nästa bild"
                         >
                           <RxChevronRight strokeWidth={0.2} />
                         </span>
@@ -236,7 +240,7 @@ const Carousel = () => {
                           slide.link
                         );
                       }}
-                      aria-label={`Read more about ${slide.title}`}
+                      aria-label={`Läs mer om ${slide.title}`}
                     >
                       Läs Mer
                     </a>
@@ -255,7 +259,7 @@ const Carousel = () => {
                           slide.link
                         );
                       }}
-                      aria-label={`Read more about ${slide.title}`}
+                      aria-label={`Läs mer om ${slide.title}`}
                     >
                       <RxArrowRight className={styles.arrowIcon} />
                     </a>

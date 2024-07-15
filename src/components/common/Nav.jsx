@@ -348,19 +348,29 @@ const Nav = () => {
           </ul>
           {/* Nav icons */}
           <div className={styles.navIcons}>
-            <div className={styles.search} onClick={toggleSearch}>
+            <div
+              className={styles.search}
+              onClick={toggleSearch}
+              role="button"
+              tabIndex={0}
+            >
               {isSearchOpen && (
                 <Search onClose={() => setIsSearchOpen(false)} />
               )}
               <RxMagnifyingGlass
                 strokeWidth={0.6}
                 className={styles.searchIcon}
+                aria-label="Search"
               />
             </div>
             <RxHamburgerMenu
               strokeWidth={0.8}
               className={styles.menuIcon}
               onClick={toggleMenu}
+              role="button"
+              tabIndex={0}
+              aria-label="Menu"
+              aria-expanded={isMenuOpen}
             />
           </div>
         </div>

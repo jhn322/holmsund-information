@@ -29,12 +29,12 @@ const WeatherCircleAddon = () => {
           <img
             src={circle2Image}
             className={styles.circleBack}
-            alt="Purple Circle"
+            alt="Lila cirkel"
           />
           <img
             src={circle1Image}
             className={styles.circleFront}
-            alt="Weather Circle"
+            alt="Väder bild"
           />
         </div>
       </aside>

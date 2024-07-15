@@ -26,7 +26,7 @@ const NavMenu = ({
           href="https://github.com/jhn322"
           target="_blank"
           rel="noopener noreferrer"
-          alt="GitHub website"
+          aria-label="GitHub"
         >
           <FaGithub className={styles.github} />
         </a>
@@ -34,7 +34,7 @@ const NavMenu = ({
           href="https://x.com/search?q=%23holmsund&src=typeahead_click"
           target="_blank"
           rel="noopener noreferrer"
-          alt="Twitter website"
+          aria-label="Twitter"
         >
           <FaXTwitter className={styles.twitterX} />
         </a>
@@ -42,7 +42,7 @@ const NavMenu = ({
           href="https://www.instagram.com/explore/locations/240089071/holmsund-vasterbottens-lan-sweden/"
           target="_blank"
           rel="noopener noreferrer"
-          alt="Instagram website"
+          aria-label="Instagram"
         >
           <FaInstagram className={styles.instagram} />
         </a>
@@ -50,13 +50,19 @@ const NavMenu = ({
           href="https://www.facebook.com/groups/415551751837063/?locale=sv_SE"
           target="_blank"
           rel="noopener noreferrer"
-          alt="Facebook website"
+          aria-label="Facebook"
         >
           <FaFacebook className={styles.facebook} />
         </a>
       </div>
       <ThemeToggleButton />
-      <div className={styles.closeCircle} onClick={closeMenu}>
+      <div
+        className={styles.closeCircle}
+        onClick={closeMenu}
+        tabIndex={0}
+        role="button"
+        aria-label="stäng meny"
+      >
         <RxCross2 className={styles.closeIcon} />
       </div>
       <ul className={styles.openMenu}>
@@ -83,6 +89,9 @@ const NavMenu = ({
             onClick={() => toggleDropdown("activity")}
             className={styles.dropdownToggle}
             style={{ fontSize: "2rem" }}
+            tabIndex={0}
+            role="button"
+            aria-expanded={activeDropdown === "activity" ? "true" : "false"}
           >
             <h4>Aktiviteter</h4>
             <div
@@ -98,7 +107,7 @@ const NavMenu = ({
             </div>
           </div>
           {activeDropdown === "activity" && (
-            <ul className={styles.nestedMenuContainer}>
+            <ul className={styles.nestedMenuContainer} role="menu">
               <div className={styles.nestedMenu}>
                 <li>
                   <NavLink to="/aktiviteter" activeclassname={styles.active}>
@@ -140,6 +149,9 @@ const NavMenu = ({
             onClick={() => toggleDropdown("discover")}
             className={styles.dropdownToggle}
             style={{ fontSize: "2rem" }}
+            tabIndex={0}
+            role="button"
+            aria-expanded={activeDropdown === "discover" ? "true" : "false"}
           >
             <h4>Utforska</h4>
             <div
@@ -155,7 +167,7 @@ const NavMenu = ({
             </div>
           </div>
           {activeDropdown === "discover" && (
-            <ul className={styles.nestedMenuContainer}>
+            <ul className={styles.nestedMenuContainer} role="menu">
               <div className={styles.nestedMenu}>
                 <li>
                   <NavLink to="/utforska" activeclassname={styles.active}>
@@ -215,6 +227,9 @@ const NavMenu = ({
             onClick={() => toggleDropdown("gallery")}
             className={styles.dropdownToggle}
             style={{ fontSize: "2rem" }}
+            tabIndex={0}
+            role="button"
+            aria-expanded={activeDropdown === "gallery" ? "true" : "false"}
           >
             <h4>Galleri</h4>
             <div
@@ -230,7 +245,7 @@ const NavMenu = ({
             </div>
           </div>
           {activeDropdown === "gallery" && (
-            <ul className={styles.nestedMenuContainer}>
+            <ul className={styles.nestedMenuContainer} role="menu">
               <div className={styles.nestedMenu}>
                 <li>
                   <NavLink to="/galleri" activeclassname={styles.active}>

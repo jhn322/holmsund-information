@@ -54,6 +54,7 @@ const ActivityPageMain = () => {
       to={image.path}
       className={styles.gridItemLink}
       key={index}
+      aria-label="Länkar till aktiviteter sidor"
       onClick={() => {
         trackMainPagesClick("Grid Image", image.title, image.path);
       }}

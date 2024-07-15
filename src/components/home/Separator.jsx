@@ -27,7 +27,7 @@ const Separator = () => {
                   "https://x.com/search?q=%23holmsund&src=typeahead_click"
                 )
               }
-              aria-label="Share your experience on Twitter"
+              aria-label="Dela din upplevelse på Twitter"
             >
               <span className={styles.link}>Twitter,</span>
             </a>
@@ -41,7 +41,7 @@ const Separator = () => {
                   "https://www.instagram.com/explore/locations/c2142469/holmsund-sweden/?hl=en"
                 )
               }
-              aria-label="Share your experience on Instagram"
+              aria-label="Dela din upplevelse på Instagram"
             >
               <span className={styles.link}>Instagram</span>
             </a>
@@ -56,7 +56,7 @@ const Separator = () => {
                   "https://www.facebook.com/groups/415551751837063/?locale=sv_SE"
                 )
               }
-              aria-label="Share your experience on Facebook"
+              aria-label="Dela din upplevelse på Facebook"
             >
               <span className={styles.link}>Facebook</span>
             </a>

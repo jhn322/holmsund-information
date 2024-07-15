@@ -30,12 +30,12 @@ const CookiesCircleAddon = () => {
           <img
             src={circle2Image}
             className={`${styles.circleBack} ${styles2.circleBack}`}
-            alt="Orange Circle"
+            alt="Orange bild"
           />
           <img
             src={circle1Image}
             className={`${styles.circleFront} ${styles2.circleFront}`}
-            alt="Cookies Circle"
+            alt="Kakor bild"
           />
         </div>
       </aside>

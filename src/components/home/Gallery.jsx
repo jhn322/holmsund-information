@@ -148,7 +148,7 @@ const Gallery = () => {
                 }}
               >
                 {images.map((image, index) => (
-                  <figure key={index} className={styles.slide}>
+                  <figure key={index} tabIndex="0" className={styles.slide}>
                     <NavLink
                       to={image.link}
                       onClick={() =>

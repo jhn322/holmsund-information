@@ -21,7 +21,7 @@ const Footer = () => {
             to="/"
             className={styles.logoContainer}
             onClick={() => handleElementClick("Logo", window.location.href)}
-            aria-label="Home"
+            aria-label="Hem"
           >
             <img src={logo} alt="Logo" className={styles.logo} />
           </NavLink>
@@ -100,14 +100,14 @@ const Footer = () => {
             <NavLink
               to="/"
               onClick={() => handleElementClick("Hem", window.location.href)}
-              aria-label="Home"
+              aria-label="Hem"
             >
               <li>Hem</li>
             </NavLink>
             <NavLink
               to="/om-oss"
               onClick={() => handleElementClick("Om oss", window.location.href)}
-              aria-label="About us"
+              aria-label="Om oss"
             >
               <li>Om oss</li>
             </NavLink>
@@ -125,7 +125,7 @@ const Footer = () => {
               onClick={() =>
                 handleElementClick("Användarvillkor", window.location.href)
               }
-              aria-label="Terms of service"
+              aria-label="Anvädarvillkor"
             >
               <li>Användarvillkor</li>
             </NavLink>

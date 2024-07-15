@@ -50,6 +50,7 @@ const GalleryPageMain = () => {
     <NavLink
       to={image.path}
       className={styles.gridItemLink}
+      aria-label="Länkar till galleri sidor"
       key={index}
       onClick={() => {
         trackMainPagesClick("Grid Image", image.title, image.path);

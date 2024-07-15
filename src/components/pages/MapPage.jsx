@@ -40,6 +40,7 @@ const MapPage = () => {
             target="_blank"
             allowFullScreen=""
             loading="lazy"
+            aria-label="Karta över holmsund"
             referrerPolicy="no-referrer-when-downgrade"
             title="Karta av Holmsund"
           ></iframe>
@@ -49,6 +50,7 @@ const MapPage = () => {
             <a
               href="https://www.umea.se/download/18.2bd9ced91726ea4d7b4e0/1591359485936/Karta%20%C3%B6ver%20f%C3%B6rbudsomr%C3%A5de,%20Holmsund.pdf"
               target="_blank"
+              aria-label="Ladda ner karta holmsund förbunsområde"
               onClick={() =>
                 handleLinkClick(
                   "Karta över Holmsunds Förbundsområde",
@@ -70,6 +72,7 @@ const MapPage = () => {
               <a
                 href="https://www.umea.se/download/18.1b050b4218a5de7f11e1969/1694097655160/%C3%96versiktsplan%20f%C3%B6r%20Holmsund%20och%20Obbola%20%E2%80%93%20samr%C3%A5d.pdf"
                 target="_blank"
+                aria-label="Ladda ner översiktsplan holmsund"
                 onClick={() =>
                   handleLinkClick(
                     "Översiktsplan för Holmsund",
@@ -92,6 +95,7 @@ const MapPage = () => {
               <a
                 href="https://www.umea.se/download/18.670b9ed18a0718f46c1fe86/1692698499312/Plankarta%20F%C3%B6p%20Holmsund-Obbola%20%E2%80%93%20samr%C3%A5d.pdf"
                 target="_blank"
+                aria-label="Ladda ner holmsunds plankarta"
                 onClick={() =>
                   handleLinkClick(
                     "Holmsunds Plankarta",

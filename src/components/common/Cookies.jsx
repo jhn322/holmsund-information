@@ -44,7 +44,11 @@ const Cookies = () => {
           .
         </p>
         <div className={styles.acceptContainer}>
-          <button className={styles.accept} onClick={handleAccept}>
+          <button
+            className={styles.accept}
+            onClick={handleAccept}
+            aria-label="acceptera knapp"
+          >
             Jag samtycker
           </button>
         </div>

@@ -29,12 +29,12 @@ const AboutCircleAddon = () => {
           <img
             src={circle2Image}
             className={`${styles.circleBack} ${styles2.circleBack}`}
-            alt="Blue Circle"
+            alt="Blå cirkel"
           />
           <img
             src={circle1Image}
             className={`${styles.circleFront} ${styles2.circleFront}`}
-            alt="About Us Circle"
+            alt="Om oss bild"
           />
         </div>
       </aside>

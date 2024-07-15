@@ -13,13 +13,17 @@ const MissingPage = () => {
     <main className={styles.MissingContainer}>
       <img
         src={NotFoundImage}
-        alt="404 Not Found"
+        alt="404 sidan hittades inte"
         className={styles.MissingImage}
       />
       <p className={styles.MissingText}>
         Oops. Vi kunde inte hitta sidan du letade efter :(
       </p>
-      <button className={styles.MissingBtn} onClick={handleGoBackHome}>
+      <button
+        className={styles.MissingBtn}
+        aria-label="Hem knapp"
+        onClick={handleGoBackHome}
+      >
         <Link to="/" className={styles.LinkHome}>
           Gå tillbaka hem
         </Link>
