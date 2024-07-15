@@ -421,7 +421,7 @@ h5 {
 /* Tablet */
 @media only screen and (min-width: 549px) and (max-width: 1434px) {
   h4 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
 
   .openMenuContainer {
@@ -460,7 +460,7 @@ h5 {
 /* Desktop */
 @media only screen and (min-width: 1435px) {
   h4 {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
     font-weight: 500;
   }
 
