@@ -234,7 +234,7 @@ h5 {
   height: 78%;
   width: 100%;
   position: absolute;
-  bottom: 3rem;
+  bottom: 4.5rem;
   transition: transform 0.2s ease-in-out;
   overflow-y: scroll;
 }
@@ -421,6 +421,10 @@ h5 {
   .activityDropdownIcon,
   .galleryDropdownIcon {
     right: -2rem;
+  }
+
+  .openMenuContainer {
+    bottom: 5rem;
   }
 }
 
