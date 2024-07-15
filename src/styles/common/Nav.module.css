@@ -231,10 +231,10 @@ h5 {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 70%;
+  height: 78%;
   width: 100%;
   position: absolute;
-  bottom: 5.45rem;
+  bottom: -0.5rem;
   transition: transform 0.2s ease-in-out;
   overflow-y: scroll;
 }
@@ -431,7 +431,7 @@ h5 {
   }
 
   .openMenuContainer {
-    bottom: 10.5rem;
+    bottom: 4.58rem;
   }
 
   .logoNavContainer {
@@ -649,7 +649,7 @@ h5 {
   }
 
   .openMenuContainer {
-    bottom: 12.2rem;
+    bottom: 5.8rem;
   }
 
   .openMenu {
