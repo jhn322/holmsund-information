@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { RxCross2, RxPlus, RxMinus } from "react-icons/rx";
 import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
@@ -15,6 +15,19 @@ const NavMenu = ({
   isHoveredLogoNavMenu,
   setIsHoveredLogoNavMenu,
 }) => {
+  // iOS specific
+  useEffect(() => {
+    const handleResize = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div
       className={`${styles.menuWrapper} ${
