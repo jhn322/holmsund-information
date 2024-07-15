@@ -15,26 +15,21 @@ const Search = ({ onClose }) => {
   const [results, setResults] = useState([]);
   const [showResults, setShowResults] = useState(false);
   const [isSearchClosing, setIsSearchClosing] = useState(false);
-
   const fuseOptions = {
     keys: ["title", "categoryTitle", "path"],
     includeScore: true,
     threshold: 0.4,
   };
+
   const fuse = new Fuse(pages, fuseOptions);
 
-  const handleSearch = useCallback(
-    debounce((searchQuery) => {
-      const lowerCaseQuery = searchQuery.toLowerCase();
-      const searchResults = fuse.search(lowerCaseQuery);
-
-      const filteredResults = searchResults.map((result) => result.item);
-
-      setResults(filteredResults);
-      setShowResults(searchQuery.trim() !== "");
-    }, 300),
-    []
-  );
+  const handleSearch = useCallback((searchQuery) => {
+    const lowerCaseQuery = searchQuery.toLowerCase();
+    const searchResults = fuse.search(lowerCaseQuery);
+    const filteredResults = searchResults.map((result) => result.item);
+    setResults(filteredResults);
+    setShowResults(searchQuery.trim() !== "");
+  }, []);
 
   const handleResultClick = (e, path) => {
     e.preventDefault();
@@ -67,7 +62,6 @@ const Search = ({ onClose }) => {
         handleClose();
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -80,13 +74,11 @@ const Search = ({ onClose }) => {
     }
   }, []);
 
-  const handleInputFocus = () => {
+  const handleInputFocus = (e) => {
     if (query.trim() !== "") {
       setShowResults(true);
     }
-
     document.body.style.overflow = "hidden";
-
     if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
       document.body.style.position = "fixed";
       document.body.style.top = `-${window.scrollY}px`;
@@ -95,25 +87,10 @@ const Search = ({ onClose }) => {
     }
   };
 
-  // iOS specific
-  useEffect(() => {
-    const handleResize = () => {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty("--vh", `${vh}px`);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   const highlightMatch = (text, query) => {
     if (!query) return text;
-
     let startIndex = text.toLowerCase().indexOf(query.toLowerCase());
     if (startIndex === -1) return text;
-
     const endIndex = startIndex + query.length;
     return (
       <>
@@ -129,7 +106,9 @@ const Search = ({ onClose }) => {
     );
   };
 
-  const shuffleArray = (array) => array.sort(() => Math.random() - 0.5);
+  const shuffleArray = (array) => {
+    return array.sort(() => Math.random() - 0.5);
+  };
 
   const getSuggestions = (query) => {
     const suggestionFuse = new Fuse(pages, {
@@ -137,32 +116,29 @@ const Search = ({ onClose }) => {
       includeScore: true,
       threshold: 0.6,
     });
-
     let suggestions = suggestionFuse.search(query).slice(0, 3);
-
     if (suggestions.length === 0) {
       const shuffledPages = shuffleArray([...pages]);
       return shuffledPages.slice(0, 3);
     }
-
     return suggestions.map((result) => result.item);
   };
 
   return (
-    <section
+    <div
       ref={searchContainerRef}
       className={`${styles.menuWrapper} ${showResults ? styles.menuOpen : ""} ${
         isSearchClosing ? styles.menuClosing : ""
       }`}
       onClick={(e) => e.stopPropagation()}
     >
-      <header className={styles.container}>
-        <nav className={styles.socialIcons} aria-label="Social media links">
+      <div className={styles.container}>
+        <div className={styles.socialIcons}>
           <a
             href="https://github.com/jhn322"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub website"
+            alt="GitHub website"
           >
             <FaGithub className={styles.github} />
           </a>
@@ -170,7 +146,7 @@ const Search = ({ onClose }) => {
             href="https://x.com/search?q=%23holmsund&src=typeahead_click"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Twitter website"
+            alt="Twitter website"
           >
             <FaXTwitter className={styles.twitterX} />
           </a>
@@ -178,7 +154,7 @@ const Search = ({ onClose }) => {
             href="https://www.instagram.com/explore/locations/240089071/holmsund-vasterbottens-lan-sweden/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Instagram website"
+            alt="Instagram website"
           >
             <FaInstagram className={styles.instagram} />
           </a>
@@ -186,26 +162,23 @@ const Search = ({ onClose }) => {
             href="https://www.facebook.com/groups/415551751837063/?locale=sv_SE"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Facebook website"
+            alt="Facebook website"
           >
             <FaFacebook className={styles.facebook} />
           </a>
-        </nav>
-      </header>
+        </div>
+      </div>
       <div
         className={styles.closeCircle}
         onClick={(e) => {
           e.stopPropagation();
           handleClose();
         }}
-        role="button"
-        aria-label="Close search"
-        tabIndex={0}
       >
         <RxCross2 className={`${styles.closeIcon} ${styles.closeIconSize}`} />
       </div>
-      <main className={styles.openMenu}>
-        <form className={styles.searchForm} role="search">
+      <div className={styles.openMenu}>
+        <div className={styles.searchForm}>
           <RxMagnifyingGlass className={styles.searchIcon} />
           <input
             type="text"
@@ -227,19 +200,12 @@ const Search = ({ onClose }) => {
                 setQuery("");
                 setShowResults(false);
               }}
-              role="button"
-              aria-label="Clear search"
-              tabIndex={0}
             />
           )}
-        </form>
+        </div>
         {showResults && (
           <div className={styles.resultsContainer}>
-            <ul
-              className={styles.searchResults}
-              role="listbox"
-              aria-live="polite"
-            >
+            <ul className={styles.searchResults} role="listbox">
               {results.length > 0 ? (
                 results.map((page, index) => (
                   <li
@@ -247,7 +213,6 @@ const Search = ({ onClose }) => {
                     onClick={(e) => handleResultClick(e, page.path)}
                     role="option"
                     className={styles.suggestionItem}
-                    tabIndex={0}
                   >
                     <div>{highlightMatch(page.title, query)}</div>
                     <div className={styles.categoryTitle}>
@@ -258,7 +223,7 @@ const Search = ({ onClose }) => {
               ) : (
                 <li className={styles.noResults}>
                   {query.trim() !== "" && (
-                    <section>
+                    <>
                       <div className={styles.noMatch}>
                         <p>Inga resultat hittades 😞</p>
                         <div className={styles.maybe}>Menade du:</div>
@@ -269,7 +234,6 @@ const Search = ({ onClose }) => {
                             key={page.path}
                             onClick={(e) => handleResultClick(e, page.path)}
                             className={styles.suggestionItem}
-                            tabIndex={0}
                           >
                             <div>{highlightMatch(page.title, query)}</div>
                             <div className={styles.categoryTitle}>
@@ -278,15 +242,15 @@ const Search = ({ onClose }) => {
                           </li>
                         ))}
                       </ul>
-                    </section>
+                    </>
                   )}
                 </li>
               )}
             </ul>
           </div>
         )}
-      </main>
-    </section>
+      </div>
+    </div>
   );
 };
 
