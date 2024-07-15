@@ -135,15 +135,15 @@ const Search = ({ onClose }) => {
   };
 
   return (
-    <div
+    <section
       ref={searchContainerRef}
       className={`${styles.menuWrapper} ${showResults ? styles.menuOpen : ""} ${
         isSearchClosing ? styles.menuClosing : ""
       }`}
       onClick={(e) => e.stopPropagation()}
     >
-      <div className={styles.container}>
-        <div className={styles.socialIcons}>
+      <header className={styles.container}>
+        <nav className={styles.socialIcons}>
           <a
             href="https://github.com/jhn322"
             target="_blank"
@@ -176,8 +176,8 @@ const Search = ({ onClose }) => {
           >
             <FaFacebook className={styles.facebook} />
           </a>
-        </div>
-      </div>
+        </nav>
+      </header>
       <div
         className={styles.closeCircle}
         onClick={(e) => {
@@ -187,8 +187,8 @@ const Search = ({ onClose }) => {
       >
         <RxCross2 className={`${styles.closeIcon} ${styles.closeIconSize}`} />
       </div>
-      <div className={styles.openMenu}>
-        <div className={styles.searchForm}>
+      <main className={styles.openMenu}>
+        <form className={styles.searchForm}>
           <RxMagnifyingGlass className={styles.searchIcon} />
           <input
             type="text"
@@ -212,7 +212,7 @@ const Search = ({ onClose }) => {
               }}
             />
           )}
-        </div>
+        </form>
         {showResults && (
           <div className={styles.resultsContainer}>
             <ul className={styles.searchResults} role="listbox">
@@ -233,7 +233,7 @@ const Search = ({ onClose }) => {
               ) : (
                 <li className={styles.noResults}>
                   {query.trim() !== "" && (
-                    <>
+                    <section>
                       <div className={styles.noMatch}>
                         <p>Inga resultat hittades 😞</p>
                         <div className={styles.maybe}>Menade du:</div>
@@ -252,15 +252,15 @@ const Search = ({ onClose }) => {
                           </li>
                         ))}
                       </ul>
-                    </>
+                    </section>
                   )}
                 </li>
               )}
             </ul>
           </div>
         )}
-      </div>
-    </div>
+      </main>
+    </section>
   );
 };
 
