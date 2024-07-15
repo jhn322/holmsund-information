@@ -249,6 +249,7 @@ h5 {
   justify-content: center;
   width: 18rem;
   max-width: 25rem;
+  padding-bottom: 2rem;
 }
 
 .openMenu h4 {
@@ -349,12 +350,12 @@ h5 {
   margin: 0.25rem 0;
 }
 
-.nestedMenu li a {
-  font-size: 1.3rem;
-}
-
 .nestedMainContainer {
   margin: -1rem 0;
+}
+
+.nestedMainContainer h5 {
+  font-size: 1.25rem;
 }
 
 .nestedMainTitle {
@@ -374,9 +375,14 @@ h5 {
 .nestedItems {
   width: 14rem;
   overflow: auto;
-  max-height: 20vh;
+  max-height: 60vh;
   padding: 0.5rem;
+  line-height: 1.3rem;
   -webkit-overflow-scrolling: touch;
+}
+
+.nestedItems h5 {
+  font-size: 1.1rem;
 }
 
 /* Always show scrollbar for better UX */
@@ -432,13 +438,6 @@ h5 {
     display: inline;
   }
 
-  .discoverDropdownIcon,
-  .activityDropdownIcon,
-  .galleryDropdownIcon {
-    right: -7rem;
-    font-size: 1.5rem;
-  }
-
   .logoNavContainer {
     display: flex;
     justify-content: center;
@@ -454,6 +453,26 @@ h5 {
     height: auto;
     margin: auto;
     display: block;
+  }
+
+  .discoverDropdownIcon,
+  .activityDropdownIcon,
+  .galleryDropdownIcon {
+    right: -7rem;
+    font-size: 1.5rem;
+  }
+
+  .nestedMainContainer h5 {
+    font-size: 1.5rem;
+  }
+
+  .nestedItems {
+    width: 18rem;
+    line-height: 1.3rem;
+  }
+
+  .nestedItems h5 {
+    font-size: 1.3rem;
   }
 }
 
@@ -590,28 +609,6 @@ h5 {
     left: 45px;
   }
 
-  .openMenuContainer {
-    bottom: 15rem;
-  }
-
-  .openMenu {
-    width: 18rem;
-  }
-
-  .nestedMainContainer li a {
-    font-size: 1.3rem;
-  }
-
-  .nestedItems {
-    width: 18rem;
-    line-height: 1.2rem;
-  }
-
-  .nestedMainTitle {
-    width: 18rem;
-    margin: -0.5rem 0;
-  }
-
   .logoNavContainer {
     display: flex;
     justify-content: center;
@@ -649,5 +646,31 @@ h5 {
 
   .menuIcon {
     font-size: 3rem;
+  }
+
+  .openMenuContainer {
+    bottom: 17rem;
+  }
+
+  .openMenu {
+    width: 18rem;
+  }
+
+  .nestedMainContainer h5 {
+    font-size: 1.5rem;
+  }
+
+  .nestedItems {
+    width: 18rem;
+    line-height: 0.8rem;
+  }
+
+  .nestedItems h5 {
+    font-size: 1.3rem;
+  }
+
+  .nestedMainTitle {
+    width: 18rem;
+    margin: -0.5rem 0;
   }
 }
