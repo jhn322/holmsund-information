@@ -35,6 +35,7 @@ h5 {
   background-color: var(--nav-color);
   transition: transform 0.2s ease-in-out;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  overflow-y: scroll;
 }
 
 /* Transparent nav */
@@ -150,6 +151,7 @@ h5 {
   width: 100%;
   height: 100%;
   background-color: rgba(233, 68, 23, 0.85);
+  -webkit-overflow-scrolling: touch;
   z-index: 999;
   animation: slideOut 0.3s forwards;
 }
@@ -223,16 +225,28 @@ h5 {
   color: var(--accent-color);
 }
 
+.openMenuContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 70%;
+  width: 100%;
+  position: absolute;
+  bottom: 5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
 .openMenu {
   list-style: none;
   padding: 0;
   margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 13rem;
-  transition: color 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 18rem;
+  max-width: 25rem;
 }
 
 .openMenu h4 {
@@ -246,11 +260,22 @@ h5 {
 
 .openMenu li {
   margin-bottom: 1.25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .openMenu li a {
   text-decoration: none;
   font-size: 2rem;
+  display: block;
+  text-align: left;
+}
+
+.openMenu li > a {
+  width: 100%;
 }
 
 .closeIcon {
@@ -292,65 +317,62 @@ h5 {
   display: none;
 }
 
-.logoNavContainer {
+.logoNav {
   display: none;
-  position: absolute;
-  left: -38px;
-  top: -50px;
-  width: auto;
-  height: 2px;
 }
 
-.logoNav {
-  width: 14rem;
-  height: auto;
-  position: relative;
-  margin: auto;
-  top: 50%;
-  transform: translateY(-50%);
+.dropdownToggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
 }
 
 .discoverDropdownIcon,
 .activityDropdownIcon,
 .galleryDropdownIcon {
-  position: absolute;
-  right: -3rem;
-  transform: translateY(-80%);
+  position: static;
+  transform: none;
   font-size: 1.25rem;
   color: var(--white-text-color);
+  margin-left: 1rem;
 }
 
-.nestedMenuContainer li {
+.nestedMenu ul {
+  padding: 0;
+}
+
+.nestedMenu li {
   margin: 0.25rem 0;
 }
 
-.nestedMenuContainer li a {
+.nestedMenu li a {
   font-size: 1.3rem;
 }
 
-.nestedMenuMain {
+.nestedMainContainer {
+  margin: -0.5rem 0;
+}
+
+.nestedMainTitle {
   position: relative;
   box-sizing: border-box;
   border-radius: 10px;
   border: 2px solid transparent;
-  padding: 0.5rem;
   margin: 0;
   transition: border 0.3s;
 }
 
-.nestedMenuMain:hover {
+.nestedMainTitle:hover {
   border: 2px solid var(--hover-color);
 }
 
-.nestedMenu {
-  margin: -0.5rem 0;
-}
-
 .nestedItems {
-  margin-left: 1.6rem;
-  width: 12rem;
+  width: 14rem;
   overflow: auto;
-  max-height: 11.6rem;
+  max-height: 20vh;
+  padding: 0.5rem;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -366,6 +388,10 @@ h5 {
 
 /* Small phones */
 @media only screen and (max-width: 389px) {
+  .openMenu h4 {
+    font-size: 1.6rem;
+  }
+
   .navIcons {
     margin: 0 -4px;
   }
@@ -376,7 +402,11 @@ h5 {
     left: 18px;
   }
 
-  .logoNavContainer {
+  .openMenuContainer {
+    bottom: 7rem;
+  }
+
+  .logoNav {
     display: none;
   }
 
@@ -393,6 +423,10 @@ h5 {
     font-size: 2.5rem;
   }
 
+  .openMenuContainer {
+    bottom: 15rem;
+  }
+
   .logoNavContainer {
     display: inline;
   }
@@ -403,12 +437,29 @@ h5 {
     right: -7rem;
     font-size: 1.5rem;
   }
+
+  .logoNavContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 10;
+    margin: 0 auto;
+    margin-bottom: -2rem;
+  }
+
+  .logoNav {
+    width: 14rem;
+    height: auto;
+    margin: auto;
+    display: block;
+  }
 }
 
 /* Desktop */
 @media only screen and (min-width: 1435px) {
   h4 {
-    font-size: 3rem;
+    font-size: 2.6rem;
     font-weight: 500;
   }
 
@@ -538,25 +589,42 @@ h5 {
     left: 45px;
   }
 
+  .openMenuContainer {
+    bottom: 15rem;
+  }
+
   .openMenu {
-    top: 50%;
+    width: 18rem;
   }
 
-  .logoNavContainer {
-    display: inline;
-  }
-
-  .nestedMenu li a {
+  .nestedMainContainer li a {
     font-size: 1.3rem;
   }
 
   .nestedItems {
     width: 18rem;
-    max-height: 100%;
+    line-height: 1.2rem;
   }
 
-  .nestedMenuMain {
+  .nestedMainTitle {
     width: 18rem;
+  }
+
+  .logoNavContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 10;
+    margin: 0 auto;
+    margin-bottom: -2rem;
+  }
+
+  .logoNav {
+    width: 14rem;
+    height: auto;
+    margin: auto;
+    display: block;
   }
 
   .discoverDropdownIcon,

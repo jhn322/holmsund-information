@@ -1,10 +1,15 @@
-import React from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { setDocumentTitle } from "../utils/setDocumentTitle";
 import { trackMissingPageClick } from "../analytics/pages";
 import styles from "../../styles/pages/MissingPage.module.css";
 import NotFoundImage from "../../assets/other/404.png";
 
 const MissingPage = () => {
+  useEffect(() => {
+    setDocumentTitle("Sidan hittades inte");
+  }, []);
+
   const handleGoBackHome = () => {
     trackMissingPageClick("Button", "Go back home", "/");
   };

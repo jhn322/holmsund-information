@@ -1,8 +1,13 @@
-import React from "react";
+import { useEffect } from "react";
+import { setDocumentTitle } from "../utils/setDocumentTitle";
 import LayoutOther from "../layouts/LayoutOther";
 import styles from "../../styles/pages/TermsOfServicePage.module.css";
 
 const TermsOfServicePage = () => {
+  useEffect(() => {
+    setDocumentTitle("Användarvillkor");
+  }, []);
+
   return (
     <LayoutOther renderTermsCircleAddon={true} renderOtherAddon={true}>
       <div className={styles.container}>

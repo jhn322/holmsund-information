@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import LayoutPageMain from "../layouts/LayoutPageMain";
+import { setDocumentTitle } from "../utils/setDocumentTitle";
 import { trackMainPagesClick } from "../analytics/pages";
+import LayoutPageMain from "../layouts/LayoutPageMain";
 import styles from "../../styles/pages/AllPageMain.module.css";
 import header9 from "../../assets/header/header9.jpg";
 import header10 from "../../assets/header/header10.jpg";
@@ -23,6 +24,10 @@ const GalleryPageMain = () => {
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    setDocumentTitle("Galleri");
+  }, []);
 
   // Preload header images
   useEffect(() => {

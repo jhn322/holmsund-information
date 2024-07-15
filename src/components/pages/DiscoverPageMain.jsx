@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { setDocumentTitle } from "../utils/setDocumentTitle";
 import LayoutPageMain from "../layouts/LayoutPageMain";
 import { trackMainPagesClick } from "../analytics/pages";
 import styles from "../../styles/pages/AllPageMain.module.css";
@@ -32,6 +33,10 @@ const DiscoverPageMain = () => {
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    setDocumentTitle("Utforska");
+  }, []);
 
   // Preload header images
   useEffect(() => {

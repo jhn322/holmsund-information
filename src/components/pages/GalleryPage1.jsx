@@ -1,9 +1,14 @@
-import React from "react";
+import { useEffect } from "react";
+import { setDocumentTitle } from "../utils/setDocumentTitle";
 import LayoutPage from "../layouts/LayoutPage";
 import styles from "../../styles/pages/AllPage.module.css";
 import backgroundImage from "../../assets/gallery/galleryPage1.jpg";
 
 const GalleryPage1 = () => {
+  useEffect(() => {
+    setDocumentTitle("Galleri-1");
+  }, []);
+
   return (
     <LayoutPage
       headerTitle="Gallery Page 1"

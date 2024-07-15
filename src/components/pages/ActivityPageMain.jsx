@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { setDocumentTitle } from "../utils/setDocumentTitle";
 import { trackMainPagesClick } from "../analytics/pages";
 import LayoutPageMain from "../layouts/LayoutPageMain";
 import styles from "../../styles/pages/AllPageMain.module.css";
@@ -25,6 +26,10 @@ const ActivityPageMain = () => {
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    setDocumentTitle("Aktiviteter");
+  }, []);
 
   // Preload header images
   useEffect(() => {

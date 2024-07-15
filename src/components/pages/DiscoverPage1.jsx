@@ -1,9 +1,14 @@
-import React from "react";
+import { useEffect } from "react";
+import { setDocumentTitle } from "../utils/setDocumentTitle";
 import LayoutPage from "../layouts/LayoutPage";
 import styles from "../../styles/pages/AllPage.module.css";
 import backgroundImage from "../../assets/discover/discoverPage1.jpg";
 
 const DiscoverPage1 = () => {
+  useEffect(() => {
+    setDocumentTitle("Utforska-1");
+  }, []);
+
   return (
     <LayoutPage
       headerTitle="Discover Page 1"

@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import LayoutOther from "../layouts/LayoutOther";
+import { setDocumentTitle } from "../utils/setDocumentTitle";
 import { trackMapPageClick } from "../analytics/pages";
 import styles from "../../styles/pages/MapPage.module.css";
 
 const MapPage = () => {
+  useEffect(() => {
+    setDocumentTitle("Kartor");
+  }, []);
+
   // Google Analytics
   const handleIframeClick = () => {
     trackMapPageClick(

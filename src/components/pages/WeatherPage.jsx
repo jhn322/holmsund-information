@@ -1,12 +1,17 @@
 import { useState, useEffect } from "react";
-import LayoutMainPage from "../layouts/LayoutPageMain";
+import { setDocumentTitle } from "../utils/setDocumentTitle";
 import { trackWeatherPageClick } from "../analytics/pages";
+import LayoutMainPage from "../layouts/LayoutPageMain";
 import styles from "../../styles/pages/WeatherPage.module.css";
 
 const WeatherPage = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [forecastData, setForecastData] = useState(null);
   const [error, setError] = useState(null);
+
+  useEffect(() => {
+    setDocumentTitle("Väder");
+  }, []);
 
   useEffect(() => {
     const fetchWeatherData = async () => {

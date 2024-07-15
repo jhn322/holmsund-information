@@ -1,8 +1,13 @@
-import React from "react";
+import { useEffect } from "react";
+import { setDocumentTitle } from "../utils/setDocumentTitle";
 import LayoutOther from "../layouts/LayoutOther";
 import styles from "../../styles/pages/CookiesPage.module.css";
 
 const CookiesPage = () => {
+  useEffect(() => {
+    setDocumentTitle("Cookie policy");
+  }, []);
+
   return (
     <LayoutOther renderCookiesCircleAddon={true} renderOtherAddon={true}>
       <div className={styles.container}>
