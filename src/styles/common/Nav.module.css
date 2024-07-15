@@ -234,7 +234,7 @@ h5 {
   height: 70%;
   width: 100%;
   position: absolute;
-  bottom: 12rem;
+  bottom: 10rem;
   transition: transform 0.2s ease-in-out;
   overflow-y: scroll;
 }
