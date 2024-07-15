@@ -234,8 +234,9 @@ h5 {
   height: 70%;
   width: 100%;
   position: absolute;
-  bottom: 5rem;
+  bottom: 12rem;
   transition: transform 0.2s ease-in-out;
+  overflow-y: scroll;
 }
 
 .openMenu {
@@ -379,11 +380,13 @@ h5 {
 }
 
 /* Always show scrollbar for better UX */
-.nestedItems::-webkit-scrollbar {
+.nestedItems::-webkit-scrollbar,
+.openMenuContainer::-webkit-scrollbar {
   width: 4px;
 }
 
-.nestedItems::-webkit-scrollbar-thumb {
+.nestedItems::-webkit-scrollbar-thumb,
+.openMenuContainer::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
 }
@@ -402,10 +405,6 @@ h5 {
     height: 6.25rem;
     width: 10rem;
     left: 18px;
-  }
-
-  .openMenuContainer {
-    bottom: 7rem;
   }
 
   .logoNav {
