@@ -13,12 +13,31 @@ import galleryImage2 from "../../assets/gallery/gallery2.jpg";
 import galleryImage3 from "../../assets/gallery/gallery3.jpg";
 import galleryImage4 from "../../assets/gallery/gallery4.jpg";
 
-const ZoomedImage = ({ image, onClose }) => (
+const ZoomedImage = ({ images, currentIndex, onClose, onPrev, onNext }) => (
   <div className={styles.zoomImgOverlay} onClick={onClose}>
-    <div className={styles.zoomImgContainer}>
-      <img src={image.url} alt={image.text} className={styles.zoomImg} />
+    <div
+      className={styles.zoomImgContainer}
+      onClick={(e) => e.stopPropagation()}
+    >
+      <img
+        src={images[currentIndex].url}
+        alt={images[currentIndex].text}
+        className={styles.zoomImg}
+      />
       <button className={styles.close} onClick={onClose}>
         <RxCross2 className={styles.closeIcon} />
+      </button>
+      <button
+        className={`${styles.zoomBtn} ${styles.zoomPrev}`}
+        onClick={onPrev}
+      >
+        <RxChevronLeft className={styles.navIcon} />
+      </button>
+      <button
+        className={`${styles.zoomBtn} ${styles.zoomNext}`}
+        onClick={onNext}
+      >
+        <RxChevronRight className={styles.navIcon} />
       </button>
     </div>
   </div>
@@ -118,7 +137,7 @@ const SlideshowAddon = () => {
             <div className={styles.slideshowInner}>
               <div className={styles.counter}>
                 <span
-                  className={styles.prev}
+                  className={styles.counterPrev}
                   onClick={goToPrevSlide}
                   aria-label="Previous slide"
                   role="button"
@@ -129,7 +148,7 @@ const SlideshowAddon = () => {
                   {currentIndex + 1} av {images.length}
                 </span>
                 <span
-                  className={styles.next}
+                  className={styles.counterNext}
                   onClick={goToNextSlide}
                   aria-label="Next slide"
                   role="button"
@@ -150,7 +169,10 @@ const SlideshowAddon = () => {
                   <div key={index} className={styles.slideWrapper}>
                     <div
                       className={styles.zoomIcon}
-                      onClick={() => handleZoom(index)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleZoom(index);
+                      }}
                     >
                       <RxZoomIn />
                     </div>
@@ -158,6 +180,7 @@ const SlideshowAddon = () => {
                       tabIndex="0"
                       className={styles.slide}
                       aria-label={` ${image.text}`}
+                      onClick={() => handleZoom(index)}
                     >
                       <img src={image.url} alt={image.text} />
                     </figure>
@@ -189,8 +212,13 @@ const SlideshowAddon = () => {
       </div>
       {zoomedIndex !== null && (
         <ZoomedImage
-          image={images[zoomedIndex]}
+          images={images}
+          currentIndex={zoomedIndex}
           onClose={() => setZoomedIndex(null)}
+          onPrev={() =>
+            setZoomedIndex((prev) => (prev - 1 + images.length) % images.length)
+          }
+          onNext={() => setZoomedIndex((prev) => (prev + 1) % images.length)}
         />
       )}
     </section>
