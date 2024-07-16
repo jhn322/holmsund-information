@@ -99,11 +99,11 @@
 }
 
 .prev {
-  margin-right: 2px; /* Reduced margin to the right of the previous button */
+  margin-right: 2px;
 }
 
 .next {
-  margin-left: 2px; /* Reduced margin to the left of the next button */
+  margin-left: 2px;
 }
 
 .slider {
