@@ -55,8 +55,6 @@ const ActivityCarousel = () => {
   };
 
   const handlePrev = (event) => {
-    event.stopPropagation();
-    event.preventDefault();
     setActiveIndex((prevIndex) =>
       prevIndex === 0 ? slides.length - 1 : prevIndex - 1
     );
@@ -64,8 +62,6 @@ const ActivityCarousel = () => {
   };
 
   const handleNext = (event) => {
-    event.stopPropagation();
-    event.preventDefault();
     setActiveIndex((prevIndex) =>
       prevIndex === slides.length - 1 ? 0 : prevIndex + 1
     );
@@ -165,22 +161,6 @@ const ActivityCarousel = () => {
                     <div className={styles.slideCounter}>
                       {index + 1}/{slides.length}
                     </div>
-                    <nav className={styles.nav}>
-                      <span
-                        className={styles.navPrev}
-                        onClick={handlePrev}
-                        aria-label="Tidigare bild"
-                      >
-                        <RxChevronLeft strokeWidth={0.2} />
-                      </span>
-                      <span
-                        className={styles.navNext}
-                        onClick={handleNext}
-                        aria-label="Näst bild"
-                      >
-                        <RxChevronRight strokeWidth={0.2} />
-                      </span>
-                    </nav>
                   </div>
                 </a>
                 <figcaption className={styles.caption}>
