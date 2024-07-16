@@ -14,8 +14,10 @@
   --black-text-color: #0b0b0b;
   --grey-text-color: #4f4f4f;
   --nav-color: #e94417;
+  --nav-transparent: rgba(233, 68, 23, 0.85);
   --hover-color: #ffcd2a;
   --accent-color: #b6469f;
+  --accent-transparent: rgba(182, 70, 159, 0.85);
   --gallery-color: #4da7f5;
 
   /* Defaults */
@@ -32,6 +34,12 @@
   --white-text-color: #e2e2e2;
   --black-text-color: #e2e2e2;
   --grey-text-color: #979797;
+  --nav-color: #d13e16;
+  --nav-transparent: rgba(210, 63, 22, 0.85);
+  --hover-color: #e0b527;
+  --accent-color: #993c86;
+  --accent-transparent: rgba(157, 61, 137, 0.85);
+  --gallery-color: #4697de;
 }
 
 /* Link and List styles */
