@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { setDocumentTitle } from "../utils/setDocumentTitle";
 import LayoutPage from "../layouts/LayoutPage";
+import SlideshowAddon from "../addon/SlideshowAddon";
 import styles from "../../styles/pages/AllPage.module.css";
 import backgroundImage from "../../assets/gallery/galleryPage4.jpg";
 
@@ -50,6 +51,7 @@ const GalleryPage4 = () => {
           nostrum vel repellendus culpa tempore.
         </p>
       </article>
+      <SlideshowAddon />
     </LayoutPage>
   );
 };
