@@ -8,10 +8,12 @@ import {
   RxCross2,
 } from "react-icons/rx";
 import styles from "../../styles/addon/SlideshowAddon.module.css";
-import galleryImage1 from "../../assets/gallery/gallery1.jpg";
-import galleryImage2 from "../../assets/gallery/gallery2.jpg";
-import galleryImage3 from "../../assets/gallery/gallery3.jpg";
-import galleryImage4 from "../../assets/gallery/gallery4.jpg";
+import slideshowImg1 from "../../assets/slideshow/slideshow1.jpg";
+import slideshowImg2 from "../../assets/slideshow/slideshow2.jpg";
+import slideshowImg3 from "../../assets/slideshow/slideshow3.jpg";
+import slideshowImg4 from "../../assets/slideshow/slideshow4.jpg";
+import slideshowImg5 from "../../assets/slideshow/slideshow5.jpg";
+import slideshowImg6 from "../../assets/slideshow/slideshow6.jpg";
 
 const ZoomedImage = ({ images, currentIndex, onClose, onPrev, onNext }) => (
   <div className={styles.zoomImgOverlay} onClick={onClose}>
@@ -40,6 +42,17 @@ const ZoomedImage = ({ images, currentIndex, onClose, onPrev, onNext }) => (
         <RxChevronRight className={styles.navIcon} />
       </button>
     </div>
+    <div className={styles.dotPagination}>
+      {images.map((_, index) => (
+        <span
+          key={index}
+          className={`${styles.dot} ${
+            index === currentIndex ? styles.activeDot : ""
+          }`}
+          onClick={() => setCurrentIndex(index)}
+        />
+      ))}
+    </div>
   </div>
 );
 
@@ -53,19 +66,27 @@ const SlideshowAddon = () => {
 
   const images = [
     {
-      url: galleryImage1,
+      url: slideshowImg1,
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit facilis animi totam.",
     },
     {
-      url: galleryImage2,
+      url: slideshowImg2,
       text: "Lorem ipsum dolor sit ducimus vero numquam elit facilis animi totam.",
     },
     {
-      url: galleryImage3,
+      url: slideshowImg3,
       text: "Lorem ipsum dolor sit amet consectetur ullam vel illo voluptatum odit nihil.",
     },
     {
-      url: galleryImage4,
+      url: slideshowImg4,
+      text: "Lorem ipsum dolor sit amet consectetur qui quo iure, eos distinctio eaque.",
+    },
+    {
+      url: slideshowImg5,
+      text: "Lorem ipsum dolor sit amet consectetur qui quo iure, eos distinctio eaque.",
+    },
+    {
+      url: slideshowImg6,
       text: "Lorem ipsum dolor sit amet consectetur qui quo iure, eos distinctio eaque.",
     },
   ];
@@ -126,7 +147,7 @@ const SlideshowAddon = () => {
       <div className={styles.container}>
         <section>
           <div className={styles.title}>
-            <h3>Fler bilder</h3>
+            <h3>Mer bilder</h3>
           </div>
           <article
             className={styles.slideshowContainer}
@@ -197,9 +218,9 @@ const SlideshowAddon = () => {
                         onClick={toggleCaption}
                       >
                         {isCaptionExpanded ? (
-                          <RxChevronDown />
+                          <RxChevronDown strokeWidth={0.8} />
                         ) : (
-                          <RxChevronUp />
+                          <RxChevronUp strokeWidth={0.8} />
                         )}
                       </button>
                     </div>

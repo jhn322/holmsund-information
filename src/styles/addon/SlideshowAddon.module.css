@@ -13,7 +13,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 4rem;
+  padding: 2rem;
+  margin: 4rem 0;
   background-color: var(--background-color);
 }
 
@@ -30,21 +31,25 @@
   align-items: center;
   position: relative;
   padding-bottom: 2rem;
-  width: 20rem;
+  width: 100%;
+  max-width: 60rem;
 }
 
 .slideshowInner {
   position: relative;
   overflow: hidden;
-  width: 20rem;
+  width: 100%;
+  max-width: 60rem;
   height: 20rem;
   border-radius: 10px;
 }
 
 .slideshowInner img {
-  width: 20rem;
+  width: 100%;
+  max-width: 60rem;
   height: 20rem;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .counter {
@@ -75,13 +80,6 @@
   width: 1.25rem;
   height: 1.25rem;
   transition: transform 0.2s ease;
-}
-
-.counterPrev:hover,
-.counterNext:hover {
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.6);
-  transition: background 0.3s;
 }
 
 .counterPrev svg,
@@ -165,7 +163,7 @@
   flex-grow: 1;
   color: var(--white-text-color);
   text-align: left;
-  transition: max-height 0.2s ease-out, padding 0.2s ease-out;
+  transition: max-height 0.1s ease-in, padding 0.1s ease-in;
   overflow: hidden;
 }
 
@@ -176,6 +174,7 @@
 .expanded .caption {
   max-height: 100px;
   padding: 10px;
+  padding-bottom: 15px;
 }
 
 .collapsed .caption {
@@ -219,17 +218,18 @@
 }
 
 .zoomImgContainer {
-  position: relative;
-  max-width: 100%;
-  max-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 2rem 0;
 }
 
 .zoomImg {
   max-width: 100%;
-  max-height: 100%;
+  max-height: calc(100vh - 4rem);
   border-radius: 10px;
   object-fit: contain;
 }
@@ -238,19 +238,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 6px;
+  position: fixed;
+  top: 46%;
   right: 6px;
+  transform: translateY(-50%);
   color: var(--white-text-color);
   border: none;
   padding: 3px;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
+  z-index: 1001;
 }
 
 .close:hover {
-  background: none;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .closeIcon {
@@ -263,14 +265,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
   padding: 3px;
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  border: none;
   background: rgba(0, 0, 0, 0.5);
   color: var(--white-text-color);
   transition: background-color 0.3s;
@@ -293,32 +294,182 @@
   right: 6px;
 }
 
-/* Small Tablet */
-@media only screen and (min-width: 600px) and (max-width: 1099px) {
+.dotPagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(44, 44, 44, 0.5);
+  padding: 3px;
+  border-radius: 35px;
+  z-index: 10;
 }
 
-/* Desktop */
-@media only screen and (min-width: 1100px) and (max-width: 1299px) {
+.dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background-color: var(--white-text-color);
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.activeDot {
+  background-color: var(--hover-color);
+}
+
+/* Small Tablet */
+@media only screen and (min-width: 600px) and (max-width: 799px) {
   .slideshowContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    padding-bottom: 2rem;
-    width: 50rem;
+    height: 25rem;
   }
 
   .slideshowInner {
-    position: relative;
-    overflow: hidden;
-    width: 50rem;
-    height: 30rem;
-    border-radius: 10px;
+    height: 25rem;
   }
 
   .slideshowInner img {
-    width: 50rem;
+    height: 25rem;
+  }
+
+  .captionContainer {
+    margin-bottom: 2.2rem;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 800px) and (max-width: 1029px) {
+  .slideshowContainer {
     height: 30rem;
-    border-radius: 10px;
+  }
+
+  .slideshowInner {
+    height: 30rem;
+  }
+
+  .slideshowInner img {
+    height: 30rem;
+  }
+
+  .counter {
+    padding: 4px 6px;
+    font-size: 0.75rem;
+  }
+
+  .counter span {
+    font-size: 0.8rem;
+  }
+
+  .counterPrev,
+  .counterNext {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  .counterPrev svg,
+  .counterNext svg {
+    font-size: 1.8rem;
+  }
+
+  .zoomIcon {
+    font-size: 1.8rem;
+  }
+
+  .captionContainer {
+    margin-bottom: 2.2rem;
+  }
+
+  .caption p {
+    font-size: 0.9rem;
+  }
+
+  .captionToggle {
+    font-size: 1.4rem;
+  }
+
+  .closeIcon {
+    font-size: 2rem;
+  }
+
+  .navIcon {
+    font-size: 2rem;
+  }
+
+  .dot {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1030px) {
+  .slideshowContainer {
+    height: 40rem;
+  }
+
+  .slideshowInner {
+    height: 40rem;
+  }
+
+  .slideshowInner img {
+    height: 40rem;
+  }
+
+  .counter {
+    padding: 4px 6px;
+    font-size: 0.75rem;
+  }
+
+  .counter span {
+    font-size: 0.9rem;
+  }
+
+  .counterPrev,
+  .counterNext {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .counterPrev svg,
+  .counterNext svg {
+    font-size: 1.8rem;
+  }
+
+  .zoomIcon {
+    font-size: 1.8rem;
+  }
+
+  .captionContainer {
+    margin-bottom: 2.2rem;
+  }
+
+  .caption p {
+    font-size: 0.9rem;
+  }
+
+  .captionToggle {
+    font-size: 1.4rem;
+  }
+
+  .zoomImgContainer {
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  .closeIcon {
+    font-size: 2.25rem;
+  }
+
+  .navIcon {
+    font-size: 2.25rem;
+  }
+
+  .dot {
+    width: 0.9rem;
+    height: 0.9rem;
   }
 }
