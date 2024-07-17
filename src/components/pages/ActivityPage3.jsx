@@ -1,13 +1,69 @@
-import { useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { setDocumentTitle } from "../utils/setDocumentTitle";
 import LayoutPage from "../layouts/LayoutPage";
 import styles from "../../styles/pages/AllPage.module.css";
 import backgroundImage from "../../assets/activity/activityPage3.jpg";
 
+const AccordionItem = ({ title, content }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const contentRef = useRef(null);
+
+  return (
+    <div className={styles.accordionItem}>
+      <button
+        className={styles.accordionHeader}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {title}
+        <span
+          className={styles.accordionIcon}
+          style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0)" }}
+        >
+          +
+        </span>
+      </button>
+      <div
+        ref={contentRef}
+        className={`${styles.accordionContent} ${isOpen ? styles.open : ""}`}
+      >
+        <div className={styles.accordionContentInner}>{content}</div>
+      </div>
+    </div>
+  );
+};
+
 const ActivityPage3 = () => {
   useEffect(() => {
     setDocumentTitle("Aktiviteter-3");
   }, []);
+
+  const accordionData = [
+    {
+      title: "Den första frågan om denna aktivitet?",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos sunt explicabo aspernatur.",
+    },
+    {
+      title: "Den andra frågan om denna aktivitet?",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero minima inventore enim eveniet sunt explicabo aspernatur.",
+    },
+    {
+      title: "Den tredje frågan om denna aktivitet?",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero minima eveniet sunt explicabo aspernatur.",
+    },
+    {
+      title: "Den fjärde frågan om denna aktivitet?",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero enim eveniet sunt explicabo aspernatur.",
+    },
+    {
+      title: "Den femte frågan om denna aktivitet?",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero minima inventore enim eveniet sunt explicabo aspernatur. provident officiis voluptas iusto repellendus earum.",
+    },
+  ];
 
   return (
     <LayoutPage
@@ -49,6 +105,16 @@ const ActivityPage3 = () => {
           optio nesciunt quasi? Optio deleniti harum vero quibusdam aspernatur
           nostrum vel repellendus culpa tempore.
         </p>
+
+        <div className={styles.accordion}>
+          {accordionData.map((item, index) => (
+            <AccordionItem
+              key={index}
+              title={item.title}
+              content={item.content}
+            />
+          ))}
+        </div>
       </article>
     </LayoutPage>
   );

@@ -43,6 +43,7 @@ body {
   font-weight: 300;
 }
 
+/* Discover pages */
 .mapContainer {
   display: flex;
   justify-content: center;
@@ -66,6 +67,64 @@ body {
   height: 35rem;
   border-radius: 10px;
   max-width: 80rem;
+}
+
+/* Activity pages */
+.accordion {
+  width: 100%;
+  max-width: 36rem;
+  margin: 4rem auto;
+}
+
+.accordionItem {
+  border-bottom: 2px solid var(--grey-color);
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 400;
+  cursor: pointer;
+  color: var(--black-text-color);
+  background-color: var(--background-color);
+}
+
+.accordionHeader:hover {
+  background-color: transparent;
+}
+
+.accordionIcon {
+  font-size: 1.6rem;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.accordionIcon:hover {
+  color: var(--hover-color);
+}
+
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordionContent.open {
+  max-height: 62rem;
+  transition: max-height 0.3s ease-in;
+}
+
+.accordionContentInner {
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 10px 10px 0 0;
+  background-color: var(--grey-color);
 }
 
 /* Uncommon phone size */
@@ -98,6 +157,18 @@ body {
   .text {
     font-size: 1.3rem;
   }
+
+  .accordionHeader {
+    font-size: 1.2rem;
+  }
+
+  .accordionIcon {
+    font-size: 1.8rem;
+  }
+
+  .accordionContent {
+    font-size: 1.1rem;
+  }
 }
 
 /* Large Desktop */
@@ -113,5 +184,17 @@ body {
 
   .googleMaps iframe {
     height: 55rem;
+  }
+
+  .accordionHeader {
+    font-size: 1.2rem;
+  }
+
+  .accordionIcon {
+    font-size: 1.8rem;
+  }
+
+  .accordionContent {
+    font-size: 1.1rem;
   }
 }
