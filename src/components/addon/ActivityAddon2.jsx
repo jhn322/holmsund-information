@@ -206,8 +206,9 @@ const Carousel = () => {
                     <h3 className={styles.captionTitle}>{slide.title}</h3>
                   </a>
                   <p>{truncateDescription(slide.description, 25)}</p>
-                  <div className={styles.linkContainer}>
+                  <aside className={styles.linkContainer}>
                     <a
+                      className={styles.captionLink}
                       href={slide.link}
                       onClick={(e) => {
                         if (currentPath === slide.link) {
@@ -224,7 +225,7 @@ const Carousel = () => {
                     >
                       Läs Mer
                     </a>
-                  </div>
+                  </aside>
                   <div className={styles.arrowContainer}>
                     <a
                       href={slide.link}

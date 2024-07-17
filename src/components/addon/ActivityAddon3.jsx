@@ -210,7 +210,7 @@ const Carousel = () => {
                     </h3>
                   </a>
                   <p>{truncateDescription(slide.description, 25)}</p>
-                  <div className={styles.linkContainer}>
+                  <aside className={styles.linkContainer}>
                     <a
                       className={`${styles.captionLink} ${styles2.captionLink}`}
                       href={slide.link}
@@ -229,7 +229,7 @@ const Carousel = () => {
                     >
                       Läs Mer
                     </a>
-                  </div>
+                  </aside>
                   <div
                     className={`${styles.arrowContainer} ${styles2.arrowContainer}`}
                   >
