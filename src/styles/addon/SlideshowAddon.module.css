@@ -36,21 +36,21 @@
   position: relative;
   padding-bottom: 2rem;
   width: 100%;
-  max-width: 100%;
+  max-width: 60rem;
 }
 
 .slideshowInner {
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-width: 100%;
+  max-width: 60rem;
   height: 20rem;
   border-radius: 10px;
 }
 
 .slideshowInner img {
   width: 100%;
-  max-width: 100%;
+  max-width: 60rem;
   height: 20rem;
   border-radius: 10px;
   object-fit: cover;
@@ -330,17 +330,14 @@
 /* Small Tablet */
 @media only screen and (min-width: 600px) and (max-width: 799px) {
   .slideshowContainer {
-    max-width: 60rem;
     height: 25rem;
   }
 
   .slideshowInner {
-    max-width: 60rem;
     height: 25rem;
   }
 
   .slideshowInner img {
-    max-width: 60rem;
     height: 25rem;
   }
 
@@ -352,17 +349,14 @@
 /* Tablet */
 @media only screen and (min-width: 800px) and (max-width: 1029px) {
   .slideshowContainer {
-    max-width: 60rem;
     height: 30rem;
   }
 
   .slideshowInner {
-    max-width: 60rem;
     height: 30rem;
   }
 
   .slideshowInner img {
-    max-width: 60rem;
     height: 30rem;
   }
 
@@ -419,17 +413,14 @@
 /* Desktop */
 @media only screen and (min-width: 1030px) {
   .slideshowContainer {
-    max-width: 60rem;
     height: 40rem;
   }
 
   .slideshowInner {
-    max-width: 60rem;
     height: 40rem;
   }
 
   .slideshowInner img {
-    max-width: 60rem;
     height: 40rem;
   }
 
