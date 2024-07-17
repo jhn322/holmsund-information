@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { activityAccordion1 } from "../data/ActivityPageSet";
 import { setDocumentTitle } from "../utils/setDocumentTitle";
 import LayoutPage from "../layouts/LayoutPage";
 import styles from "../../styles/pages/AllPage.module.css";
@@ -9,7 +10,7 @@ const AccordionItem = ({ title, content }) => {
   const contentRef = useRef(null);
 
   return (
-    <div className={styles.accordionItem}>
+    <article className={styles.accordionItem}>
       <button
         className={styles.accordionHeader}
         onClick={() => setIsOpen(!isOpen)}
@@ -28,7 +29,7 @@ const AccordionItem = ({ title, content }) => {
       >
         <div className={styles.accordionContentInner}>{content}</div>
       </div>
-    </div>
+    </article>
   );
 };
 
@@ -36,34 +37,6 @@ const ActivityPage1 = () => {
   useEffect(() => {
     setDocumentTitle("Aktiviteter-1");
   }, []);
-
-  const accordionData = [
-    {
-      title: "Den första frågan om denna aktivitet?",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos sunt explicabo aspernatur.",
-    },
-    {
-      title: "Den andra frågan om denna aktivitet?",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero minima inventore enim eveniet sunt explicabo aspernatur.",
-    },
-    {
-      title: "Den tredje frågan om denna aktivitet?",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero minima eveniet sunt explicabo aspernatur.",
-    },
-    {
-      title: "Den fjärde frågan om denna aktivitet?",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero enim eveniet sunt explicabo aspernatur.",
-    },
-    {
-      title: "Den femte frågan om denna aktivitet?",
-      content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero minima inventore enim eveniet sunt explicabo aspernatur. provident officiis voluptas iusto repellendus earum.",
-    },
-  ];
 
   return (
     <LayoutPage
@@ -106,15 +79,15 @@ const ActivityPage1 = () => {
           nostrum vel repellendus culpa tempore.
         </p>
 
-        <div className={styles.accordion}>
-          {accordionData.map((item, index) => (
+        <section className={styles.accordion}>
+          {activityAccordion1.map((item, index) => (
             <AccordionItem
               key={index}
               title={item.title}
               content={item.content}
             />
           ))}
-        </div>
+        </section>
       </article>
     </LayoutPage>
   );
