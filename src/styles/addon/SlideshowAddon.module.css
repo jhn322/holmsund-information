@@ -330,14 +330,17 @@
 /* Small Tablet */
 @media only screen and (min-width: 600px) and (max-width: 799px) {
   .slideshowContainer {
+    max-width: 60rem;
     height: 25rem;
   }
 
   .slideshowInner {
+    max-width: 60rem;
     height: 25rem;
   }
 
   .slideshowInner img {
+    max-width: 60rem;
     height: 25rem;
   }
 
@@ -349,14 +352,17 @@
 /* Tablet */
 @media only screen and (min-width: 800px) and (max-width: 1029px) {
   .slideshowContainer {
+    max-width: 60rem;
     height: 30rem;
   }
 
   .slideshowInner {
+    max-width: 60rem;
     height: 30rem;
   }
 
   .slideshowInner img {
+    max-width: 60rem;
     height: 30rem;
   }
 
