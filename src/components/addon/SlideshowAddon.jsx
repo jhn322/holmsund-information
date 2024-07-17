@@ -19,6 +19,7 @@ const ZoomedImage = ({ images, currentIndex, onClose, onPrev, onNext }) => (
         src={images[currentIndex].url}
         alt={images[currentIndex].text}
         className={styles.zoomImg}
+        onClick={onClose}
       />
       <button className={styles.close} onClick={onClose}>
         <RxCross2 className={styles.closeIcon} />

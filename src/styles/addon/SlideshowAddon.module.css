@@ -55,7 +55,7 @@
   height: 20rem;
   border-radius: 10px;
   object-fit: cover;
-  cursor: pointer;
+  cursor: zoom-in;
 }
 
 .counter {
@@ -222,6 +222,7 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  cursor: zoom-out;
 }
 
 .zoomImgContainer {
