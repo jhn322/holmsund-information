@@ -22,25 +22,25 @@ import discoverImage16 from "../../assets/gallery/gallery4.jpg";
 export const discoverAddonSet1 = [
   {
     image: discoverImage1,
-    title: "Nästa ställe",
+    title: "Utforska 1",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-1",
   },
   {
     image: discoverImage2,
-    title: "Någon annanstans",
+    title: "Utforska 2",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-2",
   },
   {
     image: discoverImage3,
-    title: "Ett spännande ställe",
+    title: "Utforska 3",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-3",
   },
   {
     image: discoverImage4,
-    title: "Sista stället",
+    title: "Utforska 4",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-4",
   },
@@ -49,25 +49,25 @@ export const discoverAddonSet1 = [
 export const discoverAddonSet2 = [
   {
     image: discoverImage5,
-    title: "Nästa ställe",
+    title: "Utforska 5",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-5",
   },
   {
     image: discoverImage6,
-    title: "Någon annanstans",
+    title: "Utforska 6",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-6",
   },
   {
     image: discoverImage7,
-    title: "Ett spännande ställe",
+    title: "Utforska 7",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-7",
   },
   {
     image: discoverImage8,
-    title: "Sista stället",
+    title: "Utforska 8",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-8",
   },
@@ -76,25 +76,25 @@ export const discoverAddonSet2 = [
 export const discoverAddonSet3 = [
   {
     image: discoverImage9,
-    title: "Nästa ställe",
+    title: "Aktiviteter 1",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/aktiviteter-1",
   },
   {
     image: discoverImage10,
-    title: "Någon annanstans",
+    title: "Aktiviteter 2",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/aktiviteter-2",
   },
   {
     image: discoverImage11,
-    title: "Ett spännande ställe",
+    title: "Aktiviteter 3",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/aktiviteter-3",
   },
   {
     image: discoverImage12,
-    title: "Sista stället",
+    title: "Aktiviteter 4",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/aktiviteter-4",
   },
@@ -103,25 +103,25 @@ export const discoverAddonSet3 = [
 export const discoverAddonSet4 = [
   {
     image: discoverImage13,
-    title: "Nästa ställe",
+    title: "Galleri 1",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/galleri-1",
   },
   {
     image: discoverImage14,
-    title: "Någon annanstans",
+    title: "Galleri 2",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/galleri-2",
   },
   {
     image: discoverImage15,
-    title: "Ett spännande ställe",
+    title: "Galleri 3",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/galleri-3",
   },
   {
     image: discoverImage16,
-    title: "Sista stället",
+    title: "Galleri 4",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/galleri-4",
   },

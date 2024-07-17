@@ -6,25 +6,25 @@ import galleryImage4 from "../../assets/gallery/gallery4.jpg";
 export const gallerySet = [
   {
     url: galleryImage1,
-    title: "Badställe",
+    title: "Galleri 1",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
     link: "/galleri-1",
   },
   {
     url: galleryImage2,
-    title: "Skog",
+    title: "Galleri 2",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
     link: "/galleri-2",
   },
   {
     url: galleryImage3,
-    title: "Vattentorn",
+    title: "Galleri 3",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
     link: "/galleri-3",
   },
   {
     url: galleryImage4,
-    title: "Storsjöskolan",
+    title: "Galleri 4",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
     link: "/galleri-4",
   },

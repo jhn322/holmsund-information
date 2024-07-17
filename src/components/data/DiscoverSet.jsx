@@ -12,25 +12,25 @@ import discoverMoreImage4 from "../../assets/discover/discoverInspired4.jpg";
 export const discoverData = [
   {
     image: discoverImage1,
-    title: "Nästa ställe",
+    title: "Utforska 1",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-1",
   },
   {
     image: discoverImage2,
-    title: "Någon annanstans",
+    title: "Utforska 2",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-2",
   },
   {
     image: discoverImage3,
-    title: "Ett spännande ställe",
+    title: "Utforska 3",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-3",
   },
   {
     image: discoverImage4,
-    title: "Sista stället",
+    title: "Utforska 4",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-4",
   },
@@ -39,25 +39,25 @@ export const discoverData = [
 export const insipiredData = [
   {
     image: discoverMoreImage1,
-    title: "Nästa ställe",
+    title: "Utforska 5",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-5",
   },
   {
     image: discoverMoreImage2,
-    title: "Någon annanstans",
+    title: "Utforska 6",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-6",
   },
   {
     image: discoverMoreImage3,
-    title: "Ett spännande ställe",
+    title: "Utforska 7",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-7",
   },
   {
     image: discoverMoreImage4,
-    title: "Sista stället",
+    title: "Utforska 8",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-8",
   },

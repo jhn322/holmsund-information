@@ -22,25 +22,25 @@ import galleryImage16 from "../../assets/gallery/gallery4.jpg";
 export const galleryAddonSet1 = [
   {
     url: galleryImage1,
-    title: "Badställe",
+    title: "Utforska 1",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
     link: "/utforska-1",
   },
   {
     url: galleryImage2,
-    title: "Skog",
+    title: "Utforska 2",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
     link: "/utforska-2",
   },
   {
     url: galleryImage3,
-    title: "Vattentorn",
+    title: "Utforska 3",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
     link: "/utforska-3",
   },
   {
     url: galleryImage4,
-    title: "Storsjöskolan",
+    title: "Utforska 4",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
     link: "/utforska-4",
   },
@@ -49,25 +49,25 @@ export const galleryAddonSet1 = [
 export const galleryAddonSet2 = [
   {
     url: galleryImage5,
-    title: "Badställe",
+    title: "Utforska 5",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
     link: "/utforska-5",
   },
   {
     url: galleryImage6,
-    title: "Skog",
+    title: "Utforska 6",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
     link: "/utforska-6",
   },
   {
     url: galleryImage7,
-    title: "Vattentorn",
+    title: "Utforska 7",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
     link: "/utforska-7",
   },
   {
     url: galleryImage8,
-    title: "Storsjöskolan",
+    title: "Utforska 8",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
     link: "/utforska-8",
   },
@@ -76,25 +76,25 @@ export const galleryAddonSet2 = [
 export const galleryAddonSet3 = [
   {
     url: galleryImage9,
-    title: "Badställe",
+    title: "Aktiviteter 1",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
     link: "/aktiviteter-1",
   },
   {
     url: galleryImage10,
-    title: "Skog",
+    title: "Aktiviteter 2",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
     link: "/aktiviteter-2",
   },
   {
     url: galleryImage11,
-    title: "Vattentorn",
+    title: "Aktiviteter 3",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
     link: "/aktiviteter-3",
   },
   {
     url: galleryImage12,
-    title: "Storsjöskolan",
+    title: "Aktiviteter 4",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
     link: "/aktiviteter-4",
   },
@@ -103,25 +103,25 @@ export const galleryAddonSet3 = [
 export const galleryAddonSet4 = [
   {
     url: galleryImage13,
-    title: "Badställe",
+    title: "Galleri 1",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
     link: "/galleri-1",
   },
   {
     url: galleryImage14,
-    title: "Skog",
+    title: "Galleri 2",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
     link: "/galleri-2",
   },
   {
     url: galleryImage15,
-    title: "Vattentorn",
+    title: "Galleri 3",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
     link: "/galleri-3",
   },
   {
     url: galleryImage16,
-    title: "Storsjöskolan",
+    title: "Galleri 4",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
     link: "/galleri-4",
   },
