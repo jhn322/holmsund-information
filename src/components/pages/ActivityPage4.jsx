@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { activityAccordion4 } from "../data/ActivityPageSet";
 import { setDocumentTitle } from "../utils/setDocumentTitle";
 import LayoutPage from "../layouts/LayoutPage";
+import { RxPlus, RxMinus } from "react-icons/rx";
 import styles from "../../styles/pages/AllPage.module.css";
 import backgroundImage from "../../assets/activity/activityPage4.jpg";
 
@@ -17,10 +18,13 @@ const AccordionItem = ({ title, content }) => {
       >
         {title}
         <span
-          className={styles.accordionIcon}
-          style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0)" }}
+          className={`${styles.accordionIcon} ${isOpen ? styles.openIcon : ""}`}
         >
-          +
+          {isOpen ? (
+            <RxMinus strokeWidth={0.8} className={styles.icon} />
+          ) : (
+            <RxPlus strokeWidth={0.8} className={styles.icon} />
+          )}
         </span>
       </button>
       <div

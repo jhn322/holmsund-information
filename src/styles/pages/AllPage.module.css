@@ -100,13 +100,19 @@ body {
 }
 
 .accordionIcon {
-  font-size: 1.6rem;
-  font-weight: 400;
-  transition: color 0.3s;
+  transition: transform 0.2s ease-in-out, color 0.3s;
+}
+
+.accordionIcon.openIcon {
+  transform: rotate(180deg);
 }
 
 .accordionIcon:hover {
   color: var(--hover-color);
+}
+
+.icon {
+  font-size: 1.2rem;
 }
 
 .accordionContent {
@@ -190,8 +196,8 @@ body {
     font-size: 1.2rem;
   }
 
-  .accordionIcon {
-    font-size: 1.8rem;
+  .icon {
+    font-size: 1.3rem;
   }
 
   .accordionContent {
