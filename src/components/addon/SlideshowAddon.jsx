@@ -8,12 +8,6 @@ import {
   RxCross2,
 } from "react-icons/rx";
 import styles from "../../styles/addon/SlideshowAddon.module.css";
-import slideshowImg1 from "../../assets/slideshow/slideshow1.jpg";
-import slideshowImg2 from "../../assets/slideshow/slideshow2.jpg";
-import slideshowImg3 from "../../assets/slideshow/slideshow3.jpg";
-import slideshowImg4 from "../../assets/slideshow/slideshow4.jpg";
-import slideshowImg5 from "../../assets/slideshow/slideshow5.jpg";
-import slideshowImg6 from "../../assets/slideshow/slideshow6.jpg";
 
 const ZoomedImage = ({ images, currentIndex, onClose, onPrev, onNext }) => (
   <div className={styles.zoomImgOverlay} onClick={onClose}>
@@ -56,40 +50,13 @@ const ZoomedImage = ({ images, currentIndex, onClose, onPrev, onNext }) => (
   </div>
 );
 
-const SlideshowAddon = () => {
+const SlideshowAddon = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [deltaX, setDeltaX] = useState(0);
   const [isSwiping, setIsSwiping] = useState(false);
   const [zoomedIndex, setZoomedIndex] = useState(null);
   const [isCaptionExpanded, setIsCaptionExpanded] = useState(true);
   const initialTouch = useRef({ x: 0, y: 0 });
-
-  const images = [
-    {
-      url: slideshowImg1,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit facilis animi totam.",
-    },
-    {
-      url: slideshowImg2,
-      text: "Lorem ipsum dolor sit ducimus vero numquam elit facilis animi totam.",
-    },
-    {
-      url: slideshowImg3,
-      text: "Lorem ipsum dolor sit amet consectetur ullam vel illo voluptatum odit nihil.",
-    },
-    {
-      url: slideshowImg4,
-      text: "Lorem ipsum dolor sit amet consectetur qui quo iure, eos distinctio eaque.",
-    },
-    {
-      url: slideshowImg5,
-      text: "Lorem ipsum dolor sit amet consectetur qui quo iure, eos distinctio eaque.",
-    },
-    {
-      url: slideshowImg6,
-      text: "Lorem ipsum dolor sit amet consectetur qui quo iure, eos distinctio eaque.",
-    },
-  ];
 
   const goToPrevSlide = () => {
     const newIndex = (currentIndex - 1 + images.length) % images.length;
