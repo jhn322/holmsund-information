@@ -82,7 +82,6 @@ const SlideshowAddon = ({ images }) => {
     const deltaY = touch.clientY - initialTouch.current.y;
 
     if (Math.abs(deltaX) > Math.abs(deltaY)) {
-      event.preventDefault();
       setIsSwiping(true);
       setDeltaX(deltaX);
     } else {
