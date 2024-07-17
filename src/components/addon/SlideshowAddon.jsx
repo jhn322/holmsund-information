@@ -21,18 +21,24 @@ const ZoomedImage = ({ images, currentIndex, onClose, onPrev, onNext }) => (
         className={styles.zoomImg}
         onClick={onClose}
       />
-      <button className={styles.close} onClick={onClose}>
+      <button
+        className={styles.close}
+        onClick={onClose}
+        aria-label="Stäng zoom läge"
+      >
         <RxCross2 className={styles.closeIcon} />
       </button>
       <button
         className={`${styles.zoomBtn} ${styles.zoomPrev}`}
         onClick={onPrev}
+        aria-label="Tidigare bild"
       >
         <RxChevronLeft className={styles.navIcon} />
       </button>
       <button
         className={`${styles.zoomBtn} ${styles.zoomNext}`}
         onClick={onNext}
+        aria-label="Nästa bild"
       >
         <RxChevronRight className={styles.navIcon} />
       </button>
@@ -45,6 +51,7 @@ const ZoomedImage = ({ images, currentIndex, onClose, onPrev, onNext }) => (
             index === currentIndex ? styles.activeDot : ""
           }`}
           onClick={() => setCurrentIndex(index)}
+          aria-label={`Gå till bild ${index + 1}`}
         />
       ))}
     </div>
@@ -113,10 +120,10 @@ const SlideshowAddon = ({ images }) => {
   return (
     <section>
       <div className={styles.container}>
-        <section>
-          <div className={styles.title}>
-            <h3>Mer bilder</h3>
-          </div>
+        <header className={styles.title}>
+          <h3>Mer bilder</h3>
+        </header>
+        <main>
           <article
             className={styles.slideshowContainer}
             onTouchStart={handleTouchStart}
@@ -129,7 +136,6 @@ const SlideshowAddon = ({ images }) => {
                   className={styles.counterPrev}
                   onClick={goToPrevSlide}
                   aria-label="Previous slide"
-                  role="button"
                 >
                   <RxChevronLeft strokeWidth={0.8} />
                 </span>
@@ -140,7 +146,6 @@ const SlideshowAddon = ({ images }) => {
                   className={styles.counterNext}
                   onClick={goToNextSlide}
                   aria-label="Next slide"
-                  role="button"
                 >
                   <RxChevronRight strokeWidth={0.8} />
                 </span>
@@ -162,13 +167,14 @@ const SlideshowAddon = ({ images }) => {
                         e.stopPropagation();
                         handleZoom(index);
                       }}
+                      aria-label={`Zoom image ${index + 1}`}
                     >
                       <RxZoomIn />
                     </div>
                     <figure
                       tabIndex="0"
                       className={styles.slide}
-                      aria-label={` ${image.text}`}
+                      aria-label={image.text}
                       onClick={() => handleZoom(index)}
                     >
                       <img src={image.url} alt={image.text} />
@@ -178,12 +184,13 @@ const SlideshowAddon = ({ images }) => {
                         isCaptionExpanded ? styles.expanded : styles.collapsed
                       }`}
                     >
-                      <div className={styles.caption}>
+                      <figcaption className={styles.caption}>
                         <p>{image.text}</p>
-                      </div>
+                      </figcaption>
                       <button
                         className={styles.captionToggle}
                         onClick={toggleCaption}
+                        aria-label="Visa & göm caption"
                       >
                         {isCaptionExpanded ? (
                           <RxChevronDown strokeWidth={0.8} />
@@ -197,7 +204,7 @@ const SlideshowAddon = ({ images }) => {
               </div>
             </div>
           </article>
-        </section>
+        </main>
       </div>
       {zoomedIndex !== null && (
         <ZoomedImage
