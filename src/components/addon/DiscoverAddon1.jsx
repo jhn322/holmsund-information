@@ -1,39 +1,8 @@
 import { useRef, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { discoverAddonSet1 } from "../data/DiscoverAddonSet";
 import { trackDiscoverButtonClick } from "../analytics/addon";
 import styles from "../../styles/home/Discover.module.css";
-import discoverImage1 from "../../assets/discover/discover1.jpg";
-import discoverImage2 from "../../assets/discover/discover2.jpg";
-import discoverImage3 from "../../assets/discover/discover3.jpg";
-import discoverImage4 from "../../assets/discover/discover4.jpg";
-
-// Card Array with NavLinks
-const cardData = [
-  {
-    image: discoverImage1,
-    title: "Nästa ställe",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
-    link: "/utforska-1",
-  },
-  {
-    image: discoverImage2,
-    title: "Någon annanstans",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
-    link: "/utforska-2",
-  },
-  {
-    image: discoverImage3,
-    title: "Ett spännande ställe",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
-    link: "/utforska-3",
-  },
-  {
-    image: discoverImage4,
-    title: "Sista stället",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
-    link: "/utforska-4",
-  },
-];
 
 const DiscoverAddon1 = ({ title }) => {
   const discoverContainerRef = useRef(null);
@@ -42,7 +11,7 @@ const DiscoverAddon1 = ({ title }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentPath, setCurrentPath] = useState("");
   const [overlayStates, setOverlayStates] = useState(
-    Array(cardData.length).fill(false)
+    Array(discoverAddonSet1.length).fill(false)
   );
   const [currentPathIndex, setCurrentPathIndex] = useState(-1);
 
@@ -107,9 +76,11 @@ const DiscoverAddon1 = ({ title }) => {
   }, []);
 
   useEffect(() => {
-    const index = cardData.findIndex((card) => card.link === currentPath);
+    const index = discoverAddonSet1.findIndex(
+      (card) => card.link === currentPath
+    );
     setCurrentPathIndex(index);
-  }, [currentPath, cardData]);
+  }, [currentPath, discoverAddonSet1]);
 
   const handleHover = (index, hovered) => {
     setIsHovered(hovered);
@@ -132,7 +103,7 @@ const DiscoverAddon1 = ({ title }) => {
             <h2>{title}</h2>
           </header>
           <section className={styles.discoverCardContainer}>
-            {cardData.map((card, index) => (
+            {discoverAddonSet1.map((card, index) => (
               <article
                 key={index}
                 className={`${styles.discoverCard} ${

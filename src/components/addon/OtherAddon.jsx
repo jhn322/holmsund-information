@@ -1,33 +1,9 @@
 import { useRef, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { otherAddonSet } from "../data/OtherAddonSet";
 import { trackOtherAddonElementClick } from "../analytics/addon";
 import styles from "../../styles/home/Discover.module.css";
 import styles2 from "../../styles/addon/OtherAddon.module.css";
-import otherImage1 from "../../assets/other/aboutusCircle.jpg";
-import otherImage2 from "../../assets/other/cookiesCircle.jpg";
-import otherImage3 from "../../assets/other/termsofserviceCircle.jpg";
-
-// Card Array with NavLinks
-const cardData = [
-  {
-    image: otherImage1,
-    title: "Om Oss",
-    text: "Välkommen till vår webbplats! Vi är dedikerade till att erbjuda högkvalitativa tjänster och produkter som uppfyller dina behov. Läs vår fullständiga Om Oss för mer information.",
-    link: "/om-oss",
-  },
-  {
-    image: otherImage2,
-    title: "Cookiepolicy",
-    text: "På vår webbplats använder vi cookies för att förbättra användarupplevelsen och analysera trafiken. Läs våra fullständiga cookiepolicy för mer information.",
-    link: "/cookiepolicy",
-  },
-  {
-    image: otherImage3,
-    title: "Användarvillkor",
-    text: "Genom att använda vår webbplats godkänner du våra användarvillkor som reglerar användningen av våra tjänster, inklusive insamling av data och ansvarsfrihet. Läs våra fullständiga användarvillkor för mer information.",
-    link: "/användarvillkor",
-  },
-];
 
 const OtherAddon = () => {
   const discoverContainerRef = useRef(null);
@@ -35,7 +11,7 @@ const OtherAddon = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentPath, setCurrentPath] = useState("");
   const [overlayStates, setOverlayStates] = useState(
-    Array(cardData.length).fill(false)
+    Array(otherAddonSet.length).fill(false)
   );
 
   const location = useLocation();
@@ -91,7 +67,7 @@ const OtherAddon = () => {
       <main ref={discoverContainerRef} className={styles2.discoverContainer}>
         <article className={styles.discoverInner}>
           <section className={styles2.discoverCardContainer}>
-            {cardData
+            {otherAddonSet
               .filter((card) => card.link !== currentPath)
               .map((card, index) => (
                 <article

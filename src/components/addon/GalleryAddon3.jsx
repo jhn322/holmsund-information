@@ -1,48 +1,16 @@
 import { useEffect, useState, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { useSwipeable } from "react-swipeable";
+import { galleryAddonSet3 } from "../data/GalleryAddonSet";
 import { trackGalleryElementClick } from "../analytics/addon";
 import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
 import styles from "../../styles/home/Gallery.module.css";
 import styles2 from "../../styles/addon/GalleryAddon3.module.css";
 import staticGalleryImage from "../../assets/gallery/staticGallery.jpg";
-import galleryImage1 from "../../assets/activity/activity1.jpg";
-import galleryImage2 from "../../assets/activity/activity2.jpg";
-import galleryImage3 from "../../assets/activity/activity3.jpg";
-import galleryImage4 from "../../assets/activity/activity4.jpg";
 import galleryCircle from "../../assets/other/circle.png";
 
 const GalleryAddon3 = ({ title }) => {
   const location = useLocation();
   const currentPath = location.pathname;
-
-  const images = [
-    {
-      url: galleryImage1,
-      title: "Badställe",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
-      link: "/aktiviteter-1",
-    },
-    {
-      url: galleryImage2,
-      title: "Skog",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
-      link: "/aktiviteter-2",
-    },
-    {
-      url: galleryImage3,
-      title: "Vattentorn",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
-      link: "/aktiviteter-3",
-    },
-    {
-      url: galleryImage4,
-      title: "Storsjöskolan",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
-      link: "/aktiviteter-4",
-    },
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isNavHovered, setIsNavHovered] = useState(false);
@@ -56,13 +24,14 @@ const GalleryAddon3 = ({ title }) => {
   }, [currentIndex]);
 
   const goToPrevSlide = () => {
-    const newIndex = (currentIndex - 1 + images.length) % images.length;
+    const newIndex =
+      (currentIndex - 1 + galleryAddonSet3.length) % galleryAddonSet3.length;
     setCurrentIndex(newIndex);
     setDeltaX(0);
   };
 
   const goToNextSlide = () => {
-    const newIndex = (currentIndex + 1) % images.length;
+    const newIndex = (currentIndex + 1) % galleryAddonSet3.length;
     setCurrentIndex(newIndex);
     setDeltaX(0);
   };
@@ -154,7 +123,7 @@ const GalleryAddon3 = ({ title }) => {
                   transition: isSwiping ? "none" : "transform 0.3s ease", // Disable transition during swipe
                 }}
               >
-                {images.map((image, index) => (
+                {galleryAddonSet3.map((image, index) => (
                   <figure
                     key={index}
                     tabIndex="0"
@@ -218,30 +187,32 @@ const GalleryAddon3 = ({ title }) => {
               className={`${styles.carouselText} ${styles2.carouselText}`}
             >
               <NavLink
-                to={images[currentIndex].link}
-                aria-label={`Läs mer om ${images[currentIndex].title}`}
+                to={galleryAddonSet3[currentIndex].link}
+                aria-label={`Läs mer om ${galleryAddonSet3[currentIndex].title}`}
               >
                 <header
                   className={`${styles.hoverContainer} ${styles2.hoverContainer}`}
                 >
-                  <h2>{images[currentIndex].title}</h2>
-                  <p>{images[currentIndex].text} </p>
+                  <h2>{galleryAddonSet3[currentIndex].title}</h2>
+                  <p>{galleryAddonSet3[currentIndex].text} </p>
                   <div className={styles.linkContainer}>
                     <a
                       className={`${styles.carouselLink} ${styles2.carouselLink}`}
-                      href={images[currentIndex].link}
+                      href={galleryAddonSet3[currentIndex].link}
                       onClick={(e) => {
-                        if (currentPath === images[currentIndex].link) {
+                        if (
+                          currentPath === galleryAddonSet3[currentIndex].link
+                        ) {
                           e.preventDefault();
                           return;
                         }
                         trackElementClickEvent(
                           "carousel_link",
                           "Läs Mer",
-                          images[currentIndex].link
+                          galleryAddonSet3[currentIndex].link
                         );
                       }}
-                      aria-label={`Läs mer om ${images[currentIndex].title}`}
+                      aria-label={`Läs mer om ${galleryAddonSet3[currentIndex].title}`}
                     >
                       Läs Mer
                     </a>
@@ -251,19 +222,21 @@ const GalleryAddon3 = ({ title }) => {
                   >
                     <a
                       className={`${styles.carouselLink} ${styles2.carouselLink}`}
-                      href={images[currentIndex].link}
+                      href={galleryAddonSet3[currentIndex].link}
                       onClick={(e) => {
-                        if (currentPath === images[currentIndex].link) {
+                        if (
+                          currentPath === galleryAddonSet3[currentIndex].link
+                        ) {
                           e.preventDefault();
                           return;
                         }
                         trackElementClickEvent(
                           "carousel_link",
                           "Läs Mer",
-                          images[currentIndex].link
+                          galleryAddonSet3[currentIndex].link
                         );
                       }}
-                      aria-label={`Navigera till ${images[currentIndex].title}`}
+                      aria-label={`Navigera till ${galleryAddonSet3[currentIndex].title}`}
                     >
                       <RxArrowRight
                         className={`${styles.arrowIcon} ${styles2.arrowIcon}`}
@@ -275,7 +248,7 @@ const GalleryAddon3 = ({ title }) => {
             </section>
           </article>
           <div className={styles.dotPagination}>
-            {images.map((_, index) => (
+            {galleryAddonSet3.map((_, index) => (
               <span
                 key={index}
                 className={`${styles.dot} ${styles2.dot} ${
