@@ -168,7 +168,7 @@ body {
 /* ---- Darken if on the current path in addon only ---- */
 .currentPageImage {
   cursor: default;
-  filter: brightness(0.1);
+  filter: brightness(0.3);
 }
 
 .currentPageMessage {
