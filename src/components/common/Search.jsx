@@ -5,7 +5,7 @@ import Fuse from "fuse.js";
 import { RxMagnifyingGlass, RxCross2 } from "react-icons/rx";
 import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
 import styles from "../../styles/common/Search.module.css";
-import pages from "../data/Pages";
+import searchPages from "../data/SearchPages";
 
 const Search = ({ onClose }) => {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ const Search = ({ onClose }) => {
     includeScore: true,
     threshold: 0.4,
   };
-  const fuse = new Fuse(pages, fuseOptions);
+  const fuse = new Fuse(searchPages, fuseOptions);
 
   const handleSearch = useCallback(
     debounce((searchQuery) => {
@@ -119,7 +119,7 @@ const Search = ({ onClose }) => {
   const shuffleArray = (array) => array.sort(() => Math.random() - 0.5);
 
   const getSuggestions = (query) => {
-    const suggestionFuse = new Fuse(pages, {
+    const suggestionFuse = new Fuse(searchPages, {
       keys: ["title"],
       includeScore: true,
       threshold: 0.6,
@@ -128,7 +128,7 @@ const Search = ({ onClose }) => {
     let suggestions = suggestionFuse.search(query).slice(0, 3);
 
     if (suggestions.length === 0) {
-      const shuffledPages = shuffleArray([...pages]);
+      const shuffledPages = shuffleArray([...searchPages]);
       return shuffledPages.slice(0, 3);
     }
 

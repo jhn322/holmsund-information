@@ -1,4 +1,4 @@
-const pages = [
+const searchPages = [
   { path: "/", title: "Hem", categoryTitle: "Hem" },
   { path: "/utforska", title: "Utforska", categoryTitle: "Utforska" },
   {
@@ -82,4 +82,4 @@ const pages = [
   },
 ];
 
-export default pages;
+export default searchPages;
