@@ -1,42 +1,14 @@
 import { useEffect, useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
+import { gallerySet } from "../data/GallerySet";
 import { trackGalleryElementClick } from "../analytics/home";
 import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
 import styles from "../../styles/home/Gallery.module.css";
 import staticGalleryImage from "../../assets/gallery/staticGallery.jpg";
-import galleryImage1 from "../../assets/gallery/gallery1.jpg";
-import galleryImage2 from "../../assets/gallery/gallery2.jpg";
-import galleryImage3 from "../../assets/gallery/gallery3.jpg";
-import galleryImage4 from "../../assets/gallery/gallery4.jpg";
 import galleryCircle from "../../assets/other/circle.png";
 
 const Gallery = () => {
-  const images = [
-    {
-      url: galleryImage1,
-      title: "Badställe",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
-      link: "/galleri-1",
-    },
-    {
-      url: galleryImage2,
-      title: "Skog",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
-      link: "/galleri-2",
-    },
-    {
-      url: galleryImage3,
-      title: "Vattentorn",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
-      link: "/galleri-3",
-    },
-    {
-      url: galleryImage4,
-      title: "Storsjöskolan",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
-      link: "/galleri-4",
-    },
-  ];
+  const images = gallerySet;
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);

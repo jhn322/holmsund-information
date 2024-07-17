@@ -1,11 +1,8 @@
 import { useState, useRef } from "react";
+import { activitySet } from "../data/ActivitySet";
 import { trackActivityElementClick } from "../analytics/home";
-import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
+import { RxArrowRight } from "react-icons/rx";
 import styles from "../../styles/home/Activity.module.css";
-import activityImage1 from "../../assets/activity/activity1.jpg";
-import activityImage2 from "../../assets/activity/activity2.jpg";
-import activityImage3 from "../../assets/activity/activity3.jpg";
-import activityImage4 from "../../assets/activity/activity4.jpg";
 import featuredCircle from "../../assets/other/circle.png";
 
 const ActivityCarousel = () => {
@@ -15,37 +12,6 @@ const ActivityCarousel = () => {
   const [isSwiping, setIsSwiping] = useState(false);
   const initialTouch = useRef({ x: 0, y: 0 });
 
-  const slides = [
-    {
-      src: activityImage1,
-      title: "Vin Festival",
-      description:
-        "Fira med oss den 8 juni i Kellogg Mall Park. Upplev en fantastisk kväll med utsökta viner från lokala vingårdar, musik och god mat. Ta chansen att träffa vinmakare och delta i exklusiva vinprovningar.",
-      link: "/aktiviteter-1",
-    },
-    {
-      src: activityImage2,
-      title: "Kattmuseum",
-      description:
-        "Katten sov lugnt på den mysiga, varma soffan. Utforska vårt kattmuseum där du kan lära dig om katternas historia och deras roll i olika kulturer.",
-      link: "/aktiviteter-2",
-    },
-    {
-      src: activityImage3,
-      title: "Simlektioner",
-      description:
-        "Hon skrattade högt åt det roliga skämtet hennes vän berättade. Välkommen till våra simlektioner, där du kan lära dig att simma eller förbättra dina simfärdigheter. Våra erfarna instruktörer ger personlig uppmärksamhet och ser till att varje lektion är både säker och rolig. Perfekt för alla åldrar och nivåer!",
-      link: "/aktiviteter-3",
-    },
-    {
-      src: activityImage4,
-      title: "Auktionsshow",
-      description:
-        "De kom tidigt, till deras värds stora glädje. Delta i vår spännande auktionsshow där unika föremål från hela världen går under klubban. Möt samlare och säljare, och kanske gå hem med en oväntad skatt.",
-      link: "/aktiviteter-4",
-    },
-  ];
-
   const truncateDescription = (text, wordLimit) => {
     const words = text.split(" ");
     if (words.length > wordLimit) {
@@ -54,16 +20,16 @@ const ActivityCarousel = () => {
     return text;
   };
 
-  const handlePrev = (event) => {
+  const handlePrev = () => {
     setActiveIndex((prevIndex) =>
-      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
+      prevIndex === 0 ? activitySet.length - 1 : prevIndex - 1
     );
     setDeltaX(0);
   };
 
-  const handleNext = (event) => {
+  const handleNext = () => {
     setActiveIndex((prevIndex) =>
-      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+      prevIndex === activitySet.length - 1 ? 0 : prevIndex + 1
     );
     setDeltaX(0);
   };
@@ -125,7 +91,7 @@ const ActivityCarousel = () => {
               transition: isSwiping ? "none" : "transform 0.3s ease",
             }}
           >
-            {slides.map((slide, index) => (
+            {activitySet.map((slide, index) => (
               <figure
                 key={index}
                 className={`${styles.slide} ${
@@ -159,7 +125,7 @@ const ActivityCarousel = () => {
                   <div className={styles.imgContainer}>
                     <img src={slide.src} alt={slide.title} />
                     <div className={styles.slideCounter}>
-                      {index + 1}/{slides.length}
+                      {index + 1}/{activitySet.length}
                     </div>
                   </div>
                 </a>

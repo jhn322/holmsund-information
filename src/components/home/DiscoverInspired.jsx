@@ -1,38 +1,7 @@
 import { useRef, useEffect, useState } from "react";
+import { insipiredData } from "../data/DiscoverSet";
 import { trackDiscoverInspiredButtonClick } from "../analytics/home";
 import styles from "../../styles/home/Discover.module.css";
-import discoverMoreImage1 from "../../assets/discover/discoverInspired1.jpg";
-import discoverMoreImage2 from "../../assets/discover/discoverInspired2.jpg";
-import discoverMoreImage3 from "../../assets/discover/discoverInspired3.jpg";
-import discoverMoreImage4 from "../../assets/discover/discoverInspired4.jpg";
-
-// Card Array with NavLinks
-const cardData = [
-  {
-    image: discoverMoreImage1,
-    title: "Nästa ställe",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
-    link: "/utforska-5",
-  },
-  {
-    image: discoverMoreImage2,
-    title: "Någon annanstans",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
-    link: "/utforska-6",
-  },
-  {
-    image: discoverMoreImage3,
-    title: "Ett spännande ställe",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
-    link: "/utforska-7",
-  },
-  {
-    image: discoverMoreImage4,
-    title: "Sista stället",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
-    link: "/utforska-8",
-  },
-];
 
 const DiscoverInspired = () => {
   const discoverContainerRef = useRef(null);
@@ -40,7 +9,7 @@ const DiscoverInspired = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [overlayStates, setOverlayStates] = useState(
-    Array(cardData.length).fill(false)
+    Array(insipiredData.length).fill(false)
   );
 
   useEffect(() => {
@@ -118,7 +87,7 @@ const DiscoverInspired = () => {
             <h2>Bli Inspirerad</h2>
           </header>
           <section className={styles.discoverCardContainer}>
-            {cardData.map((card, index) => (
+            {insipiredData.map((card, index) => (
               <article
                 key={index}
                 className={`${styles.discoverCard} ${
