@@ -11,6 +11,7 @@ const ActivityCarousel = () => {
   const [deltaX, setDeltaX] = useState(0);
   const [isSwiping, setIsSwiping] = useState(false);
   const initialTouch = useRef({ x: 0, y: 0 });
+  const threshold = 10;
 
   const truncateDescription = (text, wordLimit) => {
     const words = text.split(" ");
@@ -56,9 +57,9 @@ const ActivityCarousel = () => {
 
   const handleTouchEnd = () => {
     if (isSwiping) {
-      if (deltaX < -50) {
+      if (deltaX < -threshold) {
         handleNext();
-      } else if (deltaX > 50) {
+      } else if (deltaX > threshold) {
         handlePrev();
       }
     }

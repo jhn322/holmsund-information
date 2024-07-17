@@ -57,6 +57,7 @@ const SlideshowAddon = ({ images }) => {
   const [zoomedIndex, setZoomedIndex] = useState(null);
   const [isCaptionExpanded, setIsCaptionExpanded] = useState(true);
   const initialTouch = useRef({ x: 0, y: 0 });
+  const threshold = 10;
 
   const goToPrevSlide = () => {
     const newIndex = (currentIndex - 1 + images.length) % images.length;
@@ -91,9 +92,9 @@ const SlideshowAddon = ({ images }) => {
 
   const handleTouchEnd = () => {
     if (isSwiping) {
-      if (deltaX < -50) {
+      if (deltaX < -threshold) {
         goToNextSlide();
-      } else if (deltaX > 50) {
+      } else if (deltaX > threshold) {
         goToPrevSlide();
       }
     }

@@ -17,6 +17,7 @@ const GalleryAddon2 = ({ title }) => {
   const [deltaX, setDeltaX] = useState(0);
   const [isSwiping, setIsSwiping] = useState(false);
   const initialTouch = useRef({ x: 0, y: 0 });
+  const threshold = 10;
 
   useEffect(() => {
     const interval = setInterval(goToNextSlide, 3000);
@@ -58,9 +59,9 @@ const GalleryAddon2 = ({ title }) => {
 
   const handleTouchEnd = () => {
     if (isSwiping) {
-      if (deltaX < -50) {
+      if (deltaX < -threshold) {
         goToNextSlide();
-      } else if (deltaX > 50) {
+      } else if (deltaX > threshold) {
         goToPrevSlide();
       }
     }

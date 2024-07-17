@@ -15,6 +15,7 @@ const Carousel = () => {
   const initialTouch = useRef({ x: 0, y: 0 });
   const location = useLocation();
   const currentPath = location.pathname;
+  const threshold = 10;
 
   const truncateDescription = (text, wordLimit) => {
     const words = text.split(" ");
@@ -60,9 +61,9 @@ const Carousel = () => {
 
   const handleTouchEnd = () => {
     if (isSwiping) {
-      if (deltaX < -50) {
+      if (deltaX < -threshold) {
         handleNext();
-      } else if (deltaX > 50) {
+      } else if (deltaX > threshold) {
         handlePrev();
       }
     }
