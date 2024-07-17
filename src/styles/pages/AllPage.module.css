@@ -63,7 +63,7 @@ body {
 .googleMaps iframe {
   border: 0;
   width: 100%;
-  height: 45rem;
+  height: 35rem;
   border-radius: 10px;
   max-width: 80rem;
 }
@@ -109,5 +109,9 @@ body {
   .boldText,
   .text {
     font-size: 1.3rem;
+  }
+
+  .googleMaps iframe {
+    height: 55rem;
   }
 }
