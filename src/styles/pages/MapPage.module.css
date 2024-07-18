@@ -7,6 +7,11 @@
   font-family: "Outfit", sans-serif;
 }
 
+h3,
+a {
+  transition: 0.3s color;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -78,6 +83,9 @@
 
 .source a {
   font-weight: bold;
+}
+.source a:hover {
+  text-decoration: underline;
 }
 
 /* Uncommon phone size */
