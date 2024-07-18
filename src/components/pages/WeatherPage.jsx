@@ -215,6 +215,10 @@ const WeatherPage = () => {
                 användarvänliga gränssnitt gör det enkelt att få aktuella
                 väderuppdateringar och planera aktiviteter utomhus.
               </p>
+              <p className={styles.source}>
+                Källa:{" "}
+                <a href="https://www.smhi.se/q/Stockholm/2673730">SMHI</a>
+              </p>
             </div>
           </div>
         </div>

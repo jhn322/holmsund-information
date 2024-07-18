@@ -117,6 +117,9 @@ const MapPage = () => {
                   aktuell markanvändning, zonindelning och planerad utveckling
                   inom Holmsunds geografiska område.
                 </p>
+                <p className={styles.source}>
+                  Källa: <a href="https://www.umea.se/">Umeå Kommun</a>
+                </p>
               </div>
             </div>
           </div>

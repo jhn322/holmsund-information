@@ -152,6 +152,10 @@ p {
   color: var(--hover-color);
 }
 
+.source a {
+  font-weight: bold;
+}
+
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 599px) {
   .forecastInfo {
@@ -165,7 +169,8 @@ p {
   }
 
   p,
-  .description p {
+  .description p,
+  .source {
     font-size: 1.2rem;
   }
 
@@ -187,7 +192,8 @@ p {
   }
 
   p,
-  .description p {
+  .description p,
+  .source {
     font-size: 1.2rem;
   }
 
@@ -209,7 +215,8 @@ p {
   }
 
   p,
-  .description p {
+  .description p,
+  .source {
     font-size: 1.3rem;
   }
 
@@ -231,7 +238,8 @@ p {
   }
 
   p,
-  .description p {
+  .description p,
+  .source {
     font-size: 1.3rem;
   }
 
