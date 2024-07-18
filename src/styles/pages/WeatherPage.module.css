@@ -152,7 +152,7 @@ p {
   color: var(--hover-color);
 }
 
-.source a {
+.source span {
   font-weight: bold;
 }
 

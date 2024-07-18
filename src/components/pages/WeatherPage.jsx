@@ -206,7 +206,7 @@ const WeatherPage = () => {
                 )
               }
             >
-              <h3>För mer väderinformation klicka här</h3>
+              <h3>Hitta mer väderinformation här</h3>
             </a>
             <div className={styles.description}>
               <p>
@@ -216,8 +216,7 @@ const WeatherPage = () => {
                 väderuppdateringar och planera aktiviteter utomhus.
               </p>
               <p className={styles.source}>
-                Källa:{" "}
-                <a href="https://www.smhi.se/q/Stockholm/2673730">SMHI</a>
+                Källa: <span>SMHI</span>
               </p>
             </div>
           </div>
