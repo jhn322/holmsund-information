@@ -41,9 +41,14 @@ const Breadcrumb = () => {
 
     if (mainSection) {
       const mainSectionPath = `/${pathname.split("-")[0]}`;
-      items.push({ text: mainSection, to: mainSectionPath });
+      const isMainSectionCurrent = pathname === mainSectionPath.slice(1);
+      items.push({
+        text: mainSection,
+        to: mainSectionPath,
+        isMainSectionCurrent,
+      });
 
-      if (pathname !== mainSectionPath.slice(1)) {
+      if (!isMainSectionCurrent) {
         items.push({
           text: decodeURIComponentSafe(pathname),
           to: `/${pathname}`,
@@ -72,7 +77,7 @@ const Breadcrumb = () => {
               <RxChevronRight className={styles.arrowIcon} aria-hidden="true" />
             )}
             <span className={styles.breadcrumbItem}>
-              {item.isLast ? (
+              {item.isLast || item.isMainSectionCurrent ? (
                 <span className={styles.breadcrumbCurrent}>{item.text}</span>
               ) : (
                 <Link
