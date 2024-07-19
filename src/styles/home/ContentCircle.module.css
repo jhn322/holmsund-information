@@ -115,15 +115,14 @@ body {
 .circleBack {
   left: 140%;
   opacity: 0.8;
-  width: calc(16rem + 16vw);
-  height: calc(16rem + 16vw);
+  width: calc(18rem + 16vw);
+  height: calc(18rem + 16vw);
 }
 
 .circleFront {
-  width: calc(16rem + 16vw);
-  height: calc(16rem + 16vw);
+  width: calc(18rem + 16vw);
+  height: calc(18rem + 16vw);
   border-radius: 50%;
-  left: 30%;
 }
 
 /* Small phones */
@@ -219,8 +218,8 @@ body {
 
   .circleBack,
   .circleFront {
-    width: calc(10rem + 16vw);
-    height: calc(10rem + 16vw);
+    width: calc(14rem + 16vw);
+    height: calc(14rem + 16vw);
   }
 }
 

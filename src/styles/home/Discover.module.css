@@ -37,7 +37,6 @@ body {
 }
 
 .discoverTitle h2 {
-  margin: 2rem 0 0 0;
   margin-bottom: 0;
   font-size: 2.25rem;
   padding: 2rem 0;
@@ -46,7 +45,7 @@ body {
 .discoverCardContainer {
   position: relative;
   z-index: 1;
-  padding: 2rem 0;
+  padding: 0;
 }
 
 .discoverCardContainer h3 {

@@ -3,6 +3,19 @@ import { discoverData } from "../data/DiscoverSet";
 import { trackDiscoverButtonClick } from "../analytics/home";
 import styles from "../../styles/home/Discover.module.css";
 
+const getCurrentSeason = () => {
+  const month = new Date().getMonth() + 1;
+  if (month >= 3 && month <= 5) {
+    return "Vår";
+  } else if (month >= 6 && month <= 8) {
+    return "Sommar";
+  } else if (month >= 9 && month <= 11) {
+    return "Höst";
+  } else {
+    return "Vinter";
+  }
+};
+
 const Discover = () => {
   const discoverContainerRef = useRef(null);
   const [totalCardsHeight, setTotalCardsHeight] = useState(0);
@@ -11,6 +24,7 @@ const Discover = () => {
   const [overlayStates, setOverlayStates] = useState(
     Array(discoverData.length).fill(false)
   );
+  const [currentSeason, setCurrentSeason] = useState(getCurrentSeason());
 
   useEffect(() => {
     const calculateTotalHeight = () => {
@@ -84,7 +98,7 @@ const Discover = () => {
       <main ref={discoverContainerRef} className={styles.discoverContainer}>
         <article className={styles.discoverInner}>
           <header className={styles.discoverTitle}>
-            <h2 className={styles.excludedWhiteText}>Utforska Holmsund</h2>
+            <h2>Att göra denna {currentSeason}</h2>
           </header>
           <section className={styles.discoverCardContainer}>
             {discoverData.map((card, index) => (

@@ -78,10 +78,10 @@ const Separator = () => {
           </p>
         </article>
         <section className={styles.separatorSecond}>
-          <h2 className={styles.separatorSecondTitle}>Aktiviteter</h2>
+          <h2 className={styles.separatorSecondTitle}>Utforska Holmsund</h2>
           <p className={styles.separatorSecondText}>
-            Utforska Holmsund i dag, från spännande utomhusäventyr till långa
-            motionsspår och mysiga kaféer!
+            Upptäck Holmsund i dag, från spännande utomhusäventyr till långa
+            motionsspår!
           </p>
         </section>
       </main>

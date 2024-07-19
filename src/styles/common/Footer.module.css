@@ -58,7 +58,7 @@ p {
   font-size: 2.5rem;
   width: 20rem;
   margin: 0;
-  padding: 2rem 2rem 4rem 2rem;
+  padding: 2rem;
 }
 
 .footerIcons svg {
@@ -72,7 +72,8 @@ p {
 .github,
 .twitterX,
 .instagram,
-.facebook {
+.facebook,
+.tiktok {
   cursor: pointer;
   background-color: var(--accent-color);
   border-radius: 50%;
@@ -80,13 +81,14 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.1s ease;
+  transition: all 0.3s ease;
 }
 
 .footerIcons a:hover .github,
 .footerIcons a:hover .twitterX,
 .footerIcons a:hover .instagram,
 .footerIcons a:hover .facebook,
+.footerIcons a:hover .tiktok,
 .iconsText:hover p {
   color: var(--white-text-color);
 }
@@ -95,11 +97,17 @@ p {
 .footerIcons a:hover .twitterX,
 .footerIcons a:hover .instagram,
 .footerIcons a:hover .facebook,
+.footerIcons a:hover .tiktok,
 .github:hover,
 .twitterX:hover,
 .instagram:hover,
-.facebook:hover {
+.facebook:hover,
+.tiktok:hover {
   background-color: var(--gallery-color);
+}
+
+.footerLinks li {
+  color: var(--black-text-color);
 }
 
 /* -----------Second Footer----------- */
@@ -109,13 +117,18 @@ p {
   width: 100%;
 }
 
-.footerPolicy ul {
+.footerPolicy ul,
+.footerLinks ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   font-size: 1.1rem;
   padding: 2rem 0;
+}
+
+.footerLinks ul {
+  padding: 0 0 3rem 0;
 }
 
 .footerYear {
@@ -161,7 +174,8 @@ p {
     transition: color 0.3s;
   }
 
-  .iconsText p:hover {
+  .iconsText p:hover,
+  .footerLinks li:hover {
     color: var(--gallery-color);
   }
 
@@ -175,13 +189,52 @@ p {
     align-items: flex-start;
     justify-content: space-around;
     font-size: 2.5rem;
-    padding-right: 5rem;
+    padding-left: 1.5rem;
     margin: 0;
   }
 
   .footerIcons a {
     display: flex;
     align-items: center;
+  }
+
+  .footerLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .footerLinks ul {
+    padding: 0;
+    list-style: none;
+    width: 100%;
+  }
+
+  .footerLinks li {
+    margin: 0;
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+    width: 100%;
+  }
+
+  .footerLinks li::before {
+    content: "•";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.6rem;
+  }
+
+  .footerLinks a {
+    color: var(--black-text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    display: block;
+    width: 100%;
   }
 
   .footerPolicy ul {

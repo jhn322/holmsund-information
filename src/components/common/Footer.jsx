@@ -1,7 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { trackFooterElementClick } from "../analytics/common";
-import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
+import {
+  FaGithub,
+  FaXTwitter,
+  FaInstagram,
+  FaFacebook,
+  FaTiktok,
+} from "react-icons/fa6";
 import styles from "../../styles/common/Footer.module.css";
 import logo from "../../assets/logo/navLogo2.png";
 
@@ -92,7 +98,69 @@ const Footer = () => {
               <p className={styles.text}>Facebook</p>
             </div>
           </a>
+          <a
+            href="https://www.tiktok.com/discover/Holmsund"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() =>
+              handleElementClick(
+                "TikTok",
+                "https://www.tiktok.com/discover/Holmsund"
+              )
+            }
+            aria-label="TikTok"
+          >
+            <FaTiktok className={styles.tiktok} />
+            <div className={styles.iconsText}>
+              <p>TikTok</p>
+            </div>
+          </a>
         </section>
+        <div className={styles.footerLinks}>
+          <ul>
+            <NavLink
+              to="/aktiviteter"
+              onClick={() =>
+                handleElementClick("Aktiviteter", window.location.href)
+              }
+              aria-label="Aktiviteter"
+            >
+              <li>Aktiviteter</li>
+            </NavLink>
+            <NavLink
+              to="/utforska"
+              onClick={() =>
+                handleElementClick("Utforska", window.location.href)
+              }
+              aria-label="Utforska"
+            >
+              <li>Utforska</li>
+            </NavLink>
+            <NavLink
+              to="/galleri"
+              onClick={() =>
+                handleElementClick("Galleri", window.location.href)
+              }
+              aria-label="Galleri"
+            >
+              <li>Galleri</li>
+            </NavLink>
+            <NavLink
+              to="/väder"
+              onClick={() => handleElementClick("Väder", window.location.href)}
+              aria-label="Väder"
+            >
+              <li>Väder</li>
+            </NavLink>
+            <NavLink
+              to="/kartor"
+              onClick={() => handleElementClick("Kartor", window.location.href)}
+              aria-label="Kartor"
+            >
+              <li>Kartor</li>
+            </NavLink>
+          </ul>
+        </div>
       </article>
       <aside className={styles.secondFooter}>
         <div className={styles.footerPolicy}>
