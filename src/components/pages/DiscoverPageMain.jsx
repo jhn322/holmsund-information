@@ -12,7 +12,7 @@ import header4 from "../../assets/header/header4.jpg";
 import discoverPageMain1 from "../../assets/discover/discoverPageMain1.jpg";
 import discoverPageMain2 from "../../assets/discover/discoverPageMain2.jpg";
 import discoverPageMain3 from "../../assets/discover/discoverPageMain3.jpg";
-import discoverPageMain4 from "../../assets/discover/discoverPageMain4.jpg";
+import discoverPageMain4 from "../../assets/discover/discoverPageMain4.jpeg";
 import discoverPageMain5 from "../../assets/discover/discoverPageMain5.jpg";
 import discoverPageMain6 from "../../assets/discover/discoverPageMain6.jpg";
 import discoverPageMain7 from "../../assets/discover/discoverPageMain7.jpg";
@@ -25,7 +25,7 @@ const DiscoverPageMain = () => {
     { src: discoverPageMain1, title: "Title 1", path: "/utforska-1" },
     { src: discoverPageMain2, title: "Title 2", path: "/utforska-2" },
     { src: discoverPageMain3, title: "Title 3", path: "/utforska-3" },
-    { src: discoverPageMain4, title: "Title 4", path: "/utforska-4" },
+    { src: discoverPageMain4, title: "Storsjö", path: "/utforska-4" },
     { src: discoverPageMain5, title: "Title 5", path: "/utforska-5" },
     { src: discoverPageMain6, title: "Title 6", path: "/utforska-6" },
     { src: discoverPageMain7, title: "Title 7", path: "/utforska-7" },

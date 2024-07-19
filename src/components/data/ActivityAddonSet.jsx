@@ -2,7 +2,7 @@
 import image1 from "../../assets/discover/discover1.jpg";
 import image2 from "../../assets/discover/discover2.jpg";
 import image3 from "../../assets/discover/discover3.jpg";
-import image4 from "../../assets/discover/discover4.jpg";
+import image4 from "../../assets/discover/discoverAddon4-1.jpeg";
 // Activity Addon 2
 import image5 from "../../assets/discover/discoverInspired1.jpg";
 import image6 from "../../assets/discover/discoverInspired2.jpg";
@@ -43,7 +43,7 @@ export const activitySlides1 = [
   },
   {
     src: image4,
-    title: "Utforska 4",
+    title: "Storsjö",
     description:
       "De kom tidigt, till deras värds stora glädje. Delta i vår spännande auktionsshow där unika föremål från hela världen går under klubban. Möt samlare och säljare, och kanske gå hem med en oväntad skatt.",
     link: "/utforska-4",

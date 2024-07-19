@@ -2,7 +2,7 @@
 import galleryImage1 from "../../assets/discover/discover1.jpg";
 import galleryImage2 from "../../assets/discover/discover2.jpg";
 import galleryImage3 from "../../assets/discover/discover3.jpg";
-import galleryImage4 from "../../assets/discover/discover4.jpg";
+import galleryImage4 from "../../assets/discover/discoverAddon4-2.jpeg";
 // Gallery Addon 2
 import galleryImage5 from "../../assets/discover/discoverInspired1.jpg";
 import galleryImage6 from "../../assets/discover/discoverInspired2.jpg";
@@ -40,7 +40,7 @@ export const galleryAddonSet1 = [
   },
   {
     url: galleryImage4,
-    title: "Utforska 4",
+    title: "Storsjö",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
     link: "/utforska-4",
   },

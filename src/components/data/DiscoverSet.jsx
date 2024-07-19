@@ -2,7 +2,7 @@
 import discoverImage1 from "../../assets/discover/discover1.jpg";
 import discoverImage2 from "../../assets/discover/discover2.jpg";
 import discoverImage3 from "../../assets/discover/discover3.jpg";
-import discoverImage4 from "../../assets/discover/discover4.jpg";
+import discoverImage4 from "../../assets/discover/discover4.jpeg";
 // Discover Inspired
 import discoverMoreImage1 from "../../assets/discover/discoverInspired1.jpg";
 import discoverMoreImage2 from "../../assets/discover/discoverInspired2.jpg";
@@ -30,7 +30,7 @@ export const discoverData = [
   },
   {
     image: discoverImage4,
-    title: "Utforska 4",
+    title: "Storsjö",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-4",
   },
