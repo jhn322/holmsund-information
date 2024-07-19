@@ -29,7 +29,7 @@
 .shareTitle {
   font-size: 2.25rem;
   font-weight: bold;
-  padding: 3rem 0 2rem 0;
+  padding: 3rem 0;
   color: var(--black-text-color);
 }
 
@@ -45,7 +45,7 @@
   z-index: 1;
   width: 100%;
   height: 100%;
-  padding-bottom: 8rem;
+  padding-bottom: 2rem;
 }
 
 .shareImage {
@@ -136,12 +136,12 @@
 
 .weatherBtnText:hover {
   color: var(--accent-color);
-  background-color: var(--background-color);
+  background-color: var(--white-text-color);
 }
 
 .mapBtnText:hover {
   color: var(--gallery-color);
-  background-color: var(--background-color);
+  background-color: var(--white-text-color);
 }
 
 /* Uncommon phone size */

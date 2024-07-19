@@ -89,7 +89,7 @@ const ActivityCarousel = () => {
               transform: `translateX(calc(-${
                 activeIndex * 100
               }% + ${deltaX}px))`,
-              transition: isSwiping ? "none" : "transform 0.3s ease",
+              transition: isSwiping ? "none" : "transform 0.5s ease",
             }}
           >
             {activitySet.map((slide, index) => (

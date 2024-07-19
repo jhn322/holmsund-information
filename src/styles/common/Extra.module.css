@@ -26,8 +26,8 @@
   z-index: 1;
   width: 100%;
   height: 100%;
-  margin: 0 0 3rem 0;
-  padding-bottom: 4rem;
+  margin-top: 2rem;
+  padding: 2rem 0;
 }
 
 .image {
@@ -58,13 +58,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-image: linear-gradient(135deg, #b6469f, #4da7f5);
+  background-image: var(--gradient-purple);
   width: 100%;
   height: 25rem;
 }
 
 .mapInner {
-  background-image: linear-gradient(135deg, #e94417, #ffcd2a);
+  background-image: var(--gradient-orange);
 }
 
 .weatherContent,
@@ -118,12 +118,12 @@
 
 .weatherBtnText:hover {
   color: #7b7ccf;
-  background-color: var(--background-color);
+  background-color: var(--white-text-color);
 }
 
 .mapBtnText:hover {
   color: #f69122;
-  background-color: var(--background-color);
+  background-color: var(--white-text-color);
 }
 
 /* Uncommon phone size */

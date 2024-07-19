@@ -45,14 +45,14 @@
   width: 100%;
   max-width: 60rem;
   min-width: 20rem;
-  height: 20rem;
+  height: 25rem;
   border-radius: 10px;
 }
 
 .slideshowInner img {
   width: 100%;
   max-width: 60rem;
-  height: 20rem;
+  height: 25rem;
   border-radius: 10px;
   object-fit: cover;
   cursor: zoom-in;
@@ -110,7 +110,7 @@
 
 .slider {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease;
 }
 
 .slideWrapper {
@@ -333,15 +333,15 @@
 /* Small Tablet */
 @media only screen and (min-width: 600px) and (max-width: 799px) {
   .slideshowContainer {
-    height: 25rem;
+    height: 30rem;
   }
 
   .slideshowInner {
-    height: 25rem;
+    height: 30rem;
   }
 
   .slideshowInner img {
-    height: 25rem;
+    height: 30rem;
   }
 
   .captionContainer {
@@ -352,15 +352,15 @@
 /* Tablet */
 @media only screen and (min-width: 800px) and (max-width: 1029px) {
   .slideshowContainer {
-    height: 30rem;
+    height: 35rem;
   }
 
   .slideshowInner {
-    height: 30rem;
+    height: 35rem;
   }
 
   .slideshowInner img {
-    height: 30rem;
+    height: 35rem;
   }
 
   .counter {

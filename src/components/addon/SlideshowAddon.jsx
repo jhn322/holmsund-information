@@ -156,7 +156,7 @@ const SlideshowAddon = ({ images }) => {
                   transform: `translateX(calc(-${
                     currentIndex * 100
                   }% + ${deltaX}px))`,
-                  transition: isSwiping ? "none" : "transform 0.3s ease",
+                  transition: isSwiping ? "none" : "transform 0.5s ease",
                 }}
               >
                 {images.map((image, index) => (

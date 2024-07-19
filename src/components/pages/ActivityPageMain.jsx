@@ -49,7 +49,7 @@ const ActivityPageMain = () => {
       setCurrentImageIndex(
         (prevIndex) => (prevIndex + 1) % headerImages.length
       );
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [headerImages.length]);
