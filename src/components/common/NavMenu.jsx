@@ -1,7 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { RxCross2, RxPlus, RxMinus } from "react-icons/rx";
-import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
+import {
+  FaGithub,
+  FaXTwitter,
+  FaInstagram,
+  FaFacebook,
+  FaTiktok,
+} from "react-icons/fa6";
 import ThemeToggleButton from "../theme/ThemeToggleButton";
 import styles from "../../styles/common/Nav.module.css";
 import logo1 from "../../assets/logo/navLogo.png";
@@ -53,6 +59,14 @@ const NavMenu = ({
           aria-label="Facebook"
         >
           <FaFacebook className={styles.facebook} />
+        </a>
+        <a
+          href="https://www.tiktok.com/discover/Holmsund"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+        >
+          <FaTiktok className={styles.tiktok} />
         </a>
       </div>
       <ThemeToggleButton />

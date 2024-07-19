@@ -208,20 +208,22 @@ h5 {
 .github,
 .twitterX,
 .instagram,
-.facebook {
+.facebook,
+.tiktok {
   cursor: pointer;
   background-color: var(--accent-color);
   font-size: 2.4rem;
   border-radius: 50%;
   padding: 0.375rem;
-  margin: 0 0.5rem;
+  margin: 0 0.25rem;
   transition: all 0.2s ease;
 }
 
 .github:hover,
 .twitterX:hover,
 .instagram:hover,
-.facebook:hover {
+.facebook:hover,
+.tiktok:hover {
   background-color: var(--background-color);
   color: var(--accent-color);
 }
@@ -336,10 +338,16 @@ h5 {
 .activityDropdownIcon,
 .galleryDropdownIcon {
   position: static;
-  transform: none;
   font-size: 1.25rem;
   color: var(--white-text-color);
   margin-left: 1rem;
+  transition: transform 0.2s ease-in-out, color 0.3s;
+}
+
+.discoverDropdownIcon.open,
+.activityDropdownIcon.open,
+.galleryDropdownIcon.open {
+  transform: rotate(180deg);
 }
 
 .nestedMenu ul {
@@ -640,7 +648,8 @@ h5 {
   .github,
   .twitterX,
   .instagram,
-  .facebook {
+  .facebook,
+  .tiktok {
     font-size: 2.8rem;
   }
 

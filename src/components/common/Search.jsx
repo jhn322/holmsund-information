@@ -3,7 +3,13 @@ import { useNavigate } from "react-router-dom";
 import debounce from "lodash/debounce";
 import Fuse from "fuse.js";
 import { RxMagnifyingGlass, RxCross2 } from "react-icons/rx";
-import { FaGithub, FaXTwitter, FaInstagram, FaFacebook } from "react-icons/fa6";
+import {
+  FaGithub,
+  FaXTwitter,
+  FaInstagram,
+  FaFacebook,
+  FaTiktok,
+} from "react-icons/fa6";
 import styles from "../../styles/common/Search.module.css";
 import searchPages from "../data/SearchPages";
 
@@ -176,6 +182,14 @@ const Search = ({ onClose }) => {
             aria-label="Facebook website"
           >
             <FaFacebook className={styles.facebook} />
+          </a>
+          <a
+            href="https://www.tiktok.com/discover/Holmsund"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+          >
+            <FaTiktok className={styles.tiktok} />
           </a>
         </nav>
       </header>
