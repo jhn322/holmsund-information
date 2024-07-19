@@ -6,7 +6,7 @@ import styles from "../../styles/common/Breadcrumb.module.css";
 
 const Breadcrumb = () => {
   const location = useLocation();
-  const pathnames = location.pathname.split("/").filter((x) => x);
+  const pathname = location.pathname.slice(1);
 
   // Function to decode URI for special characters
   const decodeURIComponentSafe = (uri) => {
@@ -23,31 +23,68 @@ const Breadcrumb = () => {
     trackBreadcrumbElementClick("breadcrumb_link", linkText, linkUrl);
   };
 
+  const getMainSection = (path) => {
+    const sections = {
+      galleri: "Galleri",
+      aktiviteter: "Aktiviteter",
+      utforska: "Utforska",
+    };
+    for (const [key, value] of Object.entries(sections)) {
+      if (path.startsWith(key)) return value;
+    }
+    return null;
+  };
+
+  const buildBreadcrumbItems = () => {
+    const items = [{ text: "Hem", to: "/" }];
+    const mainSection = getMainSection(pathname);
+
+    if (mainSection) {
+      const mainSectionPath = `/${pathname.split("-")[0]}`;
+      items.push({ text: mainSection, to: mainSectionPath });
+
+      if (pathname !== mainSectionPath.slice(1)) {
+        items.push({
+          text: decodeURIComponentSafe(pathname),
+          to: `/${pathname}`,
+          isLast: true,
+        });
+      }
+    } else if (pathname) {
+      items.push({
+        text: decodeURIComponentSafe(pathname),
+        to: `/${pathname}`,
+        isLast: true,
+      });
+    }
+
+    return items;
+  };
+
+  const breadcrumbItems = buildBreadcrumbItems();
+
   return (
     <nav aria-label="Breadcrumb" className={styles.breadcrumb}>
       <article>
-        <span className={styles.breadcrumbItem}>
-          <Link to="/" onClick={() => trackLinkClick("Home", "/")}>
-            Hem
-          </Link>
-        </span>
-        {pathnames.map((value, index) => {
-          const isLast = index === pathnames.length - 1;
-          const to = `/${pathnames.slice(0, index + 1).join("/")}`;
-          const decodedValue = decodeURIComponentSafe(value);
-          return (
-            <span key={to} className={styles.breadcrumbItem}>
+        {breadcrumbItems.map((item, index) => (
+          <React.Fragment key={item.to}>
+            {index > 0 && (
               <RxChevronRight className={styles.arrowIcon} aria-hidden="true" />
-              {isLast ? (
-                <span className={styles.breadcrumbCurrent}>{decodedValue}</span>
+            )}
+            <span className={styles.breadcrumbItem}>
+              {item.isLast ? (
+                <span className={styles.breadcrumbCurrent}>{item.text}</span>
               ) : (
-                <Link to={to} onClick={() => trackLinkClick(decodedValue, to)}>
-                  {decodedValue}
+                <Link
+                  to={item.to}
+                  onClick={() => trackLinkClick(item.text, item.to)}
+                >
+                  {item.text}
                 </Link>
               )}
             </span>
-          );
-        })}
+          </React.Fragment>
+        ))}
       </article>
     </nav>
   );
