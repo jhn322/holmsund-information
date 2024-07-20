@@ -21,6 +21,10 @@ const GalleryPageMain = () => {
     { src: galleryPage2, title: "Title 2", path: "/galleri-2" },
     { src: galleryPage3, title: "Title 3", path: "/galleri-3" },
     { src: galleryPage4, title: "Title 4", path: "/galleri-4" },
+    { src: galleryPage1, title: "Title 1", path: "/galleri-5" },
+    { src: galleryPage2, title: "Title 2", path: "/galleri-6" },
+    { src: galleryPage3, title: "Title 3", path: "/galleri-7" },
+    { src: galleryPage4, title: "Title 4", path: "/galleri-8" },
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

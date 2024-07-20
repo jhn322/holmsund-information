@@ -1,23 +1,33 @@
 // Gallery Addon 1
 import galleryImage1 from "../../assets/discover/discover1.jpg";
-import galleryImage2 from "../../assets/discover/discover2.jpg";
+import galleryImage2 from "../../assets/discover/discoverAddon2-2.jpg";
 import galleryImage3 from "../../assets/discover/discover3.jpg";
-import galleryImage4 from "../../assets/discover/discoverAddon4-2.jpeg";
+import galleryImage4 from "../../assets/discover/discoverAddon4-2.jpg";
 // Gallery Addon 2
-import galleryImage5 from "../../assets/discover/discoverInspired1.jpg";
-import galleryImage6 from "../../assets/discover/discoverInspired2.jpg";
-import galleryImage7 from "../../assets/discover/discoverInspired3.jpg";
-import galleryImage8 from "../../assets/discover/discoverInspired4.jpg";
+import galleryImage5 from "../../assets/discover/discover5.jpg";
+import galleryImage6 from "../../assets/discover/discoverAddon6-2.jpg";
+import galleryImage7 from "../../assets/discover/discover7.jpg";
+import galleryImage8 from "../../assets/discover/discover8.jpg";
 // Gallery Addon 3
-import galleryImage9 from "../../assets/activity/activity1.jpg";
-import galleryImage10 from "../../assets/activity/activity2.jpg";
-import galleryImage11 from "../../assets/activity/activity3.jpg";
-import galleryImage12 from "../../assets/activity/activity4.jpg";
+import galleryImage9 from "../../assets/activity/activityAddon1-2.jpg";
+import galleryImage10 from "../../assets/activity/activityAddon2-2.jpg";
+import galleryImage11 from "../../assets/activity/activityAddon3-2.jpg";
+import galleryImage12 from "../../assets/activity/activityAddon4-2.jpg";
 // Gallery Addon 4
 import galleryImage13 from "../../assets/gallery/gallery1.jpg";
 import galleryImage14 from "../../assets/gallery/gallery2.jpg";
 import galleryImage15 from "../../assets/gallery/gallery3.jpg";
 import galleryImage16 from "../../assets/gallery/gallery4.jpg";
+// Gallery Addon 5
+import galleryImage17 from "../../assets/gallery/gallery1.jpg";
+import galleryImage18 from "../../assets/gallery/gallery2.jpg";
+import galleryImage19 from "../../assets/gallery/gallery3.jpg";
+import galleryImage20 from "../../assets/gallery/gallery4.jpg";
+// Gallery Addon 6
+import galleryImage21 from "../../assets/gallery/gallery1.jpg";
+import galleryImage22 from "../../assets/gallery/gallery2.jpg";
+import galleryImage23 from "../../assets/gallery/gallery3.jpg";
+import galleryImage24 from "../../assets/gallery/gallery4.jpg";
 
 export const galleryAddonSet1 = [
   {
@@ -28,19 +38,19 @@ export const galleryAddonSet1 = [
   },
   {
     url: galleryImage2,
-    title: "Utforska 2",
+    title: "Omberget",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
     link: "/utforska-2",
   },
   {
     url: galleryImage3,
-    title: "Utforska 3",
+    title: "Ljumviken",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
     link: "/utforska-3",
   },
   {
     url: galleryImage4,
-    title: "Storsjö",
+    title: "Lövösundet",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
     link: "/utforska-4",
   },
@@ -55,7 +65,7 @@ export const galleryAddonSet2 = [
   },
   {
     url: galleryImage6,
-    title: "Utforska 6",
+    title: "Solbackakyrkan",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
     link: "/utforska-6",
   },
@@ -76,25 +86,25 @@ export const galleryAddonSet2 = [
 export const galleryAddonSet3 = [
   {
     url: galleryImage9,
-    title: "Aktiviteter 1",
+    title: "Sandviks Idrottsklubb",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
     link: "/aktiviteter-1",
   },
   {
     url: galleryImage10,
-    title: "Aktiviteter 2",
+    title: "Elljusspåret",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
     link: "/aktiviteter-2",
   },
   {
     url: galleryImage11,
-    title: "Aktiviteter 3",
+    title: "Umeå Golfklubb",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
     link: "/aktiviteter-3",
   },
   {
     url: galleryImage12,
-    title: "Aktiviteter 4",
+    title: "Storsjöhallen",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
     link: "/aktiviteter-4",
   },
@@ -124,5 +134,59 @@ export const galleryAddonSet4 = [
     title: "Galleri 4",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
     link: "/galleri-4",
+  },
+];
+
+export const galleryAddonSet5 = [
+  {
+    url: galleryImage17,
+    title: "Utforska 1",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    link: "/aktiviteter-5",
+  },
+  {
+    url: galleryImage18,
+    title: "Omberget",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    link: "/aktiviteter-6",
+  },
+  {
+    url: galleryImage19,
+    title: "Ljumviken",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
+    link: "/aktiviteter-7",
+  },
+  {
+    url: galleryImage20,
+    title: "Lövösundet",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
+    link: "/aktiviteter-8",
+  },
+];
+
+export const galleryAddonSet6 = [
+  {
+    url: galleryImage21,
+    title: "Utforska 1",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    link: "/galleri-5",
+  },
+  {
+    url: galleryImage22,
+    title: "Omberget",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    link: "/galleri-6",
+  },
+  {
+    url: galleryImage23,
+    title: "Ljumviken",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
+    link: "/galleri-7",
+  },
+  {
+    url: galleryImage24,
+    title: "Lövösundet",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
+    link: "/galleri-8",
   },
 ];

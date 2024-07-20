@@ -192,26 +192,6 @@ const Nav = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/utforska-1" activeclassname={styles.active}>
-                        <h5>Första utforska länk</h5>
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/utforska-2" activeclassname={styles.active}>
-                        <h5>Andra utforska länk</h5>
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/utforska-3" activeclassname={styles.active}>
-                        <h5>Tredje utforska länk</h5>
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/utforska-4" activeclassname={styles.active}>
-                        <h5>Fjärde utforska länk</h5>
-                      </NavLink>
-                    </li>
-                    <li>
                       <NavLink to="/utforska-5" activeclassname={styles.active}>
                         <h5>Femte utforska länk</h5>
                       </NavLink>
@@ -259,34 +239,34 @@ const Nav = () => {
                     </li>
                     <li>
                       <NavLink
-                        to="/aktiviteter-1"
+                        to="/aktiviteter-5"
                         activeclassname={styles.active}
                       >
-                        <h5>Först aktiviteter länk</h5>
+                        <h5>Femte aktiviteter länk</h5>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink
-                        to="/aktiviteter-2"
+                        to="/aktiviteter-6"
                         activeclassname={styles.active}
                       >
-                        <h5>Andra aktiviteter länk</h5>
+                        <h5>Sjätte aktiviteter länk</h5>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink
-                        to="/aktiviteter-3"
+                        to="/aktiviteter-7"
                         activeclassname={styles.active}
                       >
-                        <h5>Tredje aktiviteter länk</h5>
+                        <h5>Sjunde aktiviteter länk</h5>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink
-                        to="/aktiviteter-4"
+                        to="/aktiviteter-8"
                         activeclassname={styles.active}
                       >
-                        <h5>Fjärde aktiviteter länk</h5>
+                        <h5>Åttonde aktiviteter länk</h5>
                       </NavLink>
                     </li>
                   </ul>
@@ -313,23 +293,23 @@ const Nav = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/galleri-1" activeclassname={styles.active}>
-                        <h5>Först galleri länk</h5>
+                      <NavLink to="/galleri-5" activeclassname={styles.active}>
+                        <h5>Femte galleri länk</h5>
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/galleri-2" activeclassname={styles.active}>
-                        <h5>Andra galleri länk</h5>
+                      <NavLink to="/galleri-6" activeclassname={styles.active}>
+                        <h5>Sjätte galleri länk</h5>
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/galleri-3" activeclassname={styles.active}>
-                        <h5>Tredje galleri länk</h5>
+                      <NavLink to="/galleri-7" activeclassname={styles.active}>
+                        <h5>Sjunde galleri länk</h5>
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/galleri-4" activeclassname={styles.active}>
-                        <h5>Fjärde galleri länk</h5>
+                      <NavLink to="/galleri-8" activeclassname={styles.active}>
+                        <h5>Åttonde galleri länk</h5>
                       </NavLink>
                     </li>
                   </ul>

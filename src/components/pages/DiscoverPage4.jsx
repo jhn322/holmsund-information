@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { setDocumentTitle } from "../utils/setDocumentTitle";
 import LayoutPage from "../layouts/LayoutPage";
 import styles from "../../styles/pages/AllPage.module.css";
-import backgroundImage from "../../assets/discover/discoverPage4.jpeg";
+import backgroundImage from "../../assets/discover/discoverPage4.jpg";
 
 const DiscoverPage4 = () => {
   useEffect(() => {
@@ -11,7 +11,7 @@ const DiscoverPage4 = () => {
 
   return (
     <LayoutPage
-      headerTitle="Storsjö"
+      headerTitle="Lövösundet"
       headerBackgroundImage={backgroundImage}
       renderDiscoverAddon3={true}
       renderActivityAddon4={true}

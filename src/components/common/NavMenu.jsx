@@ -138,7 +138,7 @@ const NavMenu = ({
                       to="/aktiviteter-1"
                       activeclassname={styles.active}
                     >
-                      <h5>Första aktiviteter länken</h5>
+                      <h5>Sandviks Idrottsklubb</h5>
                     </NavLink>
                   </li>
                   <li>
@@ -146,7 +146,7 @@ const NavMenu = ({
                       to="/aktiviteter-2"
                       activeclassname={styles.active}
                     >
-                      <h5>Andra aktiviteter länken</h5>
+                      <h5>Elljusspåret</h5>
                     </NavLink>
                   </li>
                   <li>
@@ -154,7 +154,7 @@ const NavMenu = ({
                       to="/aktiviteter-3"
                       activeclassname={styles.active}
                     >
-                      <h5>Tredje aktiviteter länken</h5>
+                      <h5>Umeå Golfklubb</h5>
                     </NavLink>
                   </li>
                   <li>
@@ -162,7 +162,7 @@ const NavMenu = ({
                       to="/aktiviteter-4"
                       activeclassname={styles.active}
                     >
-                      <h5>Fjärde aktiviteter länken</h5>
+                      <h5>Storsjöhallen</h5>
                     </NavLink>
                   </li>
                 </div>
@@ -223,26 +223,6 @@ const NavMenu = ({
                   <li>
                     <NavLink to="/utforska-4" activeclassname={styles.active}>
                       <h5>Fjärde utforska länken</h5>
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/utforska-5" activeclassname={styles.active}>
-                      <h5>Femte utforska länken</h5>
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/utforska-6" activeclassname={styles.active}>
-                      <h5>Sjätte utforska länken</h5>
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/utforska-7" activeclassname={styles.active}>
-                      <h5>Sjunde utforska länken</h5>
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/utforska-8" activeclassname={styles.active}>
-                      <h5>Åttonde utforska länken</h5>
                     </NavLink>
                   </li>
                 </div>

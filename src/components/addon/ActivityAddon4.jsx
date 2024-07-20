@@ -222,7 +222,7 @@ const Carousel = () => {
   );
 };
 
-const ActivityAddon1 = () => {
+const ActivityAddon4 = () => {
   return (
     <aside
       className={`${styles.featuredContainer} ${styles2.featuredContainer}`}
@@ -240,4 +240,4 @@ const ActivityAddon1 = () => {
   );
 };
 
-export default ActivityAddon1;
+export default ActivityAddon4;

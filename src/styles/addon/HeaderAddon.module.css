@@ -24,7 +24,7 @@ body {
   overflow: hidden;
   background-color: rgb(14, 14, 14);
   padding: 2rem;
-  transition: opacity 2s ease-in-out, background-image 2s ease-in-out;
+  transition: opacity 1.5s ease-in-out, background-image 1.5s ease-in-out;
   opacity: 0;
 }
 

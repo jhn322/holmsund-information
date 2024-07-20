@@ -11,7 +11,7 @@ const DiscoverPage3 = () => {
 
   return (
     <LayoutPage
-      headerTitle="Discover Page 3"
+      headerTitle="Ljumviken"
       headerBackgroundImage={backgroundImage}
       renderDiscoverAddon1={true}
       renderActivityAddon3={true}
@@ -20,7 +20,7 @@ const DiscoverPage3 = () => {
       galleryTitle3="Aktiviteter"
     >
       <article className={styles.container}>
-        <h2 className={styles.title}>Discover 3</h2>
+        <h2 className={styles.title}>Ljumviken</h2>
         <p className={styles.boldText}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
           omnis possimus incidunt quo voluptatibus sunt libero.

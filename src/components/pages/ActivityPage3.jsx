@@ -50,7 +50,7 @@ const ActivityPage3 = () => {
 
   return (
     <LayoutPage
-      headerTitle="Activity Page 3"
+      headerTitle="Umeå Golfklubb"
       headerBackgroundImage={backgroundImage}
       renderDiscoverAddon1={true}
       renderActivityAddon2={true}
@@ -60,7 +60,7 @@ const ActivityPage3 = () => {
     >
       <main className={styles.container}>
         <header>
-          <h2 className={styles.title}>Activity Page 3</h2>
+          <h2 className={styles.title}>Umeå Golfklubb</h2>
         </header>
         <section>
           <p className={styles.boldText}>
