@@ -4,7 +4,7 @@ import { galleryAddonSet4 } from "../data/GalleryAddonSet";
 import { trackGalleryElementClick } from "../analytics/addon";
 import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
 import styles from "../../styles/home/Gallery.module.css";
-import styles2 from "../../styles/addon/GalleryAddon4.module.css";
+import styles2 from "../../styles/addon/GalleryAddon5.module.css";
 import staticGalleryImage from "../../assets/gallery/staticGallery.jpg";
 import galleryCircle from "../../assets/other/circle.png";
 

@@ -1,0 +1,41 @@
+.galleryContainer {
+  background-color: var(--green-addon-color);
+}
+
+.galleryTitle {
+  top: -42px;
+  left: 40px;
+  line-height: 2.5rem;
+}
+
+/* Small Tablet */
+@media only screen and (min-width: 600px) and (max-width: 769px) {
+  .galleryTitle {
+    top: -51px;
+    line-height: 3rem;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 770px) and (max-width: 1199px) {
+  .galleryTitle {
+    top: -56px;
+    line-height: 3.25rem;
+  }
+}
+
+/* Medium Desktop */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .galleryTitle {
+    top: -73px;
+    line-height: 4.25rem;
+  }
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1400px) {
+  .galleryTitle {
+    top: -73px;
+    line-height: 4.25rem;
+  }
+}

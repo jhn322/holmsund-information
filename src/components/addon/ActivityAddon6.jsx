@@ -4,7 +4,7 @@ import { activitySlides4 } from "../data/ActivityAddonSet";
 import { trackActivityElementClick } from "../analytics/addon";
 import { RxArrowRight } from "react-icons/rx";
 import styles from "../../styles/home/Activity.module.css";
-import styles2 from "../../styles/addon/ActivityAddon4.module.css";
+import styles2 from "../../styles/addon/ActivityAddon6.module.css";
 import featuredCircle from "../../assets/other/circle.png";
 
 const Carousel = () => {
