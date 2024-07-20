@@ -13,11 +13,6 @@ const DiscoverPage1 = () => {
     <LayoutPage
       headerTitle="Discover Page 1"
       headerBackgroundImage={backgroundImage}
-      renderDiscoverAddon2={true}
-      renderActivityAddon1={true}
-      renderGalleryAddon4={true}
-      discoverTitle2="Utforska 2"
-      galleryTitle4="Galleri"
     >
       <article className={styles.container}>
         <h2 className={styles.title}>Discover 1</h2>

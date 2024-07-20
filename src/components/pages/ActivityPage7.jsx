@@ -50,17 +50,12 @@ const ActivityPage7 = () => {
 
   return (
     <LayoutPage
-      headerTitle="Storsjöhallen"
+      headerTitle="Activity Page 7"
       headerBackgroundImage={backgroundImage}
-      renderDiscoverAddon3={true}
-      renderActivityAddon1={true}
-      renderGalleryAddon2={true}
-      discoverTitle3="Aktiviteter"
-      galleryTitle2="Utforska 2"
     >
       <main className={styles.container}>
         <header>
-          <h2 className={styles.title}>Storsjöhallen</h2>
+          <h2 className={styles.title}>Activity Title 7</h2>
         </header>
         <section>
           <p className={styles.boldText}>

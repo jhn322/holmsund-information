@@ -52,11 +52,6 @@ const ActivityPage1 = () => {
     <LayoutPage
       headerTitle="Sandviks Idrottsklubb"
       headerBackgroundImage={backgroundImage}
-      renderDiscoverAddon2={true}
-      renderActivityAddon4={true}
-      renderGalleryAddon3={true}
-      discoverTitle2="Utforska 2"
-      galleryTitle3="Aktiviteter"
     >
       <main className={styles.container}>
         <header>

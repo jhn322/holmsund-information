@@ -33,130 +33,64 @@ import { ThemeProvider } from "../context/ThemeContext";
 const LayoutPageMain = ({
   children,
   headerTitle,
-  discoverTitle1,
-  discoverTitle2,
-  discoverTitle3,
-  discoverTitle4,
-  discoverTitle5,
-  discoverTitle6,
-  galleryTitle1,
-  galleryTitle2,
-  galleryTitle3,
-  galleryTitle4,
-  galleryTitle5,
-  galleryTitle6,
   headerBackgroundImage,
   renderHeaderAddon = true,
-  renderActivityAddon1 = false,
-  renderActivityAddon2 = false,
-  renderActivityAddon3 = false,
-  renderActivityAddon4 = false,
-  renderActivityAddon5 = false,
-  renderActivityAddon6 = false,
-  renderDiscoverAddon1 = false,
-  renderDiscoverAddon2 = false,
-  renderDiscoverAddon3 = false,
-  renderDiscoverAddon4 = false,
-  renderDiscoverAddon5 = false,
-  renderDiscoverAddon6 = false,
-  renderGalleryAddon1 = false,
-  renderGalleryAddon2 = false,
-  renderGalleryAddon3 = false,
-  renderGalleryAddon4 = false,
-  renderGalleryAddon5 = false,
-  renderGalleryAddon6 = false,
   renderWeatherCircleAddon = false,
+  specificActivityAddon,
+  specificDiscoverAddon,
+  specificGalleryAddon,
 }) => {
-  const [shuffleComponents, setShuffleComponents] = useState([]);
+  const [randomComponents, setRandomComponents] = useState([]);
 
   useEffect(() => {
-    const components = [
-      renderDiscoverAddon1 && (
-        <DiscoverAddon1 key="discover1" title={discoverTitle1} />
-      ),
-      renderDiscoverAddon2 && (
-        <DiscoverAddon2 key="discover2" title={discoverTitle2} />
-      ),
-      renderDiscoverAddon3 && (
-        <DiscoverAddon3 key="discover3" title={discoverTitle3} />
-      ),
-      renderDiscoverAddon4 && (
-        <DiscoverAddon4 key="discover4" title={discoverTitle4} />
-      ),
-      renderDiscoverAddon5 && (
-        <DiscoverAddon5 key="discover5" title={discoverTitle5} />
-      ),
-      renderDiscoverAddon6 && (
-        <DiscoverAddon6 key="discover6" title={discoverTitle6} />
-      ),
-      renderActivityAddon1 && <ActivityAddon1 key="activity1" />,
-      renderActivityAddon2 && <ActivityAddon2 key="activity2" />,
-      renderActivityAddon3 && <ActivityAddon3 key="activity3" />,
-      renderActivityAddon4 && <ActivityAddon4 key="activity4" />,
-      renderActivityAddon5 && <ActivityAddon5 key="activity5" />,
-      renderActivityAddon6 && <ActivityAddon6 key="activity6" />,
-      renderGalleryAddon1 && (
-        <GalleryAddon1 key="gallery1" title={galleryTitle1} />
-      ),
-      renderGalleryAddon2 && (
-        <GalleryAddon2 key="gallery2" title={galleryTitle2} />
-      ),
-      renderGalleryAddon3 && (
-        <GalleryAddon3 key="gallery3" title={galleryTitle3} />
-      ),
-      renderGalleryAddon4 && (
-        <GalleryAddon4 key="gallery4" title={galleryTitle4} />
-      ),
-      renderGalleryAddon5 && (
-        <GalleryAddon4 key="gallery4" title={galleryTitle5} />
-      ),
-      renderGalleryAddon6 && (
-        <GalleryAddon4 key="gallery4" title={galleryTitle6} />
-      ),
-    ].filter(Boolean);
+    const activityComponents = [
+      <ActivityAddon1 key="activity1" />,
+      <ActivityAddon2 key="activity2" />,
+      <ActivityAddon3 key="activity3" />,
+      <ActivityAddon4 key="activity4" />,
+      <ActivityAddon5 key="activity5" />,
+      <ActivityAddon6 key="activity6" />,
+    ];
 
-    // Function to shuffle array
-    const shuffleArray = (array) => {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-      return array;
+    const discoverComponents = [
+      <DiscoverAddon1 key="discover1" title="Utforska 1" />,
+      <DiscoverAddon2 key="discover2" title="Utforska 2" />,
+      <DiscoverAddon3 key="discover3" title="Utforska 3" />,
+      <DiscoverAddon4 key="discover4" title="Utforska 4" />,
+      <DiscoverAddon5 key="discover5" title="Utforska 5" />,
+      <DiscoverAddon6 key="discover6" title="Utforska 6" />,
+    ];
+
+    const galleryComponents = [
+      <GalleryAddon1 key="gallery1" title="Aktiviteter 1" />,
+      <GalleryAddon2 key="gallery2" title="Aktiviteter 2" />,
+      <GalleryAddon3 key="gallery3" title="Aktiviteter 3" />,
+      <GalleryAddon4 key="gallery4" title="Aktiviteter 4" />,
+      <GalleryAddon5 key="gallery5" title="Aktiviteter 5" />,
+      <GalleryAddon6 key="gallery6" title="Aktiviteter 6" />,
+    ];
+
+    const getRandomComponent = (array) => {
+      return array[Math.floor(Math.random() * array.length)];
     };
 
-    setShuffleComponents(shuffleArray(components));
-  }, [
-    renderActivityAddon1,
-    renderActivityAddon2,
-    renderActivityAddon3,
-    renderActivityAddon4,
-    renderActivityAddon5,
-    renderActivityAddon6,
-    renderDiscoverAddon1,
-    renderDiscoverAddon2,
-    renderDiscoverAddon3,
-    renderDiscoverAddon4,
-    renderDiscoverAddon5,
-    renderDiscoverAddon6,
-    renderGalleryAddon1,
-    renderGalleryAddon2,
-    renderGalleryAddon3,
-    renderGalleryAddon4,
-    renderGalleryAddon5,
-    renderGalleryAddon6,
-    discoverTitle1,
-    discoverTitle2,
-    discoverTitle3,
-    discoverTitle4,
-    discoverTitle5,
-    discoverTitle6,
-    galleryTitle1,
-    galleryTitle2,
-    galleryTitle3,
-    galleryTitle4,
-    galleryTitle5,
-    galleryTitle6,
-  ]);
+    const selectedComponents = [
+      specificActivityAddon || getRandomComponent(activityComponents),
+      specificDiscoverAddon || getRandomComponent(discoverComponents),
+      specificGalleryAddon || getRandomComponent(galleryComponents),
+    ];
+
+    // Shuffle the selected components
+    for (let i = selectedComponents.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [selectedComponents[i], selectedComponents[j]] = [
+        selectedComponents[j],
+        selectedComponents[i],
+      ];
+    }
+
+    setRandomComponents(selectedComponents);
+  }, [specificActivityAddon, specificDiscoverAddon, specificGalleryAddon]);
 
   return (
     <ThemeProvider>
@@ -173,7 +107,7 @@ const LayoutPageMain = ({
         <main role="main">
           <section>{children}</section>
           <SeparatorAddon />
-          {shuffleComponents}
+          {randomComponents}
           <Extra />
           <ScrollDown />
           <ScrollUp />

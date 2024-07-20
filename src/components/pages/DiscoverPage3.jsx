@@ -10,15 +10,7 @@ const DiscoverPage3 = () => {
   }, []);
 
   return (
-    <LayoutPage
-      headerTitle="Ljumviken"
-      headerBackgroundImage={backgroundImage}
-      renderDiscoverAddon1={true}
-      renderActivityAddon3={true}
-      renderGalleryAddon3={true}
-      discoverTitle1="Utforska 1"
-      galleryTitle3="Aktiviteter"
-    >
+    <LayoutPage headerTitle="Ljumviken" headerBackgroundImage={backgroundImage}>
       <article className={styles.container}>
         <h2 className={styles.title}>Ljumviken</h2>
         <p className={styles.boldText}>

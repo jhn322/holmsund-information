@@ -15,11 +15,6 @@ const GalleryPage1 = () => {
     <LayoutPage
       headerTitle="Gallery Page 1"
       headerBackgroundImage={backgroundImage}
-      renderDiscoverAddon1={true}
-      renderActivityAddon2={true}
-      renderGalleryAddon4={true}
-      discoverTitle1="Utforska 1"
-      galleryTitle4="Galleri"
     >
       <article className={styles.container}>
         <h2 className={styles.title}>Gallery 1</h2>
