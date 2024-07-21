@@ -17,7 +17,8 @@ const Carousel = () => {
   const currentPath = location.pathname;
   const threshold = 10;
 
-  const truncateDescription = (text, wordLimit) => {
+  const truncateDescription = (text = "", wordLimit) => {
+    if (!text) return "";
     const words = text.split(" ");
     if (words.length > wordLimit) {
       return words.slice(0, wordLimit).join(" ") + "...";
@@ -149,9 +150,9 @@ const Carousel = () => {
                   >
                     <div className={styles.imgContainer}>
                       <img src={slide.src} alt={slide.title} />
-                    </div>
-                    <div className={styles.slideCounter}>
-                      {index + 1}/{activitySlides3.length}
+                      <div className={styles.slideCounter}>
+                        {index + 1}/{activitySlides3.length}
+                      </div>
                     </div>
                   </a>
                 )}

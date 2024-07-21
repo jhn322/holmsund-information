@@ -17,7 +17,8 @@ const Carousel = () => {
   const currentPath = location.pathname;
   const threshold = 10;
 
-  const truncateDescription = (text, wordLimit) => {
+  const truncateDescription = (text = "", wordLimit) => {
+    if (!text) return "";
     const words = text.split(" ");
     if (words.length > wordLimit) {
       return words.slice(0, wordLimit).join(" ") + "...";
@@ -222,7 +223,7 @@ const Carousel = () => {
   );
 };
 
-const ActivityAddon4 = () => {
+const ActivityAddon5 = () => {
   return (
     <aside
       className={`${styles.featuredContainer} ${styles2.featuredContainer}`}
@@ -240,4 +241,4 @@ const ActivityAddon4 = () => {
   );
 };
 
-export default ActivityAddon4;
+export default ActivityAddon5;

@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
-import { activitySlides4 } from "../data/ActivityAddonSet";
+import { activitySlides5 } from "../data/ActivityAddonSet";
 import { trackActivityElementClick } from "../analytics/addon";
 import { RxArrowRight } from "react-icons/rx";
 import styles from "../../styles/home/Activity.module.css";
@@ -17,7 +17,8 @@ const Carousel = () => {
   const currentPath = location.pathname;
   const threshold = 10;
 
-  const truncateDescription = (text, wordLimit) => {
+  const truncateDescription = (text = "", wordLimit) => {
+    if (!text) return "";
     const words = text.split(" ");
     if (words.length > wordLimit) {
       return words.slice(0, wordLimit).join(" ") + "...";
@@ -27,14 +28,14 @@ const Carousel = () => {
 
   const handlePrev = () => {
     setActiveIndex((prevIndex) =>
-      prevIndex === 0 ? activitySlides4.length - 1 : prevIndex - 1
+      prevIndex === 0 ? activitySlides5.length - 1 : prevIndex - 1
     );
     setDeltaX(0);
   };
 
   const handleNext = () => {
     setActiveIndex((prevIndex) =>
-      prevIndex === activitySlides4.length - 1 ? 0 : prevIndex + 1
+      prevIndex === activitySlides5.length - 1 ? 0 : prevIndex + 1
     );
     setDeltaX(0);
   };
@@ -96,7 +97,7 @@ const Carousel = () => {
               transition: isSwiping ? "none" : "transform 0.3s ease",
             }}
           >
-            {activitySlides4.map((slide, index) => (
+            {activitySlides5.map((slide, index) => (
               <figure
                 key={index}
                 className={`${styles.slide} ${
@@ -150,7 +151,7 @@ const Carousel = () => {
                     <div className={styles.imgContainer}>
                       <img src={slide.src} alt={slide.title} />
                       <div className={styles.slideCounter}>
-                        {index + 1}/{activitySlides4.length}
+                        {index + 1}/{activitySlides5.length}
                       </div>
                     </div>
                   </a>

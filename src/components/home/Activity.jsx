@@ -13,7 +13,8 @@ const ActivityCarousel = () => {
   const initialTouch = useRef({ x: 0, y: 0 });
   const threshold = 10;
 
-  const truncateDescription = (text, wordLimit) => {
+  const truncateDescription = (text = "", wordLimit) => {
+    if (!text) return "";
     const words = text.split(" ");
     if (words.length > wordLimit) {
       return words.slice(0, wordLimit).join(" ") + "...";

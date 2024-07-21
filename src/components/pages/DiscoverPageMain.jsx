@@ -22,7 +22,7 @@ const DiscoverPageMain = () => {
 
   const gridImages = [
     { src: discoverPageMain1, title: "Title 1", path: "/utforska-1" },
-    { src: discoverPageMain2, title: "Omberget", path: "/utforska-2" },
+    { src: discoverPageMain2, title: "Title 2", path: "/utforska-2" },
     { src: discoverPageMain3, title: "Ljumviken", path: "/utforska-3" },
     { src: discoverPageMain4, title: "Lövösundet", path: "/utforska-4" },
     { src: discoverPageMain5, title: "Title 5", path: "/utforska-5" },

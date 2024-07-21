@@ -1,59 +1,59 @@
 // Activity Addon 1
-import activityImage1 from "../../assets/discover/discover1.jpg";
-import activityImage2 from "../../assets/discover/discoverAddon2-1.jpg";
-import activityImage3 from "../../assets/discover/discover3.jpg";
-import activityImage4 from "../../assets/discover/discoverAddon4-1.jpg";
+import image1 from "../../assets/discover/discoverAddon9.jpg";
+import image2 from "../../assets/discover/discoverAddon10.jpg";
+import image3 from "../../assets/discover/discoverAddon11.jpg";
+import image4 from "../../assets/discover/discoverAddon12.jpg";
 // Activity Addon 2
-import activityImage5 from "../../assets/discover/discover5.jpg";
-import activityImage6 from "../../assets/discover/discoverAddon6-1.jpg";
-import activityImage7 from "../../assets/discover/discover7.jpg";
-import activityImage8 from "../../assets/discover/discover8.jpg";
+import image5 from "../../assets/discover/discoverAddon13.jpg";
+import image6 from "../../assets/discover/discoverAddon14.jpg";
+import image7 from "../../assets/discover/discoverAddon15.jpg";
+import image8 from "../../assets/discover/discoverAddon16.jpg";
 // Activity Addon 3
-import activityImage9 from "../../assets/activity/activityAddon1-1.jpg";
-import activityImage10 from "../../assets/activity/activityAddon2-1.jpg";
-import activityImage11 from "../../assets/activity/activityAddon3-1.jpg";
-import activityImage12 from "../../assets/activity/activityAddon4-1.jpg";
+import image9 from "../../assets/activity/activityAddon9.jpg";
+import image10 from "../../assets/activity/activityAddon10.jpg";
+import image11 from "../../assets/activity/activityAddon11.jpg";
+import image12 from "../../assets/activity/activityAddon12.jpg";
 // Activity Addon 4
-import activityImage13 from "../../assets/gallery/gallery1.jpg";
-import activityImage14 from "../../assets/gallery/gallery2.jpg";
-import activityImage15 from "../../assets/gallery/gallery3.jpg";
-import activityImage16 from "../../assets/gallery/gallery4.jpg";
+import image13 from "../../assets/activity/activityAddon13.jpg";
+import image14 from "../../assets/activity/activityAddon14.jpg";
+import image15 from "../../assets/activity/activityAddon15.jpg";
+import image16 from "../../assets/activity/activityAddon16.jpg";
 // Activity Addon 5
-import activityImage17 from "../../assets/gallery/gallery1.jpg";
-import activityImage18 from "../../assets/gallery/gallery2.jpg";
-import activityImage19 from "../../assets/gallery/gallery3.jpg";
-import activityImage20 from "../../assets/gallery/gallery4.jpg";
+import image17 from "../../assets/gallery/galleryAddon9.jpg";
+import image18 from "../../assets/gallery/galleryAddon10.jpg";
+import image19 from "../../assets/gallery/galleryAddon11.jpg";
+import image20 from "../../assets/gallery/galleryAddon12.jpg";
 // Activity Addon 6
-import activityImage21 from "../../assets/gallery/gallery1.jpg";
-import activityImage22 from "../../assets/gallery/gallery2.jpg";
-import activityImage23 from "../../assets/gallery/gallery3.jpg";
-import activityImage24 from "../../assets/gallery/gallery4.jpg";
+import image21 from "../../assets/gallery/galleryAddon13.jpg";
+import image22 from "../../assets/gallery/galleryAddon14.jpg";
+import image23 from "../../assets/gallery/galleryAddon15.jpg";
+import image24 from "../../assets/gallery/galleryAddon16.jpg";
 
 export const activitySlides1 = [
   {
-    src: activityImage1,
+    src: image1,
     title: "Utforska 1",
     description:
       "Fira med oss den 8 juni i Kellogg Mall Park. Upplev en fantastisk kväll med utsökta viner från lokala vingårdar, musik och god mat. Ta chansen att träffa vinmakare och delta i exklusiva vinprovningar.",
     link: "/utforska-1",
   },
   {
-    src: activityImage2,
+    src: image2,
     title: "Omberget",
     description:
       "Katten sov lugnt på den mysiga, varma soffan. Utforska vårt kattmuseum där du kan lära dig om katternas historia och deras roll i olika kulturer.",
     link: "/utforska-2",
   },
   {
-    src: activityImage3,
+    src: image3,
     title: "Ljumviken",
     description:
       "Hon skrattade högt åt det roliga skämtet hennes vän berättade. Välkommen till våra simlektioner, där du kan lära dig att simma eller förbättra dina simfärdigheter. Våra erfarna instruktörer ger personlig uppmärksamhet och ser till att varje lektion är både säker och rolig. Perfekt för alla åldrar och nivåer!",
     link: "/utforska-3",
   },
   {
-    src: activityImage4,
-    title: "Lövösundet",
+    src: image4,
+    title: "Utforska 4",
     description:
       "De kom tidigt, till deras värds stora glädje. Delta i vår spännande auktionsshow där unika föremål från hela världen går under klubban. Möt samlare och säljare, och kanske gå hem med en oväntad skatt.",
     link: "/utforska-4",
@@ -62,28 +62,28 @@ export const activitySlides1 = [
 
 export const activitySlides2 = [
   {
-    src: activityImage5,
+    src: image5,
     title: "Utforska 5",
     description:
       "Fira med oss den 8 juni i Kellogg Mall Park. Upplev en fantastisk kväll med utsökta viner från lokala vingårdar, musik och god mat. Ta chansen att träffa vinmakare och delta i exklusiva vinprovningar.",
     link: "/utforska-5",
   },
   {
-    src: activityImage6,
+    src: image6,
     title: "Solbackakyrkan",
     description:
       "Katten sov lugnt på den mysiga, varma soffan. Utforska vårt kattmuseum där du kan lära dig om katternas historia och deras roll i olika kulturer.",
     link: "/utforska-6",
   },
   {
-    src: activityImage7,
-    title: "Utforska 7",
+    src: image7,
+    title: "Lövösundet",
     description:
       "Hon skrattade högt åt det roliga skämtet hennes vän berättade. Välkommen till våra simlektioner, där du kan lära dig att simma eller förbättra dina simfärdigheter. Våra erfarna instruktörer ger personlig uppmärksamhet och ser till att varje lektion är både säker och rolig. Perfekt för alla åldrar och nivåer!",
     link: "/utforska-7",
   },
   {
-    src: activityImage8,
+    src: image8,
     title: "Utforska 8",
     description:
       "De kom tidigt, till deras värds stora glädje. Delta i vår spännande auktionsshow där unika föremål från hela världen går under klubban. Möt samlare och säljare, och kanske gå hem med en oväntad skatt.",
@@ -93,28 +93,28 @@ export const activitySlides2 = [
 
 export const activitySlides3 = [
   {
-    src: activityImage9,
+    src: image9,
     title: "Sandviks Idrottsklubb",
     description:
       "Fira med oss den 8 juni i Kellogg Mall Park. Upplev en fantastisk kväll med utsökta viner från lokala vingårdar, musik och god mat. Ta chansen att träffa vinmakare och delta i exklusiva vinprovningar.",
     link: "/aktiviteter-1",
   },
   {
-    src: activityImage10,
+    src: image10,
     title: "Elljusspåret",
     description:
       "Katten sov lugnt på den mysiga, varma soffan. Utforska vårt kattmuseum där du kan lära dig om katternas historia och deras roll i olika kulturer.",
     link: "/aktiviteter-2",
   },
   {
-    src: activityImage11,
+    src: image11,
     title: "Umeå Golfklubb",
     description:
       "Hon skrattade högt åt det roliga skämtet hennes vän berättade. Välkommen till våra simlektioner, där du kan lära dig att simma eller förbättra dina simfärdigheter. Våra erfarna instruktörer ger personlig uppmärksamhet och ser till att varje lektion är både säker och rolig. Perfekt för alla åldrar och nivåer!",
     link: "/aktiviteter-3",
   },
   {
-    src: activityImage12,
+    src: image12,
     title: "Storsjöhallen",
     description:
       "De kom tidigt, till deras värds stora glädje. Delta i vår spännande auktionsshow där unika föremål från hela världen går under klubban. Möt samlare och säljare, och kanske gå hem med en oväntad skatt.",
@@ -124,28 +124,59 @@ export const activitySlides3 = [
 
 export const activitySlides4 = [
   {
-    src: activityImage13,
+    src: image13,
+    title: "Omberget",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    link: "/aktiviteter-5",
+  },
+  {
+    src: image14,
+    title: "Aktiviteter 6",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    link: "/aktiviteter-6",
+  },
+  {
+    src: image15,
+    title: "Aktiviteter 7",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
+    link: "/aktiviteter-7",
+  },
+  {
+    src: image16,
+    title: "Aktiviteter 8",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
+    link: "/aktiviteter-8",
+  },
+];
+
+export const activitySlides5 = [
+  {
+    src: image17,
     title: "Galleri 1",
     description:
       "Fira med oss den 8 juni i Kellogg Mall Park. Upplev en fantastisk kväll med utsökta viner från lokala vingårdar, musik och god mat. Ta chansen att träffa vinmakare och delta i exklusiva vinprovningar.",
     link: "/galleri-1",
   },
   {
-    src: activityImage14,
+    src: image18,
     title: "Galleri 2",
     description:
       "Katten sov lugnt på den mysiga, varma soffan. Utforska vårt kattmuseum där du kan lära dig om katternas historia och deras roll i olika kulturer.",
     link: "/galleri-2",
   },
   {
-    src: activityImage15,
+    src: image19,
     title: "Galleri 3",
     description:
       "Hon skrattade högt åt det roliga skämtet hennes vän berättade. Välkommen till våra simlektioner, där du kan lära dig att simma eller förbättra dina simfärdigheter. Våra erfarna instruktörer ger personlig uppmärksamhet och ser till att varje lektion är både säker och rolig. Perfekt för alla åldrar och nivåer!",
     link: "/galleri-3",
   },
   {
-    src: activityImage16,
+    src: image20,
     title: "Galleri 4",
     description:
       "De kom tidigt, till deras värds stora glädje. Delta i vår spännande auktionsshow där unika föremål från hela världen går under klubban. Möt samlare och säljare, och kanske gå hem med en oväntad skatt.",
@@ -153,56 +184,33 @@ export const activitySlides4 = [
   },
 ];
 
-export const activitySlides5 = [
-  {
-    url: activityImage17,
-    title: "Utforska 1",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
-    link: "/aktiviteter-5",
-  },
-  {
-    url: activityImage18,
-    title: "Omberget",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
-    link: "/aktiviteter-6",
-  },
-  {
-    url: activityImage19,
-    title: "Ljumviken",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
-    link: "/aktiviteter-7",
-  },
-  {
-    url: activityImage20,
-    title: "Lövösundet",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
-    link: "/aktiviteter-8",
-  },
-];
-
 export const activitySlides6 = [
   {
-    url: activityImage21,
-    title: "Utforska 1",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    src: image21,
+    title: "Galleri 5",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
     link: "/galleri-5",
   },
   {
-    url: activityImage22,
-    title: "Omberget",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    src: image22,
+    title: "Galleri 6",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
     link: "/galleri-6",
   },
   {
-    url: activityImage23,
-    title: "Ljumviken",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
+    src: image23,
+    title: "Galleri 7",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
     link: "/galleri-7",
   },
   {
-    url: activityImage24,
-    title: "Lövösundet",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
+    src: image24,
+    title: "Galleri 8",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
     link: "/galleri-8",
   },
 ];

@@ -10,9 +10,12 @@ const DiscoverPage2 = () => {
   }, []);
 
   return (
-    <LayoutPage headerTitle="Omberget" headerBackgroundImage={backgroundImage}>
+    <LayoutPage
+      headerTitle="Discover Page 2"
+      headerBackgroundImage={backgroundImage}
+    >
       <article className={styles.container}>
-        <h2 className={styles.title}>Omberget</h2>
+        <h2 className={styles.title}>Discover 2</h2>
         <p className={styles.boldText}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
           omnis possimus incidunt quo voluptatibus sunt libero.

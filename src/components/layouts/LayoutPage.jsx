@@ -52,7 +52,7 @@ const LayoutPage = ({ children, headerTitle, headerBackgroundImage }) => {
     ];
 
     const galleryComponents = [
-      <GalleryAddon1 key="gallery1" title="Aktiviteter 1" />,
+      <GalleryAddon1 key="gallery1" title="Utforska 1" />,
       <GalleryAddon2 key="gallery2" title="Aktiviteter 2" />,
       <GalleryAddon3 key="gallery3" title="Aktiviteter 3" />,
       <GalleryAddon4 key="gallery4" title="Aktiviteter 4" />,

@@ -12,6 +12,10 @@ import galleryPage1 from "../../assets/gallery/galleryPageMain1.jpg";
 import galleryPage2 from "../../assets/gallery/galleryPageMain2.jpg";
 import galleryPage3 from "../../assets/gallery/galleryPageMain3.jpg";
 import galleryPage4 from "../../assets/gallery/galleryPageMain4.jpg";
+import galleryPage5 from "../../assets/gallery/galleryPageMain5.jpg";
+import galleryPage6 from "../../assets/gallery/galleryPageMain6.jpg";
+import galleryPage7 from "../../assets/gallery/galleryPageMain7.jpg";
+import galleryPage8 from "../../assets/gallery/galleryPageMain8.jpg";
 
 const GalleryPageMain = () => {
   const headerImages = [header9, header10, header11, header12];
@@ -21,10 +25,10 @@ const GalleryPageMain = () => {
     { src: galleryPage2, title: "Title 2", path: "/galleri-2" },
     { src: galleryPage3, title: "Title 3", path: "/galleri-3" },
     { src: galleryPage4, title: "Title 4", path: "/galleri-4" },
-    { src: galleryPage1, title: "Title 1", path: "/galleri-5" },
-    { src: galleryPage2, title: "Title 2", path: "/galleri-6" },
-    { src: galleryPage3, title: "Title 3", path: "/galleri-7" },
-    { src: galleryPage4, title: "Title 4", path: "/galleri-8" },
+    { src: galleryPage5, title: "Title 5", path: "/galleri-5" },
+    { src: galleryPage6, title: "Title 6", path: "/galleri-6" },
+    { src: galleryPage7, title: "Title 7", path: "/galleri-7" },
+    { src: galleryPage8, title: "Title 8", path: "/galleri-8" },
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

@@ -217,7 +217,7 @@ const NavMenu = ({
                   </li>
                   <li>
                     <NavLink to="/utforska-3" activeclassname={styles.active}>
-                      <h5>Tredje utforska länken</h5>
+                      <h5>Ljumviken</h5>
                     </NavLink>
                   </li>
                   <li>

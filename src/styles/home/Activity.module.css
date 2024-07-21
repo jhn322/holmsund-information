@@ -210,7 +210,7 @@
 }
 
 /* Small Tablet */
-@media only screen and (min-width: 600px) and (max-width: 769px) {
+@media only screen and (min-width: 600px) and (max-width: 799px) {
   .caption h3,
   .featuredTitle {
     font-size: 2.25rem;
@@ -222,7 +222,7 @@
 }
 
 /* Desktop */
-@media only screen and (min-width: 770px) and (max-width: 1399px) {
+@media only screen and (min-width: 800px) and (max-width: 1399px) {
   .container {
     overflow: auto;
     max-height: 100vh;

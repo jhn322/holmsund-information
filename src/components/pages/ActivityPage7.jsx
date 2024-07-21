@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import { activityAccordion4 } from "../data/ActivityPageSet";
+import { activityAccordion7 } from "../data/ActivityPageSet";
 import { setDocumentTitle } from "../utils/setDocumentTitle";
 import LayoutPage from "../layouts/LayoutPage";
 import { RxPlus, RxMinus } from "react-icons/rx";
 import styles from "../../styles/pages/AllPage.module.css";
-import backgroundImage from "../../assets/activity/activityPage4.jpg";
+import backgroundImage from "../../assets/activity/activityPage7.jpg";
 
 const AccordionItem = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -88,7 +88,7 @@ const ActivityPage7 = () => {
           </p>
         </section>
         <section className={styles.accordion}>
-          {activityAccordion4.map((item, index) => (
+          {activityAccordion7.map((item, index) => (
             <AccordionItem
               key={index}
               title={item.title}

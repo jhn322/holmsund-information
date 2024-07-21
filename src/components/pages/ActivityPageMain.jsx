@@ -13,7 +13,11 @@ import header8 from "../../assets/header/header8.jpg";
 import activityPage1 from "../../assets/activity/activityPageMain1.jpg";
 import activityPage2 from "../../assets/activity/activityPageMain2.jpg";
 import activityPage3 from "../../assets/activity/activityPageMain3.jpg";
-import activityPage4 from "../../assets/activity/activityPageMain4.jpeg";
+import activityPage4 from "../../assets/activity/activityPageMain4.jpg";
+import activityPage5 from "../../assets/activity/activityPageMain5.jpg";
+import activityPage6 from "../../assets/activity/activityPageMain6.jpg";
+import activityPage7 from "../../assets/activity/activityPageMain7.jpg";
+import activityPage8 from "../../assets/activity/activityPageMain8.jpg";
 
 const ActivityPageMain = () => {
   const headerImages = [header5, header6, header7, header8];
@@ -27,10 +31,10 @@ const ActivityPageMain = () => {
     { src: activityPage2, title: "Elljusspåret", path: "/aktiviteter-2" },
     { src: activityPage3, title: "Umeå Golfklubb", path: "/aktiviteter-3" },
     { src: activityPage4, title: "Storsjöhallen", path: "/aktiviteter-4" },
-    { src: activityPage4, title: "Femte", path: "/aktiviteter-5" },
-    { src: activityPage4, title: "Sjätte", path: "/aktiviteter-6" },
-    { src: activityPage4, title: "Sjunde", path: "/aktiviteter-7" },
-    { src: activityPage4, title: "Åttonde", path: "/aktiviteter-8" },
+    { src: activityPage5, title: "Omberget", path: "/aktiviteter-5" },
+    { src: activityPage6, title: "Sjätte", path: "/aktiviteter-6" },
+    { src: activityPage7, title: "Sjunde", path: "/aktiviteter-7" },
+    { src: activityPage8, title: "Åttonde", path: "/aktiviteter-8" },
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

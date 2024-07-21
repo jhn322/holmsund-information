@@ -17,7 +17,8 @@ const Carousel = () => {
   const currentPath = location.pathname;
   const threshold = 10;
 
-  const truncateDescription = (text, wordLimit) => {
+  const truncateDescription = (text = "", wordLimit) => {
+    if (!text) return "";
     const words = text.split(" ");
     if (words.length > wordLimit) {
       return words.slice(0, wordLimit).join(" ") + "...";

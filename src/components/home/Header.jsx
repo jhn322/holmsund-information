@@ -35,7 +35,7 @@ const Header = () => {
       path: "/aktiviteter",
     },
     { text: `Utforska Holmsund denna ${currentSeason}`, path: "/utforska" },
-    { text: `Ta en titt i Galleriet denna ${currentSeason}`, path: "/galleri" },
+    { text: `Titta in i Galleriet denna ${currentSeason}`, path: "/galleri" },
   ];
 
   const [currentButton, setCurrentButton] = useState(buttonOptions[0]);

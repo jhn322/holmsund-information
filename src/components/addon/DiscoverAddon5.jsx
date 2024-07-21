@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { discoverAddonSet4 } from "../data/DiscoverAddonSet";
+import { discoverAddonSet5 } from "../data/DiscoverAddonSet";
 import { trackDiscoverButtonClick } from "../analytics/addon";
 import styles from "../../styles/home/Discover.module.css";
 
@@ -11,7 +11,7 @@ const DiscoverAddon5 = ({ title }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentPath, setCurrentPath] = useState("");
   const [overlayStates, setOverlayStates] = useState(
-    Array(discoverAddonSet4.length).fill(false)
+    Array(discoverAddonSet5.length).fill(false)
   );
   const [currentPathIndex, setCurrentPathIndex] = useState(-1);
 
@@ -76,11 +76,11 @@ const DiscoverAddon5 = ({ title }) => {
   }, []);
 
   useEffect(() => {
-    const index = discoverAddonSet4.findIndex(
+    const index = discoverAddonSet5.findIndex(
       (card) => card.link === currentPath
     );
     setCurrentPathIndex(index);
-  }, [currentPath, discoverAddonSet4]);
+  }, [currentPath, discoverAddonSet5]);
 
   const handleHover = (index, hovered) => {
     setIsHovered(hovered);
@@ -103,7 +103,7 @@ const DiscoverAddon5 = ({ title }) => {
             <h2>{title}</h2>
           </header>
           <section className={styles.discoverCardContainer}>
-            {discoverAddonSet4.map((card, index) => (
+            {discoverAddonSet5.map((card, index) => (
               <article
                 key={index}
                 className={`${styles.discoverCard} ${

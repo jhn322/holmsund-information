@@ -198,7 +198,7 @@ const Nav = () => {
                     </li>
                     <li>
                       <NavLink to="/utforska-6" activeclassname={styles.active}>
-                        <h5>Sjätte utforska länk</h5>
+                        <h5>Solbackakyrkan</h5>
                       </NavLink>
                     </li>
                     <li>
@@ -242,7 +242,7 @@ const Nav = () => {
                         to="/aktiviteter-5"
                         activeclassname={styles.active}
                       >
-                        <h5>Femte aktiviteter länk</h5>
+                        <h5>Omberget</h5>
                       </NavLink>
                     </li>
                     <li>
@@ -250,7 +250,7 @@ const Nav = () => {
                         to="/aktiviteter-6"
                         activeclassname={styles.active}
                       >
-                        <h5>Sjätte aktiviteter länk</h5>
+                        <h5>Lövösundet</h5>
                       </NavLink>
                     </li>
                     <li>

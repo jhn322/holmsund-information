@@ -18,7 +18,7 @@ export const discoverData = [
   },
   {
     image: discoverImage2,
-    title: "Omberget",
+    title: "Utforska 2",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-2",
   },
@@ -30,7 +30,7 @@ export const discoverData = [
   },
   {
     image: discoverImage4,
-    title: "Lövösundet",
+    title: "Utforska 4",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-4",
   },
@@ -51,7 +51,7 @@ export const insipiredData = [
   },
   {
     image: discoverMoreImage3,
-    title: "Utforska 7",
+    title: "Lövösundet",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
     link: "/utforska-7",
   },

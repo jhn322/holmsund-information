@@ -11,7 +11,7 @@ const DiscoverPage7 = () => {
 
   return (
     <LayoutPage
-      headerTitle="Discover Page 7"
+      headerTitle="Lövösundet"
       headerBackgroundImage={backgroundImage}
     >
       <article className={styles.container}>

@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { galleryAddonSet4 } from "../data/GalleryAddonSet";
+import { galleryAddonSet6 } from "../data/GalleryAddonSet";
 import { trackGalleryElementClick } from "../analytics/addon";
 import { RxChevronLeft, RxChevronRight, RxArrowRight } from "react-icons/rx";
 import styles from "../../styles/home/Gallery.module.css";
@@ -26,13 +26,13 @@ const GalleryAddon6 = ({ title }) => {
 
   const goToPrevSlide = () => {
     const newIndex =
-      (currentIndex - 1 + galleryAddonSet4.length) % galleryAddonSet4.length;
+      (currentIndex - 1 + galleryAddonSet6.length) % galleryAddonSet6.length;
     setCurrentIndex(newIndex);
     setDeltaX(0);
   };
 
   const goToNextSlide = () => {
-    const newIndex = (currentIndex + 1) % galleryAddonSet4.length;
+    const newIndex = (currentIndex + 1) % galleryAddonSet6.length;
     setCurrentIndex(newIndex);
     setDeltaX(0);
   };
@@ -124,7 +124,7 @@ const GalleryAddon6 = ({ title }) => {
                   transition: isSwiping ? "none" : "transform 0.3s ease", // Disable transition during swipe
                 }}
               >
-                {galleryAddonSet4.map((image, index) => (
+                {galleryAddonSet6.map((image, index) => (
                   <figure
                     key={index}
                     tabIndex="0"
@@ -188,21 +188,21 @@ const GalleryAddon6 = ({ title }) => {
               className={`${styles.carouselText} ${styles2.carouselText}`}
             >
               <NavLink
-                to={galleryAddonSet4[currentIndex].link}
-                aria-label={`Läs mer om ${galleryAddonSet4[currentIndex].title}`}
+                to={galleryAddonSet6[currentIndex].link}
+                aria-label={`Läs mer om ${galleryAddonSet6[currentIndex].title}`}
               >
                 <header
                   className={`${styles.hoverContainer} ${styles2.hoverContainer}`}
                 >
-                  <h2>{galleryAddonSet4[currentIndex].title}</h2>
-                  <p>{galleryAddonSet4[currentIndex].text} </p>
+                  <h2>{galleryAddonSet6[currentIndex].title}</h2>
+                  <p>{galleryAddonSet6[currentIndex].text} </p>
                   <div className={styles.linkContainer}>
                     <a
                       className={`${styles.carouselLink} ${styles2.carouselLink}`}
-                      href={galleryAddonSet4[currentIndex].link}
+                      href={galleryAddonSet6[currentIndex].link}
                       onClick={(e) => {
                         if (
-                          currentPath === galleryAddonSet4[currentIndex].link
+                          currentPath === galleryAddonSet6[currentIndex].link
                         ) {
                           e.preventDefault();
                           return;
@@ -210,10 +210,10 @@ const GalleryAddon6 = ({ title }) => {
                         trackElementClickEvent(
                           "carousel_link",
                           "Läs Mer",
-                          galleryAddonSet4[currentIndex].link
+                          galleryAddonSet6[currentIndex].link
                         );
                       }}
-                      aria-label={`Läs mer om ${galleryAddonSet4[currentIndex].title}`}
+                      aria-label={`Läs mer om ${galleryAddonSet6[currentIndex].title}`}
                     >
                       Läs Mer
                     </a>
@@ -223,10 +223,10 @@ const GalleryAddon6 = ({ title }) => {
                   >
                     <a
                       className={`${styles.carouselLink} ${styles2.carouselLink}`}
-                      href={galleryAddonSet4[currentIndex].link}
+                      href={galleryAddonSet6[currentIndex].link}
                       onClick={(e) => {
                         if (
-                          currentPath === galleryAddonSet4[currentIndex].link
+                          currentPath === galleryAddonSet6[currentIndex].link
                         ) {
                           e.preventDefault();
                           return;
@@ -234,10 +234,10 @@ const GalleryAddon6 = ({ title }) => {
                         trackElementClickEvent(
                           "carousel_link",
                           "Läs Mer",
-                          galleryAddonSet4[currentIndex].link
+                          galleryAddonSet6[currentIndex].link
                         );
                       }}
-                      aria-label={`Navigera till ${galleryAddonSet4[currentIndex].title}`}
+                      aria-label={`Navigera till ${galleryAddonSet6[currentIndex].title}`}
                     >
                       <RxArrowRight
                         className={`${styles.arrowIcon} ${styles2.arrowIcon}`}
@@ -249,7 +249,7 @@ const GalleryAddon6 = ({ title }) => {
             </section>
           </article>
           <div className={styles.dotPagination}>
-            {galleryAddonSet4.map((_, index) => (
+            {galleryAddonSet6.map((_, index) => (
               <span
                 key={index}
                 className={`${styles.dot} ${styles2.dot} ${
