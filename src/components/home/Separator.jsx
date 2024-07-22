@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { trackSeparatorLinkClick } from "../analytics/home";
 import { FaTwitter, FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 import styles from "../../styles/home/Separator.module.css";
