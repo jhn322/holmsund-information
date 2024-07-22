@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { setDocumentTitle } from "../utils/setDocumentTitle";
-import { trackMainPagesClick } from "../analytics/pages";
 import LayoutPageMain from "../layouts/LayoutPageMain";
+import { trackMainPagesClick } from "../analytics/pages";
 import styles from "../../styles/pages/AllPageMain.module.css";
 import header9 from "../../assets/header/header9.jpg";
 import header10 from "../../assets/header/header10.jpg";
@@ -32,6 +32,7 @@ const GalleryPageMain = () => {
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const gridRefs = useRef([]);
 
   useEffect(() => {
     setDocumentTitle("Galleri");
@@ -59,6 +60,34 @@ const GalleryPageMain = () => {
     return () => clearInterval(interval);
   }, [headerImages.length]);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.inView);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = gridRefs.current;
+    elements.forEach((element) => {
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      elements.forEach((element) => {
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+    };
+  }, []);
+
   const gridItems = gridImages.map((image, index) => (
     <NavLink
       to={image.path}
@@ -69,7 +98,10 @@ const GalleryPageMain = () => {
         trackMainPagesClick("Grid Image", image.title, image.path);
       }}
     >
-      <div className={styles.gridItem}>
+      <div
+        className={styles.gridItem}
+        ref={(el) => (gridRefs.current[index] = el)}
+      >
         <img src={image.src} alt={`Image ${index}`} />
         <h4 className={styles.title}>{image.title}</h4>
       </div>

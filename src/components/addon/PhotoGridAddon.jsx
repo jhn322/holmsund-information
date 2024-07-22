@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { RxChevronLeft, RxChevronRight, RxCross2 } from "react-icons/rx";
 import styles from "../../styles/addon/PhotoGridAddon.module.css";
 
 const PhotoGridAddon = ({ photos }) => {
   const [isZoomed, setIsZoomed] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const galleryRefs = useRef([]);
 
   const openZoom = (index) => {
     setCurrentIndex(index);
@@ -25,6 +26,34 @@ const PhotoGridAddon = ({ photos }) => {
     );
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.inView);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = galleryRefs.current;
+    elements.forEach((element) => {
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      elements.forEach((element) => {
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+    };
+  }, []);
+
   return (
     <section>
       <div className={styles.gallery}>
@@ -33,6 +62,7 @@ const PhotoGridAddon = ({ photos }) => {
             key={index}
             className={`${styles.galleryItem} ${styles[`item${index + 1}`]}`}
             onClick={() => openZoom(index)}
+            ref={(el) => (galleryRefs.current[index] = el)} // Assign ref
           >
             <img src={photo} alt={`Gallery photo ${index + 1}`} />
           </div>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { setDocumentTitle } from "../utils/setDocumentTitle";
 import LayoutPageMain from "../layouts/LayoutPageMain";
@@ -32,6 +32,7 @@ const DiscoverPageMain = () => {
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const gridRefs = useRef([]);
 
   useEffect(() => {
     setDocumentTitle("Utforska");
@@ -60,17 +61,48 @@ const DiscoverPageMain = () => {
     return () => clearInterval(interval);
   }, [headerImages.length]);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.inView);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = gridRefs.current;
+    elements.forEach((element) => {
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      elements.forEach((element) => {
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+    };
+  }, []);
+
   const gridItems = gridImages.map((image, index) => (
     <NavLink
       to={image.path}
       className={styles.gridItemLink}
-      aria-label="Länkar till utforska sidor"
       key={index}
+      aria-label="Länkar till utforska sidor"
       onClick={() => {
         trackMainPagesClick("Grid Image", image.title, image.path);
       }}
     >
-      <div className={styles.gridItem}>
+      <div
+        className={styles.gridItem}
+        ref={(el) => (gridRefs.current[index] = el)}
+      >
         <img src={image.src} alt={`Image ${index}`} />
         <h4 className={styles.title}>{image.title}</h4>
       </div>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { setDocumentTitle } from "../utils/setDocumentTitle";
 import { trackMainPagesClick } from "../analytics/pages";
@@ -38,6 +38,7 @@ const ActivityPageMain = () => {
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const gridRefs = useRef([]);
 
   useEffect(() => {
     setDocumentTitle("Aktiviteter");
@@ -66,6 +67,34 @@ const ActivityPageMain = () => {
     return () => clearInterval(interval);
   }, [headerImages.length]);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.inView);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = gridRefs.current;
+    elements.forEach((element) => {
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      elements.forEach((element) => {
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+    };
+  }, []);
+
   const gridItems = gridImages.map((image, index) => (
     <NavLink
       to={image.path}
@@ -76,7 +105,10 @@ const ActivityPageMain = () => {
         trackMainPagesClick("Grid Image", image.title, image.path);
       }}
     >
-      <div className={styles.gridItem}>
+      <div
+        className={styles.gridItem}
+        ref={(el) => (gridRefs.current[index] = el)} // Assign ref
+      >
         <img src={image.src} alt={`Image ${index}`} />
         <h4 className={styles.title}>{image.title}</h4>
       </div>
