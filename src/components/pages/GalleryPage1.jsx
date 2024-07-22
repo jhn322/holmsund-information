@@ -1,10 +1,36 @@
 import { useEffect } from "react";
 import { setDocumentTitle } from "../utils/setDocumentTitle";
-import { slideshowSet1 } from "../data/SlideshowSet";
 import LayoutPage from "../layouts/LayoutPage";
-import SlideshowAddon from "../addon/SlideshowAddon";
 import styles from "../../styles/pages/AllPage.module.css";
 import backgroundImage from "../../assets/gallery/galleryPage1.jpg";
+
+import galleryPhoto1 from "../../assets/gallery/galleryPhoto1.jpg";
+import galleryPhoto2 from "../../assets/gallery/galleryPhoto2.jpg";
+import galleryPhoto3 from "../../assets/gallery/galleryPhoto3.jpg";
+import galleryPhoto4 from "../../assets/gallery/galleryPhoto4.jpg";
+import galleryPhoto5 from "../../assets/gallery/galleryPhoto5.jpg";
+import galleryPhoto6 from "../../assets/gallery/galleryPhoto6.jpg";
+import galleryPhoto7 from "../../assets/gallery/galleryPhoto7.jpg";
+import galleryPhoto8 from "../../assets/gallery/galleryPhoto8.jpg";
+import galleryPhoto9 from "../../assets/gallery/galleryPhoto9.jpg";
+import galleryPhoto10 from "../../assets/gallery/galleryPhoto10.jpg";
+import galleryPhoto11 from "../../assets/gallery/galleryPhoto11.jpg";
+import galleryPhoto12 from "../../assets/gallery/galleryPhoto12.jpg";
+
+const galleryPhotos = [
+  galleryPhoto1,
+  galleryPhoto2,
+  galleryPhoto3,
+  galleryPhoto4,
+  galleryPhoto5,
+  galleryPhoto6,
+  galleryPhoto7,
+  galleryPhoto8,
+  galleryPhoto9,
+  galleryPhoto10,
+  galleryPhoto11,
+  galleryPhoto12,
+];
 
 const GalleryPage1 = () => {
   useEffect(() => {
@@ -22,32 +48,18 @@ const GalleryPage1 = () => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
           omnis possimus incidunt quo voluptatibus sunt libero.
         </p>
-        <p className={styles.text}>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex velit eum
-          molestias cupiditate vero, et error sequi quidem. Labore ratione
-          veniam esse, neque iste accusantium accusamus ut eveniet voluptas
-          quos! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
 
-        <p className={styles.text}>
-          Quos nemo nisi nostrum magnam pariatur debitis, necessitatibus
-          repellat rem molestiae et nam ipsum assumenda ipsa esse saepe cumque
-          recusandae vitae molestias? Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Rerum sint vero, ab officia quibusdam dolor?
-          Accusantium maxime ipsam sunt porro id nam sed accusamus, possimus
-          ullam earum iure modi vitae. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit.
-        </p>
-        <p className={styles.text}>
-          Ipsam alias nobis eveniet vero totam sapiente tempora aut dignissimos
-          vel! Fugiat illo, tempora quia voluptatibus exercitationem debitis
-          veritatis facere error omnis. Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Distinctio dolore qui est esse ipsa aliquam minus
-          optio nesciunt quasi? Optio deleniti harum vero quibusdam aspernatur
-          nostrum vel repellendus culpa tempore.
-        </p>
+        <div className={styles.gallery}>
+          {galleryPhotos.map((photo, index) => (
+            <div
+              key={index}
+              className={`${styles.galleryItem} ${styles[`item${index + 1}`]}`}
+            >
+              <img src={photo} alt={`Gallery photo ${index + 1}`} />
+            </div>
+          ))}
+        </div>
       </article>
-      <SlideshowAddon images={slideshowSet1} />
     </LayoutPage>
   );
 };

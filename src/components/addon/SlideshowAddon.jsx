@@ -121,7 +121,7 @@ const SlideshowAddon = ({ images }) => {
     <section>
       <div className={styles.container}>
         <header className={styles.title}>
-          <h3>Mer bilder</h3>
+          <h3>Bilder</h3>
         </header>
         <main>
           <article

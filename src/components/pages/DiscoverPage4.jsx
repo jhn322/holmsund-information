@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { setDocumentTitle } from "../utils/setDocumentTitle";
+import { slideshowSet1 } from "../data/SlideshowSet";
+import SlideshowAddon from "../addon/SlideshowAddon";
 import LayoutPage from "../layouts/LayoutPage";
 import styles from "../../styles/pages/AllPage.module.css";
 import backgroundImage from "../../assets/discover/discoverPage4.jpg";
@@ -45,6 +47,7 @@ const DiscoverPage4 = () => {
           nostrum vel repellendus culpa tempore.
         </p>
       </article>
+      <SlideshowAddon images={slideshowSet1} />
       <section className={styles.mapContainer}>
         <h2 className={styles.title}>Hitta dit</h2>
         <div className={styles.googleMaps}>
