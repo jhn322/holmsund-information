@@ -12,17 +12,24 @@ body {
   padding: 0;
 }
 
-span {
-  margin: 0 4px;
+.separatorSection {
+  position: relative;
 }
 
 .separatorFirst {
   background-color: var(--accent-color);
-  height: 9rem;
+  height: 6rem;
 }
 
-.separatorContent,
-.separatorSecond {
+.separatorContainer {
+  position: relative;
+  z-index: 1;
+}
+
+.separatorContent {
+  height: 18rem;
+  padding: 2rem 0;
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,60 +37,170 @@ span {
   text-align: center;
 }
 
-.separatorContent {
-  height: 18rem;
-  padding: 2rem 0;
-  background-color: var(--background-color);
-}
-
-.separatorText,
-.separatorSecondText {
+.separatorText {
   max-width: 90%;
   padding: 1rem;
   font-size: 1.1rem;
 }
 
-.link,
-.hashtag {
+.socialMediaLinks {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.iconLink {
+  display: flex;
+  align-items: center;
+  color: var(--accent-color);
   font-size: 1.1rem;
-  word-wrap: break-word;
+  margin: 0 0.4rem;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.iconLink:hover {
+  color: var(--nav-color);
+  transform: scale(1.1);
+}
+
+.icon {
+  margin-right: 0.4rem;
+  font-size: 1.25rem;
+}
+
+.hashtagLink {
+  color: var(--accent-color);
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.hashtagLink:hover {
+  color: var(--nav-color);
+  transform: scale(1.05);
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: var(--white-text-color);
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 30rem;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.modalIcon {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.modalIcon svg:hover {
+  color: var(--accent-color);
+}
+
+.redirectButton {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--accent-color);
+  color: var(--white-text-color);
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.redirectButton:hover {
+  background-color: var(--nav-color);
+  color: var(--white-text-color);
+}
+
+.closeIcon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
   color: var(--accent-color);
   transition: color 0.3s;
 }
 
-.link:hover,
-.hashtag:hover {
+.closeIcon:hover {
   color: var(--nav-color);
 }
 
-.hashtag {
-  font-size: 1.3rem;
-}
-
 .separatorSecond {
+  padding: 6rem 0;
   background-color: var(--accent-color);
-  height: 20rem;
-  padding: 2rem 0;
+  text-align: center;
 }
 
 .separatorSecondTitle {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   color: var(--white-text-color);
 }
 
 .separatorSecondText {
-  color: var(--white-text-color);
   font-size: 1.1rem;
+  max-width: 80%;
+  margin: 0 auto;
+  color: var(--white-text-color);
+}
+
+.snippetsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.snippet {
+  background-color: var(--white-text-color);
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 20rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.snippet:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.snippetTitle {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.snippetText {
+  font-size: 1rem;
 }
 
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 599px) {
   .separatorFirst {
-    height: 10rem;
-  }
-
-  .separatorContent {
-    height: 22rem;
+    height: 8rem;
   }
 
   .separatorText,
@@ -94,29 +211,17 @@ span {
   .separatorSecondTitle {
     font-size: 2.5rem;
   }
-
-  .separatorSecond {
-    height: 22rem;
-  }
 }
 
 /* Small Tablet */
 @media only screen and (min-width: 600px) and (max-width: 769px) {
   .separatorFirst {
-    height: 12rem;
-  }
-
-  .separatorContent {
-    height: 24rem;
+    height: 8rem;
   }
 
   .separatorText,
   .separatorSecondText {
     font-size: 1.2rem;
-  }
-
-  .separatorSecond {
-    height: 22rem;
   }
 
   .separatorSecondTitle {
@@ -130,18 +235,10 @@ span {
     height: 10rem;
   }
 
-  .separatorContent {
-    height: 20rem;
-  }
-
   .separatorText,
   .separatorSecondText {
     width: 95%;
     font-size: 1.3rem;
-  }
-
-  .separatorSecond {
-    height: 22rem;
   }
 
   .separatorSecondTitle {
@@ -155,18 +252,10 @@ span {
     height: 10rem;
   }
 
-  .separatorContent {
-    height: 22rem;
-  }
-
   .separatorText,
   .separatorSecondText {
     max-width: 50%;
     font-size: 1.3rem;
-  }
-
-  .separatorSecond {
-    height: 26rem;
   }
 
   .separatorSecondTitle {

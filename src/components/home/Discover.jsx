@@ -89,7 +89,7 @@ const Discover = () => {
       <main ref={discoverContainerRef} className={styles.discoverContainer}>
         <article className={styles.discoverInner}>
           <header className={styles.discoverTitle}>
-            <h2>Att göra {currentYear}</h2>
+            <h2>Platser att besöka {currentYear}</h2>
           </header>
           <section className={styles.discoverCardContainer}>
             {discoverData.map((card, index) => (
