@@ -133,30 +133,6 @@ body {
   background-color: var(--grey-color);
 }
 
-/* Gallery pages */
-.gallery {
-  display: grid;
-  gap: 0.5rem;
-  width: 100%;
-  max-width: 75rem;
-  margin: 4rem auto;
-}
-
-.galleryItem {
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.galleryItem img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.gallery {
-  grid-template-columns: 1fr;
-}
-
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 599px) {
   .boldText,

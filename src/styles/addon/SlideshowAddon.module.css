@@ -310,7 +310,7 @@
   bottom: 6px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(44, 44, 44, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   padding: 3px;
   border-radius: 35px;
   z-index: 10;

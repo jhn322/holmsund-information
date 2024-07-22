@@ -1,36 +1,10 @@
 import { useEffect } from "react";
 import { setDocumentTitle } from "../utils/setDocumentTitle";
+import PhotoGridAddon from "../addon/PhotoGridAddon";
 import LayoutPage from "../layouts/LayoutPage";
 import styles from "../../styles/pages/AllPage.module.css";
 import backgroundImage from "../../assets/gallery/galleryPage1.jpg";
-
-import galleryPhoto1 from "../../assets/gallery/galleryPhoto1.jpg";
-import galleryPhoto2 from "../../assets/gallery/galleryPhoto2.jpg";
-import galleryPhoto3 from "../../assets/gallery/galleryPhoto3.jpg";
-import galleryPhoto4 from "../../assets/gallery/galleryPhoto4.jpg";
-import galleryPhoto5 from "../../assets/gallery/galleryPhoto5.jpg";
-import galleryPhoto6 from "../../assets/gallery/galleryPhoto6.jpg";
-import galleryPhoto7 from "../../assets/gallery/galleryPhoto7.jpg";
-import galleryPhoto8 from "../../assets/gallery/galleryPhoto8.jpg";
-import galleryPhoto9 from "../../assets/gallery/galleryPhoto9.jpg";
-import galleryPhoto10 from "../../assets/gallery/galleryPhoto10.jpg";
-import galleryPhoto11 from "../../assets/gallery/galleryPhoto11.jpg";
-import galleryPhoto12 from "../../assets/gallery/galleryPhoto12.jpg";
-
-const galleryPhotos = [
-  galleryPhoto1,
-  galleryPhoto2,
-  galleryPhoto3,
-  galleryPhoto4,
-  galleryPhoto5,
-  galleryPhoto6,
-  galleryPhoto7,
-  galleryPhoto8,
-  galleryPhoto9,
-  galleryPhoto10,
-  galleryPhoto11,
-  galleryPhoto12,
-];
+import { galleryPhotos1 } from "../data/PhotoGridSet";
 
 const GalleryPage1 = () => {
   useEffect(() => {
@@ -48,17 +22,7 @@ const GalleryPage1 = () => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
           omnis possimus incidunt quo voluptatibus sunt libero.
         </p>
-
-        <div className={styles.gallery}>
-          {galleryPhotos.map((photo, index) => (
-            <div
-              key={index}
-              className={`${styles.galleryItem} ${styles[`item${index + 1}`]}`}
-            >
-              <img src={photo} alt={`Gallery photo ${index + 1}`} />
-            </div>
-          ))}
-        </div>
+        <PhotoGridAddon photos={galleryPhotos1} />
       </article>
     </LayoutPage>
   );
