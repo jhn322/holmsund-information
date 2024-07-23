@@ -13,14 +13,16 @@ const GalleryPage1 = () => {
 
   return (
     <LayoutPage
-      headerTitle="Gallery Page 1"
+      headerTitle="Österfjärden"
       headerBackgroundImage={backgroundImage}
     >
       <article className={styles.container}>
-        <h2 className={styles.title}>Gallery 1</h2>
-        <p className={styles.boldText}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
-          omnis possimus incidunt quo voluptatibus sunt libero.
+        <h2 className={styles.title}>Österfjärden</h2>
+        <p className={styles.text}>
+          Österfjärden är också en populär plats för fiske, där både amatörer
+          och erfarna fiskare kan fånga olika arter av sötvattens- och havsfisk.
+          De lugna vattnen och den omgivande naturen bidrar till en avkopplande
+          och fridfull fiskeupplevelse.
         </p>
         <PhotoGridAddon photos={galleryPhotos1} />
       </article>

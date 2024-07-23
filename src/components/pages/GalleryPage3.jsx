@@ -13,14 +13,15 @@ const GalleryPage3 = () => {
 
   return (
     <LayoutPage
-      headerTitle="Gallery Page 3"
+      headerTitle="Skärgårdsskolan"
       headerBackgroundImage={backgroundImage}
     >
       <article className={styles.container}>
-        <h2 className={styles.title}>Gallery 3</h2>
-        <p className={styles.boldText}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
-          omnis possimus incidunt quo voluptatibus sunt libero.
+        <h2 className={styles.title}>Skärgårdsskolan</h2>
+        <p className={styles.text}>
+          Med fokus på både fysisk och psykisk hälsa erbjuder Skärgårdsskolan
+          ett omfattande stödprogram, inklusive kuratorer och specialpedagoger,
+          för att säkerställa alla elevers välmående och utveckling.
         </p>
         <PhotoGridAddon photos={galleryPhotos3} />
       </article>

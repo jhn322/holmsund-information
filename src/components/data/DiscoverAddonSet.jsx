@@ -140,26 +140,26 @@ export const discoverAddonSet4 = [
 export const discoverAddonSet5 = [
   {
     image: image17,
-    title: "Galleri 1",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    title: "Österfjärden",
+    text: "Under vintermånaderna fryser Österfjärden ofta till, vilket gör den till ett populärt ställe för skridskoåkning och isfiske.",
     link: "/galleri-1",
   },
   {
     image: image18,
-    title: "Galleri 2",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    title: "Storsjöparken",
+    text: "Storsjöparken i Holmsund är ett populärt utflyktsmål för både lokalbefolkningen och besökare. Här finns lekplatser, picknickområden och en sjö med ankor.",
     link: "/galleri-2",
   },
   {
     image: image19,
-    title: "Galleri 3",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    title: "Skärgårdsskolan",
+    text: "En grundskola belägen vid kusten, som erbjuder en trygg och inspirerande lärmiljö för elever från förskoleklass till årskurs 6.",
     link: "/galleri-3",
   },
   {
     image: image20,
-    title: "Galleri 4",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    title: "Holmsunds kyrka",
+    text: "Kyrkan genomgick flera renoveringar och ombyggnationer under 1900-talet för att bevara sin struktur och funktionalitet. En betydande renovering skedde 1940 under ledning av arkitekten Evert Milles, där man både restaurerade och moderniserade kyrkan.",
     link: "/galleri-4",
   },
 ];

@@ -93,11 +93,15 @@
   width: 80%;
   margin: 1rem auto 0;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   padding: 1rem 0;
 }
 
 .caption h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-transform: uppercase;
 }
 

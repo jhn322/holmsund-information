@@ -176,7 +176,7 @@ const Gallery = () => {
                       onClick={() =>
                         trackElementClickEvent(
                           "carousel_link",
-                          "Läs Mer",
+                          "Titta Mer",
                           images[currentIndex].link
                         )
                       }

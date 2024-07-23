@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { trackSeparatorLinkClick } from "../analytics/home";
-import { FaTwitter, FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
+import { FaXTwitter, FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa6";
 import styles from "../../styles/home/Separator.module.css";
 import { RxCross2 } from "react-icons/rx";
 
@@ -43,7 +43,7 @@ const Separator = () => {
               aria-label="Dela din upplevelse på Twitter"
               className={styles.iconLink}
             >
-              <FaTwitter className={styles.icon} /> Twitter
+              <FaXTwitter className={styles.icon} /> Twitter
             </a>
             <a
               href="#"
@@ -96,7 +96,7 @@ const Separator = () => {
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className={styles.modalIcon}>
-                  {modalOpen === "Twitter" && <FaTwitter />}
+                  {modalOpen === "Twitter" && <FaXTwitter />}
                   {modalOpen === "Instagram" && <FaInstagram />}
                   {modalOpen === "Facebook" && <FaFacebook />}
                   {modalOpen === "TikTok" && <FaTiktok />}

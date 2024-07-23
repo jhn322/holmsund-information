@@ -140,26 +140,26 @@ export const galleryAddonSet4 = [
 export const galleryAddonSet5 = [
   {
     url: image17,
-    title: "Galleri 1",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    title: "Österfjärden",
+    text: "Viken är en viktig rastplats för många flyttfåglar, vilket gör den till ett populärt ställe för naturentusiaster. Förutom fågelskådning kan besökare njuta av vandring längs de natursköna stigar som omger området.",
     link: "/galleri-1",
   },
   {
     url: image18,
-    title: "Galleri 2",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    title: "Storsjöparken",
+    text: "Storsjöparken är en plats för olika evenemang och sammankomster under året. Under sommarmånaderna arrangeras det ofta konserter, marknader och familjedagar som lockar både unga och gamla.",
     link: "/galleri-2",
   },
   {
     url: image19,
-    title: "Galleri 3",
+    title: "Skärgårdsskolan",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
     link: "/galleri-3",
   },
   {
     url: image20,
-    title: "Galleri 4",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
+    title: "Holmsunds kyrka",
+    text: "Kyrkans historia och arkitektoniska skönhet gör den till ett viktigt kulturellt och historiskt landmärke i regionen. Dess långvariga närvaro vittnar om den betydelse kyrkan haft och fortfarande har för det lokala samhället. ",
     link: "/galleri-4",
   },
 ];

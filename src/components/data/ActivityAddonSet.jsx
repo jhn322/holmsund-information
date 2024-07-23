@@ -156,30 +156,30 @@ export const activitySlides4 = [
 export const activitySlides5 = [
   {
     src: image17,
-    title: "Galleri 1",
+    title: "Österfjärden",
     description:
-      "Fira med oss den 8 juni i Kellogg Mall Park. Upplev en fantastisk kväll med utsökta viner från lokala vingårdar, musik och god mat. Ta chansen att träffa vinmakare och delta i exklusiva vinprovningar.",
+      "På somrarna lockar Österfjärden även till olika vattensporter som paddling och segling.",
     link: "/galleri-1",
   },
   {
     src: image18,
-    title: "Galleri 2",
+    title: "Storsjöparken",
     description:
-      "Katten sov lugnt på den mysiga, varma soffan. Utforska vårt kattmuseum där du kan lära dig om katternas historia och deras roll i olika kulturer.",
+      "Storsjöparken är en vacker park belägen i Holmsund. Parken erbjuder både grönområden och promenadstigar för avkoppling och friluftsliv.",
     link: "/galleri-2",
   },
   {
     src: image19,
-    title: "Galleri 3",
+    title: "Skärgårdsskolan",
     description:
-      "Hon skrattade högt åt det roliga skämtet hennes vän berättade. Välkommen till våra simlektioner, där du kan lära dig att simma eller förbättra dina simfärdigheter. Våra erfarna instruktörer ger personlig uppmärksamhet och ser till att varje lektion är både säker och rolig. Perfekt för alla åldrar och nivåer!",
+      "Skolan utnyttjar sin unika skärgårdsmiljö för att integrera utomhuspedagogik och naturstudier i undervisningen, vilket främjar elevernas förståelse för miljön.",
     link: "/galleri-3",
   },
   {
     src: image20,
-    title: "Galleri 4",
+    title: "Holmsunds kyrka",
     description:
-      "De kom tidigt, till deras värds stora glädje. Delta i vår spännande auktionsshow där unika föremål från hela världen går under klubban. Möt samlare och säljare, och kanske gå hem med en oväntad skatt.",
+      "Kyrkans altartavla är målad av konstnären Erik Berggren och skänker en djup andakt till besökarna. Inredningen är enkel men stämningsfull, vilket skapar en harmonisk atmosfär.",
     link: "/galleri-4",
   },
 ];

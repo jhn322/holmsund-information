@@ -13,14 +13,16 @@ const GalleryPage2 = () => {
 
   return (
     <LayoutPage
-      headerTitle="Gallery Page 2"
+      headerTitle="Storsjöparken"
       headerBackgroundImage={backgroundImage}
     >
       <article className={styles.container}>
-        <h2 className={styles.title}>Gallery 2</h2>
-        <p className={styles.boldText}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
-          omnis possimus incidunt quo voluptatibus sunt libero.
+        <h2 className={styles.title}>Storsjöparken</h2>
+        <p className={styles.text}>
+          Storsjöparken i Holmsund är en populär park som erbjuder en
+          avkopplande miljö för både lokalbor och besökare. Parken har
+          natursköna promenadstigar, lekplatser för barn och ett vackert
+          sjölandskap som lockar till picknick och friluftsaktiviteter.
         </p>
         <PhotoGridAddon photos={galleryPhotos2} />
       </article>

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { RxChevronLeft, RxChevronRight, RxCross2 } from "react-icons/rx";
 import styles from "../../styles/addon/PhotoGridAddon.module.css";
 
@@ -16,15 +16,15 @@ const PhotoGridAddon = ({ photos }) => {
     setIsZoomed(false);
   };
 
-  const showNext = () => {
+  const showNext = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % photos.length);
-  };
+  }, [photos.length]);
 
-  const showPrev = () => {
+  const showPrev = useCallback(() => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + photos.length) % photos.length
     );
-  };
+  }, [photos.length]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -54,6 +54,39 @@ const PhotoGridAddon = ({ photos }) => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (isZoomed) {
+        if (event.key === "ArrowLeft") {
+          showPrev();
+        } else if (event.key === "ArrowRight") {
+          showNext();
+        } else if (event.key === "Escape") {
+          closeZoom();
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isZoomed, showNext, showPrev]);
+
+  const handleImageClick = (e) => {
+    e.stopPropagation();
+    const rect = e.target.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const width = rect.width;
+
+    if (x < width / 2) {
+      showPrev();
+    } else {
+      showNext();
+    }
+  };
+
   return (
     <section>
       <div className={styles.gallery}>
@@ -62,7 +95,7 @@ const PhotoGridAddon = ({ photos }) => {
             key={index}
             className={`${styles.galleryItem} ${styles[`item${index + 1}`]}`}
             onClick={() => openZoom(index)}
-            ref={(el) => (galleryRefs.current[index] = el)} // Assign ref
+            ref={(el) => (galleryRefs.current[index] = el)}
           >
             <img src={photo} alt={`Gallery photo ${index + 1}`} />
           </div>
@@ -76,6 +109,7 @@ const PhotoGridAddon = ({ photos }) => {
               src={photos[currentIndex]}
               alt={`Gallery photo ${currentIndex + 1}`}
               className={styles.zoomImg}
+              onClick={handleImageClick}
             />
           </div>
           <button

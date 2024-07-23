@@ -56,7 +56,7 @@ const LayoutPage = ({ children, headerTitle, headerBackgroundImage }) => {
       <GalleryAddon2 key="gallery2" title="Aktiviteter 2" />,
       <GalleryAddon3 key="gallery3" title="Aktiviteter 3" />,
       <GalleryAddon4 key="gallery4" title="Aktiviteter 4" />,
-      <GalleryAddon5 key="gallery5" title="Aktiviteter 5" />,
+      <GalleryAddon5 key="gallery5" title="Unika Platser" />,
       <GalleryAddon6 key="gallery6" title="Aktiviteter 6" />,
     ];
 

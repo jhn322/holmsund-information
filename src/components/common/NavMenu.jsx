@@ -267,22 +267,22 @@ const NavMenu = ({
                 <div className={styles.nestedItems}>
                   <li>
                     <NavLink to="/galleri-1" activeclassname={styles.active}>
-                      <h5>Första galleri länken</h5>
+                      <h5>Österfjärden</h5>
                     </NavLink>
                   </li>
                   <li>
                     <NavLink to="/galleri-2" activeclassname={styles.active}>
-                      <h5>Andra galleri länken</h5>
+                      <h5>Storsjöparken</h5>
                     </NavLink>
                   </li>
                   <li>
                     <NavLink to="/galleri-3" activeclassname={styles.active}>
-                      <h5>Tredje galleri länken</h5>
+                      <h5>Skärgårdsskolan</h5>
                     </NavLink>
                   </li>
                   <li>
                     <NavLink to="/galleri-4" activeclassname={styles.active}>
-                      <h5>Fjärde galleri länken</h5>
+                      <h5>Holmsunds kyrka</h5>
                     </NavLink>
                   </li>
                 </div>
