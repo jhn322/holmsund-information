@@ -187,9 +187,9 @@ export const activitySlides5 = [
 export const activitySlides6 = [
   {
     src: image21,
-    title: "Galleri 5",
+    title: "Järnväg",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+      "Holmsunds järnväg är idag en del av det nationella järnvägsnätet och en påminnelse om den industriella utvecklingen i Västerbotten.",
     link: "/galleri-5",
   },
   {

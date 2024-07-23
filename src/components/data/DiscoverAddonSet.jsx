@@ -167,8 +167,8 @@ export const discoverAddonSet5 = [
 export const discoverAddonSet6 = [
   {
     image: image21,
-    title: "Galleri 5",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    title: "Järnväg",
+    text: "Under 1900-talet blev järnvägen en livsnerv för det lokala näringslivet, särskilt för sågverksindustrin som blomstrade i området. Transporter av trä och papper blev mer effektiva och bidrog till ekonomisk tillväxt.",
     link: "/galleri-5",
   },
   {

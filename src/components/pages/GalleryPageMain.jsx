@@ -25,7 +25,7 @@ const GalleryPageMain = () => {
     { src: galleryPage2, title: "Storsjöparken", path: "/galleri-2" },
     { src: galleryPage3, title: "Skärgårdsskolan", path: "/galleri-3" },
     { src: galleryPage4, title: "Holmsunds kyrka", path: "/galleri-4" },
-    { src: galleryPage5, title: "Title 5", path: "/galleri-5" },
+    { src: galleryPage5, title: "Järnväg", path: "/galleri-5" },
     { src: galleryPage6, title: "Title 6", path: "/galleri-6" },
     { src: galleryPage7, title: "Title 7", path: "/galleri-7" },
     { src: galleryPage8, title: "Title 8", path: "/galleri-8" },

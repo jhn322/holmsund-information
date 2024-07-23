@@ -294,7 +294,7 @@ const Nav = () => {
                     </li>
                     <li>
                       <NavLink to="/galleri-5" activeclassname={styles.active}>
-                        <h5>Femte galleri länk</h5>
+                        <h5>Järnväg</h5>
                       </NavLink>
                     </li>
                     <li>

@@ -61,7 +61,8 @@ body {
   transition: color 0.3s, transform 0.3s;
 }
 
-.iconLink:hover {
+.iconLink:hover,
+.iconLink:hover .icon {
   color: var(--nav-color);
   transform: scale(1.1);
 }
@@ -69,18 +70,6 @@ body {
 .icon {
   margin-right: 0.4rem;
   font-size: 1.25rem;
-}
-
-.hashtagLink {
-  color: var(--accent-color);
-  font-size: 1.3rem;
-  text-decoration: none;
-  transition: color 0.3s, transform 0.3s;
-}
-
-.hashtagLink:hover {
-  color: var(--nav-color);
-  transform: scale(1.05);
 }
 
 .modalOverlay {
@@ -110,10 +99,6 @@ body {
   font-size: 3rem;
   color: var(--accent-color);
   margin-bottom: 1rem;
-}
-
-.modalIcon svg:hover {
-  color: var(--accent-color);
 }
 
 .redirectButton {

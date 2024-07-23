@@ -12,15 +12,14 @@ const GalleryPage5 = () => {
   }, []);
 
   return (
-    <LayoutPage
-      headerTitle="Gallery Page 5"
-      headerBackgroundImage={backgroundImage}
-    >
+    <LayoutPage headerTitle="Järnväg" headerBackgroundImage={backgroundImage}>
       <article className={styles.container}>
-        <h2 className={styles.title}>Gallery 5</h2>
+        <h2 className={styles.title}>Järnväg</h2>
         <p className={styles.text}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
-          omnis possimus incidunt quo voluptatibus sunt libero.
+          Holmsunds järnväg byggdes under slutet av 1800-talet, med byggstart år
+          1899 och färdigställande 1901, för att förbättra
+          transportmöjligheterna i regionen. Den blev snabbt en viktig länk för
+          både person- och godstrafik mellan Holmsund och Umeå.
         </p>
         <PhotoGridAddon photos={galleryPhotos5} />
       </article>

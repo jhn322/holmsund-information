@@ -167,8 +167,8 @@ export const galleryAddonSet5 = [
 export const galleryAddonSet6 = [
   {
     url: image21,
-    title: "Galleri 5",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    title: "Järnväg",
+    text: "Holmsunds järnväg är idag en del av det nationella järnvägsnätet och en påminnelse om den industriella utvecklingen i Västerbotten.",
     link: "/galleri-5",
   },
   {
