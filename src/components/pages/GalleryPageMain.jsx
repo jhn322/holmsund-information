@@ -21,10 +21,10 @@ const GalleryPageMain = () => {
   const headerImages = [header9, header10, header11, header12];
 
   const gridImages = [
-    { src: galleryPage1, title: "Title 1", path: "/galleri-1" },
-    { src: galleryPage2, title: "Title 2", path: "/galleri-2" },
-    { src: galleryPage3, title: "Title 3", path: "/galleri-3" },
-    { src: galleryPage4, title: "Title 4", path: "/galleri-4" },
+    { src: galleryPage1, title: "Österfjärden", path: "/galleri-1" },
+    { src: galleryPage2, title: "Storsjöparken", path: "/galleri-2" },
+    { src: galleryPage3, title: "Skärgårdsskolan", path: "/galleri-3" },
+    { src: galleryPage4, title: "Holmsunds kyrka", path: "/galleri-4" },
     { src: galleryPage5, title: "Title 5", path: "/galleri-5" },
     { src: galleryPage6, title: "Title 6", path: "/galleri-6" },
     { src: galleryPage7, title: "Title 7", path: "/galleri-7" },
