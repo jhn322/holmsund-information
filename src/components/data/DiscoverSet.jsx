@@ -12,26 +12,26 @@ import discoverMoreImage4 from "../../assets/discover/discover8.jpg";
 export const discoverData = [
   {
     image: discoverImage1,
-    title: "Utforska 1",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    title: "Bränteberget",
+    text: "På vintern förvandlas Bränteberget till en magisk värld täckt av snö, vilket gör det perfekt för vinteraktiviteter som bobåkning och pulkaåkning.",
     link: "/utforska-1",
   },
   {
     image: discoverImage2,
-    title: "Utforska 2",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    title: "Kajutan",
+    text: "Kajutan i Holmsund är en mysig restaurang belägen vid vattnet, perfekt för en avkopplande middag med vacker utsikt. Här kan du njuta av både klassiska svenska rätter och lokala specialiteter i en avslappnad atmosfär.",
     link: "/utforska-2",
   },
   {
     image: discoverImage3,
     title: "Ljumviken",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    text: "Ljumviken i Holmsund är känd för sitt pittoreska läge vid Bottenviken, med vacker utsikt över vattnet och de omgivande landskapen. Den lugna atmosfären gör det till en perfekt plats för avkopplande promenader eller picknickar vid stranden.",
     link: "/utforska-3",
   },
   {
     image: discoverImage4,
-    title: "Utforska 4",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    title: "Revet",
+    text: "Revet i Holmsund är en vacker kuststräcka som erbjuder en fantastisk utsikt över Bottenviken och de omkringliggande landskapen. Den naturliga skönheten och den fridfulla miljön gör det till en utmärkt plats för avkopplande promenader.",
     link: "/utforska-4",
   },
 ];
@@ -46,7 +46,7 @@ export const insipiredData = [
   {
     image: discoverMoreImage2,
     title: "Solbackakyrkan",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    text: "Kyrkan ligger i en naturskön del av Holmsund, och den omgivande miljön bidrar till en fridfull och inspirerande atmosfär. De gröna omgivningarna gör det till ett trevligt ställe att besöka för både andakt och avkoppling.",
     link: "/utforska-6",
   },
   {
@@ -58,7 +58,7 @@ export const insipiredData = [
   {
     image: discoverMoreImage4,
     title: "Utforska 8",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    text: "Lövösundet spelar en viktig ekologisk roll för Holmsund, då det fungerar som en livsmiljö för olika vattenlevande arter och bidrar till det lokala ekosystemets hälsa och mångfald.",
     link: "/utforska-8",
   },
 ];

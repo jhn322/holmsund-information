@@ -21,10 +21,10 @@ const DiscoverPageMain = () => {
   const headerImages = [header1, header2, header3, header4];
 
   const gridImages = [
-    { src: discoverPageMain1, title: "Title 1", path: "/utforska-1" },
-    { src: discoverPageMain2, title: "Title 2", path: "/utforska-2" },
+    { src: discoverPageMain1, title: "Bränteberget", path: "/utforska-1" },
+    { src: discoverPageMain2, title: "Kajutan", path: "/utforska-2" },
     { src: discoverPageMain3, title: "Ljumviken", path: "/utforska-3" },
-    { src: discoverPageMain4, title: "Title 4", path: "/utforska-4" },
+    { src: discoverPageMain4, title: "Revet", path: "/utforska-4" },
     { src: discoverPageMain5, title: "Title 5", path: "/utforska-5" },
     { src: discoverPageMain6, title: "Solbackakyrkan", path: "/utforska-6" },
     { src: discoverPageMain7, title: "Lövösundet", path: "/utforska-7" },

@@ -22,7 +22,7 @@ body {
 }
 
 .container p {
-  max-width: 36rem;
+  max-width: 40rem;
   line-height: 2rem;
 }
 
@@ -35,6 +35,11 @@ body {
   margin-top: 4rem;
   font-weight: bold;
   font-size: 1.1rem;
+}
+
+.headline {
+  margin-top: 2rem;
+  font-size: 1.3rem;
 }
 
 .text {
@@ -147,6 +152,10 @@ body {
     font-size: 2.5rem;
   }
 
+  .headline {
+    font-size: 1.4rem;
+  }
+
   .boldText,
   .text {
     font-size: 1.3rem;
@@ -161,6 +170,10 @@ body {
 @media only screen and (min-width: 770px) and (max-width: 1099px) {
   .title {
     font-size: 2.5rem;
+  }
+
+  .headline {
+    font-size: 1.5rem;
   }
 
   .boldText,
@@ -222,6 +235,10 @@ body {
 @media only screen and (min-width: 1100px) {
   .title {
     font-size: 3rem;
+  }
+
+  .headline {
+    font-size: 1.5rem;
   }
 
   .boldText,

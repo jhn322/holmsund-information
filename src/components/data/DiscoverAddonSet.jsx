@@ -32,26 +32,26 @@ import image24 from "../../assets/gallery/galleryAddon8.jpg";
 export const discoverAddonSet1 = [
   {
     image: image1,
-    title: "Utforska 1",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    title: "Bränteberget",
+    text: "Berget erbjuder fantastiska vyer över havet och den omgivande skogen, vilket gör det till ett idealiskt mål för naturälskare och fotografer.",
     link: "/utforska-1",
   },
   {
     image: image2,
-    title: "Utforska 2",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    title: "Kajutan",
+    text: "Restaurangens inredning är en blandning av traditionell skärgårdsstil och modern komfort, vilket skapar en unik och välkomnande miljö. Det är en populär plats både för familjer och par som söker en trevlig matupplevelse.",
     link: "/utforska-2",
   },
   {
     image: image3,
     title: "Ljumviken",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    text: "Under vintermånaderna förvandlas Ljumviken till ett vackert vinterlandskap, perfekt för sköna vinterpromenader och skridskoåkning på den frusna ytan.",
     link: "/utforska-3",
   },
   {
     image: image4,
-    title: "Utforska 4",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    title: "Revet",
+    text: "När vinterkylan slår till, förvandlas Revet till ett vinterparadis med möjligheter för skridskoåkning och vinterpromenader. Den snötäckta landskapet ger en särskild charm och rogivande atmosfär.",
     link: "/utforska-4",
   },
 ];
@@ -66,13 +66,13 @@ export const discoverAddonSet2 = [
   {
     image: image6,
     title: "Solbackakyrkan",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    text: "Solbackakyrka är känd för sin moderna arkitektur som skiljer sig från många traditionella kyrkobyggnader. Byggnaden är stilren och funktionell med stora fönster som släpper in mycket ljus, vilket ger en ljus och öppen atmosfär inuti.",
     link: "/utforska-6",
   },
   {
     image: image7,
     title: "Lövösundet",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    text: "Lövösundet, som sträcker sig mellan Umeälven och Bottenhavet, erbjuder en naturskön och fridfull miljö där besökare kan njuta av en mängd friluftsaktiviteter såsom fiske, kajakpaddling och båtturer.",
     link: "/utforska-7",
   },
   {

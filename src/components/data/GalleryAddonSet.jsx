@@ -32,26 +32,26 @@ import image24 from "../../assets/gallery/galleryAddon24.jpg";
 export const galleryAddonSet1 = [
   {
     url: image1,
-    title: "Utforska 1",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    title: "Bränteberget",
+    text: "På vintern är Bränteberget ett omtyckt område för längdskidåkning och andra vintersporter, med välpreparerade spår och stigar.",
     link: "/utforska-1",
   },
   {
     url: image2,
-    title: "Utforska 2",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    title: "Kajutan",
+    text: "Under sommarhalvåret kan du sitta ute på den charmiga uteserveringen och njuta av solens värme och den friska havsbrisen. Restaurangen är också känd för sina läckra efterrätter och fräscha sallader.",
     link: "/utforska-2",
   },
   {
     url: image3,
     title: "Ljumviken",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
+    text: "Området kring Ljumviken erbjuder fina möjligheter för fiske och båtliv, med sin grunda och skyddade bukt. Här kan besökare njuta av både naturens stillhet och de natursköna omgivningarna.",
     link: "/utforska-3",
   },
   {
     url: image4,
-    title: "Utforska 4",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
+    title: "Revet",
+    text: "Området kring Revet är populärt bland lokalbefolkningen för fiske och båtliv, med sina grunda vatten som erbjuder ett skyddat utrymme för aktiviteter. Här kan besökare njuta av både havets lugn och den friska luften.",
     link: "/utforska-4",
   },
 ];
@@ -66,13 +66,13 @@ export const galleryAddonSet2 = [
   {
     url: image6,
     title: "Solbackakyrkan",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    text: "Kyrkan fungerar som en viktig samlingspunkt för lokalsamhället i Holmsund. Utöver gudstjänster hålls det många olika typer av aktiviteter och evenemang här, såsom konserter, föreläsningar och sociala träffar.",
     link: "/utforska-6",
   },
   {
     url: image7,
     title: "Lövösundet",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
+    text: "Den långsamma och slingrande vattenvägen i Lövösundet ger en perfekt bakgrund för avkopplande stunder och erbjuder en unik möjlighet att observera både flora och fauna i en orörd miljö.",
     link: "/utforska-7",
   },
   {

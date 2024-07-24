@@ -207,12 +207,12 @@ const NavMenu = ({
                 <div className={styles.nestedItems}>
                   <li>
                     <NavLink to="/utforska-1" activeclassname={styles.active}>
-                      <h5>Första utforska länken</h5>
+                      <h5>Bränteberget</h5>
                     </NavLink>
                   </li>
                   <li>
                     <NavLink to="/utforska-2" activeclassname={styles.active}>
-                      <h5>Andra utforska länken</h5>
+                      <h5>Kajutan</h5>
                     </NavLink>
                   </li>
                   <li>
@@ -222,7 +222,7 @@ const NavMenu = ({
                   </li>
                   <li>
                     <NavLink to="/utforska-4" activeclassname={styles.active}>
-                      <h5>Fjärde utforska länken</h5>
+                      <h5>Revet</h5>
                     </NavLink>
                   </li>
                 </div>

@@ -1,5 +1,10 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { RxChevronLeft, RxChevronRight, RxCross2 } from "react-icons/rx";
+import {
+  RxChevronLeft,
+  RxChevronRight,
+  RxCross2,
+  RxZoomIn,
+} from "react-icons/rx";
 import styles from "../../styles/addon/PhotoGridAddon.module.css";
 
 const PhotoGridAddon = ({ photos }) => {
@@ -98,6 +103,9 @@ const PhotoGridAddon = ({ photos }) => {
             ref={(el) => (galleryRefs.current[index] = el)}
           >
             <img src={photo} alt={`Gallery photo ${index + 1}`} />
+            <div className={styles.zoomIconOverlay}>
+              <RxZoomIn className={styles.zoomIcon} />
+            </div>
           </div>
         ))}
       </div>

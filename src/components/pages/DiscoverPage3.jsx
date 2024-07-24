@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { setDocumentTitle } from "../utils/setDocumentTitle";
-import { slideshowSet1 } from "../data/SlideshowSet";
+import { slideshowSet3 } from "../data/SlideshowSet";
 import SlideshowAddon from "../addon/SlideshowAddon";
 import LayoutPage from "../layouts/LayoutPage";
 import styles from "../../styles/pages/AllPage.module.css";
@@ -16,40 +16,52 @@ const DiscoverPage3 = () => {
       <article className={styles.container}>
         <h2 className={styles.title}>Ljumviken</h2>
         <p className={styles.boldText}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
-          omnis possimus incidunt quo voluptatibus sunt libero.
+          Holmsund, en liten men livfull ort i Västerbotten, har mycket att
+          erbjuda sina besökare. Bland de många smultronställena finns
+          Ljumviken, ett område som kombinerar naturens skönhet med en mängd
+          aktiviteter för hela familjen.
         </p>
         <p className={styles.text}>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex velit eum
-          molestias cupiditate vero, et error sequi quidem. Labore ratione
-          veniam esse, neque iste accusantium accusamus ut eveniet voluptas
-          quos! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Ljumviken ligger vackert beläget vid Bottenviken och är känt för sin
+          pittoreska strand och grönskande omgivningar. Området är en
+          favoritplats för både lokalbefolkning och besökare som söker en lugn
+          och avkopplande miljö. Stranden är långgrund och barnvänlig, vilket
+          gör den till ett perfekt utflyktsmål för familjer. Här kan man njuta
+          av solen, bada i det klara vattnet eller bara ta en promenad längs den
+          fina sandstranden.
         </p>
 
         <p className={styles.text}>
-          Quos nemo nisi nostrum magnam pariatur debitis, necessitatibus
-          repellat rem molestiae et nam ipsum assumenda ipsa esse saepe cumque
-          recusandae vitae molestias? Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Rerum sint vero, ab officia quibusdam dolor?
-          Accusantium maxime ipsam sunt porro id nam sed accusamus, possimus
-          ullam earum iure modi vitae. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit.
+          Men Ljumviken är inte bara för dem som vill koppla av. För de
+          äventyrliga finns det mycket att göra. Under sommarhalvåret erbjuder
+          området en mängd olika sport- och fritidsaktiviteter. Man kan hyra
+          kanoter och kajaker för att utforska vattnet, eller ta en tur på
+          mountainbike längs de välskötta cykellederna. För dem som föredrar
+          aktiviteter på land finns beachvolleybollplaner och möjligheter till
+          minigolf.
         </p>
         <p className={styles.text}>
-          Ipsam alias nobis eveniet vero totam sapiente tempora aut dignissimos
-          vel! Fugiat illo, tempora quia voluptatibus exercitationem debitis
-          veritatis facere error omnis. Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Distinctio dolore qui est esse ipsa aliquam minus
-          optio nesciunt quasi? Optio deleniti harum vero quibusdam aspernatur
-          nostrum vel repellendus culpa tempore.
+          På vintern förvandlas Ljumviken till ett paradis för
+          vinterentusiaster. Då kan man åka skridskor på den plogade banan eller
+          ta en skotertur i den snöklädda terrängen. Det finns även grillplatser
+          där man kan samlas för att grilla korv och umgås runt elden.
+        </p>
+        <p className={styles.text}>
+          Ljumviken fungerar också som en samlingsplats för Holmsunds invånare.
+          Här hålls ofta olika evenemang och aktiviteter, från midsommarfirande
+          till marknader och konserter. Den sociala atmosfären gör det enkelt
+          att träffa nya människor och njuta av den gemenskap som präglar orten.
+          En av de mest populära årliga händelserna är den lokala strandfesten
+          som lockar både unga och gamla. Med livemusik, matstånd och olika
+          aktiviteter är det en höjdpunkt som många ser fram emot varje år.
         </p>
       </article>
-      <SlideshowAddon images={slideshowSet1} />
+      <SlideshowAddon images={slideshowSet3} />
       <section className={styles.mapContainer}>
         <h2 className={styles.title}>Hitta dit</h2>
         <div className={styles.googleMaps}>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43502.27002035805!2d20.358895128173327!3d63.70981450424567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x467c51664f312b5f%3A0x4034506de8c8530!2sHolmsund%2C%20Sweden!5e0!3m2!1sen!2sse!4v1697549523948!5m2!1sen!2sse&hl=sv"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4749.522357450015!2d20.348091332405083!3d63.711985542115714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x467c51661715e26d%3A0x69e104bcd94e61b3!2sLjumviken%2C%20Holmsund!5e0!3m2!1sen!2sse!4v1697549523948!5m2!1sen!2sse&hl=sv"
             target="_blank"
             allowFullScreen=""
             loading="lazy"

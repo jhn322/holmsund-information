@@ -32,30 +32,30 @@ import image24 from "../../assets/gallery/galleryAddon16.jpg";
 export const activitySlides1 = [
   {
     src: image1,
-    title: "Utforska 1",
+    title: "Bränteberget",
     description:
-      "Fira med oss den 8 juni i Kellogg Mall Park. Upplev en fantastisk kväll med utsökta viner från lokala vingårdar, musik och god mat. Ta chansen att träffa vinmakare och delta i exklusiva vinprovningar.",
+      "Bränteberget är en populär friluftsdestination i Holmsund, Västerbotten, känd för sina natursköna vandringsleder och utsiktsplatser.",
     link: "/utforska-1",
   },
   {
     src: image2,
-    title: "Omberget",
+    title: "Kajutan",
     description:
-      "Katten sov lugnt på den mysiga, varma soffan. Utforska vårt kattmuseum där du kan lära dig om katternas historia och deras roll i olika kulturer.",
+      "Kajutan erbjuder en varierad meny med allt från färska skaldjur till smakrika kötträtter, ofta tillagade med lokala råvaror. ",
     link: "/utforska-2",
   },
   {
     src: image3,
     title: "Ljumviken",
     description:
-      "Hon skrattade högt åt det roliga skämtet hennes vän berättade. Välkommen till våra simlektioner, där du kan lära dig att simma eller förbättra dina simfärdigheter. Våra erfarna instruktörer ger personlig uppmärksamhet och ser till att varje lektion är både säker och rolig. Perfekt för alla åldrar och nivåer!",
+      "På sommaren är Ljumviken en populär plats för solbad och bad, med sin rena och klara vattenkvalitet.",
     link: "/utforska-3",
   },
   {
     src: image4,
-    title: "Utforska 4",
+    title: "Revet",
     description:
-      "De kom tidigt, till deras värds stora glädje. Delta i vår spännande auktionsshow där unika föremål från hela världen går under klubban. Möt samlare och säljare, och kanske gå hem med en oväntad skatt.",
+      "Under sommaren är Revet en perfekt plats för att njuta av sol och bad, med sina rena och klarblå vatten.",
     link: "/utforska-4",
   },
 ];
@@ -72,14 +72,14 @@ export const activitySlides2 = [
     src: image6,
     title: "Solbackakyrkan",
     description:
-      "Katten sov lugnt på den mysiga, varma soffan. Utforska vårt kattmuseum där du kan lära dig om katternas historia och deras roll i olika kulturer.",
+      "Solbackakyrka har blivit en del av den lokala kulturmiljön och är en viktig plats för bevarande av traditioner och kulturella uttryck. ",
     link: "/utforska-6",
   },
   {
     src: image7,
     title: "Lövösundet",
     description:
-      "Hon skrattade högt åt det roliga skämtet hennes vän berättade. Välkommen till våra simlektioner, där du kan lära dig att simma eller förbättra dina simfärdigheter. Våra erfarna instruktörer ger personlig uppmärksamhet och ser till att varje lektion är både säker och rolig. Perfekt för alla åldrar och nivåer!",
+      "Den lugna vattenvägen i Lövösundet är perfekt för en avkopplande båttur eller en stilla kvällspromenad längs stranden.",
     link: "/utforska-7",
   },
   {
