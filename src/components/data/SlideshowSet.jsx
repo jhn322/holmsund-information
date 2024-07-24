@@ -48,6 +48,23 @@ import image47 from "../../assets/slideshow/slideshow47.jpg";
 import image48 from "../../assets/slideshow/slideshow48.jpg";
 import image49 from "../../assets/slideshow/slideshow49.jpg";
 import image50 from "../../assets/slideshow/slideshow50.jpg";
+import image51 from "../../assets/slideshow/slideshow51.jpg";
+import image52 from "../../assets/slideshow/slideshow52.jpg";
+import image53 from "../../assets/slideshow/slideshow53.jpg";
+import image54 from "../../assets/slideshow/slideshow54.jpg";
+import image55 from "../../assets/slideshow/slideshow55.jpg";
+import image56 from "../../assets/slideshow/slideshow56.jpg";
+import image57 from "../../assets/slideshow/slideshow57.jpg";
+import image58 from "../../assets/slideshow/slideshow58.jpg";
+import image59 from "../../assets/slideshow/slideshow59.jpg";
+import image60 from "../../assets/slideshow/slideshow60.jpg";
+import image61 from "../../assets/slideshow/slideshow61.jpg";
+import image62 from "../../assets/slideshow/slideshow62.jpg";
+import image63 from "../../assets/slideshow/slideshow63.jpg";
+import image64 from "../../assets/slideshow/slideshow64.jpg";
+import image65 from "../../assets/slideshow/slideshow65.jpg";
+import image66 from "../../assets/slideshow/slideshow66.jpg";
+import image67 from "../../assets/slideshow/slideshow67.jpg";
 
 export const slideshowSet1 = [
   {
@@ -170,105 +187,173 @@ export const slideshowSet2 = [
 export const slideshowSet3 = [
   {
     url: image29,
-    text: "Grillplats på våren i Ljumviken",
+    text: "Välkomstskylt till Ljumviken.",
   },
   {
     url: image30,
-    text: "Utsikt över Ljumviken från grillplats",
+    text: "Minigolfbanor.",
   },
   {
     url: image31,
-    text: "Stor lekplats med sandlåda och gungor.",
+    text: "Sista hålet på minigolfbanan.",
   },
   {
     url: image32,
-    text: "Lekplats mitt i mot minigolfbanan.",
+    text: "Sista hålet på minigolfbanan.",
+  },
+  {
+    url: image33,
+    text: "Fotbollsplan längre ner.",
+  },
+  {
+    url: image34,
+    text: "Beachvollyboll bakom fotbollsmålet.",
+  },
+  {
+    url: image35,
+    text: "Bryggan vid lågt tidvatten.",
+  },
+  {
+    url: image36,
+    text: "Vänstra delen av stranden.",
+  },
+  {
+    url: image37,
+    text: "Varm sommardag med många besökare.",
+  },
+  {
+    url: image38,
+    text: "Vintertider innan vattnet frusit.",
+  },
+  {
+    url: image39,
+    text: "Shoppen för glass och hyra minigolfklubbor.",
+  },
+  {
+    url: image40,
+    text: "Bryggan på en varm sommardag",
+  },
+  {
+    url: image41,
+    text: "Alla minigolfbanor.",
+  },
+  {
+    url: image42,
+    text: "Grusväg ner till stranden.",
   },
 ];
 
 export const slideshowSet4 = [
   {
-    url: image33,
-    text: "Vy över vattnet vid Revet.",
+    url: image43,
+    text: "Hus vid stranden.",
   },
   {
-    url: image34,
-    text: "Stenstranden och vattnet.",
+    url: image44,
+    text: "Rodbåt vid vattnet.",
   },
   {
-    url: image35,
-    text: "Kajak ute på vattnet.",
+    url: image45,
+    text: "Klippiga kanten vid vattnet.",
   },
   {
-    url: image36,
-    text: "Hus på stranden vid Revet.",
+    url: image46,
+    text: "Kajakpaddling ute på vattnet.",
+  },
+  {
+    url: image47,
+    text: "Frusna stenar i vattnet på hösten.",
+  },
+  {
+    url: image48,
+    text: "Snö vid vattenkanten.",
+  },
+  {
+    url: image49,
+    text: "Snö på stranden på vintern.",
   },
 ];
 
 export const slideshowSet5 = [
   {
-    url: image37,
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex maiores, mollitia, pariatur maxime nobis culpa labore quas sequi, ea doloribus sint officiis quibusdam totam fugit consectetur! Tenetur dolor atque nostrum.",
+    url: image50,
+    text: "Gungor utanför skolan.",
   },
   {
-    url: image38,
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex maiores, mollitia, pariatur maxime nobis culpa labore quas sequi, ea doloribus sint officiis.",
+    url: image51,
+    text: "Dekoration utanför Storsjöskolan.",
   },
   {
-    url: image39,
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex maiores, mollitia, pariatur maxime nobis culpa labore quas sequi.",
+    url: image52,
+    text: "Konstgräsplan bredvid skolan.",
   },
   {
-    url: image40,
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex maiores, mollitia, pariatur maxime nobis culpa labore quas sequi, ea doloribus sint officiis quibusdam totam fugit consectetur!.",
+    url: image53,
+    text: "Löpbana vid skolan.",
+  },
+  {
+    url: image54,
+    text: "100-meter löpning.",
+  },
+  {
+    url: image55,
+    text: "Bild ovanför av hela Storsjöskolan.",
+  },
+  {
+    url: image56,
+    text: "Bild på konstgräsplanen med Storsjöskolan i bakgrunden.",
   },
 ];
 
 export const slideshowSet6 = [
   {
-    url: image41,
+    url: image57,
     text: "Vy över framsidan av Solbackakyrkan under vintern.",
   },
   {
-    url: image42,
+    url: image58,
     text: "Julgran uppe på scenen.",
   },
   {
-    url: image43,
+    url: image59,
     text: "Fyra sparkar  utanför kyrkan.",
   },
   {
-    url: image44,
+    url: image60,
     text: "Invigning för scouterna.",
   },
 ];
 
 export const slideshowSet7 = [
   {
-    url: image45,
+    url: image61,
     text: "Kajaktur genom skogsdunge under en bro.",
   },
   {
-    url: image46,
+    url: image62,
     text: "Kajakpaddling mitt i Lövösundet.",
   },
 ];
 
 export const slideshowSet8 = [
   {
-    url: image47,
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex maiores, mollitia, pariatur maxime nobis culpa labore quas sequi, ea doloribus sint officiis quibusdam totam fugit consectetur! Tenetur dolor atque nostrum.",
+    url: image63,
+    text: "Samling av skotrar under vintern.",
   },
   {
-    url: image48,
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex maiores, mollitia, pariatur maxime nobis culpa labore quas sequi, ea doloribus sint officiis.",
+    url: image64,
+    text: "En av flera stigar.",
   },
   {
-    url: image49,
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex maiores, mollitia, pariatur maxime nobis culpa labore quas sequi.",
+    url: image65,
+    text: "Stuga vid Kasaviken.",
   },
   {
-    url: image50,
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex maiores, mollitia, pariatur maxime nobis culpa labore quas sequi, ea doloribus sint officiis quibusdam totam fugit consectetur!.",
+    url: image66,
+    text: "Uppe på en klippa vid vattnet.",
+  },
+  {
+    url: image67,
+    text: "Hjort gåendes vid Kasaviken.",
   },
 ];

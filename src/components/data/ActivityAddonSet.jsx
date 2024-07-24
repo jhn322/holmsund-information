@@ -63,9 +63,9 @@ export const activitySlides1 = [
 export const activitySlides2 = [
   {
     src: image5,
-    title: "Utforska 5",
+    title: "Storsjöskolan",
     description:
-      "Fira med oss den 8 juni i Kellogg Mall Park. Upplev en fantastisk kväll med utsökta viner från lokala vingårdar, musik och god mat. Ta chansen att träffa vinmakare och delta i exklusiva vinprovningar.",
+      "Skolan ligger vackert belägen nära naturen, vilket ger eleverna möjlighet till utomhusaktiviteter och en inspirerande lärmiljö.",
     link: "/utforska-5",
   },
   {
@@ -84,9 +84,9 @@ export const activitySlides2 = [
   },
   {
     src: image8,
-    title: "Utforska 8",
+    title: "Kasaviken",
     description:
-      "De kom tidigt, till deras värds stora glädje. Delta i vår spännande auktionsshow där unika föremål från hela världen går under klubban. Möt samlare och säljare, och kanske gå hem med en oväntad skatt.",
+      "Området kring Kasaviken är känt för sina historiska och kulturella värden, med flera gamla byggnader och minnesmärken.",
     link: "/utforska-8",
   },
 ];

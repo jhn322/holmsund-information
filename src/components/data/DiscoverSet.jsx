@@ -39,8 +39,8 @@ export const discoverData = [
 export const insipiredData = [
   {
     image: discoverMoreImage1,
-    title: "Utforska 5",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    title: "Storsjöskolan",
+    text: "Skolan strävar efter att vara en trygg och inkluderande miljö där alla elever känner sig välkomna och respekterade.",
     link: "/utforska-5",
   },
   {
@@ -52,13 +52,13 @@ export const insipiredData = [
   {
     image: discoverMoreImage3,
     title: "Lövösundet",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    text: "Lövösundet spelar en viktig ekologisk roll för Holmsund, då det fungerar som en livsmiljö för olika vattenlevande arter och bidrar till det lokala ekosystemets hälsa och mångfald.",
     link: "/utforska-7",
   },
   {
     image: discoverMoreImage4,
-    title: "Utforska 8",
-    text: "Lövösundet spelar en viktig ekologisk roll för Holmsund, då det fungerar som en livsmiljö för olika vattenlevande arter och bidrar till det lokala ekosystemets hälsa och mångfald.",
+    title: "Kasaviken",
+    text: "Kasaviken i Holmsund, Västerbotten, är en naturskön vik omgiven av grönskande skogar och vackra stränder. Det är ett populärt område för friluftsaktiviteter som vandring och paddling.",
     link: "/utforska-8",
   },
 ];

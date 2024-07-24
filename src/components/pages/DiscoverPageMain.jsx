@@ -25,10 +25,10 @@ const DiscoverPageMain = () => {
     { src: discoverPageMain2, title: "Kajutan", path: "/utforska-2" },
     { src: discoverPageMain3, title: "Ljumviken", path: "/utforska-3" },
     { src: discoverPageMain4, title: "Revet", path: "/utforska-4" },
-    { src: discoverPageMain5, title: "Title 5", path: "/utforska-5" },
+    { src: discoverPageMain5, title: "Storsjöskolan", path: "/utforska-5" },
     { src: discoverPageMain6, title: "Solbackakyrkan", path: "/utforska-6" },
     { src: discoverPageMain7, title: "Lövösundet", path: "/utforska-7" },
-    { src: discoverPageMain8, title: "Title 8", path: "/utforska-8" },
+    { src: discoverPageMain8, title: "Kasaviken", path: "/utforska-8" },
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -111,14 +111,14 @@ const DiscoverPageMain = () => {
 
   return (
     <LayoutPageMain
-      headerTitle="Discover Page"
+      headerTitle="Utforska"
       headerBackgroundImage={headerImages[currentImageIndex]}
       renderDiscoverAddon3={true}
       renderActivityAddon4={true}
       discoverTitle3="Aktiviteter"
     >
       <section className={styles.textContainer}>
-        <h2 className={styles.mainTitle}>Discover Page Title</h2>
+        <h2 className={styles.mainTitle}>Välkommen att utforska</h2>
         <p className={styles.mainText}>
           Du kan utforska flera fascinerande platser här nere. Oavsett om du
           föredrar att vandra längs kusten, upptäcka lokala butiker och

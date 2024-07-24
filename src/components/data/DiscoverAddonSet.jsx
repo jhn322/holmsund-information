@@ -59,8 +59,8 @@ export const discoverAddonSet1 = [
 export const discoverAddonSet2 = [
   {
     image: image5,
-    title: "Utforska 5",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    title: "Storsjöskolan",
+    text: "Storsjöskolan i Holmsund är en grundskola som erbjuder undervisning från förskoleklass till årskurs 9, och har en stark fokus på både akademisk och social utveckling.",
     link: "/utforska-5",
   },
   {
@@ -77,8 +77,8 @@ export const discoverAddonSet2 = [
   },
   {
     image: image8,
-    title: "Utforska 8",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    title: "Kasaviken",
+    text: "Kasaviken har välutvecklade stigar och leder som gör det enkelt för besökare att utforska området till fots eller med cykel. Det finns också flera utsiktsplatser som erbjuder panoramavyer över viken och dess omgivningar.",
     link: "/utforska-8",
   },
 ];

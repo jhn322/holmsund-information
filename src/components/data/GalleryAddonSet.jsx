@@ -59,14 +59,14 @@ export const galleryAddonSet1 = [
 export const galleryAddonSet2 = [
   {
     url: image5,
-    title: "Utforska 5",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    title: "Storsjöskolan",
+    text: "På Storsjöskolan finns det flera fritidsaktiviteter och klubbar som uppmuntrar elevernas kreativitet och samarbetsförmåga.",
     link: "/utforska-5",
   },
   {
     url: image6,
     title: "Solbackakyrkan",
-    text: "Kyrkan fungerar som en viktig samlingspunkt för lokalsamhället i Holmsund. Utöver gudstjänster hålls det många olika typer av aktiviteter och evenemang här, såsom konserter, föreläsningar och sociala träffar.",
+    text: "Solbackakyrkan i Holmsund, Västerbotten, invigdes 1961 och är en del av Svenska kyrkan i Holmsunds församling.",
     link: "/utforska-6",
   },
   {
@@ -77,8 +77,8 @@ export const galleryAddonSet2 = [
   },
   {
     url: image8,
-    title: "Utforska 8",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
+    title: "Kasaviken",
+    text: "Vid Kasaviken kan besökare njuta av en rik biologisk mångfald, inklusive olika fågelarter och marina djur. Viken erbjuder också fina fiskevatten för sportfiskare.",
     link: "/utforska-8",
   },
 ];
