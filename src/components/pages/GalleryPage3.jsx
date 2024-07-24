@@ -13,15 +13,17 @@ const GalleryPage3 = () => {
 
   return (
     <LayoutPage
-      headerTitle="Skärgårdsskolan"
+      headerTitle="Sikskärsvaken"
       headerBackgroundImage={backgroundImage}
     >
       <article className={styles.container}>
-        <h2 className={styles.title}>Skärgårdsskolan</h2>
+        <h2 className={styles.title}>Sikskärsvaken</h2>
         <p className={styles.text}>
-          Med fokus på både fysisk och psykisk hälsa erbjuder Skärgårdsskolan
-          ett omfattande stödprogram, inklusive kuratorer och specialpedagoger,
-          för att säkerställa alla elevers välmående och utveckling.
+          Sikskärsvaken och dess omgivningar bär på en rik kulturhistoria.
+          Historiska lämningar och berättelser från tidigare generationer ger
+          besökare en inblick i områdets förflutna. Detta gör det inte bara till
+          en plats för rekreation, utan också till en destination för dem som är
+          intresserade av historia och kulturarv.
         </p>
         <PhotoGridAddon photos={galleryPhotos3} />
       </article>

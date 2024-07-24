@@ -18,8 +18,8 @@ export const gallerySet = [
   },
   {
     url: galleryImage3,
-    title: "Skärgårdsskolan",
-    text: "Skärgårdsskolan satsar på digitalisering och har välutrustade klassrum med den senaste tekniken för att ge eleverna en modern utbildning.",
+    title: "Sikskärsvaken",
+    text: "Sikskärsvaken erbjuder aktiviteter för besökare året runt, vilket gör det till en idealisk destination oavsett säsong. Under vår och sommar lockar platsen med vandring, cykling och fågelskådning i den frodiga naturen.",
     link: "/galleri-3",
   },
   {

@@ -259,7 +259,7 @@ const NavMenu = ({
                   <li>
                     <NavLink to="/galleri" activeclassname={styles.active}>
                       <h5 className={styles.nestedMainTitle}>
-                        Upplev stunder i Galleri
+                        Se alla bilder i Galleri
                       </h5>
                     </NavLink>
                   </li>
@@ -277,7 +277,7 @@ const NavMenu = ({
                   </li>
                   <li>
                     <NavLink to="/galleri-3" activeclassname={styles.active}>
-                      <h5>Skärgårdsskolan</h5>
+                      <h5>Sikskärsvaken</h5>
                     </NavLink>
                   </li>
                   <li>

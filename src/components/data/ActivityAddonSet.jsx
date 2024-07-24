@@ -170,9 +170,9 @@ export const activitySlides5 = [
   },
   {
     src: image19,
-    title: "Skärgårdsskolan",
+    title: "Sikskärsvaken",
     description:
-      "Skolan utnyttjar sin unika skärgårdsmiljö för att integrera utomhuspedagogik och naturstudier i undervisningen, vilket främjar elevernas förståelse för miljön.",
+      "Området runt Sikskärsvaken är populärt bland fiskare. Det rika vattnet är hem för flera fiskarter, vilket gör det till en idealisk plats för både sportfiske och avslappnat fiske.",
     link: "/galleri-3",
   },
   {
@@ -187,30 +187,30 @@ export const activitySlides5 = [
 export const activitySlides6 = [
   {
     src: image21,
-    title: "Järnväg",
+    title: "Holmsundsbanan",
     description:
       "Holmsunds järnväg är idag en del av det nationella järnvägsnätet och en påminnelse om den industriella utvecklingen i Västerbotten.",
     link: "/galleri-5",
   },
   {
     src: image22,
-    title: "Galleri 6",
+    title: "Holmen",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+      "På Holmen finns flera historiska byggnader som speglar Holmsunds industriella förflutna. Dessa byggnader har nu omvandlats till kulturminnen och används för olika evenemang.",
     link: "/galleri-6",
   },
   {
     src: image23,
-    title: "Galleri 7",
+    title: "Skärgårdsskolan",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
+      "Skolan utnyttjar sin unika skärgårdsmiljö för att integrera utomhuspedagogik och naturstudier i undervisningen, vilket främjar elevernas förståelse för miljön.",
     link: "/galleri-7",
   },
   {
     src: image24,
-    title: "Galleri 8",
+    title: "Holmsund hamn",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
+      "Idag är Holmsunds hamn en modern och välutrustad hamn som hanterar en mängd olika gods, från containertrafik till bulkvaror.",
     link: "/galleri-8",
   },
 ];

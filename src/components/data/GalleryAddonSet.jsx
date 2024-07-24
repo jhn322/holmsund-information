@@ -152,8 +152,8 @@ export const galleryAddonSet5 = [
   },
   {
     url: image19,
-    title: "Skärgårdsskolan",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
+    title: "Sikskärsvaken",
+    text: "Sikskärsvaken är också ett populärt ställe för diverse rekreationsaktiviteter. På sommaren samlas besökare för att bada, paddla kanot och njuta av picknick vid vattnet.",
     link: "/galleri-3",
   },
   {
@@ -167,26 +167,26 @@ export const galleryAddonSet5 = [
 export const galleryAddonSet6 = [
   {
     url: image21,
-    title: "Järnväg",
+    title: "Holmsundsbanan",
     text: "Holmsunds järnväg är idag en del av det nationella järnvägsnätet och en påminnelse om den industriella utvecklingen i Västerbotten.",
     link: "/galleri-5",
   },
   {
     url: image22,
-    title: "Galleri 6",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    title: "Holmen",
+    text: "Området har även en småbåtshamn där båtentusiaster kan lägga till och njuta av den omgivande naturen. Hamnen är en viktig knutpunkt för både fritids- och fiskebåtar.",
     link: "/galleri-6",
   },
   {
     url: image23,
-    title: "Galleri 7",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
+    title: "Skärgårdsskolan",
+    text: "Skolan betonar en nära koppling till den omgivande skärgårdsmiljön, vilket ger eleverna unika möjligheter att integrera utomhusaktiviteter och naturstudier i deras utbildning.",
     link: "/galleri-7",
   },
   {
     url: image24,
-    title: "Galleri 8",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
+    title: "Holmsund hamn",
+    text: "Hamnens infrastruktur har uppdaterats regelbundet för att inkludera avancerade logistiklösningar och hållbara metoder.",
     link: "/galleri-8",
   },
 ];

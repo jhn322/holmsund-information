@@ -13,14 +13,16 @@ const GalleryPage8 = () => {
 
   return (
     <LayoutPage
-      headerTitle="Gallery Page 8"
+      headerTitle="Holmsund hamn"
       headerBackgroundImage={backgroundImage}
     >
       <article className={styles.container}>
-        <h2 className={styles.title}>Gallery 8</h2>
+        <h2 className={styles.title}>Holmsund hamn</h2>
         <p className={styles.text}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
-          omnis possimus incidunt quo voluptatibus sunt libero.
+          Holmsunds hamn, som idag är en del av Umeå hamn, har sina rötter i
+          slutet av 1800-talet. Den grundades för att hantera de växande export-
+          och importbehoven, särskilt från den lokala sågverksindustrin, som
+          blomstrade i regionen.
         </p>
         <PhotoGridAddon photos={galleryPhotos8} />
       </article>

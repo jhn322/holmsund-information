@@ -23,12 +23,12 @@ const GalleryPageMain = () => {
   const gridImages = [
     { src: galleryPage1, title: "Österfjärden", path: "/galleri-1" },
     { src: galleryPage2, title: "Storsjöparken", path: "/galleri-2" },
-    { src: galleryPage3, title: "Skärgårdsskolan", path: "/galleri-3" },
+    { src: galleryPage3, title: "Sikskärsvaken", path: "/galleri-3" },
     { src: galleryPage4, title: "Holmsunds kyrka", path: "/galleri-4" },
-    { src: galleryPage5, title: "Järnväg", path: "/galleri-5" },
-    { src: galleryPage6, title: "Title 6", path: "/galleri-6" },
-    { src: galleryPage7, title: "Title 7", path: "/galleri-7" },
-    { src: galleryPage8, title: "Title 8", path: "/galleri-8" },
+    { src: galleryPage5, title: "Holmsundsbanan", path: "/galleri-5" },
+    { src: galleryPage6, title: "Holmen", path: "/galleri-6" },
+    { src: galleryPage7, title: "Skärgårdsskolan", path: "/galleri-7" },
+    { src: galleryPage8, title: "Holmsund hamn", path: "/galleri-8" },
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -110,7 +110,7 @@ const GalleryPageMain = () => {
 
   return (
     <LayoutPageMain
-      headerTitle="Gallery Page"
+      headerTitle="Galleri"
       headerBackgroundImage={headerImages[currentImageIndex]}
       renderDiscoverAddon1={true}
       renderActivityAddon2={true}
@@ -119,12 +119,11 @@ const GalleryPageMain = () => {
       galleryTitle3="Aktiviteter"
     >
       <section className={styles.textContainer}>
-        <h2 className={styles.mainTitle}>Gallery Page Title</h2>
+        <h2 className={styles.mainTitle}>Välkommen till galleriet</h2>
         <p className={styles.mainText}>
-          Du kan besöka ett imponerande galleri här nere. Galleriet innehåller
-          en mängd sevärda platser och intressanta punkter, från historiska
-          byggnader till natursköna områden. Det finns mycket att upptäcka och
-          utforska i denna samling av fascinerande platser.
+          Galleriet innehåller en mängd sevärda platser och intressanta punkter,
+          från historiska byggnader till natursköna områden. Det finns mycket
+          att upptäcka och utforska i denna samling av fascinerande platser.
         </p>
       </section>
       <div className={styles.gridContainer}>{gridItems}</div>

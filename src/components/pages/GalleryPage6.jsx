@@ -12,15 +12,18 @@ const GalleryPage6 = () => {
   }, []);
 
   return (
-    <LayoutPage
-      headerTitle="Gallery Page 6"
-      headerBackgroundImage={backgroundImage}
-    >
+    <LayoutPage headerTitle="Holmen" headerBackgroundImage={backgroundImage}>
       <article className={styles.container}>
-        <h2 className={styles.title}>Gallery 6</h2>
+        <h2 className={styles.title}>Holmen</h2>
         <p className={styles.text}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
-          omnis possimus incidunt quo voluptatibus sunt libero.
+          Kolerakyrkogården på Holmen i Holmsund, Västerbotten, är en historisk
+          plats som minner om en svår tid då koleraepidemier härjade.
+          Kyrkogården anlades på 1800-talet för att begrava offren för dessa
+          epidemier och är idag ett tyst vittnesmål om de utmaningar samhället
+          stod inför. Den är ett kulturhistoriskt minnesmärke och påminner om de
+          medicinska och sociala problem som drabbade området under den tiden.
+          Besökare kan fortfarande se de enkla gravarna och en minnestavla som
+          hedrar de avlidna.
         </p>
         <PhotoGridAddon photos={galleryPhotos6} />
       </article>

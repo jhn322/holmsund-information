@@ -12,9 +12,12 @@ const GalleryPage5 = () => {
   }, []);
 
   return (
-    <LayoutPage headerTitle="Järnväg" headerBackgroundImage={backgroundImage}>
+    <LayoutPage
+      headerTitle="Holmsundsbanan"
+      headerBackgroundImage={backgroundImage}
+    >
       <article className={styles.container}>
-        <h2 className={styles.title}>Järnväg</h2>
+        <h2 className={styles.title}>Holmsundsbanan</h2>
         <p className={styles.text}>
           Holmsunds järnväg byggdes under slutet av 1800-talet, med byggstart år
           1899 och färdigställande 1901, för att förbättra

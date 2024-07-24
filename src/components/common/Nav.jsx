@@ -203,7 +203,7 @@ const Nav = () => {
                     </li>
                     <li>
                       <NavLink to="/utforska-7" activeclassname={styles.active}>
-                        <h5>Sjunde utforska länk</h5>
+                        <h5>Lövösundet</h5>
                       </NavLink>
                     </li>
                     <li>
@@ -233,7 +233,7 @@ const Nav = () => {
                         activeclassname={styles.active}
                       >
                         <h5 className={styles.dropdownMenuAll}>
-                          Utforska alla aktiviteter
+                          Upplev alla aktiviteter
                         </h5>
                       </NavLink>
                     </li>
@@ -250,7 +250,7 @@ const Nav = () => {
                         to="/aktiviteter-6"
                         activeclassname={styles.active}
                       >
-                        <h5>Lövösundet</h5>
+                        <h5>Sjätte aktiviteter länk</h5>
                       </NavLink>
                     </li>
                     <li>
@@ -294,22 +294,22 @@ const Nav = () => {
                     </li>
                     <li>
                       <NavLink to="/galleri-5" activeclassname={styles.active}>
-                        <h5>Järnväg</h5>
+                        <h5>Holmsundsbanan</h5>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to="/galleri-6" activeclassname={styles.active}>
-                        <h5>Sjätte galleri länk</h5>
+                        <h5>Holmen</h5>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to="/galleri-7" activeclassname={styles.active}>
-                        <h5>Sjunde galleri länk</h5>
+                        <h5>Skärgårdsskolan</h5>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink to="/galleri-8" activeclassname={styles.active}>
-                        <h5>Åttonde galleri länk</h5>
+                        <h5>Holmsundsbanan</h5>
                       </NavLink>
                     </li>
                   </ul>

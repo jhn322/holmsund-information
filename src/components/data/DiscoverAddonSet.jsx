@@ -152,8 +152,8 @@ export const discoverAddonSet5 = [
   },
   {
     image: image19,
-    title: "Skärgårdsskolan",
-    text: "En grundskola belägen vid kusten, som erbjuder en trygg och inspirerande lärmiljö för elever från förskoleklass till årskurs 6.",
+    title: "Sikskärsvaken",
+    text: "Sikskärsvaken är en pittoresk plats belägen i Holmsund, känd för sin natursköna miljö. Med sina klara vatten och omgivande grönska erbjuder området en avkopplande tillflyktsort från stadens brus. ",
     link: "/galleri-3",
   },
   {
@@ -167,26 +167,26 @@ export const discoverAddonSet5 = [
 export const discoverAddonSet6 = [
   {
     image: image21,
-    title: "Järnväg",
+    title: "Holmsundsbanan",
     text: "Under 1900-talet blev järnvägen en livsnerv för det lokala näringslivet, särskilt för sågverksindustrin som blomstrade i området. Transporter av trä och papper blev mer effektiva och bidrog till ekonomisk tillväxt.",
     link: "/galleri-5",
   },
   {
     image: image22,
-    title: "Galleri 6",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    title: "Holmen",
+    text: "Holmen i Holmsund, belägen i Västerbotten, är en naturskön plats känd för sina grönområden och rika djurliv. Området erbjuder vackra promenadstråk och utomhusaktiviteter för besökare.",
     link: "/galleri-6",
   },
   {
     image: image23,
-    title: "Galleri 7",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
+    title: "Skärgårdsskolan",
+    text: "En grundskola belägen vid kusten, som erbjuder en trygg och inspirerande lärmiljö för elever från förskoleklass till årskurs 6.",
     link: "/galleri-7",
   },
   {
     image: image24,
-    title: "Galleri 8",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
+    title: "Holmsund hamn",
+    text: "Under 1900-talet expanderade Holmsunds hamn kraftigt, och blev en central nod för transport av trä, papper och andra skogsprodukter. Hamnens utveckling speglade den industriella tillväxten i Västerbotten, med förbättrade faciliteter och ökad kapacitet för att möta efterfrågan.",
     link: "/galleri-8",
   },
 ];
