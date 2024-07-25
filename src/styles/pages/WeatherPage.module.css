@@ -42,7 +42,7 @@ p {
   text-align: left;
   padding: 2rem;
   border-radius: 10px;
-  max-width: 43rem;
+  max-width: 40rem;
   background-color: var(--nav-color);
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
 }
@@ -83,9 +83,9 @@ p {
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 2rem;
   width: 100%;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   text-align: center;
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
 }
@@ -100,7 +100,7 @@ p {
   text-align: left;
   padding: 2rem;
   width: 100%;
-  max-width: 35rem;
+  max-width: 28rem;
   border-radius: 10px;
 }
 
@@ -116,18 +116,14 @@ p {
   background-color: var(--green-addon-color);
 }
 
-.title2 {
-  margin-top: 4rem;
-}
-
 .goToWeather {
   width: 100%;
   margin-bottom: 2rem;
   text-align: left;
   padding: 2rem 1rem;
   border-radius: 10px;
-  max-width: 50rem;
-  background-color: var(--grey-text-color);
+  max-width: 40rem;
+  background-color: var(--red-addon-color);
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
 }
 
