@@ -27,6 +27,16 @@
   color: var(--black-text-color);
 }
 
+.navToCookiepolicy {
+  margin-left: 0.2rem;
+  color: var(--black-text-color);
+  text-decoration: underline;
+}
+
+.navToCookiepolicy:hover {
+  color: var(--hover-color);
+}
+
 /* Desktop */
 @media only screen and (min-width: 800px) {
   .title {

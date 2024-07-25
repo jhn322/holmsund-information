@@ -52,7 +52,6 @@ const Carousel = () => {
 
     // Check if horizontal swipe is dominant
     if (Math.abs(deltaX) > Math.abs(deltaY)) {
-      event.preventDefault();
       setIsSwiping(true);
       setDeltaX(deltaX);
     } else {

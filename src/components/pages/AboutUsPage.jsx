@@ -17,24 +17,38 @@ const AboutUsPage = () => {
     <LayoutOther renderAboutCircleAddon={true} renderOtherAddon={true}>
       <article className={styles.container}>
         {/* Holmsund */}
+        <h2 className={styles.title}>Syfte</h2>
+        <p className={styles.text}>
+          Denna sida syftar till att belysa Holmsunds höjdpunkter och unika
+          egenskaper. Vi vill ge en omfattande översikt över vad som gör
+          Holmsund till en speciell plats, från dess natursköna omgivningar och
+          rika kulturarv till det aktiva samhällslivet och hållbarhetsinitiativ.
+          Här hittar du information om de mest intressanta sevärdheterna,
+          aktiviteterna och evenemangen som gör Holmsund till en attraktiv
+          destination för både invånare och besökare.
+        </p>
+
         <h2 className={styles.title}>Om Holmsund</h2>
         <p className={styles.text}>
           Holmsund är en charmig ort belägen vid kusten i Västerbottens län,
           Sverige. Med sina natursköna omgivningar och rika historia är Holmsund
           en plats som erbjuder både lugn och äventyr.
         </p>
+
         <p className={styles.text}>
           Holmsund grundades på 1800-talet som en viktig plats för
           sågverksindustrin, och har sedan dess utvecklats till en modern ort
           som kombinerar tradition med framsteg. Här kan du uppleva ett rikt
           kulturarv och samtidigt njuta av moderna bekvämligheter.
         </p>
+
         <p className={styles.text}>
           Naturen spelar en stor roll i Holmsund och området erbjuder
           fantastiska möjligheter för friluftsliv. Från vandring och fiske till
           båtutflykter och skidåkning - här finns något för alla som älskar att
           vara ute i naturen.
         </p>
+
         <p className={styles.text}>
           Holmsund har också ett starkt samhälle med engagerade invånare som
           arbetar tillsammans för att skapa en trivsam och hållbar miljö. Med
@@ -42,6 +56,7 @@ const AboutUsPage = () => {
           alltid något att göra och upptäcka. Holmsund är även känt för sitt
           välbefinnande och livskvalitet, där gemenskap och hälsa står i fokus.
         </p>
+
         <p className={styles.text}>
           Närheten till havet präglar också Holmsunds identitet, med många
           invånare som njuter av sjölivet och de många aktiviteter som erbjuds
@@ -49,24 +64,28 @@ const AboutUsPage = () => {
           en magnet för besökare som söker avkoppling och äventyr, både på land
           och till sjöss.
         </p>
+
         <p className={styles.text}>
           Holmsund är också känt för sin gastronomi, där lokala råvaror och
           traditionella recept går hand i hand med moderna matupplevelser. De
           lokala restaurangerna och kaféerna är populära mötesplatser där man
           kan njuta av både lokala delikatesser och internationella rätter.
         </p>
+
         <p className={styles.text}>
           För den som är intresserad av historia erbjuder Holmsund flera
           intressanta sevärdheter och museer. Besökare kan lära sig mer om
           regionens industriella arv eller utforska gamla byggnader och platser
           som berättar om ortens historia och utveckling genom tiderna.
         </p>
+
         <p className={styles.text}>
           Under sommarmånaderna blomstrar Holmsund med ett rikt kulturutbud av
           festivaler, konserter och konstutställningar. Invånare och besökare
           samlas för att fira och njuta av gemensamma kulturella evenemang som
           berikar ortens dynamiska samhällsliv.
         </p>
+
         <p className={styles.text}>
           Holmsund är stolt över sitt hållbara tänkande och arbetar aktivt för
           att minska sin miljöpåverkan. Genom initiativ för återvinning,

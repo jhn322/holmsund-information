@@ -13,9 +13,11 @@ const CookiesPage = () => {
       <div className={styles.container}>
         <h3 className={styles.title}>Generellt</h3>
         <p className={styles.text}>
-          Vår webbplats använder cookies för att förbättra din upplevelse. Genom
-          att fortsätta använda vår webbplats samtycker du till användningen av
-          cookies i enlighet med vår <a href="/privacy">Integritetspolicy</a>.
+          Vår webbplats använder cookies för att förbättra din upplevelse och en
+          fortsatt meningsfull utveckling genom att analysera användarbeteende .
+          Genom att fortsätta använda vår webbplats samtycker du till
+          användningen av cookies i enlighet med vår
+          <a href="/privacy">Integritetspolicy</a>.
         </p>
 
         <h3 className={styles.title}>Vad är cookies</h3>
@@ -28,13 +30,12 @@ const CookiesPage = () => {
 
         <h3 className={styles.title}>Hur vi använder cookies</h3>
         <p className={styles.text}>
-          När du använder och får tillgång till Tjänsten kan vi placera ett
-          antal cookie-filer i din webbläsare. Vi använder cookies för följande
-          ändamål:
+          När du använder våran sida kan vi placera ett antal cookie-filer i din
+          webbläsare. Vi använder cookies för följande ändamål:
         </p>
         <ul>
           <li className={styles.list}>
-            För att aktivera vissa funktioner i Tjänsten
+            För att spåra klick på knappar, länkar och andra element
           </li>
           <li className={styles.list}>För att tillhandahålla analys</li>
           <li className={`${styles.list} ${styles.lastList}`}>
@@ -46,10 +47,9 @@ const CookiesPage = () => {
         <p className={styles.text}>
           Om du vill radera cookies eller instruera din webbläsare att radera
           eller vägra cookies, vänligen besök hjälpsidorna för din webbläsare.
-          Observera dock att om du raderar cookies eller vägrar att acceptera
-          dem, kanske du inte kan använda alla funktioner vi erbjuder, du kanske
-          inte kan lagra dina preferenser, och vissa av våra sidor kanske inte
-          visas korrekt.
+          Observera dock att om du raderar cookies, kanske du inte kan använda
+          alla funktioner vi erbjuder, du kanske inte kan lagra dina
+          preferenser, och vissa av våra sidor kanske inte visas korrekt.
         </p>
 
         <h3 className={styles.title}>Ändringar i denna cookiepolicy</h3>

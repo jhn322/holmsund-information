@@ -62,12 +62,13 @@ body {
 }
 
 .cookiesContainer button:hover {
-  background-color: #2dbf13;
+  background-color: var(--accent-color);
   color: var(--white-text-color);
 }
 
 .navToCookiepolicy {
   margin-left: 0.2rem;
+  color: var(--white-text-color);
   text-decoration: underline;
 }
 
