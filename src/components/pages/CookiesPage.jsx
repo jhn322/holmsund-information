@@ -5,7 +5,7 @@ import styles from "../../styles/pages/CookiesPage.module.css";
 
 const CookiesPage = () => {
   useEffect(() => {
-    setDocumentTitle("Cookie policy");
+    setDocumentTitle("Cookiepolicy");
   }, []);
 
   return (

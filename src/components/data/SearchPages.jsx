@@ -110,7 +110,7 @@ const searchPages = [
   { path: "/vader", title: "Väder", categoryTitle: "Väder" },
   { path: "/kartor", title: "Kartor", categoryTitle: "Kartor" },
   { path: "/om-oss", title: "Om Oss", categoryTitle: "Om Oss" },
-  { path: "/cookiepolicy", title: "Kakor", categoryTitle: "Cookie policy" },
+  { path: "/cookiepolicy", title: "Kakor", categoryTitle: "Cookiepolicy" },
   {
     path: "/anvandarvillkor",
     title: "Användarvillkor",

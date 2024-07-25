@@ -184,7 +184,7 @@ const Footer = () => {
               onClick={() =>
                 handleElementClick("Cookiepolicy", window.location.href)
               }
-              aria-label="Cookie policy"
+              aria-label="Cookiepolicy"
             >
               <li>Cookiepolicy</li>
             </NavLink>

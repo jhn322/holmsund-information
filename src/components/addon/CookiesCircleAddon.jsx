@@ -13,13 +13,13 @@ const CookiesCircleAddon = () => {
               <h2 className={styles2.titleContent}>Cookiepolicy</h2>
             </header>
             <p className={styles.paragraphContent}>
-              Vår Cookie Policy förklarar hur vi använder cookies och liknande
+              Vår Cookiepolicy förklarar hur vi använder cookies och liknande
               tekniker på vår webbplats för att förbättra din upplevelse.
               Cookies är små textfiler som lagras i din webbläsare och hjälper
               oss att känna igen dig och anpassa innehållet efter dina
               preferenser. Genom att fortsätta använda vår webbplats samtycker
               du till vår användning av cookies enligt beskrivningen i vår
-              Cookie Policy.
+              Cookiepolicy.
             </p>
           </div>
         </article>

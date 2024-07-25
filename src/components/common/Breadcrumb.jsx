@@ -4,6 +4,7 @@ import { trackBreadcrumbElementClick } from "../analytics/common";
 import { RxChevronRight } from "react-icons/rx";
 import styles from "../../styles/common/Breadcrumb.module.css";
 
+// Map to categories
 const pageToSectionMap = {
   // Utforska pages
   branteberget: "utforska",
@@ -34,17 +35,42 @@ const pageToSectionMap = {
   "holmsund-hamn": "galleri",
 };
 
+// Translated to correct spelling
+const correctSpellings = {
+  utforska: "Utforska",
+  aktiviteter: "Aktiviteter",
+  galleri: "Galleri",
+  vader: "Väder",
+  branteberget: "Bränteberget",
+  storsjoskolan: "Storsjöskolan",
+  lovosundet: "Lövösundet",
+  "sandviks-idrottsklubb": "Sandviks Idrottsklubb",
+  elljussparet: "Elljusspåret",
+  "umea-golfklubb": "Umeå Golfklubb",
+  storsjohallen: "Storsjöhallen",
+  "holmsunds-tennisklubb": "Holmsunds Tennisklubb",
+  vasterlangsladan: "Västerlångslädan",
+  osterfjarden: "Österfjärden",
+  storsjoparken: "Storsjöparken",
+  sikskarsvaken: "Sikskärsvaken",
+  "holmsunds-kyrka": "Holmsunds Kyrka",
+  skargardsskolan: "Skärgårdsskolan",
+  "holmsund-hamn": "Holmsund Hamn",
+  anvandarvillkor: "Användarvillkor",
+  "om-oss": "Om oss",
+};
+
 const Breadcrumb = () => {
   const location = useLocation();
   const pathname = location.pathname.slice(1);
 
-  // Function to decode URI for special characters
   const decodeURIComponentSafe = (uri) => {
     try {
-      return decodeURIComponent(uri);
+      const decoded = decodeURIComponent(uri);
+      return correctSpellings[decoded] || decoded;
     } catch (error) {
       console.error("Error decoding URI component:", error);
-      return uri;
+      return correctSpellings[uri] || uri;
     }
   };
 
@@ -68,7 +94,7 @@ const Breadcrumb = () => {
 
     if (mainSection) {
       items.push({
-        text: mainSection,
+        text: correctSpellings[mainSection.toLowerCase()] || mainSection,
         to: `/${mainSection.toLowerCase()}`,
       });
 

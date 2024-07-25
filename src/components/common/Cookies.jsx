@@ -16,7 +16,7 @@ const Cookies = () => {
   };
 
   const handleNavLinkClick = () => {
-    trackCookiesElementClick("navlink", "Cookie Policy", "/cookiepolicy");
+    trackCookiesElementClick("navlink", "Cookiepolicy", "/cookiepolicy");
   };
 
   if (!visible) return null;
