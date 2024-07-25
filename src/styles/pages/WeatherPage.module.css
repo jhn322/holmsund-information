@@ -29,7 +29,9 @@ p {
 .container h1,
 .container h2,
 .container h3,
-.container p {
+.container p,
+.weatherInfo h1,
+.weatherInfo p {
   color: var(--white-text-color);
 }
 
@@ -41,18 +43,16 @@ p {
   padding: 2rem;
   border-radius: 10px;
   max-width: 43rem;
-  background-color: var(--grey-color);
+  background-color: var(--nav-color);
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
 }
 
 .weatherInfo h1 {
   font-size: 2rem;
-  color: var(--black-text-color);
   padding-bottom: 1rem;
 }
 
 .weatherInfo p {
-  color: var(--black-text-color);
   padding: 0.3rem 0;
 }
 
@@ -105,15 +105,15 @@ p {
 }
 
 .orangeBackground {
-  background-color: var(--nav-color);
-}
-
-.purpleBackground {
   background-color: var(--accent-color);
 }
 
-.blueBackground {
+.purpleBackground {
   background-color: var(--gallery-color);
+}
+
+.blueBackground {
+  background-color: var(--green-addon-color);
 }
 
 .title2 {

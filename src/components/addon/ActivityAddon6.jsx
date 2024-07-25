@@ -234,7 +234,7 @@ const ActivityAddon6 = () => {
           className={styles.featuredCircle}
           style={{ backgroundImage: `url(${featuredCircle})` }}
         ></div>
-        <h2 className={styles.featuredTitle}>Oförglömliga Upplevelser</h2>
+        <h2 className={styles.featuredTitle}>Varierade Händelser</h2>
         <Carousel />
       </section>
     </aside>

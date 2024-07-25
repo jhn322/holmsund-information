@@ -53,21 +53,21 @@ const LayoutPageMain = ({
     ];
 
     const discoverComponents = [
-      <DiscoverAddon1 key="discover1" title="Utforska 1" />,
-      <DiscoverAddon2 key="discover2" title="Utforska 2" />,
-      <DiscoverAddon3 key="discover3" title="Utforska 3" />,
-      <DiscoverAddon4 key="discover4" title="Utforska 4" />,
-      <DiscoverAddon5 key="discover5" title="Utforska 5" />,
-      <DiscoverAddon6 key="discover6" title="Utforska 6" />,
+      <DiscoverAddon1 key="discover1" title="Resa Genom Orten" />,
+      <DiscoverAddon2 key="discover2" title="Varierade Möjligheter" />,
+      <DiscoverAddon3 key="discover3" title="Håll Kroppen Aktiv" />,
+      <DiscoverAddon4 key="discover4" title="Nya Äventyr Väntar" />,
+      <DiscoverAddon5 key="discover5" title="Naturens Tysta Vägar" />,
+      <DiscoverAddon6 key="discover6" title="Upptäck Nya Platser" />,
     ];
 
     const galleryComponents = [
-      <GalleryAddon1 key="gallery1" title="Aktiviteter 1" />,
-      <GalleryAddon2 key="gallery2" title="Aktiviteter 2" />,
-      <GalleryAddon3 key="gallery3" title="Aktiviteter 3" />,
-      <GalleryAddon4 key="gallery4" title="Aktiviteter 4" />,
-      <GalleryAddon5 key="gallery5" title="Unika Platser" />,
-      <GalleryAddon6 key="gallery6" title="Aktiviteter 6" />,
+      <GalleryAddon1 key="gallery1" title="Fridfullt Liv" />,
+      <GalleryAddon2 key="gallery2" title="Koppla Av" />,
+      <GalleryAddon3 key="gallery3" title="Aktiva Dagar" />,
+      <GalleryAddon4 key="gallery4" title="Nya Äventyr" />,
+      <GalleryAddon5 key="gallery5" title="Unika Minnen" />,
+      <GalleryAddon6 key="gallery6" title="Utmana Dig" />,
     ];
 
     const getRandomComponent = (array) => {
