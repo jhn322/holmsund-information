@@ -28,8 +28,8 @@ const Nav = () => {
   const decodePath = (path) => decodeURIComponent(path);
   const decodedCurrentPath = decodePath(currentPath);
   const pathsToExclude = [
-    "/väder",
-    "/användarvillkor",
+    "/vader",
+    "/anvandarvillkor",
     "/om-oss",
     "/cookiepolicy",
     "/kartor",
@@ -327,7 +327,7 @@ const Nav = () => {
             </li>
             <li>
               <NavLink
-                to="/väder"
+                to="/vader"
                 activeclassname={styles.active}
                 className={styles.navLink}
               >

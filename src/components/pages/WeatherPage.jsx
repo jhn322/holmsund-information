@@ -202,7 +202,7 @@ const WeatherPage = () => {
               onClick={() =>
                 handleLinkClick(
                   "För mer väderinformation klicka här",
-                  "https://www.yr.no/nb/v%C3%A4rvarsel/daglig-tabell/2-605676/Sverige/V%C3%A4sterbottens%20l%C3%A4n/Ume%C3%A5%20Kommun/Holmsund"
+                  "https://www.smhi.se/vader/prognoser/ortsprognoser/q/Holmsund/Ume%C3%A5/605676"
                 )
               }
             >

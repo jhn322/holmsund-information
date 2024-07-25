@@ -296,7 +296,7 @@ const NavMenu = ({
             )}
           </li>
           <li>
-            <NavLink to="/väder" activeclassname={styles.active}>
+            <NavLink to="/vader" activeclassname={styles.active}>
               <h4>Väder</h4>
             </NavLink>
           </li>

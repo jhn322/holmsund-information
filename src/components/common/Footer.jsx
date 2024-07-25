@@ -146,7 +146,7 @@ const Footer = () => {
               <li>Galleri</li>
             </NavLink>
             <NavLink
-              to="/väder"
+              to="/vader"
               onClick={() => handleElementClick("Väder", window.location.href)}
               aria-label="Väder"
             >
@@ -189,7 +189,7 @@ const Footer = () => {
               <li>Cookiepolicy</li>
             </NavLink>
             <NavLink
-              to="/användarvillkor"
+              to="/anvandarvillkor"
               onClick={() =>
                 handleElementClick("Användarvillkor", window.location.href)
               }

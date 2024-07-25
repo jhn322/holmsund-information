@@ -136,7 +136,7 @@ const App = () => {
             path="/holmsund-hamn"
             element={<GalleryPage8 page="holmsund-hamn" />}
           />
-          <Route path="/väder" element={<WeatherPage page="väder" />} />
+          <Route path="/vader" element={<WeatherPage page="vader" />} />
           <Route path="/kartor" element={<MapPage page="kartor" />} />
           <Route path="/om-oss" element={<AboutUsPage page="om-oss" />} />
           <Route
@@ -144,8 +144,8 @@ const App = () => {
             element={<CookiesPage page="cookiepolicy" />}
           />
           <Route
-            path="/användarvillkor"
-            element={<TermsOfServicePage page="användarvillkor" />}
+            path="/anvandarvillkor"
+            element={<TermsOfServicePage page="anvandarvillkor" />}
           />
           <Route path="*" element={<MissingPage />} />
         </Routes>

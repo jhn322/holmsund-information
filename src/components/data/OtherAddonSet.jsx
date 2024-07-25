@@ -19,6 +19,6 @@ export const otherAddonSet = [
     image: otherImage3,
     title: "Användarvillkor",
     text: "Genom att använda vår webbplats godkänner du våra användarvillkor som reglerar användningen av våra tjänster, inklusive insamling av data och ansvarsfrihet. Läs våra fullständiga användarvillkor för mer information.",
-    link: "/användarvillkor",
+    link: "/anvandarvillkor",
   },
 ];

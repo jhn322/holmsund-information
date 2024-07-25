@@ -46,9 +46,9 @@ const ExtraHome = () => {
                   </article>
                 </article>
                 <NavLink
-                  to="/väder"
+                  to="/vader"
                   onClick={() =>
-                    trackNavLinkClick("Kolla vädret i Holmsund", "/väder")
+                    trackNavLinkClick("Kolla vädret i Holmsund", "/vader")
                   }
                   aria-label="Kolla vädret i Holmsund"
                 >
