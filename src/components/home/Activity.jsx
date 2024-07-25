@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { activitySet } from "../data/ActivitySet";
 import { trackActivityElementClick } from "../analytics/home";
-import { RxArrowRight } from "react-icons/rx";
+import { RxArrowRight, RxChevronLeft, RxChevronRight } from "react-icons/rx";
 import styles from "../../styles/home/Activity.module.css";
 import featuredCircle from "../../assets/other/circle.png";
 
@@ -72,6 +72,12 @@ const ActivityCarousel = () => {
     trackActivityElementClick(elementType, elementText, elementUrl);
   };
 
+  const handleNavButtonClick = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    event.nativeEvent.stopImmediatePropagation();
+  };
+
   return (
     <section
       className={styles.carousel}
@@ -125,6 +131,26 @@ const ActivityCarousel = () => {
                 >
                   <div className={styles.imgContainer}>
                     <img src={slide.src} alt={slide.title} />
+                    <button
+                      className={styles.navBtnLeft}
+                      onClick={(e) => {
+                        handleNavButtonClick(e);
+                        handlePrev();
+                      }}
+                      aria-label="Previous Slide"
+                    >
+                      <RxChevronLeft strokeWidth={0.8} />
+                    </button>
+                    <button
+                      className={styles.navBtnRight}
+                      onClick={(e) => {
+                        handleNavButtonClick(e);
+                        handleNext();
+                      }}
+                      aria-label="Next Slide"
+                    >
+                      <RxChevronRight strokeWidth={0.8} />
+                    </button>
                     <div className={styles.slideCounter}>
                       {index + 1}/{activitySet.length}
                     </div>

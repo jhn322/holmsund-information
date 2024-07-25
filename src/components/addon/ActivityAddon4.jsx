@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { activitySlides4 } from "../data/ActivityAddonSet";
 import { trackActivityElementClick } from "../analytics/addon";
-import { RxArrowRight } from "react-icons/rx";
+import { RxArrowRight, RxChevronLeft, RxChevronRight } from "react-icons/rx";
 import styles from "../../styles/home/Activity.module.css";
 import styles2 from "../../styles/addon/ActivityAddon4.module.css";
 import featuredCircle from "../../assets/other/circle.png";
@@ -75,6 +75,12 @@ const Carousel = () => {
   // Google Analytics
   const trackElementClickEvent = (elementType, elementText, elementUrl) => {
     trackActivityElementClick(elementType, elementText, elementUrl);
+  };
+
+  const handleNavButtonClick = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    event.nativeEvent.stopImmediatePropagation();
   };
 
   return (
@@ -150,6 +156,26 @@ const Carousel = () => {
                   >
                     <div className={styles.imgContainer}>
                       <img src={slide.src} alt={slide.title} />
+                      <button
+                        className={styles.navBtnLeft}
+                        onClick={(e) => {
+                          handleNavButtonClick(e);
+                          handlePrev();
+                        }}
+                        aria-label="Previous Slide"
+                      >
+                        <RxChevronLeft strokeWidth={0.8} />
+                      </button>
+                      <button
+                        className={styles.navBtnRight}
+                        onClick={(e) => {
+                          handleNavButtonClick(e);
+                          handleNext();
+                        }}
+                        aria-label="Next Slide"
+                      >
+                        <RxChevronRight strokeWidth={0.8} />
+                      </button>
                       <div className={styles.slideCounter}>
                         {index + 1}/{activitySlides4.length}
                       </div>
@@ -223,7 +249,7 @@ const Carousel = () => {
   );
 };
 
-const ActivityAddon5 = () => {
+const ActivityAddon4 = () => {
   return (
     <aside
       className={`${styles.featuredContainer} ${styles2.featuredContainer}`}
@@ -241,4 +267,4 @@ const ActivityAddon5 = () => {
   );
 };
 
-export default ActivityAddon5;
+export default ActivityAddon4;
