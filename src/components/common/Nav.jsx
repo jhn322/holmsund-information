@@ -250,7 +250,7 @@ const Nav = () => {
                         to="/aktiviteter-6"
                         activeclassname={styles.active}
                       >
-                        <h5>Sjätte aktiviteter länk</h5>
+                        <h5>Djupvik</h5>
                       </NavLink>
                     </li>
                     <li>
@@ -258,7 +258,7 @@ const Nav = () => {
                         to="/aktiviteter-7"
                         activeclassname={styles.active}
                       >
-                        <h5>Sjunde aktiviteter länk</h5>
+                        <h5>Holmsunds Tennisklubb</h5>
                       </NavLink>
                     </li>
                     <li>
@@ -266,7 +266,7 @@ const Nav = () => {
                         to="/aktiviteter-8"
                         activeclassname={styles.active}
                       >
-                        <h5>Åttonde aktiviteter länk</h5>
+                        <h5>Västerlångslädan</h5>
                       </NavLink>
                     </li>
                   </ul>

@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
-import { activityAccordion6 } from "../data/ActivityPageSet";
 import { setDocumentTitle } from "../utils/setDocumentTitle";
+import { activityAccordion6 } from "../data/ActivityPageSet";
+import { slideshowSet9 } from "../data/SlideshowSet";
+import SlideshowAddon from "../addon/SlideshowAddon";
 import LayoutPage from "../layouts/LayoutPage";
 import { RxPlus, RxMinus } from "react-icons/rx";
 import styles from "../../styles/pages/AllPage.module.css";
@@ -49,42 +51,47 @@ const ActivityPage6 = () => {
   }, []);
 
   return (
-    <LayoutPage
-      headerTitle="Activity Page 6"
-      headerBackgroundImage={backgroundImage}
-    >
+    <LayoutPage headerTitle="Djupvik" headerBackgroundImage={backgroundImage}>
       <main className={styles.container}>
         <header>
-          <h2 className={styles.title}>Activity Title 6</h2>
+          <h2 className={styles.title}>Djupvik</h2>
         </header>
         <section>
           <p className={styles.boldText}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
-            omnis possimus incidunt quo voluptatibus sunt libero.
+            Vid kusten av Bottenviken, strax utanför Umeå, ligger den idylliska
+            platsen Djupvik i Holmsund. Känd för sin natursköna skönhet och
+            fridfulla atmosfär, erbjuder Djupvik en perfekt tillflyktsort för
+            alla som söker en paus från vardagens stress och ett sätt att njuta
+            av Västerbottens unika kustlandskap.
           </p>
           <p className={styles.text}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex velit
-            eum molestias cupiditate vero, et error sequi quidem. Labore ratione
-            veniam esse, neque iste accusantium accusamus ut eveniet voluptas
-            quos! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Trots att Djupvik saknar en strand, har platsen en speciell
+            dragningskraft tack vare det kristallklara vattnet och de
+            lättillgängliga hoppen ner i vattnet. Det är en populär plats för
+            dem som vill ha ett snabbt dopp utan att behöva gå genom sand eller
+            grus. Besökare och lokalbor samlas här under varma sommardagar för
+            att njuta av sol och bad på ett mer direkt sätt. Klipporna vid
+            Djupvik erbjuder en naturlig plattform för att hoppa ner i det
+            friska vattnet, vilket gör det till ett attraktivt alternativ för
+            både barn och vuxna.
           </p>
           <p className={styles.text}>
-            Quos nemo nisi nostrum magnam pariatur debitis, necessitatibus
-            repellat rem molestiae et nam ipsum assumenda ipsa esse saepe cumque
-            recusandae vitae molestias? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Rerum sint vero, ab officia quibusdam dolor?
-            Accusantium maxime ipsam sunt porro id nam sed accusamus, possimus
-            ullam earum iure modi vitae. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit.
+            För länge sedan var Djupvik en viktig punkt för lokal båttrafik.
+            Även om moderna båtar nu i huvudsak använder andra hamnar och
+            bryggor, var Djupvik en gång i tiden en plats där båtar brukade
+            lägga till och parkera. Det är lätt att föreställa sig hur vattnet
+            här var fyllt med liv och aktivitet, och hur platsen spelade en roll
+            i den maritima historien i Holmsund. Idag är det en mer stillsam och
+            fridfull plats, men de historiska rötterna ger en extra dimension
+            till upplevelsen av Djupvik.
           </p>
           <p className={styles.text}>
-            Ipsam alias nobis eveniet vero totam sapiente tempora aut
-            dignissimos vel! Fugiat illo, tempora quia voluptatibus
-            exercitationem debitis veritatis facere error omnis. Lorem ipsum
-            dolor sit amet consectetur, adipisicing elit. Distinctio dolore qui
-            est esse ipsa aliquam minus optio nesciunt quasi? Optio deleniti
-            harum vero quibusdam aspernatur nostrum vel repellendus culpa
-            tempore.
+            Djupvik är inte bara en plats för bad och historiska reflektioner;
+            det är också en trivsam samlingspunkt för både lokalbefolkning och
+            besökare. Många njuter av att tillbringa tid här, antingen genom att
+            ta ett dopp, sola på klipporna eller bara koppla av med vänner och
+            familj. Trots att det inte finns någon strand, erbjuder Djupvik en
+            unik och härlig upplevelse vid vattnet som är värt att utforska.
           </p>
         </section>
         <section className={styles.accordion}>
@@ -96,6 +103,7 @@ const ActivityPage6 = () => {
             />
           ))}
         </section>
+        <SlideshowAddon images={slideshowSet9} />
       </main>
     </LayoutPage>
   );

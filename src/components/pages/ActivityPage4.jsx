@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import { activityAccordion4 } from "../data/ActivityPageSet";
 import { setDocumentTitle } from "../utils/setDocumentTitle";
+import { activityAccordion4 } from "../data/ActivityPageSet";
 import LayoutPage from "../layouts/LayoutPage";
 import { RxPlus, RxMinus } from "react-icons/rx";
 import styles from "../../styles/pages/AllPage.module.css";

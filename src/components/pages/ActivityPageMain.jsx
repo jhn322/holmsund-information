@@ -32,9 +32,13 @@ const ActivityPageMain = () => {
     { src: activityPage3, title: "Umeå Golfklubb", path: "/aktiviteter-3" },
     { src: activityPage4, title: "Storsjöhallen", path: "/aktiviteter-4" },
     { src: activityPage5, title: "Omberget", path: "/aktiviteter-5" },
-    { src: activityPage6, title: "Sjätte", path: "/aktiviteter-6" },
-    { src: activityPage7, title: "Sjunde", path: "/aktiviteter-7" },
-    { src: activityPage8, title: "Åttonde", path: "/aktiviteter-8" },
+    { src: activityPage6, title: "Djupvik", path: "/aktiviteter-6" },
+    {
+      src: activityPage7,
+      title: "Holmsunds Tennisklubb",
+      path: "/aktiviteter-7",
+    },
+    { src: activityPage8, title: "Västerlångslädan", path: "/aktiviteter-8" },
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

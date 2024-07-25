@@ -15,10 +15,6 @@ import Cookies from "../common/Cookies";
 import Footer from "../common/Footer";
 import { ThemeProvider } from "../context/ThemeContext";
 
-import ActivityAddon4 from "../addon/ActivityAddon4";
-import DiscoverAddon4 from "../addon/DiscoverAddon4";
-import GalleryAddon4 from "../addon/GalleryAddon4";
-
 const LayoutHome = () => {
   return (
     <ThemeProvider>
@@ -31,9 +27,6 @@ const LayoutHome = () => {
           <section>
             <ContentCircle />
           </section>
-          <DiscoverAddon4 />
-          <ActivityAddon4 />
-          <GalleryAddon4 />
           <Separator />
           <section>
             <Discover />

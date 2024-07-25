@@ -65,6 +65,17 @@ import image64 from "../../assets/slideshow/slideshow64.jpg";
 import image65 from "../../assets/slideshow/slideshow65.jpg";
 import image66 from "../../assets/slideshow/slideshow66.jpg";
 import image67 from "../../assets/slideshow/slideshow67.jpg";
+import image68 from "../../assets/slideshow/slideshow68.jpg";
+import image69 from "../../assets/slideshow/slideshow69.jpg";
+import image70 from "../../assets/slideshow/slideshow70.jpg";
+import image71 from "../../assets/slideshow/slideshow71.jpg";
+import image72 from "../../assets/slideshow/slideshow72.jpg";
+import image73 from "../../assets/slideshow/slideshow73.jpg";
+import image74 from "../../assets/slideshow/slideshow74.jpg";
+import image75 from "../../assets/slideshow/slideshow75.jpg";
+import image76 from "../../assets/slideshow/slideshow76.jpg";
+import image77 from "../../assets/slideshow/slideshow77.jpg";
+import image78 from "../../assets/slideshow/slideshow78.jpg";
 
 export const slideshowSet1 = [
   {
@@ -355,5 +366,53 @@ export const slideshowSet8 = [
   {
     url: image67,
     text: "Hjort gåendes vid Kasaviken.",
+  },
+];
+
+// Activity Page 6
+export const slideshowSet9 = [
+  {
+    url: image68,
+    text: "Längst grusstigen.",
+  },
+  {
+    url: image69,
+    text: "Pollare målad som Frankenstein.",
+  },
+  {
+    url: image70,
+    text: "Utöver vattnet.",
+  },
+  {
+    url: image71,
+    text: "Solnedgång vid Djupvik.",
+  },
+  {
+    url: image72,
+    text: "Gammal båt vid stigen.",
+  },
+  {
+    url: image73,
+    text: "Klara vattenytan.",
+  },
+  {
+    url: image74,
+    text: "Gräsmattan vid parkeringen.",
+  },
+  {
+    url: image75,
+    text: "Längst stigen med Obbolabron i horisonten.",
+  },
+  {
+    url: image76,
+    text: "Gammal båt gjord i metall.",
+  },
+  {
+    url: image77,
+    text: "Historik av Djupvik.",
+  },
+  {
+    url: image78,
+    text: "Vatten så långt ögat kan nå.",
   },
 ];

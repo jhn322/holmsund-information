@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import { activityAccordion7 } from "../data/ActivityPageSet";
 import { setDocumentTitle } from "../utils/setDocumentTitle";
+import { activityAccordion7 } from "../data/ActivityPageSet";
 import LayoutPage from "../layouts/LayoutPage";
 import { RxPlus, RxMinus } from "react-icons/rx";
 import styles from "../../styles/pages/AllPage.module.css";
@@ -50,41 +50,47 @@ const ActivityPage7 = () => {
 
   return (
     <LayoutPage
-      headerTitle="Activity Page 7"
+      headerTitle="Holmsunds Tennisklubb"
       headerBackgroundImage={backgroundImage}
     >
       <main className={styles.container}>
         <header>
-          <h2 className={styles.title}>Activity Title 7</h2>
+          <h2 className={styles.title}>Holmsunds Tennisklubb</h2>
         </header>
         <section>
           <p className={styles.boldText}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
-            omnis possimus incidunt quo voluptatibus sunt libero.
+            Holmsunds Tennisklubb i Holmsund, Västerbotten, har länge varit en
+            viktig del av det lokala sportlivet och har erbjudit
+            tennisentusiaster en plats för träning och tävling. Klubbens
+            anläggningar har tidigare varit kända för sina välskötta banor och
+            vänliga atmosfär, vilket gjorde den till en uppskattad mötesplats
+            för både nybörjare och erfarna spelare.
           </p>
           <p className={styles.text}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex velit
-            eum molestias cupiditate vero, et error sequi quidem. Labore ratione
-            veniam esse, neque iste accusantium accusamus ut eveniet voluptas
-            quos! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Under många år var Holmsunds Tennisklubb en livfull och aktiv klubb
+            med ett brett utbud av träningsprogram och sociala evenemang.
+            Klubben arrangerade regelbundet tävlingar och turneringar som drog
+            till sig spelare från hela regionen, vilket skapade en stark
+            gemenskap bland medlemmarna. <br /> Tyvärr har klubben under de
+            senaste åren blivit alltmer övergiven. Brist på underhåll och en
+            minskande medlemsbas har lett till att anläggningarna nu ofta står
+            tomma och förfallna. Detta har orsakat en stor besvikelse bland de
+            tidigare medlemmarna och lokalbefolkningen som minns klubbens forna
+            glansdagar.
           </p>
           <p className={styles.text}>
-            Quos nemo nisi nostrum magnam pariatur debitis, necessitatibus
-            repellat rem molestiae et nam ipsum assumenda ipsa esse saepe cumque
-            recusandae vitae molestias? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Rerum sint vero, ab officia quibusdam dolor?
-            Accusantium maxime ipsam sunt porro id nam sed accusamus, possimus
-            ullam earum iure modi vitae. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit.
+            Den övergivna statusen hos Holmsunds Tennisklubb står i kontrast
+            till den vitalitet och livskraft som en gång definierade platsen.
+            Det finns en önskan bland många att se en återuppvaknande av klubben
+            och en återgång till den aktiva och inkluderande miljö som en gång
+            gjorde den till en central del av Holmsunds idrottsliv.
           </p>
           <p className={styles.text}>
-            Ipsam alias nobis eveniet vero totam sapiente tempora aut
-            dignissimos vel! Fugiat illo, tempora quia voluptatibus
-            exercitationem debitis veritatis facere error omnis. Lorem ipsum
-            dolor sit amet consectetur, adipisicing elit. Distinctio dolore qui
-            est esse ipsa aliquam minus optio nesciunt quasi? Optio deleniti
-            harum vero quibusdam aspernatur nostrum vel repellendus culpa
-            tempore.
+            Holmsunds Tennisklubb har fortfarande potential att återigen bli en
+            viktig plats för tennis i Holmsund, men det krävs engagemang och
+            resurser för att återställa den till sitt forna skick och återvinna
+            den gemenskap och entusiasm som tidigare präglade klubbens
+            verksamhet.
           </p>
         </section>
         <section className={styles.accordion}>

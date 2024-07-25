@@ -119,20 +119,20 @@ export const galleryAddonSet4 = [
   },
   {
     url: image14,
-    title: "Aktiviteter 6",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    title: "Djupvik",
+    text: "Området är också känt för sina natursköna vyer, vilket gör det till en utmärkt plats för fotografi och avkoppling.",
     link: "/aktiviteter-6",
   },
   {
     url: image15,
-    title: "Aktiviteter 7",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
+    title: "Holmsunds Tennisklubb",
+    text: "Den inbjudande atmosfären på Holmsunds Tennisklubb gör den till en central plats för både seriösa spelare och rekreationsspelare i Holmsund.",
     link: "/aktiviteter-7",
   },
   {
     url: image16,
-    title: "Aktiviteter 8",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
+    title: "Västerlångslädan",
+    text: "Sommartid är området särskilt inbjudande för cyklister och vandrare som vill njuta av den friska luften och den natursköna omgivningen.",
     link: "/aktiviteter-8",
   },
 ];

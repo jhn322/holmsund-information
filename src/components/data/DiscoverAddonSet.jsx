@@ -119,20 +119,20 @@ export const discoverAddonSet4 = [
   },
   {
     image: image14,
-    title: "Aktiviteter 6",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    title: "Djupvik",
+    text: "Djupvik är en pittoresk vik belägen i Holmsund, känd för sina vackra vatten och lugna atmosfär. ",
     link: "/aktiviteter-6",
   },
   {
     image: image15,
-    title: "Aktiviteter 7",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
+    title: "Holmsunds Tennisklubb",
+    text: "Holmsunds Tennisklubb är en populär klubb för tennisentusiaster i området och erbjuder både inomhus- och utomhusbanor. Klubben har ett brett utbud av träningstider och kurser för spelare i alla åldrar och nivåer.",
     link: "/aktiviteter-7",
   },
   {
     image: image16,
-    title: "Aktiviteter 8",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
+    title: "Västerlångslädan",
+    text: "Västerlångslädan är ett naturskönt område i Holmsund, känt för sina öppna landskap och fina vandringsleder. Området är perfekt för friluftsliv och erbjuder ett lugnt miljö för promenader och picknickar.",
     link: "/aktiviteter-8",
   },
 ];

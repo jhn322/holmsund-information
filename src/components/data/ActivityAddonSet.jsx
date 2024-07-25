@@ -132,23 +132,22 @@ export const activitySlides4 = [
   },
   {
     src: image14,
-    title: "Aktiviteter 6",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    title: "Djupvik",
+    description: "Området är populärt för båtutflykter och hoppa ner i viken.",
     link: "/aktiviteter-6",
   },
   {
     src: image15,
-    title: "Aktiviteter 7",
+    title: "Holmsunds Tennisklubb",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
+      "Förutom tennis erbjuder klubben också sociala aktiviteter och evenemang som bidrar till en stark gemenskap bland medlemmarna.",
     link: "/aktiviteter-7",
   },
   {
     src: image16,
-    title: "Aktiviteter 8",
+    title: "Västerlångslädan",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
+      "Med sina vidsträckta vyer och varierade terräng är Västerlångslädan populär bland både lokalbefolkning och besökare.",
     link: "/aktiviteter-8",
   },
 ];

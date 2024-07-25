@@ -148,86 +148,89 @@ export const activityAccordion5 = [
 // Activity Page 6
 export const activityAccordion6 = [
   {
-    title: "Den första frågan om denna aktivitet?",
+    title: "Vad är Djupvik och vad kan man göra där?",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos sunt explicabo aspernatur.",
+      "Djupvik är ett naturskönt område i Holmsund, känt för sin vackra kustlinje och strand. Det är en populär plats för friluftsliv, såsom promenader, bad och picknick. Området erbjuder också fina vyer över vattnet och en avkopplande miljö för att njuta av naturen.",
   },
   {
-    title: "Den andra frågan om denna aktivitet?",
+    title: "Finns det några särskilda aktiviteter eller evenemang vid Djupvik?",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero minima inventore enim eveniet sunt explicabo aspernatur.",
+      "Vid Djupvik kan du ofta delta i olika friluftsevenemang och aktiviteter, såsom sommarfester, strandstädningar och lokala träffar. Det är också en bra plats för spontana aktiviteter som grillning och fotografering. För aktuella evenemang, kolla med Holmsunds kommun eller lokal turistinformation.",
   },
   {
-    title: "Den tredje frågan om denna aktivitet?",
+    title: "Är Djupvik lämpligt för familjer med små barn?",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero minima eveniet sunt explicabo aspernatur.",
+      "Ja, Djupvik är lämpligt för familjer med små barn. Området erbjuder en fin strand som är idealisk för lek och bad, samt öppna ytor för picknick och lek. Det är dock viktigt att övervaka barnen vid vattnet och vara medveten om eventuella väder- och vattentemperaturer.",
   },
   {
-    title: "Den fjärde frågan om denna aktivitet?",
+    title: "Finns det några faciliteter vid Djupvik?",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero enim eveniet sunt explicabo aspernatur.",
+      "Djupvik är främst ett naturligt friluftsområde och har begränsade faciliteter. Det finns inga större servicebyggnader, men det finns bänkar och avfallsbehållare på vissa ställen. För mer omfattande bekvämligheter kan det vara bra att ta med egen mat, dryck och utrustning.",
   },
   {
-    title: "Den femte frågan om denna aktivitet?",
+    title: "Hur kommer jag till Djupvik och finns det parkeringsmöjligheter?",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero minima inventore enim eveniet sunt explicabo aspernatur. provident officiis voluptas iusto repellendus earum.",
+      "Djupvik är lättillgängligt med bil, och det finns parkeringsmöjligheter i närheten av området. Det finns vanligtvis en eller flera parkeringsplatser nära stranden. Under sommarsäsongen kan det bli fullt, så det är bra att komma tidigt för att säkerställa en parkeringsplats.",
   },
 ];
 
 // Activity Page 7
 export const activityAccordion7 = [
   {
-    title: "Den första frågan om denna aktivitet?",
+    title: "Vad erbjuder Holmsunds Tennisklubb sina medlemmar och besökare?",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos sunt explicabo aspernatur.",
+      "Holmsunds Tennisklubb erbjuder tennisspel på grus- och hardcourt-banor. Klubben har även inomhusbanor som är tillgängliga under vintermånaderna. Medlemmar kan delta i träningsprogram, tävlingar och sociala evenemang. Klubben erbjuder också racketuthyrning och tillgång till omklädningsrum.",
   },
   {
-    title: "Den andra frågan om denna aktivitet?",
+    title: "Hur kan jag bli medlem i Holmsunds Tennisklubb och vad kostar det?",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero minima inventore enim eveniet sunt explicabo aspernatur.",
+      "För att bli medlem i Holmsunds Tennisklubb kan du ansöka via klubbens officiella webbplats eller kontakta klubbhuset direkt. Medlemsavgifterna varierar beroende på medlemskapstyp och ålder. Besök klubbens hemsida eller kontakta dem för detaljer om aktuella priser och medlemskapsalternativ.",
   },
   {
-    title: "Den tredje frågan om denna aktivitet?",
+    title: "Är tennisbana bokning tillgänglig för icke-medlemmar?",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero minima eveniet sunt explicabo aspernatur.",
+      "Ja, icke-medlemmar kan boka tenniskurser och banor på Holmsunds Tennisklubb, men det kan vara begränsad tillgång under vissa tider när medlemmar har företräde. Det är rekommenderat att boka i förväg och kontrollera tillgänglighet samt priser för gäster.",
   },
   {
-    title: "Den fjärde frågan om denna aktivitet?",
+    title:
+      "Finns det träningsmöjligheter och golfinstruktörer på Holmsunds Tennisklubb?",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero enim eveniet sunt explicabo aspernatur.",
+      "Ja, Holmsunds Tennisklubb erbjuder träningsmöjligheter med kvalificerade tennisinstruktörer som kan hjälpa både nybörjare och erfarna spelare att förbättra sin teknik. Klubben erbjuder också gruppträningar och privatlektioner. Kontakta klubbhuset för att boka lektioner och få mer information.",
   },
   {
-    title: "Den femte frågan om denna aktivitet?",
+    title: "Vilka evenemang och tävlingar hålls på Holmsunds Tennisklubb?",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero minima inventore enim eveniet sunt explicabo aspernatur. provident officiis voluptas iusto repellendus earum.",
+      "Holmsunds Tennisklubb arrangerar en rad olika evenemang och tävlingar under året, inklusive klubbmästerskap, öppna turneringar och sociala tennisevenemang. Klubben har också regelbundna seriespel och träningsläger. För att få information om kommande evenemang, besök klubbens hemsida eller kontakta dem direkt.",
   },
 ];
 
 // Activity Page 8
 export const activityAccordion8 = [
   {
-    title: "Den första frågan om denna aktivitet?",
+    title: "Vad är Västerlångslädan och vad kan man göra där?",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos sunt explicabo aspernatur.",
+      "Västerlångslädan är ett friluftsområde i Holmsund som erbjuder en naturskön miljö för friluftsaktiviteter. Området har vandringsstigar, naturreservat och områden för picnic. Det är också en populär plats för att njuta av naturen, fiske och fågelskådning.",
   },
   {
-    title: "Den andra frågan om denna aktivitet?",
+    title:
+      "Finns det några särskilda vandringsleder eller stigar i Västerlångslädan?",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero minima inventore enim eveniet sunt explicabo aspernatur.",
+      "Ja, Västerlångslädan har flera markerade vandringsleder och stigar som erbjuder olika nivåer av svårighetsgrad. Stigarna leder genom vackra naturområden och erbjuder fina utsikter och möjlighet att utforska lokala ekosystem. Kolla med lokal turistinformation för kartor och vägledning om lederna.",
   },
   {
-    title: "Den tredje frågan om denna aktivitet?",
+    title: "Är Västerlångslädan lämplig för familjer med små barn?",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero minima eveniet sunt explicabo aspernatur.",
+      "Ja, Västerlångslädan är lämplig för familjer med små barn. Området erbjuder kortare, lättillgängliga stigar och öppna ytor för lek och picnic. Det är viktigt att vara medveten om barnens säkerhet och att övervaka dem vid vatten eller när de utforskar naturen.",
   },
   {
-    title: "Den fjärde frågan om denna aktivitet?",
+    title: "Finns det några faciliteter vid Västerlångslädan?",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero enim eveniet sunt explicabo aspernatur.",
+      "Västerlångslädan är huvudsakligen ett naturligt friluftsområde och har begränsade faciliteter. Det finns inga stora servicebyggnader, men det finns några bänkar och avfallsbehållare för besökare. För en mer bekväm upplevelse kan det vara bra att ta med egen mat, dryck och annan utrustning.",
   },
   {
-    title: "Den femte frågan om denna aktivitet?",
+    title:
+      "Hur kommer jag till Västerlångslädan och finns det parkeringsmöjligheter?",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non et dolore quos libero minima inventore enim eveniet sunt explicabo aspernatur. provident officiis voluptas iusto repellendus earum.",
+      "Västerlångslädan är lättillgängligt med bil och det finns parkeringsmöjligheter nära områdets ingångar. Det finns vanligtvis en eller flera parkeringsplatser i närheten av stigar och områden för picnic. Under högsäsong kan parkeringen bli full, så det är bra att komma tidigt för att säkerställa en plats.",
   },
 ];
