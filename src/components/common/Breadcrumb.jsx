@@ -4,6 +4,36 @@ import { trackBreadcrumbElementClick } from "../analytics/common";
 import { RxChevronRight } from "react-icons/rx";
 import styles from "../../styles/common/Breadcrumb.module.css";
 
+const pageToSectionMap = {
+  // Utforska pages
+  branteberget: "utforska",
+  kajutan: "utforska",
+  ljumviken: "utforska",
+  revet: "utforska",
+  storsjoskolan: "utforska",
+  solbackakyrkan: "utforska",
+  lovosundet: "utforska",
+  kasaviken: "utforska",
+  // Aktiviteter pages
+  "sandviks-idrottsklubb": "aktiviteter",
+  elljussparet: "aktiviteter",
+  "umea-golfklubb": "aktiviteter",
+  storsjohallen: "aktiviteter",
+  omberget: "aktiviteter",
+  djupvik: "aktiviteter",
+  "holmsunds-tennisklubb": "aktiviteter",
+  vasterlangsladan: "aktiviteter",
+  // Galleri pages
+  osterfjarden: "galleri",
+  storsjoparken: "galleri",
+  sikskarsvaken: "galleri",
+  "holmsunds-kyrka": "galleri",
+  holmsundsbanan: "galleri",
+  holmen: "galleri",
+  skargardsskolan: "galleri",
+  "holmsund-hamn": "galleri",
+};
+
 const Breadcrumb = () => {
   const location = useLocation();
   const pathname = location.pathname.slice(1);
@@ -24,13 +54,10 @@ const Breadcrumb = () => {
   };
 
   const getMainSection = (path) => {
-    const sections = {
-      galleri: "Galleri",
-      aktiviteter: "Aktiviteter",
-      utforska: "Utforska",
-    };
-    for (const [key, value] of Object.entries(sections)) {
-      if (path.startsWith(key)) return value;
+    const pageName = path.split("/").pop();
+    const section = pageToSectionMap[pageName];
+    if (section) {
+      return section.charAt(0).toUpperCase() + section.slice(1);
     }
     return null;
   };
@@ -40,21 +67,17 @@ const Breadcrumb = () => {
     const mainSection = getMainSection(pathname);
 
     if (mainSection) {
-      const mainSectionPath = `/${pathname.split("-")[0]}`;
-      const isMainSectionCurrent = pathname === mainSectionPath.slice(1);
       items.push({
         text: mainSection,
-        to: mainSectionPath,
-        isMainSectionCurrent,
+        to: `/${mainSection.toLowerCase()}`,
       });
 
-      if (!isMainSectionCurrent) {
-        items.push({
-          text: decodeURIComponentSafe(pathname),
-          to: `/${pathname}`,
-          isLast: true,
-        });
-      }
+      const pageName = pathname.split("/").pop();
+      items.push({
+        text: decodeURIComponentSafe(pageName),
+        to: `/${pathname}`,
+        isLast: true,
+      });
     } else if (pathname) {
       items.push({
         text: decodeURIComponentSafe(pathname),
@@ -77,7 +100,7 @@ const Breadcrumb = () => {
               <RxChevronRight className={styles.arrowIcon} aria-hidden="true" />
             )}
             <span className={styles.breadcrumbItem}>
-              {item.isLast || item.isMainSectionCurrent ? (
+              {item.isLast ? (
                 <span className={styles.breadcrumbCurrent}>{item.text}</span>
               ) : (
                 <Link

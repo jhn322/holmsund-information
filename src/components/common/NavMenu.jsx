@@ -135,23 +135,20 @@ const NavMenu = ({
                 <div className={styles.nestedItems}>
                   <li>
                     <NavLink
-                      to="/aktiviteter-1"
+                      to="/sandviks-idrottsklubb"
                       activeclassname={styles.active}
                     >
                       <h5>Sandviks Idrottsklubb</h5>
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink
-                      to="/aktiviteter-2"
-                      activeclassname={styles.active}
-                    >
+                    <NavLink to="/elljussparet" activeclassname={styles.active}>
                       <h5>Elljusspåret</h5>
                     </NavLink>
                   </li>
                   <li>
                     <NavLink
-                      to="/aktiviteter-3"
+                      to="/umea-golfklubb"
                       activeclassname={styles.active}
                     >
                       <h5>Umeå Golfklubb</h5>
@@ -159,7 +156,7 @@ const NavMenu = ({
                   </li>
                   <li>
                     <NavLink
-                      to="/aktiviteter-4"
+                      to="/storsjohallen"
                       activeclassname={styles.active}
                     >
                       <h5>Storsjöhallen</h5>
@@ -206,22 +203,22 @@ const NavMenu = ({
                 </div>
                 <div className={styles.nestedItems}>
                   <li>
-                    <NavLink to="/utforska-1" activeclassname={styles.active}>
+                    <NavLink to="/branteberget" activeclassname={styles.active}>
                       <h5>Bränteberget</h5>
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/utforska-2" activeclassname={styles.active}>
+                    <NavLink to="/kajutan" activeclassname={styles.active}>
                       <h5>Kajutan</h5>
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/utforska-3" activeclassname={styles.active}>
+                    <NavLink to="/ljumviken" activeclassname={styles.active}>
                       <h5>Ljumviken</h5>
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/utforska-4" activeclassname={styles.active}>
+                    <NavLink to="/revet" activeclassname={styles.active}>
                       <h5>Revet</h5>
                     </NavLink>
                   </li>
@@ -266,22 +263,31 @@ const NavMenu = ({
                 </div>
                 <div className={styles.nestedItems}>
                   <li>
-                    <NavLink to="/galleri-1" activeclassname={styles.active}>
+                    <NavLink to="/osterfjarden" activeclassname={styles.active}>
                       <h5>Österfjärden</h5>
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/galleri-2" activeclassname={styles.active}>
+                    <NavLink
+                      to="/storsjoparken"
+                      activeclassname={styles.active}
+                    >
                       <h5>Storsjöparken</h5>
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/galleri-3" activeclassname={styles.active}>
+                    <NavLink
+                      to="/sikskarsvaken"
+                      activeclassname={styles.active}
+                    >
                       <h5>Sikskärsvaken</h5>
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/galleri-4" activeclassname={styles.active}>
+                    <NavLink
+                      to="/holmsunds-kyrka"
+                      activeclassname={styles.active}
+                    >
                       <h5>Holmsunds kyrka</h5>
                     </NavLink>
                   </li>

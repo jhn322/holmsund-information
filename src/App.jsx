@@ -49,36 +49,30 @@ const App = () => {
             element={<DiscoverPageMain page="utforska" />}
           />
           <Route
-            path="/utforska-1"
-            element={<DiscoverPage1 page="utforska-1" />}
+            path="/branteberget"
+            element={<DiscoverPage1 page="branteberget" />}
+          />
+          <Route path="/kajutan" element={<DiscoverPage2 page="kajutan" />} />
+          <Route
+            path="/ljumviken"
+            element={<DiscoverPage3 page="ljumviken" />}
+          />
+          <Route path="/revet" element={<DiscoverPage4 page="revet" />} />
+          <Route
+            path="/storsjoskolan"
+            element={<DiscoverPage5 page="storsjoskolan" />}
           />
           <Route
-            path="/utforska-2"
-            element={<DiscoverPage2 page="utforska-2" />}
+            path="/solbackakyrkan"
+            element={<DiscoverPage6 page="solbackakyrkan" />}
           />
           <Route
-            path="/utforska-3"
-            element={<DiscoverPage3 page="utforska-3" />}
+            path="/lovosundet"
+            element={<DiscoverPage7 page="lovosundet" />}
           />
           <Route
-            path="/utforska-4"
-            element={<DiscoverPage4 page="utforska-4" />}
-          />
-          <Route
-            path="/utforska-5"
-            element={<DiscoverPage5 page="utforska-5" />}
-          />
-          <Route
-            path="/utforska-6"
-            element={<DiscoverPage6 page="utforska-6" />}
-          />
-          <Route
-            path="/utforska-7"
-            element={<DiscoverPage7 page="utforska-7" />}
-          />
-          <Route
-            path="/utforska-8"
-            element={<DiscoverPage8 page="utforska-8" />}
+            path="/kasaviken"
+            element={<DiscoverPage8 page="kasaviken" />}
           />
           {/* Aktiviteter section */}
           <Route
@@ -86,70 +80,61 @@ const App = () => {
             element={<ActivityPageMain page="aktiviteter" />}
           />
           <Route
-            path="/aktiviteter-1"
-            element={<ActivityPage1 page="aktiviteter-1" />}
+            path="/sandviks-idrottsklubb"
+            element={<ActivityPage1 page="sandviks-idrottsklubb" />}
           />
           <Route
-            path="/aktiviteter-2"
-            element={<ActivityPage2 page="aktiviteter-2" />}
+            path="/elljussparet"
+            element={<ActivityPage2 page="elljussparet" />}
           />
           <Route
-            path="/aktiviteter-3"
-            element={<ActivityPage3 page="aktiviteter-3" />}
+            path="/umea-golfklubb"
+            element={<ActivityPage3 page="umea-golfklubb" />}
           />
           <Route
-            path="/aktiviteter-4"
-            element={<ActivityPage4 page="aktiviteter-4" />}
+            path="/storsjohallen"
+            element={<ActivityPage4 page="storsjohallen" />}
+          />
+          <Route path="/omberget" element={<ActivityPage5 page="omberget" />} />
+          <Route path="/djupvik" element={<ActivityPage6 page="djupvik" />} />
+          <Route
+            path="/holmsunds-tennisklubb"
+            element={<ActivityPage7 page="holmsunds-tennisklubb" />}
           />
           <Route
-            path="/aktiviteter-5"
-            element={<ActivityPage5 page="aktiviteter-5" />}
-          />
-          <Route
-            path="/aktiviteter-6"
-            element={<ActivityPage6 page="aktiviteter-6" />}
-          />
-          <Route
-            path="/aktiviteter-7"
-            element={<ActivityPage7 page="aktiviteter-7" />}
-          />
-          <Route
-            path="/aktiviteter-8"
-            element={<ActivityPage8 page="aktiviteter-8" />}
+            path="/vasterlangsladan"
+            element={<ActivityPage8 page="vasterlangsladan" />}
           />
           {/* Galleri section */}
           <Route path="/galleri" element={<GalleryPageMain page="galleri" />} />
           <Route
-            path="/galleri-1"
-            element={<GalleryPage1 page="galleri-1" />}
+            path="/osterfjarden"
+            element={<GalleryPage1 page="osterfjarden" />}
           />
           <Route
-            path="/galleri-2"
-            element={<GalleryPage2 page="galleri-2" />}
+            path="/storsjoparken"
+            element={<GalleryPage2 page="storsjoparken" />}
           />
           <Route
-            path="/galleri-3"
-            element={<GalleryPage3 page="galleri-3" />}
+            path="/sikskarsvaken"
+            element={<GalleryPage3 page="sikskarsvaken" />}
           />
           <Route
-            path="/galleri-4"
-            element={<GalleryPage4 page="galleri-4" />}
+            path="/holmsunds-kyrka"
+            element={<GalleryPage4 page="holmsunds-kyrka" />}
           />
           <Route
-            path="/galleri-5"
-            element={<GalleryPage5 page="galleri-5" />}
+            path="/holmsundsbanan"
+            element={<GalleryPage5 page="holmsundsbanan" />}
+          />
+          <Route path="/holmen" element={<GalleryPage6 page="holmen" />} />
+          <Route
+            path="/skargardsskolan"
+            element={<GalleryPage7 page="skargardsskolan" />}
           />
           <Route
-            path="/galleri-6"
-            element={<GalleryPage6 page="galleri-6" />}
-          />
-          <Route
-            path="/galleri-7"
-            element={<GalleryPage7 page="galleri-7" />}
-          />
-          <Route
-            path="/galleri-8"
-            element={<GalleryPage8 page="galleri-8" />}
+            path="/holmsund-hamn"
+            element={<GalleryPage8 page="holmsund-hamn" />}
           />
           <Route path="/väder" element={<WeatherPage page="väder" />} />
           <Route path="/kartor" element={<MapPage page="kartor" />} />

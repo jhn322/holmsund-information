@@ -21,14 +21,18 @@ const DiscoverPageMain = () => {
   const headerImages = [header1, header2, header3, header4];
 
   const gridImages = [
-    { src: discoverPageMain1, title: "Bränteberget", path: "/utforska-1" },
-    { src: discoverPageMain2, title: "Kajutan", path: "/utforska-2" },
-    { src: discoverPageMain3, title: "Ljumviken", path: "/utforska-3" },
-    { src: discoverPageMain4, title: "Revet", path: "/utforska-4" },
-    { src: discoverPageMain5, title: "Storsjöskolan", path: "/utforska-5" },
-    { src: discoverPageMain6, title: "Solbackakyrkan", path: "/utforska-6" },
-    { src: discoverPageMain7, title: "Lövösundet", path: "/utforska-7" },
-    { src: discoverPageMain8, title: "Kasaviken", path: "/utforska-8" },
+    { src: discoverPageMain1, title: "Bränteberget", path: "/branteberget" },
+    { src: discoverPageMain2, title: "Kajutan", path: "/kajutan" },
+    { src: discoverPageMain3, title: "Ljumviken", path: "/ljumviken" },
+    { src: discoverPageMain4, title: "Revet", path: "/revet" },
+    { src: discoverPageMain5, title: "Storsjöskolan", path: "/storsjoskolan" },
+    {
+      src: discoverPageMain6,
+      title: "Solbackakyrkan",
+      path: "/solbackakyrkan",
+    },
+    { src: discoverPageMain7, title: "Lövösundet", path: "/lovosundet" },
+    { src: discoverPageMain8, title: "Kasaviken", path: "/kasaviken" },
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

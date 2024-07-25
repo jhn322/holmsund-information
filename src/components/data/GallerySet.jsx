@@ -8,24 +8,24 @@ export const gallerySet = [
     url: galleryImage1,
     title: "Österfjärden",
     text: "Österfjärden i Holmsund är en naturskön vik belägen vid Bottenhavet. Området är känt för sin rika fågelfauna och erbjuder utmärkta möjligheter för fågelskådning året runt.",
-    link: "/galleri-1",
+    link: "/osterfjarden",
   },
   {
     url: galleryImage2,
     title: "Storsjöparken",
     text: "I Holmsunds Storsjöpark kan man njuta av naturens skönhet året runt. Parken är särskilt vacker under sommaren när blommorna står i full blom och träden är gröna och lummiga.",
-    link: "/galleri-2",
+    link: "/storsjoparken",
   },
   {
     url: galleryImage3,
     title: "Sikskärsvaken",
     text: "Sikskärsvaken erbjuder aktiviteter för besökare året runt, vilket gör det till en idealisk destination oavsett säsong. Under vår och sommar lockar platsen med vandring, cykling och fågelskådning i den frodiga naturen.",
-    link: "/galleri-3",
+    link: "/sikskarsvaken",
   },
   {
     url: galleryImage4,
     title: "Holmsunds kyrka",
     text: "Holmsunds kyrka är inte bara en plats för gudstjänst utan fungerar även som en central punkt för lokalsamhället. Kyrkan anordnar regelbundet konserter, föreläsningar och andra kulturevenemang som engagerar både unga och gamla.",
-    link: "/galleri-4",
+    link: "/holmsunds-kyrka",
   },
 ];

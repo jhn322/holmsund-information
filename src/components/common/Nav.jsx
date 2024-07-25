@@ -192,22 +192,28 @@ const Nav = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/utforska-5" activeclassname={styles.active}>
+                      <NavLink
+                        to="/storsjoskolan"
+                        activeclassname={styles.active}
+                      >
                         <h5>Storsjöskolan</h5>
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/utforska-6" activeclassname={styles.active}>
+                      <NavLink
+                        to="/solbackakyrkan"
+                        activeclassname={styles.active}
+                      >
                         <h5>Solbackakyrkan</h5>
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/utforska-7" activeclassname={styles.active}>
+                      <NavLink to="/lovosundet" activeclassname={styles.active}>
                         <h5>Lövösundet</h5>
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/utforska-8" activeclassname={styles.active}>
+                      <NavLink to="/kasaviken" activeclassname={styles.active}>
                         <h5>Kasaviken</h5>
                       </NavLink>
                     </li>
@@ -238,24 +244,18 @@ const Nav = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink
-                        to="/aktiviteter-5"
-                        activeclassname={styles.active}
-                      >
+                      <NavLink to="/omberget" activeclassname={styles.active}>
                         <h5>Omberget</h5>
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink
-                        to="/aktiviteter-6"
-                        activeclassname={styles.active}
-                      >
+                      <NavLink to="/djupvik" activeclassname={styles.active}>
                         <h5>Djupvik</h5>
                       </NavLink>
                     </li>
                     <li>
                       <NavLink
-                        to="/aktiviteter-7"
+                        to="/holmsunds-tennisklubb"
                         activeclassname={styles.active}
                       >
                         <h5>Holmsunds Tennisklubb</h5>
@@ -263,7 +263,7 @@ const Nav = () => {
                     </li>
                     <li>
                       <NavLink
-                        to="/aktiviteter-8"
+                        to="/vasterlangsladan"
                         activeclassname={styles.active}
                       >
                         <h5>Västerlångslädan</h5>
@@ -293,22 +293,31 @@ const Nav = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/galleri-5" activeclassname={styles.active}>
+                      <NavLink
+                        to="/holmsundsbanan"
+                        activeclassname={styles.active}
+                      >
                         <h5>Holmsundsbanan</h5>
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/galleri-6" activeclassname={styles.active}>
+                      <NavLink to="/holmen" activeclassname={styles.active}>
                         <h5>Holmen</h5>
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/galleri-7" activeclassname={styles.active}>
+                      <NavLink
+                        to="/skargardsskolan"
+                        activeclassname={styles.active}
+                      >
                         <h5>Skärgårdsskolan</h5>
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/galleri-8" activeclassname={styles.active}>
+                      <NavLink
+                        to="/holmsund-hamn"
+                        activeclassname={styles.active}
+                      >
                         <h5>Holmsund hamn</h5>
                       </NavLink>
                     </li>

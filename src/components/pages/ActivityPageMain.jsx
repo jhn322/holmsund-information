@@ -26,19 +26,23 @@ const ActivityPageMain = () => {
     {
       src: activityPage1,
       title: "Sandviks Idrottsklubb",
-      path: "/aktiviteter-1",
+      path: "/sandviks-idrottsklubb",
     },
-    { src: activityPage2, title: "Elljusspåret", path: "/aktiviteter-2" },
-    { src: activityPage3, title: "Umeå Golfklubb", path: "/aktiviteter-3" },
-    { src: activityPage4, title: "Storsjöhallen", path: "/aktiviteter-4" },
-    { src: activityPage5, title: "Omberget", path: "/aktiviteter-5" },
-    { src: activityPage6, title: "Djupvik", path: "/aktiviteter-6" },
+    { src: activityPage2, title: "Elljusspåret", path: "/elljussparet" },
+    { src: activityPage3, title: "Umeå Golfklubb", path: "/umea-golfklubb" },
+    { src: activityPage4, title: "Storsjöhallen", path: "/storsjohallen" },
+    { src: activityPage5, title: "Omberget", path: "/omberget" },
+    { src: activityPage6, title: "Djupvik", path: "/djupvik" },
     {
       src: activityPage7,
       title: "Holmsunds Tennisklubb",
-      path: "/aktiviteter-7",
+      path: "/holmsunds-tennisklubb",
     },
-    { src: activityPage8, title: "Västerlångslädan", path: "/aktiviteter-8" },
+    {
+      src: activityPage8,
+      title: "Västerlångslädan",
+      path: "/vasterlangsladan",
+    },
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

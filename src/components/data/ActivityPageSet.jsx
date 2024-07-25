@@ -150,17 +150,17 @@ export const activityAccordion6 = [
   {
     title: "Vad är Djupvik och vad kan man göra där?",
     content:
-      "Djupvik är ett naturskönt område i Holmsund, känt för sin vackra kustlinje och strand. Det är en populär plats för friluftsliv, såsom promenader, bad och picknick. Området erbjuder också fina vyer över vattnet och en avkopplande miljö för att njuta av naturen.",
+      "Djupvik är ett naturskönt område i Holmsund, känt för sin vackra kustlinje. Det är en populär plats för friluftsliv, såsom promenader, bad och picknick. Området erbjuder också fina vyer över vattnet och en avkopplande miljö för att njuta av naturen.",
   },
   {
     title: "Finns det några särskilda aktiviteter eller evenemang vid Djupvik?",
     content:
-      "Vid Djupvik kan du ofta delta i olika friluftsevenemang och aktiviteter, såsom sommarfester, strandstädningar och lokala träffar. Det är också en bra plats för spontana aktiviteter som grillning och fotografering. För aktuella evenemang, kolla med Holmsunds kommun eller lokal turistinformation.",
+      "Vid Djupvik kan du ofta delta i olika friluftsevenemang och aktiviteter, såsom sommarfester och lokala träffar. Det är också en bra plats för spontana aktiviteter som grillning och fotografering. För aktuella evenemang, kolla med Holmsunds kommun eller lokal turistinformation.",
   },
   {
     title: "Är Djupvik lämpligt för familjer med små barn?",
     content:
-      "Ja, Djupvik är lämpligt för familjer med små barn. Området erbjuder en fin strand som är idealisk för lek och bad, samt öppna ytor för picknick och lek. Det är dock viktigt att övervaka barnen vid vattnet och vara medveten om eventuella väder- och vattentemperaturer.",
+      "Ja, Djupvik är lämpligt för familjer med små barn. Området erbjuder område för lek och bad, samt öppna ytor för picknick och lek. Det är dock viktigt att övervaka barnen vid vattnet och vara medveten om eventuella väder- och vattentemperaturer.",
   },
   {
     title: "Finns det några faciliteter vid Djupvik?",
@@ -170,7 +170,7 @@ export const activityAccordion6 = [
   {
     title: "Hur kommer jag till Djupvik och finns det parkeringsmöjligheter?",
     content:
-      "Djupvik är lättillgängligt med bil, och det finns parkeringsmöjligheter i närheten av området. Det finns vanligtvis en eller flera parkeringsplatser nära stranden. Under sommarsäsongen kan det bli fullt, så det är bra att komma tidigt för att säkerställa en parkeringsplats.",
+      "Djupvik är lättillgängligt med bil, och det finns parkeringsmöjligheter i närheten av området. Det finns vanligtvis en eller flera parkeringsplatser. Under sommarsäsongen kan det bli fullt, så det är bra att komma tidigt för att säkerställa en parkeringsplats.",
   },
 ];
 

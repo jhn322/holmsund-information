@@ -21,14 +21,14 @@ const GalleryPageMain = () => {
   const headerImages = [header9, header10, header11, header12];
 
   const gridImages = [
-    { src: galleryPage1, title: "Österfjärden", path: "/galleri-1" },
-    { src: galleryPage2, title: "Storsjöparken", path: "/galleri-2" },
-    { src: galleryPage3, title: "Sikskärsvaken", path: "/galleri-3" },
-    { src: galleryPage4, title: "Holmsunds kyrka", path: "/galleri-4" },
-    { src: galleryPage5, title: "Holmsundsbanan", path: "/galleri-5" },
-    { src: galleryPage6, title: "Holmen", path: "/galleri-6" },
-    { src: galleryPage7, title: "Skärgårdsskolan", path: "/galleri-7" },
-    { src: galleryPage8, title: "Holmsund hamn", path: "/galleri-8" },
+    { src: galleryPage1, title: "Österfjärden", path: "/osterfjarden" },
+    { src: galleryPage2, title: "Storsjöparken", path: "/storsjoparken" },
+    { src: galleryPage3, title: "Sikskärsvaken", path: "/sikskarsvaken" },
+    { src: galleryPage4, title: "Holmsunds kyrka", path: "/holmsunds-kyrka" },
+    { src: galleryPage5, title: "Holmsundsbanan", path: "/holmsundsbanan" },
+    { src: galleryPage6, title: "Holmen", path: "/holmen" },
+    { src: galleryPage7, title: "Skärgårdsskolan", path: "/skargardsskolan" },
+    { src: galleryPage8, title: "Holmsund hamn", path: "/holmsund-hamn" },
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
