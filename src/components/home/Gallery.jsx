@@ -93,7 +93,7 @@ const Gallery = () => {
                 aria-label="Gallery decorative circle"
               ></div>
               <h2 className={styles.galleryTitle}>
-                Uppfriskad & <br /> Förnyad
+                Uppfriskande & <br /> Naturnära
               </h2>
             </article>
           </div>

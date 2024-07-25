@@ -138,7 +138,7 @@ const Separator = () => {
               <h3 className={styles.snippetTitle}>Fika i Holmsund</h3>
               <p className={styles.snippetText}>
                 Besök lokala caféer och njut av en kopp kaffe med utsikt över
-                hamnen.
+                djupvik.
               </p>
             </div>
             <div className={styles.snippet}>

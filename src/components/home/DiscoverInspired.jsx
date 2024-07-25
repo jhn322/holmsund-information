@@ -84,7 +84,7 @@ const DiscoverInspired = () => {
       <main ref={discoverContainerRef} className={styles.discoverContainer}>
         <article className={styles.discoverInner}>
           <header className={styles.discoverTitle}>
-            <h2>Bli Inspirerad</h2>
+            <h2>Nära till Naturen</h2>
           </header>
           <section className={styles.discoverCardContainer}>
             {insipiredData.map((card, index) => (
