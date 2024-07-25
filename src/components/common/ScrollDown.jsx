@@ -5,16 +5,13 @@ import styles from "../../styles/common/ScrollDown.module.css";
 
 const ScrollDown = () => {
   const [visible, setVisible] = useState(true);
-  const [used, setUsed] = useState(() => {
-    return localStorage.getItem("scrollDownUsed") === "true";
-  });
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 0.1 * window.innerHeight) {
         setVisible(false);
-        setUsed(true);
-        localStorage.setItem("scrollDownUsed", "true");
+
+        window.removeEventListener("scroll", handleScroll);
       }
     };
 
@@ -31,14 +28,12 @@ const ScrollDown = () => {
       behavior: "smooth",
     });
     setVisible(false);
-    setUsed(true);
-    localStorage.setItem("scrollDownUsed", "true");
 
     // Google Analytics
     trackScrollDownElementClick("icon", "Scroll Down", null);
   };
 
-  if (used) {
+  if (!visible) {
     return null;
   }
 
@@ -46,9 +41,7 @@ const ScrollDown = () => {
     <main>
       {/* Scroll down button */}
       <article
-        className={`${styles.scrollDown} ${!visible && styles.invisible} ${
-          styles.jump
-        }`}
+        className={`${styles.scrollDown} ${styles.jump}`}
         onClick={scrollDown}
       >
         <RxChevronDown

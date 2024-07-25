@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   RxChevronLeft,
   RxChevronRight,
@@ -16,57 +16,82 @@ const ZoomedImage = ({
   onPrev,
   onNext,
   setCurrentIndex,
-}) => (
-  <div className={styles.zoomImgOverlay} onClick={onClose}>
-    <div
-      className={styles.zoomImgContainer}
-      onClick={(e) => e.stopPropagation()}
-    >
-      <img
-        src={images[currentIndex].url}
-        alt={images[currentIndex].text}
-        className={styles.zoomImg}
-        onClick={onClose}
-      />
-      <button
-        className={styles.close}
-        onClick={onClose}
-        aria-label="Stäng zoom läge"
+}) => {
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "ArrowLeft") {
+        onPrev();
+      } else if (event.key === "ArrowRight") {
+        onNext();
+      } else if (event.key === "Escape") {
+        onClose();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [onPrev, onNext, onClose]);
+
+  const handleImageClick = (e) => {
+    e.stopPropagation();
+    onNext();
+  };
+
+  return (
+    <div className={styles.zoomImgOverlay} onClick={onClose}>
+      <div
+        className={styles.zoomImgContainer}
+        onClick={(e) => e.stopPropagation()}
       >
-        <RxCross2 className={styles.closeIcon} />
-      </button>
-      <button
-        className={`${styles.zoomBtn} ${styles.zoomPrev}`}
-        onClick={onPrev}
-        aria-label="Tidigare bild"
-      >
-        <RxChevronLeft className={styles.navIcon} />
-      </button>
-      <button
-        className={`${styles.zoomBtn} ${styles.zoomNext}`}
-        onClick={onNext}
-        aria-label="Nästa bild"
-      >
-        <RxChevronRight className={styles.navIcon} />
-      </button>
-    </div>
-    <div className={styles.dotPagination}>
-      {images.map((_, index) => (
-        <span
-          key={index}
-          className={`${styles.dot} ${
-            index === currentIndex ? styles.activeDot : ""
-          }`}
-          onClick={(e) => {
-            e.stopPropagation();
-            setCurrentIndex(index);
-          }}
-          aria-label={`Gå till bild ${index + 1}`}
+        <img
+          src={images[currentIndex].url}
+          alt={images[currentIndex].text}
+          className={styles.zoomImg}
+          onClick={handleImageClick}
         />
-      ))}
+        <button
+          className={styles.close}
+          onClick={onClose}
+          aria-label="Stäng zoom läge"
+        >
+          <RxCross2 className={styles.closeIcon} />
+        </button>
+        <button
+          className={`${styles.zoomBtn} ${styles.zoomPrev}`}
+          onClick={onPrev}
+          aria-label="Tidigare bild"
+        >
+          <RxChevronLeft className={styles.navIcon} />
+        </button>
+        <button
+          className={`${styles.zoomBtn} ${styles.zoomNext}`}
+          onClick={onNext}
+          aria-label="Nästa bild"
+        >
+          <RxChevronRight className={styles.navIcon} />
+        </button>
+      </div>
+      <div className={styles.dotPagination}>
+        {images.map((_, index) => (
+          <span
+            key={index}
+            className={`${styles.dot} ${
+              index === currentIndex ? styles.activeDot : ""
+            }`}
+            onClick={(e) => {
+              e.stopPropagation();
+              setCurrentIndex(index);
+            }}
+            aria-label={`Gå till bild ${index + 1}`}
+          />
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const SlideshowAddon = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -125,6 +150,14 @@ const SlideshowAddon = ({ images }) => {
 
   const toggleCaption = () => {
     setIsCaptionExpanded(!isCaptionExpanded);
+  };
+
+  const handleZoomPrev = () => {
+    setZoomedIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const handleZoomNext = () => {
+    setZoomedIndex((prev) => (prev + 1) % images.length);
   };
 
   return (
@@ -221,10 +254,8 @@ const SlideshowAddon = ({ images }) => {
           images={images}
           currentIndex={zoomedIndex}
           onClose={() => setZoomedIndex(null)}
-          onPrev={() =>
-            setZoomedIndex((prev) => (prev - 1 + images.length) % images.length)
-          }
-          onNext={() => setZoomedIndex((prev) => (prev + 1) % images.length)}
+          onPrev={handleZoomPrev}
+          onNext={handleZoomNext}
           setCurrentIndex={setZoomedIndex}
         />
       )}

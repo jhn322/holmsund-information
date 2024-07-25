@@ -101,6 +101,10 @@ body {
   margin-bottom: 1rem;
 }
 
+.modalIcon svg:hover {
+  color: var(--accent-color);
+}
+
 .redirectButton {
   display: inline-block;
   margin-top: 1rem;
