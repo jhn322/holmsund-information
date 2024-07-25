@@ -117,7 +117,7 @@ const ActivityPageMain = () => {
 
   return (
     <LayoutPageMain
-      headerTitle="Activity Page"
+      headerTitle="Aktiviteter"
       headerBackgroundImage={headerImages[currentImageIndex]}
       renderActivityAddon1={true}
       renderDiscoverAddon2={true}
@@ -126,12 +126,13 @@ const ActivityPageMain = () => {
       galleryTitle4="Galleri"
     >
       <section className={styles.textContainer}>
-        <h2 className={styles.mainTitle}>Activity Page Title</h2>
+        <h2 className={styles.mainTitle}>Välkommen till aktiviteter</h2>
         <p className={styles.mainText}>
           Du kan välja bland flera spännande aktiviteter här nere. Oavsett om du
-          föredrar att ta en avkopplande promenad vid vattnet, njuta av en glass
-          på stranden, eller prova på något mer spännande som att åka på en
-          båttur, finns det något som passar alla intressen.
+          föredrar att förbättra din golfsving, spela en omgång fotboll, ta en
+          löptur längs vattnet, simma några längder, eller åka skidor i vackra
+          omgivningar, finns det något som passar alla träningsnivåer och
+          intressen.
         </p>
       </section>
       <div className={styles.gridContainer}>{gridItems}</div>

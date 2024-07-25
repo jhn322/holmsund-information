@@ -96,28 +96,28 @@ export const activitySlides3 = [
     src: image9,
     title: "Sandviks Idrottsklubb",
     description:
-      "Fira med oss den 8 juni i Kellogg Mall Park. Upplev en fantastisk kväll med utsökta viner från lokala vingårdar, musik och god mat. Ta chansen att träffa vinmakare och delta i exklusiva vinprovningar.",
+      "Sandviks Idrottsklubb lägger stor vikt vid att skapa en inkluderande och stödjande miljö för alla deltagare.",
     link: "/aktiviteter-1",
   },
   {
     src: image10,
     title: "Elljusspåret",
     description:
-      "Katten sov lugnt på den mysiga, varma soffan. Utforska vårt kattmuseum där du kan lära dig om katternas historia och deras roll i olika kulturer.",
+      "Tack vare belysningen kan man njuta av en säker och trivsam träning även när det är mörkt ute.",
     link: "/aktiviteter-2",
   },
   {
     src: image11,
     title: "Umeå Golfklubb",
     description:
-      "Hon skrattade högt åt det roliga skämtet hennes vän berättade. Välkommen till våra simlektioner, där du kan lära dig att simma eller förbättra dina simfärdigheter. Våra erfarna instruktörer ger personlig uppmärksamhet och ser till att varje lektion är både säker och rolig. Perfekt för alla åldrar och nivåer!",
+      "Klubben erbjuder också träningsmöjligheter och kurser för spelare på alla nivåer, från nybörjare till avancerade golfare.",
     link: "/aktiviteter-3",
   },
   {
     src: image12,
     title: "Storsjöhallen",
     description:
-      "De kom tidigt, till deras värds stora glädje. Delta i vår spännande auktionsshow där unika föremål från hela världen går under klubban. Möt samlare och säljare, och kanske gå hem med en oväntad skatt.",
+      "Storsjöhallen har ett dedikerat team av personal som ser till att alla evenemang och aktiviteter går smidigt och professionellt.",
     link: "/aktiviteter-4",
   },
 ];
@@ -127,7 +127,7 @@ export const activitySlides4 = [
     src: image13,
     title: "Omberget",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+      "Omberget är populärt bland både lokalbefolkning och besökare som söker en fridfull plats för rekreation.",
     link: "/aktiviteter-5",
   },
   {

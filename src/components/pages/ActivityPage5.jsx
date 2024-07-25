@@ -56,32 +56,52 @@ const ActivityPage5 = () => {
         </header>
         <section>
           <p className={styles.boldText}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
-            omnis possimus incidunt quo voluptatibus sunt libero.
+            Omberget – en naturskön destination som erbjuder en rad
+            friluftsaktiviteter för både invånare och besökare. Med sina
+            vidsträckta vyer, välbevarade stigar och vackra landskap är Omberget
+            en idealisk plats för alla som älskar att vara ute i naturen.
           </p>
+
           <p className={styles.text}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex velit
-            eum molestias cupiditate vero, et error sequi quidem. Labore ratione
-            veniam esse, neque iste accusantium accusamus ut eveniet voluptas
-            quos! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Omberget är känt för sina spektakulära utsikter och natursköna
+            omgivningar. Berget erbjuder en varierad terräng med både lätta och
+            mer utmanande vandringsleder som slingrar sig genom den vackra
+            skogsmiljön. Från de högsta punkterna på berget har du en fantastisk
+            vy över Bottenviken och det omgivande landskapet, vilket gör det
+            till en utmärkt plats för fotografering och att bara njuta av
+            naturens storslagenhet. <br /> Vandring är den mest populära
+            aktiviteten på Omberget, med leder som passar både nybörjare och
+            erfarna vandrare. Stigarna är väl markerade och erbjuder något för
+            alla, från korta promenader till längre och mer krävande rutter.
+            Under sommaren är det en idealisk plats för att njuta av friluftsliv
+            och få en paus från vardagens stress.
           </p>
+
+          <h5 className={styles.headline}>Vintertider</h5>
           <p className={styles.text}>
-            Quos nemo nisi nostrum magnam pariatur debitis, necessitatibus
-            repellat rem molestiae et nam ipsum assumenda ipsa esse saepe cumque
-            recusandae vitae molestias? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Rerum sint vero, ab officia quibusdam dolor?
-            Accusantium maxime ipsam sunt porro id nam sed accusamus, possimus
-            ullam earum iure modi vitae. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit.
+            När vintermånaderna kommer förvandlas Omberget till en snötäckt
+            idyll. Här kan du njuta av skidåkning, snöskovandring och
+            vinterpromenader i en magisk vintermiljö. De snötäckta stigar och
+            vidsträckta vyerna skapar en fridfull och avkopplande atmosfär,
+            perfekt för att tillbringa en dag ute i det fria. <br /> Omberget är
+            också en populär plats för att uppleva den genuina svenska vintern,
+            med möjligheter till både lugna promenader och mer aktiva
+            vinteräventyr. De välunderhållna lederna gör det enkelt att njuta av
+            vinterns alla fröjder, oavsett om du är en erfaren vinterutövare
+            eller bara vill ta en stund för att njuta av snön.
           </p>
+
+          <h5 className={styles.headline}>Gemenskap</h5>
           <p className={styles.text}>
-            Ipsam alias nobis eveniet vero totam sapiente tempora aut
-            dignissimos vel! Fugiat illo, tempora quia voluptatibus
-            exercitationem debitis veritatis facere error omnis. Lorem ipsum
-            dolor sit amet consectetur, adipisicing elit. Distinctio dolore qui
-            est esse ipsa aliquam minus optio nesciunt quasi? Optio deleniti
-            harum vero quibusdam aspernatur nostrum vel repellendus culpa
-            tempore.
+            Förutom att vara en plats för fysisk aktivitet, är Omberget också en
+            social mötesplats för lokalbefolkningen och besökare. Här kan du
+            träffa andra friluftsentusiaster, delta i organiserade evenemang och
+            kanske till och med ta del av gemensamma aktiviteter som guidade
+            vandringar eller naturinformationstillfällen. <br /> Det är en plats
+            där människor samlas för att njuta av gemenskapen och dela sin
+            kärlek till naturen. Många väljer att använda Omberget som en plats
+            för att umgås med vänner och familj, eller för att delta i lokala
+            arrangemang som främjar en aktiv och hälsosam livsstil.
           </p>
         </section>
         <section className={styles.accordion}>

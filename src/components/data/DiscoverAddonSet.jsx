@@ -87,25 +87,25 @@ export const discoverAddonSet3 = [
   {
     image: image9,
     title: "Sandviks Idrottsklubb",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    text: "Med flera träningsgrupper för olika åldrar är klubben en viktig del av det lokala samhället. Genom regelbundna tävlingar och evenemang stärker de gemenskapen bland medlemmarna.",
     link: "/aktiviteter-1",
   },
   {
     image: image10,
     title: "Elljusspåret",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    text: "Elljusspåret är också en mötesplats för många som uppskattar den friska luften och den avkopplande atmosfären.",
     link: "/aktiviteter-2",
   },
   {
     image: image11,
     title: "Umeå Golfklubb",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    text: "Umeå Golfklubb erbjuder en vacker och tekniskt utmanande golfbana som lockar spelare från hela regionen. Klubben har en professionell atmosfär och välskötta faciliteter för både medlemmar och gäster.",
     link: "/aktiviteter-3",
   },
   {
     image: image12,
     title: "Storsjöhallen",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veritatis amet cum nesciunt illum dolores maiores odio assumenda iste eos neque harum quas.",
+    text: "Förutom idrott används Storsjöhallen också för kulturella och samhälleliga evenemang, vilket gör den till en central mötesplats i Holmsund.",
     link: "/aktiviteter-4",
   },
 ];
@@ -114,7 +114,7 @@ export const discoverAddonSet4 = [
   {
     image: image13,
     title: "Omberget",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    text: "Omberget är ett vackert naturområde i Holmsund, idealiskt för vandring och friluftsliv. Här finns välmarkerade leder som erbjuder fantastisk utsikt och en chans att uppleva lokal flora och fauna.",
     link: "/aktiviteter-5",
   },
   {

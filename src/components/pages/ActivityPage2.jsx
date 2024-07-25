@@ -59,32 +59,45 @@ const ActivityPage2 = () => {
         </header>
         <section>
           <p className={styles.boldText}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti
-            omnis possimus incidunt quo voluptatibus sunt libero.
+            Elljusspåret – ett populärt friluftsområde som bjuder in till både
+            motion och avkoppling. Detta välskötta spår är en skatt för alla som
+            älskar att vistas utomhus, och det erbjuder en mångsidig upplevelse
+            året runt.
           </p>
           <p className={styles.text}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex velit
-            eum molestias cupiditate vero, et error sequi quidem. Labore ratione
-            veniam esse, neque iste accusantium accusamus ut eveniet voluptas
-            quos! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Elljusspåret sträcker sig över 6,5 kilometer och slingrar sig genom
+            en naturskön miljö. Beläget precis utanför Holmsund, vid kusten av
+            Bottenviken, är spåret lättillgängligt för både invånare och
+            besökare. Den noggrant planerade belysningen längs hela sträckan gör
+            det möjligt att njuta av naturen även efter mörkrets inbrott, vilket
+            ger en särskild magi till kvällspromenader och nattliga
+            joggingturer. Under vintern, när snön täcker landskapet, får spåret
+            en drömsk och stillsam karaktär som lockar till vinteraktiviteter.
           </p>
           <p className={styles.text}>
-            Quos nemo nisi nostrum magnam pariatur debitis, necessitatibus
-            repellat rem molestiae et nam ipsum assumenda ipsa esse saepe cumque
-            recusandae vitae molestias? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Rerum sint vero, ab officia quibusdam dolor?
-            Accusantium maxime ipsam sunt porro id nam sed accusamus, possimus
-            ullam earum iure modi vitae. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit.
+            Elljusspåret är utformat för att vara en mångsidig plats för olika
+            friluftsaktiviteter. Under sommarhalvåret är det ett populärt val
+            för promenader, löpning och cykling. De varierande landskapen, med
+            både skogsdungar och öppna ytor, ger en omväxlande och behaglig
+            upplevelse. Spåret är välskött och lätt att navigera, vilket gör det
+            lämpligt för både vana löpare och de som bara vill ta en lugn
+            promenad. <br /> När vinterkylan sätter in, förvandlas Elljusspåret
+            till en idealisk plats för längdskidåkning och vinterpromenader. Det
+            belysta spåret ger en trygg och vacker miljö för de som vill njuta
+            av vinterns fröjder även när det är mörkt. Här är det inte ovanligt
+            att se både nybörjare och erfarna skidåkare glida fram genom den
+            snöiga terrängen.
           </p>
           <p className={styles.text}>
-            Ipsam alias nobis eveniet vero totam sapiente tempora aut
-            dignissimos vel! Fugiat illo, tempora quia voluptatibus
-            exercitationem debitis veritatis facere error omnis. Lorem ipsum
-            dolor sit amet consectetur, adipisicing elit. Distinctio dolore qui
-            est esse ipsa aliquam minus optio nesciunt quasi? Optio deleniti
-            harum vero quibusdam aspernatur nostrum vel repellendus culpa
-            tempore.
+            Förutom att vara en plats för fysisk aktivitet är Elljusspåret också
+            en social samlingspunkt. Många använder spåret som en plats för att
+            umgås med vänner och familj, eller för att delta i organiserade
+            aktiviteter och evenemang. Den vänliga och avslappnade atmosfären
+            gör det till en perfekt plats för att både träna och knyta sociala
+            band. <br /> Elljusspåret bidrar också till en hälsosam livsstil
+            genom att erbjuda en inbjudande miljö för regelbunden motion. Med
+            sina väl underhållna ytor och vackra omgivningar är det lätt att bli
+            motiverad att vara aktiv och njuta av den friska luften.
           </p>
         </section>
         <section className={styles.accordion}>

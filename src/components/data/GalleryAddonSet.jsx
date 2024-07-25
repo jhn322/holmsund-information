@@ -87,25 +87,25 @@ export const galleryAddonSet3 = [
   {
     url: image9,
     title: "Sandviks Idrottsklubb",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    text: "Flera lokala ungdomar har fått sin start inom idrott genom klubbens verksamhet, vilket har bidragit till klubbens goda rykte.",
     link: "/aktiviteter-1",
   },
   {
     url: image10,
     title: "Elljusspåret",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    text: "Elljusspåret är också en mötesplats för många som uppskattar den friska luften och den avkopplande atmosfären.",
     link: "/aktiviteter-2",
   },
   {
     url: image11,
     title: "Umeå Golfklubb",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec.",
+    text: "Den vänliga och välkomnande atmosfären bidrar till en positiv upplevelse både på och utanför banan.",
     link: "/aktiviteter-3",
   },
   {
     url: image12,
     title: "Storsjöhallen",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum.",
+    text: "Med sina stora ytor och flexibla lösningar är Storsjöhallen en viktig del av det lokala idrottslivet och ett populärt val för sportevenemang.",
     link: "/aktiviteter-4",
   },
 ];
@@ -114,7 +114,7 @@ export const galleryAddonSet4 = [
   {
     url: image13,
     title: "Omberget",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et libero vestibulum, sollicitudin metus nec, porttitor sem.",
+    text: "Under vintern är Omberget ett utmärkt ställe för snöskor eller längdskidåkning, med fantastiska vinterlandskap att njuta av.",
     link: "/aktiviteter-5",
   },
   {
