@@ -8,7 +8,7 @@ import { galleryPhotos8 } from "../data/PhotoGridSet";
 
 const GalleryPage8 = () => {
   useEffect(() => {
-    setDocumentTitle("Galleri-8");
+    setDocumentTitle("Holmsund hamn");
   }, []);
 
   return (

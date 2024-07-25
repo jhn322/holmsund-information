@@ -8,7 +8,7 @@ import { galleryPhotos4 } from "../data/PhotoGridSet";
 
 const GalleryPage4 = () => {
   useEffect(() => {
-    setDocumentTitle("Galleri-4");
+    setDocumentTitle("Holmsunds kyrka");
   }, []);
 
   return (

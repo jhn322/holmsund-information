@@ -8,7 +8,7 @@ import { galleryPhotos2 } from "../data/PhotoGridSet";
 
 const GalleryPage2 = () => {
   useEffect(() => {
-    setDocumentTitle("Galleri-2");
+    setDocumentTitle("Storsjöparken");
   }, []);
 
   return (

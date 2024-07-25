@@ -8,7 +8,7 @@ import { galleryPhotos6 } from "../data/PhotoGridSet";
 
 const GalleryPage6 = () => {
   useEffect(() => {
-    setDocumentTitle("Galleri-6");
+    setDocumentTitle("Holmen");
   }, []);
 
   return (

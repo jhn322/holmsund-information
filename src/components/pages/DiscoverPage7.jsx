@@ -8,7 +8,7 @@ import backgroundImage from "../../assets/discover/discoverPage7.jpg";
 
 const DiscoverPage7 = () => {
   useEffect(() => {
-    setDocumentTitle("Utforska-7");
+    setDocumentTitle("Lövösundet");
   }, []);
 
   return (

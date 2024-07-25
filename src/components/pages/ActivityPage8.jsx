@@ -45,7 +45,7 @@ const AccordionItem = ({ title, content }) => {
 
 const ActivityPage8 = () => {
   useEffect(() => {
-    setDocumentTitle("Aktiviteter-8");
+    setDocumentTitle("Västerlångslädan");
   }, []);
 
   return (
