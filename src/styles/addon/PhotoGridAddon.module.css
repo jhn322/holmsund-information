@@ -199,6 +199,12 @@
   padding: 3px;
   border-radius: 35px;
   z-index: 10;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dotPagination:hover {
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .dot {

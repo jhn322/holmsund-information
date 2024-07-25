@@ -9,7 +9,14 @@ import {
 } from "react-icons/rx";
 import styles from "../../styles/addon/SlideshowAddon.module.css";
 
-const ZoomedImage = ({ images, currentIndex, onClose, onPrev, onNext }) => (
+const ZoomedImage = ({
+  images,
+  currentIndex,
+  onClose,
+  onPrev,
+  onNext,
+  setCurrentIndex,
+}) => (
   <div className={styles.zoomImgOverlay} onClick={onClose}>
     <div
       className={styles.zoomImgContainer}
@@ -50,7 +57,10 @@ const ZoomedImage = ({ images, currentIndex, onClose, onPrev, onNext }) => (
           className={`${styles.dot} ${
             index === currentIndex ? styles.activeDot : ""
           }`}
-          onClick={() => setCurrentIndex(index)}
+          onClick={(e) => {
+            e.stopPropagation();
+            setCurrentIndex(index);
+          }}
           aria-label={`Gå till bild ${index + 1}`}
         />
       ))}
@@ -215,6 +225,7 @@ const SlideshowAddon = ({ images }) => {
             setZoomedIndex((prev) => (prev - 1 + images.length) % images.length)
           }
           onNext={() => setZoomedIndex((prev) => (prev + 1) % images.length)}
+          setCurrentIndex={setZoomedIndex}
         />
       )}
     </section>
