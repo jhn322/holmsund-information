@@ -46,6 +46,9 @@ body {
   font-size: 2.25rem;
   margin-bottom: 5rem;
   margin-top: 0.5rem;
+  opacity: 0;
+  animation: fadeInSlideIn 1s ease-out forwards;
+  animation-delay: 1s;
 }
 
 .undertitleContent {
@@ -53,6 +56,9 @@ body {
   font-weight: 600;
   margin-bottom: 1rem;
   color: var(--nav-color);
+  opacity: 0;
+  animation: fadeInSlideIn 1s ease-out forwards;
+  animation-delay: 1s;
 }
 
 .paragraphContent {
@@ -60,6 +66,9 @@ body {
   word-spacing: 1px;
   line-height: 2rem;
   max-width: 90%;
+  opacity: 0;
+  animation: fadeInSlideIn 1s ease-out forwards;
+  animation-delay: 1s;
 }
 
 .fadeInSlideIn {

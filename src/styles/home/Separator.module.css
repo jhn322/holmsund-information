@@ -44,21 +44,26 @@ body {
 }
 
 .socialMediaLinks {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
   gap: 1rem;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
 }
 
 .iconLink {
   display: flex;
   align-items: center;
+  justify-content: center;
   color: var(--accent-color);
   font-size: 1.1rem;
-  margin: 0 0.4rem;
   text-decoration: none;
   transition: color 0.3s, transform 0.3s;
+  text-decoration: none;
+  height: 3rem;
+  padding: 0 0.25rem;
 }
 
 .iconLink:hover,
@@ -187,6 +192,47 @@ body {
   color: var(--black-text-color);
 }
 
+.fadeIn {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fadeIn.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slideIn {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.slideIn.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.separatorText,
+.socialMediaLinks,
+.separatorSecondTitle,
+.separatorSecondText,
+.snippet {
+  opacity: 0;
+}
+
+.separatorText,
+.socialMediaLinks {
+  transform: translateY(60px);
+}
+
+.separatorSecondTitle,
+.separatorSecondText,
+.snippet {
+  transform: translateX(60px);
+}
+
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 599px) {
   .separatorFirst {
@@ -234,6 +280,11 @@ body {
   .separatorSecondTitle {
     font-size: 3rem;
   }
+
+  .socialMediaLinks {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
 }
 
 /* Large Desktop */
@@ -250,5 +301,10 @@ body {
 
   .separatorSecondTitle {
     font-size: 3.5rem;
+  }
+
+  .socialMediaLinks {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
   }
 }

@@ -33,6 +33,7 @@ const GalleryPageMain = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const gridRefs = useRef([]);
+  const textRefs = useRef([]);
 
   useEffect(() => {
     setDocumentTitle("Galleri");
@@ -65,7 +66,7 @@ const GalleryPageMain = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add(styles.inView);
+            entry.target.classList.add(styles.animated);
           }
         });
       },
@@ -79,8 +80,20 @@ const GalleryPageMain = () => {
       }
     });
 
+    const textElements = textRefs.current;
+    textElements.forEach((element) => {
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
     return () => {
       elements.forEach((element) => {
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+      textElements.forEach((element) => {
         if (element) {
           observer.unobserve(element);
         }
@@ -119,8 +132,16 @@ const GalleryPageMain = () => {
       galleryTitle3="Aktiviteter"
     >
       <section className={styles.textContainer}>
-        <h2 className={styles.mainTitle}>Välkommen till galleriet</h2>
-        <p className={styles.mainText}>
+        <h2
+          className={`${styles.mainTitle} ${styles.animate}`}
+          ref={(el) => (textRefs.current[0] = el)}
+        >
+          Välkommen till galleriet
+        </h2>
+        <p
+          className={`${styles.mainText} ${styles.animate}`}
+          ref={(el) => (textRefs.current[1] = el)}
+        >
           Galleriet innehåller en mängd sevärda platser och intressanta punkter,
           från historiska byggnader till natursköna områden. Det finns mycket
           att upptäcka och utforska i denna samling av fascinerande platser.

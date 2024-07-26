@@ -11,9 +11,15 @@ const MapCircleAddon = () => {
         <article className={styles.content}>
           <div className={`${styles.textContent} ${styles2.hidden}`}>
             <header>
-              <h2 className={styles2.titleContent}>Kartor</h2>
+              <h2
+                className={`${styles2.titleContent} ${styles2.fadeInSlideIn}`}
+              >
+                Kartor
+              </h2>
             </header>
-            <p className={styles.paragraphContent}>
+            <p
+              className={`${styles.paragraphContent} ${styles2.fadeInSlideIn}`}
+            >
               Utforska Holmsund med kartor som ger en översiktlig bild av
               stadsplanering, grönområden och infrastruktur, perfekt för att
               navigera och upptäcka vår samhälls charm och funktioner.

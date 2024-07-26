@@ -77,22 +77,22 @@ const LayoutPageOther = ({
   useEffect(() => {
     const components = [
       renderDiscoverAddon1 && (
-        <DiscoverAddon1 key="discover1" title={discoverTitle1} />
+        <DiscoverAddon1 key="discover1" title="Resa Genom Orten" />
       ),
       renderDiscoverAddon2 && (
-        <DiscoverAddon2 key="discover2" title={discoverTitle2} />
+        <DiscoverAddon2 key="discover2" title="Varierade Möjligheter" />
       ),
       renderDiscoverAddon3 && (
-        <DiscoverAddon3 key="discover3" title={discoverTitle3} />
+        <DiscoverAddon3 key="discover3" title="Håll Kroppen Aktiv" />
       ),
       renderDiscoverAddon4 && (
-        <DiscoverAddon4 key="discover4" title={discoverTitle4} />
+        <DiscoverAddon4 key="discover4" title="Nya Äventyr Väntar" />
       ),
       renderDiscoverAddon5 && (
-        <DiscoverAddon5 key="discover5" title={discoverTitle5} />
+        <DiscoverAddon5 key="discover5" title="Naturens Tysta Vägar" />
       ),
       renderDiscoverAddon6 && (
-        <DiscoverAddon6 key="discover6" title={discoverTitle6} />
+        <DiscoverAddon6 key="discover6" title="Upptäck Nya Platser" />
       ),
       renderActivityAddon1 && <ActivityAddon1 key="activity1" />,
       renderActivityAddon2 && <ActivityAddon2 key="activity2" />,
@@ -101,22 +101,20 @@ const LayoutPageOther = ({
       renderActivityAddon5 && <ActivityAddon5 key="activity5" />,
       renderActivityAddon6 && <ActivityAddon6 key="activity6" />,
       renderGalleryAddon1 && (
-        <GalleryAddon1 key="gallery1" title={galleryTitle1} />
+        <GalleryAddon1 key="gallery1" title="Fridfullt Liv" />
       ),
-      renderGalleryAddon2 && (
-        <GalleryAddon2 key="gallery2" title={galleryTitle2} />
-      ),
+      renderGalleryAddon2 && <GalleryAddon2 key="gallery2" title="Koppla Av" />,
       renderGalleryAddon3 && (
-        <GalleryAddon3 key="gallery3" title={galleryTitle3} />
+        <GalleryAddon3 key="gallery3" title="Aktiva Dagar" />
       ),
       renderGalleryAddon4 && (
-        <GalleryAddon4 key="gallery4" title={galleryTitle4} />
+        <GalleryAddon4 key="gallery4" title="Nya Äventyr" />
       ),
       renderGalleryAddon5 && (
-        <GalleryAddon5 key="gallery5" title={galleryTitle5} />
+        <GalleryAddon5 key="gallery5" title="Unika Minnen" />
       ),
       renderGalleryAddon6 && (
-        <GalleryAddon6 key="gallery6" title={galleryTitle6} />
+        <GalleryAddon6 key="gallery6" title="Utmana Dig" />
       ),
     ].filter(Boolean);
 

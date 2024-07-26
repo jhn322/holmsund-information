@@ -10,9 +10,15 @@ const TermsCircleAddon = () => {
         <article className={styles.content}>
           <div className={`${styles.textContent} ${styles2.hidden}`}>
             <header>
-              <h2 className={styles2.titleContent}>Användarvillkor</h2>
+              <h2
+                className={`${styles2.titleContent} ${styles2.fadeInSlideIn}`}
+              >
+                Användarvillkor
+              </h2>
             </header>
-            <p className={styles.paragraphContent}>
+            <p
+              className={`${styles.paragraphContent} ${styles2.fadeInSlideIn}`}
+            >
               Användarvillkor utgör juridiska regler som styr hur användare kan
               interagera med och dra nytta av en tjänst eller produkt. Genom att
               acceptera dessa villkor, förbinder sig användaren att följa

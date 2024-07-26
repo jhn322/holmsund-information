@@ -134,6 +134,35 @@ body {
   opacity: 1;
 }
 
+.animate {
+  opacity: 0;
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.textContainer h2.animated {
+  animation: fadeInSlideIn 1s ease-out forwards;
+}
+
+.textContainer p.animated {
+  animation: fadeInSlideIn 1s ease-out forwards;
+}
+
+@keyframes fadeInSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 599px) {
   .mainTitle {

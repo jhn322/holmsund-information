@@ -1,14 +1,41 @@
-import React from "react";
+import { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { trackExtraElementClick } from "../analytics/common";
 import styles from "../../styles/common/Extra.module.css";
 import shareImage from "../../assets/other/share.jpg";
 
 const Extra = () => {
+  const elementsRef = useRef([]);
+
   // Google Analytics
   const handleNavLinkClick = (label) => {
     trackExtraElementClick("link", label, window.location.href);
   };
+
+  useEffect(() => {
+    const observeElements = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(styles.animated);
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observeElements, {
+      threshold: 0.1,
+    });
+
+    elementsRef.current.forEach((element) => {
+      if (element) observer.observe(element);
+    });
+
+    return () => {
+      elementsRef.current.forEach((element) => {
+        if (element) observer.unobserve(element);
+      });
+    };
+  }, []);
 
   return (
     <section className={styles.mainContainer}>
@@ -26,11 +53,19 @@ const Extra = () => {
               <div className={styles.weatherInner}>
                 <article className={styles.weatherText}>
                   <header className={styles.weather}>
-                    <h3>Väderinformation</h3>
+                    <h3
+                      className="animate"
+                      ref={(el) => elementsRef.current.push(el)}
+                    >
+                      Väderinformation
+                    </h3>
                   </header>
                   <article className={styles.weatherContent}>
                     <div className={styles.weather}>
-                      <p>
+                      <p
+                        className="animate"
+                        ref={(el) => elementsRef.current.push(el)}
+                      >
                         Här kan du hitta regelbundet uppdaterade väderprognoser
                         för Homsund, inklusive temperatur, nederbörd och
                         vindförhållanden för de kommande dagarna.
@@ -43,7 +78,10 @@ const Extra = () => {
                   aria-label="Navigera till vädersida"
                   onClick={() => handleNavLinkClick("Kolla vädret i Holmsund")}
                 >
-                  <p className={styles.weatherBtnText}>
+                  <p
+                    className={`animate ${styles.weatherBtnText}`}
+                    ref={(el) => elementsRef.current.push(el)}
+                  >
                     Kolla vädret i Holmsund
                   </p>
                 </NavLink>
@@ -54,20 +92,45 @@ const Extra = () => {
               <div className={styles.mapInner}>
                 <div className={styles.mapText}>
                   <header className={styles.map}>
-                    <h3>Platsinformation</h3>
+                    <h3
+                      className="animate"
+                      ref={(el) => elementsRef.current.push(el)}
+                    >
+                      Platsinformation
+                    </h3>
                   </header>
                   <div className={styles.mapContent}>
                     <div className={styles.map}>
-                      <p>Kulgränd 1, Holmsund</p>
+                      <p
+                        className="animate"
+                        ref={(el) => elementsRef.current.push(el)}
+                      >
+                        Kulgränd 1, Holmsund
+                      </p>
                     </div>
                     <div className={styles.map}>
-                      <p>Umeå, Västerbotten</p>
+                      <p
+                        className="animate"
+                        ref={(el) => elementsRef.current.push(el)}
+                      >
+                        Umeå, Västerbotten
+                      </p>
                     </div>
                     <div className={styles.map}>
-                      <p>Sverige, 913 32</p>
+                      <p
+                        className="animate"
+                        ref={(el) => elementsRef.current.push(el)}
+                      >
+                        Sverige, 913 32
+                      </p>
                     </div>
                     <div className={styles.map}>
-                      <p>63.7066° N / 20.3686° E</p>
+                      <p
+                        className="animate"
+                        ref={(el) => elementsRef.current.push(el)}
+                      >
+                        63.7066° N / 20.3686° E
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -76,7 +139,12 @@ const Extra = () => {
                   aria-label="Navigera till kartsida"
                   onClick={() => handleNavLinkClick("Se karta över Holmsund")}
                 >
-                  <p className={styles.mapBtnText}>Se karta över Holmsund</p>
+                  <p
+                    className={`animate ${styles.mapBtnText}`}
+                    ref={(el) => elementsRef.current.push(el)}
+                  >
+                    Se karta över Holmsund
+                  </p>
                 </NavLink>
               </div>
             </section>

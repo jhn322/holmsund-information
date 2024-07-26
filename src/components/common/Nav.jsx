@@ -173,7 +173,7 @@ const Nav = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink
+              <section
                 to="/utforska"
                 className={styles.navLink}
                 activeclassname={styles.active}
@@ -219,10 +219,10 @@ const Nav = () => {
                     </li>
                   </ul>
                 )}
-              </NavLink>
+              </section>
             </li>
             <li>
-              <NavLink
+              <section
                 to="/aktiviteter"
                 className={styles.navLink}
                 activeclassname={styles.active}
@@ -271,10 +271,10 @@ const Nav = () => {
                     </li>
                   </ul>
                 )}
-              </NavLink>
+              </section>
             </li>
             <li>
-              <NavLink
+              <section
                 to="/galleri"
                 className={styles.navLink}
                 activeclassname={styles.active}
@@ -323,7 +323,7 @@ const Nav = () => {
                     </li>
                   </ul>
                 )}
-              </NavLink>
+              </section>
             </li>
             <li>
               <NavLink

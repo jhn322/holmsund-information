@@ -47,6 +47,7 @@ const ActivityPageMain = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const gridRefs = useRef([]);
+  const textRefs = useRef([]);
 
   useEffect(() => {
     setDocumentTitle("Aktiviteter");
@@ -80,7 +81,7 @@ const ActivityPageMain = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add(styles.inView);
+            entry.target.classList.add(styles.animated);
           }
         });
       },
@@ -94,8 +95,20 @@ const ActivityPageMain = () => {
       }
     });
 
+    const textElements = textRefs.current;
+    textElements.forEach((element) => {
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
     return () => {
       elements.forEach((element) => {
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+      textElements.forEach((element) => {
         if (element) {
           observer.unobserve(element);
         }
@@ -134,8 +147,16 @@ const ActivityPageMain = () => {
       galleryTitle4="Galleri"
     >
       <section className={styles.textContainer}>
-        <h2 className={styles.mainTitle}>Välkommen till aktiviteter</h2>
-        <p className={styles.mainText}>
+        <h2
+          className={`${styles.mainTitle} ${styles.animate}`}
+          ref={(el) => (textRefs.current[0] = el)}
+        >
+          Välkommen till aktiviteter
+        </h2>
+        <p
+          className={`${styles.mainText} ${styles.animate}`}
+          ref={(el) => (textRefs.current[1] = el)}
+        >
           Du kan välja bland flera spännande aktiviteter här nere. Oavsett om du
           föredrar att förbättra din golfsving, spela en omgång fotboll, ta en
           löptur längs vattnet, simma några längder, eller åka skidor i vackra

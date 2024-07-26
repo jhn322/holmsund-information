@@ -10,9 +10,15 @@ const WeatherCircleAddon = () => {
         <article className={styles.content}>
           <div className={`${styles.textContent} ${styles2.hidden}`}>
             <header>
-              <h2 className={styles2.titleContent}>Väder</h2>
+              <h2
+                className={`${styles2.titleContent} ${styles2.fadeInSlideIn}`}
+              >
+                Väder
+              </h2>
             </header>
-            <p className={styles.paragraphContent}>
+            <p
+              className={`${styles.paragraphContent} ${styles2.fadeInSlideIn}`}
+            >
               Holmsund, beläget i norra Sverige vid Bottenvikens kust, upplever
               ett typiskt nordiskt klimat med betydande påverkan från både havet
               och inlandet. Vädret i Holmsund präglas av svala somrar och kalla

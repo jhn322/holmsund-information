@@ -37,6 +37,7 @@ const DiscoverPageMain = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const gridRefs = useRef([]);
+  const textRefs = useRef([]);
 
   useEffect(() => {
     setDocumentTitle("Utforska");
@@ -70,7 +71,7 @@ const DiscoverPageMain = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add(styles.inView);
+            entry.target.classList.add(styles.animated);
           }
         });
       },
@@ -84,8 +85,20 @@ const DiscoverPageMain = () => {
       }
     });
 
+    const textElements = textRefs.current;
+    textElements.forEach((element) => {
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
     return () => {
       elements.forEach((element) => {
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+      textElements.forEach((element) => {
         if (element) {
           observer.unobserve(element);
         }
@@ -122,8 +135,16 @@ const DiscoverPageMain = () => {
       discoverTitle3="Aktiviteter"
     >
       <section className={styles.textContainer}>
-        <h2 className={styles.mainTitle}>Välkommen att utforska</h2>
-        <p className={styles.mainText}>
+        <h2
+          className={`${styles.mainTitle} ${styles.animate}`}
+          ref={(el) => (textRefs.current[0] = el)}
+        >
+          Välkommen att utforska
+        </h2>
+        <p
+          className={`${styles.mainText} ${styles.animate}`}
+          ref={(el) => (textRefs.current[1] = el)}
+        >
           Du kan utforska flera fascinerande platser här nere. Oavsett om du
           föredrar att vandra längs kusten, upptäcka lokala butiker och
           marknader, eller besöka historiska sevärdheter, finns det många

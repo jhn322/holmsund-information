@@ -69,6 +69,29 @@ body {
   background-color: var(--nav-color);
 }
 
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animateTitle {
+  opacity: 0;
+  animation: slideIn 0.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.animateButton {
+  opacity: 0;
+  animation: slideIn 0.5s ease-out forwards;
+  animation-delay: 1s;
+}
+
 /* Small phones */
 @media only screen and (max-width: 389px) {
   .headerBtn {

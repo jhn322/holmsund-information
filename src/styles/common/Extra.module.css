@@ -126,6 +126,28 @@
   background-color: var(--white-text-color);
 }
 
+.animate {
+  opacity: 0;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animated {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInSlideIn 1s ease-out forwards;
+}
+
+@keyframes fadeInSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 779px) {
   .weather h3,

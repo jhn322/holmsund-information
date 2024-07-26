@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { trackSeparatorLinkClick } from "../analytics/home";
 import { FaXTwitter, FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa6";
 import styles from "../../styles/home/Separator.module.css";
@@ -7,6 +7,30 @@ import { RxCross2 } from "react-icons/rx";
 const Separator = () => {
   const [modalOpen, setModalOpen] = useState(null);
   const [modalUrl, setModalUrl] = useState("");
+  const separatorRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.visible);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const animatedElements = separatorRef.current.querySelectorAll(
+      `.${styles.fadeIn}, .${styles.slideIn}`
+    );
+
+    animatedElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      animatedElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
 
   const handleLinkClick = (linkText, linkUrl, event) => {
     event.preventDefault();
@@ -21,16 +45,16 @@ const Separator = () => {
   };
 
   return (
-    <section className={styles.separatorSection}>
+    <section className={styles.separatorSection} ref={separatorRef}>
       <div className={styles.separatorFirst}></div>
       <main className={styles.separatorContainer}>
         <article className={styles.separatorContent}>
-          <p className={styles.separatorText}>
+          <p className={`${styles.separatorText} ${styles.fadeIn}`}>
             Här hittar du de senaste nyheterna om Holmsunds tätort, platser,
             restauranger, aktiviteter och mycket mer. Dela med dig av din
             upplevelse på
           </p>
-          <div className={styles.socialMediaLinks}>
+          <div className={`${styles.socialMediaLinks} ${styles.fadeIn}`}>
             <a
               href="#"
               onClick={(event) =>
@@ -128,27 +152,29 @@ const Separator = () => {
           )}
         </article>
         <section className={styles.separatorSecond}>
-          <h2 className={styles.separatorSecondTitle}>Utforska Holmsund</h2>
-          <p className={styles.separatorSecondText}>
+          <h2 className={`${styles.separatorSecondTitle} ${styles.slideIn}`}>
+            Utforska Holmsund
+          </h2>
+          <p className={`${styles.separatorSecondText} ${styles.slideIn}`}>
             Upptäck Holmsund i dag, från spännande utomhusäventyr till långa
             motionsspår!
           </p>
           <div className={styles.snippetsContainer}>
-            <div className={styles.snippet}>
+            <div className={`${styles.snippet} ${styles.slideIn}`}>
               <h3 className={styles.snippetTitle}>Fika i Holmsund</h3>
               <p className={styles.snippetText}>
                 Besök lokala caféer och njut av en kopp kaffe med utsikt över
                 djupvik.
               </p>
             </div>
-            <div className={styles.snippet}>
+            <div className={`${styles.snippet} ${styles.slideIn}`}>
               <h3 className={styles.snippetTitle}>Naturvandringar</h3>
               <p className={styles.snippetText}>
                 Ta en promenad längs de natursköna stigen och upptäck Holmsunds
                 vackra landskap.
               </p>
             </div>
-            <div className={styles.snippet}>
+            <div className={`${styles.snippet} ${styles.slideIn}`}>
               <h3 className={styles.snippetTitle}>Kulturupplevelser</h3>
               <p className={styles.snippetText}>
                 Besök lokala museer och lär dig mer om Holmsunds historia och

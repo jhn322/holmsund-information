@@ -98,6 +98,66 @@ const NavMenu = ({
             </NavLink>
           </li>
           <li
+            className={activeDropdown === "discover" ? styles.openDropdown : ""}
+          >
+            <div
+              onClick={() => toggleDropdown("discover")}
+              className={styles.dropdownToggle}
+              style={{ fontSize: "2rem" }}
+              tabIndex={0}
+              role="button"
+              aria-expanded={activeDropdown === "discover" ? "true" : "false"}
+            >
+              <h4>Utforska</h4>
+              <div
+                className={`${styles.discoverDropdownIcon} ${
+                  activeDropdown === "discover" ? styles.open : ""
+                }`}
+              >
+                {activeDropdown === "discover" ? (
+                  <RxMinus strokeWidth={1} />
+                ) : (
+                  <RxPlus strokeWidth={1} />
+                )}
+              </div>
+            </div>
+            {activeDropdown === "discover" && (
+              <ul className={styles.nestedMenu} role="menu">
+                <div className={styles.nestedMainContainer}>
+                  <li>
+                    <NavLink to="/utforska" activeclassname={styles.active}>
+                      <h5 className={styles.nestedMainTitle}>
+                        Utforska hela Holmsund
+                      </h5>
+                    </NavLink>
+                  </li>
+                </div>
+                <div className={styles.nestedItems}>
+                  <li>
+                    <NavLink to="/branteberget" activeclassname={styles.active}>
+                      <h5>Bränteberget</h5>
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/kajutan" activeclassname={styles.active}>
+                      <h5>Kajutan</h5>
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/ljumviken" activeclassname={styles.active}>
+                      <h5>Ljumviken</h5>
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/revet" activeclassname={styles.active}>
+                      <h5>Revet</h5>
+                    </NavLink>
+                  </li>
+                </div>
+              </ul>
+            )}
+          </li>
+          <li
             className={activeDropdown === "activity" ? styles.openDropdown : ""}
           >
             <div
@@ -160,66 +220,6 @@ const NavMenu = ({
                       activeclassname={styles.active}
                     >
                       <h5>Storsjöhallen</h5>
-                    </NavLink>
-                  </li>
-                </div>
-              </ul>
-            )}
-          </li>
-          <li
-            className={activeDropdown === "discover" ? styles.openDropdown : ""}
-          >
-            <div
-              onClick={() => toggleDropdown("discover")}
-              className={styles.dropdownToggle}
-              style={{ fontSize: "2rem" }}
-              tabIndex={0}
-              role="button"
-              aria-expanded={activeDropdown === "discover" ? "true" : "false"}
-            >
-              <h4>Utforska</h4>
-              <div
-                className={`${styles.discoverDropdownIcon} ${
-                  activeDropdown === "discover" ? styles.open : ""
-                }`}
-              >
-                {activeDropdown === "discover" ? (
-                  <RxMinus strokeWidth={1} />
-                ) : (
-                  <RxPlus strokeWidth={1} />
-                )}
-              </div>
-            </div>
-            {activeDropdown === "discover" && (
-              <ul className={styles.nestedMenu} role="menu">
-                <div className={styles.nestedMainContainer}>
-                  <li>
-                    <NavLink to="/utforska" activeclassname={styles.active}>
-                      <h5 className={styles.nestedMainTitle}>
-                        Utforska hela Holmsund
-                      </h5>
-                    </NavLink>
-                  </li>
-                </div>
-                <div className={styles.nestedItems}>
-                  <li>
-                    <NavLink to="/branteberget" activeclassname={styles.active}>
-                      <h5>Bränteberget</h5>
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/kajutan" activeclassname={styles.active}>
-                      <h5>Kajutan</h5>
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/ljumviken" activeclassname={styles.active}>
-                      <h5>Ljumviken</h5>
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink to="/revet" activeclassname={styles.active}>
-                      <h5>Revet</h5>
                     </NavLink>
                   </li>
                 </div>

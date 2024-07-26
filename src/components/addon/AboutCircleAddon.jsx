@@ -10,9 +10,15 @@ const AboutCircleAddon = () => {
         <article className={styles.content}>
           <div className={`${styles.textContent} ${styles2.hidden}`}>
             <header>
-              <h2 className={styles2.titleContent}>Om Oss</h2>
+              <h2
+                className={`${styles2.titleContent} ${styles2.fadeInSlideIn}`}
+              >
+                Om Oss
+              </h2>
             </header>
-            <p className={styles.paragraphContent}>
+            <p
+              className={`${styles.paragraphContent} ${styles2.fadeInSlideIn}`}
+            >
               Holmsund, en mångsidig ort i Västerbotten, utmärker sig genom sin
               charmiga hamn och natursköna omgivningar. Beläget vid Bottenvikens
               kust, lockar Holmsund med sina mångsidiga fritidsaktiviteter och

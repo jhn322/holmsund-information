@@ -40,6 +40,14 @@ body {
   margin-bottom: 0;
   font-size: 2.25rem;
   padding: 2rem 0;
+  opacity: 0;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.discoverTitle h2.animated {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInSlideIn 1s ease-out forwards;
 }
 
 .discoverCardContainer {

@@ -9,6 +9,7 @@ const getCurrentYear = () => {
 
 const Discover = () => {
   const discoverContainerRef = useRef(null);
+  const titleRef = useRef(null);
   const [totalCardsHeight, setTotalCardsHeight] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -53,6 +54,23 @@ const Discover = () => {
       });
     };
 
+    const observeTitle = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(styles.animated);
+          titleObserver.unobserve(entry.target);
+        }
+      });
+    };
+
+    const titleObserver = new IntersectionObserver(observeTitle, {
+      threshold: 0.1,
+    });
+
+    if (titleRef.current) {
+      titleObserver.observe(titleRef.current);
+    }
+
     calculateTotalHeight();
     handleScroll();
 
@@ -68,6 +86,9 @@ const Discover = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
+      if (titleRef.current) {
+        titleObserver.unobserve(titleRef.current);
+      }
     };
   }, [overlayStates]);
 
@@ -89,7 +110,7 @@ const Discover = () => {
       <main ref={discoverContainerRef} className={styles.discoverContainer}>
         <article className={styles.discoverInner}>
           <header className={styles.discoverTitle}>
-            <h2>Platser att besöka {currentYear}</h2>
+            <h2 ref={titleRef}>Platser att besöka {currentYear}</h2>
           </header>
           <section className={styles.discoverCardContainer}>
             {discoverData.map((card, index) => (

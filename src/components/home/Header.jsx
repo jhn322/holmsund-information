@@ -57,14 +57,16 @@ const Header = () => {
     >
       <section className={styles.innerHeader}>
         <article className={styles.header}>
-          <h1 className={styles.headerTitle}>{currentSeason} i Holmsund</h1>
+          <h1 className={styles.headerTitle + " " + styles.animateTitle}>
+            {currentSeason} i Holmsund
+          </h1>
           <div className={styles.btnContainer}>
             <NavLink
               to={currentButton.path}
-              aria-label={`¨Navigera till ${currentButton.text}`}
+              aria-label={`Navigera till ${currentButton.text}`}
             >
               <button
-                className={styles.headerBtn}
+                className={styles.headerBtn + " " + styles.animateButton}
                 onClick={handleButtonClick}
                 aria-label={currentButton.text}
               >

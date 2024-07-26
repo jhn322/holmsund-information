@@ -88,6 +88,25 @@ a {
   text-decoration: underline;
 }
 
+.hidden {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.title,
+.text,
+.googleMaps,
+.downloadMap,
+.downloadInner {
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 599px) {
   .title {

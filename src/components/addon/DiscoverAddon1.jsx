@@ -6,6 +6,7 @@ import styles from "../../styles/home/Discover.module.css";
 
 const DiscoverAddon1 = ({ title }) => {
   const discoverContainerRef = useRef(null);
+  const titleRef = useRef(null);
   const [totalCardsHeight, setTotalCardsHeight] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -57,6 +58,23 @@ const DiscoverAddon1 = ({ title }) => {
       });
     };
 
+    const observeTitle = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(styles.animated);
+          titleObserver.unobserve(entry.target);
+        }
+      });
+    };
+
+    const titleObserver = new IntersectionObserver(observeTitle, {
+      threshold: 0.1,
+    });
+
+    if (titleRef.current) {
+      titleObserver.observe(titleRef.current);
+    }
+
     calculateTotalHeight();
     handleScroll();
 
@@ -72,6 +90,9 @@ const DiscoverAddon1 = ({ title }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
+      if (titleRef.current) {
+        titleObserver.unobserve(titleRef.current);
+      }
     };
   }, []);
 
@@ -100,7 +121,7 @@ const DiscoverAddon1 = ({ title }) => {
       <main ref={discoverContainerRef} className={styles.discoverContainer}>
         <article className={styles.discoverInner}>
           <header className={styles.discoverTitle}>
-            <h2>{title}</h2>
+            <h2 ref={titleRef}>{title}</h2>
           </header>
           <section className={styles.discoverCardContainer}>
             {discoverAddonSet1.map((card, index) => (

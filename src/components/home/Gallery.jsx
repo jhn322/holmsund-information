@@ -161,46 +161,52 @@ const Gallery = () => {
               </nav>
             </div>
             <section className={styles.carouselText}>
-              <NavLink
-                to={images[currentIndex].link}
-                aria-label={`Read more about ${images[currentIndex].title}`}
-              >
-                <header className={styles.hoverContainer}>
+              <header className={styles.hoverContainer}>
+                <NavLink
+                  to={images[currentIndex].link}
+                  onClick={() =>
+                    trackElementClickEvent(
+                      "carousel_title",
+                      images[currentIndex].title,
+                      images[currentIndex].link
+                    )
+                  }
+                >
                   <h2>{images[currentIndex].title}</h2>
-                  <p>{images[currentIndex].text}</p>
-                  <div className={styles.linkContainer}>
-                    <a
-                      className={styles.carouselLink}
-                      href={images[currentIndex].link}
-                      onClick={() =>
-                        trackElementClickEvent(
-                          "carousel_link",
-                          "Titta Mer",
-                          images[currentIndex].link
-                        )
-                      }
-                      aria-label={`Read more about ${images[currentIndex].title}`}
-                    >
-                      Läs Mer
-                    </a>
-                  </div>
-                  <div className={styles.arrowContainer}>
-                    <a
-                      href={images[currentIndex].link}
-                      onClick={() =>
-                        trackElementClickEvent(
-                          "arrow_icon",
-                          "Arrow Icon",
-                          images[currentIndex].link
-                        )
-                      }
-                      aria-label={`Arrow icon to ${images[currentIndex].title}`}
-                    >
-                      <RxArrowRight className={styles.arrowIcon} />
-                    </a>
-                  </div>
-                </header>
-              </NavLink>
+                </NavLink>
+                <p>{images[currentIndex].text}</p>
+                <div className={styles.linkContainer}>
+                  <NavLink
+                    to={images[currentIndex].link}
+                    className={styles.carouselLink}
+                    onClick={() =>
+                      trackElementClickEvent(
+                        "carousel_link",
+                        "Titta Mer",
+                        images[currentIndex].link
+                      )
+                    }
+                    aria-label={`Read more about ${images[currentIndex].title}`}
+                  >
+                    Läs Mer
+                  </NavLink>
+                </div>
+                <div className={styles.arrowContainer}>
+                  <NavLink
+                    to={images[currentIndex].link}
+                    onClick={() =>
+                      trackElementClickEvent(
+                        "arrow_icon",
+                        "Arrow Icon",
+                        images[currentIndex].link
+                      )
+                    }
+                    aria-label={`Arrow icon to ${images[currentIndex].title}`}
+                  >
+                    <RxArrowRight className={styles.arrowIcon} />
+                  </NavLink>
+                </div>
+              </header>
             </section>
           </article>
           <div className={styles.dotPagination}>
