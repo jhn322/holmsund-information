@@ -22,16 +22,36 @@ body {
 
 .textContainer p {
   max-width: 90%;
+  opacity: 0;
+  transform: translateX(-100px);
 }
 
-.mainTitle {
+.textContainer h2 {
   font-size: 2.25rem;
   margin-top: 2rem;
+  opacity: 0;
+  transform: translateX(-100px);
 }
 
-.mainText {
+.textContainer .mainText {
   margin-top: 4rem;
   font-size: 1.1rem;
+}
+
+.textContainer h2.animated,
+.textContainer p.animated {
+  animation: fadeInSlideIn 1s ease-out forwards;
+}
+
+@keyframes fadeInSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .gridContainer {
@@ -144,18 +164,10 @@ body {
   transform: translateY(0);
 }
 
-.textContainer h2.animated {
-  animation: fadeInSlideIn 1s ease-out forwards;
-}
-
-.textContainer p.animated {
-  animation: fadeInSlideIn 1s ease-out forwards;
-}
-
 @keyframes fadeInSlideIn {
   from {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-60px);
   }
   to {
     opacity: 1;
@@ -165,22 +177,22 @@ body {
 
 /* Uncommon phone size */
 @media only screen and (min-width: 500px) and (max-width: 599px) {
-  .mainTitle {
+  .textContainer h2 {
     font-size: 2.25rem;
   }
 
-  .mainText {
+  .textContainer .mainText {
     font-size: 1.2rem;
   }
 }
 
 /* Small Tablet */
 @media only screen and (min-width: 600px) and (max-width: 769px) {
-  .mainTitle {
+  .textContainer h2 {
     font-size: 2.25rem;
   }
 
-  .mainText {
+  .textContainer .mainText {
     font-size: 1.3rem;
   }
 
@@ -193,11 +205,11 @@ body {
 
 /* Desktop */
 @media only screen and (min-width: 770px) and (max-width: 1399px) {
-  .mainTitle {
+  .textContainer h2 {
     font-size: 2.5rem;
   }
 
-  .mainText {
+  .textContainer .mainText {
     font-size: 1.3rem;
   }
 
@@ -208,19 +220,30 @@ body {
   .gridItem {
     padding-top: 56.25%;
   }
+
+  @keyframes fadeInSlideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-80px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }
 
 /* Large Desktop */
 @media only screen and (min-width: 1400px) {
+  .textContainer h2 {
+    font-size: 3.5rem;
+  }
+
   .textContainer p {
     max-width: 50%;
   }
 
-  .mainTitle {
-    font-size: 3.5rem;
-  }
-
-  .mainText {
+  .textContainer .mainText {
     font-size: 1.3rem;
   }
 
@@ -240,5 +263,16 @@ body {
 
   .title {
     font-size: 2.5rem;
+  }
+
+  @keyframes fadeInSlideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 }

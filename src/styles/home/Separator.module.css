@@ -230,7 +230,7 @@ body {
 .separatorSecondTitle,
 .separatorSecondText,
 .snippet {
-  transform: translateX(60px);
+  transform: translateY(60px);
 }
 
 /* Uncommon phone size */
@@ -285,6 +285,12 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
   }
+
+  .separatorSecondTitle,
+  .separatorSecondText,
+  .snippet {
+    transform: translateX(60px);
+  }
 }
 
 /* Large Desktop */
@@ -306,5 +312,11 @@ body {
   .socialMediaLinks {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+  }
+
+  .separatorSecondTitle,
+  .separatorSecondText,
+  .snippet {
+    transform: translateX(60px);
   }
 }

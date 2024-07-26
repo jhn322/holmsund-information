@@ -17,6 +17,7 @@ const Search = ({ onClose }) => {
   const navigate = useNavigate();
   const inputRef = useRef(null);
   const searchContainerRef = useRef(null);
+  const placeholderRef = useRef(null);
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [showResults, setShowResults] = useState(false);
@@ -83,6 +84,38 @@ const Search = ({ onClose }) => {
   useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus();
+    }
+  }, []);
+
+  useEffect(() => {
+    if (placeholderRef.current) {
+      placeholderRef.current.innerHTML = ""; // Clear existing content
+
+      const words = ["Sök", "denna", "sida"];
+      const dots = "...";
+      let delay = 0;
+
+      const animateText = (text, isWord = true) => {
+        const span = document.createElement("span");
+        span.textContent = isWord ? ` ${text}` : text;
+        span.style.opacity = "0";
+        span.style.transform = "translateY(10px)";
+        span.style.display = "inline-block";
+        span.style.transition = "opacity 0.5s, transform 0.5s";
+        span.style.marginRight = "0.5rem";
+
+        placeholderRef.current.appendChild(span);
+
+        setTimeout(() => {
+          span.style.opacity = "1";
+          span.style.transform = "translateY(0)";
+        }, delay);
+
+        delay += 200;
+      };
+
+      words.forEach((word) => animateText(word));
+      dots.split("").forEach((dot) => animateText(dot, false));
     }
   }, []);
 
@@ -215,12 +248,13 @@ const Search = ({ onClose }) => {
               setQuery(e.target.value);
               handleSearch(e.target.value);
             }}
-            placeholder="Sök denna sida..."
+            placeholder=""
             className={styles.searchInput}
             ref={inputRef}
             onFocus={handleInputFocus}
             aria-label="Search this site"
           />
+          <div ref={placeholderRef} className={styles.animatedPlaceholder} />
           {query && (
             <RxCross2
               className={styles.clearIcon}

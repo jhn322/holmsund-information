@@ -41,12 +41,10 @@ body {
   font-size: 2.25rem;
   padding: 2rem 0;
   opacity: 0;
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transform: translateY(60px);
 }
 
 .discoverTitle h2.animated {
-  opacity: 1;
-  transform: translateY(0);
   animation: fadeInSlideIn 1s ease-out forwards;
 }
 

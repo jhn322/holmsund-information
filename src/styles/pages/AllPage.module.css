@@ -48,6 +48,33 @@ body {
   font-weight: 300;
 }
 
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animatedElement {
+  opacity: 0;
+}
+
+.animatedElement.visible {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.title.animatedElement.visible {
+  animation-delay: 0.2s;
+}
+
+.text.animatedElement.visible {
+  animation-delay: 0.4s;
+}
+
 /* Discover pages */
 .mapContainer {
   display: flex;

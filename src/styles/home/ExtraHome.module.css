@@ -158,11 +158,11 @@
 @keyframes fadeInSlideIn {
   from {
     opacity: 0;
-    transform: translateX(60px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
@@ -303,5 +303,16 @@
   .weatherBtnText,
   .mapBtnText {
     font-size: 1.3rem;
+  }
+
+  @keyframes fadeInSlideIn {
+    from {
+      opacity: 0;
+      transform: translateX(60px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 }

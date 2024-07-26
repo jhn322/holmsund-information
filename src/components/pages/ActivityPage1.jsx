@@ -64,6 +64,7 @@ const ActivityPage1 = () => {
             idrottsplats är hemmaplan för Sandviks IK, en idrottsförening med en
             rik historia och stark lokal förankring.
           </p>
+
           <h5 className={styles.headline}>Historik</h5>
           <p className={styles.text}>
             Sandviks IK grundades år 1928 och har sedan dess varit en viktig del
@@ -77,6 +78,8 @@ const ActivityPage1 = () => {
             planer och anläggningar är idrottsplatsen en stolthet för Holmsund
             och en plats där unga talanger kan utvecklas och nå sina drömmar.
           </p>
+
+          <h5 className={styles.headline}>Möjligheter</h5>
           <p className={styles.text}>
             Sandviks IK idrottsplats erbjuder en rad olika faciliteter för olika
             idrotter. Här finns bland annat flera fotbollsplaner, både gräs- och
@@ -89,6 +92,8 @@ const ActivityPage1 = () => {
             skridskoåkning och ishockey, vilket ytterligare breddar utbudet av
             aktiviteter.
           </p>
+
+          <h5 className={styles.headline}>Gemenskap</h5>
           <p className={styles.text}>
             Sandviks IK idrottsplats är mer än bara en plats för sport; det är
             en mötesplats för hela samhället. Här anordnas regelbundet olika
