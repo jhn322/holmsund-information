@@ -23,7 +23,7 @@ const WeatherPage = () => {
           }
         });
       },
-      { threshold: 0.1 } // Adjust the threshold if needed
+      { threshold: 0.1 }
     );
 
     elementsToAnimate.current.forEach((el) => {
