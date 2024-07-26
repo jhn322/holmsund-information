@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../styles/home/ContentCircle.module.css";
-import styles2 from "../../styles/addon/MapCircleAddon.module.css";
+import styles2 from "../../styles/addon/AllCircleAddon.module.css";
 import circle1Image from "../../assets/other/mapCircle.jpg";
 import circle2Image from "../../assets/other/circleYellow.png";
 
@@ -11,11 +11,11 @@ const MapCircleAddon = () => {
         <article className={styles.content}>
           <div className={`${styles.textContent} ${styles2.hidden}`}>
             <header>
-              <h2
+              <h1
                 className={`${styles2.titleContent} ${styles2.fadeInSlideIn}`}
               >
                 Kartor
-              </h2>
+              </h1>
             </header>
             <p
               className={`${styles.paragraphContent} ${styles2.fadeInSlideIn}`}

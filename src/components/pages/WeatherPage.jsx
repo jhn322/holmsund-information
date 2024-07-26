@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { setDocumentTitle } from "../utils/setDocumentTitle";
 import { trackWeatherPageClick } from "../analytics/pages";
 import LayoutMainPage from "../layouts/LayoutPageMain";
@@ -9,8 +9,36 @@ const WeatherPage = () => {
   const [forecastData, setForecastData] = useState(null);
   const [error, setError] = useState(null);
 
+  const elementsToAnimate = useRef([]);
+
   useEffect(() => {
     setDocumentTitle("Väder");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.visible);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 } // Adjust the threshold if needed
+    );
+
+    elementsToAnimate.current.forEach((el) => {
+      if (el) {
+        observer.observe(el);
+      }
+    });
+
+    return () => {
+      elementsToAnimate.current.forEach((el) => {
+        if (el) {
+          observer.unobserve(el);
+        }
+      });
+    };
   }, []);
 
   useEffect(() => {
@@ -54,6 +82,11 @@ const WeatherPage = () => {
     const date = new Date(dateString);
     const dayOfWeek = date.toLocaleDateString("sv-SE", { weekday: "long" });
     return `${dayOfWeek.charAt(0).toUpperCase()}${dayOfWeek.slice(1)}`;
+  };
+
+  const getCurrentDay = () => {
+    const today = new Date();
+    return getDayOfWeek(today.toISOString());
   };
 
   const translateCondition = (condition) => {
@@ -109,12 +142,18 @@ const WeatherPage = () => {
       galleryTitle2="Upptäck 2"
     >
       <div className={styles.container}>
+        <div
+          className={`${styles.title} ${styles.hidden}`}
+          ref={(el) => elementsToAnimate.current.push(el)}
+        >
+          <h2 className={styles.h2SlideIn}>Prognos för idag</h2>
+        </div>
         {error && <p>Failed to load weather data: {error.message}</p>}
         {!weatherData && !error && <p>Loading current weather data...</p>}
         {!forecastData && !error && <p>Loading forecast data...</p>}
         {weatherData && (
           <div className={styles.weatherInfo}>
-            <h1>Nuvarande väder</h1>
+            <h3>{getCurrentDay()} - Nuvarande väder</h3>
             <p>
               Temperatur:{" "}
               <span className={styles.weatherSpan}>
@@ -146,8 +185,11 @@ const WeatherPage = () => {
             />
           </div>
         )}
-        <div className={styles.title}>
-          <h2>Prognos för kommande 3 dagar</h2>
+        <div
+          className={`${styles.title} ${styles.hidden}`}
+          ref={(el) => elementsToAnimate.current.push(el)}
+        >
+          <h2 className={styles.h2SlideIn}>Prognos för kommande 3 dagar</h2>
         </div>
         {forecastData && (
           <div className={styles.forecastInfo}>
@@ -189,8 +231,11 @@ const WeatherPage = () => {
             ))}
           </div>
         )}
-        <div className={`${styles.title} ${styles.title2}`}>
-          <h2>Extern prognos</h2>
+        <div
+          className={`${styles.title} ${styles.hidden}`}
+          ref={(el) => elementsToAnimate.current.push(el)}
+        >
+          <h2 className={styles.h2SlideIn}>Extern prognos</h2>
         </div>
         <div className={styles.goToWeather}>
           <div className={styles.InnerWeather}>

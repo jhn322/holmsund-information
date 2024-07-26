@@ -1,5 +1,5 @@
 import styles from "../../styles/home/ContentCircle.module.css";
-import styles2 from "../../styles/addon/TermsCircleAddon.module.css";
+import styles2 from "../../styles/addon/AllCircleAddon.module.css";
 import circle1Image from "../../assets/other/termsofserviceCircle.jpg";
 import circle2Image from "../../assets/other/circleWhite.png";
 
@@ -10,11 +10,11 @@ const TermsCircleAddon = () => {
         <article className={styles.content}>
           <div className={`${styles.textContent} ${styles2.hidden}`}>
             <header>
-              <h2
+              <h1
                 className={`${styles2.titleContent} ${styles2.fadeInSlideIn}`}
               >
                 Användarvillkor
-              </h2>
+              </h1>
             </header>
             <p
               className={`${styles.paragraphContent} ${styles2.fadeInSlideIn}`}
