@@ -186,65 +186,70 @@ const GalleryAddon2 = ({ title }) => {
             <section
               className={`${styles.carouselText} ${styles2.carouselText}`}
             >
-              <NavLink
-                to={galleryAddonSet2[currentIndex].link}
-                aria-label={`Läs mer om ${galleryAddonSet2[currentIndex].title}`}
+              <header
+                className={`${styles.hoverContainer} ${styles2.hoverContainer}`}
               >
-                <header
-                  className={`${styles.hoverContainer} ${styles2.hoverContainer}`}
-                >
-                  <h2>{galleryAddonSet2[currentIndex].title}</h2>
-                  <p>{galleryAddonSet2[currentIndex].text} </p>
-                  <div className={styles.linkContainer}>
-                    <a
-                      className={`${styles.carouselLink} ${styles2.carouselLink}`}
-                      href={galleryAddonSet2[currentIndex].link}
-                      onClick={(e) => {
-                        if (
-                          currentPath === galleryAddonSet2[currentIndex].link
-                        ) {
-                          e.preventDefault();
-                          return;
-                        }
-                        trackElementClickEvent(
-                          "carousel_link",
-                          "Läs Mer",
-                          galleryAddonSet2[currentIndex].link
-                        );
-                      }}
-                      aria-label={`Läs mer om ${galleryAddonSet2[currentIndex].title}`}
-                    >
-                      Läs Mer
-                    </a>
-                  </div>
-                  <div
-                    className={`${styles.arrowContainer} ${styles2.arrowContainer}`}
+                <h2 className={styles.carouselTitle}>
+                  <NavLink
+                    to={galleryAddonSet2[currentIndex].link}
+                    onClick={() =>
+                      trackElementClickEvent(
+                        "carousel_link",
+                        galleryAddonSet2[currentIndex].title,
+                        galleryAddonSet2[currentIndex].link
+                      )
+                    }
+                    aria-label={`Läs mer om ${galleryAddonSet2[currentIndex].title}`}
                   >
-                    <a
-                      className={`${styles.carouselLink} ${styles2.carouselLink}`}
-                      href={galleryAddonSet2[currentIndex].link}
-                      onClick={(e) => {
-                        if (
-                          currentPath === galleryAddonSet2[currentIndex].link
-                        ) {
-                          e.preventDefault();
-                          return;
-                        }
-                        trackElementClickEvent(
-                          "carousel_link",
-                          "Läs Mer",
-                          galleryAddonSet2[currentIndex].link
-                        );
-                      }}
-                      aria-label={`Navigera till ${galleryAddonSet2[currentIndex].title}`}
-                    >
-                      <RxArrowRight
-                        className={`${styles.arrowIcon} ${styles2.arrowIcon}`}
-                      />
-                    </a>
-                  </div>
-                </header>
-              </NavLink>
+                    {galleryAddonSet2[currentIndex].title}
+                  </NavLink>
+                </h2>
+                <p>{galleryAddonSet2[currentIndex].text}</p>
+                <div className={styles.linkContainer}>
+                  <NavLink
+                    className={`${styles.carouselLink} ${styles2.carouselLink}`}
+                    to={galleryAddonSet2[currentIndex].link}
+                    onClick={(e) => {
+                      if (currentPath === galleryAddonSet2[currentIndex].link) {
+                        e.preventDefault();
+                        return;
+                      }
+                      trackElementClickEvent(
+                        "carousel_link",
+                        "Läs Mer",
+                        galleryAddonSet2[currentIndex].link
+                      );
+                    }}
+                    aria-label={`Läs mer om ${galleryAddonSet2[currentIndex].title}`}
+                  >
+                    Läs Mer
+                  </NavLink>
+                </div>
+                <div
+                  className={`${styles.arrowContainer} ${styles2.arrowContainer}`}
+                >
+                  <NavLink
+                    className={`${styles.carouselLink} ${styles2.carouselLink}`}
+                    to={galleryAddonSet2[currentIndex].link}
+                    onClick={(e) => {
+                      if (currentPath === galleryAddonSet2[currentIndex].link) {
+                        e.preventDefault();
+                        return;
+                      }
+                      trackElementClickEvent(
+                        "carousel_link",
+                        "Läs Mer",
+                        galleryAddonSet2[currentIndex].link
+                      );
+                    }}
+                    aria-label={`Navigera till ${galleryAddonSet2[currentIndex].title}`}
+                  >
+                    <RxArrowRight
+                      className={`${styles.arrowIcon} ${styles2.arrowIcon}`}
+                    />
+                  </NavLink>
+                </div>
+              </header>
             </section>
           </article>
           <div className={styles.dotPagination}>

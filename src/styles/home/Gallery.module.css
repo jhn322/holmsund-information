@@ -167,6 +167,10 @@
   transition: color 0.3s;
 }
 
+.carouselTitle a {
+  font-weight: bold;
+}
+
 .carouselText h2 {
   text-transform: uppercase;
   color: var(--white-text-color);

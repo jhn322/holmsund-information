@@ -146,11 +146,11 @@
   background: rgba(0, 0, 0, 0.5);
   border: none;
   color: var(--white-text-color);
-  font-size: 1.5rem;
+  font-size: 2rem;
   border-radius: 50%;
-  padding: 0.5rem;
-  height: 2.5rem;
-  width: 2.5rem;
+  padding: 0.4rem;
+  height: 2.8rem;
+  width: 2.8rem;
   cursor: pointer;
   z-index: 10;
   transition: all 0.3s;
