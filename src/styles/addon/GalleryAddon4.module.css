@@ -2,7 +2,8 @@
   background-color: var(--hover-color);
 }
 
-.galleryTitle {
+.galleryTitle,
+.carouselTitle a {
   color: #0b0b0b;
 }
 

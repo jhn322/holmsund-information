@@ -48,7 +48,7 @@ a {
 }
 
 .downloadMap {
-  width: 100%;
+  padding: 1rem;
 }
 
 .downloadInner {
@@ -56,10 +56,13 @@ a {
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  background-color: var(--accent-color);
   width: 100%;
-  margin: 3rem 0 10rem 0;
-  padding: 6rem 0;
+  max-width: 80rem;
+  margin-bottom: 6rem;
+  padding: 1rem 0;
+  border-radius: 10px;
+  background-color: var(--accent-color);
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
 }
 
 .downloadInner h3 {

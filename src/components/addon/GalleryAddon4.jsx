@@ -189,7 +189,9 @@ const GalleryAddon4 = ({ title }) => {
               <header
                 className={`${styles.hoverContainer} ${styles2.hoverContainer}`}
               >
-                <h2 className={styles.carouselTitle}>
+                <h2
+                  className={`${styles.carouselTitle} ${styles2.carouselTitle}`}
+                >
                   <NavLink
                     to={galleryAddonSet4[currentIndex].link}
                     onClick={() =>

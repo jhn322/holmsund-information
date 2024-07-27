@@ -93,10 +93,9 @@ const MapPage = () => {
             isVisible.text ? styles.visible : styles.hidden
           }`}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-          quibusdam reiciendis est possimus alias rem rerum nihil ipsa sequi?
-          Quae corrupti blanditiis a odio asperiores aliquam dicta consequatur
-          magni numquam?
+          Här kan du se en vy över Holmsund genom att använda denna karta.
+          Utforska kustorten, kartan erbjuder en praktisk översikt för att
+          navigera och få en känsla för Holmsund.
         </p>
         <div
           className={`${styles.googleMaps} ${
