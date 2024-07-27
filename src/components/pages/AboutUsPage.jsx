@@ -9,6 +9,7 @@ const AboutUsPage = () => {
     setDocumentTitle("Om Oss");
   }, []);
 
+  // Import email adress from enviroment variabel
   const handleEmailClick = () => {
     window.location.href = `mailto:${import.meta.env.VITE_CONTACT_EMAIL}`;
   };

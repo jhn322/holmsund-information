@@ -22,6 +22,7 @@ const ActivityCarousel = () => {
     return text;
   };
 
+  // Handle carousel prev/next
   const handlePrev = useCallback(() => {
     setActiveIndex((prevIndex) =>
       prevIndex === 0 ? activitySet.length - 1 : prevIndex - 1
@@ -71,6 +72,7 @@ const ActivityCarousel = () => {
     trackActivityElementClick(elementType, elementText, elementUrl);
   };
 
+  // Prevent default behavior for navigation button clicks
   const handleNavButtonClick = (event) => {
     event.preventDefault();
     event.stopPropagation();
@@ -210,6 +212,7 @@ const ActivityCarousel = () => {
   );
 };
 
+// Static image side
 const Activity = () => {
   return (
     <aside className={styles.featuredContainer}>

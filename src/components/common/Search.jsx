@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import debounce from "lodash/debounce";
-import Fuse from "fuse.js";
+import Fuse from "fuse.js"; // Fuse.js for fuzzy search
 import { RxMagnifyingGlass, RxCross2 } from "react-icons/rx";
 import {
   FaGithub,
@@ -23,6 +23,7 @@ const Search = ({ onClose }) => {
   const [showResults, setShowResults] = useState(false);
   const [isSearchClosing, setIsSearchClosing] = useState(false);
 
+  // Fuse.js search properties
   const fuseOptions = {
     keys: ["title", "categoryTitle", "path"],
     includeScore: true,
@@ -30,6 +31,7 @@ const Search = ({ onClose }) => {
   };
   const fuse = new Fuse(searchPages, fuseOptions);
 
+  // Debounced search function
   const handleSearch = useCallback(
     debounce((searchQuery) => {
       const lowerCaseQuery = searchQuery.toLowerCase();
@@ -48,6 +50,7 @@ const Search = ({ onClose }) => {
     handleNavigate(path);
   };
 
+  // Navigate to a path and reset search state
   const handleNavigate = (path) => {
     navigate(path);
     setQuery("");
@@ -63,6 +66,7 @@ const Search = ({ onClose }) => {
     }, 150);
   };
 
+  // Handle click outside of the search container to close search
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (
@@ -81,12 +85,14 @@ const Search = ({ onClose }) => {
     };
   }, [onClose]);
 
+  // Focus on search input when component mounts
   useEffect(() => {
     if (inputRef.current) {
       inputRef.current.focus();
     }
   }, []);
 
+  // Animate placeholder text on component mount
   useEffect(() => {
     if (placeholderRef.current) {
       placeholderRef.current.innerHTML = ""; // Clear existing content
@@ -114,6 +120,7 @@ const Search = ({ onClose }) => {
         delay += 200;
       };
 
+      // Animate each word and dots on load
       words.forEach((word) => animateText(word));
       dots.split("").forEach((dot) => animateText(dot, false));
     }
@@ -121,11 +128,12 @@ const Search = ({ onClose }) => {
 
   const handleInputFocus = () => {
     if (query.trim() !== "") {
-      setShowResults(true);
+      setShowResults(true); // Show results if query is not empty
     }
 
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden"; // Prevent body scroll
 
+    // Fix for iOS devices
     if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
       document.body.style.position = "fixed";
       document.body.style.top = `-${window.scrollY}px`;
@@ -134,6 +142,7 @@ const Search = ({ onClose }) => {
     }
   };
 
+  // Highlight each text character in search results
   const highlightMatch = (text, query) => {
     if (!query) return text;
 
@@ -155,6 +164,7 @@ const Search = ({ onClose }) => {
     );
   };
 
+  // Used for varied suggestions
   const shuffleArray = (array) => array.sort(() => Math.random() - 0.5);
 
   const getSuggestions = (query) => {

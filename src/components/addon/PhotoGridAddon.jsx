@@ -12,6 +12,7 @@ const PhotoGridAddon = ({ photos }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const galleryRefs = useRef([]);
 
+  // Function to open zoom view
   const openZoom = (index) => {
     setCurrentIndex(index);
     setIsZoomed(true);
@@ -59,6 +60,7 @@ const PhotoGridAddon = ({ photos }) => {
     };
   }, []);
 
+  // More ways to nav in zoom view
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (isZoomed) {
@@ -79,6 +81,7 @@ const PhotoGridAddon = ({ photos }) => {
     };
   }, [isZoomed, showNext, showPrev]);
 
+  // Clicking on image goes to next
   const handleImageClick = (e) => {
     e.stopPropagation();
     const rect = e.target.getBoundingClientRect();

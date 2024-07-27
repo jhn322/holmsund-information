@@ -9,6 +9,7 @@ const Separator = () => {
   const [modalUrl, setModalUrl] = useState("");
   const separatorRef = useRef(null);
 
+  // Add animations when elements come into view
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -21,6 +22,7 @@ const Separator = () => {
       { threshold: 0.1 }
     );
 
+    // Select elements to be observed for animations
     const animatedElements = separatorRef.current.querySelectorAll(
       `.${styles.fadeIn}, .${styles.slideIn}`
     );

@@ -9,6 +9,7 @@ import {
 } from "react-icons/rx";
 import styles from "../../styles/addon/SlideshowAddon.module.css";
 
+// Zoomed in image view mode on click
 const ZoomedImage = ({
   images,
   currentIndex,
@@ -148,6 +149,7 @@ const SlideshowAddon = ({ images }) => {
     setZoomedIndex(index);
   };
 
+  // Function to hide/show caption bar
   const toggleCaption = () => {
     setIsCaptionExpanded(!isCaptionExpanded);
   };

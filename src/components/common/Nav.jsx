@@ -20,11 +20,11 @@ const Nav = () => {
   const [isActivityHovered, setIsActivityHovered] = useState(false);
   const [isGalleryHovered, setIsGalleryHovered] = useState(false);
 
-  // Nav not transparent on path
+  // Use location hook to get current path
   const location = useLocation();
   const currentPath = location.pathname;
 
-  // Decoded path to handle special characters
+  // Decode path to handle special characters
   const decodePath = (path) => decodeURIComponent(path);
   const decodedCurrentPath = decodePath(currentPath);
   const pathsToExclude = [
@@ -34,7 +34,7 @@ const Nav = () => {
     "/cookiepolicy",
     "/kartor",
   ];
-  const shouldBeTransparent = !pathsToExclude.includes(decodedCurrentPath);
+  const shouldBeTransparent = !pathsToExclude.includes(decodedCurrentPath); // Check if nav should be transparent
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -57,15 +57,14 @@ const Nav = () => {
     setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
   };
 
-  // Sets background blur when menu is open
+  // Function to handle click on background blur when menu or search is open
   const handleBlurBackgroundClick = () => {
     setIsMenuOpen(false);
     setIsSearchOpen(false);
-    // Remove overflow hidden when clicking on the background blur
     document.body.style.overflow = "auto";
   };
 
-  // Handles the scroll on page for nav vertically
+  // Function to handle scroll event for nav visibility
   const handleScroll = () => {
     const currentScrollPos = window.scrollY;
     setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
@@ -76,14 +75,8 @@ const Nav = () => {
     e.preventDefault();
   };
 
-  // Manage body scroll based on menu state open/closed
+  // Effect to add/remove scroll event listener
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-      setPrevScrollPos(currentScrollPos);
-    };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -91,20 +84,22 @@ const Nav = () => {
     };
   }, [prevScrollPos]);
 
+  // Effect to manage body scroll based on menu or search state
   useEffect(() => {
     const scrollbarWidth =
       window.innerWidth - document.documentElement.clientWidth;
 
     if (isMenuOpen || isSearchOpen) {
-      document.body.style.overflowY = "hidden";
+      document.body.style.overflowY = "hidden"; // Disable body scroll
       document.body.style.paddingRight = `${scrollbarWidth}px`;
 
+      // Handle special case for iOS devices
       if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
         document.body.style.position = "fixed";
         document.body.style.width = "100%";
       }
     } else {
-      document.body.style.overflowY = "auto";
+      document.body.style.overflowY = "auto"; // Enable body scroll
       document.body.style.paddingRight = "0";
 
       if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
@@ -119,7 +114,7 @@ const Nav = () => {
     };
   }, [isMenuOpen, isSearchOpen]);
 
-  // EventListener on window for scroll
+  // Effect to manage scroll event listener based on menu state
   useEffect(() => {
     if (isMenuOpen) {
       window.removeEventListener("scroll", handleScroll);
@@ -131,6 +126,7 @@ const Nav = () => {
     };
   }, [isMenuOpen, prevScrollPos, visible]);
 
+  // Effect to manage body overflow style based on menu or search state
   useEffect(() => {
     if (isMenuOpen || isSearchOpen) {
       document.body.style.overflow = "hidden";

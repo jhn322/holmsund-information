@@ -15,8 +15,8 @@ import logo2 from "../../assets/logo/navLogoHover.png";
 
 const NavMenu = ({
   closeMenu,
-  isMenuClosing,
-  activeDropdown,
+  isMenuClosing, // Boolean to indicate if the menu is closing
+  activeDropdown, // State to manage which dropdown is active
   toggleDropdown,
   isHoveredLogoNavMenu,
   setIsHoveredLogoNavMenu,
@@ -27,6 +27,7 @@ const NavMenu = ({
         isMenuClosing ? styles.menuClosing : ""
       }`}
     >
+      {/* Social media icons */}
       <div className={styles.socialIcons}>
         <a
           href="https://github.com/jhn322"
@@ -69,7 +70,11 @@ const NavMenu = ({
           <FaTiktok className={styles.tiktok} />
         </a>
       </div>
+
+      {/* Theme toggle button */}
       <ThemeToggleButton />
+
+      {/* Close menu button */}
       <div
         className={styles.closeCircle}
         onClick={closeMenu}
@@ -79,6 +84,8 @@ const NavMenu = ({
       >
         <RxCross2 className={styles.closeIcon} />
       </div>
+
+      {/* Main menu container */}
       <div className={styles.openMenuContainer}>
         <ul className={styles.openMenu}>
           <li>
@@ -92,11 +99,15 @@ const NavMenu = ({
               />
             </NavLink>
           </li>
+
+          {/* Home link */}
           <li>
             <NavLink to="/" activeclassname={styles.active}>
               <h4>Hem</h4>
             </NavLink>
           </li>
+
+          {/* Discover dropdown menu */}
           <li
             className={activeDropdown === "discover" ? styles.openDropdown : ""}
           >
@@ -157,6 +168,8 @@ const NavMenu = ({
               </ul>
             )}
           </li>
+
+          {/* Activities dropdown menu */}
           <li
             className={activeDropdown === "activity" ? styles.openDropdown : ""}
           >
@@ -226,6 +239,8 @@ const NavMenu = ({
               </ul>
             )}
           </li>
+
+          {/* Gallery dropdown menu */}
           <li
             className={activeDropdown === "gallery" ? styles.openDropdown : ""}
           >
@@ -295,6 +310,8 @@ const NavMenu = ({
               </ul>
             )}
           </li>
+
+          {/* Other menu links */}
           <li>
             <NavLink to="/vader" activeclassname={styles.active}>
               <h4>Väder</h4>
@@ -310,5 +327,4 @@ const NavMenu = ({
     </div>
   );
 };
-
 export default NavMenu;

@@ -41,6 +41,7 @@ const WeatherPage = () => {
     };
   }, []);
 
+  // Async current weather api data
   useEffect(() => {
     const fetchWeatherData = async () => {
       try {
@@ -58,6 +59,7 @@ const WeatherPage = () => {
       }
     };
 
+    // Async 3 day weather api data
     const fetchForecastData = async () => {
       try {
         const apiKey = import.meta.env.VITE_API_KEY;
@@ -74,10 +76,12 @@ const WeatherPage = () => {
       }
     };
 
+    // Call the data fetching functions
     fetchWeatherData();
     fetchForecastData();
   }, []);
 
+  // Helper function to get the day of the week from a date string in Swedish
   const getDayOfWeek = (dateString) => {
     const date = new Date(dateString);
     const dayOfWeek = date.toLocaleDateString("sv-SE", { weekday: "long" });
@@ -87,6 +91,7 @@ const WeatherPage = () => {
   const translateCondition = (condition) => {
     const lowerCaseCondition = condition.toLowerCase();
 
+    // Translated weather conditions
     const conditionMappings = {
       sunny: "Soligt",
       "partly cloudy": "Delvis molnigt",
@@ -116,6 +121,7 @@ const WeatherPage = () => {
     return condition;
   };
 
+  // Card background colors
   const backgroundColors = [
     styles.orangeBackground,
     styles.purpleBackground,

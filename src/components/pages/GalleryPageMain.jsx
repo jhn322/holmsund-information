@@ -101,6 +101,7 @@ const GalleryPageMain = () => {
     };
   }, []);
 
+  // Render grid items for all pages in the category
   const gridItems = gridImages.map((image, index) => (
     <NavLink
       to={image.path}

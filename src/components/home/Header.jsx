@@ -40,6 +40,7 @@ const Header = () => {
 
   const [currentButton, setCurrentButton] = useState(buttonOptions[0]);
 
+  // Randomize button text
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * buttonOptions.length);
     setCurrentButton(buttonOptions[randomIndex]);

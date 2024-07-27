@@ -9,6 +9,7 @@ const Cookies = () => {
     return acceptedCookies ? false : true;
   });
 
+  // Save cookie choice to localstorage
   const handleAccept = () => {
     localStorage.setItem("acceptedCookies", "true");
     setVisible(false);

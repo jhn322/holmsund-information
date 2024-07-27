@@ -64,6 +64,7 @@ const Breadcrumb = () => {
   const location = useLocation();
   const pathname = location.pathname.slice(1);
 
+  // For non standard characters
   const decodeURIComponentSafe = (uri) => {
     try {
       const decoded = decodeURIComponent(uri);
@@ -79,6 +80,7 @@ const Breadcrumb = () => {
     trackBreadcrumbElementClick("breadcrumb_link", linkText, linkUrl);
   };
 
+  // Get the main section for a given path
   const getMainSection = (path) => {
     const pageName = path.split("/").pop();
     const section = pageToSectionMap[pageName];
@@ -88,6 +90,7 @@ const Breadcrumb = () => {
     return null;
   };
 
+  // Build breadcrumb items based on the current path
   const buildBreadcrumbItems = () => {
     const items = [{ text: "Hem", to: "/" }];
     const mainSection = getMainSection(pathname);
