@@ -231,7 +231,7 @@ const WeatherPage = () => {
                 )
               }
             >
-              <h3>Hitta mer väderinformation här</h3>
+              <h3>Mer väderinformation</h3>
             </a>
             <div className={styles.description}>
               <p>

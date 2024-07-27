@@ -32,20 +32,26 @@ p {
   color: var(--white-text-color);
 }
 
-.weatherInfo {
+.weatherAndForecast {
+  width: 100%;
+}
+
+.weatherInfo,
+.forecastDay {
   position: relative;
   width: 100%;
+  max-width: 50rem;
   margin-bottom: 2rem;
   text-align: left;
   padding: 2rem;
   border-radius: 10px;
-  max-width: 40rem;
   background-color: var(--nav-color);
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
   transition: transform 0.5s;
 }
 
-.weatherInfo p {
+.weatherInfo p,
+.forecastDay p {
   padding: 0.3rem 0;
 }
 
@@ -59,6 +65,7 @@ p {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 0.2rem 0.4rem;
   border-radius: 10px;
+  margin: 0 0.25rem;
 }
 
 .img {
@@ -82,17 +89,6 @@ p {
   padding: 0.3rem 0;
 }
 
-.forecastDay {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  padding: 2rem;
-  width: 100%;
-  max-width: 32rem;
-  border-radius: 10px;
-  transition: transform 0.5s;
-}
-
 .orangeBackground {
   background-color: var(--accent-color);
 }
@@ -107,11 +103,11 @@ p {
 
 .goToWeather {
   width: 100%;
+  max-width: 50rem;
   margin-bottom: 2rem;
   text-align: left;
-  padding: 2rem 1rem;
+  padding: 1rem 0;
   border-radius: 10px;
-  max-width: 40rem;
   background-color: var(--red-addon-color);
   filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
   transition: transform 0.5s;
@@ -143,7 +139,7 @@ p {
 }
 
 /* Uncommon phone size */
-@media only screen and (min-width: 500px) and (max-width: 599px) {
+@media only screen and (min-width: 500px) and (max-width: 799px) {
   h3,
   .title h2 {
     font-size: 2.25rem;
@@ -160,8 +156,26 @@ p {
   }
 }
 
-/* Small Tablet */
-@media only screen and (min-width: 600px) and (max-width: 899px) {
+/* Medium Desktop */
+@media only screen and (min-width: 800px) and (max-width: 1799px) {
+  .weatherAndForecast {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 97%;
+    margin-bottom: 2rem;
+    text-align: center;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+  }
+
+  .weatherInfo,
+  .forecastDay {
+    height: 100%;
+    min-height: 15rem;
+    flex: 1;
+    max-width: 100%;
+  }
+
   h3,
   .title h2 {
     font-size: 2.25rem;
@@ -178,45 +192,14 @@ p {
   }
 }
 
-/* Medium Desktop */
-@media only screen and (min-width: 900px) and (max-width: 1599px) {
-  .weatherAndForecast {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    width: 100%;
-    margin-bottom: 2rem;
-    text-align: center;
-    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
-  }
-
-  .weatherInfo,
-  .forecastDay {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding: 2rem;
-    border-radius: 10px;
-    transition: transform 0.5s;
-    background-color: var(--nav-color);
-  }
-
-  .forecastDay,
-  .weatherInfo {
-    height: 100%;
-    min-height: 15rem;
-    flex: 1;
-    max-width: 100%;
-  }
-}
-
 /* Large Desktop */
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1800px) {
   .weatherAndForecast {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    width: 100%;
+    width: 95%;
+    max-width: 150rem;
     margin-bottom: 2rem;
     text-align: center;
     filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
@@ -224,17 +207,6 @@ p {
 
   .weatherInfo,
   .forecastDay {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding: 2rem;
-    border-radius: 10px;
-    transition: transform 0.5s;
-    background-color: var(--nav-color);
-  }
-
-  .forecastDay,
-  .weatherInfo {
     height: 100%;
     min-height: 15rem;
     flex: 1;
