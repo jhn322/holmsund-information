@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
 import { activitySet } from "../data/ActivitySet";
 import { trackActivityElementClick } from "../analytics/home";
 import { RxArrowRight, RxChevronLeft, RxChevronRight } from "react-icons/rx";
@@ -22,23 +22,22 @@ const ActivityCarousel = () => {
     return text;
   };
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     setActiveIndex((prevIndex) =>
       prevIndex === 0 ? activitySet.length - 1 : prevIndex - 1
     );
-    setDeltaX(0);
-  };
+  }, []);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setActiveIndex((prevIndex) =>
       prevIndex === activitySet.length - 1 ? 0 : prevIndex + 1
     );
-    setDeltaX(0);
-  };
+  }, []);
 
   const handleTouchStart = (event) => {
     const touch = event.touches[0];
     initialTouch.current = { x: touch.clientX, y: touch.clientY };
+    setIsSwiping(true);
   };
 
   const handleTouchMove = (event) => {
