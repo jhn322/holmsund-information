@@ -77,7 +77,7 @@ const LayoutPageOther = ({
   useEffect(() => {
     const components = [
       renderDiscoverAddon1 && (
-        <DiscoverAddon1 key="discover1" title="Resa Genom Orten" />
+        <DiscoverAddon1 key="discover1" title="Res Genom Orten" />
       ),
       renderDiscoverAddon2 && (
         <DiscoverAddon2 key="discover2" title="Varierade Möjligheter" />

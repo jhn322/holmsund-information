@@ -84,11 +84,6 @@ const WeatherPage = () => {
     return `${dayOfWeek.charAt(0).toUpperCase()}${dayOfWeek.slice(1)}`;
   };
 
-  const getCurrentDay = () => {
-    const today = new Date();
-    return getDayOfWeek(today.toISOString());
-  };
-
   const translateCondition = (condition) => {
     const lowerCaseCondition = condition.toLowerCase();
 
@@ -142,101 +137,86 @@ const WeatherPage = () => {
       galleryTitle2="Upptäck 2"
     >
       <div className={styles.container}>
-        <div
-          className={`${styles.title} ${styles.hidden}`}
-          ref={(el) => elementsToAnimate.current.push(el)}
-        >
-          <h2 className={styles.h2SlideIn}>Prognos för idag</h2>
-        </div>
         {error && <p>Failed to load weather data: {error.message}</p>}
         {!weatherData && !error && <p>Loading current weather data...</p>}
         {!forecastData && !error && <p>Loading forecast data...</p>}
         {weatherData && (
-          <div className={styles.weatherInfo}>
-            <h3>{getCurrentDay()} - Nuvarande väder</h3>
-            <p>
-              Temperatur:{" "}
-              <span className={styles.weatherSpan}>
-                {weatherData.current.temp_c}°C
-              </span>
-            </p>
-            <p>
-              Luftfuktighet:{" "}
-              <span className={styles.weatherSpan}>
-                {weatherData.current.humidity}%
-              </span>
-            </p>
-            <p>
-              Vind:{" "}
-              <span className={styles.weatherSpan}>
-                {weatherData.current.wind_kph} km/h
-              </span>
-            </p>
-            <p>
-              Väder:{" "}
-              <span className={styles.weatherSpan}>
-                {translateCondition(weatherData.current.condition.text)}
-              </span>
-            </p>
-            <img
-              className={styles.img}
-              src={weatherData.current.condition.icon}
-              alt="Weather Icons"
-            />
+          <div className={styles.weatherAndForecast}>
+            <div className={styles.weatherInfo}>
+              <h3>Nuvarande väder</h3>
+              <p>
+                Temperatur:
+                <span className={styles.weatherSpan}>
+                  {weatherData.current.temp_c}°C
+                </span>
+              </p>
+              <p>
+                Luftfuktighet:
+                <span className={styles.weatherSpan}>
+                  {weatherData.current.humidity}%
+                </span>
+              </p>
+              <p>
+                Vind:
+                <span className={styles.weatherSpan}>
+                  {weatherData.current.wind_kph} km/h
+                </span>
+              </p>
+              <p>
+                Väder:
+                <span className={styles.weatherSpan}>
+                  {translateCondition(weatherData.current.condition.text)}
+                </span>
+              </p>
+              <img
+                className={styles.img}
+                src={weatherData.current.condition.icon}
+                alt="Weather Icons"
+              />
+            </div>
+            {forecastData && (
+              <>
+                {forecastData.forecast.forecastday.map((day, index) => (
+                  <div
+                    key={day.date}
+                    className={`${styles.forecastDay} ${
+                      backgroundColors[index % backgroundColors.length]
+                    }`}
+                  >
+                    <h3>{getDayOfWeek(day.date)}</h3>
+                    <p>
+                      Datum:{" "}
+                      <span className={styles.weatherSpan}>{day.date}</span>
+                    </p>
+                    <p>
+                      Högsta Temperatur:
+                      <span className={styles.weatherSpan}>
+                        {day.day.maxtemp_c}°C
+                      </span>
+                    </p>
+                    <p>
+                      Lägsta Temperatur:
+                      <span className={styles.weatherSpan}>
+                        {day.day.mintemp_c}°C
+                      </span>
+                    </p>
+                    <p>
+                      Väder:
+                      <span className={styles.weatherSpan}>
+                        {translateCondition(day.day.condition.text)}
+                      </span>
+                    </p>
+                    <img
+                      className={styles.img}
+                      src={day.day.condition.icon}
+                      alt="Weather Icons"
+                    />
+                  </div>
+                ))}
+              </>
+            )}
           </div>
         )}
-        <div
-          className={`${styles.title} ${styles.hidden}`}
-          ref={(el) => elementsToAnimate.current.push(el)}
-        >
-          <h2 className={styles.h2SlideIn}>Prognos för kommande 3 dagar</h2>
-        </div>
-        {forecastData && (
-          <div className={styles.forecastInfo}>
-            {forecastData.forecast.forecastday.map((day, index) => (
-              <div
-                key={day.date}
-                className={`${styles.forecastDay} ${
-                  backgroundColors[index % backgroundColors.length]
-                }`}
-              >
-                <h3>{getDayOfWeek(day.date)}</h3>
-                <p>
-                  Datum: <span className={styles.weatherSpan}>{day.date}</span>
-                </p>
-                <p>
-                  Högsta Temperatur:{" "}
-                  <span className={styles.weatherSpan}>
-                    {day.day.maxtemp_c}°C
-                  </span>
-                </p>
-                <p>
-                  Lägsta Temperatur:{" "}
-                  <span className={styles.weatherSpan}>
-                    {day.day.mintemp_c}°C
-                  </span>
-                </p>
-                <p>
-                  Väder:{" "}
-                  <span className={styles.weatherSpan}>
-                    {translateCondition(day.day.condition.text)}
-                  </span>
-                </p>
-                <img
-                  className={styles.img}
-                  src={day.day.condition.icon}
-                  alt="Weather Icons"
-                />
-              </div>
-            ))}
-          </div>
-        )}
-        <div
-          className={`${styles.title} ${styles.hidden}`}
-          ref={(el) => elementsToAnimate.current.push(el)}
-        >
-          <h2 className={styles.h2SlideIn}>Extern prognos</h2>
-        </div>
         <div className={styles.goToWeather}>
           <div className={styles.InnerWeather}>
             <a

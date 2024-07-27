@@ -43,7 +43,7 @@ const LayoutPage = ({ children, headerTitle, headerBackgroundImage }) => {
     ];
 
     const discoverComponents = [
-      <DiscoverAddon1 key="discover1" title="Resa Genom Orten" />,
+      <DiscoverAddon1 key="discover1" title="Res Genom Orten" />,
       <DiscoverAddon2 key="discover2" title="Varierade Möjligheter" />,
       <DiscoverAddon3 key="discover3" title="Håll Kroppen Aktiv" />,
       <DiscoverAddon4 key="discover4" title="Nya Äventyr Väntar" />,
