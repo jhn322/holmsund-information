@@ -118,7 +118,7 @@ p {
   padding-top: 1rem;
   margin-bottom: 1rem;
   color: var(--white-text-color);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   text-decoration: underline;
   transition: all 0.3s;
 }
@@ -152,7 +152,7 @@ p {
   }
 
   .InnerWeather h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -188,7 +188,7 @@ p {
   }
 
   .InnerWeather h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -224,6 +224,6 @@ p {
   }
 
   .InnerWeather h3 {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 }

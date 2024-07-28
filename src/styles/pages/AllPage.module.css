@@ -21,6 +21,10 @@ body {
   margin-bottom: 2rem;
 }
 
+.container h2 {
+  text-align: center;
+}
+
 .container p {
   max-width: 40rem;
   line-height: 2rem;
@@ -32,7 +36,7 @@ body {
 }
 
 .boldText {
-  margin-top: 4rem;
+  margin-top: 2rem;
   font-weight: bold;
   font-size: 1.1rem;
 }
