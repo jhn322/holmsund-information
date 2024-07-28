@@ -86,7 +86,7 @@ const MapPage = () => {
             isVisible.title ? styles.visible : styles.hidden
           }`}
         >
-          Holmsund
+          Observera Holmsund
         </h2>
         <p
           className={`${styles.text} ${

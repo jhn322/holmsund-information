@@ -13,31 +13,53 @@ const WeatherPage = () => {
 
   useEffect(() => {
     setDocumentTitle("Väder");
+  }, []);
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add(styles.visible);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+  const [isVisible, setIsVisible] = useState({
+    title: false,
+    text: false,
+    googleMaps: false,
+    downloadMap: false,
+  });
 
-    elementsToAnimate.current.forEach((el) => {
-      if (el) {
-        observer.observe(el);
-      }
-    });
+  const observeElement = (entry, key) => {
+    if (entry.isIntersecting) {
+      setIsVisible((prev) => ({ ...prev, [key]: true }));
+    }
+  };
 
-    return () => {
-      elementsToAnimate.current.forEach((el) => {
-        if (el) {
-          observer.unobserve(el);
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.target.classList.contains(styles.title)) {
+          observeElement(entry, "title");
+        }
+        if (entry.target.classList.contains(styles.text)) {
+          observeElement(entry, "text");
+        }
+        if (entry.target.classList.contains(styles.googleMaps)) {
+          observeElement(entry, "googleMaps");
+        }
+        if (entry.target.classList.contains(styles.downloadMap)) {
+          observeElement(entry, "downloadMap");
         }
       });
+    }, observerOptions);
+
+    const elements = document.querySelectorAll(
+      `.${styles.title}, .${styles.text}, .${styles.googleMaps}, .${styles.downloadMap}`
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el));
     };
   }, []);
 
@@ -143,6 +165,22 @@ const WeatherPage = () => {
       galleryTitle2="Upptäck 2"
     >
       <div className={styles.container}>
+        <h2
+          className={`${styles.title} ${
+            isVisible.title ? styles.visible : styles.hidden
+          }`}
+        >
+          Prognos Holmsund
+        </h2>
+        <p
+          className={`${styles.text} ${
+            isVisible.text ? styles.visible : styles.hidden
+          }`}
+        >
+          Här kan du få den senaste väderinformationen för Holmsund, både för
+          idag och de kommande tre dagarna. Håll dig uppdaterad med aktuella
+          prognoser för att planera dina aktiviteter på bästa sätt.
+        </p>
         {error && <p>Failed to load weather data: {error.message}</p>}
         {!weatherData && !error && <p>Loading current weather data...</p>}
         {!forecastData && !error && <p>Loading forecast data...</p>}
