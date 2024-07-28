@@ -162,7 +162,7 @@ p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    width: 97%;
+    width: 100%;
     margin-bottom: 2rem;
     text-align: center;
     filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));

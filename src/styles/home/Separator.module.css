@@ -171,7 +171,7 @@ body {
   background-color: var(--background-color);
   border-radius: 10px;
   padding: 1rem;
-  max-width: 20rem;
+  max-width: 22rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
