@@ -2,7 +2,11 @@ import { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import NavMenu from "./NavMenu";
 import Search from "./Search";
-import { RxHamburgerMenu, RxMagnifyingGlass } from "react-icons/rx";
+import {
+  RxHamburgerMenu,
+  RxMagnifyingGlass,
+  RxChevronDown,
+} from "react-icons/rx";
 import styles from "../../styles/common/Nav.module.css";
 import logo1 from "../../assets/logo/navLogo.png";
 import logo2 from "../../assets/logo/navLogoHover.png";
@@ -171,13 +175,16 @@ const Nav = () => {
             <li>
               <section
                 to="/utforska"
-                className={styles.navLink}
+                className={`${styles.navLink} ${
+                  isDiscoverHovered ? styles.dropdownOpen : ""
+                }`}
                 activeclassname={styles.active}
                 onClick={handleMainNavLinkClick}
                 onMouseEnter={() => setIsDiscoverHovered(true)}
                 onMouseLeave={() => setIsDiscoverHovered(false)}
               >
                 Utforska
+                <RxChevronDown strokeWidth={0.8} className={styles.navArrow} />
                 {isDiscoverHovered && (
                   <ul className={styles.dropdownMenu}>
                     <li className={styles.dropdownMenuAllContainer}>
@@ -220,13 +227,16 @@ const Nav = () => {
             <li>
               <section
                 to="/aktiviteter"
-                className={styles.navLink}
+                className={`${styles.navLink} ${
+                  isActivityHovered ? styles.dropdownOpen : ""
+                }`}
                 activeclassname={styles.active}
                 onClick={handleMainNavLinkClick}
                 onMouseEnter={() => setIsActivityHovered(true)}
                 onMouseLeave={() => setIsActivityHovered(false)}
               >
                 Aktiviteter
+                <RxChevronDown strokeWidth={0.8} className={styles.navArrow} />
                 {isActivityHovered && (
                   <ul className={styles.dropdownMenu}>
                     <li className={styles.dropdownMenuAllContainer}>
@@ -272,13 +282,16 @@ const Nav = () => {
             <li>
               <section
                 to="/galleri"
-                className={styles.navLink}
+                className={`${styles.navLink} ${
+                  isGalleryHovered ? styles.dropdownOpen : ""
+                }`}
                 activeclassname={styles.active}
                 onClick={handleMainNavLinkClick}
                 onMouseEnter={() => setIsGalleryHovered(true)}
                 onMouseLeave={() => setIsGalleryHovered(false)}
               >
                 Galleri
+                <RxChevronDown strokeWidth={0.8} className={styles.navArrow} />
                 {isGalleryHovered && (
                   <ul className={styles.dropdownMenu}>
                     <li className={styles.dropdownMenuAllContainer}>

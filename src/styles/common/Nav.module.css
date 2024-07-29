@@ -131,7 +131,10 @@ h5 {
 }
 
 .searchIcon,
-.menuIcon {
+.menuIcon,
+.closeIcon,
+.navLink,
+.navArrow {
   color: var(--white-text-color);
   transition: color 0.3s;
 }
@@ -305,7 +308,6 @@ h5 {
 
 .closeIcon {
   font-size: 1.8rem;
-  transition: color 0.3s;
 }
 
 .closeCircle:hover {
@@ -542,7 +544,36 @@ h5 {
   }
 
   .navLink {
-    display: inline;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--white-text-color);
+  }
+
+  .navLink:hover,
+  .navArrow:hover {
+    color: var(--hover-color);
+  }
+
+  .navLink:hover .dropdownMenu {
+    display: block;
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .dropdownOpen .navLink,
+  .dropdownOpen .navArrow {
+    color: var(--hover-color);
+    transition: color 0.3s;
+  }
+
+  .navArrow {
+    height: 1.7rem;
+    width: 1.7rem;
   }
 
   /* Dropdown menu container */
@@ -560,15 +591,6 @@ h5 {
 
   .dropdownMenu h5 {
     font-weight: 400;
-  }
-
-  .navLink:hover .dropdownMenu {
-    display: block;
-    text-align: center;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
   }
 
   .dropdownMenu li {
