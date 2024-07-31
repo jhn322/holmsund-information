@@ -21,6 +21,23 @@ const NavMenu = ({
   isHoveredLogoNavMenu,
   setIsHoveredLogoNavMenu,
 }) => {
+  // Function to track Google Analytics events
+  const trackEvent = (eventCategory, eventLabel) => {
+    if (window.gtag) {
+      window.gtag("event", "click", {
+        event_category: eventCategory,
+        event_label: eventLabel,
+      });
+    }
+  };
+
+  // Handler for dropdown toggle with tracking
+  const handleDropdownToggle = (dropdown) => {
+    toggleDropdown(dropdown);
+    const eventLabel = activeDropdown === dropdown ? "Close" : "Open";
+    trackEvent(`${dropdown} Dropdown`, eventLabel);
+  };
+
   return (
     <div
       className={`${styles.menuWrapper} ${
@@ -112,7 +129,7 @@ const NavMenu = ({
             className={activeDropdown === "discover" ? styles.openDropdown : ""}
           >
             <div
-              onClick={() => toggleDropdown("discover")}
+              onClick={() => handleDropdownToggle("discover")}
               className={styles.dropdownToggle}
               style={{ fontSize: "2rem" }}
               tabIndex={0}
@@ -174,7 +191,7 @@ const NavMenu = ({
             className={activeDropdown === "activity" ? styles.openDropdown : ""}
           >
             <div
-              onClick={() => toggleDropdown("activity")}
+              onClick={() => handleDropdownToggle("activity")}
               className={styles.dropdownToggle}
               style={{ fontSize: "2rem" }}
               tabIndex={0}
@@ -245,7 +262,7 @@ const NavMenu = ({
             className={activeDropdown === "gallery" ? styles.openDropdown : ""}
           >
             <div
-              onClick={() => toggleDropdown("gallery")}
+              onClick={() => handleDropdownToggle("gallery")}
               className={styles.dropdownToggle}
               style={{ fontSize: "2rem" }}
               tabIndex={0}
@@ -327,4 +344,5 @@ const NavMenu = ({
     </div>
   );
 };
+
 export default NavMenu;
