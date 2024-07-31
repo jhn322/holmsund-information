@@ -154,7 +154,19 @@
   width: 2.8rem;
   cursor: pointer;
   z-index: 10;
-  transition: all 0.3s;
+  transition: all 0.3s, opacity 0.3s ease;
+}
+
+.navBtnLeft.hidden,
+.navBtnRight.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.navBtnLeft.visible,
+.navBtnRight.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .navBtnLeft:hover,
