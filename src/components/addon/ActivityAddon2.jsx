@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { activitySlides2 } from "../data/ActivityAddonSet";
 import { trackActivityElementClick } from "../analytics/addon";
@@ -12,9 +12,11 @@ const Carousel = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [deltaX, setDeltaX] = useState(0);
   const [isSwiping, setIsSwiping] = useState(false);
+  const [navVisible, setNavVisible] = useState(true);
   const initialTouch = useRef({ x: 0, y: 0 });
   const location = useLocation();
   const currentPath = location.pathname;
+  const timeoutRef = useRef(null);
   const threshold = 10;
 
   const truncateDescription = (text = "", wordLimit) => {
@@ -43,6 +45,7 @@ const Carousel = () => {
   const handleTouchStart = (event) => {
     const touch = event.touches[0];
     initialTouch.current = { x: touch.clientX, y: touch.clientY };
+    resetNavVisibilityTimeout();
   };
 
   const handleTouchMove = (event) => {
@@ -82,12 +85,26 @@ const Carousel = () => {
     event.nativeEvent.stopImmediatePropagation();
   };
 
+  const resetNavVisibilityTimeout = () => {
+    clearTimeout(timeoutRef.current);
+    setNavVisible(true);
+    timeoutRef.current = setTimeout(() => {
+      setNavVisible(false);
+    }, 3000);
+  };
+
+  useEffect(() => {
+    resetNavVisibilityTimeout();
+    return () => clearTimeout(timeoutRef.current);
+  }, []);
+
   return (
     <section
       className={styles.carousel}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
+      onMouseMove={resetNavVisibilityTimeout}
       aria-roledescription="carousel"
       aria-label="Utforska karusell"
     >
@@ -156,7 +173,9 @@ const Carousel = () => {
                     <div className={styles.imgContainer}>
                       <img src={slide.src} alt={slide.title} />
                       <button
-                        className={styles.navBtnLeft}
+                        className={`${styles.navBtnLeft} ${
+                          navVisible ? styles.visible : styles.hidden
+                        }`}
                         onClick={(e) => {
                           handleNavButtonClick(e);
                           handlePrev();
@@ -166,7 +185,9 @@ const Carousel = () => {
                         <RxChevronLeft strokeWidth={0.8} />
                       </button>
                       <button
-                        className={styles.navBtnRight}
+                        className={`${styles.navBtnRight} ${
+                          navVisible ? styles.visible : styles.hidden
+                        }`}
                         onClick={(e) => {
                           handleNavButtonClick(e);
                           handleNext();

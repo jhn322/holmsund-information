@@ -82,6 +82,7 @@ const ActivityCarousel = () => {
     event.nativeEvent.stopImmediatePropagation();
   };
 
+  // Nav buttons timeout to invis in mobile
   const resetNavVisibilityTimeout = () => {
     clearTimeout(timeoutRef.current);
     setNavVisible(true);
