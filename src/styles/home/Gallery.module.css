@@ -77,7 +77,8 @@
 /* --- Hovering within container gives simultaneous hover on 3 elements --- */
 .carouselContainer.hover .hoverContainer h2,
 .carouselContainer.hover .hoverContainer .carouselLink,
-.carouselContainer.hover .arrowIcon {
+.carouselContainer.hover .arrowIcon,
+.carouselContainer.hover .carouselTitle a {
   color: var(--hover-color);
   border-color: var(--hover-color);
 }
@@ -213,6 +214,7 @@
   justify-content: center;
   gap: 0.8rem;
   padding-top: 3rem;
+  border: 1px solid red;
 }
 
 .dotPagination span {

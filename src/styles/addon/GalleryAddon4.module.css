@@ -10,7 +10,8 @@
 /* --- Hovering within container gives simultaneous hover on 3 elements --- */
 .carouselContainer.hover .hoverContainer h2,
 .carouselContainer.hover .hoverContainer .carouselLink,
-.carouselContainer.hover .arrowIcon {
+.carouselContainer.hover .arrowIcon,
+.carouselContainer.hover .carouselTitle a {
   color: var(--nav-color);
   border-color: var(--nav-color);
 }
