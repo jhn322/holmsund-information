@@ -39,7 +39,7 @@ h5 {
 
 /* Transparent nav */
 .transparent {
-  background-color: transparent;
+  background-color: var(--nav-transparent);
   box-shadow: none;
 }
 
@@ -73,7 +73,6 @@ h5 {
   position: absolute;
   left: 36px;
   top: 0;
-  background-color: var(--nav-transparent);
 }
 
 .transparent .logoContainer:hover {

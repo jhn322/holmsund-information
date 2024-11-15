@@ -95,6 +95,14 @@
   transition: color 0.3s;
 }
 
+[dark-theme="dark"] .zoomIcon {
+  color: var(--white-text-color);
+}
+
+[dark-theme="dark"] .zoomIcon:hover {
+  color: var(--hover-color);
+}
+
 .zoomImgOverlay {
   position: fixed;
   top: 0;
