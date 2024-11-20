@@ -41,6 +41,10 @@
   margin-top: 1rem;
 }
 
+.MissingBtn a:hover {
+  color: var(--nav-color);
+}
+
 .LinkHome:hover {
   color: var(--white-text-color);
 }

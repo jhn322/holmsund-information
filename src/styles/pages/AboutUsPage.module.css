@@ -51,7 +51,7 @@
 }
 
 .emailLink:hover {
-  color: var(--hover-color);
+  color: var(--accent-color);
 }
 
 /* Desktop */

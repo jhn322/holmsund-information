@@ -61,6 +61,10 @@ body {
   animation-delay: 1s;
 }
 
+[dark-theme="dark"] .undertitleContent {
+  color: var(--hover-color);
+}
+
 .paragraphContent {
   font-size: 1.1rem;
   word-spacing: 1px;

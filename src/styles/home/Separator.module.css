@@ -17,7 +17,7 @@ body {
 }
 
 .separatorFirst {
-  background-color: var(--accent-color);
+  background-color: var(--nav-color);
   height: 6rem;
 }
 
@@ -57,7 +57,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent-color);
+  color: var(--nav-color);
   font-size: 1.1rem;
   text-decoration: none;
   transition: color 0.3s, transform 0.3s;
@@ -66,10 +66,19 @@ body {
   padding: 0 0.25rem;
 }
 
+[dark-theme="dark"] .iconLink {
+  color: var(--hover-color);
+}
+
 .iconLink:hover,
 .iconLink:hover .icon {
-  color: var(--nav-color);
+  color: var(--accent-color);
   transform: scale(1.1);
+}
+
+[dark-theme="dark"] .iconLink:hover,
+.iconLink:hover .icon {
+  color: var(--white-text-color);
 }
 
 .icon {
@@ -100,9 +109,13 @@ body {
   position: relative;
 }
 
+[dark-theme="dark"] .modalContent {
+  background: var(--background-color);
+}
+
 .modalIcon {
   font-size: 3rem;
-  color: var(--accent-color);
+  color: var(--nav-color);
   margin-bottom: 1rem;
 }
 
@@ -110,11 +123,19 @@ body {
   color: var(--accent-color);
 }
 
+[dark-theme="dark"] .modalIcon {
+  color: var(--hover-color);
+}
+
+[dark-theme="dark"] .modalIcon svg:hover {
+  color: var(--white-text-color);
+}
+
 .redirectButton {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.75rem 1rem;
-  background-color: var(--accent-color);
+  background-color: var(--nav-color);
   color: var(--white-text-color);
   text-decoration: none;
   border-radius: 10px;
@@ -122,8 +143,18 @@ body {
 }
 
 .redirectButton:hover {
-  background-color: var(--nav-color);
+  background-color: var(--accent-color);
   color: var(--white-text-color);
+}
+
+[dark-theme="dark"] .redirectButton {
+  background-color: var(--hover-color);
+  color: #0b0b0b;
+}
+
+[dark-theme="dark"] .redirectButton:hover {
+  background-color: var(--white-text-color);
+  color: #0b0b0b;
 }
 
 .closeIcon {
@@ -132,17 +163,25 @@ body {
   right: 1rem;
   cursor: pointer;
   font-size: 1.5rem;
-  color: var(--accent-color);
+  color: var(--nav-color);
   transition: color 0.3s;
 }
 
 .closeIcon:hover {
-  color: var(--nav-color);
+  color: var(--accent-color);
+}
+
+[dark-theme="dark"] .closeIcon {
+  color: var(--hover-color);
+}
+
+[dark-theme="dark"] .closeIcon:hover {
+  color: var(--white-text-color);
 }
 
 .separatorSecond {
   padding: 6rem 0;
-  background-color: var(--accent-color);
+  background-color: var(--nav-color);
   text-align: center;
 }
 
@@ -182,9 +221,13 @@ body {
 }
 
 .snippetTitle {
-  color: var(--accent-color);
+  color: var(--nav-color);
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+}
+
+[dark-theme="dark"] .snippetTitle {
+  color: var(--hover-color);
 }
 
 .snippetText {

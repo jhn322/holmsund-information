@@ -58,13 +58,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-image: var(--gradient-purple);
+  background-image: var(--gradient-first);
   width: 100%;
   height: 25rem;
 }
 
 .mapInner {
-  background-image: var(--gradient-orange);
+  background-image: var(--gradient-second);
 }
 
 .weatherContent,
@@ -117,12 +117,12 @@
 }
 
 .weatherBtnText:hover {
-  color: #7b7ccf;
+  color: #002b74;
   background-color: var(--white-text-color);
 }
 
 .mapBtnText:hover {
-  color: #f69122;
+  color: #0b00ae;
   background-color: var(--white-text-color);
 }
 

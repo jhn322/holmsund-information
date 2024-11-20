@@ -143,7 +143,11 @@ body {
   transform: rotate(180deg);
 }
 
-.accordionIcon:hover {
+.accordionIcon svg:hover {
+  color: var(--accent-color);
+}
+
+[dark-theme="dark"] .accordionIcon svg:hover {
   color: var(--hover-color);
 }
 

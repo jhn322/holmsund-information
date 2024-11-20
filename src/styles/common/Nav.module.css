@@ -75,10 +75,6 @@ h5 {
   top: 0;
 }
 
-.transparent .logoContainer:hover {
-  background-color: var(--accent-transparent);
-}
-
 .logo {
   width: 8.75rem;
   height: auto;
@@ -204,7 +200,7 @@ h5 {
 }
 
 .socialIcons svg {
-  color: var(--white-text-color);
+  color: #0b0b0b;
 }
 
 .github,
@@ -213,7 +209,7 @@ h5 {
 .facebook,
 .tiktok {
   cursor: pointer;
-  background-color: var(--accent-color);
+  background-color: var(--hover-color);
   font-size: 2.4rem;
   border-radius: 50%;
   padding: 0.375rem;
@@ -226,8 +222,8 @@ h5 {
 .instagram:hover,
 .facebook:hover,
 .tiktok:hover {
-  background-color: var(--background-color);
-  color: var(--accent-color);
+  background-color: #0b0b0b;
+  color: var(--hover-color);
 }
 
 .openMenuContainer {

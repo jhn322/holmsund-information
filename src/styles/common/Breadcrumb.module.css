@@ -14,9 +14,17 @@
   color: var(--accent-color);
 }
 
+[dark-theme="dark"] .breadcrumbItem a {
+  color: var(--hover-color);
+}
+
 .breadcrumbItem a:hover {
   text-decoration: underline;
-  color: var(--hover-color);
+  color: var(--nav-color);
+}
+
+[dark-theme="dark"] .breadcrumbItem a:hover {
+  color: var(--white-text-color);
 }
 
 .breadcrumb svg:hover {

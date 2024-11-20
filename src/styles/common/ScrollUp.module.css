@@ -23,8 +23,17 @@
   transition: background-color 0.3s;
 }
 
+[dark-theme="dark"] .scrollUp {
+  background-color: var(--hover-color);
+  border: 1px solid #060606;
+}
+
 .scrollUp:hover {
   background-color: var(--nav-color);
+}
+
+[dark-theme="dark"] .scrollUp:hover {
+  background-color: var(--white-text-color);
 }
 
 .scrollIcon {
@@ -32,8 +41,16 @@
   font-size: 2.2rem;
 }
 
+[dark-theme="dark"] .scrollIcon {
+  color: #060606;
+}
+
 .scrollIcon:hover {
   color: var(--white-text-color);
+}
+
+[dark-theme="dark"] .scrollIcon:hover {
+  color: #060606;
 }
 
 .invisible {
