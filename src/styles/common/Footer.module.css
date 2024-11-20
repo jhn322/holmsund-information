@@ -65,12 +65,27 @@ p {
   color: var(--white-text-color);
 }
 
+.footerIcons svg:hover {
+  color: var(--white-text-color);
+  background-color: var(--nav-color);
+}
+
 [dark-theme="dark"] .footerIcons svg {
   color: #060606;
+  background-color: var(--white-text-color);
+}
+
+[dark-theme="dark"] .footerIcons svg:hover {
+  color: #060606;
+  background-color: var(--hover-color);
 }
 
 .iconsText p {
   color: var(--black-text-color);
+}
+
+[dark-theme="dark"] .iconsText p:hover {
+  color: var(--hover-color);
 }
 
 .github,
@@ -88,70 +103,12 @@ p {
   transition: all 0.3s ease;
 }
 
-/* [dark-theme="dark"] .github,
-.twitterX,
-.instagram,
-.facebook,
-.tiktok {
-  background-color: var(--hover-color);
-} */
-
-.footerIcons a:hover .github,
-.footerIcons a:hover .twitterX,
-.footerIcons a:hover .instagram,
-.footerIcons a:hover .facebook,
-.footerIcons a:hover .tiktok,
-.iconsText:hover p {
-  color: var(--white-text-color);
-}
-
-.footerIcons a:hover .github,
-.footerIcons a:hover .twitterX,
-.footerIcons a:hover .instagram,
-.footerIcons a:hover .facebook,
-.footerIcons a:hover .tiktok,
-.github:hover,
-.twitterX:hover,
-.instagram:hover,
-.facebook:hover,
-.tiktok:hover {
-  background-color: var(--nav-color);
-}
-
-[dark-theme="dark"] .footerIcons a:hover .github,
-.footerIcons a:hover .twitterX,
-.footerIcons a:hover .instagram,
-.footerIcons a:hover .facebook,
-.footerIcons a:hover .tiktok,
-.github,
-.twitterX,
-.instagram,
-.facebook,
-.tiktok {
-  color: #060606;
-  background-color: var(--white-text-color);
-}
-
-[dark-theme="dark"] .footerIcons a:hover .github,
-.footerIcons a:hover .twitterX,
-.footerIcons a:hover .instagram,
-.footerIcons a:hover .facebook,
-.footerIcons a:hover .tiktok,
-.github:hover,
-.twitterX:hover,
-.instagram:hover,
-.facebook:hover,
-.tiktok:hover {
-  color: #060606;
-  background-color: var(--hover-color);
-}
-
-[dark-theme="dark"] .iconText:hover {
-  color: var(--white-text-color);
-}
-
 .footerLinks li {
   color: var(--black-text-color);
+}
+
+[dark-theme="dark"] .footerLinks li:hover {
+  color: var(--hover-color);
 }
 
 /* -----------Second Footer----------- */
@@ -221,11 +178,6 @@ p {
   .iconsText p:hover,
   .footerLinks li:hover {
     color: var(--nav-color);
-  }
-
-  [dark-theme="dark"] .iconsText p:hover,
-  .footerLinks li:hover {
-    color: var(--hover-color);
   }
 
   .iconsText p {
